@@ -1,0 +1,273 @@
+Refactor the 800+ line DashboardClient.tsx component into a clean, modular architecture following SOLID principles and optimized for LLM processing.
+
+📁 TARGET FOLDER STRUCTURE
+text
+src/
+├── app/
+│   └── dashboard/
+│       ├── DashboardClient.tsx          # Main orchestrator (max 150 lines)
+│       ├── components/
+│       │   ├── DashboardSidebar.tsx
+│       │   ├── DashboardMobileHeader.tsx
+│       │   ├── SectionRenderer.tsx
+│       │   └── ui/
+│       │       ├── CollapsibleCard.tsx
+│       │       ├── SaveButton.tsx
+│       │       └── LoadingState.tsx
+│       ├── sections/
+│       │   ├── OverviewSection.tsx
+│       │   ├── ChildrenSection.tsx
+│       │   ├── PrivacySection.tsx
+│       │   └── HelpSection.tsx
+│       ├── forms/
+│       │   ├── PersonalInfoForm.tsx
+│       │   ├── ContactInfoForm.tsx
+│       │   ├── AddressForm.tsx
+│       │   ├── BillingForm.tsx
+│       │   ├── SubscriptionForm.tsx
+│       │   ├── CommunicationForm.tsx
+│       │   ├── SocialForm.tsx
+│       │   └── PreferencesForm.tsx
+│       └── hooks/
+│           ├── useProfile.ts
+│           ├── useDashboardSections.ts
+│           └── useCollapsibleGroups.ts
+└── types/
+    └── dashboard.ts                      # Extracted types
+
+🔧 REFACTORING REQUIREMENTS
+1. Main DashboardClient.tsx (Target: ~150 lines)
+Keep only orchestration logic
+
+Import and use custom hooks
+
+Render layout skeleton
+
+Pass props to child components
+
+NO business logic, NO form logic
+
+2. Custom Hooks (Separate Concerns)
+useProfile.ts: Profile loading/saving logic
+
+useDashboardSections.ts: Active section state management
+
+useCollapsibleGroups.ts: Collapsible state with localStorage
+
+3. Section Components (Route-based Content)
+Each section (~100-200 lines)
+
+Import form components
+
+Handle section-specific layout
+
+4. Form Components (Reusable, Atomic)
+Each form (~50-100 lines)
+
+Receive profile and onProfileChange as props
+
+Use CollapsibleCard wrapper
+
+No API calls, only UI logic
+
+5. UI Components (Pure Presentation)
+Generic, reusable components
+
+No business logic
+
+Configurable via props
+
+📋 SPECIFIC INSTRUCTIONS FOR LLM
+When Refactoring EACH Component:
+DO:
+
+Extract interfaces/types to types/dashboard.ts
+
+Use proper TypeScript typing with generics where needed
+
+Maintain NextUI component imports
+
+Keep next-intl translation usage
+
+Preserve all existing functionality
+
+Use consistent prop drilling pattern:
+
+tsx
+interface ComponentProps {
+  profile: Partial<Profile>;
+  onProfileChange: (profile: Partial<Profile>) => void;
+  isCollapsed?: boolean;
+  onToggle?: () => void;
+}
+DON'T:
+
+Change functionality or behavior
+
+Remove any existing features
+
+Alter styling or classes
+
+Change translation keys usage
+
+Key Implementation Details to Preserve:
+localStorage for collapsed states
+
+Supabase client integration
+
+Loading/saving states
+
+Mobile responsiveness
+
+Animation classes (animate-in, fade-in)
+
+All existing form fields and validation
+
+Communication preferences JSONB handling
+
+Performance Optimizations to Implement:
+Code Splitting: Dynamic imports for sections
+
+Memoization: React.memo for form components
+
+Lazy Loading: Forms load on demand
+
+Optimized Renders: Prevent unnecessary re-renders
+
+🎨 CODE STYLE GUIDELINES
+Naming Conventions:
+Components: PascalCase
+
+Hooks: useCamelCase
+
+Props interfaces: ComponentNameProps
+
+Files: kebab-case.tsx for components, camelCase.ts for hooks
+
+Import Order:
+React & external libraries
+
+Internal hooks
+
+Internal components
+
+Types
+
+Styles/utilities
+
+Prop Spreading Pattern:
+tsx
+const Component = ({ 
+  profile, 
+  onProfileChange, 
+  isCollapsed, 
+  onToggle,
+  ...props 
+}: ComponentProps & React.HTMLAttributes<HTMLDivElement>) => {
+  // Component logic
+}
+🚀 REFACTORING PRIORITY ORDER
+Please refactor in this sequence:
+
+PHASE 1: Extract Hooks (Most critical)
+
+Create hooks/useProfile.ts with all loading/saving logic
+
+Create hooks/useCollapsibleGroups.ts
+
+Update DashboardClient.tsx to use hooks
+
+PHASE 2: Extract UI Components
+
+Create ui/CollapsibleCard.tsx
+
+Create ui/SaveButton.tsx
+
+Create ui/LoadingState.tsx
+
+PHASE 3: Extract Forms
+
+Create each form component in /forms/
+
+Test with OverviewSection first
+
+PHASE 4: Extract Sections
+
+Create each section component
+
+Update DashboardClient.tsx to use sections
+
+PHASE 5: Extract Layout Components
+
+Create DashboardSidebar.tsx
+
+Create DashboardMobileHeader.tsx
+
+PHASE 6: Types & Final Polish
+
+Extract all interfaces to types/dashboard.ts
+
+Add proper exports/imports
+
+Verify no functionality loss
+
+EXPECTED OUTPUT
+For each file you create, provide:
+
+Complete TypeScript implementation
+
+Proper imports/exports
+
+JSDoc comments for complex logic
+
+Error boundaries where needed
+
+Unit test suggestions as comments
+
+VALIDATION CHECKLIST
+Before finalizing, ensure:
+
+All form fields preserved
+
+Translation keys work
+
+localStorage functionality intact
+
+Mobile/desktop responsiveness
+
+Loading/saving states work
+
+No console errors
+
+TypeScript compiles without errors
+
+All animations preserved
+
+Supabase integration works
+
+Collapsible sections toggle correctly
+
+ADDITIONAL CONTEXT FROM ORIGINAL FILE
+Key features to preserve:
+
+Collapsible Groups: With localStorage persistence
+
+Conditional Billing Address: Shows only when toggle is off
+
+Communication Preferences: JSONB field with dynamic switches
+
+Mobile Drawer: Sidebar becomes drawer on mobile
+
+Sticky Save Button: At bottom of form sections
+
+Profile Initialization: Creates default profile if none exists
+
+Verified Phone Chip: Conditional display
+
+Section Transitions: animate-in classes
+
+User Avatar: With fallback to email initial
+
+Active Section Highlighting: In sidebar
+
+IMPORTANT: Maintain the exact same user experience, visual design, and functionality. This is purely an architectural refactoring, not a redesign.

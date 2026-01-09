@@ -1,0 +1,84 @@
+{
+  "Header": {
+    "title": "Safementor",
+    "home": "Início",
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "welcome": "Bem-vindo",
+    "loggedIn": "Logado"
+  },
+  "Navigation": {
+    "language": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
+  },
+  "HomePage": {
+    "title": "Bem-vindo ao Projeto Safementor",
+    "description": "Sistema de autenticação com Next.js e Supabase.",
+    "features": "Recursos incluídos:",
+    "feature1": "Registro com email e senha",
+    "feature2": "Login e logout seguro",
+    "feature3": "Persistência de sessão",
+    "feature4": "Proteção de rotas"
+  },
+  "Auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "submit": "Enviar",
+    "loading": "Carregando...",
+    "createAccount": "Criar Conta",
+    "signIn": "Entrar",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "forgotPassword": "Esqueceu a senha?"
+  },
+  "RegisterPage": {
+    "title": "Criar Conta",
+    "emailPlaceholder": "seu@email.com",
+    "passwordPlaceholder": "Mínimo 6 caracteres",
+    "successMessage": "Cadastro realizado! Verifique seu email para confirmar."
+  },
+  "LoginPage": {
+    "title": "Entrar",
+    "emailPlaceholder": "seu@email.com"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Bem-vindo",
+    "protectedMessage": "Você está logado e esta página é protegida.",
+    "goToHome": "Ir para página inicial"
+  },
+  "Errors": {
+    "invalidEmail": "E-mail inválido",
+    "passwordLength": "Senha deve ter pelo menos 6 caracteres",
+    "generic": "Ocorreu um erro. Tente novamente."
+  },
+  "Landing": {
+    "Hero": {
+      "title1": "Safementor",
+      "title2": "para",
+      "title3": "projeto Safementor",
+      "description": "Translation",
+      "emailPlaceholder": "Digite seu endereço de email",
+      "startTrial": "Iniciar Teste Grátis",
+      "noCreditCard": "Não requer cartão de crédito.",
+      "freeTrial": "14 dias de teste grátis.",
+      "cancelAnytime": "Cancele a qualquer momento."
+    },
+    "Trusted": {
+      "title": "Confiado por mais de 10000+ clientes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "company": "Empresa"
+    },
+    "Features": {
+      "awesomeFeature": "Recurso Incrível",
+      "mainTitle": "Seu título aqui",
+      "mainDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec tincidunt nisl lorem eu nunc.",
+      "featureTitle": "Seu título aqui",
+      "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
+    }
+  }
+}

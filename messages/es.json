@@ -1,0 +1,364 @@
+<<<<<<< HEAD
+{
+  "Header": {
+    "title": "Safementor",
+    "home": "Inicio",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "welcome": "Bienvenido",
+    "loggedIn": "Conectado",
+    "chat": "Chat"
+  },
+  "Navigation": {
+    "language": "Idioma",
+    "portuguese": "Portugués",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "HomePage": {
+    "title": "Bienvenido al Proyecto Safementor",
+    "description": "Este es un sistema de autenticación con Next.js y Supabase.",
+    "features": "Características incluidas:",
+    "feature1": "Registro con email y contraseña",
+    "feature2": "Inicio y cierre de sesión seguro",
+    "feature3": "Persistencia de sesión",
+    "feature4": "Protección de rutas"
+  },
+  "Auth": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "createAccount": "Crear Cuenta",
+    "signIn": "Iniciar Sesión",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "forgotPassword": "¿Olvidaste tu contraseña?"
+  },
+  "RegisterPage": {
+    "title": "Crear Cuenta",
+    "emailPlaceholder": "tu@email.com",
+    "passwordPlaceholder": "Mínimo 6 caracteres",
+    "successMessage": "¡Registro exitoso! Verifica tu email para confirmar."
+  },
+  "LoginPage": {
+    "title": "Iniciar Sesión",
+    "emailPlaceholder": "tu@email.com"
+  },
+  "Dashboard": {
+    "title": "Panel de Control",
+    "welcome": "Bienvenido",
+    "protectedMessage": "Estás conectado y esta página está protegida.",
+    "goToHome": "Ir a la página de inicio",
+    "active": "Activo",
+    "sections": {
+      "overview": "Resumen",
+      "children": "Niños",
+      "privacy": "Privacidad",
+      "help": "Ayuda",
+      "personalInfo": "Información Personal",
+      "contactInfo": "Información de Contacto",
+      "address": "Dirección de Envío",
+      "billingAddress": "Dirección de Facturación",
+      "settings": "Suscripción y Configuración",
+      "privacySecurity": "Privacidad y Seguridad",
+      "preferences": "Preferencias de la App",
+      "communication_preferences": "Preferencias de Comunicación",
+      "social": "Social y Bio"
+    },
+    "fields": {
+      "firstname": "Nombre",
+      "lastname": "Apellido",
+      "nickname": "Apodo",
+      "gender": "Género",
+      "relative_to_children": "Relación con los Niños",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "phone_is_verified": "Teléfono Verificado",
+      "address_line1": "Calle / Dirección",
+      "address_additional_info": "Info Adicional (Apto, Suite)",
+      "address_city": "Ciudad",
+      "address_state": "Estado / Región",
+      "address_country": "País",
+      "address_postal_code": "Código Postal",
+      "address_timezone": "Zona Horaria",
+      "billing_same_as_shipping": "Misma dirección que envío",
+      "billing_address_line1": "Calle de Facturación",
+      "billing_address_additional_info": "Info Adit. Facturación",
+      "billing_city": "Ciudad de Facturación",
+      "billing_state": "Estado de Facturación",
+      "billing_country": "País de Facturación",
+      "billing_postal_code": "Código Postal de Facturación",
+      "is_subscribed": "Suscrito al Boletín",
+      "subscription_tier": "Plan",
+      "two_factor_enabled": "Autenticación de Dos Factores",
+      "theme": "Tema de la App",
+      "language": "Idioma de la App",
+      "date_format": "Formato de Fecha",
+      "time_format": "Formato de Hora",
+      "bio": "Biografía / Notas",
+      "profile_picture_url": "URL de Foto de Perfil"
+    },
+    "options": {
+      "genders": {
+        "male": "Masculino",
+        "female": "Femenino",
+        "diverse": "Diverso",
+        "prefer_not_to_say": "Prefiero no decirlo"
+      },
+      "relations": {
+        "Mother": "Madre",
+        "Father": "Padre",
+        "Uncle": "Tío",
+        "Aunt": "Tía",
+        "Grandfather": "Abuelo",
+        "Grandmother": "Abuela",
+        "Other": "Otro"
+      },
+      "themes": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      }
+    },
+    "placeholders": {
+      "firstname": "Juan",
+      "lastname": "Pérez",
+      "nickname": "Juanito",
+      "phone": "+34 600 000 000",
+      "address_line1": "Calle Mayor",
+      "city": "Madrid",
+      "zip": "28001",
+      "bio": "Cuéntanos un poco sobre ti..."
+    },
+    "content": {
+      "noChildren": "Aún no hay niños en la lista. Haga clic en el botón de abajo para añadir uno.",
+      "addChild": "Añadir Niño",
+      "privacyDescription": "Gestione sus datos y configuraciones de seguridad aquí.",
+      "helpDescription": "¿Necesita ayuda? Contacte con nuestro equipo de soporte.",
+      "supportTicket": "Abrir Ticket de Soporte"
+    },
+    "user": {
+      "role": "Padre / Tutor",
+      "status": "Estado en Línea"
+    },
+    "actions": {
+      "saveChanges": "Guardar Cambios",
+      "loading": "Guardando..."
+    }
+  },
+  "Errors": {
+    "invalidEmail": "Correo electrónico inválido",
+    "passwordLength": "La contraseña debe tener al menos 6 caracteres",
+    "generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+  },
+  "Landing": {
+    "Hero": {
+      "title1": "Bienvenido ",
+      "title2": "al proyecto",
+      "title3": "Safementor",
+      "description": "El mundo se está volviendo cada vez más moderno y sus hijos también. ¡Acompañémoslos juntos!.",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "startTrial": "Iniciar Prueba Gratis",
+      "noCreditCard": "No se requiere tarjeta de crédito.",
+      "freeTrial": "Prueba gratis de 14 días.",
+      "cancelAnytime": "Cancela en cualquier momento."
+    },
+    "Trusted": {
+      "title": "Confiado por más de 10000+ clientes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "company": "Empresa"
+    },
+    "Features": {
+      "awesomeFeature": "Característica Increíble",
+      "mainTitle": "Tu título aquí",
+      "mainDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec tincidunt nisl lorem eu nunc.",
+      "featureTitle": "Tu título aquí",
+      "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
+    }
+  }
+=======
+{
+  "Header": {
+    "title": "Safementor",
+    "home": "Inicio",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "welcome": "Bienvenido",
+    "loggedIn": "Conectado",
+    "chat": "Chat"
+  },
+  "Navigation": {
+    "language": "Idioma",
+    "portuguese": "Portugués",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "HomePage": {
+    "title": "Bienvenido al Proyecto Safementor",
+    "description": "Este es un sistema de autenticación con Next.js y Supabase.",
+    "features": "Características incluidas:",
+    "feature1": "Registro con email y contraseña",
+    "feature2": "Inicio y cierre de sesión seguro",
+    "feature3": "Persistencia de sesión",
+    "feature4": "Protección de rutas"
+  },
+  "Auth": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "createAccount": "Crear Cuenta",
+    "signIn": "Iniciar Sesión",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "forgotPassword": "¿Olvidaste tu contraseña?"
+  },
+  "RegisterPage": {
+    "title": "Crear Cuenta",
+    "emailPlaceholder": "tu@email.com",
+    "passwordPlaceholder": "Mínimo 6 caracteres",
+    "successMessage": "¡Registro exitoso! Verifica tu email para confirmar."
+  },
+  "LoginPage": {
+    "title": "Iniciar Sesión",
+    "emailPlaceholder": "tu@email.com"
+  },
+  "Dashboard": {
+    "title": "Panel de Control",
+    "welcome": "Bienvenido",
+    "protectedMessage": "Estás conectado y esta página está protegida.",
+    "goToHome": "Ir a la página de inicio",
+    "active": "Activo",
+    "sections": {
+      "overview": "Resumen",
+      "children": "Niños",
+      "privacy": "Privacidad",
+      "help": "Ayuda",
+      "personalInfo": "Información Personal",
+      "contactInfo": "Información de Contacto",
+      "address": "Dirección de Envío",
+      "billingAddress": "Dirección de Facturación",
+      "settings": "Suscripción y Configuración",
+      "privacySecurity": "Privacidad y Seguridad",
+      "preferences": "Preferencias de la App",
+      "communication_preferences": "Preferencias de Comunicación",
+      "social": "Social y Bio"
+    },
+    "fields": {
+      "firstname": "Nombre",
+      "lastname": "Apellido",
+      "nickname": "Apodo",
+      "gender": "Género",
+      "relative_to_children": "Relación con los Niños",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "phone_is_verified": "Teléfono Verificado",
+      "address_line1": "Calle / Dirección",
+      "address_additional_info": "Info Adicional (Apto, Suite)",
+      "address_city": "Ciudad",
+      "address_state": "Estado / Región",
+      "address_country": "País",
+      "address_postal_code": "Código Postal",
+      "address_timezone": "Zona Horaria",
+      "billing_same_as_shipping": "Misma dirección que envío",
+      "billing_address_line1": "Calle de Facturación",
+      "billing_address_additional_info": "Info Adit. Facturación",
+      "billing_city": "Ciudad de Facturación",
+      "billing_state": "Estado de Facturación",
+      "billing_country": "País de Facturación",
+      "billing_postal_code": "Código Postal de Facturación",
+      "is_subscribed": "Suscrito al Boletín",
+      "subscription_tier": "Plan",
+      "two_factor_enabled": "Autenticación de Dos Factores",
+      "theme": "Tema de la App",
+      "language": "Idioma de la App",
+      "date_format": "Formato de Fecha",
+      "time_format": "Formato de Hora",
+      "bio": "Biografía / Notas",
+      "profile_picture_url": "URL de Foto de Perfil"
+    },
+    "options": {
+      "genders": {
+        "male": "Masculino",
+        "female": "Femenino",
+        "diverse": "Diverso",
+        "prefer_not_to_say": "Prefiero no decirlo"
+      },
+      "relations": {
+        "Mother": "Madre",
+        "Father": "Padre",
+        "Uncle": "Tío",
+        "Aunt": "Tía",
+        "Grandfather": "Abuelo",
+        "Grandmother": "Abuela",
+        "Other": "Otro"
+      },
+      "themes": {
+        "light": "Claro",
+        "dark": "Oscuro",
+        "system": "Sistema"
+      }
+    },
+    "placeholders": {
+      "firstname": "Juan",
+      "lastname": "Pérez",
+      "nickname": "Juanito",
+      "phone": "+34 600 000 000",
+      "address_line1": "Calle Mayor",
+      "city": "Madrid",
+      "zip": "28001",
+      "bio": "Cuéntanos un poco sobre ti..."
+    },
+    "content": {
+      "noChildren": "Aún no hay niños en la lista. Haga clic en el botón de abajo para añadir uno.",
+      "addChild": "Añadir Niño",
+      "privacyDescription": "Gestione sus datos y configuraciones de seguridad aquí.",
+      "helpDescription": "¿Necesita ayuda? Contacte con nuestro equipo de soporte.",
+      "supportTicket": "Abrir Ticket de Soporte"
+    },
+    "user": {
+      "role": "Padre / Tutor",
+      "status": "Estado en Línea"
+    },
+    "actions": {
+      "saveChanges": "Guardar Cambios",
+      "loading": "Guardando..."
+    }
+  },
+  "Errors": {
+    "invalidEmail": "Correo electrónico inválido",
+    "passwordLength": "La contraseña debe tener al menos 6 caracteres",
+    "generic": "Ocurrió un error. Por favor, inténtalo de nuevo."
+  },
+  "Landing": {
+    "Hero": {
+      "title1": "Bienvenido ",
+      "title2": "al proyecto",
+      "title3": "Safementor",
+      "description": "El mundo se está volviendo cada vez más moderno y sus hijos también. ¡Acompañémoslos juntos!.",
+      "emailPlaceholder": "Ingresa tu correo electrónico",
+      "startTrial": "Iniciar Prueba Gratis",
+      "noCreditCard": "No se requiere tarjeta de crédito.",
+      "freeTrial": "Prueba gratis de 14 días.",
+      "cancelAnytime": "Cancela en cualquier momento."
+    },
+    "Trusted": {
+      "title": "Confiado por más de 10000+ clientes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "company": "Empresa"
+    },
+    "Features": {
+      "awesomeFeature": "Característica Increíble",
+      "mainTitle": "Tu título aquí",
+      "mainDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec tincidunt nisl lorem eu nunc.",
+      "featureTitle": "Tu título aquí",
+      "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
+    }
+  }
+>>>>>>> 91de5cabbcfa46eb587b93b07c41c682e2e5faf9
+}

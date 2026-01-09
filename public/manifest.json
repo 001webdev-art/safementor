@@ -1,0 +1,76 @@
+<<<<<<< HEAD
+{
+    "name": "Safementor - AI Chat PWA",
+    "short_name": "Safementor",
+    "description": "Secure and intelligent AI Chat for your daily needs.",
+    "start_url": "/chat",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#006FEE",
+    "orientation": "portrait",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+=======
+{
+    "name": "Safementor - AI Chat PWA",
+    "short_name": "Safementor",
+    "description": "Secure and intelligent AI Chat for your daily needs.",
+    "start_url": "/chat",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#006FEE",
+    "orientation": "portrait",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+>>>>>>> 91de5cabbcfa46eb587b93b07c41c682e2e5faf9
+}

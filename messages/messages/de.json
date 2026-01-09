@@ -1,0 +1,84 @@
+{
+  "Header": {
+    "title": "Safementor",
+    "home": "Start",
+    "login": "Login",
+    "register": "Registrieren",
+    "logout": "Abmelden",
+    "welcome": "Willkommen",
+    "loggedIn": "Eingeloggt"
+  },
+  "Navigation": {
+    "language": "Sprache",
+    "portuguese": "Portugiesisch",
+    "english": "Englisch",
+    "spanish": "Spanisch"
+  },
+  "HomePage": {
+    "title": "Willkommen beim Safementor Project",
+    "description": "Up-to-Date Auth-System mit Next.js, Supabase und PostgreSQL.",
+    "features": "Features:",
+    "feature1": "Registrierung mit E-Mail und Passwort",
+    "feature2": "Sicheres Ein- und Ausloggen",
+    "feature3": "Session bleibt erhalten",
+    "feature4": "Geschützte Routen"
+  },
+  "Auth": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "submit": "Absenden",
+    "loading": "Lädt...",
+    "createAccount": "Konto erstellen",
+    "signIn": "Einloggen",
+    "alreadyHaveAccount": "Schon registriert?",
+    "dontHaveAccount": "Noch kein Konto?",
+    "forgotPassword": "Passwort vergessen?"
+  },
+  "RegisterPage": {
+    "title": "Konto erstellen",
+    "emailPlaceholder": "deine@email.de",
+    "passwordPlaceholder": "Mindestens 6 Zeichen",
+    "successMessage": "Konto erstellt! Check deine E-Mail zur Bestätigung."
+  },
+  "LoginPage": {
+    "title": "Einloggen",
+    "emailPlaceholder": "deine@email.de"
+  },
+  "Dashboard": {
+    "title": "Dashboard",
+    "welcome": "Willkommen",
+    "protectedMessage": "Du bist eingeloggt – diese Seite ist geschützt.",
+    "goToHome": "Zur Startseite"
+  },
+  "Errors": {
+    "invalidEmail": "Ungültige E-Mail",
+    "passwordLength": "Passwort muss mindestens 6 Zeichen haben",
+    "generic": "Etwas ist schiefgelaufen. Nochmal versuchen."
+  },
+  "Landing": {
+    "Hero": {
+      "title1": "Willkommen",
+      "title2": "beim",
+      "title3": "Safementor",
+      "description": "Die Welt wird immer moderner, und Ihre Kinder auch! Begleiten wir sie gemeinsam! ",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "startTrial": "Los geht's!",
+      "noCreditCard": "Kredit- Debitkarte oder SEPA-Konto möglich.",
+      "freeTrial": "Starten Sie ab 5 Euro.",
+      "cancelAnytime": "Jederzeit kündbar."
+    },
+    "Trusted": {
+      "title": "Vertraut von über 10000+ Kunden",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "company": "Firma"
+    },
+    "Features": {
+      "awesomeFeature": "Tolles Feature",
+      "mainTitle": "Ihr Titel hier",
+      "mainDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec tincidunt nisl lorem eu nunc.",
+      "featureTitle": "Ihr Titel hier",
+      "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
+    }
+  }
+}
