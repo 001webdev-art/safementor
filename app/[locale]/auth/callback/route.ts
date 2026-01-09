@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 
@@ -28,34 +27,3 @@ export async function GET(request: Request) {
     // return the user to an error page with instructions
     return NextResponse.redirect(`${origin}/auth/auth-code-error`)
 }
-=======
-import { NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
-
-export async function GET(request: Request) {
-    const { searchParams, origin } = new URL(request.url)
-    const code = searchParams.get('code')
-    // if "next" is in search params, use it as the redirection URL
-    const next = searchParams.get('next') ?? '/auth/verified'
-
-    if (code) {
-        const supabase = await createClient()
-        const { error } = await supabase.auth.exchangeCodeForSession(code)
-        if (!error) {
-            const forwardedHost = request.headers.get('x-forwarded-host') // localhost:3000
-            const isLocalEnv = process.env.NODE_ENV === 'development'
-            if (isLocalEnv) {
-                // we can be sure that originated from the same origin anyway
-                return NextResponse.redirect(`${origin}${next}`)
-            } else if (forwardedHost) {
-                return NextResponse.redirect(`https://${forwardedHost}${next}`)
-            } else {
-                return NextResponse.redirect(`${origin}${next}`)
-            }
-        }
-    }
-
-    // return the user to an error page with instructions
-    return NextResponse.redirect(`${origin}/auth/auth-code-error`)
-}
->>>>>>> 91de5cabbcfa46eb587b93b07c41c682e2e5faf9
