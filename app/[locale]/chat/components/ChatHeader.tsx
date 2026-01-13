@@ -9,11 +9,12 @@ import {
     Button,
     Avatar
 } from '@nextui-org/react';
-import { ChevronDown, MoreVertical, Search, Bot, Download, HelpCircle, LogOut } from 'lucide-react';
+import { ChevronDown, MoreVertical, Search, Bot, Download, HelpCircle, LogOut, History } from 'lucide-react';
 import { useChatStore } from '../hooks/useChatStore';
 import { LLMProvider } from '../types/chat';
 import { usePWA } from '../hooks/usePWA';
 import { useRouter, usePathname } from 'next/navigation';
+import ChildSelector from './ChildSelector';
 
 export default function ChatHeader() {
     const { provider, setProvider } = useChatStore();
@@ -31,6 +32,8 @@ export default function ChatHeader() {
             }
         } else if (key === 'help') {
             router.push(`/${currentLocale}/dashboard?section=help`);
+        } else if (key === 'history') {
+            router.push(`/${currentLocale}/chat/history`);
         } else if (key === 'exit') {
             router.push('/');
         }
@@ -90,7 +93,9 @@ export default function ChatHeader() {
                             </DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                    <p className="text-xs text-default-500 font-medium">Online • Premium AI</p>
+                    <div className="mt-1">
+                        <ChildSelector />
+                    </div>
                 </div>
             </div>
 
@@ -110,6 +115,9 @@ export default function ChatHeader() {
                             startContent={<Download size={18} />}
                         >
                             {isInstallable ? "Install this APP" : "PWA Status (Debug)"}
+                        </DropdownItem>
+                        <DropdownItem key="history" startContent={<History size={18} />}>
+                            Messages Stored
                         </DropdownItem>
                         <DropdownItem key="help" startContent={<HelpCircle size={18} />}>
                             Help

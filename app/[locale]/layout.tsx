@@ -28,10 +28,15 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
     title: 'Safementor',
+    // Next.js will handle the meta tags, but we want to ensure 
+    // it doesn't just use the deprecated one if possible.
   },
   formatDetection: {
     telephone: false,
   },
+  other: {
+    'mobile-web-app-capable': 'yes',
+  }
 }
 
 export const viewport = {

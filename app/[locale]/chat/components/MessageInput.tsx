@@ -13,20 +13,30 @@ export default function MessageInput() {
 
     const handleSend = async () => {
         if (!content.trim()) return;
+        const { activeChildId, addMessage, setLoading, provider, setError, messages } = useChatStore.getState();
 
-        const userMessage = content.trim();
+        if (!activeChildId) {
+            setError('Please select a child first');
+            return;
+        }
+
+        const userMessageContent = content.trim();
         setContent('');
-        addMessage({ role: 'user', content: userMessage });
 
-        const currentMessages = useChatStore.getState().messages;
+        // Add user message and wait for it to be saved to PouchDB
+        const userMessageId = await addMessage({ role: 'user', content: userMessageContent });
+
+        // Get updated messages for LLM context
+        const updatedMessages = useChatStore.getState().messages;
 
         setLoading(true);
         try {
-            const response = await callLLM(provider, currentMessages);
-            addMessage({
+            const response = await callLLM(provider, updatedMessages);
+            await addMessage({
                 role: 'assistant',
                 content: response.content,
-                provider
+                provider,
+                parent_message_id: userMessageId
             });
         } catch (err: any) {
             setError(err.message || 'Failed to get response');
