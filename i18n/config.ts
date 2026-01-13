@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 // Define os idiomas suportados
 export type Locale = 'en' | 'pt' | 'es' | 'de'
 export const locales: Locale[] = ['en', 'pt', 'es', 'de']
-export const defaultLocale: Locale = 'pt'
+export const defaultLocale: Locale = 'en'
 export const localePrefix = 'as-needed'
 
 // Configura o next-intl

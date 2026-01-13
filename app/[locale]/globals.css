@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .organic-blob {
+    border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  }
+  
+  .organic-blob-2 {
+    border-radius: 40% 60% 60% 40% / 60% 40% 50% 50%;
+  }
+  
+  .gentle-shadow {
+    box-shadow: 0 4px 30px rgba(139, 134, 123, 0.08);
+  }
+  
+  .card-hover {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 40px rgba(139, 134, 123, 0.12);
+  }
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.float-gentle {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }

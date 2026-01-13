@@ -177,5 +177,167 @@
       "featureTitle": "Ihr Titel hier",
       "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
     }
+  },
+  "SafeMentor": {
+    "Navigation": {
+      "values": "Unsere Werte",
+      "approach": "Unser Ansatz",
+      "families": "Für Familien",
+      "learnMore": "Mehr erfahren"
+    },
+    "Hero": {
+      "eyebrow": "Gemeinsam Wachstum fördern",
+      "title": "Kinder mit Führung, Vertrauen und Raum zum Wachsen unterstützen",
+      "subtitle": "SafeMentor hilft Familien, Neugier zu wecken, Vertrauen aufzubauen und eine gesunde Entwicklung zu unterstützen – mit Technologie, die die Kindheit respektiert.",
+      "ctaPrimary": "Unseren Ansatz entdecken",
+      "ctaSecondary": "Für Eltern"
+    },
+    "Trust": {
+      "badge1": "Inspiriert vom Kids Online Safety Act",
+      "badge2": "DSGVO-konform",
+      "badge3": "Von Eltern für Eltern gemacht"
+    },
+    "Values": {
+      "eyebrow": "Was SafeMentor ist",
+      "title": "SafeMentor ist kein weiteres Bildschirmzeit-Produkt",
+      "description": "Es ist ein Denk- und Mentoring-Begleiter, der Kindern hilft, Neugier, Verantwortung, emotionale Stärke und reale Verbindungen zu entwickeln – mit starker Unterstützung für die Eltern.",
+      "emphasis": "Kinder brauchen nicht mehr Apps. Sie brauchen Führung, Vertrauen und Raum zum Wachsen.",
+      "citation": "SafeMentor basiert auf international anerkannten kindlichen Entwicklungsprinzipien von Gerald Hüther, Jesper Juul, Dan Siegel und prinzipienbasiertem Denken. Wir formen Kinder nicht durch Kontrolle. Wir laden zur Entwicklung durch Beziehung ein.",
+      "card1": {
+        "title": "Neugier statt Druck",
+        "desc": "Staunen und Erforschen fördern, nicht Leistungskennzahlen"
+      },
+      "card2": {
+        "title": "Verbindung statt Kontrolle",
+        "desc": "Entwicklung durch Beziehung, nicht erzwungenes Verhalten"
+      },
+      "card3": {
+        "title": "Vertrauen statt Überwachung",
+        "desc": "Einblicke für Eltern, ohne die Privatsphäre des Kindes zu verletzen"
+      },
+      "learning": {
+        "eyebrow": "Wobei SafeMentor hilft",
+        "title": "Lernen & Verstehen",
+        "description": "SafeMentor unterstützt Kinder beim Verstehen von Schulthemen, dem Erkunden von Ideen und Interessen und dem schrittweisen Bearbeiten von Problemen.",
+        "callout": {
+          "title": "Wichtig:",
+          "desc1": "SafeMentor gibt keine sofortigen Antworten auf Hausaufgaben.",
+          "desc2": "Stattdessen stellt es leitende Fragen, hilft Kindern beim schrittweisen Denken und fördert eigene Ideen."
+        },
+        "emphasis": "Denn Lernen sollte das Gehirn aktivieren, nicht ersetzen."
+      },
+      "offline": {
+        "title": "Offline-Leben kommt an erster Stelle",
+        "description": "SafeMentor ermutigt aktiv zu Offline-Aktivitäten, Kreativität in der realen Welt und Zeit mit Freunden, Familie und in der Natur.",
+        "emphasis": "Die besten Momente passieren nicht auf einem Bildschirm."
+      },
+      "emotional": {
+        "title": "Emotionale Unterstützung – ohne Menschen zu ersetzen",
+        "description": "SafeMentor hört zu, wenn Kinder reden möchten. Es kann Kindern helfen, Emotionen zu benennen, zur Reflexion anregen und gesunde nächste Schritte vorschlagen.",
+        "callout": {
+          "title": "Aber es ist kein Therapeut",
+          "desc": "und ersetzt niemals echte Menschen."
+        },
+        "final": "Bei Bedarf ermutigt SafeMentor sanft dazu, mit den Eltern zu sprechen, sich an vertrauenswürdige Erwachsene zu wenden und echte menschliche Unterstützung zu suchen."
+      },
+      "safety": {
+        "eyebrow": "Für Eltern",
+        "title": "Sicherheit & Frühwarnung",
+        "description": "SafeMentor achtet auf Muster, nicht auf Geheimnisse.",
+        "detect": {
+          "title": "Was wir erkennen",
+          "list": [
+            "Emotionale Trends im Zeitverlauf",
+            "Warnzeichen (Not, Isolation)",
+            "Ernste Warnsignale: Selbstverletzung, Grooming, Mobbing, Drogen, Fremdgefährdung"
+          ]
+        },
+        "see": {
+          "title": "Was Eltern sehen",
+          "list": [
+            "Aggregierte Erkenntnisse",
+            "Klare Erklärungen",
+            "Praktische Anleitung"
+          ]
+        },
+        "notSee": {
+          "title": "Was Eltern NICHT sehen",
+          "list": [
+            "Rohe Chat-Protokolle",
+            "Private Geständnisse",
+            "Echtzeit-Überwachung"
+          ]
+        },
+        "protects": {
+          "title": "Dies schützt das Vertrauen",
+          "desc": "Zwischen Kind und Eltern. Kinder müssen wissen, dass sie sich sicher ausdrücken können, während Eltern über ihr Wohlbefinden informiert bleiben."
+        }
+      }
+    },
+    "Approach": {
+      "eyebrow": "Unser Ansatz",
+      "title": "Technologie, die weiß, wann sie sich zurückziehen muss",
+      "description": "SafeMentor wurde entwickelt, um die natürliche Neugier und das emotionale Wachstum von Kindern zu unterstützen – und sie dann sanft zu Erfahrungen in der realen Welt, Gesprächen und zum Spielen zurückzuführen.",
+      "bullet1": {
+        "title": "Fördert Offline-Erkundung",
+        "desc": "Schlägt Aktivitäten, Gespräche und Erfahrungen vor, die abseits von Bildschirmen stattfinden."
+      },
+      "bullet2": {
+        "title": "Hält Eltern informiert",
+        "desc": "Klare, ehrliche Kommunikation darüber, was Ihr Kind lernt und erlebt."
+      }
+    },
+    "Families": {
+      "title": "Eltern unterstützen – nicht verurteilen",
+      "description": "SafeMentor existiert, um Eltern zu unterstützen, nicht um sie zu ersetzen.",
+      "receives": {
+        "title": "Eltern erhalten:",
+        "list": [
+          "Ruhige Erklärungen emotionaler Trends",
+          "Kontext für die Bedeutung von Signalen – und was sie nicht bedeuten",
+          "Vorschläge für Gespräche mit ihrem Kind",
+          "Ermutigung zum Aufbau von Vertrauen und Verbindung"
+        ],
+        "emphasis": "Wir beschämen Eltern niemals. Wir helfen ihnen, gemeinsam mit ihrem Kind zu wachsen."
+      },
+      "trust": {
+        "title": "Auf Vertrauen gebaut",
+        "description": "Wir glauben:",
+        "list": [
+          "Kinder wachsen durch sichere Beziehungen",
+          "Entwicklung kann nicht erzwungen werden",
+          "Vertrauen ist mächtiger als Kontrolle"
+        ],
+        "final": "SafeMentor ist so konzipiert, dass es verschwindet, wenn es nicht mehr benötigt wird.",
+        "emphasis": "Denn Erfolg bedeutet: Ein Kind, das denkt, fühlt, sich verbindet – und voll und ganz offline lebt."
+      }
+    },
+    "Quote": {
+      "text": "\"SafeMentor hat unserer Familie geholfen, Gespräche zu führen, von denen wir nicht wussten, wie wir sie beginnen sollten. Es geht nicht um die Technologie – es geht darum, uns näher zusammenzubringen.\"",
+      "author": "Maria K.",
+      "role": "Mutter von zwei Kindern"
+    },
+    "CTA": {
+      "title": "Bereit zu erfahren, wie SafeMentor funktioniert?",
+      "subtitle": "Entdecken Sie einen ruhigeren, durchdachteren Umgang mit Technologie für Ihre Familie.",
+      "buttonPrimary": "Erfahren Sie, wie SafeMentor funktioniert",
+      "buttonSecondary": "Lesen Sie unsere Prinzipien",
+      "disclaimer": "Keine Verpflichtung erforderlich. Nur fundierte Informationen."
+    },
+    "Footer": {
+      "text": "Technologie, die die Kindheit respektiert. Mit Sorgfalt gebaut, von Ethik geleitet, fokussiert auf das, was am wichtigsten ist.",
+      "learnMore": "Mehr erfahren",
+      "company": "Unternehmen",
+      "links": {
+        "approach": "Unser Ansatz",
+        "ethics": "Ethikrichtlinien",
+        "educators": "Für Pädagogen",
+        "research": "Forschung",
+        "about": "Über uns",
+        "privacy": "Datenschutzrichtlinie",
+        "contact": "Kontakt"
+      },
+      "bottom": "Mit Sorgfalt für Kinder und Familien gemacht."
+    }
   }
 }

@@ -1,12 +1,14 @@
-import Header from '@/components/Header'
-import { Hero } from '@/components/landing/Hero'
-import { Trusted } from '@/components/landing/Trusted'
-import { Features1 } from '@/components/landing/Features'
-import { Plans } from '@/components/landing/plans'
-import { useTranslations } from 'next-intl'
+import { Navigation } from '@/components/landing/Navigation'
+import { SafeMentorHero } from '@/components/landing/SafeMentorHero'
+import { TrustBadges } from '@/components/landing/TrustBadges'
+import { ValuesSection } from '@/components/landing/ValuesSection'
+import { ApproachSection } from '@/components/landing/ApproachSection'
+import { FamiliesSection } from '@/components/landing/FamiliesSection'
+import { TestimonialSection } from '@/components/landing/TestimonialSection'
+import { CTASection } from '@/components/landing/CTASection'
+import { SafeMentorFooter } from '@/components/landing/SafeMentorFooter'
 import { getTranslations } from 'next-intl/server'
 import { locales } from '@/i18n/config'
-import { Footer } from '@/components/landing/Footer'
 
 // Gera metadados
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -24,19 +26,21 @@ export function generateStaticParams() {
 }
 
 export default function HomePage() {
-  const t = useTranslations('HomePage')
-
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      <Header />
+    <div className="min-h-screen bg-[#FDFBF8] text-[#4A4540]">
+      <Navigation />
 
-      <main className="flex flex-col gap-10 pb-20">
-        <Hero />
-        <Trusted />
-        <Features1 />
-        <Plans />
-        <Footer />
+      <main className="flex flex-col">
+        <SafeMentorHero />
+        <TrustBadges />
+        <ValuesSection />
+        <ApproachSection />
+        <FamiliesSection />
+        <TestimonialSection />
+        <CTASection />
       </main>
+
+      <SafeMentorFooter />
     </div>
   )
 }

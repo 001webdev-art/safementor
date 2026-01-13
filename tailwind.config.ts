@@ -9,7 +9,12 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['var(--font-serif-main)'],
+        sans: ['var(--font-sans-main)'],
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

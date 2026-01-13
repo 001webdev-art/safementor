@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Libre_Baskerville, Source_Sans_3 } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import '../globals.css'
+import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const libreBaskerville = Libre_Baskerville({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-serif-main',
+  style: ['normal', 'italic']
+})
+const sourceSans3 = Source_Sans_3({
+  subsets: ['latin'],
+  variable: '--font-sans-main'
+})
 
 // Importe a configuração
 import { locales } from '@/i18n/config'
@@ -63,8 +73,8 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${libreBaskerville.variable} ${sourceSans3.variable}`}>
+      <body className={sourceSans3.className}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}
