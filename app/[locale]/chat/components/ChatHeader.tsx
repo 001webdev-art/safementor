@@ -13,17 +13,15 @@ import { ChevronDown, MoreVertical, Search, Bot, Download, HelpCircle, LogOut, H
 import { useChatStore } from '../hooks/useChatStore';
 import { LLMProvider } from '../types/chat';
 import { usePWA } from '../hooks/usePWA';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
 import ChildSelector from './ChildSelector';
 
 export default function ChatHeader() {
     const { provider, setProvider } = useChatStore();
     const { isInstallable, installApp } = usePWA();
     const router = useRouter();
-    const pathname = usePathname();
-
-    const pathSegments = pathname.split('/').filter(Boolean);
-    const currentLocale = pathSegments[0] || 'en';
+    const currentLocale = useLocale();
 
     const handleMenuAction = (key: string) => {
         if (key === 'install') {

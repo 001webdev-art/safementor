@@ -37,6 +37,11 @@ class ChatDatabase {
             });
             await this.db.createIndex({
                 index: {
+                    fields: ['timestamp']
+                }
+            });
+            await this.db.createIndex({
+                index: {
                     fields: ['sync_status']
                 }
             });
@@ -66,20 +71,83 @@ class ChatDatabase {
         }
     }
 
-    async getMessages(child_id: string): Promise<LocalMessage[]> {
+    async getMessages(child_id?: string, limit: number = 30, skip: number = 0): Promise<LocalMessage[]> {
         await this.init();
         if (!this.db) return [];
         try {
+            const selector: any = {};
+            if (child_id) {
+                selector.child_id = child_id;
+            } else {
+                // To ensure we can sort by timestamp when no child_id is provided, 
+                // we might need a selector that covers all docs or a different index.
+                // For now, simpler approach: if no child_id, we might rely on default index or just allDocs if performance allows, 
+                // but let's try to keep using 'find' with a general selector if possible.
+                // However, for "All Children", we might just want to list everything sorted by time.
+                selector.timestamp = { $gt: null };
+            }
+
             const result = await this.db.find({
-                selector: { child_id: child_id },
-                sort: [{ child_id: 'desc' }, { timestamp: 'desc' }]
+                selector: selector,
+                sort: child_id ? [{ child_id: 'desc' }, { timestamp: 'desc' }] : ['timestamp'], // Needs index for just timestamp
+                limit: limit,
+                skip: skip
             });
-            return (result.docs as LocalMessage[]).sort((a, b) =>
-                new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
-            );
+            // PouchDB-find sorts ascending by default usually unless specified. 
+            // We want newest first. 
+            // If we sort descending in query, we get newest first.
+
+            // NOTE: We need to ensure indices exist for these queries.
+
+            return result.docs as LocalMessage[];
         } catch (err) {
             console.error('Error getting messages:', err);
             return [];
+        }
+    }
+
+    async deleteAllMessages(child_id?: string) {
+        await this.init();
+        if (!this.db) return;
+        try {
+            let docsToDelete;
+            if (child_id) {
+                const result = await this.db.find({
+                    selector: { child_id: child_id },
+                    fields: ['_id', '_rev']
+                });
+                docsToDelete = result.docs;
+            } else {
+                const result = await this.db.allDocs({
+                    include_docs: false
+                });
+                // Filter out design docs
+                docsToDelete = result.rows
+                    .filter((row: { id: string }) => !row.id.startsWith('_design/'))
+                    .map((row: { id: string; value: { rev: string } }) => ({ _id: row.id, _rev: row.value.rev }));
+            }
+
+            const deletedDocs = docsToDelete.map((doc: { _id: string; _rev: string }) => ({ ...doc, _deleted: true }));
+            return await this.db.bulkDocs(deletedDocs);
+        } catch (err) {
+            console.error('Error deleting messages:', err);
+            throw err;
+        }
+    }
+
+    async destroyDatabase() {
+        if (!this.db && !this.initialized) {
+            await this.init();
+        }
+        if (!this.db) return;
+
+        try {
+            await this.db.destroy();
+            this.db = null;
+            this.initialized = false;
+        } catch (err) {
+            console.error('Error destroying database:', err);
+            throw err;
         }
     }
 
@@ -143,7 +211,7 @@ class ChatDatabase {
                 include_docs: true,
                 descending: true
             });
-            return (result.rows.map(row => row.doc) as LocalMessage[])
+            return (result.rows.map((row: any) => row.doc) as LocalMessage[])
                 .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
         } catch (err) {
             console.error('Error getting all messages:', err);

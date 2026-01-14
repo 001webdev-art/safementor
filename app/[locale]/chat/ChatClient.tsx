@@ -17,7 +17,7 @@ export default function ChatClient() {
     if (!mounted) return null;
 
     return (
-        <div className="flex flex-col h-[calc(100vh-64px)] bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden">
+        <div className="flex flex-col h-screen h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden">
             {/* Header */}
             <ChatHeader />
 

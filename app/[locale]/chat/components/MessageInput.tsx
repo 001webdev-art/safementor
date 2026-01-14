@@ -13,7 +13,10 @@ export default function MessageInput() {
 
     const handleSend = async () => {
         if (!content.trim()) return;
-        const { activeChildId, addMessage, setLoading, provider, setError, messages } = useChatStore.getState();
+
+        // Prevent double submission if already loading
+        const { activeChildId, addMessage, setLoading, provider, setError, messages, isLoading } = useChatStore.getState();
+        if (isLoading) return;
 
         if (!activeChildId) {
             setError('Please select a child first');
@@ -21,16 +24,16 @@ export default function MessageInput() {
         }
 
         const userMessageContent = content.trim();
-        setContent('');
+        setContent(''); // Optimistic clear
 
-        // Add user message and wait for it to be saved to PouchDB
-        const userMessageId = await addMessage({ role: 'user', content: userMessageContent });
-
-        // Get updated messages for LLM context
-        const updatedMessages = useChatStore.getState().messages;
-
-        setLoading(true);
         try {
+            // Add user message and wait for it to be saved to PouchDB
+            setLoading(true);
+            const userMessageId = await addMessage({ role: 'user', content: userMessageContent });
+
+            // Get updated messages for LLM context
+            const updatedMessages = useChatStore.getState().messages;
+
             const response = await callLLM(provider, updatedMessages);
             await addMessage({
                 role: 'assistant',
@@ -39,7 +42,9 @@ export default function MessageInput() {
                 parent_message_id: userMessageId
             });
         } catch (err: any) {
+            console.error('Error sending message:', err);
             setError(err.message || 'Failed to get response');
+            // Restore content if failed? Using simple alert/error state for now is safer than complicated rollback
         } finally {
             setLoading(false);
         }

@@ -5,6 +5,7 @@ import { Message, SyncStatus } from '../types/chat';
 class SyncManager {
     private supabase: any = null;
     private isSyncing = false;
+    private retrySync = false;
 
     constructor() {
         if (typeof window !== 'undefined') {
@@ -14,18 +15,29 @@ class SyncManager {
     }
 
     async sync() {
-        if (!this.supabase || this.isSyncing || !navigator.onLine) return;
+        if (!this.supabase || !navigator.onLine) return;
+
+        if (this.isSyncing) {
+            this.retrySync = true;
+            return;
+        }
         this.isSyncing = true;
+        this.retrySync = false;
 
         try {
-            const unsynced = await chatDb.getUnsyncedMessages();
-            for (const localMsg of unsynced) {
-                await this.syncMessage(localMsg);
-            }
+            do {
+                this.retrySync = false;
+                const unsynced = await chatDb.getUnsyncedMessages();
+
+                for (const localMsg of unsynced) {
+                    await this.syncMessage(localMsg);
+                }
+            } while (this.retrySync || (await chatDb.getUnsyncedMessages()).length > 0);
         } catch (error) {
             console.error('Sync failed:', error);
         } finally {
             this.isSyncing = false;
+            this.retrySync = false;
         }
     }
 
@@ -85,8 +97,10 @@ class SyncManager {
         try {
             // Get last synced timestamp for this child
             const localMessages = await chatDb.getMessages(childId);
+            // Local messages are sorted newest first (descending). 
+            // So index 0 is the newest.
             const lastTimestamp = localMessages.length > 0
-                ? localMessages[localMessages.length - 1].timestamp
+                ? localMessages[0].timestamp
                 : new Date(0).toISOString();
 
             // Join with children to get nickname
@@ -101,6 +115,25 @@ class SyncManager {
 
             if (data) {
                 for (const remoteMsg of data) {
+                    // Check if we already have this message (by UUID) to avoid partial duplicates
+                    // The remoteMsg.id is the UUID.
+                    // We might have it as `id` or `local_id` if it was just synced.
+                    // But simpler: just check if a doc with this _id (if we used UUID as _id) or `id` field exists.
+                    // Our saveMessage uses `local_id` or `id` as _id. 
+                    // If we synced it, we updated the doc to have `id` = UUID.
+                    // So we can try to find by that ID.
+
+                    // Actually, let's use a simpler check: 
+                    // If we find a message with this UUID in our DB, skip it.
+                    // But we don't have a direct "getByUUID" efficiently without index, 
+                    // though we can use `chatDb.getMessages` (which we just did) to check in memory? 
+                    // `localMessages` has all messages for this child.
+
+                    const exists = localMessages.some(m => m.id === remoteMsg.id);
+                    if (exists) {
+                        continue;
+                    }
+
                     await chatDb.saveMessage({
                         id: remoteMsg.id,
                         child_id: remoteMsg.child_id,
