@@ -105,7 +105,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
                         toggleGroup={toggleGroup}
                         t={t}
                         // Children specific props
-                        children={children}
+                        childList={children}
                         selectedChildId={selectedChildId}
                         onSelectChild={setSelectedChildId}
                         isAddingChild={isAddingChild}

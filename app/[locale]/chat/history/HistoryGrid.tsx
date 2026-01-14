@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card, CardBody, CardHeader, Chip, User } from '@nextui-org/react';
 import { Clock, CheckCheck, AlertCircle } from 'lucide-react';
-import { LocalMessage } from '../../services/pouchdb';
+import { LocalMessage } from '../services/pouchdb';
 
 interface HistoryGridProps {
     messages: LocalMessage[];

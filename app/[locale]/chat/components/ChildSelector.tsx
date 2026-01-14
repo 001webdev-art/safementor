@@ -15,29 +15,31 @@ export default function ChildSelector() {
     const { activeChildId, setActiveChildId } = useChatStore();
     const [children, setChildren] = useState<Child[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const supabase = createClient();
-
     useEffect(() => {
         const fetchChildren = async () => {
+            const supabase = createClient();
             const { data: { user } } = await supabase.auth.getUser();
             if (!user) return;
 
-            const { data, error } = await supabase
+            const { data } = await supabase
                 .from('children')
                 .select('id, nickname')
                 .eq('parent_id', user.id);
 
             if (data) {
                 setChildren(data);
-                if (!activeChildId && data.length > 0) {
-                    setActiveChildId(data[0].id);
-                }
             }
             setIsLoading(false);
         };
 
         fetchChildren();
     }, []);
+
+    useEffect(() => {
+        if (!activeChildId && children.length > 0) {
+            setActiveChildId(children[0].id);
+        }
+    }, [children, activeChildId, setActiveChildId]);
 
     const activeChild = children.find(c => c.id === activeChildId);
 

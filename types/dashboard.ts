@@ -52,7 +52,7 @@ export interface SectionProps {
 }
 
 export interface ChildrenSectionProps extends Omit<SectionProps, 'onProfileChange' | 'profile'> {
-    children: Child[];
+    childList: Child[];
     selectedChildId: string | null;
     onSelectChild: (id: string | null) => void;
     isAddingChild: boolean;

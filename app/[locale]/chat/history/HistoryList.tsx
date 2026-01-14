@@ -25,13 +25,15 @@ export default function HistoryList({ messages, hasMore, isLoadingMore, onLoadMo
             { threshold: 1.0 }
         );
 
-        if (observerTarget.current) {
-            observer.observe(observerTarget.current);
+        const currentElement = observerTarget.current;
+
+        if (currentElement) {
+            observer.observe(currentElement);
         }
 
         return () => {
-            if (observerTarget.current) {
-                observer.unobserve(observerTarget.current);
+            if (currentElement) {
+                observer.unobserve(currentElement);
             }
         };
     }, [hasMore, isLoadingMore, onLoadMore]);

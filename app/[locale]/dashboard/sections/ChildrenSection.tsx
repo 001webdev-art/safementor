@@ -11,7 +11,7 @@ import { ChildrenSectionProps, Child } from '@/types/dashboard';
  * Implements the child management system: listing, selecting, and upserting.
  */
 export default function ChildrenSection({
-    children,
+    childList,
     selectedChildId,
     onSelectChild,
     isAddingChild,
@@ -27,7 +27,7 @@ export default function ChildrenSection({
     // When selection changes, update local state for editing
     useEffect(() => {
         if (selectedChildId) {
-            const found = children.find(c => c.id === selectedChildId);
+            const found = childList.find(c => c.id === selectedChildId);
             if (found) {
                 setLocalChild(found);
                 onSetAddingChild(false);
@@ -47,7 +47,7 @@ export default function ChildrenSection({
         } else {
             setLocalChild({});
         }
-    }, [selectedChildId, isAddingChild, children, onSetAddingChild]);
+    }, [selectedChildId, isAddingChild, childList, onSetAddingChild]);
 
     const handleSave = async () => {
         try {
@@ -69,7 +69,7 @@ export default function ChildrenSection({
         }
     };
 
-    const hasChildren = children.length > 0;
+    const hasChildren = childList.length > 0;
 
     // We show the layout (form/selection) if there are children OR we are adding one.
     // The "Empty State" appears JUST when children table is empty and we are NOT adding.
@@ -130,7 +130,7 @@ export default function ChildrenSection({
                             className="max-w-xs"
                             selectorIcon={<ChevronDown size={18} />}
                         >
-                            {children.map((child) => (
+                            {childList.map((child) => (
                                 <SelectItem key={child.id} textValue={child.nickname || child.childrenname}>
                                     {child.nickname || child.childrenname}
                                 </SelectItem>

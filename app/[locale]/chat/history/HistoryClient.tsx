@@ -16,49 +16,57 @@ export default function HistoryClient() {
     const { activeChildId, setActiveChildId } = useChatStore();
     const LIMIT = 30;
 
-    const loadMessages = async (reset = false) => {
+    const loadMoreMessages = async () => {
+        if (isLoadingMore || !hasMore) return;
+
         try {
-            const currentPage = reset ? 0 : page;
-            const skip = currentPage * LIMIT;
-
-            if (reset) {
-                setIsLoading(true);
-                setMessages([]);
-            } else {
-                setIsLoadingMore(true);
-            }
-
-            // If activeChildId is null/undefined, it means "All Children" (or initial state)
-            // But we should probably default to no child selected = all messages
+            setIsLoadingMore(true);
+            const skip = page * LIMIT;
             const newMessages = await chatDb.getMessages(activeChildId || undefined, LIMIT, skip);
 
-            if (reset) {
-                setMessages(newMessages);
-            } else {
-                setMessages(prev => [...prev, ...newMessages]);
-            }
-
+            setMessages(prev => [...prev, ...newMessages]);
             setHasMore(newMessages.length === LIMIT);
-            setPage(currentPage + 1);
+            setPage(prev => prev + 1);
         } catch (error) {
             console.error('Error loading history:', error);
         } finally {
-            setIsLoading(false);
             setIsLoadingMore(false);
         }
     };
 
     // Reset and reload when child selection changes
     useEffect(() => {
-        setPage(0);
-        setHasMore(true);
-        loadMessages(true);
+        let isMounted = true;
+
+        const loadInitial = async () => {
+            setIsLoading(true);
+            try {
+                // Reset states
+                setPage(0);
+                // We fetch page 0 immediately
+                const newMessages = await chatDb.getMessages(activeChildId || undefined, LIMIT, 0);
+
+                if (isMounted) {
+                    setMessages(newMessages);
+                    setHasMore(newMessages.length === LIMIT);
+                    setPage(1); // Prepare for next page
+                }
+            } catch (error) {
+                console.error('Error loading initial history:', error);
+            } finally {
+                if (isMounted) setIsLoading(false);
+            }
+        };
+
+        loadInitial();
+
+        return () => {
+            isMounted = false;
+        };
     }, [activeChildId]);
 
     const handleLoadMore = () => {
-        if (!isLoadingMore && hasMore) {
-            loadMessages();
-        }
+        loadMoreMessages();
     };
 
     const handleDeleteAll = async () => {
@@ -94,7 +102,7 @@ export default function HistoryClient() {
     };
 
     return (
-        <div className="flex flex-col h-screen h-dvh bg-[#f0f2f5] dark:bg-[#0b141a]">
+        <div className="flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#0b141a]">
             {/* Pass onDeleteAll and onResetDatabase to Header */}
             <HistoryHeader
                 onDeleteAll={handleDeleteAll}
