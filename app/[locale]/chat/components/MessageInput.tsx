@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Button, Textarea } from '@nextui-org/react';
+import { Button, Textarea, Popover, PopoverTrigger, PopoverContent } from '@nextui-org/react';
+import ChatEmojiPicker from './ChatEmojiPicker';
+import { EmojiClickData } from 'emoji-picker-react';
 import { Send, Smile, Paperclip, Mic } from 'lucide-react';
 import { useChatStore } from '../hooks/useChatStore';
 import { callLLM } from '@/lib/llm/llmService';
@@ -57,12 +59,23 @@ export default function MessageInput() {
         }
     };
 
+    const handleEmojiClick = (emojiData: EmojiClickData) => {
+        setContent((prev) => prev + emojiData.emoji);
+    };
+
     return (
         <div className="bg-[#f0f2f5] dark:bg-[#202c33] p-3 flex items-end gap-2 shrink-0 z-10 border-t border-divider">
             <div className="flex gap-1 mb-1">
-                <Button isIconOnly variant="light" radius="full" size="sm">
-                    <Smile size={24} className="text-default-500" />
-                </Button>
+                <Popover placement="top-start" offset={10}>
+                    <PopoverTrigger>
+                        <Button isIconOnly variant="light" radius="full" size="sm">
+                            <Smile size={24} className="text-default-500" />
+                        </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="p-0 border-none shadow-none bg-transparent">
+                        <ChatEmojiPicker onEmojiClick={handleEmojiClick} />
+                    </PopoverContent>
+                </Popover>
                 <Button isIconOnly variant="light" radius="full" size="sm">
                     <Paperclip size={24} className="text-default-500" />
                 </Button>
