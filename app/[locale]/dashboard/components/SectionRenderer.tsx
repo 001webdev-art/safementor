@@ -9,6 +9,9 @@ import { Section, SectionProps, ChildrenSectionProps } from '@/types/dashboard';
 const OverviewSection = dynamic(() => import('../sections/OverviewSection'), {
     loading: () => <LoadingState message="Loading Overview..." />
 });
+const MyDataSection = dynamic(() => import('../sections/MyDataSection'), {
+    loading: () => <LoadingState message="Loading My Data..." />
+});
 const ChildrenSection = dynamic(() => import('../sections/ChildrenSection'), {
     loading: () => <LoadingState message="Loading Children..." />
 });
@@ -35,6 +38,8 @@ export default function SectionRenderer({
     switch (activeSection) {
         case 'overview':
             return <OverviewSection {...props} />;
+        case 'my_data':
+            return <MyDataSection {...props} />;
         case 'children':
             return <ChildrenSection {...props} />;
         case 'privacy':

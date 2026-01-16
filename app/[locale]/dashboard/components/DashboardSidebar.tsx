@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { User, Divider, Listbox, ListboxItem, Chip, Button } from '@nextui-org/react';
-import { LayoutDashboard, Users, ShieldCheck, HelpCircle } from 'lucide-react';
+import { LayoutDashboard, Users, ShieldCheck, HelpCircle, FileText } from 'lucide-react';
 import { Section } from '@/types/dashboard';
 import { Profile } from '@/types/database';
 
@@ -42,8 +42,8 @@ export default function DashboardSidebar({
                     name={profile.nickname || profile.firstname || userEmail}
                     description={t('user.role')}
                     avatarProps={{
-                        src: profile.profile_picture_url || undefined,
-                        name: userInitial,
+                        //src: profile.profile_picture_url || undefined,
+                        //name: userInitial,
                         color: "primary",
                         isBordered: true
                     }}
@@ -75,6 +75,13 @@ export default function DashboardSidebar({
                     className={activeSection === 'overview' ? "bg-primary-50 text-primary" : ""}
                 >
                     {t('sections.overview')}
+                </ListboxItem>
+                <ListboxItem
+                    key="my_data"
+                    startContent={<FileText size={20} />}
+                    className={activeSection === 'my_data' ? "bg-primary-50 text-primary" : ""}
+                >
+                    {t('sections.my_data')}
                 </ListboxItem>
                 <ListboxItem
                     key="children"

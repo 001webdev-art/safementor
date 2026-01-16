@@ -64,6 +64,7 @@
     "active": "Active",
     "sections": {
       "overview": "Overview",
+      "my_data": "My Data",
       "children": "Children",
       "privacy": "Privacy",
       "help": "Help",
@@ -165,6 +166,8 @@
       "status": "Online Status"
     },
     "actions": {
+      "verifyNumber": "Verify Number",
+      "numberVerified": "Number Verified",
       "saveChanges": "Save Changes",
       "loading": "Saving...",
       "saveChild": "Save Child",

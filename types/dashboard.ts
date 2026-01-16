@@ -1,6 +1,6 @@
 import { Profile, Gender, RelativeToChildren, Theme } from './database';
 
-export type Section = 'overview' | 'children' | 'privacy' | 'help';
+export type Section = 'overview' | 'my_data' | 'children' | 'privacy' | 'help';
 
 export interface Child {
     id: string;

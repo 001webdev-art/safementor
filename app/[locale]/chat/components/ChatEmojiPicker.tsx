@@ -16,7 +16,7 @@ export default function ChatEmojiPicker({ onEmojiClick }: ChatEmojiPickerProps) 
                 height={400}
                 lazyLoadEmojis={true}
                 theme={Theme.AUTO}
-                searchDisabled={false}
+                searchDisabled={true}
                 skinTonesDisabled={false}
                 previewConfig={{
                     showPreview: false
