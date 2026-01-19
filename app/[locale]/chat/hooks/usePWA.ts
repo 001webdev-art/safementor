@@ -15,8 +15,25 @@ export function usePWA() {
         // Check secure context
         setDebugInfo(prev => ({ ...prev, secureContext: window.isSecureContext }));
 
-        // Check service worker
-        if ('serviceWorker' in navigator) {
+        // Manual Service Worker Registration for isolation
+        if ('serviceWorker' in navigator && window.location.pathname.includes('/chat')) {
+            navigator.serviceWorker.register('/sw.js').then(
+                (registration) => {
+                    console.log('SW: registered successfully', registration.scope);
+                    setDebugInfo(prev => ({
+                        ...prev,
+                        serviceWorker: 'registered'
+                    }));
+                },
+                (err) => {
+                    console.log('SW: registration failed', err);
+                    setDebugInfo(prev => ({
+                        ...prev,
+                        serviceWorker: 'failed'
+                    }));
+                }
+            );
+        } else if ('serviceWorker' in navigator) {
             navigator.serviceWorker.getRegistration().then(reg => {
                 setDebugInfo(prev => ({
                     ...prev,
@@ -28,6 +45,7 @@ export function usePWA() {
         }
 
         const handler = (e: any) => {
+            console.log('beforeinstallprompt fired'); // Debug log
             e.preventDefault();
             setDeferredPrompt(e);
             setIsInstallable(true);
