@@ -17,7 +17,7 @@ export function usePWA() {
 
         // Manual Service Worker Registration for isolation
         if ('serviceWorker' in navigator && window.location.pathname.includes('/chat')) {
-            navigator.serviceWorker.register('/sw.js').then(
+            navigator.serviceWorker.register('/app/${locale}/chat/sw.js').then(
                 (registration) => {
                     console.log('SW: registered successfully', registration.scope);
                     setDebugInfo(prev => ({
