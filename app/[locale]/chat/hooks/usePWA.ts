@@ -19,7 +19,16 @@ export function usePWA() {
         setDebugInfo(prev => ({ ...prev, secureContext: window.isSecureContext }));
 
         // Manual Service Worker Registration for isolation
-        if ('serviceWorker' in navigator && window.location.pathname.includes(`/${locale}/chat`)) {
+        const isChatRoute = window.location.pathname.includes(`/${locale}/chat`);
+        console.log('usePWA: checking context', {
+            pathname: window.location.pathname,
+            expectedPrefix: `/${locale}/chat`,
+            isChatRoute,
+            locale
+        });
+
+        if ('serviceWorker' in navigator && isChatRoute) {
+            console.log('usePWA: attempting to register /sw-chat.js with scope:', `/${locale}/chat`);
             navigator.serviceWorker.register('/sw-chat.js', {
                 scope: `/${locale}/chat`
             }).then(
@@ -31,7 +40,7 @@ export function usePWA() {
                     }));
                 },
                 (err) => {
-                    console.log('SW: registration failed', err);
+                    console.error('SW: registration failed', err);
                     setDebugInfo(prev => ({
                         ...prev,
                         serviceWorker: 'failed'
@@ -39,7 +48,9 @@ export function usePWA() {
                 }
             );
         } else if ('serviceWorker' in navigator) {
+            console.log('usePWA: not in chat route or SW not supported, checking existing registrations');
             navigator.serviceWorker.getRegistration().then(reg => {
+                console.log('SW: current registration:', reg ? reg.scope : 'none');
                 setDebugInfo(prev => ({
                     ...prev,
                     serviceWorker: reg ? 'registered' : 'not_registered'

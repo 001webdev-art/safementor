@@ -4,7 +4,7 @@ const withPWA = require('next-pwa')({
   sw: 'sw-chat.js',
   register: false,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
+  disable: false, // Enable in dev for testing scope/registration
   buildExcludes: [/app-build-manifest\.json$/, /middleware-manifest\.json$/],
 });
 
