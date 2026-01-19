@@ -16,7 +16,7 @@ export async function GET(
         "background_color": "#ffffff",
         "theme_color": "#006FEE",
         "orientation": "portrait",
-        "scope": `/${locale}/chat/`,
+        "scope": `/${locale}/chat`,
         "icons": [
             {
                 "src": "/icon-192x192.png",
