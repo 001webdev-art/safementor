@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLocale } from 'next-intl';
 
 export function usePWA() {
     const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
@@ -11,13 +12,17 @@ export function usePWA() {
         beforeInstallPrompt: 'not_fired',
     });
 
+    const locale = useLocale();
+
     useEffect(() => {
         // Check secure context
         setDebugInfo(prev => ({ ...prev, secureContext: window.isSecureContext }));
 
         // Manual Service Worker Registration for isolation
-        if ('serviceWorker' in navigator && window.location.pathname.includes('/chat')) {
-            navigator.serviceWorker.register('/app/${locale}/chat/sw.js').then(
+        if ('serviceWorker' in navigator && window.location.pathname.includes(`/${locale}/chat`)) {
+            navigator.serviceWorker.register('/sw-chat.js', {
+                scope: `/${locale}/chat/`
+            }).then(
                 (registration) => {
                     console.log('SW: registered successfully', registration.scope);
                     setDebugInfo(prev => ({

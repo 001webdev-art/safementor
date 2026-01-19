@@ -1,6 +1,7 @@
 const createNextIntlPlugin = require('next-intl/plugin');
 const withPWA = require('next-pwa')({
-  dest: 'app/[locale]/chat',
+  dest: 'public',
+  sw: 'sw-chat.js',
   register: false,
   skipWaiting: true,
   disable: process.env.NODE_ENV === 'development',
