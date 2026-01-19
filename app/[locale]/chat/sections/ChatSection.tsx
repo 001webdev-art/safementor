@@ -11,7 +11,7 @@ export default function ChatSection() {
             <div
                 className="absolute inset-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none"
                 style={{
-                    backgroundImage: `url("https://wweb.dev/assets/whatsapp-chat-background-light.png")`,
+                    //backgroundImage: `url("https://wweb.dev/assets/whatsapp-chat-background-light.png")`,
                     backgroundSize: '400px'
                 }}
             />
