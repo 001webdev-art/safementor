@@ -3,11 +3,12 @@
     "short_name": "Safementor",
     "description": "Secure and intelligent AI Chat for your daily needs.",
     "start_url": "/chat",
+    "id": "/chat",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#006FEE",
     "orientation": "portrait",
-    "scope": "/chat",
+    "scope": "/",
     "icons": [
         {
             "src": "/icon-192x192.png",
