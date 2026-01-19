@@ -29,7 +29,7 @@ export default function ChatFooter({ currentView, onViewChange }: ChatFooterProp
                     radius="full"
                     className={`flex flex-col gap-1 h-12 w-12 ${currentView === item.key ? 'text-primary' : 'text-default-500'
                         }`}
-                    onClick={() => onViewChange(item.key)}
+                    onPress={() => onViewChange(item.key)}
                 >
                     {item.icon}
                     <span className="text-[10px] font-medium leading-none">{item.label}</span>

@@ -21,7 +21,7 @@ export default function HistoryHeader({ onDeleteAll, onResetDatabase }: HistoryH
                     isIconOnly
                     variant="light"
                     radius="full"
-                    onClick={() => router.back()}
+                    onPress={() => router.back()}
                 >
                     <ChevronLeft size={24} />
                 </Button>

@@ -67,7 +67,7 @@ export default function ChatClient() {
                 <Button
                     color="primary"
                     variant="shadow"
-                    onClick={() => router.push('/')}
+                    onPress={() => router.push('/')}
                 >
                     Go to Home Page
                 </Button>

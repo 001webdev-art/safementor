@@ -107,7 +107,7 @@ export default function MessageInput() {
                         color="primary"
                         radius="full"
                         size="md"
-                        onClick={handleSend}
+                        onPress={handleSend}
                         className="shadow-sm"
                     >
                         <Send size={20} />
