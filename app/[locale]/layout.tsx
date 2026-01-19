@@ -66,6 +66,20 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${libreBaskerville.variable} ${sourceSans3.variable}`}>
       <body className={sourceSans3.className}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.deferredPWAPrompt = null;
+              window.addEventListener('beforeinstallprompt', (e) => {
+                console.log('Global beforeinstallprompt captured');
+                e.preventDefault();
+                window.deferredPWAPrompt = e;
+                // Dispatch a custom event to notify any mounted hooks
+                window.dispatchEvent(new CustomEvent('pwa-prompt-available', { detail: e }));
+              });
+            `,
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}

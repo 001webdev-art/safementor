@@ -61,16 +61,32 @@ export function usePWA() {
         }
 
         const handler = (e: any) => {
-            console.log('beforeinstallprompt fired'); // Debug log
+            console.log('usePWA: beforeinstallprompt captured');
             e.preventDefault();
             setDeferredPrompt(e);
             setIsInstallable(true);
             setDebugInfo(prev => ({ ...prev, beforeInstallPrompt: 'fired' }));
         };
 
-        window.addEventListener('beforeinstallprompt', handler);
+        // 1. Check if we already have it globally
+        if ((window as any).deferredPWAPrompt) {
+            console.log('usePWA: using existing global deferredPWAPrompt');
+            handler((window as any).deferredPWAPrompt);
+        }
 
-        return () => window.removeEventListener('beforeinstallprompt', handler);
+        // 2. Listen for the custom event from our layout script
+        const onAvailable = (e: any) => {
+            console.log('usePWA: captured via pwa-prompt-available event');
+            handler(e.detail);
+        };
+
+        window.addEventListener('beforeinstallprompt', handler);
+        window.addEventListener('pwa-prompt-available', onAvailable);
+
+        return () => {
+            window.removeEventListener('beforeinstallprompt', handler);
+            window.removeEventListener('pwa-prompt-available', onAvailable);
+        };
     }, []);
 
     const installApp = async () => {
