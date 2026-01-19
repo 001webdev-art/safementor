@@ -7,7 +7,7 @@
     "background_color": "#ffffff",
     "theme_color": "#006FEE",
     "orientation": "portrait",
-    "scope": "/",
+    "scope": "/chat",
     "icons": [
         {
             "src": "/icon-192x192.png",
