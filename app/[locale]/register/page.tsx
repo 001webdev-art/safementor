@@ -1,11 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useTranslations, useLocale } from 'next-intl'
 import { Card, CardHeader, CardBody, Input, Button, Link as NextUILink, Divider } from '@nextui-org/react'
+import { ComplianceFrame } from './ComplianceFrame'
+import { EyeOpenIcon, EyeClosedIcon } from '@/components/landing/SafeMentorIcons'
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('')
@@ -14,6 +16,37 @@ export default function RegisterPage() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [showCompliance, setShowCompliance] = useState(true)
+  const [complianceData, setComplianceData] = useState({
+    agreed: false,
+    helpImprove: false,
+    safetyAnalysis: false
+  })
+
+  // Load from localStorage on mount
+  useEffect(() => {
+    const savedData = localStorage.getItem('compliance_data')
+    if (savedData) {
+      try {
+        setComplianceData(JSON.parse(savedData))
+      } catch (e) {
+        console.error('Error parsing compliance data from localStorage', e)
+      }
+    }
+  }, [])
+
+  // Persistence to localStorage
+  const saveComplianceToLocal = (data: typeof complianceData) => {
+    localStorage.setItem('compliance_data', JSON.stringify(data))
+  }
+
+  const handleComplianceChange = (field: string, value: boolean) => {
+    setComplianceData(prev => {
+      const newData = { ...prev, [field]: value }
+      saveComplianceToLocal(newData)
+      return newData
+    })
+  }
 
   const toggleVisibility = () => setIsVisible(!isVisible)
 
@@ -36,24 +69,59 @@ export default function RegisterPage() {
     setLoading(true)
     setError(null)
 
+    let signUpError: any = null
+
     try {
       const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
+          data: {
+            terms_agreed1: complianceData.agreed,
+            terms_help_improve: complianceData.helpImprove,
+            terms_allow_anonymous_safety_analysis: complianceData.safetyAnalysis,
+            // also include others if needed by the trigger
+            firstname: '',
+            lastname: ''
+          }
         },
       })
 
-      if (error) throw error
+      signUpError = error
+
+      if (signUpError) {
+        // Handle email conflict
+        if (signUpError.message.includes('User already registered') || (signUpError.status === 400 && signUpError.message.includes('already'))) {
+          setError(tErrors('emailConflict'))
+          setLoading(false)
+          setTimeout(() => {
+            router.push(`/${currentLocale}/login`)
+          }, 3000)
+          return
+        }
+        throw signUpError
+      }
 
       alert(tRegister('successMessage'))
       router.push(`/${currentLocale}/login`)
     } catch (err: any) {
       setError(err.message || tErrors('generic'))
     } finally {
-      setLoading(false)
+      if (!signUpError || !signUpError.message?.includes('User already registered')) {
+        setLoading(false)
+      }
     }
+  }
+
+  if (showCompliance) {
+    return (
+      <ComplianceFrame
+        complianceData={complianceData}
+        onDataChange={handleComplianceChange}
+        onAccept={() => setShowCompliance(false)}
+      />
+    )
   }
 
   return (
@@ -94,15 +162,7 @@ export default function RegisterPage() {
               autoComplete="new-password"
               endContent={
                 <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
-                  {isVisible ? (
-                    <svg className="text-2xl text-default-400 pointer-events-none" fill="none" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="currentColor" />
-                    </svg>
-                  ) : (
-                    <svg className="text-2xl text-default-400 pointer-events-none" fill="none" height="1em" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.82l2.92 2.92c1.51-1.26 2.7-2.89 3.44-4.74-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" fill="currentColor" />
-                    </svg>
-                  )}
+                  {isVisible ? <EyeOpenIcon /> : <EyeClosedIcon />}
                 </button>
               }
             />

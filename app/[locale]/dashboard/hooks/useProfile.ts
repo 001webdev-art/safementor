@@ -21,8 +21,45 @@ export function useProfile(user: { id: string; email?: string }) {
 
             if (data) {
                 setProfile(data);
+
+                // Sync compliance data from localStorage if missing in DB
+                const savedCompliance = localStorage.getItem('compliance_data');
+                if (savedCompliance && (!data.terms_agreed1)) {
+                    try {
+                        const compliance = JSON.parse(savedCompliance);
+                        const updatedProfile = {
+                            ...data,
+                            terms_agreed1: compliance.agreed,
+                            terms_help_improve: compliance.helpImprove,
+                            terms_allow_anonymous_safety_analysis: compliance.safetyAnalysis,
+                            updated_at: new Date().toISOString()
+                        };
+
+                        const { error: syncError } = await supabase
+                            .from('profiles')
+                            .upsert(updatedProfile);
+
+                        if (!syncError) {
+                            setProfile(updatedProfile);
+                            localStorage.removeItem('compliance_data');
+                            console.log('Compliance data synced successfully');
+                        }
+                    } catch (e) {
+                        console.error('Error syncing compliance data:', e);
+                    }
+                }
             } else if (error && error.code === 'PGRST116') {
                 // Profile doesn't exist yet, initialize with user data
+                const savedCompliance = localStorage.getItem('compliance_data');
+                let compliance = { agreed: false, helpImprove: false, safetyAnalysis: false };
+                if (savedCompliance) {
+                    try {
+                        compliance = JSON.parse(savedCompliance);
+                    } catch (e) {
+                        console.error('Error parsing compliance data', e);
+                    }
+                }
+
                 const initialProfile: Partial<Profile> = {
                     id: user.id,
                     email: user.email || '',
@@ -40,6 +77,9 @@ export function useProfile(user: { id: string; email?: string }) {
                     language: 'en',
                     date_format: 'DD/MM/YYYY',
                     time_format: '24h',
+                    terms_agreed1: compliance.agreed,
+                    terms_help_improve: compliance.helpImprove,
+                    terms_allow_anonymous_safety_analysis: compliance.safetyAnalysis,
                     communication_preferences: {
                         marketing_emails: false,
                         newsletter: true,
@@ -52,6 +92,14 @@ export function useProfile(user: { id: string; email?: string }) {
                     }
                 };
                 setProfile(initialProfile);
+
+                // If we have compliance data, try to save it immediately since the record doesn't exist
+                if (savedCompliance) {
+                    const { error: createError } = await supabase.from('profiles').upsert(initialProfile);
+                    if (!createError) {
+                        localStorage.removeItem('compliance_data');
+                    }
+                }
             }
         } catch (err) {
             console.error('Error loading profile:', err);

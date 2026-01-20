@@ -65,5 +65,10 @@ export interface Profile {
     created_at: string;
     updated_at: string;
     last_login_at: string | null;
+
+    // Compliance
+    terms_agreed1: boolean;
+    terms_help_improve: boolean;
+    terms_allow_anonymous_safety_analysis: boolean;
 }
 

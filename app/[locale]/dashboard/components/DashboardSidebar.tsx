@@ -3,6 +3,7 @@
 import React from 'react';
 import { User, Divider, Listbox, ListboxItem, Chip, Button } from '@nextui-org/react';
 import { LayoutDashboard, Users, ShieldCheck, HelpCircle } from 'lucide-react';
+import { CloseIcon } from '@/components/landing/SafeMentorIcons';
 import { Section } from '@/types/dashboard';
 import { Profile } from '@/types/database';
 
@@ -50,9 +51,7 @@ export default function DashboardSidebar({
                     className="justify-start"
                 />
                 <Button isIconOnly variant="light" size="sm" className="md:hidden" onClick={onMobileMenuClose}>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
+                    <CloseIcon />
                 </Button>
             </div>
 
