@@ -1,4 +1,4 @@
-import Header from '@/components/Header'
+import Header from '@/components/__Header'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'

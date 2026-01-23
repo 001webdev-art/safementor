@@ -54,7 +54,7 @@ export default function ChatClient() {
 
     if (isAuthenticated === false) {
         return (
-            <div className="flex flex-col items-center justify-center h-screen h-dvh bg-[#f0f2f5] dark:bg-[#111b21] p-6 text-center space-y-6">
+            <div className="flex flex-col items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21] p-6 text-center space-y-6">
                 <div className="space-y-2">
                     <h1 className="text-2xl font-bold text-red-500">
                         I am very sorry, but you are not logged
@@ -78,7 +78,7 @@ export default function ChatClient() {
     // Show loading state while checking auth
     if (isAuthenticated === null) {
         return (
-            <div className="flex items-center justify-center h-screen h-dvh bg-[#f0f2f5] dark:bg-[#111b21]">
+            <div className="flex items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21]">
                 <div className="animate-pulse text-default-500">Checking authentication...</div>
             </div>
         );
@@ -102,7 +102,7 @@ export default function ChatClient() {
     };
 
     return (
-        <div className="flex flex-col h-screen h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden">
+        <div className="flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden">
             {/* Header - Only show on chat view or maybe all? Let's keep it for all for now, or maybe hide on Hello? 
                User request implied header might be different or needed. 
                "the icons/routes in the bottom 'chatfooter.tsx' could be, 'Hello', 'Chat', then the rest keep the same."
