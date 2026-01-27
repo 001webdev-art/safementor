@@ -45,7 +45,7 @@ export interface ChatMessage {
 // --- CONFIGURATION ---
 
 // Update this URL to point to your Antygravity backend
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://safementor-api-762553995544.us-central1.run.app";
 
 // Set to FALSE when integrating with the real backend
 const USE_MOCK_DATA = false;
