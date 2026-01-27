@@ -13,7 +13,7 @@ CREATE TABLE children (
   
 
   -- Card Box 3 Contact Information
-  email VARCHAR(254) UNIQUE NOT NULL,
+  email VARCHAR(254),
   phone VARCHAR(20),
   
   -- card box 4 - Medical Information

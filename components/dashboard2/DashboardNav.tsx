@@ -2,10 +2,23 @@
 
 import { Button } from '@nextui-org/react';
 import {
-    Shield, BarChart3, Bell, Settings, Lock, LogOut,
-    Menu, X
+    Shield, Bell, Settings, Lock, LogOut,
+    Menu, X, ChevronDown, ChevronRight, User, Baby
 } from 'lucide-react';
 import { useState } from 'react';
+
+interface NavSubItem {
+    id: string;
+    label: string;
+    icon: any;
+}
+
+interface NavItem {
+    id: string;
+    label: string;
+    icon: any;
+    subItems?: NavSubItem[];
+}
 
 interface DashboardNavProps {
     currentView: string;
@@ -15,11 +28,20 @@ interface DashboardNavProps {
 
 export function DashboardNav({ currentView, onNavigate, alertCount }: DashboardNavProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSettingsOpen, setIsSettingsOpen] = useState(true);
 
-    const navItems = [
+    const navItems: NavItem[] = [
         { id: 'overview', label: 'Overview', icon: Shield },
         { id: 'notifications', label: 'Notifications', icon: Bell },
-        { id: 'settings', label: 'Settings', icon: Settings },
+        {
+            id: 'settings',
+            label: 'Settings',
+            icon: Settings,
+            subItems: [
+                { id: 'personal-data', label: 'Personal data', icon: User },
+                { id: 'children-data', label: 'Children data', icon: Baby },
+            ]
+        },
         { id: 'privacy', label: 'Privacy', icon: Lock },
     ];
 
@@ -56,31 +78,68 @@ export function DashboardNav({ currentView, onNavigate, alertCount }: DashboardN
                     </div>
                 </div>
 
-                <nav className="flex-1 p-4 space-y-1">
-                    {navItems.map(({ id, label, icon: Icon }) => (
-                        <Button
-                            key={id}
-                            variant="light"
-                            className={`
-                                w-full justify-start text-left
-                                ${currentView === id ? 'bg-green-100 text-green-700 font-semibold' : 'text-gray-700'}
-                            `}
-                            startContent={<Icon className="w-5 h-5" />}
-                            onPress={() => {
-                                onNavigate(id);
-                                setIsMobileMenuOpen(false);
-                            }}
-                        >
-                            <div className="flex justify-between items-center w-full">
-                                <span>{label}</span>
-                                {id === 'notifications' && alertCount > 0 && (
-                                    <span className="ml-auto bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                                        {alertCount}
-                                    </span>
+                <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
+                    {navItems.map((item) => {
+                        const { id, label, icon: Icon, subItems } = item;
+                        const isSelected = currentView === id || (subItems && subItems.some(sub => sub.id === currentView));
+
+                        return (
+                            <div key={id} className="space-y-1">
+                                <Button
+                                    variant="light"
+                                    className={`
+                                        w-full justify-start text-left
+                                        ${isSelected && !subItems ? 'bg-green-100 text-green-700 font-semibold' : 'text-gray-700'}
+                                        ${subItems ? 'hover:bg-gray-50' : ''}
+                                    `}
+                                    startContent={<Icon className="w-5 h-5" />}
+                                    endContent={subItems ? (
+                                        isSettingsOpen ? <ChevronDown className="w-4 h-4 ml-auto" /> : <ChevronRight className="w-4 h-4 ml-auto" />
+                                    ) : null}
+                                    onPress={() => {
+                                        if (subItems) {
+                                            setIsSettingsOpen(!isSettingsOpen);
+                                        } else {
+                                            onNavigate(id);
+                                            setIsMobileMenuOpen(false);
+                                        }
+                                    }}
+                                >
+                                    <div className="flex justify-between items-center w-full">
+                                        <span>{label}</span>
+                                        {id === 'notifications' && alertCount > 0 && (
+                                            <span className="ml-auto bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                                                {alertCount}
+                                            </span>
+                                        )}
+                                    </div>
+                                </Button>
+
+                                {subItems && isSettingsOpen && (
+                                    <div className="ml-4 space-y-1 border-l-2 border-gray-100 pl-2">
+                                        {subItems.map((subItem) => (
+                                            <Button
+                                                key={subItem.id}
+                                                variant="light"
+                                                size="sm"
+                                                className={`
+                                                    w-full justify-start text-left
+                                                    ${currentView === subItem.id ? 'bg-green-50 text-green-700 font-medium' : 'text-gray-600'}
+                                                `}
+                                                startContent={<subItem.icon className="w-4 h-4" />}
+                                                onPress={() => {
+                                                    onNavigate(subItem.id);
+                                                    setIsMobileMenuOpen(false);
+                                                }}
+                                            >
+                                                {subItem.label}
+                                            </Button>
+                                        ))}
+                                    </div>
                                 )}
                             </div>
-                        </Button>
-                    ))}
+                        );
+                    })}
                 </nav>
 
                 <div className="p-4 border-t border-gray-100">

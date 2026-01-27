@@ -5,10 +5,14 @@ import { useChatStore } from './hooks/useChatStore';
 import ChatHeader from './components/ChatHeader';
 import ChatFooter from './components/ChatFooter';
 import ChatSection from './sections/ChatSection';
-import HelloSection from './sections/HelloSection';
+import HelloSection from './sections/HelloSection2';
 import ContactsSection from './sections/ContactsSection';
 import SettingsSection from './sections/SettingsSection';
 import ProfileSection from './sections/ProfileSection';
+import { ChatScreen } from './sections/ChatScreen';
+import { HelpScreen } from './sections/HelpScreen';
+import { ExitScreen } from './sections/ExitScreen';
+import { ChatMessage } from '@/src/app/api';
 import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { Button } from '@nextui-org/react';
@@ -20,6 +24,7 @@ export default function ChatClient() {
     const [currentView, setCurrentView] = useState('hello');
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null); // null = loading
     const [countdown, setCountdown] = useState(5);
+    const [chat2Messages, setChat2Messages] = useState<ChatMessage[]>([]);
 
     useEffect(() => {
         setMounted(true);
@@ -90,12 +95,14 @@ export default function ChatClient() {
                 return <HelloSection onNavigate={setCurrentView} />;
             case 'chat':
                 return <ChatSection />;
-            case 'contacts':
-                return <ContactsSection />;
-            case 'settings':
-                return <SettingsSection />;
+            case 'help':
+                return <HelpScreen onNavigate={setCurrentView} />;
+            case 'exit':
+                return <ExitScreen onNavigate={setCurrentView} />;
             case 'profile':
                 return <ProfileSection />;
+            case 'chat2':
+                return <ChatScreen onNavigate={setCurrentView} messages={chat2Messages} setMessages={setChat2Messages} />;
             default:
                 return <HelloSection onNavigate={setCurrentView} />;
         }
@@ -123,7 +130,9 @@ export default function ChatClient() {
             </main>
 
             {/* Footer Navigation */}
-            <ChatFooter currentView={currentView} onViewChange={setCurrentView} />
+            {currentView !== 'hello' && currentView !== 'exit' && (
+                <ChatFooter currentView={currentView} onViewChange={setCurrentView} />
+            )}
         </div>
     );
 }

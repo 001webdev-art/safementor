@@ -4,6 +4,10 @@
 export interface Child {
     id: string;
     nickname: string;
+    childrenname: string;
+    email: string | null;
+    date_birth: string | null;
+    language: string | null;
     device?: string;
     avatar?: string;
 }
@@ -29,8 +33,8 @@ export class DashboardService {
     static async getChildren(): Promise<Child[]> {
         // Simula dados mock
         return [
-            { id: 'child-1', nickname: 'Alex', device: 'iPhone 13' },
-            { id: 'child-2', nickname: 'Sam', device: 'iPad Air' },
+            { id: 'child-1', nickname: 'Alex', childrenname: 'Alex Johnson', email: 'alex@example.com', date_birth: '05/18', language: 'en', device: 'iPhone 13' },
+            { id: 'child-2', nickname: 'Sam', childrenname: 'Sam Smith', email: 'sam@example.com', date_birth: '12/20', language: 'en', device: 'iPad Air' },
         ];
     }
 

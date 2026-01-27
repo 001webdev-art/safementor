@@ -1,4 +1,3 @@
-import Header from '@/components/__Header'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
@@ -30,8 +29,7 @@ export default async function DashboardPage({ params }: { params: Promise<{ loca
   }
 
   return (
-    <div className="min-h-screen bg-gray-50/10">
-      <Header />
+    <div className="min-h-screen">
       <DashboardClient user={user} />
     </div>
   )

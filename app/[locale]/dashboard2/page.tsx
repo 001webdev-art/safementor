@@ -5,11 +5,12 @@ import { Spinner } from '@nextui-org/react';
 import { Child, SafetyAlert, DashboardService } from '@/types/dashboard2';
 import { Overview } from '@/components/dashboard2/Overview';
 import { Notifications } from '@/components/dashboard2/Notifications';
-import { Settings } from '@/components/dashboard2/Settings';
+import { ChildrenData } from '@/components/dashboard2/ChildrenData';
 import { Privacy } from '@/components/dashboard2/Privacy';
 import { DashboardNav } from '@/components/dashboard2/DashboardNav';
+import { PersonalData } from '@/components/dashboard2/PersonalData';
 
-type ViewState = 'overview' | 'notifications' | 'settings' | 'privacy';
+type ViewState = 'overview' | 'notifications' | 'settings' | 'privacy' | 'personal-data' | 'children-data';
 
 export default function Dashboard2Page() {
     const [currentView, setCurrentView] = useState<ViewState>('overview');
@@ -60,7 +61,8 @@ export default function Dashboard2Page() {
                         <Overview children={children} alerts={alerts} onNavigate={(view) => setCurrentView(view as ViewState)} />
                     )}
                     {currentView === 'notifications' && <Notifications alerts={alerts} />}
-                    {currentView === 'settings' && <Settings children={children} />}
+                    {currentView === 'children-data' && <ChildrenData children={children} />}
+                    {currentView === 'personal-data' && <PersonalData />}
                     {currentView === 'privacy' && <Privacy />}
                 </div>
             </main>

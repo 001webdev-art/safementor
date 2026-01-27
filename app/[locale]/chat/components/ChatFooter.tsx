@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@nextui-org/react';
-import { MessageSquare, Users, Settings, UserCircle, Hand } from 'lucide-react';
+import { MessageSquare, Users, Settings, UserCircle, Hand, HelpCircle, LogOut } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 
 interface ChatFooterProps {
@@ -13,14 +13,14 @@ interface ChatFooterProps {
 export default function ChatFooter({ currentView, onViewChange }: ChatFooterProps) {
     const navItems = [
         { icon: <Hand size={24} />, label: 'Hello', key: 'hello' },
-        { icon: <MessageSquare size={24} />, label: 'Chats', key: 'chat' },
-        { icon: <Users size={24} />, label: 'Contacts', key: 'contacts' },
-        { icon: <Settings size={24} />, label: 'Settings', key: 'settings' },
-        { icon: <UserCircle size={24} />, label: 'Profile', key: 'profile' },
+        { icon: <MessageSquare size={24} />, label: 'Chat', key: 'chat2' },
+        { icon: <HelpCircle size={24} />, label: 'Help', key: 'help' },
+        { icon: <LogOut size={24} />, label: 'Exit', key: 'exit' },
+        { icon: <Settings size={24} />, label: 'Debug', key: 'chat' },
     ];
 
     return (
-        <footer className="h-16 bg-[#f0f2f5] dark:bg-[#202c33] border-t border-divider flex items-center justify-around px-2 shrink-0 z-10">
+        <footer className="h-16 bg-white dark:bg-[#202c33] border-t border-divider flex items-center justify-around px-2 shrink-0 z-10">
             {navItems.map((item) => (
                 <Button
                     key={item.key}

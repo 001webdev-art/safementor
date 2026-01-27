@@ -1,6 +1,6 @@
 import { Profile, Gender, RelativeToChildren, Theme } from './database';
 
-export type Section = 'overview' | 'children' | 'privacy' | 'help';
+export type Section = 'overview' | 'notifications' | 'personal-data' | 'children-data' | 'privacy' | 'children' | 'help';
 
 export interface Child {
     id: string;
@@ -9,11 +9,13 @@ export interface Child {
     nickname: string | null;
     age: number | null;
     gender: string | null; // Male, Female, Diverse, Prefer Not to Say
-    email: string;
+    email: string | null;
     phone: string | null;
     medical_has_allergies: boolean;
     medical_has_mental_disorders: boolean;
     medical_has_physical_disorders: boolean;
+    date_birth: string | null;
+    language: string | null;
     updated_at: string;
     updated_by: string | null;
 }

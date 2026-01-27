@@ -37,9 +37,26 @@ export function useChildren(parentId: string | undefined) {
         setIsLoading(true);
 
         try {
-            // Clean payload: remove id if it's empty/new to allow DB to generate it
-            const payload = { ...childData };
-            if (!payload.id) delete payload.id;
+            // Define allowed database columns
+            const allowedColumns = [
+                'id', 'parent_id', 'childrenname', 'nickname', 'age', 'gender',
+                'email', 'phone', 'medical_has_allergies',
+                'medical_has_mental_disorders', 'medical_has_physical_disorders',
+                'date_birth', 'language', 'updated_at', 'updated_by'
+            ];
+
+            // Build safe payload
+            const payload: any = {};
+            allowedColumns.forEach(key => {
+                if (key in childData) {
+                    payload[key] = (childData as any)[key];
+                }
+            });
+
+            // Clean id if it's temporary
+            if (payload.id && payload.id.toString().startsWith('temp-')) {
+                delete payload.id;
+            }
 
             const { data, error } = await supabase
                 .from('children')
