@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardBody, CardHeader, Button, Select, SelectItem, Input } from '@nextui-org/react';
-import { User, Trash2, QrCode, Pause, Save } from 'lucide-react';
+import { User, Trash2, Pause, Save, Clock } from 'lucide-react';
 import { Child } from '@/types/dashboard2';
 
 interface ChildrenDataProps {
@@ -18,7 +18,7 @@ export function ChildrenData({
 }: ChildrenDataProps) {
     // Initializing with an empty array as per user request to start fresh
     const [localChildren, setLocalChildren] = useState<Child[]>([]);
-    const [drafts, setDrafts] = useState<Record<string, Partial<Child>>>({});
+    const [drafts, setDrafts] = useState<Record<string, Partial<Child & { time_limit?: string }>>>({});
     const [isSaving, setIsSaving] = useState<Record<string, boolean>>({});
 
     const currentChildren = [...(externalChildren || []), ...localChildren];
@@ -88,7 +88,7 @@ export function ChildrenData({
         }
     };
 
-    const updateChildField = (id: string, field: keyof Child, value: any) => {
+    const updateChildField = (id: string, field: string, value: any) => {
         setDrafts(prev => ({
             ...prev,
             [id]: {
@@ -112,7 +112,7 @@ export function ChildrenData({
                         <p className="text-sm text-gray-500">Connect and manage child devices</p>
                     </div>
                     <Button
-                        color="success"
+                        className="bg-[#889A7F] text-white hover:bg-[#748866]"
                         startContent={<User className="w-4 h-4" />}
                         onPress={handleAddChild}
                     >
@@ -131,12 +131,13 @@ export function ChildrenData({
                                 const displayNickname = draft.nickname ?? child.nickname;
                                 const displayDateBirth = draft.date_birth ?? child.date_birth;
                                 const displayLanguage = draft.language ?? child.language;
+                                const displayTimeLimit = draft.time_limit ?? '';
 
                                 return (
                                     <div key={child.id} className="p-4 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300">
                                         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold">
+                                                <div className="w-10 h-10 bg-[#E8EDE6] text-[#4A5445] rounded-full flex items-center justify-center font-bold">
                                                     {(displayNickname || '??').substring(0, 2).toUpperCase()}
                                                 </div>
                                                 <div>
@@ -147,19 +148,19 @@ export function ChildrenData({
                                             <div className="flex gap-2 w-full sm:w-auto">
                                                 <Button
                                                     size="sm"
-                                                    color="success"
-                                                    variant="solid"
-                                                    className="text-white bg-green-600"
+                                                    className="bg-[#889A7F] text-white hover:bg-[#748866]"
                                                     startContent={<Save className="w-3.5 h-3.5" />}
                                                     onPress={() => handleSaveChild(child.id, child)}
                                                     isLoading={isSaving[child.id]}
                                                 >
                                                     Save
                                                 </Button>
-                                                <Button size="sm" variant="bordered" startContent={<QrCode className="w-3.5 h-3.5" />}>
-                                                    QR Code
-                                                </Button>
-                                                <Button size="sm" variant="bordered" startContent={<Pause className="w-3.5 h-3.5" />}>
+                                                <Button 
+                                                    size="sm" 
+                                                    variant="bordered" 
+                                                    className="border-gray-300"
+                                                    startContent={<Pause className="w-3.5 h-3.5" />}
+                                                >
                                                     Pause
                                                 </Button>
                                                 <Button
@@ -184,14 +185,21 @@ export function ChildrenData({
                                                     size="sm"
                                                     variant="bordered"
                                                     isRequired
+                                                    classNames={{
+                                                        inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+                                                    }}
                                                 />
                                                 <Input
                                                     label="Birthdate (MM/YY)"
                                                     value={displayDateBirth || ''}
-                                                    placeholder="e.g. 05/18"
+                                                    placeholder="MM/YY"
+                                                    type="text"
                                                     onValueChange={(v) => updateChildField(child.id, 'date_birth', v)}
                                                     size="sm"
                                                     variant="bordered"
+                                                    classNames={{
+                                                        inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+                                                    }}
                                                 />
                                                 <Select
                                                     label="Language"
@@ -202,11 +210,27 @@ export function ChildrenData({
                                                         updateChildField(child.id, 'language', val);
                                                     }}
                                                     variant="bordered"
+                                                    classNames={{
+                                                        trigger: "border-gray-300 hover:border-[#889A7F] focus:border-[#889A7F]"
+                                                    }}
                                                 >
                                                     <SelectItem key="en" textValue="English">English</SelectItem>
                                                     <SelectItem key="pt" textValue="Portuguese">Portuguese</SelectItem>
                                                     <SelectItem key="de" textValue="German">German</SelectItem>
                                                 </Select>
+                                                <Input
+                                                    label="Time Limit (minutes/day)"
+                                                    value={displayTimeLimit || ''}
+                                                    placeholder="e.g. 120"
+                                                    onValueChange={(v) => updateChildField(child.id, 'time_limit', v)}
+                                                    size="sm"
+                                                    variant="bordered"
+                                                    type="number"
+                                                    startContent={<Clock className="w-4 h-4 text-gray-400" />}
+                                                    classNames={{
+                                                        inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+                                                    }}
+                                                />
                                             </div>
                                         </div>
                                     </div>
