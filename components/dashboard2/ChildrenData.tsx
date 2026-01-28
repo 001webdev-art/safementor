@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Card, CardBody, CardHeader, Button, Select, SelectItem, Input } from '@nextui-org/react';
 import { User, Trash2, Pause, Save, Clock } from 'lucide-react';
 import { Child } from '@/types/dashboard2';
+import { useTranslations } from 'next-intl';
 
 interface ChildrenDataProps {
     children?: Child[];
@@ -16,6 +17,7 @@ export function ChildrenData({
     onUpsertChild,
     onDeleteChild
 }: ChildrenDataProps) {
+    const t = useTranslations('Dashboard.children_new');
     // Initializing with an empty array as per user request to start fresh
     const [localChildren, setLocalChildren] = useState<Child[]>([]);
     const [drafts, setDrafts] = useState<Record<string, Partial<Child & { time_limit?: string }>>>({});
@@ -27,12 +29,12 @@ export function ChildrenData({
         const id = `temp-${Date.now()}`;
         const newChild: Child = {
             id,
-            nickname: 'New Child',
-            childrenname: 'New Child',
+            nickname: t('newChild'),
+            childrenname: t('newChild'),
             email: null,
             date_birth: '',
             language: 'en',
-            device: 'New Device',
+            device: t('newDevice'),
         };
         setLocalChildren([...localChildren, newChild]);
     };
@@ -101,29 +103,29 @@ export function ChildrenData({
     return (
         <div className="space-y-6 animate-in fade-in duration-500">
             <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Children Data</h1>
-                <p className="text-gray-600">Manage your connected children and their safety preferences.</p>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('title')}</h1>
+                <p className="text-gray-600">{t('subtitle')}</p>
             </div>
 
             <Card className="border border-gray-200 shadow-sm">
                 <CardHeader className="flex justify-between items-center">
                     <div>
-                        <h3 className="font-bold text-gray-900">Child Management</h3>
-                        <p className="text-sm text-gray-500">Connect and manage child devices</p>
+                        <h3 className="font-bold text-gray-900">{t('management')}</h3>
+                        <p className="text-sm text-gray-500">{t('managementSubtitle')}</p>
                     </div>
                     <Button
                         className="bg-[#889A7F] text-white hover:bg-[#748866]"
                         startContent={<User className="w-4 h-4" />}
                         onPress={handleAddChild}
                     >
-                        Add Child
+                        {t('addChild')}
                     </Button>
                 </CardHeader>
                 <CardBody>
                     <div className="space-y-4">
                         {currentChildren.length === 0 ? (
                             <div className="text-center py-10 bg-gray-50 rounded-xl border border-dashed border-gray-300">
-                                <p className="text-gray-500 italic">No children added yet. Click "Add Child" to begin.</p>
+                                <p className="text-gray-500 italic">{t('noChildren')}</p>
                             </div>
                         ) : (
                             currentChildren.map(child => {
@@ -153,7 +155,7 @@ export function ChildrenData({
                                                     onPress={() => handleSaveChild(child.id, child)}
                                                     isLoading={isSaving[child.id]}
                                                 >
-                                                    Save
+                                                    {t('actions.save')}
                                                 </Button>
                                                 <Button 
                                                     size="sm" 
@@ -161,7 +163,7 @@ export function ChildrenData({
                                                     className="border-gray-300"
                                                     startContent={<Pause className="w-3.5 h-3.5" />}
                                                 >
-                                                    Pause
+                                                    {t('actions.pause')}
                                                 </Button>
                                                 <Button
                                                     size="sm"
@@ -170,16 +172,16 @@ export function ChildrenData({
                                                     startContent={<Trash2 className="w-3.5 h-3.5" />}
                                                     onPress={() => handleDelete(child.id)}
                                                 >
-                                                    Delete
+                                                    {t('actions.delete')}
                                                 </Button>
                                             </div>
                                         </div>
 
                                         <div className="bg-white border border-gray-200 rounded-xl p-4 space-y-3">
-                                            <p className="text-sm font-semibold text-gray-900 mb-2">{displayNickname || 'Child'}'s Settings</p>
+                                            <p className="text-sm font-semibold text-gray-900 mb-2">{t('settings', { name: displayNickname || t('child') })}</p>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                                 <Input
-                                                    label="Nickname"
+                                                    label={t('fields.nickname')}
                                                     value={displayNickname || ''}
                                                     onValueChange={(v) => updateChildField(child.id, 'nickname', v)}
                                                     size="sm"
@@ -190,7 +192,7 @@ export function ChildrenData({
                                                     }}
                                                 />
                                                 <Input
-                                                    label="Birthdate (MM/YY)"
+                                                    label={t('fields.birthdate')}
                                                     value={displayDateBirth || ''}
                                                     placeholder="MM/YY"
                                                     type="text"
@@ -202,7 +204,7 @@ export function ChildrenData({
                                                     }}
                                                 />
                                                 <Select
-                                                    label="Language"
+                                                    label={t('fields.language')}
                                                     size="sm"
                                                     selectedKeys={[displayLanguage || 'en']}
                                                     onSelectionChange={(keys) => {
@@ -214,12 +216,12 @@ export function ChildrenData({
                                                         trigger: "border-gray-300 hover:border-[#889A7F] focus:border-[#889A7F]"
                                                     }}
                                                 >
-                                                    <SelectItem key="en" textValue="English">English</SelectItem>
-                                                    <SelectItem key="pt" textValue="Portuguese">Portuguese</SelectItem>
-                                                    <SelectItem key="de" textValue="German">German</SelectItem>
+                                                    <SelectItem key="en" textValue={t('languages.en')}>{t('languages.en')}</SelectItem>
+                                                    <SelectItem key="pt" textValue={t('languages.pt')}>{t('languages.pt')}</SelectItem>
+                                                    <SelectItem key="de" textValue={t('languages.de')}>{t('languages.de')}</SelectItem>
                                                 </Select>
                                                 <Input
-                                                    label="Time Limit (minutes/day)"
+                                                    label={t('fields.timeLimit')}
                                                     value={displayTimeLimit || ''}
                                                     placeholder="e.g. 120"
                                                     onValueChange={(v) => updateChildField(child.id, 'time_limit', v)}

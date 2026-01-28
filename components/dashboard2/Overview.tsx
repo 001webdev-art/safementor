@@ -5,6 +5,7 @@ import { Card, CardBody, CardHeader, Select, SelectItem } from '@nextui-org/reac
 import { Clock, CheckCircle, AlertTriangle, Info, Loader2, Lock } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { Child, SafetyAlert, EmotionTrend, DashboardService } from '@/types/dashboard2';
+import { useTranslations } from 'next-intl';
 
 interface OverviewProps {
     children: Child[];
@@ -13,6 +14,7 @@ interface OverviewProps {
 }
 
 export function Overview({ children, alerts, onNavigate }: OverviewProps) {
+    const t = useTranslations('Dashboard.overview_new');
     const [selectedChild, setSelectedChild] = useState<string>(children[0]?.id || '');
     const [timeRange, setTimeRange] = useState<'7d' | '30d'>('7d');
     const [trends, setTrends] = useState<EmotionTrend[]>([]);
@@ -33,18 +35,18 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
         <div className="space-y-6 animate-in fade-in duration-500">
             {/* Header */}
             <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Overview</h1>
-                <p className="text-gray-600">Welcome back! Here's your child safety summary.</p>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('title')}</h1>
+                <p className="text-gray-600">{t('subtitle')}</p>
             </div>
 
             {/* 1. Current Risk Level - Most Important */}
             <Card className="border border-gray-200 shadow-sm">
                 <CardHeader className="flex justify-between items-start pb-4">
                     <div>
-                        <h2 className="text-lg font-semibold text-gray-900">Current Risk Level</h2>
+                        <h2 className="text-lg font-semibold text-gray-900">{t('riskLevel')}</h2>
                         <div className="flex items-center gap-2 text-sm text-gray-500 mt-1">
                             <Clock className="w-4 h-4" />
-                            <span>Last checked: Just now</span>
+                            <span>{t('lastChecked')}</span>
                         </div>
                     </div>
                     <div className="bg-green-100 rounded-full p-3">
@@ -53,26 +55,26 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                 </CardHeader>
                 <CardBody>
                     <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4">
-                        <p className="text-xl font-bold text-green-800 mb-1">No Concerns Detected</p>
+                        <p className="text-xl font-bold text-green-800 mb-1">{t('noConcerns')}</p>
                         <p className="text-sm text-green-700">
-                            Your child's conversations show healthy patterns. Continue regular check-ins.
+                            {t('healthyPatterns')}
                         </p>
                     </div>
 
                     <div className="bg-gray-50 rounded-xl p-4">
-                        <p className="text-sm font-semibold text-gray-900 mb-3">Understanding Risk Signals:</p>
+                        <p className="text-sm font-semibold text-gray-900 mb-3">{t('understandingSignals')}</p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <div className="flex items-center gap-2">
                                 <Info className="w-4 h-4 text-green-600" />
-                                <span className="text-sm text-gray-600">Info: General patterns</span>
+                                <span className="text-sm text-gray-600">{t('signals.info')}</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 text-yellow-500" />
-                                <span className="text-sm text-gray-600">Yellow: Potential concern</span>
+                                <span className="text-sm text-gray-600">{t('signals.yellow')}</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <AlertTriangle className="w-4 h-4 text-red-500" />
-                                <span className="text-sm text-gray-600">Red: Immediate action</span>
+                                <span className="text-sm text-gray-600">{t('signals.red')}</span>
                             </div>
                         </div>
                     </div>
@@ -81,7 +83,7 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
 
             {/* 2. Child Selector */}
             <Select
-                label="Viewing Data For"
+                label={t('viewingFor')}
                 selectedKeys={[selectedChild]}
                 onSelectionChange={(keys) => setSelectedChild(Array.from(keys)[0] as string)}
                 className="max-w-md"
@@ -103,7 +105,7 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                             : 'bg-white text-gray-700 border-gray-300 hover:border-[#889A7F]'
                     }`}
                 >
-                    Last 7 Days
+                    {t('timeRange.7d')}
                 </button>
                 <button
                     onClick={() => setTimeRange('30d')}
@@ -113,31 +115,31 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                             : 'bg-white text-gray-700 border-gray-300 hover:border-[#889A7F]'
                     }`}
                 >
-                    Last 30 Days
+                    {t('timeRange.30d')}
                 </button>
             </div>
 
             {/* 4. Emotional Trend Summary Chart */}
             <Card className="border border-gray-200 shadow-sm">
                 <CardHeader className="flex justify-between items-center">
-                    <h2 className="text-lg font-bold text-gray-900">Emotional Trend Summary</h2>
+                    <h2 className="text-lg font-bold text-gray-900">{t('trendTitle')}</h2>
                     <div className="flex gap-4">
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                            <span className="text-xs text-gray-500">Positive</span>
+                            <span className="text-xs text-gray-500">{t('legend.positive')}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                            <span className="text-xs text-gray-500">Neutral</span>
+                            <span className="text-xs text-gray-500">{t('legend.neutral')}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                            <span className="text-xs text-gray-500">Needs Support</span>
+                            <span className="text-xs text-gray-500">{t('legend.needsSupport')}</span>
                         </div>
                     </div>
                 </CardHeader>
                 <CardBody>
-                    <p className="text-sm text-gray-600 mb-4">Aggregated emotional patterns over time</p>
+                    <p className="text-sm text-gray-600 mb-4">{t('patterns')}</p>
                     <div className="h-80">
                         {isLoading ? (
                             <div className="h-full flex items-center justify-center">
@@ -173,11 +175,9 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                 <CardBody className="flex gap-3">
                     <AlertTriangle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                     <div>
-                        <p className="text-sm font-bold text-yellow-900 mb-1">⚠️ Important:</p>
+                        <p className="text-sm font-bold text-yellow-900 mb-1">{t('disclaimer.title')}</p>
                         <p className="text-sm text-yellow-800">
-                            SafeMentor looks for patterns that may indicate risk. It cannot see everything and may
-                            miss or misinterpret signals. This tool supports—but does not replace—your relationship
-                            with your child.
+                            {t('disclaimer.text')}
                         </p>
                     </div>
                 </CardBody>
@@ -188,10 +188,9 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                 <CardBody className="flex gap-3">
                     <Lock className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <div>
-                        <h4 className="text-sm font-bold text-green-900">Privacy Protection Active</h4>
+                        <h4 className="text-sm font-bold text-green-900">{t('privacy.title')}</h4>
                         <p className="text-xs md:text-sm text-green-700 mt-1">
-                            Only aggregated emotional trends are shown. Individual messages remain private to protect
-                            your child's confidential space. Safety alerts are shown separately if AI detects concerning patterns.
+                            {t('privacy.desc')}
                         </p>
                     </div>
                 </CardBody>

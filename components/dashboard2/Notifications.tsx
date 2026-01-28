@@ -3,12 +3,14 @@
 import { Card, CardBody, CardHeader, Button } from '@nextui-org/react';
 import { AlertTriangle, Phone } from 'lucide-react';
 import { SafetyAlert } from '@/types/dashboard2';
+import { useTranslations } from 'next-intl';
 
 interface NotificationsProps {
     alerts: SafetyAlert[];
 }
 
 export function Notifications({ alerts }: NotificationsProps) {
+    const t = useTranslations('Dashboard.notifications_new');
     const redAlerts = alerts.filter(a => a.type === 'red');
     const otherAlerts = alerts.filter(a => a.type !== 'red');
 
@@ -16,13 +18,13 @@ export function Notifications({ alerts }: NotificationsProps) {
         <div className="space-y-6 animate-in fade-in duration-500">
             {/* Header */}
             <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Safety Notifications</h1>
-                <p className="text-gray-600">Monitor and respond to safety alerts for your children.</p>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('title')}</h1>
+                <p className="text-gray-600">{t('subtitle')}</p>
             </div>
 
             {/* Active Alerts Section */}
             <div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Active Alerts</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('activeAlerts')}</h2>
                 
                 {redAlerts.length > 0 ? (
                     <div className="space-y-4">
@@ -32,7 +34,7 @@ export function Notifications({ alerts }: NotificationsProps) {
                                     {/* Alert Header */}
                                     <div className="flex items-center justify-between mb-4">
                                         <span className="px-3 py-1 rounded text-xs font-bold bg-red-600 text-white">
-                                            RED FLAG
+                                            {t('redFlag')}
                                         </span>
                                         <span className="text-sm text-gray-600">{alert.timestamp}</span>
                                     </div>
@@ -51,11 +53,11 @@ export function Notifications({ alerts }: NotificationsProps) {
 
                                     {/* Guidance Box */}
                                     <div className="bg-white border border-red-200 rounded-lg p-4 mb-4">
-                                        <p className="text-sm font-bold text-red-900 mb-3">Guidance</p>
+                                        <p className="text-sm font-bold text-red-900 mb-3">{t('guidance.title')}</p>
                                         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-                                            <li>Talk to an expert, helpline <span className="font-semibold">988</span></li>
-                                            <li>Stay calm and be gentle</li>
-                                            <li>Have a caring conversation</li>
+                                            <li>{t('guidance.step1')}</li>
+                                            <li>{t('guidance.step2')}</li>
+                                            <li>{t('guidance.step3')}</li>
                                         </ol>
                                     </div>
                                 </CardBody>
@@ -65,7 +67,7 @@ export function Notifications({ alerts }: NotificationsProps) {
                 ) : (
                     <Card className="border border-gray-200">
                         <CardBody className="py-8 text-center text-gray-500">
-                            <p className="text-sm">No active alerts at this time</p>
+                            <p className="text-sm">{t('noActiveAlerts')}</p>
                         </CardBody>
                     </Card>
                 )}
@@ -76,11 +78,9 @@ export function Notifications({ alerts }: NotificationsProps) {
                 <CardBody className="flex gap-3 p-4">
                     <AlertTriangle className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                     <div>
-                        <p className="text-sm font-bold text-yellow-900 mb-1">⚠️ Important:</p>
+                        <p className="text-sm font-bold text-yellow-900 mb-1">{t('disclaimer.title')}</p>
                         <p className="text-sm text-yellow-800">
-                            SafeMentor <span className="font-bold">is not</span> a human expert and{" "}
-                            <span className="font-bold">can make errors</span>. For help,{" "}
-                            <span className="font-bold">please always first contact a human expert</span>.
+                            {t('disclaimer.text')}
                         </p>
                     </div>
                 </CardBody>
@@ -89,20 +89,20 @@ export function Notifications({ alerts }: NotificationsProps) {
             {/* Need to Talk? Find Support Now */}
             <Card className="border border-gray-200 bg-gray-50">
                 <CardBody className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">Need to Talk? Find Support Now</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{t('support.title')}</h3>
                     <p className="text-sm text-gray-600 mb-4">
-                        If you have immediate safety concerns, there is professional help:
+                        {t('support.desc')}
                     </p>
                     
                     <div className="space-y-3">
                         <div className="bg-white border-2 border-gray-300 rounded-lg p-4 text-center">
                             <p className="text-sm font-bold text-gray-900">
-                                Crisis Helpline: <span className="text-red-600 text-lg">988</span>
+                                {t('support.crisis')}
                             </p>
                         </div>
                         <div className="bg-white border-2 border-gray-300 rounded-lg p-4 text-center">
                             <p className="text-sm font-bold text-gray-900">
-                                Local Emergency Services: <span className="text-red-600 text-lg">112</span>
+                                {t('support.emergency')}
                             </p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ export function Notifications({ alerts }: NotificationsProps) {
 
             {/* Recent Safety Notifications */}
             <div>
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Recent Safety Notifications</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('recent')}</h2>
                 
                 {otherAlerts.length > 0 ? (
                     <div className="space-y-3">
@@ -132,7 +132,7 @@ export function Notifications({ alerts }: NotificationsProps) {
                                                     ? 'bg-yellow-500 text-white' 
                                                     : 'bg-gray-500 text-white'
                                             }`}>
-                                                {alert.type === 'yellow' ? 'Yellow' : 'Info'}
+                                                {alert.type === 'yellow' ? t('levels.yellow') : t('levels.info')}
                                             </span>
                                             <p className="text-sm font-bold text-gray-900">{alert.title}</p>
                                         </div>
@@ -143,10 +143,10 @@ export function Notifications({ alerts }: NotificationsProps) {
                                     
                                     <div className="flex gap-2">
                                         <Button size="sm" variant="bordered" className="border-gray-300">
-                                            Get Advice
+                                            {t('actions.getAdvice')}
                                         </Button>
                                         <Button size="sm" variant="bordered" className="border-gray-300">
-                                            Mark Acknowledged
+                                            {t('actions.markRead')}
                                         </Button>
                                     </div>
                                 </CardBody>
@@ -155,13 +155,13 @@ export function Notifications({ alerts }: NotificationsProps) {
                         
                         {/* View All Link */}
                         <button className="w-full text-center text-sm text-[#889A7F] hover:underline py-2">
-                            View All Notifications →
+                            {t('actions.viewAll')}
                         </button>
                     </div>
                 ) : (
                     <Card className="border border-gray-200">
                         <CardBody className="py-8 text-center text-gray-500">
-                            <p className="text-sm">No recent notifications</p>
+                            <p className="text-sm">{t('noRecent')}</p>
                         </CardBody>
                     </Card>
                 )}
@@ -170,14 +170,14 @@ export function Notifications({ alerts }: NotificationsProps) {
             {/* What to Do Next */}
             <Card className="bg-gray-50 border border-gray-200">
                 <CardBody className="p-6">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">What to Do Next</h3>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{t('nextSteps.title')}</h3>
                     <p className="text-sm text-gray-600 mb-4">
-                        Immediate safety concerns should be addressed directly. Use our guide for conversation starters.
+                        {t('nextSteps.desc')}
                     </p>
                     <Button 
                         className="w-full bg-[#889A7F] text-white hover:bg-[#748866]"
                     >
-                        Read Crisis Guide
+                        {t('nextSteps.button')}
                     </Button>
                 </CardBody>
             </Card>

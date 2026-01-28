@@ -21,6 +21,7 @@ import { Notifications } from '@/components/dashboard2/Notifications';
 import { PersonalData } from '@/components/dashboard2/PersonalData';
 import { ChildrenData } from '@/components/dashboard2/ChildrenData';
 import { Privacy } from '@/components/dashboard2/Privacy';
+import { HelpSupport } from '@/components/dashboard2/HelpSupport';
 
 // Types
 import { DashboardClientProps } from '@/types/dashboard';
@@ -71,7 +72,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
                         isIconOnly
                         variant="light"
                         onPress={toggleMobileMenu}
-                        aria-label="Open Menu"
+                        aria-label={t('sidebar.menu') || 'Open Menu'}
                     >
                         <Menu className="w-6 h-6" />
                     </Button>
@@ -108,6 +109,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
                     )}
 
                     {activeSection === 'privacy' && <Privacy />}
+                    {activeSection === 'help' && <HelpSupport />}
                 </div>
             </main>
         </div>

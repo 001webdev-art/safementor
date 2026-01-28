@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Button, Spinner } from '@nextui-org/react';
+import { Button, Spinner, Divider } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import { Profile } from '@/types/database';
 
@@ -10,10 +10,10 @@ import PersonalInfoForm from '../../app/[locale]/dashboard/forms/PersonalInfoFor
 import ContactInfoForm from '../../app/[locale]/dashboard/forms/ContactInfoForm';
 import AddressForm from '../../app/[locale]/dashboard/forms/AddressForm';
 import BillingForm from '../../app/[locale]/dashboard/forms/BillingForm';
-import SubscriptionForm from '../../app/[locale]/dashboard/forms/SubscriptionForm';
 import CommunicationForm from '../../app/[locale]/dashboard/forms/CommunicationForm';
-import SocialForm from '../../app/[locale]/dashboard/forms/SocialForm';
 import PreferencesForm from '../../app/[locale]/dashboard/forms/PreferencesForm';
+import PaymentDataForm from '../../app/[locale]/dashboard/forms/PaymentDataForm';
+import BillingInformationForm from '../../app/[locale]/dashboard/forms/BillingInformationForm';
 import SaveButton from '../../app/[locale]/dashboard/components/ui/SaveButton';
 
 interface PersonalDataProps {
@@ -50,21 +50,6 @@ export function PersonalData({
     const currentProfile = (externalProfile || localProfile) as Profile;
     const isSaving = externalIsSaving ?? localIsSaving;
 
-    const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({
-        personalInfo: false,
-        contactInfo: true,
-        address: true,
-        billingAddress: true,
-        settings: true,
-        communication: true,
-        social: true,
-        preferences: true,
-    });
-
-    const toggleGroup = (group: string) => {
-        setCollapsedGroups(prev => ({ ...prev, [group]: !prev[group] }));
-    };
-
     const handleSave = async () => {
         if (onExternalSave) {
             await onExternalSave();
@@ -84,76 +69,58 @@ export function PersonalData({
     };
 
     return (
-        <div className="space-y-6 animate-in fade-in duration-500 pb-10">
+        <div className="space-y-10 animate-in fade-in duration-500 pb-20">
             <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">Personal Data</h1>
-                <p className="text-gray-600">Manage your personal information and account settings.</p>
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('sections.settings')}</h1>
+                <p className="text-gray-500">{t('sections.settingsSubtitle')}</p>
             </div>
 
-            <div className="space-y-4">
-                <PersonalInfoForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['personalInfo']}
-                    onToggle={() => toggleGroup('personalInfo')}
-                    t={t}
-                />
+            <div className="space-y-6">
+                <div className="space-y-4">
+                    <h3 className="text-xl font-bold">{t('sections.profileDetails')}</h3>
+                    <PersonalInfoForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
 
-                <ContactInfoForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['contactInfo']}
-                    onToggle={() => toggleGroup('contactInfo')}
-                    t={t}
-                />
+                    <ContactInfoForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
 
-                <AddressForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['address']}
-                    onToggle={() => toggleGroup('address')}
-                    t={t}
-                />
+                    <AddressForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
 
-                <BillingForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['billingAddress']}
-                    onToggle={() => toggleGroup('billingAddress')}
-                    t={t}
-                />
+                    <BillingForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
 
-                <SubscriptionForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['settings']}
-                    onToggle={() => toggleGroup('settings')}
-                    t={t}
-                />
+                    <CommunicationForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
 
-                <CommunicationForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['communication']}
-                    onToggle={() => toggleGroup('communication')}
-                    t={t}
-                />
+                    <PreferencesForm
+                        profile={currentProfile}
+                        onProfileChange={handleProfileChange}
+                        t={t}
+                    />
+                </div>
 
-                <SocialForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['social']}
-                    onToggle={() => toggleGroup('social')}
-                    t={t}
-                />
+                <Divider className="my-8" />
 
-                <PreferencesForm
-                    profile={currentProfile}
-                    onProfileChange={handleProfileChange}
-                    isCollapsed={collapsedGroups['preferences']}
-                    onToggle={() => toggleGroup('preferences')}
-                    t={t}
-                />
+                <div className="space-y-4">
+                    <PaymentDataForm t={t} />
+                    <BillingInformationForm t={t} />
+                </div>
             </div>
 
             <div className="flex justify-end sticky bottom-6 z-10">
@@ -164,7 +131,7 @@ export function PersonalData({
                     onPress={handleSave}
                     isLoading={isSaving}
                 >
-                    {isSaving ? 'Saving...' : 'Save All Changes'}
+                    {isSaving ? t('actions.loading') : t('actions.saveChanges')}
                 </Button>
             </div>
         </div>

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react';
 import {
-    Shield, Bell, Settings, Lock, LogOut,
+    Shield, Bell, Settings, Lock, LogOut, HelpCircle,
     Menu, X, ChevronDown, ChevronRight, User as UserIcon, Baby, Globe, MessageSquare
 } from 'lucide-react';
 import { Profile } from '@/types/database';
@@ -113,6 +113,7 @@ export default function DashboardSidebar({
             ]
         },
         { id: 'privacy', label: t('sections.privacy'), icon: Lock },
+        { id: 'help', label: t('sections.help'), icon: HelpCircle },
     ];
 
     return (
@@ -131,7 +132,7 @@ export default function DashboardSidebar({
                     </div>
                     <div>
                         <p className="font-bold text-gray-900 text-lg">SafeMentor</p>
-                        <p className="text-xs text-[#4A5445] font-medium">Parent Dashboard</p>
+                        <p className="text-xs text-[#4A5445] font-medium">{t('sidebar.subtitle')}</p>
                     </div>
                 </div>
             </div>
@@ -232,7 +233,7 @@ export default function DashboardSidebar({
                     startContent={<MessageSquare className="w-5 h-5" />}
                     onPress={() => router.push(`/${currentLocale}/chat`)}
                 >
-                    Go to Chat APP
+                    {t('sidebar.chat')}
                 </Button>
 
                 <Button
@@ -243,7 +244,7 @@ export default function DashboardSidebar({
                     onPress={handleLogout}
                     isLoading={isLoggingOut}
                 >
-                    Logout
+                    {t('sidebar.logout')}
                 </Button>
             </div>
         </aside>
