@@ -18,10 +18,16 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     };
 }
 
+import { ChildProvider } from './contexts/ChildContext'
+
 export default function ChatLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
-    return <>{children}</>
+    return (
+        <ChildProvider>
+            {children}
+        </ChildProvider>
+    )
 }
