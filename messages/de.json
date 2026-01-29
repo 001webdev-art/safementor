@@ -40,7 +40,16 @@
     "title": "Konto erstellen",
     "emailPlaceholder": "deine@email.de",
     "passwordPlaceholder": "Mindestens 6 Zeichen",
-    "successMessage": "Konto erstellt! Check deine E-Mail zur Bestätigung."
+    "successMessage": "Konto erstellt! Check deine E-Mail zur Bestätigung.",
+    "successTitle": "Danke, dass du SafeMentor beigetreten bist!",
+    "successDescription": "Nachdem du auf den Aktivierungslink in deiner E-Mail geklickt hast, fahre mit dem Login fort!",
+    "goHome": "Zur Startseite",
+    "goLogin": "Weiter zum Login"
+  },
+  "VerifiedPage": {
+    "title": "E-Mail aktiviert!",
+    "description": "Deine E-Mail wurde erfolgreich verifiziert. Du kannst nun mit dem Login fortfahren!",
+    "goLogin": "Zum Login"
   },
   "LoginPage": {
     "title": "Einloggen",
@@ -245,8 +254,7 @@
             "Keine Live-Überwachung von Gesprächen",
             "Keine Chat-Wiedergabe oder Einsicht in den Nachrichtenverlauf",
             "Kein Emotions-Scoring oder Verhaltensüberwachung",
-            "Keine Verfolgung des Standorts oder der Gerätenutzung des Kindes",
-            "Kein Elternzugriff auf rohe Chat-Protokolle"
+            "Kein Eigentumszugriff auf rohe Chat-Protokolle"
           ]
         },
         "does": {
@@ -423,6 +431,8 @@
   "Errors": {
     "invalidEmail": "Ungültige E-Mail",
     "passwordLength": "Passwort muss mindestens 6 Zeichen haben",
+    "passwordMismatch": "Passwörter stimmen nicht überein",
+    "emailConflict": "Diese E-Mail wird bereits verwendet, Weiterleitung zur Login-Seite",
     "generic": "Etwas ist schiefgelaufen. Nochmal versuchen."
   },
   "Landing": {
@@ -505,7 +515,7 @@
       },
       "emotional": {
         "title": "Emotionale Unterstützung – ohne Menschen zu ersetzen",
-        "description": "SafeMentor hört zu, wenn Kinder reden möchten. Es kann Kindern helfen, Emotionen zu benennen, zur Reflexion anregen und gesunde nächste Schritte vorschlagen.",
+        "description": "SafeMentor hört zu, wenn Kinder reden möchten. It kann Kindern helfen, Emotionen zu benennen, zur Reflexion anregen und gesunde nächste Schritte vorschlagen.",
         "callout": {
           "title": "Aber es ist kein Therapeut",
           "desc": "und ersetzt niemals echte Menschen."
@@ -610,6 +620,59 @@
         "contact": "Kontakt"
       },
       "bottom": "Mit Sorgfalt für Kinder und Familien gemacht."
+    }
+  },
+  "Compliance": {
+    "sidebar": {
+      "title": "Privatsphäre Ihres Kindes",
+      "description": "SafeMentor basiert auf dem Prinzip der „Datenminimierung“. Wir verarbeiten nur das, was strikt notwendig ist, um Ihr Kind zu schützen.",
+      "compliant": "DSGVO Konform"
+    },
+    "dataUsage": {
+      "title": "Welche Daten SafeMentor verwendet",
+      "riskSignals": {
+        "label": "Risikosignale:",
+        "value": "Nur Schlüsselwörter, die auf Mobbing, illegale Aktivitäten, Gefährdung der Öffentlichkeit, Grooming oder Selbstverletzung hinweisen, werden markiert."
+      },
+      "usageStats": {
+        "label": "App-Nutzungsstatistiken:",
+        "value": "Grobe Aktivitätskategorien für Wohlbefindens-Protokolle."
+      }
+    },
+    "consent": {
+      "improve": {
+        "title": "Helfen Sie SafeMentor zu verbessern",
+        "optional": "(optional)",
+        "description": "Erlauben Sie uns, 100% anonymisierte Fehlerberichte zu verwenden, um Fehler zu beheben."
+      },
+      "safeAnalysis": {
+        "title": "Anonymes Feedback zu Fehlalarmen zulassen",
+        "description": "Hilft uns, unsere Kategorisierung von schädlichen Ereignissen zu trainieren."
+      }
+    },
+    "transparency": {
+      "title": "TRANSPARENZBERICHT",
+      "never": {
+        "title": "Niemals gesammelt",
+        "list": [
+          "Genaue GPS-Position",
+          "Kamera-Fotos",
+          "Sprachaufnahmen",
+          "Rohe Chat-Protokolle"
+        ]
+      },
+      "parents": {
+        "title": "Eltern können sehen",
+        "list": [
+          "Risikowarnungen & Kontext",
+          "Emotionale Trends"
+        ]
+      }
+    },
+    "footer": {
+      "agreement": "Ich verstehe, wie Daten verwendet werden & stimme den <terms>Nutzungsbedingungen</terms> zu",
+      "back": "Zurück",
+      "createAccount": "Konto erstellen"
     }
   }
 }

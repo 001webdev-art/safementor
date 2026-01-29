@@ -16,38 +16,36 @@ export const TransparencyReport = () => {
 
     const parentsList = [
         t('parents.list.0'),
-        t('parents.list.1'),
-        t('parents.list.2'),
-        t('parents.list.3')
+        t('parents.list.1')
     ]
 
     return (
-        <section className="bg-gray-50 rounded-xl p-6 border border-gray-100">
-            <h3 className="text-xs font-semibold tracking-widest text-gray-500 mb-4 uppercase">
+        <section className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <h3 className="text-xs font-bold tracking-widest text-gray-500 mb-4 uppercase">
                 {t('title')}
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                 {/* Never Collected */}
                 <div>
-                    <h4 className="font-semibold text-danger-600 mb-2 flex items-center gap-2">
-                        <Ban size={16} /> {t('never.title')}
+                    <h4 className="font-bold text-red-600 mb-3 flex items-center gap-2">
+                        <Ban size={18} /> {t('never.title')}
                     </h4>
-                    <ul className="space-y-1 text-gray-600">
+                    <ul className="space-y-2 text-gray-700 font-medium">
                         {neverList.map((item, index) => (
-                            <li key={index}>• {item}</li>
+                            <li key={index} className="flex gap-2 text-gray-600"><span className="text-red-400">•</span> {item}</li>
                         ))}
                     </ul>
                 </div>
 
                 {/* Parents Can See */}
                 <div>
-                    <h4 className="font-semibold text-success-600 mb-2 flex items-center gap-2">
-                        <Eye size={16} /> {t('parents.title')}
+                    <h4 className="font-bold text-[#889A7F] mb-3 flex items-center gap-2">
+                        <Eye size={18} /> {t('parents.title')}
                     </h4>
-                    <ul className="space-y-1 text-gray-600">
+                    <ul className="space-y-2 text-gray-700 font-medium">
                         {parentsList.map((item, index) => (
-                            <li key={index}>• {item}</li>
+                            <li key={index} className="flex gap-2 text-gray-600"><span className="text-[#889A7F]">•</span> {item}</li>
                         ))}
                     </ul>
                 </div>

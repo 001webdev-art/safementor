@@ -1,24 +1,29 @@
 'use client';
 
 import React from 'react';
-import { Card, CardBody, Divider } from '@nextui-org/react';
+import { Card, CardBody, Divider, Chip } from '@nextui-org/react';
 import { FormProps } from '@/types/dashboard';
 
 const BillingInformationForm = ({ t }: any) => {
     if (!t) return null;
 
     return (
-        <Card shadow="none" className="border border-divider bg-default-50/30 p-2 overflow-hidden">
-            <CardBody className="p-0">
-                <div className="bg-gray-100/50 px-4 py-2 border-b border-divider">
-                    <span className="font-bold text-sm text-gray-900">{t('billing.title')}</span>
+        <div className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden animate-in slide-in-from-top-2 duration-300">
+            <div className="bg-[#889A7F]/5 px-6 py-3 border-b border-gray-100 flex items-center justify-between">
+                <span className="font-bold text-sm text-gray-900">{t('billing.title')}</span>
+                <Chip size="sm" className="bg-[#889A7F] text-white font-bold h-5 px-2">Family</Chip>
+            </div>
+            <div className="px-6 py-5 flex justify-between items-center">
+                <div className="flex flex-col">
+                    <span className="text-xs text-gray-400 font-semibold uppercase tracking-wider">{t('billing.plan')}</span>
+                    <span className="font-bold text-gray-900">{t('billing.familyPlan')}</span>
                 </div>
-                <div className="p-4 flex justify-between items-center">
-                    <span className="text-sm text-gray-600">{t('billing.plan')}:</span>
-                    <span className="font-bold text-sm">{t('billing.familyPlan')} (€19.99/month)</span>
+                <div className="text-right">
+                    <span className="text-lg font-black text-gray-900">€19.99</span>
+                    <span className="text-xs text-gray-400 font-medium ml-1">/ mo</span>
                 </div>
-            </CardBody>
-        </Card>
+            </div>
+        </div>
     );
 };
 
