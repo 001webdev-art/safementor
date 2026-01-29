@@ -64,9 +64,10 @@
     "active": "Active",
     "sections": {
       "overview": "Overview",
+      "notifications": "Notifications",
       "children": "Children",
       "privacy": "Privacy",
-      "help": "Help",
+      "help": "Help & Support",
       "personalInfo": "Personal Information",
       "contactInfo": "Contact Information",
       "address": "Shipping Address",
@@ -76,7 +77,28 @@
       "preferences": "App Preferences",
       "communication_preferences": "Communication Preferences",
       "social": "Social & Bio",
-      "basicinfo": "Basic Info"
+      "basicinfo": "Basic Info",
+      "profileDetails": "Profile Details",
+      "settingsSubtitle": "Manage your account and safety preferences."
+    },
+    "payment": {
+      "title": "Payment Data",
+      "subtitle": "Manage your subscription and billing",
+      "currentMethod": "Current Payment Method",
+      "active": "Active",
+      "expires": "Expires",
+      "update": "Update Card",
+      "remove": "Remove Card"
+    },
+    "billing": {
+      "title": "Billing Information",
+      "plan": "Current Plan",
+      "familyPlan": "Family Plan"
+    },
+    "sidebar": {
+      "subtitle": "Parent Dashboard",
+      "chat": "Go to Chat APP",
+      "logout": "Logout"
     },
     "fields": {
       "firstname": "First Name",
@@ -159,6 +181,256 @@
       "privacyDescription": "Manage your data and security settings here.",
       "helpDescription": "Need assistance? Contact our support team.",
       "supportTicket": "Open Support Ticket"
+    },
+    "privacy_new": {
+      "title": "Data & Privacy",
+      "subtitle": "How we protect your family's information.",
+      "basis": {
+        "title": "Legal Basis for Processing (GDPR)",
+        "subtitle": "Why we're allowed to process your child's data",
+        "badge": "EU COMPLIANT",
+        "safety": {
+          "title": "Child Safety (Vital Interests)",
+          "desc": "AI analysis to detect and prevent harm to children"
+        },
+        "service": {
+          "title": "Service Operation (Contractual Necessity)",
+          "desc": "Technical processing required to deliver the AI companion service"
+        },
+        "interest": {
+          "title": "Legitimate Interest (With Safeguards)",
+          "desc": "Improving safety features while protecting child privacy through aggregation"
+        },
+        "consent": "Your consent: You provided explicit consent during account setup. To view your form or withdraw your consent, go to Settings."
+      },
+      "access": {
+        "title": "Data Access, visibility and deletion",
+        "subtitle": "Aligned with GDPR",
+        "visibility": {
+          "title": "What You See (Data Visibility):",
+          "items": [
+            "Aggregated emotional trends only",
+            "Safety alerts with minimal context",
+            "No raw chat logs or surveillance"
+          ]
+        },
+        "request": {
+          "title": "What You Can Request (Data Access Rights):",
+          "items": [
+            "Under GDPR, you may request full data access",
+            "This is exceptional and requires legal justification",
+            "All requests are logged and reviewed",
+            "Protects child's dignity and trust"
+          ],
+          "button": "Request Exceptional Data Access"
+        },
+        "deletion": {
+          "title": "Automatic Data Deletion:",
+          "desc": "After 30 days, all conversation data is permanently deleted from our servers (GDPR compliance)"
+        }
+      },
+      "rights": {
+        "title": "Your GDPR Rights",
+        "subtitle": "Manage your data and privacy preferences",
+        "access": {
+          "title": "Right to Access",
+          "desc": "Download a copy of all data we hold",
+          "button": "Request Export"
+        },
+        "erasure": {
+          "title": "Right to Erasure",
+          "desc": "Permanently delete all stored data",
+          "button": "Delete Data"
+        },
+        "object": {
+          "title": "Right to Object",
+          "desc": "Withdraw consent and stop processing",
+          "button": "Withdraw Consent"
+        }
+      }
+    },
+    "help_new": {
+      "title": "Help & Support",
+      "subtitle": "Everything you need to know about SafeMentor.",
+      "docs": {
+        "title": "Complete Documentation",
+        "desc": "Visit our help center for full guides and FAQs",
+        "button": "Visit Help Center"
+      },
+      "surveillance": {
+        "title": "Why This Is Not a Surveillance Tool",
+        "subtitle": "Protecting child privacy while ensuring safety",
+        "notDo": {
+          "title": "What SafeMentor Does NOT Do:",
+          "items": [
+            "No live monitoring of conversations",
+            "No chat replay or message history viewing",
+            "No emotion scoring or behavioral surveillance",
+            "No tracking of child's location or device usage",
+            "No parent access to raw chat logs"
+          ]
+        },
+        "does": {
+          "title": "What SafeMentor Does:",
+          "items": [
+            "Provides AI companion for child to talk freely",
+            "Detects patterns that may indicate risk",
+            "Sends aggregated emotional trends (not messages)",
+            "Alerts parents only when serious concerns detected"
+          ]
+        },
+        "whySafer": {
+          "title": "Why this is safer for kids:",
+          "desc": "Privacy protection encourages honest communication. Children need a confidential space to process emotions without fear of surveillance. This builds trust and enables earlier intervention when needed."
+        }
+      },
+      "rights": {
+        "title": "How Child Rights Are Protected",
+        "subtitle": "EU-COMPLIANT PRIVACY SAFEGUARDS",
+        "rawChat": {
+          "title": "Why Parents Don't See Raw Chats:",
+          "desc": "Protecting child dignity and developmental autonomy. Children need private space to develop identity and emotional regulation. Constant surveillance damages trust and healthy development."
+        },
+        "insulation": {
+          "title": "How Insulation Works:",
+          "desc": "Only serious concerns trigger alerts. This avoids \"snitching dynamics\" where children stop talking honestly. The AI distinguishes between normal struggles and genuine risk."
+        },
+        "balance": {
+          "title": "Trust + Safety Balance:",
+          "desc": "SafeMentor is designed to support parent-child relationship, not replace it. Privacy-by-default maintains trust while safety alerts enable timely intervention."
+        }
+      },
+      "works": {
+        "title": "How SafeMentor Works",
+        "subtitle": "Our privacy-first approach",
+        "step1": { "title": "Child Talks to AI Companion", "desc": "Private conversations in a safe space" },
+        "step2": { "title": "AI Analyzes Patterns", "desc": "Looking for emotional trends and risk indicators" },
+        "step3": { "title": "Parents See Aggregated Data", "desc": "General mood trends, no raw messages" },
+        "step4": { "title": "Alerts When Needed", "desc": "Only serious concerns trigger notifications" }
+      },
+      "signals": {
+        "title": "Understanding Signal Types",
+        "subtitle": "WHAT EACH ALERT LEVEL MEANS",
+        "info": { "title": "Informational Signal", "desc": "General patterns detected. No immediate action needed. For your awareness only." },
+        "yellow": { "title": "Yellow Flag", "desc": "Potential concern detected. Consider having a gentle check-in conversation with your child." },
+        "red": { "title": "Red Flag", "desc": "Serious concern requiring immediate attention. Safety issue detected (self-harm, abuse, etc.)" }
+      },
+      "limitations": {
+        "title": "AI Limitations: False Signals",
+        "subtitle": "Understanding detection errors",
+        "positives": { "title": "False Positives (Over-detection):", "desc": "AI may flag innocent conversations as concerning. Example: \"I want to die\" in context of a video game. Always consider context and trust your judgment." },
+        "negatives": { "title": "False Negatives (Under-detection):", "desc": "AI may miss subtle signs or coded language. This tool supports—but does not replace—your parental awareness and relationship with your child." },
+        "reminder": { "title": "Critical Reminder:", "desc": "SafeMentor looks for patterns that may indicate risk. It cannot see everything and may miss or misinterpret signals. Your judgment and relationship with your child remain primary." }
+      },
+      "emergency": {
+        "title": "Emergency Resources",
+        "subtitle": "If you have immediate safety concerns, contact professional help directly",
+        "crisisLine": "National Crisis Line:",
+        "crisisText": "Crisis Text Line:",
+        "crisisTextAction": "Text HOME to 741741",
+        "findTherapist": "Find a Therapist:"
+      }
+    },
+    "overview_new": {
+      "title": "Overview",
+      "subtitle": "Welcome back! Here's your child safety summary.",
+      "riskLevel": "Current Risk Level",
+      "lastChecked": "Last checked: Just now",
+      "noConcerns": "No Concerns Detected",
+      "healthyPatterns": "Your child's conversations show healthy patterns. Continue regular check-ins.",
+      "understandingSignals": "Understanding Risk Signals:",
+      "signals": {
+        "info": "Info: General patterns",
+        "yellow": "Yellow: Potential concern",
+        "red": "Red: Immediate action"
+      },
+      "viewingFor": "Viewing Data For",
+      "timeRange": {
+        "7d": "Last 7 Days",
+        "30d": "Last 30 Days"
+      },
+      "trendTitle": "Emotional Trend Summary",
+      "patterns": "Aggregated emotional patterns over time",
+      "legend": {
+        "positive": "Positive",
+        "neutral": "Neutral",
+        "needsSupport": "Needs Support"
+      },
+      "disclaimer": {
+        "title": "⚠️ Important:",
+        "text": "SafeMentor looks for patterns that may indicate risk. It cannot see everything and may miss or misinterpret signals. This tool supports—but does not replace—your relationship with your child."
+      },
+      "privacy": {
+        "title": "Privacy Protection Active",
+        "desc": "Only aggregated emotional trends are shown. Individual messages remain private to protect your child's confidential space. Safety alerts are shown separately if AI detects concerning patterns."
+      }
+    },
+    "children_new": {
+      "title": "Children Data",
+      "subtitle": "Manage your connected children and their safety preferences.",
+      "management": "Child Management",
+      "managementSubtitle": "Connect and manage child devices",
+      "addChild": "Add Child",
+      "noChildren": "No children listed yet. Click \"Add Child\" to begin.",
+      "settings": "{name}'s Settings",
+      "child": "Child",
+      "newChild": "New Child",
+      "newDevice": "New Device",
+      "fields": {
+        "nickname": "Nickname",
+        "birthdate": "Birthdate (MM/YY)",
+        "language": "Language",
+        "timeLimit": "Time Limit (minutes/day)"
+      },
+      "languages": {
+        "en": "English",
+        "pt": "Portuguese",
+        "de": "German"
+      },
+      "actions": {
+        "save": "Save",
+        "pause": "Pause",
+        "delete": "Delete"
+      }
+    },
+    "notifications_new": {
+      "title": "Safety Notifications",
+      "subtitle": "Monitor and respond to safety alerts for your children.",
+      "activeAlerts": "Active Alerts",
+      "redFlag": "RED FLAG",
+      "guidance": {
+        "title": "Guidance",
+        "step1": "Talk to an expert, helpline 988",
+        "step2": "Stay calm and be gentle",
+        "step3": "Have a caring conversation"
+      },
+      "noActiveAlerts": "No active alerts at this time",
+      "disclaimer": {
+        "title": "⚠️ Important:",
+        "text": "SafeMentor **is not** a human expert and **can make errors**. For help, **please always first contact a human expert**."
+      },
+      "support": {
+        "title": "Need to Talk? Find Support Now",
+        "desc": "If you have immediate safety concerns, there is professional help:",
+        "crisis": "Crisis Helpline: 988",
+        "emergency": "Local Emergency Services: 112"
+      },
+      "recent": "Recent Safety Notifications",
+      "levels": {
+        "yellow": "Yellow",
+        "info": "Info"
+      },
+      "actions": {
+        "getAdvice": "Get Advice",
+        "markRead": "Mark Acknowledged",
+        "viewAll": "View All Notifications →"
+      },
+      "noRecent": "No recent notifications",
+      "nextSteps": {
+        "title": "What to Do Next",
+        "desc": "Immediate safety concerns should be addressed directly. Use our guide for conversation starters.",
+        "button": "Read Crisis Guide"
+      }
     },
     "user": {
       "role": "Parent / Guardian",

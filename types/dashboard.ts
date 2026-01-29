@@ -31,8 +31,8 @@ export interface DashboardClientProps {
 export interface FormProps {
     profile: Partial<Profile>;
     onProfileChange: (profile: Partial<Profile>) => void;
-    isCollapsed: boolean;
-    onToggle: () => void;
+    isCollapsed?: boolean;
+    onToggle?: () => void;
     t: (key: string) => string;
 }
 
