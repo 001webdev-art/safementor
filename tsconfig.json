@@ -37,6 +37,7 @@
   ],
   "exclude": [
     "node_modules",
-    "_next_ui_backup"
+    "_next_ui_backup",
+    "components_parents"
   ]
 }

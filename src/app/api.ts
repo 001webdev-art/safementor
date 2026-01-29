@@ -25,6 +25,7 @@ export interface SafetyAlert {
   description: string;
   timestamp: string;
   details?: string;
+  quote?: string;
   isAcknowledged: boolean;
 }
 

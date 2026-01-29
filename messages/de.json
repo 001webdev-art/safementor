@@ -54,9 +54,10 @@
     "active": "Aktiv",
     "sections": {
       "overview": "Übersicht",
+      "notifications": "Benachrichtigungen",
       "children": "Kinder",
       "privacy": "Datenschutz",
-      "help": "Hilfe",
+      "help": "Hilfe & Support",
       "personalInfo": "Persönliche Informationen",
       "contactInfo": "Kontaktinformationen",
       "address": "Lieferadresse",
@@ -65,7 +66,28 @@
       "privacySecurity": "Privatsphäre & Sicherheit",
       "preferences": "App-Einstellungen",
       "communication_preferences": "Kommunikationseinstellungen",
-      "social": "Soziales & Bio"
+      "social": "Soziales & Bio",
+      "profileDetails": "Profildetails",
+      "settingsSubtitle": "Verwalten Sie Ihr Konto und Ihre Sicherheitseinstellungen."
+    },
+    "payment": {
+      "title": "Zahlungsdaten",
+      "subtitle": "Verwalten Sie Ihr Abonnement und die Abrechnung",
+      "currentMethod": "Aktuelle Zahlungsmethode",
+      "active": "Aktiv",
+      "expires": "Läuft ab",
+      "update": "Karte aktualisieren",
+      "remove": "Karte entfernen"
+    },
+    "billing": {
+      "title": "Rechnungsinformationen",
+      "plan": "Aktueller Plan",
+      "familyPlan": "Familien-Plan"
+    },
+    "sidebar": {
+      "subtitle": "Eltern-Dashboard",
+      "chat": "Zum Chat-App",
+      "logout": "Abmelden"
     },
     "fields": {
       "firstname": "Vorname",
@@ -139,6 +161,256 @@
       "helpDescription": "Benötigen Sie Hilfe? Kontaktieren Sie unser Support-Team.",
       "supportTicket": "Support-Ticket öffnen"
     },
+    "privacy_new": {
+      "title": "Daten & Datenschutz",
+      "subtitle": "Wie wir die Informationen Ihrer Familie schützen.",
+      "basis": {
+        "title": "Rechtsgrundlage für die Verarbeitung (DSGVO)",
+        "subtitle": "Warum wir die Daten Ihres Kindes verarbeiten dürfen",
+        "badge": "EU-KONFORM",
+        "safety": {
+          "title": "Kindessicherheit (Lebenswichtige Interessen)",
+          "desc": "KI-Analyse zur Erkennung und Vermeidung von Schäden für Kinder"
+        },
+        "service": {
+          "title": "Servicebetrieb (Vertragliche Notwendigkeit)",
+          "desc": "Technische Verarbeitung, die für die Bereitstellung des KI-Begleiter-Dienstes erforderlich ist"
+        },
+        "interest": {
+          "title": "Berechtigtes Interesse (Mit Schutzmaßnahmen)",
+          "desc": "Verbesserung der Sicherheitsfunktionen bei gleichzeitigem Schutz der Privatsphäre von Kindern durch Aggregation"
+        },
+        "consent": "Ihre Zustimmung: Sie haben bei der Kontoeinrichtung Ihre ausdrückliche Zustimmung gegeben. Um Ihr Formular einzusehen oder Ihre Zustimmung zu widerrufen, gehen Sie zu den Einstellungen."
+      },
+      "access": {
+        "title": "Datenzugriff, Sichtbarkeit und Löschung",
+        "subtitle": "Ausgerichtet an der DSGVO",
+        "visibility": {
+          "title": "Was Sie sehen (Datensichtbarkeit):",
+          "items": [
+            "Nur aggregierte emotionale Trends",
+            "Sicherheitswarnungen mit minimalem Kontext",
+            "Keine rohen Chat-Protokolle oder Überwachung"
+          ]
+        },
+        "request": {
+          "title": "Was Sie anfordern können (Datenzugriffsrechte):",
+          "items": [
+            "Im Rahmen der DSGVO können Sie vollständigen Datenzugriff beantragen",
+            "Dies ist eine Ausnahme und erfordert eine rechtliche Begründung",
+            "Alle Anfragen werden protokolliert und geprüft",
+            "Schützt die Würde und das Vertrauen des Kindes"
+          ],
+          "button": "Außergewöhnlichen Datenzugriff anfordern"
+        },
+        "deletion": {
+          "title": "Automatische Datenlöschung:",
+          "desc": "Nach 30 Tagen werden alle Gesprächsdaten dauerhaft von unseren Servern gelöscht (DSGVO-Konformität)"
+        }
+      },
+      "rights": {
+        "title": "Ihre DSGVO-Rechte",
+        "subtitle": "Verwalten Sie Ihre Daten- und Datenschutzeinstellungen",
+        "access": {
+          "title": "Recht auf Auskunft",
+          "desc": "Laden Sie eine Kopie aller von uns gespeicherten Daten herunter",
+          "button": "Export anfordern"
+        },
+        "erasure": {
+          "title": "Recht auf Löschung",
+          "desc": "Löschen Sie alle gespeicherten Daten dauerhaft",
+          "button": "Daten löschen"
+        },
+        "object": {
+          "title": "Recht auf Widerspruch",
+          "desc": "Einwilligung widerrufen und Verarbeitung stoppen",
+          "button": "Einwilligung widerrufen"
+        }
+      }
+    },
+    "help_new": {
+      "title": "Hilfe & Support",
+      "subtitle": "Alles, was Sie über SafeMentor wissen müssen.",
+      "docs": {
+        "title": "Vollständige Dokumentation",
+        "desc": "Besuchen Sie unser Hilfe-Center für vollständige Anleitungen und FAQs",
+        "button": "Hilfe-Center besuchen"
+      },
+      "surveillance": {
+        "title": "Warum dies kein Überwachungstool ist",
+        "subtitle": "Schutz der Privatsphäre des Kindes bei gleichzeitiger Gewährleistung der Sicherheit",
+        "notDo": {
+          "title": "Was SafeMentor NICHT tut:",
+          "items": [
+            "Keine Live-Überwachung von Gesprächen",
+            "Keine Chat-Wiedergabe oder Einsicht in den Nachrichtenverlauf",
+            "Kein Emotions-Scoring oder Verhaltensüberwachung",
+            "Keine Verfolgung des Standorts oder der Gerätenutzung des Kindes",
+            "Kein Elternzugriff auf rohe Chat-Protokolle"
+          ]
+        },
+        "does": {
+          "title": "Was SafeMentor tut:",
+          "items": [
+            "Bietet KI-Begleiter für das Kind zum freien Sprechen",
+            "Erkennt Muster, die auf Risiken hinweisen könnten",
+            "Sendet aggregierte emotionale Trends (keine Nachrichten)",
+            "Alarmiert Eltern nur, wenn ernste Bedenken erkannt werden"
+          ]
+        },
+        "whySafer": {
+          "title": "Warum das für Kinder sicherer ist:",
+          "desc": "Datenschutz fördert ehrliche Kommunikation. Kinder brauchen einen vertraulichen Raum, um Emotionen ohne Angst vor Überwachung zu verarbeiten. Dies baut Vertrauen auf und ermöglicht ein frühzeitigeres Eingreifen im Bedarfsfall."
+        }
+      },
+      "rights": {
+        "title": "Wie Kinderrechte geschützt werden",
+        "subtitle": "DSGVO-KONFORME DATENSCHUTZ-SCHUTZMASSNAHMEN",
+        "rawChat": {
+          "title": "Warum Eltern keine rohen Chats sehen:",
+          "desc": "Schutz der kindlichen Würde und entwicklungsbedingten Autonomie. Kinder brauchen privaten Raum, um Identität und emotionale Regulation zu entwickeln. Ständige Überwachung schädigt das Vertrauen und eine gesunde Entwicklung."
+        },
+        "insulation": {
+          "title": "Wie die Isolierung funktioniert:",
+          "desc": "Nur ernste Bedenken lösen Warnungen aus. Dies vermeidet eine \"Petz-Dynamik\", bei der Kinder aufhören, ehrlich zu sprechen. Die KI unterscheidet zwischen normalen Schwierigkeiten und echtem Risiko."
+        },
+        "balance": {
+          "title": "Vertrauen + Sicherheit Balance:",
+          "desc": "SafeMentor soll die Eltern-Kind-Beziehung unterstützen, nicht ersetzen. Datenschutz durch Voreinstellung bewahrt das Vertrauen, während Sicherheitswarnungen ein rechtzeitiges Eingreifen ermöglichen."
+        }
+      },
+      "works": {
+        "title": "Wie SafeMentor funktioniert",
+        "subtitle": "Unser Privacy-First-Ansatz",
+        "step1": { "title": "Kind spricht mit KI-Begleiter", "desc": "Private Gespräche in einem sicheren Raum" },
+        "step2": { "title": "KI analysiert Muster", "desc": "Suche nach emotionalen Trends und Risikoindikatoren" },
+        "step3": { "title": "Eltern sehen aggregierte Daten", "desc": "Allgemeine Stimmungstrends, keine rohen Nachrichten" },
+        "step4": { "title": "Warnungen im Bedarfsfall", "desc": "Nur ernste Bedenken lösen Benachrichtigungen aus" }
+      },
+      "signals": {
+        "title": "Signal-Typen verstehen",
+        "subtitle": "WAS JEDE WARNSTUFE BEDEUTET",
+        "info": { "title": "Informationssignal", "desc": "Allgemeine Muster erkannt. Kein sofortiger Handlungsbedarf. Nur zu Ihrer Information." },
+        "yellow": { "title": "Gelbe Flagge", "desc": "Potenzielle Bedenken erkannt. Erwägen Sie ein behutsames Gespräch mit Ihrem Kind." },
+        "red": { "title": "Rote Flagge", "desc": "Ernsthaftes Bedenken, das sofortige Aufmerksamkeit erfordert. Sicherheitsproblem erkannt (Selbstverletzung, Missbrauch, etc.)" }
+      },
+      "limitations": {
+        "title": "KI-Einschränkungen: Falsche Signale",
+        "subtitle": "Erkennungfehler verstehen",
+        "positives": { "title": "Falsch-Positive (Übererkennung):", "desc": "KI kann harmlose Gespräche als besorgniserregend einstufen. Beispiel: \"Ich will sterben\" im Kontext eines Videospiels. Berücksichtigen Sie immer den Kontext und vertrauen Sie Ihrem Urteilsvermögen." },
+        "negatives": { "title": "Falsch-Negative (Untererkennung):", "desc": "KI kann subtile Anzeichen oder kodierte Sprache übersehen. Dieses Tool unterstützt — ersetzt aber nicht — Ihre elterliche Aufmerksamkeit und Beziehung zu Ihrem Kind." },
+        "reminder": { "title": "Kritische Erinnerung:", "desc": "SafeMentor sucht nach Mustern, die auf Risiken hinweisen können. Es kann nicht alles sehen und kann Signale übersehen oder missinterpretieren. Ihr Urteilsvermögen und Ihre Beziehung zu Ihrem Kind bleiben vorrangig." }
+      },
+      "emergency": {
+        "title": "Notfall-Ressourcen",
+        "subtitle": "Bei unmittelbaren Sicherheitsbedenken wenden Sie sich direkt an professionelle Hilfe",
+        "crisisLine": "Bundesweite Krisenleitung:",
+        "crisisText": "Krisen-Text-Leitung:",
+        "crisisTextAction": "Text HOME an 741741",
+        "findTherapist": "Therapeuten finden:"
+      }
+    },
+    "overview_new": {
+      "title": "Übersicht",
+      "subtitle": "Willkommen zurück! Hier ist die Zusammenfassung Ihrer Kindersicherheit.",
+      "riskLevel": "Aktuelle Risikostufe",
+      "lastChecked": "Zuletzt geprüft: Gerade eben",
+      "noConcerns": "Keine Bedenken erkannt",
+      "healthyPatterns": "Die Gespräche Ihres Kindes zeigen gesunde Muster. Führen Sie regelmäßige Check-ins fort.",
+      "understandingSignals": "Risikosignale verstehen:",
+      "signals": {
+        "info": "Info: Allgemeine Muster",
+        "yellow": "Gelb: Potenzielle Bedenken",
+        "red": "Rot: Sofortiges Handeln"
+      },
+      "viewingFor": "Daten anzeigen für",
+      "timeRange": {
+        "7d": "Letzte 7 Tage",
+        "30d": "Letzte 30 Tage"
+      },
+      "trendTitle": "Zusammenfassung der emotionalen Trends",
+      "patterns": "Aggregated emotional patterns over time",
+      "legend": {
+        "positive": "Positiv",
+        "neutral": "Neutral",
+        "needsSupport": "Benötigt Unterstützung"
+      },
+      "disclaimer": {
+        "title": "⚠️ Wichtig:",
+        "text": "SafeMentor sucht nach Mustern, die auf Risiken hinweisen können. Es kann nicht alles sehen und kann Signale übersehen oder missinterpretieren. Dieses Tool unterstützt — ersetzt aber nicht — Ihre elterliche Beziehung zu Ihrem Kind."
+      },
+      "privacy": {
+        "title": "Datenschutz aktiv",
+        "desc": "Es werden nur aggregierte emotionale Trends angezeigt. Einzelne Nachrichten bleiben privat, um den vertraulichen Raum Ihres Kindes zu schützen. Sicherheitswarnungen werden separat angezeigt, wenn die KI besorgniserregende Muster erkennt."
+      }
+    },
+    "children_new": {
+      "title": "Kinderdaten",
+      "subtitle": "Verwalten Sie Ihre verbundenen Kinder und deren Sicherheitseinstellungen.",
+      "management": "Kinderverwaltung",
+      "managementSubtitle": "Kindergeräte verbinden und verwalten",
+      "addChild": "Kind hinzufügen",
+      "noChildren": "Noch keine Kinder hinzugefügt. Klicken Sie auf „Kind hinzufügen“, um zu beginnen.",
+      "settings": "Einstellungen von {name}",
+      "child": "Kind",
+      "newChild": "Neues Kind",
+      "newDevice": "Neues Gerät",
+      "fields": {
+        "nickname": "Spitzname",
+        "birthdate": "Geburtsdatum (MM/JJ)",
+        "language": "Sprache",
+        "timeLimit": "Zeitlimit (Minuten/Tag)"
+      },
+      "languages": {
+        "en": "Englisch",
+        "pt": "Portugiesisch",
+        "de": "Deutsch"
+      },
+      "actions": {
+        "save": "Speichern",
+        "pause": "Pause",
+        "delete": "Löschen"
+      }
+    },
+    "notifications_new": {
+      "title": "Sicherheitsbenachrichtigungen",
+      "subtitle": "Überwachen und reagieren Sie auf Sicherheitswarnungen für Ihre Kinder.",
+      "activeAlerts": "Aktive Warnungen",
+      "redFlag": "ROTE FLAGGE",
+      "guidance": {
+        "title": "Anleitung",
+        "step1": "Sprechen Sie mit einem Experten, Helpline 988",
+        "step2": "Bleiben Sie ruhig und einfühlsam",
+        "step3": "Führen Sie ein fürsorgliches Gespräch"
+      },
+      "noActiveAlerts": "Derzeit keine aktiven Warnungen",
+      "disclaimer": {
+        "title": "⚠️ Wichtig:",
+        "text": "SafeMentor **ist kein** menschlicher Experte und **kann Fehler machen**. Bitte kontaktieren Sie bei Hilfe **immer zuerst einen menschlichen Experten**."
+      },
+      "support": {
+        "title": "Möchten Sie sprechen? Finden Sie jetzt Unterstützung",
+        "desc": "Wenn Sie unmittelbare Sicherheitsbedenken haben, gibt es professionelle Hilfe:",
+        "crisis": "Krisen-Helpline: 988",
+        "emergency": "Lokale Notdienste: 112"
+      },
+      "recent": "Aktuelle Sicherheitsbenachrichtigungen",
+      "levels": {
+        "yellow": "Gelb",
+        "info": "Info"
+      },
+      "actions": {
+        "getAdvice": "Rat einholen",
+        "markRead": "Als gelesen markieren",
+        "viewAll": "Alle Benachrichtigungen anzeigen →"
+      },
+      "noRecent": "Keine aktuellen Benachrichtigungen",
+      "nextSteps": {
+        "title": "Was als nächstes zu tun ist",
+        "desc": "Unmittelbare Sicherheitsbedenken sollten direkt angesprochen werden. Nutzen Sie unseren Leitfaden für Gesprächseinstiege.",
+        "button": "Krisenleitfaden lesen"
+      }
+    },
     "user": {
       "role": "Eltern / Erziehungsberechtigte",
       "status": "Online-Status"
@@ -183,11 +455,11 @@
       "values": "Unsere Werte",
       "approach": "Unser Ansatz",
       "families": "Für Familien",
-      "learnMore": "Mehr erfahren"
+      "learnMore": "Starten"
     },
     "Hero": {
       "eyebrow": "Gemeinsam Wachstum fördern",
-      "title": "Kinder mit Führung, Vertrauen und Raum zum Wachsen unterstützen",
+      "title": "safeMentor - ein digitaler Mentor für Kinder",
       "subtitle": "SafeMentor hilft Familien, Neugier zu wecken, Vertrauen aufzubauen und eine gesunde Entwicklung zu unterstützen – mit Technologie, die die Kindheit respektiert.",
       "ctaPrimary": "Unseren Ansatz entdecken",
       "ctaSecondary": "Für Eltern"

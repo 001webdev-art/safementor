@@ -5,9 +5,7 @@ import PersonalInfoForm from '../forms/PersonalInfoForm';
 import ContactInfoForm from '../forms/ContactInfoForm';
 import AddressForm from '../forms/AddressForm';
 import BillingForm from '../forms/BillingForm';
-import SubscriptionForm from '../forms/SubscriptionForm';
 import CommunicationForm from '../forms/CommunicationForm';
-import SocialForm from '../forms/SocialForm';
 import PreferencesForm from '../forms/PreferencesForm';
 import SaveButton from '../components/ui/SaveButton';
 import { SectionProps } from '@/types/dashboard';
@@ -61,13 +59,6 @@ export default function OverviewSection({
                 t={t}
             />
 
-            <SubscriptionForm
-                profile={profile}
-                onProfileChange={onProfileChange}
-                isCollapsed={collapsedGroups['settings']}
-                onToggle={() => toggleGroup('settings')}
-                t={t}
-            />
 
             <CommunicationForm
                 profile={profile}
@@ -77,13 +68,6 @@ export default function OverviewSection({
                 t={t}
             />
 
-            <SocialForm
-                profile={profile}
-                onProfileChange={onProfileChange}
-                isCollapsed={collapsedGroups['social']}
-                onToggle={() => toggleGroup('social')}
-                t={t}
-            />
 
             <PreferencesForm
                 profile={profile}

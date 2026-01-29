@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react';
 import {
-    Shield, Bell, Settings, Lock, LogOut,
+    Shield, Bell, Settings, Lock, LogOut, HelpCircle,
     Menu, X, ChevronDown, ChevronRight, User as UserIcon, Baby, Globe, MessageSquare
 } from 'lucide-react';
 import { Profile } from '@/types/database';
@@ -113,6 +113,7 @@ export default function DashboardSidebar({
             ]
         },
         { id: 'privacy', label: t('sections.privacy'), icon: Lock },
+        { id: 'help', label: t('sections.help'), icon: HelpCircle },
     ];
 
     return (
@@ -126,12 +127,12 @@ export default function DashboardSidebar({
         `}>
             <div className="p-6 border-b border-gray-100">
                 <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
+                    <div className="w-10 h-10 bg-[#889A7F] rounded-xl flex items-center justify-center">
                         <Shield className="w-6 h-6 text-white" />
                     </div>
                     <div>
                         <p className="font-bold text-gray-900 text-lg">SafeMentor</p>
-                        <p className="text-xs text-green-600 font-medium">Parent Dashboard</p>
+                        <p className="text-xs text-[#4A5445] font-medium">{t('sidebar.subtitle')}</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +148,7 @@ export default function DashboardSidebar({
                                 variant="light"
                                 className={`
                                     w-full justify-start text-left
-                                    ${isSelected && !subItems ? 'bg-green-100 text-green-700 font-semibold' : 'text-gray-700'}
+                                    ${isSelected && !subItems ? 'bg-[#F5F7F4] text-[#4A5445] font-semibold' : 'text-gray-700'}
                                     ${subItems ? 'hover:bg-gray-50' : ''}
                                 `}
                                 startContent={<Icon className="w-5 h-5" />}
@@ -177,7 +178,7 @@ export default function DashboardSidebar({
                                             size="sm"
                                             className={`
                                                 w-full justify-start text-left
-                                                ${activeSection === subItem.id ? 'bg-green-50 text-green-700 font-medium' : 'text-gray-600'}
+                                                ${activeSection === subItem.id ? 'bg-[#E8EDE6] text-[#4A5445] font-medium' : 'text-gray-600'}
                                             `}
                                             startContent={<subItem.icon className="w-4 h-4" />}
                                             onPress={() => {
@@ -232,7 +233,7 @@ export default function DashboardSidebar({
                     startContent={<MessageSquare className="w-5 h-5" />}
                     onPress={() => router.push(`/${currentLocale}/chat`)}
                 >
-                    Go to Chat APP
+                    {t('sidebar.chat')}
                 </Button>
 
                 <Button
@@ -243,7 +244,7 @@ export default function DashboardSidebar({
                     onPress={handleLogout}
                     isLoading={isLoggingOut}
                 >
-                    Logout
+                    {t('sidebar.logout')}
                 </Button>
             </div>
         </aside>
