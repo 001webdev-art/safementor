@@ -16,14 +16,16 @@ import { ChatMessage } from '@/src/app/api';
 import { createClient } from '@/lib/supabase/client';
 import { useRouter } from 'next/navigation';
 import { Button } from '@nextui-org/react';
+import { useLocale } from 'next-intl';
 
 export default function ChatClient() {
     const { provider, setProvider } = useChatStore();
     const router = useRouter();
+    const currentLocale = useLocale();
     const [mounted, setMounted] = useState(false);
     const [currentView, setCurrentView] = useState('hello');
     const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null); // null = loading
-    const [countdown, setCountdown] = useState(5);
+    const [countdown, setCountdown] = useState(10);
     const [chat2Messages, setChat2Messages] = useState<ChatMessage[]>([]);
 
     useEffect(() => {
@@ -65,17 +67,27 @@ export default function ChatClient() {
                         I am very sorry, but you are not logged
                     </h1>
                     <p className="text-lg text-default-600">
-                        Redirecting to Home page in {countdown} secondss
+                        Redirecting to Home page in {countdown} seconds
                     </p>
                 </div>
 
-                <Button
-                    color="primary"
-                    variant="shadow"
-                    onPress={() => router.push('/')}
-                >
-                    Go to Home Page
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-3">
+                    <Button
+                        color="primary"
+                        variant="solid"
+                        onPress={() => router.push(`/${currentLocale}/login`)}
+                        className="font-bold"
+                    >
+                        Login
+                    </Button>
+                    <Button
+                        color="default"
+                        variant="flat"
+                        onPress={() => router.push('/')}
+                    >
+                        Go to Home Page
+                    </Button>
+                </div>
             </div>
         );
     }
