@@ -50,70 +50,82 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50/50 p-4">
-      <Card className="max-w-[400px] w-full p-2">
-        <CardHeader className="flex flex-col gap-1 items-center pb-0">
-          <h2 className="text-2xl font-bold text-center">
+      <Card className="max-w-[400px] w-full p-2 rounded-2xl border border-gray-100 shadow-sm animate-in fade-in zoom-in duration-500">
+        <CardHeader className="flex flex-col gap-1 items-center pb-2 pt-6">
+          <h2 className="text-2xl font-bold text-gray-900">
             {tLogin('title')}
           </h2>
-          <p className="text-sm text-default-500">
+          <p className="text-sm text-gray-500">
             {t('signIn')} {tHeader('title')}
           </p>
         </CardHeader>
 
-        <CardBody>
-          <form className="flex flex-col gap-4" onSubmit={handleLogin}>
-            <Input
-              label={t('email')}
-              placeholder={tLogin('emailPlaceholder')}
-              type="email"
-              variant="bordered"
-              isRequired
-              value={email}
-              onValueChange={setEmail}
-              isDisabled={loading}
-              className="mt-2"
-            />
-            <Input
-              label={t('password')}
-              placeholder={t('password')}
-              type={isVisible ? "text" : "password"}
-              variant="bordered"
-              isRequired
-              value={password}
-              onValueChange={setPassword}
-              isDisabled={loading}
-              endContent={
-                <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
-                  {isVisible ? <EyeOpenIcon /> : <EyeClosedIcon />}
-                </button>
-              }
-            />
+        <CardBody className="px-6 pb-8 pt-2">
+          <form className="flex flex-col gap-5" onSubmit={handleLogin}>
+            <div className="space-y-4">
+              <Input
+                label={t('email')}
+                placeholder={tLogin('emailPlaceholder')}
+                type="email"
+                variant="bordered"
+                isRequired
+                value={email}
+                onValueChange={setEmail}
+                isDisabled={loading}
+                classNames={{
+                  inputWrapper: "group-data-[focus=true]:border-[#889A7F] transition-colors rounded-xl border-gray-200",
+                  label: "text-gray-600 font-medium"
+                }}
+              />
+              <Input
+                label={t('password')}
+                placeholder={t('password')}
+                type={isVisible ? "text" : "password"}
+                variant="bordered"
+                isRequired
+                value={password}
+                onValueChange={setPassword}
+                isDisabled={loading}
+                classNames={{
+                  inputWrapper: "group-data-[focus=true]:border-[#889A7F] transition-colors rounded-xl border-gray-200",
+                  label: "text-gray-600 font-medium"
+                }}
+                endContent={
+                  <button className="focus:outline-none text-gray-400 hover:text-gray-600 transition-colors" type="button" onClick={toggleVisibility}>
+                    {isVisible ? <EyeOpenIcon /> : <EyeClosedIcon />}
+                  </button>
+                }
+              />
+            </div>
 
             {error && (
-              <div className="bg-danger-50 text-danger text-xs p-3 rounded-lg border border-danger-200">
+              <div className="bg-red-50 text-red-600 text-xs p-3 rounded-xl border border-red-100 animate-in shake duration-300">
                 {error}
               </div>
             )}
 
             <Button
               type="submit"
-              color="primary"
               isLoading={loading}
-              className="mt-2 font-bold"
+              className="bg-[#889A7F] hover:bg-[#748866] text-white font-semibold py-6 rounded-xl transition-all shadow-sm hover:shadow-md"
               fullWidth
             >
               {t('signIn')}
             </Button>
 
-            <Divider className="my-2" />
+            <div className="flex items-center gap-4 my-2">
+              <Divider className="flex-1 bg-gray-100" />
+              <span className="text-xs text-gray-400 font-medium uppercase tracking-wider">oder</span>
+              <Divider className="flex-1 bg-gray-100" />
+            </div>
 
-            <p className="text-center text-sm text-default-500">
+            <p className="text-center text-sm text-gray-500">
               {t('dontHaveAccount')}{' '}
               <NextUILink
                 as={Link}
                 href={`/${currentLocale}/register`}
+                className="font-bold text-[#889A7F] hover:text-[#748866] transition-colors"
                 size="sm"
-                className="font-bold"
               >
                 {t('createAccount')}
               </NextUILink>

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Button, Spinner, Divider } from '@nextui-org/react';
+import { Button, Spinner, Divider, Card, CardBody } from '@nextui-org/react';
 import { useTranslations } from 'next-intl';
 import { Profile } from '@/types/database';
 
@@ -69,65 +69,70 @@ export function PersonalData({
     };
 
     return (
-        <div className="space-y-10 animate-in fade-in duration-500 pb-20">
-            <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('sections.settings')}</h1>
-                <p className="text-gray-500">{t('sections.settingsSubtitle')}</p>
+        <div className="space-y-8 animate-in fade-in duration-500 pb-20">
+            <div className="flex flex-col gap-1">
+                <h1 className="text-3xl font-bold text-gray-900 tracking-tight">{t('sections.settings')}</h1>
+                <p className="text-gray-500 text-lg">{t('sections.settingsSubtitle')}</p>
             </div>
 
-            <div className="space-y-6">
+            <Card className="border border-gray-200 shadow-sm rounded-2xl overflow-hidden">
+                <CardBody className="p-0">
+                    <div className="p-6 md:p-8 space-y-8">
                 <div className="space-y-4">
-                    <h3 className="text-xl font-bold">{t('sections.profileDetails')}</h3>
-                    <PersonalInfoForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                        <h3 className="text-xl font-bold text-gray-900">{t('sections.profileDetails')}</h3>
+                        <div className="space-y-6">
+                            <PersonalInfoForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
 
-                    <ContactInfoForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                            <ContactInfoForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
 
-                    <AddressForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                            <AddressForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
 
-                    <BillingForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                            <BillingForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
 
-                    <CommunicationForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                            <CommunicationForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
 
-                    <PreferencesForm
-                        profile={currentProfile}
-                        onProfileChange={handleProfileChange}
-                        t={t}
-                    />
+                            <PreferencesForm
+                                profile={currentProfile}
+                                onProfileChange={handleProfileChange}
+                                t={t}
+                            />
+                        </div>
                 </div>
 
                 <Divider className="my-8" />
 
-                <div className="space-y-4">
-                    <PaymentDataForm t={t} />
-                    <BillingInformationForm t={t} />
-                </div>
-            </div>
+                        <div className="space-y-6">
+                            <PaymentDataForm t={t} />
+                            <BillingInformationForm t={t} />
+                        </div>
+                    </div>
+                </CardBody>
+            </Card>
 
             <div className="flex justify-end sticky bottom-6 z-10">
                 <Button
-                    color="success"
                     size="lg"
-                    className="shadow-xl px-12 font-bold text-white bg-green-600 hover:bg-green-700 transition-all duration-300 transform hover:scale-105"
+                    className="shadow-lg px-12 font-bold text-white bg-[#889A7F] hover:bg-[#748866] rounded-xl transition-all duration-300 transform hover:scale-[1.02]"
                     onPress={handleSave}
                     isLoading={isSaving}
                 >

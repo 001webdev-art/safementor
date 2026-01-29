@@ -11,16 +11,16 @@ export const DataUsageSection = () => {
                 {t('title')}
             </h2>
 
-            <ul className="space-y-3 text-gray-700">
+            <ul className="space-y-3 text-gray-700 font-medium">
                 <li className="flex gap-3">
-                    <span className="text-blue-500 mt-1">•</span>
+                    <span className="text-[#889A7F] font-bold mt-1">•</span>
                     <p>
                         <strong className="text-gray-900">{t('riskSignals.label')}</strong>{' '}
                         {t('riskSignals.value')}
                     </p>
                 </li>
                 <li className="flex gap-3">
-                    <span className="text-blue-500 mt-1">•</span>
+                    <span className="text-[#889A7F] font-bold mt-1">•</span>
                     <p>
                         <strong className="text-gray-900">{t('usageStats.label')}</strong>{' '}
                         {t('usageStats.value')}

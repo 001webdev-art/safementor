@@ -72,7 +72,7 @@
       "contactInfo": "Contact Information",
       "address": "Shipping Address",
       "billingAddress": "Billing Address",
-      "settings": "Subscription & Settings",
+      "settings": "Settings & Subscription",
       "privacySecurity": "Privacy & Security",
       "preferences": "App Preferences",
       "communication_preferences": "Communication Preferences",
@@ -482,7 +482,7 @@
       "values": "Our Values",
       "approach": "Our Approach",
       "families": "For Families",
-      "learnMore": "Learn More"
+      "learnMore": "Get Started"
     },
     "Hero": {
       "eyebrow": "Nurturing Growth, Together",
@@ -646,19 +646,19 @@
   },
   "Compliance": {
     "sidebar": {
-      "title": "Your Child’s Privacy & Safety",
+      "title": "Your Child’s Privacy",
       "description": "SafeMentor is built on the principle of \"Data Minimization.\" We only process what is strictly needed to keep your child safe.",
-      "compliant": "GDPR & AADC Compliant"
+      "compliant": "GDPR Compliant"
     },
     "dataUsage": {
       "title": "What data SafeMentor uses",
       "riskSignals": {
         "label": "Risk Signals:",
-        "value": "Only keywords indicating bullying, anxiety, predation, or self-harm are flagged."
+        "value": "Only keywords indicating bullying, illegal activities, public-harm, groomingor self-harm are flagged."
       },
       "usageStats": {
-        "label": "App Usage Stats:",
-        "value": "Time spent and broad activity categories for wellbeing logs."
+        "label": "App Usage Statistics:",
+        "value": "Broad activity categories for wellbeing logs."
       }
     },
     "consent": {
@@ -668,8 +668,8 @@
         "description": "Allow us to use 100% anonymized crash logs to fix bugs."
       },
       "safeAnalysis": {
-        "title": "Allow anonymous safety analysis",
-        "description": "Helps train our safety AI on new slang and threats."
+        "title": "Allow anonymous feedback on false flags",
+        "description": "Helps train our categorization of harmful events."
       }
     },
     "transparency": {
@@ -680,21 +680,19 @@
           "Exact GPS Location",
           "Camera Photos",
           "Voice Recordings",
-          "Raw Chat Logs (unless flagged)"
+          "Raw Chat Logs"
         ]
       },
       "parents": {
         "title": "Parents Can See",
         "list": [
           "Risk Alerts & Context",
-          "Screen Time Stats",
-          "Emotion Trends",
-          "Blocked Content"
+          "Emotion Trends"
         ]
       }
     },
     "footer": {
-      "agreement": "I understand how data is used & agree to Terms",
+      "agreement": "I understand how data is used & agree to <terms>Terms</terms>",
       "back": "Back",
       "createAccount": "Create Account"
     }

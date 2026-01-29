@@ -14,57 +14,75 @@ const BillingForm = ({ profile, onProfileChange, t }: FormProps) => {
 
     return (
         <div className="animate-in slide-in-from-top-2">
-            <Card shadow="none" className="border border-divider bg-default-50/30 p-2">
-                <CardBody className="space-y-4">
-                    <div className="flex items-center gap-2 mb-2">
-                        <CreditCard className="text-default-400" size={18} />
-                        <span className="font-bold">{t('sections.billingAddress')}</span>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <Input
-                            label={t('fields.billing_address_line1')}
-                            value={profile.billing_address_line1 || ''}
-                            onValueChange={(v) => onProfileChange({ ...profile, billing_address_line1: v })}
-                            variant="bordered"
-                            labelPlacement="outside"
-                            className="md:col-span-2"
-                            id="billing_address_line1"
-                        />
-                        <Input
-                            label={t('fields.billing_address_additional_info')}
-                            value={profile.billing_address_additional_info || ''}
-                            onValueChange={(v) => onProfileChange({ ...profile, billing_address_additional_info: v })}
-                            variant="bordered"
-                            labelPlacement="outside"
-                            id="billing_address_additional_info"
-                        />
-                        <Input
-                            label={t('fields.billing_city')}
-                            value={profile.billing_city || ''}
-                            onValueChange={(v) => onProfileChange({ ...profile, billing_city: v })}
-                            variant="bordered"
-                            labelPlacement="outside"
-                            id="billing_city"
-                        />
-                        <Input
-                            label={t('fields.billing_state')}
-                            value={profile.billing_state || ''}
-                            onValueChange={(v) => onProfileChange({ ...profile, billing_state: v })}
-                            variant="bordered"
-                            labelPlacement="outside"
-                            id="billing_state"
-                        />
-                        <Input
-                            label={t('fields.billing_postal_code')}
-                            value={profile.billing_postal_code || ''}
-                            onValueChange={(v) => onProfileChange({ ...profile, billing_postal_code: v })}
-                            variant="bordered"
-                            labelPlacement="outside"
-                            id="billing_postal_code"
-                        />
-                    </div>
-                </CardBody>
-            </Card>
+            <div className="p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300 mt-4">
+                <div className="flex items-center gap-2 mb-4">
+                    <CreditCard className="text-[#889A7F]" size={20} />
+                    <span className="font-bold text-gray-900">{t('sections.billingAddress')}</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <Input
+                        label={t('fields.billing_address_line1')}
+                        value={profile.billing_address_line1 || ''}
+                        onValueChange={(v) => onProfileChange({ ...profile, billing_address_line1: v })}
+                        variant="bordered"
+                        labelPlacement="outside"
+                        className="md:col-span-2"
+                        id="billing_address_line1"
+                        classNames={{
+                            inputWrapper: "border-gray-200 hover:border-[#889A7F] focus-within:border-[#889A7F] transition-colors rounded-xl bg-white",
+                            label: "text-gray-600 font-medium"
+                        }}
+                    />
+                    <Input
+                        label={t('fields.billing_address_additional_info')}
+                        value={profile.billing_address_additional_info || ''}
+                        onValueChange={(v) => onProfileChange({ ...profile, billing_address_additional_info: v })}
+                        variant="bordered"
+                        labelPlacement="outside"
+                        id="billing_address_additional_info"
+                        classNames={{
+                            inputWrapper: "border-gray-200 hover:border-[#889A7F] focus-within:border-[#889A7F] transition-colors rounded-xl bg-white",
+                            label: "text-gray-600 font-medium"
+                        }}
+                    />
+                    <Input
+                        label={t('fields.billing_city')}
+                        value={profile.billing_city || ''}
+                        onValueChange={(v) => onProfileChange({ ...profile, billing_city: v })}
+                        variant="bordered"
+                        labelPlacement="outside"
+                        id="billing_city"
+                        classNames={{
+                            inputWrapper: "border-gray-200 hover:border-[#889A7F] focus-within:border-[#889A7F] transition-colors rounded-xl bg-white",
+                            label: "text-gray-600 font-medium"
+                        }}
+                    />
+                    <Input
+                        label={t('fields.billing_state')}
+                        value={profile.billing_state || ''}
+                        onValueChange={(v) => onProfileChange({ ...profile, billing_state: v })}
+                        variant="bordered"
+                        labelPlacement="outside"
+                        id="billing_state"
+                        classNames={{
+                            inputWrapper: "border-gray-200 hover:border-[#889A7F] focus-within:border-[#889A7F] transition-colors rounded-xl bg-white",
+                            label: "text-gray-600 font-medium"
+                        }}
+                    />
+                    <Input
+                        label={t('fields.billing_postal_code')}
+                        value={profile.billing_postal_code || ''}
+                        onValueChange={(v) => onProfileChange({ ...profile, billing_postal_code: v })}
+                        variant="bordered"
+                        labelPlacement="outside"
+                        id="billing_postal_code"
+                        classNames={{
+                            inputWrapper: "border-gray-200 hover:border-[#889A7F] focus-within:border-[#889A7F] transition-colors rounded-xl bg-white",
+                            label: "text-gray-600 font-medium"
+                        }}
+                    />
+                </div>
+            </div>
         </div>
     );
 };

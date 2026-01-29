@@ -126,12 +126,12 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50/50 p-4">
-      <Card className="max-w-[400px] w-full p-2 shadow-lg">
-        <CardHeader className="flex flex-col gap-1 items-center pb-0">
-          <h2 className="text-2xl font-bold text-center">
+      <Card className="max-w-[400px] w-full p-4 border border-gray-200 shadow-sm rounded-2xl">
+        <CardHeader className="flex flex-col gap-1 items-center pb-6">
+          <h2 className="text-2xl font-bold text-gray-900">
             {tRegister('title')}
           </h2>
-          <p className="text-sm text-default-500">
+          <p className="text-sm text-gray-500 font-medium">
             {t('createAccount')}
           </p>
         </CardHeader>
@@ -148,6 +148,9 @@ export default function RegisterPage() {
               onValueChange={setEmail}
               isDisabled={loading}
               autoComplete="email"
+              classNames={{
+                inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+              }}
             />
 
             <Input
@@ -160,6 +163,9 @@ export default function RegisterPage() {
               onValueChange={setPassword}
               isDisabled={loading}
               autoComplete="new-password"
+              classNames={{
+                inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+              }}
               endContent={
                 <button className="focus:outline-none" type="button" onClick={toggleVisibility}>
                   {isVisible ? <EyeOpenIcon /> : <EyeClosedIcon />}
@@ -177,19 +183,21 @@ export default function RegisterPage() {
               onValueChange={setConfirmPassword}
               isDisabled={loading}
               autoComplete="new-password"
+              classNames={{
+                inputWrapper: "border-gray-300 hover:border-[#889A7F] focus-within:border-[#889A7F]"
+              }}
             />
 
             {error && (
-              <div className="bg-danger-50 text-danger text-xs p-3 rounded-lg border border-danger-200">
+              <div className="bg-red-50 text-red-600 text-xs p-3 rounded-xl border border-red-100 font-medium">
                 {error}
               </div>
             )}
 
             <Button
               type="submit"
-              color="primary"
               isLoading={loading}
-              className="mt-2 font-bold"
+              className="mt-2 bg-[#889A7F] text-white hover:bg-[#748866] font-bold"
               fullWidth
             >
               {loading ? t('loading') : tRegister('title')}
@@ -197,13 +205,13 @@ export default function RegisterPage() {
 
             <Divider className="my-2" />
 
-            <p className="text-center text-sm text-default-500">
+            <p className="text-center text-sm text-gray-500 font-medium">
               {t('alreadyHaveAccount')}{' '}
               <NextUILink
                 as={Link}
                 href={`/${currentLocale}/login`}
                 size="sm"
-                className="font-bold"
+                className="font-bold text-[#889A7F] hover:text-[#748866]"
               >
                 {t('signIn')}
               </NextUILink>
