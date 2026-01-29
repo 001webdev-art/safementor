@@ -1,164 +1,207 @@
+import { Card, CardBody, Button, Divider } from "@nextui-org/react";
+import { ArrowLeft, ShieldCheck, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+
 export function TermsOfUse() {
   return (
-    <div className="h-full bg-white overflow-y-auto">
+    <div className="min-h-screen bg-gray-50/50 pb-20">
       {/* Header */}
-      <div className="border-b-2 border-black p-4 flex justify-between items-center">
-        <div className="border border-black px-4 py-2">
-          <p className="text-sm font-bold">SafeMentor Logo</p>
-        </div>
-        <div className="flex gap-3">
-          <div className="border border-black px-3 py-1">
-            <p className="text-xs">← Back to Home</p>
+      <div className="bg-white border-b border-gray-100 p-4 sticky top-0 z-50 shadow-sm">
+        <div className="max-w-5xl mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-[#889A7F] rounded-lg flex items-center justify-center text-white font-bold">
+              S
+            </div>
+            <span className="font-bold text-gray-900">SafeMentor</span>
           </div>
+          <Button
+            as={Link}
+            href="/"
+            variant="light"
+            size="sm"
+            startContent={<ArrowLeft size={16} />}
+            className="text-gray-500 hover:text-[#889A7F] font-medium"
+          >
+            Back to Home
+          </Button>
         </div>
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto p-8">
-        <p className="text-lg font-bold mb-2">Terms of Use</p>
-        <p className="text-xs text-gray-600 mb-8">Last Updated: January 2026</p>
+      <div className="max-w-4xl mx-auto mt-8 px-4">
+        <Card className="border-none shadow-sm rounded-3xl overflow-hidden bg-white">
+          <CardBody className="p-8 md:p-12">
+            <div className="mb-10 text-center md:text-left">
+              <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-3">
+                Terms of Use
+              </h1>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#889A7F]/10 text-[#889A7F] rounded-full text-xs font-bold uppercase tracking-wider">
+                Last Updated: January 2026
+              </div>
+            </div>
 
-        {/* Key Points */}
-        <div className="bg-gray-100 border-2 border-black p-6 mb-8">
-          <p className="text-sm font-bold mb-4">Key Points</p>
-          <div className="space-y-2">
-            <p className="text-xs">• Service is for children with parental supervision and consent</p>
-            <p className="text-xs">• Parents must be legal guardians of connected children</p>
-            <p className="text-xs">• AI provides mentorship, not medical or professional advice</p>
-            <p className="text-xs">• Parents responsible for monitoring child's overall wellbeing</p>
-            <p className="text-xs">• Service available in specific regions only</p>
-          </div>
-        </div>
+            {/* Key Points */}
+            <div className="bg-[#889A7F]/5 rounded-2xl p-6 md:p-8 mb-12 border border-[#889A7F]/10">
+              <div className="flex items-center gap-3 mb-6">
+                <ShieldCheck className="text-[#889A7F]" size={24} />
+                <h2 className="text-lg font-bold text-gray-900">Key Points</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  "Service is for children with parental supervision and consent",
+                  "Parents must be legal guardians of connected children",
+                  "AI provides mentorship, not medical or professional advice",
+                  "Parents responsible for monitoring child's overall wellbeing",
+                  "Service available in specific regions only"
+                ].map((point, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#889A7F] flex-shrink-0" />
+                    <p className="text-sm text-gray-700 leading-relaxed font-medium">{point}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-        {/* Section 1 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">1. Acceptance of Terms</p>
-          <div className="border border-black p-4 bg-gray-50">
-            <p className="text-xs text-gray-600">[Full legal text placeholder]</p>
-            <p className="text-xs text-gray-600 mt-2">By creating an account or using SafeMentor, you agree to these Terms of Use. If you do not agree, you may not use the service...</p>
-          </div>
-        </div>
+            <div className="space-y-12">
+              {/* Section 1 */}
+              <section>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-[#889A7F]">01.</span> Acceptance of Terms
+                </h3>
+                <div className="p-5 bg-gray-50 rounded-xl border border-gray-100">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    By creating an account or using SafeMentor, you agree to these Terms of Use. If you do not agree, you may not use the service. SafeMentor is a tool designed to support child development through AI-assisted mentorship and parental transparency.
+                  </p>
+                </div>
+              </section>
 
-        {/* Section 2 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">2. Service Description</p>
-          <div className="border border-black p-4 bg-gray-50 mb-3">
-            <p className="text-xs text-gray-600 mb-2">SafeMentor provides AI-powered mentorship conversations for children under parental supervision.</p>
-            <p className="text-xs text-gray-600 mb-2">The service includes:</p>
-            <p className="text-xs text-gray-600">• Child chat application with AI mentor</p>
-            <p className="text-xs text-gray-600">• Parent dashboard with aggregated insights</p>
-            <p className="text-xs text-gray-600">• Safety monitoring and alert system</p>
-            <p className="text-xs text-gray-600">• Privacy-by-default conversation protection</p>
-          </div>
-        </div>
+              <Divider className="bg-gray-100" />
 
-        {/* Section 3 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">3. Eligibility & Parental Responsibilities</p>
-          
-          <div className="bg-gray-100 border-2 border-black p-4 mb-3">
-            <p className="text-xs font-bold mb-2">Parent/Guardian Requirements:</p>
-            <p className="text-xs text-gray-600 mb-1">• Must be at least 18 years old</p>
-            <p className="text-xs text-gray-600 mb-1">• Must be legal guardian of child(ren) connected</p>
-            <p className="text-xs text-gray-600 mb-1">• Must provide verifiable parental consent</p>
-            <p className="text-xs text-gray-600">• Responsible for monitoring child's use and wellbeing</p>
-          </div>
+              {/* Section 2 */}
+              <section>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-[#889A7F]">02.</span> Service Description
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      SafeMentor provides AI-powered mentorship conversations for children under parental supervision.
+                    </p>
+                    <ul className="space-y-2">
+                      {[
+                        "Child chat application with AI mentor",
+                        "Parent dashboard with aggregated insights",
+                        "Safety monitoring and alert system",
+                        "Privacy-by-default conversation protection"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                          <div className="w-1 h-1 rounded-full bg-gray-400" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-center justify-center">
+                    <p className="text-xs text-gray-400 italic font-medium text-center uppercase tracking-widest">
+                      Interactive Mentorship Platform
+                    </p>
+                  </div>
+                </div>
+              </section>
 
-          <div className="border border-black p-4 bg-gray-50">
-            <p className="text-xs font-bold mb-2">Child Requirements:</p>
-            <p className="text-xs text-gray-600 mb-1">• Must have parent/guardian approval</p>
-            <p className="text-xs text-gray-600 mb-1">• Must not share personal identifying information in chats</p>
-            <p className="text-xs text-gray-600">• Must follow community guidelines and safety rules</p>
-          </div>
-        </div>
+              <Divider className="bg-gray-100" />
 
-        {/* Section 4 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">4. Not Medical or Professional Advice</p>
-          <div className="bg-gray-100 border-4 border-black p-4">
-            <p className="text-xs font-bold mb-2">IMPORTANT DISCLAIMER:</p>
-            <p className="text-xs text-gray-600 mb-2">SafeMentor is NOT a substitute for professional medical, psychological, or therapeutic services. The AI provides general mentorship and support only.</p>
-            <p className="text-xs text-gray-600">In case of medical or mental health emergencies, contact appropriate professional services immediately.</p>
-          </div>
-        </div>
+              {/* Section 3 */}
+              <section>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <span className="text-[#889A7F]">03.</span> Responsibilities
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Card shadow="none" className="bg-white border border-gray-100 rounded-xl">
+                    <CardBody className="p-5">
+                      <p className="text-sm font-bold text-[#889A7F] mb-3 uppercase tracking-wider">Parent/Guardian</p>
+                      <ul className="space-y-2">
+                        {[
+                          "Must be at least 18 years old",
+                          "Must be legal guardian of child",
+                          "Provide verifiable parental consent",
+                          "Monitoring child's use and wellbeing"
+                        ].map((item, i) => (
+                          <li key={i} className="text-xs text-gray-600 leading-relaxed flex items-start gap-2">
+                            <span className="text-gray-300">•</span> {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardBody>
+                  </Card>
+                  <Card shadow="none" className="bg-white border border-gray-100 rounded-xl">
+                    <CardBody className="p-5">
+                      <p className="text-sm font-bold text-[#889A7F] mb-3 uppercase tracking-wider">Child</p>
+                      <ul className="space-y-2">
+                        {[
+                          "Must have parent/guardian approval",
+                          "Not share personal IDs in chats",
+                          "Follow safety rules and guidelines"
+                        ].map((item, i) => (
+                          <li key={i} className="text-xs text-gray-600 leading-relaxed flex items-start gap-2">
+                            <span className="text-gray-300">•</span> {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardBody>
+                  </Card>
+                </div>
+              </section>
 
-        {/* Section 5 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">5. Account Security</p>
-          <div className="border border-black p-4 bg-gray-50">
-            <p className="text-xs text-gray-600 mb-2">Parents are responsible for:</p>
-            <p className="text-xs text-gray-600">• Maintaining account password security</p>
-            <p className="text-xs text-gray-600">• Monitoring authorized child connections</p>
-            <p className="text-xs text-gray-600">• Reporting unauthorized access immediately</p>
-            <p className="text-xs text-gray-600">• Ensuring QR codes are used securely</p>
-          </div>
-        </div>
+              {/* Section 4 */}
+              <section className="bg-red-50/30 p-6 rounded-2xl border border-red-100">
+                <h3 className="text-xl font-bold text-red-900 mb-4">
+                  04. Not Medical Advice
+                </h3>
+                <p className="text-sm text-red-800 leading-relaxed font-medium">
+                  IMPORTANT: SafeMentor is NOT a substitute for professional medical, psychological, or therapeutic services. The AI provides general mentorship and support only. In case of emergencies, contact appropriate professional services immediately.
+                </p>
+              </section>
 
-        {/* Section 6 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">6. Prohibited Use</p>
-          <div className="border border-black p-3 bg-gray-50">
-            <p className="text-xs text-gray-600 mb-1">• Impersonating others</p>
-            <p className="text-xs text-gray-600 mb-1">• Attempting to bypass safety systems</p>
-            <p className="text-xs text-gray-600 mb-1">• Sharing accounts with non-authorized users</p>
-            <p className="text-xs text-gray-600 mb-1">• Using service for illegal activities</p>
-            <p className="text-xs text-gray-600">• Reverse engineering or extracting AI models</p>
-          </div>
-        </div>
+              <Divider className="bg-gray-100" />
 
-        {/* Section 7 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">7. Data Usage & Privacy</p>
-          <div className="border border-black p-4 bg-gray-50">
-            <p className="text-xs text-gray-600 mb-2">Data handling is governed by our Privacy Policy. By using SafeMentor, you agree to data processing as described in the Privacy Policy.</p>
-            <p className="text-xs text-gray-600">Parents maintain full control and can request data deletion at any time.</p>
-          </div>
-        </div>
+              {/* Contact */}
+              <section className="bg-gray-900 rounded-2xl p-8 md:p-12 text-white">
+                <div className="max-w-2xl">
+                  <h2 className="text-2xl font-bold mb-6">Questions about these Terms?</h2>
+                  <p className="text-gray-400 text-sm mb-8 leading-relaxed">
+                    Our legal and support teams are here to help you understand your rights and responsibilities when using SafeMentor.
+                  </p>
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                        <Mail size={18} className="text-[#889A7F]" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Email Support</p>
+                        <p className="text-sm font-medium">legal@safementor.com</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                        <MapPin size={18} className="text-[#889A7F]" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wider">Registered Office</p>
+                        <p className="text-sm font-medium">[Company Address Placeholder]</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-        {/* Section 8 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">8. Termination</p>
-          <div className="border border-black p-3 bg-gray-50">
-            <p className="text-xs text-gray-600 mb-2">Either party may terminate service at any time:</p>
-            <p className="text-xs text-gray-600 mb-1">• Parents can delete accounts via dashboard</p>
-            <p className="text-xs text-gray-600 mb-1">• We may suspend accounts for Terms violations</p>
-            <p className="text-xs text-gray-600">• Data deletion follows Privacy Policy procedures</p>
-          </div>
-        </div>
-
-        {/* Section 9 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">9. Limitation of Liability</p>
-          <div className="border border-black p-4 bg-gray-50">
-            <p className="text-xs text-gray-600">[Full legal disclaimer placeholder] Service provided "as is" without warranties. Not liable for indirect damages. Maximum liability limited to subscription fees paid...</p>
-          </div>
-        </div>
-
-        {/* Section 10 */}
-        <div className="border-b-2 border-gray-400 pb-6 mb-6">
-          <p className="text-sm font-bold mb-3">10. Changes to Terms</p>
-          <div className="border border-black p-3 bg-gray-50">
-            <p className="text-xs text-gray-600">We may update these Terms. Users will be notified of material changes via email. Continued use after changes constitutes acceptance.</p>
-          </div>
-        </div>
-
-        {/* Contact */}
-        <div className="border-2 border-black p-6 mb-6">
-          <p className="text-sm font-bold mb-3">Contact</p>
-          <p className="text-xs text-gray-600 mb-3">Questions about these Terms?</p>
-          <p className="text-xs mb-1">Email: legal@safementor.com</p>
-          <p className="text-xs">Address: [Company address placeholder]</p>
-        </div>
-
-        {/* Annotations */}
-        <div className="p-4 bg-gray-50 border border-gray-400">
-          <p className="text-xs font-bold mb-2">Terms of Use Notes:</p>
-          <p className="text-xs">• Full legal document (lawyer-reviewed in production)</p>
-          <p className="text-xs">• Clear parental responsibility clauses</p>
-          <p className="text-xs">• Medical/professional advice disclaimer prominent</p>
-          <p className="text-xs">• References Privacy Policy for data handling</p>
-          <p className="text-xs">• Standard liability limitations and dispute resolution</p>
-        </div>
+              {/* Note */}
+              <p className="text-center text-xs text-gray-400 font-medium pb-8 uppercase tracking-widest">
+                SafeMentor &copy; 2026 &bull; Privacy First &bull; Built for Families
+              </p>
+            </div>
+          </CardBody>
+        </Card>
       </div>
     </div>
   );
