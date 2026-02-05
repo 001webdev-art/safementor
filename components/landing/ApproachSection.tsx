@@ -50,6 +50,15 @@ export const ApproachSection = () => {
                                     <p className="opacity-70 text-sm text-[#4A4540]">{t('bullet2.desc')}</p>
                                 </div>
                             </div>
+                            <div className="flex gap-4">
+                                <div className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1 bg-[#7B8F71] text-[#FDFBF8]">
+                                    <span className="text-sm font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 className="font-semibold mb-1 text-[#4A4540]">{t('bullet3.title')}</h4>
+                                    <p className="opacity-70 text-sm text-[#4A4540]">{t('bullet3.desc')}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

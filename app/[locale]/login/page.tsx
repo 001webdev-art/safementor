@@ -7,6 +7,8 @@ import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase/client'
 import { Card, CardHeader, CardBody, Input, Button, Link as NextUILink, Divider } from '@nextui-org/react'
 import { EyeOpenIcon, EyeClosedIcon } from '@/components/landing/SafeMentorIcons'
+import { useDisclosure } from '@nextui-org/react'
+import { LoginLegalModal } from '@/components/auth/LoginLegalModal'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -25,6 +27,9 @@ export default function LoginPage() {
   const tLogin = useTranslations('LoginPage')
   const tErrors = useTranslations('Errors')
   const tHeader = useTranslations('Header')
+  const tLegal = useTranslations('LoginLegal')
+
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()

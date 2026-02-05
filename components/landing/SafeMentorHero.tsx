@@ -28,22 +28,7 @@ export const SafeMentorHero = () => {
                         <p id="hero-subtitle" className="text-lg md:text-xl leading-relaxed opacity-80 mb-8 text-[#4A4540]">
                             {t('subtitle')}
                         </p>
-                        <div className="flex flex-wrap gap-4">
-                            <Link
-                                href="#approach"
-                                id="hero-cta-primary"
-                                className="px-8 py-4 rounded-full font-medium bg-[#7B8F71] text-[#FDFBF8] transition-all hover:opacity-90 shadow-lg shadow-[#7B8F71]/20"
-                            >
-                                {t('ctaPrimary')}
-                            </Link>
-                            <Link
-                                href={`/${locale}/register`}
-                                id="hero-cta-secondary"
-                                className="px-8 py-4 rounded-full font-medium border-2 border-[#4A4540] text-[#4A4540] transition-all hover:bg-[#4A4540] hover:text-[#FDFBF8]"
-                            >
-                                {t('ctaSecondary')}
-                            </Link>
-                        </div>
+
                     </div>
 
                     <div className="animate-fade-in delay-2">

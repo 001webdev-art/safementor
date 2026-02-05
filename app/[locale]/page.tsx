@@ -3,7 +3,6 @@ import { SafeMentorHero } from '@/components/landing/SafeMentorHero'
 import { TrustBadges } from '@/components/landing/TrustBadges'
 import { ValuesSection } from '@/components/landing/ValuesSection'
 import { ApproachSection } from '@/components/landing/ApproachSection'
-import { FamiliesSection } from '@/components/landing/FamiliesSection'
 import { TestimonialSection } from '@/components/landing/TestimonialSection'
 import { CTASection } from '@/components/landing/CTASection'
 import { SafeMentorFooter } from '@/components/landing/SafeMentorFooter'
@@ -35,7 +34,6 @@ export default function HomePage() {
         <TrustBadges />
         <ValuesSection />
         <ApproachSection />
-        <FamiliesSection />
         <TestimonialSection />
         <CTASection />
       </main>

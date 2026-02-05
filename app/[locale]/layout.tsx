@@ -23,6 +23,10 @@ import { locales } from '@/i18n/config'
 export const metadata: Metadata = {
   title: 'Safementor Project',
   description: 'Modern project with almost all the modern features possible',
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export const viewport = {

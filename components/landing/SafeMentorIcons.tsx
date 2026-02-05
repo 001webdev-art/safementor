@@ -62,6 +62,26 @@ export const TrustIcon = () => (
     </svg>
 );
 
+export const AuditIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5A6B52" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+    </svg>
+);
+
+export const EmotionCompassIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5A6B52" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+    </svg>
+);
+
+export const RadarIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5A6B52" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+    </svg>
+);
+
 export const QuoteIcon = ({ className }: { className?: string }) => (
     <svg width="48" height="48" viewBox="0 0 48 48" className={className}>
         <path d="M14 24C14 18 18 14 24 14V10C16 10 10 16 10 24V38H22V26H14V24ZM34 24C34 18 30 14 36 14V10C28 10 22 16 22 24V38H34V26H26V24H34Z" fill="currentColor" />

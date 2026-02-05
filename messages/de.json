@@ -16,7 +16,7 @@
     "spanish": "Spanisch"
   },
   "HomePage": {
-    "title": "Willkommen beim Safementor Project",
+    "title": "Willkommen bei Safementor",
     "description": "Up-to-Date Auth-System mit Next.js, Supabase und PostgreSQL.",
     "features": "Features:",
     "feature1": "Registrierung mit E-Mail und Passwort",
@@ -480,25 +480,39 @@
       "badge3": "Von Eltern für Eltern gemacht"
     },
     "Values": {
-      "eyebrow": "Was SafeMentor ist",
-      "title": "SafeMentor ist kein weiteres Bildschirmzeit-Produkt",
-      "description": "Es ist ein Denk- und Mentoring-Begleiter, der Kindern hilft, Neugier, Verantwortung, emotionale Stärke und reale Verbindungen zu entwickeln – mit starker Unterstützung für die Eltern.",
-      "emphasis": "Kinder brauchen nicht mehr Apps. Sie brauchen Führung, Vertrauen und Raum zum Wachsen.",
-      "citation": "SafeMentor basiert auf international anerkannten kindlichen Entwicklungsprinzipien von Gerald Hüther, Jesper Juul, Dan Siegel und prinzipienbasiertem Denken. Wir formen Kinder nicht durch Kontrolle. Wir laden zur Entwicklung durch Beziehung ein.",
-      "card1": {
-        "title": "Neugier statt Druck",
-        "desc": "Staunen und Erforschen fördern, nicht Leistungskennzahlen"
+      "philosophy": {
+        "eyebrow": "Unsere Philosophie",
+        "title": "Technologie, die weiß, wann sie sich zurückziehen muss",
+        "description": "SafeMentor wurde entwickelt, um die natürliche Neugier und das emotionale Wachstum von Kindern zu unterstützen – und sie dann sanft zu Erfahrungen in der realen Welt, Gesprächen und zum Spielen zurückzuführen.",
+        "list": [
+          {
+            "title": "Fördert Offline-Erkundung.",
+            "desc": "Schlägt Aktivitäten, Gespräche und Erfahrungen vor, die abseits von Bildschirmen stattfinden."
+          },
+          {
+            "title": "Hält Eltern informiert.",
+            "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+          },
+          {
+            "title": "Entwickelt von Eltern für Eltern.",
+            "desc": "SafeMentor ist für Eltern wie uns gedacht: Ein Werkzeug, das den digitalen Raum so sicher macht, dass er die Kindheit bereichert, statt sie zu ersetzen."
+          }
+        ],
+        "final": "Weil wir glauben, dass echte Abenteuer nicht auf Bildschirmen stattfinden. SafeMentor hilft Kindern, Neues über die Welt zu lernen – und schickt sie dann wieder zum Spielen nach draußen."
+      },      "card1": {
+        "title": "Intelligenter Begleit-Modus",
+        "desc": "Im Hintergrund läuft ein unabhängiges Sicherheits-Audit mit. Es greift diskret ein und filtert Inhalte nur dann, wenn sie nicht kindgerecht sind oder gegen unsere strengen Sicherheitsregeln verstoßen."
       },
       "card2": {
-        "title": "Verbindung statt Kontrolle",
-        "desc": "Entwicklung durch Beziehung, nicht erzwungenes Verhalten"
+        "title": "Emotions-Kompass",
+        "desc": "Unsere KI analysiert nicht nur Fakten, sondern erkennt die emotionale Ebene. Sie spürt Anzeichen von Stress, Manipulation oder Traurigkeit und passt den Tonfall sofort an die Bedürfnisse Ihres Kindes an."
       },
       "card3": {
-        "title": "Vertrauen statt Überwachung",
-        "desc": "Einblicke für Eltern, ohne die Privatsphäre des Kindes zu verletzen"
+        "title": "Krisen-Radar (Red Flags)",
+        "desc": "Nur bei echten Warnsignalen (wie Mobbing oder Selbstgefährdung) schaltet SafeMentor auf Soforthilfe: Die KI deeskaliert das Gespräch behutsam und benachrichtigt Sie gleichzeitig – damit Sie da sind, wenn Ihr Kind Sie braucht."
       },
       "learning": {
-        "eyebrow": "Wobei SafeMentor hilft",
+        "eyebrow": "Wie SafeMentor arbeitet",
         "title": "Lernen & Verstehen",
         "description": "SafeMentor unterstützt Kinder beim Verstehen von Schulthemen, dem Erkunden von Ideen und Interessen und dem schrittweisen Bearbeiten von Problemen.",
         "callout": {
@@ -506,26 +520,38 @@
           "desc1": "SafeMentor gibt keine sofortigen Antworten auf Hausaufgaben.",
           "desc2": "Stattdessen stellt es leitende Fragen, hilft Kindern beim schrittweisen Denken und fördert eigene Ideen."
         },
+        "partnership": "SafeMentor ist kein ‚Ja-Sager‘, sondern ein echter Partner. Herkömmliche KIs neigen zur sogenannten Sycophancy: Sie plappern dem Nutzer nach und geben immer recht, nur um ‚hilfreich‘ zu wirken. Wir brechen dieses Muster und haben einen Mentor entwickelt, der nicht einfach nur zustimmt, sondern sanft herausfordert. Er erkennt, wenn ein Kind nach einer Abkürzung sucht, und regt stattdessen zum kritischen Nachdenken an. So fördern wir echtes Verständnis statt nur schnelles Konsumieren.",
         "emphasis": "Denn Lernen sollte das Gehirn aktivieren, nicht ersetzen."
       },
       "offline": {
-        "title": "Offline-Leben kommt an erster Stelle",
-        "description": "SafeMentor ermutigt aktiv zu Offline-Aktivitäten, Kreativität in der realen Welt und Zeit mit Freunden, Familie und in der Natur.",
-        "emphasis": "Die besten Momente passieren nicht auf einem Bildschirm."
+        "title": "Sicherheit, die mitdenkt – ohne zu überwachen.",
+        "description": "SafeMentor antwortet nicht einfach darauf los. Unser System begleitet den Dialog in Echtzeit: Sobald schwierige Themen aufkommen, prüfen wir sowohl die Fragen Ihres Kindes als auch die Antworten der KI doppelt ab. Wir nennen das unsere 3-Stufen-Sicherheit, die sicherstellt, dass Ihr Kind nur Antworten erhält, die stärken statt verunsichern. Diese 3 Stufen sehen Sie hier :",
+        "emphasis": "Sicherheit steht bei uns an erster Stelle."
       },
-      "emotional": {
-        "title": "Emotionale Unterstützung – ohne Menschen zu ersetzen",
-        "description": "SafeMentor hört zu, wenn Kinder reden möchten. It kann Kindern helfen, Emotionen zu benennen, zur Reflexion anregen und gesunde nächste Schritte vorschlagen.",
-        "callout": {
-          "title": "Aber es ist kein Therapeut",
-          "desc": "und ersetzt niemals echte Menschen."
-        },
-        "final": "Bei Bedarf ermutigt SafeMentor sanft dazu, mit den Eltern zu sprechen, sich an vertrauenswürdige Erwachsene zu wenden und echte menschliche Unterstützung zu suchen."
+      "standards": {
+        "title": "Gebaut nach globalen Standards",
+        "intro": "Vertrauen ist gut, zertifizierte Sicherheit ist besser. SafeMentor wurde von Grund auf so entwickelt, dass wir die weltweit strengsten Richtlinien für Kindersicherheit als Fundament nutzen:",
+        "list": [
+          {
+            "title": "KOSA (Kids Online Safety Act):",
+            "desc": "Ein US-Standard, der Plattformen verpflichtet, das Kindeswohl konsequent über den Profit zu stellen und aktiv vor Suchtgefahren zu schützen."
+          },
+          {
+            "title": "AADC (Age Appropriate Design Code):",
+            "desc": "Ein britisches Regelwerk, das sicherstellt, dass Technik das Wohl von Kindern priorisiert und jede Form von manipulativen Design-Tricks verbietet."
+          },
+          {
+            "title": "EU AI Act & DSGVO:",
+            "desc": "Die europäischen Gesetze für Künstliche Intelligenz und Datenschutz, die Ihnen maximale Transparenz und den höchsten Schutz der persönlichen Daten Ihres Kindes garantieren."
+          }
+        ],
+        "beliefTitle": "Denn wir glauben: Technologie sollte der Entwicklung dienen, nicht der Abhängigkeit.",
+        "beliefText": "Während die meisten Apps mit psychologischen Tricks um jede Minute Aufmerksamkeit Ihres Kindes kämpfen, tut SafeMentor das Gegenteil. Wir verzichten bewusst auf Belohnungssysteme, „Streaks“ (Druck durch tägliche Nutzungsketten) oder künstliche Anreize, die Kinder an den Bildschirm fesseln. Unser Ziel ist es, dass Ihr Kind SafeMentor nutzt, um die echte Welt besser zu verstehen – und das Gerät danach mit einem gutem Gefühl wieder weglegt, um das Gelernte im echten Leben anzuwenden."
       },
       "safety": {
         "eyebrow": "Für Eltern",
-        "title": "Sicherheit & Frühwarnung",
-        "description": "SafeMentor achtet auf Muster, nicht auf Geheimnisse.",
+        "title": "Vertrauen braucht Privatsphäre",
+        "description": "Vertrauen ist die Grundlage jeder Kindesentwicklung. Aus diesem Grund ist Privatsphäre nicht nur ein Feature, sondern das Fundament von Safementor. Bei uns entstehen keine digitalen Fußabdrücke. Sobald eine Sitzung endet, werden sämtliche Rohdaten der Chats unwiderruflich gelöscht. Wir bewahren lediglich Zusammenfassungen für einen Zeitraum von 7 bis maximal 30 Tagen auf. Was bleibt, ist das, was für Sie als Eltern wirklich zählt: Wir visualisieren emotionale Trends und identifizieren Themenbereiche, falls die Stimmung über mehrere Sitzungen hinweg sehr negativ bleibt. So erfahren Sie, was Ihr Kind bewegt, und erhalten wertvolle Impulse für echte Gespräche – während die Privatsphäre Ihres Kindes absolut geschützt bleibt.",
         "detect": {
           "title": "Was wir erkennen",
           "list": [
@@ -557,7 +583,7 @@
       }
     },
     "Approach": {
-      "eyebrow": "Unser Ansatz",
+      "eyebrow": "Unsere Philosophie",
       "title": "Technologie, die weiß, wann sie sich zurückziehen muss",
       "description": "SafeMentor wurde entwickelt, um die natürliche Neugier und das emotionale Wachstum von Kindern zu unterstützen – und sie dann sanft zu Erfahrungen in der realen Welt, Gesprächen und zum Spielen zurückzuführen.",
       "bullet1": {
@@ -566,8 +592,13 @@
       },
       "bullet2": {
         "title": "Hält Eltern informiert",
-        "desc": "Klare, ehrliche Kommunikation darüber, was Ihr Kind lernt und erlebt."
+        "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+      },
+      "bullet3": {
+        "title": "Entwickelt von Eltern für Eltern",
+        "desc": "SafeMentor ist für Eltern wie uns gedacht: Ein Werkzeug, das den digitalen Raum so sicher macht, dass er die Kindheit bereichert, statt sie zu ersetzen."
       }
+
     },
     "Families": {
       "title": "Eltern unterstützen – nicht verurteilen",
@@ -600,26 +631,213 @@
       "role": "Mutter von zwei Kindern"
     },
     "CTA": {
-      "title": "Bereit zu erfahren, wie SafeMentor funktioniert?",
+      "title": "Begleiten Sie uns auf diesem Weg.",
       "subtitle": "Entdecken Sie einen ruhigeren, durchdachteren Umgang mit Technologie für Ihre Familie.",
-      "buttonPrimary": "Erfahren Sie, wie SafeMentor funktioniert",
-      "buttonSecondary": "Lesen Sie unsere Prinzipien",
-      "disclaimer": "Keine Verpflichtung erforderlich. Nur fundierte Informationen."
+      "buttonPrimary": "Jetzt kostenlos Pilot-Nutzer werden",
+      "disclaimer": "Werden Sie Teil unserer Pilotphase und erleben Sie SafeMentor als einer der Ersten – völlig kostenlos."
     },
     "Footer": {
       "text": "Technologie, die die Kindheit respektiert. Mit Sorgfalt gebaut, von Ethik geleitet, fokussiert auf das, was am wichtigsten ist.",
       "learnMore": "Mehr erfahren",
-      "company": "Unternehmen",
+      "company": "Rechtliches",
       "links": {
-        "approach": "Unser Ansatz",
-        "ethics": "Ethikrichtlinien",
-        "educators": "Für Pädagogen",
-        "research": "Forschung",
-        "about": "Über uns",
-        "privacy": "Datenschutzrichtlinie",
+        "privacy": "Datenschutz",
+        "imprint": "Impressum",
+        "terms": "AGB",
         "contact": "Kontakt"
       },
       "bottom": "Mit Sorgfalt für Kinder und Familien gemacht."
+    }
+  },
+  "Privacy": {
+    "title": "Datenschutzerklärung SafeMentor",
+    "lastUpdated": "Stand: Februar 2026",
+    "intro": "In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung der SafeMentor App, des Eltern-Dashboards und der zugehörigen KI-Dienste. Der Schutz der Privatsphäre von Kindern hat für uns oberste Priorität. Wir folgen den Prinzipien „Privacy by Design“ und „Privacy by Default“ und orientieren uns an internationalen Best Practices für Kindersicherheit (wie KOSA und AADC), um eine sichere Lernumgebung zu gewährleisten.",
+    "sections": {
+      "1": {
+        "title": "1. Verantwortlicher und Kontakt",
+        "content": "Verantwortlich für die Datenverarbeitung ist: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spanien, CIF B56925043. E-Mail: privacy@safementor.app."
+      },
+      "2": {
+        "title": "2. Datenkategorien und Erhebungszwecke",
+        "intro": "Wir erheben nur Daten, die für die Erbringung unserer Dienste unbedingt erforderlich sind:",
+        "items": [
+          {
+            "title": "Registrierungsdaten (Eltern):",
+            "content": "Name und E-Mail-Adresse der Erziehungsberechtigten sowie Zahlungsdaten (via Drittanbieter wie Stripe/Apple Pay). Zweck: Vertragsabwicklung und Bereitstellung des Eltern-Dashboards. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)."
+          },
+          {
+            "title": "Profildaten des Kindes:",
+            "content": "Pseudonym und Geburtsmonat des Kindes. Zweck: Altersgerechte Anpassung der KI-Antworten und Verifizierung der elterlichen Einwilligung gemäß Art. 8 DSGVO."
+          },
+          {
+            "title": "Interaktionsdaten und „Project Memory“:",
+            "content": "Chat-Inhalte, gestellte Fragen, generierte Antworten sowie Projektfortschritte (z. B. Python-Code). Zweck: Kontinuität im Lernprozess. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO."
+          },
+          {
+            "title": "Automatisch erhobene Informationen:",
+            "content": "IP-Adresse, Browsertyp, Betriebssystem und Gerätenutzungsdaten. Zweck: Fehlerbeseitigung und statistische Auswertung zur Verbesserung unserer Dienstleistungen. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse)."
+          }
+        ]
+      },
+      "3": {
+        "title": "3. Besonderheit: KI-Verarbeitung und Intent-Routing",
+        "intro": "SafeMentor nutzt eine mehrstufige Architektur zum Schutz der Daten:",
+        "items": [
+          {
+            "title": "Nano-Router (Intent-Analyse):",
+            "content": "Jede Eingabe des Kindes wird zunächst durch einen spezialisierten „Nano-Router“ analysiert. Dieser prüft in Echtzeit, ob es sich um eine sachliche Lernfrage, eine emotionale Äußerung oder eine kritische Anfrage (Flag) handelt."
+          },
+          {
+            "title": "Gezielte Verarbeitung:",
+            "content": "Je nach erkanntem Intent wird die Anfrage an das passende Modul weitergeleitet, um eine pädagogisch wertvolle und sichere Antwort zu garantieren."
+          },
+          {
+            "title": "Anonymisierung:",
+            "content": "Bevor Daten für komplexe Aufgaben an externe KI-Schnittstellen (z. B. OpenAI, Anthropic, Google Cloud) übertragen werden, werden diese nach Stand der Technik von persönlichen Identifikatoren bereinigt."
+          },
+          {
+            "title": "Sicherheits-Monitoring:",
+            "content": "Inhalte werden automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing) geprüft. Bei akuter Gefahr erfolgt eine Meldung an das Eltern-Dashboard."
+          },
+          {
+            "title": "Emotions-Reporting:",
+            "content": "Unser System analysiert anonymisiert die emotionale Grundstimmung der Interaktionen. Wenn über einen Zeitraum von mehr als zwei Tagen ein anhaltend negativer emotionaler Trend festgestellt wird, informieren wir die Erziehungsberechtigten über die vorherrschende Emotion und das grobe Themenfeld (z. B. \"Schule\" oder \"Freundschaften\"), um einen pädagogischen Austausch in der Familie zu ermöglichen."
+          },
+          {
+            "title": "Eskalations-Mechanismus (Red Flags):",
+            "content": "Bei der Erkennung von akuten Gefährdungslagen (z. B. Anzeichen von Mobbing, Gewalt oder anderen sicherheitsrelevanten Vorfällen) erfolgt eine sofortige Benachrichtigung der Eltern. In diesen Ausnahmefällen werden den Eltern auch Zusammenfassungen der relevanten Chat-Abschnitte zur Verfügung gestellt, damit diese ihrer Aufsichts- und Schutzpflicht nachkommen können."
+          }
+        ]
+      },
+      "4": {
+        "title": "4. Weitergabe an Dritte und Drittstaatentransfer",
+        "intro": "Wir geben Daten nur zur Vertragserfüllung an sorgfältig ausgewählte Partner weiter:",
+        "items": [
+          {
+            "title": "KI-Provider & Hosting:",
+            "content": "AWS/Azure (Standort EU) sowie spezialisierte KI-Dienste."
+          },
+          {
+            "title": "Drittstaatentransfer:",
+            "content": "Bei Nutzung von US-Diensten stützen wir uns auf den EU-US Data Privacy Framework Angemessenheitsbeschluss vom 10. Juli 2023 oder nutzen Standardvertragsklauseln."
+          },
+          {
+            "title": "Kein Verkauf:",
+            "content": "Wir verkaufen niemals Daten an Dritte."
+          }
+        ]
+      },
+      "5": {
+        "title": "5. Cookie-Richtlinie",
+        "content": "Wir verwenden technisch notwendige Cookies, um Funktionen wie den Login zu ermöglichen. Sie können Cookies über Ihren Browser blockieren."
+      },
+      "6": {
+        "title": "6. Speicherdauer",
+        "content": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist oder gesetzliche Fristen bestehen. Bei Löschung des Accounts werden alle Chat-Verläufe innerhalb von 30 Tagen endgültig gelöscht."
+      },
+      "7": {
+        "title": "7. Ihre Rechte (Betroffenenrechte)",
+        "content": "Sie (und Ihr Kind) haben im Rahmen der DSGVO das Recht auf Auskunft, Berichtigung, Löschung („Recht auf Vergessenwerden“), Einschränkung der Verarbeitung, Datenübertragbarkeit sowie ein Beschwerderecht bei einer Aufsichtsbehörde. Anfragen müssen einen Identitätsnachweis enthalten."
+      },
+      "8": {
+        "title": "8. Datensicherheit",
+        "content": "Wir setzen modernste TLS/SSL-Verschlüsselung ein. Der Zugriff auf das Eltern-Dashboard ist durch eine Multi-Faktor-Authentifizierung geschützt. Bei Sicherheitsvorfällen informieren wir die Behörden gemäß den gesetzlichen Vorschriften."
+      }
+    }
+  },
+  "Access": {
+    "title": "Hallo und willkommen beim SafeMentor-Pilot",
+    "description": "Bitte gib das Passwort ein, dann kannst du direkt loslegen.",
+    "placeholder": "Passwort eingeben",
+    "button": "Zugang freischalten",
+    "error": "Falsches Passwort"
+  },
+  "AccessLegal": {
+    "contactLabel": "Bei Fragen zum Pilotprojekt:",
+    "linkText": "Impressum & Datenschutz",
+    "modalTitle": "Impressum & Datenschutz (Pilot)",
+    "intro": "Für die Pilotphase gelten folgende Bestimmungen:",
+    "provider": "Impressum - Anbieter gemäß § 5 DDG sind Andreas Greif & Heinrich Gronauer.",
+    "privacy": "Datenschutz - Verantwortlich sind Andreas Greif & Heinrich Gronauer, Mühlenstr. 3, 78176 Blumberg. Beim Besuch dieser Seite wird Ihre IP-Adresse aus technischen Gründen und zur Sicherstellung der Systemsicherheit verarbeitet. Wir verwenden ein technisch notwendiges Session-Cookie, um den Zugriff über Ihren Zugangscode zu verwalten. Es werden keine Tracking- oder Marketing-Cookies eingesetzt. Nach dem Login finden Sie unsere ausführliche Datenschutzerklärung."
+  },
+  "LoginLegal": {
+    "linkText": "Impressum & Datenschutz",
+    "modalTitle": "Impressum & Datenschutz",
+    "modalContent": "Hier stehen die rechtlichen Hinweise für den Login-Bereich..."
+  },
+  "Imprint": {
+    "title": "Impressum",
+    "provider": "Anbieter dieser Internetseiten sind",
+    "names": "Andreas Greif & Heinrich Gronauer",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "E-Mail: safementor-pilot@mail.com, Telefon: +49 176 34 901755",
+    "disputeResolution": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "copyright": "Alle Rechte an den Inhalten dieser Webseiten bleiben vorbehalten. Jede kommerzielle Verwertung bedarf der vorherigen Zustimmung des Rechtsinhabers.",
+    "liability": "Diese Internetseite enthält gegebenenfalls Verknüpfungen (Links) zu Internetangeboten Dritter. Wir haben bei Setzen der Verknüpfung keine rechtswidrigen Inhalte des Verknüpfungsziels feststellen können. Für den aktuellen Inhalt und etwaige Änderungen nach Setzen der Verknüpfung können wir keine Gewähr übernehmen."
+  },
+  "Terms": {
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "subtitle": "SafeMentor Pilotphase",
+    "lastUpdated": "Stand: Februar 2026",
+    "preamble": "SafeMentor bietet eine KI-gestützte Lernplattform für Kinder an. Da sich das Projekt aktuell in einer geschlossenen Pilotphase („Friends & Family“) befindet, dient diese Vereinbarung dazu, die rechtlichen Rahmenbedingungen zwischen der Gesellschaft und den Testnutzern zu klären.",
+    "sections": {
+      "s1": {
+        "title": "§ 1 Geltungsbereich und Vertragspartner",
+        "content": "1. Diese AGB gelten für alle Leistungen von SafeMentor gegenüber den Erziehungsberechtigten (nachfolgend „Nutzer“), die das Angebot für ihre minderjährigen Kinder nutzen.\n2. Vertragspartner ist die: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spanien. Vertreten durch den Geschäftsführer: Andreas Greif, CIF B56925043.\n3. Durch die Nutzung der Website und die Eingabe des Zugangscodes erklärt sich der Nutzer mit diesen AGB vollumfänglich einverstanden."
+      },
+      "s2": {
+        "title": "§ 2 Mentor-ID und Zugangsvoraussetzungen",
+        "content": "1. Um ein SafeMentor-Konto zu erstellen, muss der Nutzer volljährig und geschäftsfähig sein.\n2. Der Nutzer ist für die Geheimhaltung seines Zugangscodes verantwortlich und haftet für Schäden, die durch unsachgemäße Verwendung entstehen.\n3. Der Nutzer versichert, dass er das Sorgerecht für das angemeldete Kind besitzt oder die ausdrückliche Erlaubnis der Sorgeberechtigten vorliegt."
+      },
+      "s3": {
+        "title": "§ 3 Leistungsumfang und pädagogische Integrität",
+        "content": "1. SafeMentor stellt eine KI-Schnittstelle zur Verfügung, die Kinder bei Lern- und Freizeitprojekten unterstützt.\n2. SafeMentor dient der Lernunterstützung, nicht der Erstellung schlüsselfertiger Hausaufgaben oder Prüfungsleistungen. Die Verantwortung für die Einhaltung schulischer Integritätsregeln liegt ausschließlich beim Nutzer.\n3. Ein Anspruch auf die Nutzung spezifischer KI-Modelle besteht nicht."
+      },
+      "s4": {
+        "title": "§ 4 Verfügbarkeit und Wartung",
+        "content": "1. SafeMentor strebt eine hohe Verfügbarkeit der Plattform und des Eltern-Dashboards an. Ein Anspruch auf eine unterbrechungsfreie Verfügbarkeit besteht jedoch nicht.\n2. Aufgrund von notwendigen Wartungsarbeiten, Sicherheits-Updates oder technischen Störungen, die außerhalb des Einflussbereichs von SafeMentor liegen (z. B. Ausfälle bei Hosting-Providern oder Schnittstellen wie der Groq API), kann es zu zeitweisen Unterbrechungen kommen.\n3. Geplante Wartungsarbeiten werden den Nutzern nach Möglichkeit rechtzeitig im Voraus (z. B. per E-Mail oder Dashboard-Hinweis) angekündigt.\n4. SafeMentor haftet nicht für Datenverluste oder Schäden, die durch technisch bedingte Ausfälle entstehen, sofern diese nicht auf grobe Fahrlässigkeit oder Vorsatz zurückzuführen sind."
+      },
+      "s5": {
+        "title": "§ 5 Sicherheits-Monitoring & Intent-Routing",
+        "content": "1. SafeMentor analysiert Chats automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing). Bei Erkennung erfolgt eine Benachrichtigung an die Eltern.\n2. SafeMentor übernimmt keine Gewähr für die lückenlose Erkennung aller Gefahren. Die Kommunikation von Kindern kann sich außerhalb der technischen Erkennungsmöglichkeiten bewegen.\n3. Das System wertet emotionale Trends aus. Bei anhaltend negativer Stimmung über mehr als zwei Tage werden Eltern über das grobe Thema und die vorherrschende Emotion informiert."
+      },
+      "s6": {
+        "title": "§ 6 Pflichten der Eltern (Aufsichtspflicht)",
+        "content": "1. Die Nutzung von SafeMentor entbindet die Eltern nicht von ihrer gesetzlichen Aufsichtspflicht. SafeMentor ist ein technisches Hilfsmittel und kein Ersatz für menschliche Betreuung.\n2. Der Nutzer ist dafür verantwortlich, sicherzustellen, dass das Kind die KI nicht als Ersatz für menschliche soziale Interaktion nutzt. SafeMentor haftet nicht für psychologische Folgen einer übermäßigen Vermenschlichung der KI durch das Kind."
+      },
+      "s7": {
+        "title": "§ 7 Nutzungsregeln und unzulässige Verwendung",
+        "content": "1. Die Nutzung von SafeMentor ist ausschließlich für rechtmäßige Zwecke gestattet. Der Nutzer verpflichtet sich, die Plattform so zu verwenden, dass keine Rechte Dritter verletzt werden und keine rechtswidrigen Inhalte generiert oder verbreitet werden.\n2. Es ist ausdrücklich untersagt, SafeMentor für Aktivitäten zu nutzen, die schädigend, bedrohlich oder missbräuchlich sind; die darauf abzielen, die Sicherheitsvorkehrungen der KI zu umgehen (\"Jailbreaking\") oder den Betrieb der Plattform oder die IT-Sicherheit stören oder gefährden.\n3. SafeMentor behält sich das Recht vor, Accounts bei Verstößen gegen diese Regeln temporär oder dauerhaft zu sperren."
+      },
+      "s8": {
+        "title": "§ 8 Haftungsausschluss und Disclaimer",
+        "content": "1. KI-Systeme können fehlerhafte Informationen generieren („Halluzinationen“). SafeMentor haftet nicht für die Richtigkeit der Antworten.\n2. SafeMentor übernimmt keine Haftung für Aussagen der KI, die trotz Sicherheitsvorkehrungen als unangebracht oder schädlich empfunden werden könnten. Wir distanzieren uns ausdrücklich von KI-generierten Inhalten mit diskriminierenden oder unangemessenen Tendenzen. Eine Haftung ist ausgeschlossen, sofern SafeMentor nicht vorsätzlich die Sicherheitsstandards missachtet hat.\n3. Sämtliche Handlungsempfehlungen, insbesondere im handwerklichen Bereich, müssen zwingend von einer erwachsenen Person auf Sicherheit geprüft werden, bevor sie umgesetzt werden. Bei der physischen Umsetzung von Projekten liegt die Verantwortung für die Sicherheit allein bei den Eltern.\n4. Die KI-Antworten stellen keine professionelle Beratung (z. B. medizinisch, rechtlich oder sicherheitstechnisch) dar."
+      },
+      "s9": {
+        "title": "§ 9 Haftungsbeschränkung",
+        "content": "1. SafeMentor haftet unbeschränkt für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, die auf einer vorsätzlichen oder fahrlässigen Pflichtverletzung beruhen.\n2. Für sonstige Schäden haftet SafeMentor nur bei Vorsatz oder grober Fahrlässigkeit. Bei leichter Fahrlässigkeit haftet SafeMentor nur, sofern eine Pflicht verletzt wird, deren Erfüllung die ordnungsgemäße Durchführung des Vertrages überhaupt erst ermöglicht (Kardinalpflicht); in diesem Fall ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt.\n3. SafeMentor haftet nicht für entgangenen Gewinn, indirekte Schäden oder Folgeschäden. Für den Verlust von Daten haftet SafeMentor nur, wenn dieser durch angemessene Datensicherungsmaßnahmen des Nutzers nicht vermeidbar gewesen wäre.\n4. Da die KI-Inhalte auf stochastischen Modellen basieren, übernimmt SafeMentor keine Haftung für die sachliche Richtigkeit, Vollständigkeit oder pädagogische Eignung der generierten Antworten (siehe § 3)."
+      },
+      "s10": {
+        "title": "§ 10 Laufzeit und Widerruf",
+        "content": "1. Der Dienst ist monatlich kündbar.\n2. Das gesetzliche Widerrufsrecht erlischt vorzeitig, sobald mit der Nutzung der digitalen Inhalte (Beginn des KI-Chats) begonnen wurde."
+      },
+      "s11": {
+        "title": "§ 11 Kostenfreie Nutzungsmodelle (Pilotkunden, Social Edition & Friends)",
+        "content": "1. SafeMentor kann ausgewählten Nutzergruppen (z. B. Pilotkunden, Familien mit staatlichem Unterstützungsnachweis) einen kostenfreien Zugang zur Plattform gewähren.\n2. Kostenfreie Zugänge sind technisch auf die Nutzung spezifischer Modelle beschränkt. Ein Anspruch auf die Nutzung von kostenintensiven Premium-Modellen oder erweiterten Deep-Reasoning-Funktionen besteht in diesen Modellen nicht.\n3. In bestimmten kostenfreien Tarifen erfolgt die Bereitstellung der KI-Leistung ausschließlich über einen vom Nutzer selbst beizustellenden API-Key. Der Nutzer trägt die alleinige Verantwortung für die Erstellung, die Token-Limits und die Verfügbarkeit dieses Keys. Bei Erschöpfung des Kontingents des Drittanbieters wird die Funktion von SafeMentor automatisch bis zur Erneuerung pausiert.\n4. Nachweispflicht: Für den Bezug des Sozial-Tarifs ist SafeMentor berechtigt, in angemessenen Abständen einen Nachweis über die Bezugsberechtigung (z. B. Bescheid über Sozialleistungen) zu verlangen."
+      },
+      "s12": {
+        "title": "§ 12 Vergütung und Zahlungsbedingungen",
+        "content": "1. Die Nutzung von SafeMentor kann je nach gewähltem Modell (z. B. Basis, Premium, Social-Equity) kostenpflichtig sein. Die aktuell gültigen Preise und Laufzeiten werden dem Nutzer vor Abschluss des Abonnements auf der Bestellseite deutlich angezeigt.\n2. Sonderregelung Pilotphase: Im Rahmen der Pilotphase kann SafeMentor den Dienst kostenfrei oder zu reduzierten Gebühren zur Verfügung stellen. Ein Anspruch auf eine dauerhafte Kostenfreiheit über den vereinbarten Testzeitraum hinaus besteht nicht.\n3. Preisanpassungen: SafeMentor behält sich vor, die Gebühren für künftige Vertragslaufzeiten anzupassen. Solche Änderungen werden den Nutzern rechtzeitig im Voraus per E-Mail mitgeteilt."
+      },
+      "s13": {
+        "title": "§ 13 Änderung der Bedingungen",
+        "content": "1. Wir behalten uns das Recht vor, diese AGB jederzeit zu ändern. Der Benutzer wird rechtzeitig über Änderungen informiert und hat die Möglichkeit, diese zu akzeptieren oder den Dienst zu kündigen. Wird die Änderung nicht akzeptiert, endet der Vertrag automatisch.\n2. Alle Änderungen oder Ergänzungen an den AGB werden auf der Website bekannt gegeben."
+      },
+      "s14": {
+        "title": "§ 14 Schlussbestimmungen",
+        "content": "1. Es gilt das Recht der Bundesrepublik Deutschland.\n2. Sollte eine Bestimmung unwirksam sein, bleiben die übrigen Bestimmungen hiervon unberührt.\n3. Im Falle von Streitigkeiten verpflichten sich die Parteien zunächst zu einem gütlichen Schlichtungsversuch."
+      }
     }
   },
   "Compliance": {

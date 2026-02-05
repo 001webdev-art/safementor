@@ -23,12 +23,6 @@ export const CTASection = () => {
                         >
                             {t('buttonPrimary')}
                         </Link>
-                        <Link
-                            href="#values"
-                            className="px-8 py-4 rounded-full font-medium border-2 border-[#4A4540] text-[#4A4540] transition-all hover:bg-[#4A4540] hover:text-[#FDFBF8]"
-                        >
-                            {t('buttonSecondary')}
-                        </Link>
                     </div>
                     <p className="text-sm opacity-60 mt-8 text-[#4A4540]">{t('disclaimer')}</p>
                 </div>

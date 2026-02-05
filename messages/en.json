@@ -486,7 +486,7 @@
     },
     "Hero": {
       "eyebrow": "Nurturing Growth, Together",
-      "title": "Supporting children with guidance, trust, and space to grow",
+      "title": "safeMentor - a digital Mentor for Children",
       "subtitle": "SafeMentor helps families nurture curiosity, build trust, and support healthy development — with technology that respects childhood.",
       "ctaPrimary": "Discover Our Approach",
       "ctaSecondary": "For Parents"
@@ -523,26 +523,39 @@
           "desc1": "SafeMentor does not give instant answers for homework.",
           "desc2": "Instead, it asks guiding questions, helps children think step by step, and encourages their own ideas."
         },
+        "partnership": "SafeMentor is not a 'Ja-Sager', but a true partner. Conventional AIs tend towards so-called Sycophancy: they parrot the user and always agree, just to seem 'helpful'. We break this pattern and have developed a mentor that doesn't just agree, but gently challenges. It recognizes when a child is looking for a shortcut and instead encourages critical thinking. This is how we promote real understanding instead of just fast consumption.",
         "emphasis": "Because learning should activate the brain, not replace it."
       },
       "offline": {
-        "title": "Offline Life Comes First",
-        "description": "SafeMentor actively encourages offline activities, creativity in the real world, and time with friends, family, and nature.",
-        "emphasis": "The best moments don't happen on a screen."
+        "title": "Safety that thinks ahead – without monitoring.",
+        "description": "SafeMentor doesn't just answer randomly. Our system accompanies the dialogue in real-time: As soon as difficult topics arise, we double-check both your child's questions and the AI's answers. We call this our 3-stage safety, which ensures that your child only receives answers that empower instead of unsettle. You can see these 3 stages here:",
+        "emphasis": "Safety is our top priority."
       },
-      "emotional": {
-        "title": "Emotional Support — Without Replacing Humans",
-        "description": "SafeMentor listens when children want to talk. It can help children name emotions, encourage reflection, and suggest healthy next steps.",
-        "callout": {
-          "title": "But it is not a therapist",
-          "desc": "and never replaces real people."
-        },
-        "final": "When needed, SafeMentor gently encourages talking to parents, talking to trusted adults, and seeking real human support."
+      "standards": {
+        "title": "Built to Global Standards",
+        "intro": "Trust is good, certified safety is better. SafeMentor was built from the ground up to use the world's strictest child safety guidelines as a foundation:",
+        "list": [
+          {
+            "title": "KOSA (Kids Online Safety Act):",
+            "desc": "A US standard that requires platforms to consistently put child welfare above profit and actively protect against addiction risks."
+          },
+          {
+            "title": "AADC (Age Appropriate Design Code):",
+            "desc": "A UK rulebook ensuring that technology prioritizes children's well-being and prohibits any form of manipulative design tricks."
+          },
+          {
+            "title": "EU AI Act & GDPR:",
+            "desc": "European laws for Artificial Intelligence and data protection that guarantee you maximum transparency and the highest protection of your child's personal data."
+          }
+        ],
+        "beliefTitle": "Because we believe: Technology should serve development, not addiction.",
+        "beliefText": "While most apps fight for every minute of your child's attention with psychological tricks, SafeMentor does the opposite. We consciously avoid reward systems, “streaks” (pressure through daily usage chains), or artificial incentives that glue children to the screen. Our goal is for your child to use SafeMentor to better understand the real world – and then put the device away with a good feeling to apply what they've learned in real life."
       },
       "safety": {
         "eyebrow": "For Parents",
-        "title": "Safety & Early Warning",
-        "description": "SafeMentor looks for patterns, not secrets.",
+        "title": "Trust Needs Privacy",
+        "description": "Trust is the foundation of every child's development. For this reason, privacy is not just a feature, but the foundation of Safementor. No digital footprints are created here. As soon as a session ends, all raw chat data is irrevocably deleted. We only keep summaries for a period of 7 to a maximum of 30 days. What remains is what really matters to you as parents: We visualize emotional trends and identify theme areas if the mood remains very negative over several sessions. This way, you find out what moves your child and receive valuable impulses for real conversations – while your child's privacy remains absolutely protected.",
+        "summary": "Here is the summary again:",
         "detect": {
           "title": "What We Detect",
           "list": [
@@ -574,7 +587,7 @@
       }
     },
     "Approach": {
-      "eyebrow": "Our Approach",
+      "eyebrow": "Our Philosophy",
       "title": "Technology that knows when to step back",
       "description": "SafeMentor is designed to support children's natural curiosity and emotional growth — then gently guide them back to real-world experiences, conversations, and play.",
       "bullet1": {
@@ -584,6 +597,10 @@
       "bullet2": {
         "title": "Keeps parents informed",
         "desc": "Clear, honest communication about what your child is learning and experiencing."
+      },
+      "bullet3": {
+        "title": "Developed by parents for parents",
+        "desc": "SafeMentor is intended for parents like us: A tool that makes the digital space so safe that it enriches childhood instead of replacing it."
       }
     },
     "Families": {
@@ -617,26 +634,214 @@
       "role": "Mother of two"
     },
     "CTA": {
-      "title": "Ready to learn how SafeMentor works?",
+      "title": "Join us on this path.",
       "subtitle": "Discover a calmer, more thoughtful approach to technology for your family.",
-      "buttonPrimary": "Learn How SafeMentor Works",
+      "buttonPrimary": "Become a pilot user for free now",
       "buttonSecondary": "Read Our Principles",
-      "disclaimer": "No commitment required. Just thoughtful information."
+      "disclaimer": "Join our pilot phase and be one of the first to experience SafeMentor – completely free."
     },
     "Footer": {
       "text": "Technology that respects childhood. Built with care, guided by ethics, focused on what matters most.",
       "learnMore": "Learn More",
-      "company": "Company",
+      "company": "Legal",
       "links": {
-        "approach": "Our Approach",
-        "ethics": "Ethics Guidelines",
-        "educators": "For Educators",
-        "research": "Research",
-        "about": "About Us",
         "privacy": "Privacy Policy",
+        "imprint": "Imprint",
+        "terms": "Terms & Conditions",
         "contact": "Contact"
       },
       "bottom": "Made with care for children and families."
+    }
+  },
+  "Privacy": {
+    "title": "SafeMentor Privacy Policy",
+    "lastUpdated": "Status: February 2026",
+    "intro": "In this privacy policy, we inform you about the processing of personal data when using the SafeMentor App, the Parent Dashboard, and the associated AI services. Protecting children's privacy is our top priority. We follow the 'Privacy by Design' and 'Privacy by Default' principles and adhere to international best practices for child safety (such as KOSA and AADC) to ensure a safe learning environment.",
+    "sections": {
+      "1": {
+        "title": "1. Controller and Contact",
+        "content": "Responsible for data processing is: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spain, CIF B56925043. Email: privacy@safementor.app."
+      },
+      "2": {
+        "title": "2. Data Categories and Purposes of Collection",
+        "intro": "We only collect data that is strictly necessary for providing our services:",
+        "items": [
+          {
+            "title": "Registration Data (Parents):",
+            "content": "Name and email address of guardians, as well as payment data (via third-party providers like Stripe/Apple Pay). Purpose: Contract processing and provision of the Parent Dashboard. Legal basis: Art. 6 (1) (b) GDPR (Performance of a contract)."
+          },
+          {
+            "title": "Child Profile Data:",
+            "content": "Pseudonym and birth month of the child. Purpose: Age-appropriate adaptation of AI responses and verification of parental consent according to Art. 8 GDPR."
+          },
+          {
+            "title": "Interaction Data and 'Project Memory':",
+            "content": "Chat contents, asked questions, generated answers, and project progress (e.g., Python code). Purpose: Continuity in the learning process. Legal basis: Art. 6 (1) (b) GDPR."
+          },
+          {
+            "title": "Automatically Collected Information:",
+            "content": "IP address, browser type, operating system, and device usage data. Purpose: Debugging and statistical analysis to improve our services. Legal basis: Art. 6 (1) (f) GDPR (Legitimate interest)."
+          }
+        ]
+      },
+      "3": {
+        "title": "3. Special Feature: AI Processing and Intent Routing",
+        "intro": "SafeMentor uses a multi-stage architecture to protect data:",
+        "items": [
+          {
+            "title": "Nano-Router (Intent Analysis):",
+            "content": "Every input from the child is first analyzed by a specialized 'Nano-Router'. It checks in real-time whether it is a factual learning question, an emotional statement, or a critical request (Flag)."
+          },
+          {
+            "title": "Targeted Processing:",
+            "content": "Depending on the detected intent, the request is forwarded to the appropriate module to guarantee an educationally valuable and safe response."
+          },
+          {
+            "title": "Anonymization:",
+            "content": "Before data is transferred to external AI interfaces (e.g., OpenAI, Anthropic, Google Cloud) for complex tasks, it is stripped of personal identifiers according to the state of the art."
+          },
+          {
+            "title": "Safety Monitoring:",
+            "content": "Content is automatically checked for threats (e.g., grooming, bullying). In case of acute danger, a report is sent to the Parent Dashboard."
+          },
+          {
+            "title": "Emotion Reporting:",
+            "content": "Our system anonymously analyzes the emotional sentiment of interactions. If a persistently negative emotional trend is detected over a period of more than two days, we inform guardians about the prevailing emotion and the general topic area (e.g., 'School' or 'Friendships') to enable educational exchange within the family."
+          },
+          {
+            "title": "Escalation Mechanism (Red Flags):",
+            "content": "Upon detection of acute threats (e.g., signs of bullying, violence, or other safety-relevant incidents), parents are notified immediately. In these exceptional cases, parents are also provided with summaries of the relevant chat sections so that they can fulfill their supervisory and protective duties."
+          }
+        ]
+      },
+      "4": {
+        "title": "4. Data Transfer to Third Parties and Third Country Transfer",
+        "intro": "We only pass on data to carefully selected partners for contract fulfillment:",
+        "items": [
+          {
+            "title": "AI Provider & Hosting:",
+            "content": "AWS/Azure (EU location) and specialized AI services."
+          },
+          {
+            "title": "Third Country Transfer:",
+            "content": "When using US services, we rely on the EU-US Data Privacy Framework Adequacy Decision of July 10, 2023, or use Standard Contractual Clauses."
+          },
+          {
+            "title": "No Sale:",
+            "content": "We never sell data to third parties."
+          }
+        ]
+      },
+      "5": {
+        "title": "5. Cookie Policy",
+        "content": "We use technically necessary cookies to enable functions such as login. You can block cookies via your browser."
+      },
+      "6": {
+        "title": "6. Storage Duration",
+        "content": "Personal data is stored only as long as necessary for the purposes or as required by legal deadlines. Upon deletion of the account, all chat histories are permanently deleted within 30 days."
+      },
+      "7": {
+        "title": "7. Your Rights (Data Subject Rights)",
+        "content": "You (and your child) have the right under GDPR to access, rectification, deletion ('right to be forgotten'), restriction of processing, data portability, and the right to lodge a complaint with a supervisory authority. Requests must include proof of identity."
+      },
+      "8": {
+        "title": "8. Data Security",
+        "content": "We use state-of-the-art TLS/SSL encryption. Access to the Parent Dashboard is protected by multi-factor authentication. In the event of security incidents, we inform the authorities in accordance with legal requirements."
+      }
+    }
+  },
+  "Access": {
+    "title": "Hello and welcome to the SafeMentor Pilot",
+    "description": "Please enter the password so you can get started right away.",
+    "placeholder": "Enter password",
+    "button": "Unlock Access",
+    "error": "Incorrect password"
+  },
+  "AccessLegal": {
+    "contactLabel": "For questions about the pilot project:",
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy (Pilot)",
+    "intro": "The following provisions apply to the pilot phase:",
+    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer, Mühlenstr. 3, 78176 Blumberg, Germany. Email: safementor-pilot@mail.com; Phone: +49 176 34901755. Responsible for content according to § 18 Para. 2 MStV: Andreas Greif, address as above.",
+    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
+  },
+  "LoginLegal": {
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy",
+    "modalContent": "Legal notices for the login area go here..."
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "provider": "Providers of this website are",
+    "names": "Andreas Greif & Heinrich Gronauer",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "copyright": "All rights to the contents of this website are reserved. Any commercial use requires the prior consent of the rights holder.",
+    "liability": "This website may contain links to third-party websites. We were unable to identify any illegal content on the linked pages at the time of linking. We cannot assume any liability for the current content and any changes made after linking."
+  },
+  "Terms": {
+    "title": "Terms and Conditions (T&C)",
+    "subtitle": "SafeMentor Pilot Phase",
+    "lastUpdated": "Status: February 2026",
+    "preamble": "SafeMentor offers an AI-powered learning platform for children. Since the project is currently in a closed pilot phase (\"Friends & Family\"), this agreement serves to clarify the legal framework between the company and the test users.",
+    "sections": {
+      "s1": {
+        "title": "§ 1 Scope and Contracting Parties",
+        "content": "1. These T&C apply to all services provided by SafeMentor to legal guardians (hereinafter \"Users\") who use the offer for their minor children.\n2. The contracting party is: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spain. Represented by the Managing Director: Andreas Greif, CIF B56925043.\n3. By using the website and entering the access code, the User agrees to these T&C in their entirety."
+      },
+      "s2": {
+        "title": "§ 2 Mentor ID and Access Requirements",
+        "content": "1. To create a SafeMentor account, the User must be of legal age and have legal capacity.\n2. The User is responsible for the confidentiality of their access code and is liable for damages resulting from improper use.\n3. The User warrants that they have custody of the registered child or that the express permission of the legal guardians is available."
+      },
+      "s3": {
+        "title": "§ 3 Scope of Services and Educational Integrity",
+        "content": "1. SafeMentor provides an AI interface that supports children in learning and leisure projects.\n2. SafeMentor serves as a learning support, not for the creation of turnkey homework or exam performances. Responsibility for compliance with academic integrity rules lies solely with the User.\n3. There is no entitlement to the use of specific AI models."
+      },
+      "s4": {
+        "title": "§ 4 Availability and Maintenance",
+        "content": "1. SafeMentor strives for high availability of the platform and the parent dashboard. However, there is no entitlement to uninterrupted availability.\n2. Temporary interruptions may occur due to necessary maintenance work, security updates, or technical malfunctions outside of SafeMentor's control (e.g., failures at hosting providers or interfaces such as the Groq API).\n3. Planned maintenance work will be announced to Users in a timely manner if possible (e.g., via email or dashboard notice).\n4. SafeMentor is not liable for data loss or damage caused by technical failures, unless these are due to gross negligence or intent."
+      },
+      "s5": {
+        "title": "§ 5 Safety Monitoring & Intent Routing",
+        "content": "1. SafeMentor automatically analyzes chats for hazardous situations (e.g., grooming, bullying). If detected, a notification is sent to the parents.\n2. SafeMentor assumes no guarantee for the complete detection of all dangers. Children's communication may move outside the technical detection possibilities.\n3. The system evaluates emotional trends. In the event of persistent negative mood for more than two days, parents are informed about the rough topic and the prevailing emotion."
+      },
+      "s6": {
+        "title": "§ 6 Parental Duties (Duty of Supervision)",
+        "content": "1. The use of SafeMentor does not release parents from their legal duty of supervision. SafeMentor is a technical aid and not a substitute for human care.\n2. The User is responsible for ensuring that the child does not use the AI as a substitute for human social interaction. SafeMentor is not liable for psychological consequences of excessive anthropomorphization of the AI by the child."
+      },
+      "s7": {
+        "title": "§ 7 Rules of Conduct and Prohibited Use",
+        "content": "1. The use of SafeMentor is permitted exclusively for lawful purposes. The User undertakes to use the platform in such a way that no rights of third parties are violated and no unlawful content is generated or distributed.\n2. It is expressly prohibited to use SafeMentor for activities that are harmful, threatening, or abusive; that aim to bypass the safety precautions of the AI (\"jailbreaking\") or disrupt or endanger the operation of the platform or IT security.\n3. SafeMentor reserves the right to temporarily or permanently block accounts in the event of violations of these rules."
+      },
+      "s8": {
+        "title": "§ 8 Disclaimer and Exclusion of Liability",
+        "content": "1. AI systems can generate incorrect information (\"hallucinations\"). SafeMentor is not liable for the accuracy of the answers.\n2. SafeMentor assumes no liability for statements made by the AI that could be perceived as inappropriate or harmful despite safety precautions. We expressly distance ourselves from AI-generated content with discriminatory or inappropriate tendencies. Liability is excluded unless SafeMentor has intentionally disregarded safety standards.\n3. All recommendations for action, especially in the manual crafts area, must be checked for safety by an adult before they are implemented. In the physical implementation of projects, the responsibility for safety lies solely with the parents.\n4. The AI answers do not constitute professional advice (e.g., medical, legal, or safety-related)."
+      },
+      "s9": {
+        "title": "§ 9 Limitation of Liability",
+        "content": "1. SafeMentor is liable without limitation for damages resulting from injury to life, body, or health based on an intentional or negligent breach of duty.\n2. For other damages, SafeMentor is only liable in the event of intent or gross negligence. In the case of slight negligence, SafeMentor is only liable if a duty is breached whose fulfillment makes the proper performance of the contract possible in the first place (cardinal duty); in this case, liability is limited to the contractually typical, foreseeable damage.\n3. SafeMentor is not liable for lost profit, indirect damage, or consequential damage. SafeMentor is only liable for the loss of data if this could not have been avoided by reasonable data backup measures by the User.\n4. Since the AI content is based on stochastic models, SafeMentor assumes no liability for the factual correctness, completeness, or educational suitability of the generated answers (see § 3)."
+      },
+      "s10": {
+        "title": "§ 10 Term and Revocation",
+        "content": "1. The service can be canceled monthly.\n2. The legal right of revocation expires prematurely as soon as the use of digital content (start of the AI chat) has begun."
+      },
+      "s11": {
+        "title": "§ 11 Free Usage Models (Pilot Customers, Social Edition & Friends)",
+        "content": "1. SafeMentor may grant selected user groups (e.g., pilot customers, families with proof of state support) free access to the platform.\n2. Free access is technically limited to the use of specific models. There is no entitlement to the use of cost-intensive premium models or extended deep reasoning functions in these models.\n3. In certain free tariffs, the provision of AI performance takes place exclusively via an API key to be provided by the User themselves. The User bears sole responsibility for the creation, token limits, and availability of this key. If the third-party provider's quota is exhausted, the function of SafeMentor is automatically paused until renewal.\n4. Duty to provide proof: For the receipt of the social tariff, SafeMentor is entitled to request proof of eligibility (e.g., notice of social benefits) at reasonable intervals."
+      },
+      "s12": {
+        "title": "§ 12 Remuneration and Payment Terms",
+        "content": "1. The use of SafeMentor may be subject to a fee depending on the chosen model (e.g., Basic, Premium, Social Equity). The currently valid prices and terms are clearly displayed to the User on the order page before the subscription is completed.\n2. Special regulation for pilot phase: Within the framework of the pilot phase, SafeMentor can provide the service free of charge or at reduced fees. There is no entitlement to permanent free use beyond the agreed test period.\n3. Price adjustments: SafeMentor reserves the right to adjust the fees for future contract terms. Such changes will be communicated to Users in a timely manner in advance by email."
+      },
+      "s13": {
+        "title": "§ 13 Amendment of Terms",
+        "content": "1. We reserve the right to change these T&C at any time. The User will be informed of changes in good time and has the possibility to accept them or cancel the service. If the change is not accepted, the contract ends automatically.\n2. All changes or additions to the T&C will be announced on the website."
+      },
+      "s14": {
+        "title": "§ 14 Final Provisions",
+        "content": "1. The law of the Federal Republic of Germany applies.\n2. Should any provision be invalid, the remaining provisions shall remain unaffected.\n3. In the event of disputes, the parties undertake to first attempt an amicable settlement."
+      }
     }
   },
   "NotFound": {

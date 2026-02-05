@@ -20,21 +20,14 @@ export const SafeMentorFooter = () => {
                             {t('text')}
                         </p>
                     </div>
-                    <div>
-                        <h4 className="font-semibold mb-4 text-[#4A4540]">{t('learnMore')}</h4>
-                        <ul className="space-y-3 opacity-70 text-[#4A4540]">
-                            <li><Link href="#approach" className="hover:opacity-100 transition-opacity">{t('links.approach')}</Link></li>
-                            <li><Link href={`/${locale}`} className="hover:opacity-100 transition-opacity">{t('links.ethics')}</Link></li>
-                            <li><Link href={`/${locale}`} className="hover:opacity-100 transition-opacity">{t('links.educators')}</Link></li>
-                            <li><Link href={`/${locale}`} className="hover:opacity-100 transition-opacity">{t('links.research')}</Link></li>
-                        </ul>
-                    </div>
+                    <div className="md:col-span-2"></div>
                     <div>
                         <h4 className="font-semibold mb-4 text-[#4A4540]">{t('company')}</h4>
                         <ul className="space-y-3 opacity-70 text-[#4A4540]">
-                            <li><Link href={`/${locale}`} className="hover:opacity-100 transition-opacity">{t('links.about')}</Link></li>
-                            <li><Link href={`/${locale}/register`} className="hover:opacity-100 transition-opacity">{t('links.privacy')}</Link></li>
-                            <li><Link href={`/${locale}/login`} className="hover:opacity-100 transition-opacity">{t('links.contact')}</Link></li>
+                            <li><Link href={`/${locale}/privacy`} className="hover:opacity-100 transition-opacity">{t('links.privacy')}</Link></li>
+                            <li><Link href={`/${locale}/imprint`} className="hover:opacity-100 transition-opacity">{t('links.imprint')}</Link></li>
+                            <li><Link href={`/${locale}/terms`} className="hover:opacity-100 transition-opacity">{t('links.terms')}</Link></li>
+                            <li><a href="mailto:safementor-pilot@mail.com" className="hover:opacity-100 transition-opacity">{t('links.contact')}</a></li>
                         </ul>
                     </div>
                 </div>
