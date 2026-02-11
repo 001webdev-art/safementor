@@ -33,24 +33,6 @@ export const ConsentToggles = ({ helpImprove, safetyAnalysis, onChange }: Consen
                     </div>
                 </Checkbox>
             </div>
-
-            <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
-                <Checkbox
-                    className="mt-1"
-                    isSelected={safetyAnalysis}
-                    onValueChange={(isSelected) => onChange('safetyAnalysis', isSelected)}
-                    classNames={{
-                        wrapper: "group-data-[selected=true]:after:bg-[#889A7F]"
-                    }}
-                >
-                    <div>
-                        <h4 className="font-semibold text-gray-900">{t('safeAnalysis.title')}</h4>
-                        <p className="text-sm text-gray-600">
-                            {t('safeAnalysis.description')}
-                        </p>
-                    </div>
-                </Checkbox>
-            </div>
         </section>
     )
 }

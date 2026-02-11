@@ -983,7 +983,7 @@
       },
       "usageStats": {
         "label": "App Usage Statistics:",
-        "value": "Broad activity categories for wellbeing logs."
+        "value": "We track session durations and AI unit usage (tokens) to optimize our service."
       }
     },
     "consent": {
@@ -991,10 +991,6 @@
         "title": "Help improve SafeMentor",
         "optional": "(optional)",
         "description": "Allow us to use 100% anonymized crash logs to fix bugs."
-      },
-      "safeAnalysis": {
-        "title": "Allow anonymous feedback on false flags",
-        "description": "Helps train our categorization of harmful events."
       }
     },
     "transparency": {
@@ -1017,7 +1013,13 @@
       }
     },
     "footer": {
-      "agreement": "I understand how data is used & agree to <terms>Terms</terms>",
+      "agreement": {
+        "terms": "I have read and accept the <terms>General Terms and Conditions (T&C)</terms>.",
+        "privacy": "I have taken note of the <privacy>Privacy Policy</privacy> and consent to data processing.",
+        "guardian": "I confirm that my child is under 16 years old and I am the legal guardian.",
+        "marketing": "I do not want to receive advertising from SafeMentor via email.",
+        "payment": "I want to start using the KI chat immediately after payment. I understand that my 14-day right of withdrawal ends once the chat is used – my subscription remains cancelable on a monthly basis."
+      },
       "back": "Back",
       "createAccount": "Create Account"
     }

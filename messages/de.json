@@ -974,18 +974,14 @@
       },
       "usageStats": {
         "label": "App-Nutzungsstatistiken:",
-        "value": "Grobe Aktivitätskategorien für Wohlbefindens-Protokolle."
+        "value": "Wir erfassen die Dauer Ihrer Sitzungen und den Verbrauch von KI-Einheiten (Token), um unseren Service zu optimieren"
       }
     },
     "consent": {
       "improve": {
         "title": "Helfen Sie SafeMentor zu verbessern",
-        "optional": "(optional)",
+        "optional": "optional",
         "description": "Erlauben Sie uns, 100% anonymisierte Fehlerberichte zu verwenden, um Fehler zu beheben."
-      },
-      "safeAnalysis": {
-        "title": "Anonymes Feedback zu Fehlalarmen zulassen",
-        "description": "Hilft uns, unsere Kategorisierung von schädlichen Ereignissen zu trainieren."
       }
     },
     "transparency": {
@@ -1008,7 +1004,13 @@
       }
     },
     "footer": {
-      "agreement": "Ich verstehe, wie Daten verwendet werden & stimme den <terms>Nutzungsbedingungen</terms> zu",
+      "agreement": {
+        "terms": "Ich habe die <terms>Allgemeine Geschäftsbedingungen (AGB)</terms> gelesen und akzeptiere sie.",
+        "privacy": "Ich habe die <privacy>Datenschutzerklärung</privacy> zur Kenntnis genommen und willige in die Datenverarbeitung ein.",
+        "guardian": "Ich bestätige, dass mein Kind unter 16 Jahre alt ist und ich sorgeberechtigt bin.",
+        "marketing": "Ich möchte keine Werbung von SafeMentor per E-Mail erhalten.",
+        "payment": "Ich möchte den KI-Chat sofort nach Bezahlung nutzen. Mir ist bekannt, dass mein 14-tägiges Widerrufsrecht mit der ersten Nutzung endet – mein Abo bleibt aber monatlich kündbar."
+      },
       "back": "Zurück",
       "createAccount": "Konto erstellen"
     }

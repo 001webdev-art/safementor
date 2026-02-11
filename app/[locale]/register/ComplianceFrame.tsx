@@ -8,9 +8,13 @@ import { FooterActions } from './FooterActions'
 
 interface ComplianceFrameProps {
     complianceData: {
-        agreed: boolean
         helpImprove: boolean
         safetyAnalysis: boolean
+        agreedToTerms: boolean
+        agreedToPrivacy: boolean
+        isGuardian: boolean
+        marketingOptOut: boolean
+        agreedToPayment: boolean
     }
     onDataChange: (field: string, value: boolean) => void
     onAccept: () => void
@@ -31,8 +35,8 @@ export const ComplianceFrame = ({ complianceData, onDataChange, onAccept }: Comp
                     />
                     <TransparencyReport />
                     <FooterActions
-                        agreed={complianceData.agreed}
-                        onAgreedChange={(val) => onDataChange('agreed', val)}
+                        complianceData={complianceData}
+                        onDataChange={onDataChange}
                         onAccept={onAccept}
                     />
                 </main>

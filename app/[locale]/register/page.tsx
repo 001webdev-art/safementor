@@ -18,9 +18,13 @@ export default function RegisterPage() {
   const [isVisible, setIsVisible] = useState(false)
   const [showCompliance, setShowCompliance] = useState(true)
   const [complianceData, setComplianceData] = useState({
-    agreed: false,
     helpImprove: false,
-    safetyAnalysis: false
+    safetyAnalysis: false,
+    agreedToTerms: false,
+    agreedToPrivacy: false,
+    isGuardian: false,
+    marketingOptOut: false,
+    agreedToPayment: false
   })
 
   // Load from localStorage on mount
@@ -78,7 +82,11 @@ export default function RegisterPage() {
         options: {
           emailRedirectTo: `${window.location.origin}/auth/callback`,
           data: {
-            terms_agreed1: complianceData.agreed,
+            terms_agreed_terms: complianceData.agreedToTerms,
+            terms_agreed_privacy: complianceData.agreedToPrivacy,
+            is_guardian: complianceData.isGuardian,
+            marketing_opt_out: complianceData.marketingOptOut,
+            terms_agreed_payment: complianceData.agreedToPayment,
             terms_help_improve: complianceData.helpImprove,
             terms_allow_anonymous_safety_analysis: complianceData.safetyAnalysis,
             // also include others if needed by the trigger
