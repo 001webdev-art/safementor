@@ -1,4 +1,22 @@
 {
+  "Access": {
+    "title": "Welcome to SafeMentor Pilot",
+    "description": "Please enter the password to get started.",
+    "placeholder": "Enter Password",
+    "button": "Unlock Access",
+    "error": "Incorrect Password"
+  },
+  "AccessLegal": {
+    "contactLabel": "Questions about the pilot:",
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy (Pilot)",
+    "intro": "The following provisions apply to the pilot phase:",
+    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer.",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
+  },
   "Header": {
     "title": "Safementor",
     "home": "Inicio",

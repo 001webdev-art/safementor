@@ -73,41 +73,60 @@ export const ValuesSection = () => {
                         <p className="max-w-3xl mx-auto opacity-80 text-lg leading-relaxed text-[#4A4540] mb-6">{t('safety.description')}</p>
                         
                     </div>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50">
-                            <h3 className="font-serif text-xl font-bold mb-4 text-[#4A4540]">{t('safety.detect.title')}</h3>
-                            <ul className="space-y-2 opacity-80 leading-relaxed text-sm text-[#4A4540]">
+                    <div className="grid md:grid-cols-2 gap-6 mb-12">
+                        {/* What We Detect */}
+                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50 flex flex-col h-full">
+                            <h3 className="font-serif text-2xl font-bold mb-6 text-[#4A4540]">{t('safety.detect.title')}</h3>
+                            <ul className="space-y-4 opacity-80 leading-relaxed text-sm text-[#4A4540] mb-auto">
                                 {(t.raw('safety.detect.list') as string[]).map((item, i) => (
-                                    <li key={i} className="flex items-start gap-2">
-                                        <span className="opacity-60">•</span> <span>{item}</span>
+                                    <li key={i} className="flex items-start gap-3">
+                                        <span className="opacity-40 text-lg leading-none mt-0.5">•</span> 
+                                        <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50">
-                            <h3 className="font-serif text-xl font-bold mb-4 text-[#4A4540]">{t('safety.see.title')}</h3>
-                            <ul className="space-y-2 opacity-80 leading-relaxed text-sm text-[#4A4540]">
+
+                        {/* What Parents See */}
+                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50 flex flex-col h-full">
+                            <h3 className="font-serif text-2xl font-bold mb-6 text-[#4A4540]">{t('safety.see.title')}</h3>
+                            <ul className="space-y-4 opacity-80 leading-relaxed text-sm text-[#4A4540] mb-auto">
                                 {(t.raw('safety.see.list') as string[]).map((item, i) => (
                                     <li key={i} className="flex items-start gap-2">
-                                        <span className="opacity-60 text-[#7B8F71]">✓</span> <span>{item}</span>
+                                        <span className="opacity-60 text-[#7B8F71] text-lg leading-none mt-0.5">✓</span> 
+                                        <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50">
-                            <h3 className="font-serif text-xl font-bold mb-4 text-[#4A4540]">{t('safety.notSee.title')}</h3>
-                            <ul className="space-y-2 opacity-80 leading-relaxed text-sm text-[#4A4540]">
+
+                        {/* What Parents Do NOT See */}
+                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50 flex flex-col h-full">
+                            <h3 className="font-serif text-2xl font-bold mb-6 text-[#4A4540]">{t('safety.notSee.title')}</h3>
+                            <ul className="space-y-4 opacity-80 leading-relaxed text-sm text-[#4A4540] mb-auto">
                                 {(t.raw('safety.notSee.list') as string[]).map((item, i) => (
-                                    <li key={i} className="flex items-start gap-2">
-                                        <span className="opacity-60 text-red-500">✗</span> <span>{item}</span>
+                                    <li key={i} className="flex items-start gap-3 text-red-500/80">
+                                        <span className="text-lg leading-none font-medium mt-0.5">X</span> 
+                                        <span className="text-[#4A4540]">{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50">
-                            <h3 className="font-serif text-xl font-bold mb-4 text-[#4A4540]">{t('safety.protects.title')}</h3>
-                            <p className="opacity-80 leading-relaxed text-[#4A4540]">{t('safety.protects.desc')}</p>
+
+                        {/* Privacy Statement Block */}
+                        <div className="gentle-shadow rounded-3xl p-8 bg-[#F5F2EC]/50 flex flex-col h-full justify-center text-center">
+                            <h3 className="font-serif text-2xl font-bold mb-6 text-[#4A4540]">{t('safety.privacy.title')}</h3>
+                            <p className="space-y-4 opacity-80 leading-relaxed text-sm text-[#4A4540] mb-auto">
+                                {t('safety.privacy.description')}
+                            </p>
                         </div>
+                    </div>
+
+                    {/* Concluding Statement */}
+                    <div className="max-w-3xl mx-auto text-center mt-12">
+                        <p className="text-lg opacity-80 text-[#4A4540] leading-relaxed">
+                            {t('safety.protects.desc')}
+                        </p>
                     </div>
                 </div>
 

@@ -28,12 +28,12 @@ export const AccessLegalModal = ({ isOpen, onOpenChange }: AccessLegalModalProps
                                 <div>
                                     <h3 className="font-bold text-lg mb-2">{tImprint('title')}</h3>
                                     <p>{t('provider')}</p>
-                                    <p>{tImprint('address')}</p>
-                                    <div className="mt-2" dangerouslySetInnerHTML={{ __html: tImprint('contactInfo') }} />
+                                    <p>{t('address')}</p>
+                                    <div className="mt-2" dangerouslySetInnerHTML={{ __html: t('contactInfo') }} />
                                 </div>
                                 
                                 <div>
-                                     <h3 className="font-bold text-lg mb-2">{tImprint('disputeResolution')}</h3>
+                                     <h3 className="font-bold text-lg mb-2">{t('disputeResolution')}</h3>
                                 </div>
 
                                 <div>

@@ -42,3 +42,4 @@ next-env.d.ts
 *.log
 test-output.css
 build_log.txt
+ACCESS_CREDENTIALS.md

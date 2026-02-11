@@ -13,7 +13,6 @@ export const Navigation = () => {
     const navLinks = [
         { href: "#values", label: t('values') },
         { href: "#approach", label: t('approach') },
-        { href: "#families", label: t('families') },
     ];
 
     return (

@@ -463,8 +463,7 @@
   "SafeMentor": {
     "Navigation": {
       "values": "Unsere Werte",
-      "approach": "Unser Ansatz",
-      "families": "Für Familien",
+      "approach": "Unsere Philosophie",
       "learnMore": "Starten"
     },
     "Hero": {
@@ -477,7 +476,8 @@
     "Trust": {
       "badge1": "Inspiriert vom Kids Online Safety Act",
       "badge2": "DSGVO-konform",
-      "badge3": "Von Eltern für Eltern gemacht"
+      "badge3": "Von Eltern für Eltern gemacht",
+      "badge4": "EU-Datenhosting"
     },
     "Values": {
       "philosophy": {
@@ -576,9 +576,12 @@
             "Echtzeit-Überwachung"
           ]
         },
+        "privacy": {
+          "title": "Ihre Daten sind bei uns sicher — und bleiben in Europa",
+          "description": "Wir nehmen Datenschutz ernst. Deshalb werden alle Ihre Daten ausschließlich innerhalb der EU gespeichert und verarbeitet, geschützt durch strenge DSGVO-Standards."
+        },
         "protects": {
-          "title": "Dies schützt das Vertrauen",
-          "desc": "Zwischen Kind und Eltern. Kinder müssen wissen, dass sie sich sicher ausdrücken können, während Eltern über ihr Wohlbefinden informiert bleiben."
+          "desc": "Dies schützt das Vertrauen zwischen Kind und Eltern. Kinder müssen wissen, dass sie sich sicher ausdrücken können, während Eltern über ihr Wohlbefinden informiert bleiben."
         }
       }
     },
@@ -652,11 +655,11 @@
   "Privacy": {
     "title": "Datenschutzerklärung SafeMentor",
     "lastUpdated": "Stand: Februar 2026",
-    "intro": "In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung der SafeMentor App, des Eltern-Dashboards und der zugehörigen KI-Dienste. Der Schutz der Privatsphäre von Kindern hat für uns oberste Priorität. Wir folgen den Prinzipien „Privacy by Design“ und „Privacy by Default“ und orientieren uns an internationalen Best Practices für Kindersicherheit (wie KOSA und AADC), um eine sichere Lernumgebung zu gewährleisten.",
+    "intro": "In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung der SafeMentor App, des Eltern-Dashboards und der zugehörigen KI-Dienste. Der Schutz der Privatsphäre von Kindern hat für uns oberste Priorität. Wir folgen den Prinzipien „Privacy by Design“ und „Privacy by Default“ und orientieren uns an internationalen Best Practices für Kindersicherheit (wie KOSA und AADC), um eine sichere Lernumgebung zu gewährleisten.\n\nSafeMentor richtet sich ausschließlich an Kinder bis zum vollendeten 15. Lebensjahr. Die Einwilligung in die Datenverarbeitung wird daher ausschließlich von den Erziehungsberechtigten erteilt.",
     "sections": {
       "1": {
         "title": "1. Verantwortlicher und Kontakt",
-        "content": "Verantwortlich für die Datenverarbeitung ist: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spanien, CIF B56925043. E-Mail: privacy@safementor.app."
+        "content": "Verantwortlich für die Datenverarbeitung ist: \nLighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spanien, \nCIF B56925043. E-Mail: privacy@safementor.app.\n\nDer Datenschutz – Verantwortliche ist Andreas Greif, Mühlenstr. 3, 78176 Blumberg. privacy@safementor.app."
       },
       "2": {
         "title": "2. Datenkategorien und Erhebungszwecke",
@@ -664,77 +667,89 @@
         "items": [
           {
             "title": "Registrierungsdaten (Eltern):",
-            "content": "Name und E-Mail-Adresse der Erziehungsberechtigten sowie Zahlungsdaten (via Drittanbieter wie Stripe/Apple Pay). Zweck: Vertragsabwicklung und Bereitstellung des Eltern-Dashboards. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)."
+            "content": "• Zweck: \nName und Adresse: Steuerrechtliche Pflicht (§ 14 UStG - Rechnungsstellung) \nTelefonnummer: SMS-Verifizierung \nE-Mail: Vertragsabwicklung und Eltern-Dashboard-Zugang\nZahlungsdaten: Vertragsabwicklung\n• Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)."
           },
           {
             "title": "Profildaten des Kindes:",
-            "content": "Pseudonym und Geburtsmonat des Kindes. Zweck: Altersgerechte Anpassung der KI-Antworten und Verifizierung der elterlichen Einwilligung gemäß Art. 8 DSGVO."
+            "content": "Pseudonym und Geburtsmonat des Kindes.\n• Zweck: Altersgerechte Anpassung der KI-Antworten und Verifizierung der elterlichen Einwilligung gemäß Art. 8 DSGVO."
           },
           {
             "title": "Interaktionsdaten und „Project Memory“:",
-            "content": "Chat-Inhalte, gestellte Fragen, generierte Antworten sowie Projektfortschritte (z. B. Python-Code). Zweck: Kontinuität im Lernprozess. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO."
+            "content": "Chat-Inhalte, gestellte Fragen, generierte Antworten sowie Projektfortschritte (z. B. Python-Code).\n• Zweck: Kontinuität im Lernprozess. \n• Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO."
           },
           {
             "title": "Automatisch erhobene Informationen:",
-            "content": "IP-Adresse, Browsertyp, Betriebssystem und Gerätenutzungsdaten. Zweck: Fehlerbeseitigung und statistische Auswertung zur Verbesserung unserer Dienstleistungen. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse)."
+            "content": "IP-Adresse, Browsertyp, Betriebssystem und Gerätenutzungsdaten.\n• Zweck: Fehlerbeseitigung und statistische Auswertung zur Verbesserung unserer Dienstleistungen.\n• Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse)."
           }
         ]
       },
       "3": {
         "title": "3. Besonderheit: KI-Verarbeitung und Intent-Routing",
-        "intro": "SafeMentor nutzt eine mehrstufige Architektur zum Schutz der Daten:",
-        "items": [
-          {
-            "title": "Nano-Router (Intent-Analyse):",
-            "content": "Jede Eingabe des Kindes wird zunächst durch einen spezialisierten „Nano-Router“ analysiert. Dieser prüft in Echtzeit, ob es sich um eine sachliche Lernfrage, eine emotionale Äußerung oder eine kritische Anfrage (Flag) handelt."
-          },
-          {
-            "title": "Gezielte Verarbeitung:",
-            "content": "Je nach erkanntem Intent wird die Anfrage an das passende Modul weitergeleitet, um eine pädagogisch wertvolle und sichere Antwort zu garantieren."
-          },
-          {
-            "title": "Anonymisierung:",
-            "content": "Bevor Daten für komplexe Aufgaben an externe KI-Schnittstellen (z. B. OpenAI, Anthropic, Google Cloud) übertragen werden, werden diese nach Stand der Technik von persönlichen Identifikatoren bereinigt."
-          },
-          {
-            "title": "Sicherheits-Monitoring:",
-            "content": "Inhalte werden automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing) geprüft. Bei akuter Gefahr erfolgt eine Meldung an das Eltern-Dashboard."
-          },
-          {
-            "title": "Emotions-Reporting:",
-            "content": "Unser System analysiert anonymisiert die emotionale Grundstimmung der Interaktionen. Wenn über einen Zeitraum von mehr als zwei Tagen ein anhaltend negativer emotionaler Trend festgestellt wird, informieren wir die Erziehungsberechtigten über die vorherrschende Emotion und das grobe Themenfeld (z. B. \"Schule\" oder \"Freundschaften\"), um einen pädagogischen Austausch in der Familie zu ermöglichen."
-          },
-          {
-            "title": "Eskalations-Mechanismus (Red Flags):",
-            "content": "Bei der Erkennung von akuten Gefährdungslagen (z. B. Anzeichen von Mobbing, Gewalt oder anderen sicherheitsrelevanten Vorfällen) erfolgt eine sofortige Benachrichtigung der Eltern. In diesen Ausnahmefällen werden den Eltern auch Zusammenfassungen der relevanten Chat-Abschnitte zur Verfügung gestellt, damit diese ihrer Aufsichts- und Schutzpflicht nachkommen können."
-          }
-        ]
+        "content": "SafeMentor nutzt verschiedene KI-Modelle, die je nach Anfrage automatisch ausgewählt werden:\n\n• Bevor wir Daten an externe KI-Schnittstellen (derzeit Nebius B.V.) übertragen, werden diese soweit möglich von persönlichen Identifikatoren bereinigt.\n• Jede Eingabe des Kindes wird zunächst durch einen spezialisierten „Nano-Router“ analysiert. Dieser prüft in Echtzeit, ob es sich um eine sachliche Lernfrage, eine emotionale Äußerung oder eine kritische Anfrage (Flag) handelt.\n• Je nach erkanntem Thema wird die Anfrage an das passende Modul weitergeleitet, um eine pädagogisch wertvolle und sichere Antwort zu garantieren.\n• Inhalte werden automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing) geprüft. Bei akuter Gefahr erfolgt eine Meldung an das Eltern-Dashboard und ggf. auch per E-Mail oder SMS.\n\n**Sicherheits-Monitoring & Eltern-Dashboard bereit:**\n\n• Unser System analysiert die emotionale Grundstimmung der Interaktionen und zeigt den emotionalen Trend im Dashboard. \n• Wenn ein bestimmtes negatives emotionales Muster erkannt wird, informieren wir die Erziehungsberechtigten über die vorherrschende Emotion und das grobe Themenfeld (z. B. \"Schule\" oder \"Freundschaften\"), um einen pädagogischen Austausch in der Familie zu ermöglichen (yellow flags).\n• Bei der Erkennung von akuten Gefährdungslagen (z. B. Anzeichen von Mobbing, Gewalt oder anderen sicherheitsrelevanten Vorfällen) erfolgt eine sofortige Benachrichtigung der Eltern. In diesen Ausnahmefällen werden den Eltern auch Zusammenfassungen der relevanten Chat-Abschnitte zur Verfügung gestellt, damit diese ihrer Aufsichts- und Schutzpflicht nachkommen können.\n\nDie Rechtsgrundlage für das Yellow-/Red-Flag-Monitoring basiert auf Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse am Schutz von Kindern vor Gefahren)\n\n**Interessenabwägung:**\n• Unser Interesse: Erfüllung von Kinderschutzpflichten (§§ 1631, 1666 BGB)\n• Interesse der Eltern: Wahrnehmung der Aufsichtspflicht\n• Interesse des Kindes: Schutz vor ernsthaften Gefahren (Gewalt, Missbrauch, Suizid)\n\nWICHTIG: Das Red-Flag-System dient ausschließlich dem Schutz vor schwerwiegenden Gefahren. Es wird NICHT für triviale Verhaltensüberwachung genutzt.\nBeispiele für Red Flags: ✓ Konkrete Suizidankündigungen ✓ Hinweise auf Missbrauch ✓ Schwere Gewaltandrohungen ✗ NICHT: Schimpfwörter, normale Streits, schlechte Noten.\n\nFür Jugendliche (ca. 13-15 Jahre) werden Benachrichtigungen zu emotionalen Trends (Yellow Flags) in abstrakterer Form gegeben. Bei Hinweisen auf akute Gefährdungen (Red Flags) erhalten Eltern weiterhin kontextuelle Informationen, um ihrer Schutzpflicht nachkommen zu können. \nBei Kindern ab 14 Jahren: Das Kind wird über die Red-Flag-Funktion altersgerecht informiert. Bei erkannten Gefahren wird zunächst das Kind selbst ermutigt, mit Eltern/Vertrauenspersonen zu sprechen, bevor automatisch informiert wird (außer bei akuter Lebensgefahr)."
+      },
+      "3a": {
+        "title": "3a. KI-Modelle und Anbieter",
+        "content": "STANDARD-ANFRAGEN: \n• Modell: Nebius AI \n• Standort: Amsterdam/Helsinki, EU\n• Einsatz: Allgemeine Lernfragen, einfache Aufgaben \n\nKOMPLEXE AUFGABEN: \n• Modell: Nebius AI High-Reasoning \n• Standort: EU-Server \n• Einsatz: Mathematische Probleme, komplexe Erklärungen, sehr emotionale Themen oder als Flags gekennzeichnete Anfragen.  \n\nSICHERHEITSKRITISCH: \n• Dual-Check: Zwei unabhängige Nebius-Modelle prüfen parallel \n• Zweck: Einhaltung von sicheren Antworten bei Erkennung von Red Flags\n\nAlle KI-Modelle werden auf Kindersicherheit geprüft und unterliegen strengen DSGVO-Vorgaben (Auftragsverarbeitungsvertrag nach Art. 28 DSGVO). \nWICHTIG: Die Verarbeitung erfolgt ausschließlich auf EU-Servern. Es werden keine Trainingsdaten aus Kinder-Chats erstellt."
+      },
+      "3b": {
+        "title": "3b. Speicherarchitektur und Datenlokation",
+        "content": "SafeMentor verwendet ein hybrides Speichermodell zum Schutz der Privatsphäre: \n\n**LOKALE SPEICHERUNG (auf dem Gerät des Kindes):** \n• Vollständige Chat-Verläufe: AES-256-verschlüsselt, nur auf dem Gerät und nur während der Sitzung. \n• Chat-Summaries: Werden nach Abschluss der Sitzung erstellt und nach 7 Tagen automatisch gelöscht \n• Project Memory: Lokale Datenbank für Projektfortschritte (z.B. Code-Snippets, Details über ein Projekt). Projektspeicher werden nach 30 Tagen Inaktivität gelöscht. \n\n**SERVERSEITIGE SPEICHERUNG (verschlüsselt in EU-Rechenzentren):** \n• Eltern-Dashboard-Daten: Emotionstrends (aggregiert, keine Volltexte), max. 30 Tage. \n• Yellow / Red-Flag-Summaries: Kontextzusammenfassungen (max. 30 Tage)\n• Account-Daten: Registrierungsinformationen, Zahlungsdaten\n\nWICHTIG: Vollständige Chat-Protokolle verlassen niemals das Gerät des Kindes. Nur pseudonymisierte Anfragen werden zur KI-Verarbeitung an Server übermittelt. Bei Geräteverlust sind lokale Daten sind durch Geräte-PIN/Biometrie geschützt. Eine Remote-Löschung über das Eltern-Dashboard ist möglich."
       },
       "4": {
-        "title": "4. Weitergabe an Dritte und Drittstaatentransfer",
+        "title": "4. Weitergabe an Dritte und EU-Datenverarbeitung",
+        "content": "SafeMentor verarbeitet ALLE Daten ausschließlich innerhalb der Europäischen Union. Wir haben uns bewusst für eine EU-only Architektur entschieden, um den höchsten Datenschutzstandard für Kindern zu gewährleisten."
+      },
+      "4a": {
+        "title": "4a. Unterauftragsverarbeiter (EU-Server)",
         "intro": "Wir geben Daten nur zur Vertragserfüllung an sorgfältig ausgewählte Partner weiter:",
-        "items": [
-          {
-            "title": "KI-Provider & Hosting:",
-            "content": "AWS/Azure (Standort EU) sowie spezialisierte KI-Dienste."
-          },
-          {
-            "title": "Drittstaatentransfer:",
-            "content": "Bei Nutzung von US-Diensten stützen wir uns auf den EU-US Data Privacy Framework Angemessenheitsbeschluss vom 10. Juli 2023 oder nutzen Standardvertragsklauseln."
-          },
-          {
-            "title": "Kein Verkauf:",
-            "content": "Wir verkaufen niemals Daten an Dritte."
-          }
-        ]
+        "table": {
+          "headers": ["Kategorie", "Anbieter", "Standort", "Zweck", "Rechtsgrundlage"],
+          "rows": [
+            ["Hosting & Backend", "Google Cloud", "EU (Belgien)", "Server-Infrastruktur", "AVV nach Art. 28 DSGVO"],
+            ["KI-Inference und Reasoning", "Nebius AI B.V.", "EU (Amsterdam / Helsinki)", "KI Antworten generieren", "AVV nach Art. 28 DSGVO"],
+            ["Hosting Frontend", "Vercel Inc.", "EU (Frankfurt)", "Server-Infrastruktur", "AVV nach Art. 28 DSGVO"],
+            ["Zahlungsabwicklung", "Mollie B.V.", "EU", "Kreditkartenzahlungen", "AVV nach Art. 28 DSGVO"],
+            ["Datenbank-Hosting & Backend", "Supabase Ireland Ltd.", "EU (Frankfurt)", "Speicherung der Nutzerkonten (Eltern), Chat-Zusammenfassungen, Projektdaten", "AVV nach Art. 28 DSGVO"],
+            ["SMS Authentication", "Twilio", "EU (Ireland)", "Parent authentication", "AVV nach Art. 28 DSGVO"]
+          ]
+        },
+        "content": "Obwohl Vercel Inc. seinen Hauptsitz in San Francisco (USA) hat, erfolgt die Datenverarbeitung für SafeMentor ausschließlich auf Servern in Frankfurt, Deutschland. Vercel hat sich vertraglich verpflichtet:\n• Daten nicht außerhalb der EU zu übertragen\n• Keinen Zugriff von US-Mitarbeitern auf EU-Server-Daten zu gewederte\n• Bei behördlichen Anfragen SafeMentor unverzüglich zu informieren. \nZusätzlicher Schutz: Alle sensiblen Daten (Chat-Inhalte, Emotionstrends) werden vor der Speicherung auf Vercel-Servern Ende-zu-Ende-verschlüsselt, sodass Vercel selbst keinen Zugriff auf Klartext-Daten hat.\n\nAuch die Twilio Inc. hat ihren Hauptsitz in den USA, SafeMentor nutzt aber für die Eltern-Authentifizierung die europäische Infrastruktur von Twilio in der Region Irland (IE1). Damit wird sichergestellt, dass die primäre Verarbeitung und Speicherung der Authentifizierungsdaten (wie Mobilfunknummern und Verifizierungscodes) innerhalb des EWR erfolgt.\nTwilio hat sich durch ein Data Processing Addendum (DPA) sowie ergänzende technische Maßnahmen dazu verpflichtet:\n• Die Speicherung und Verarbeitung personenbezogener Daten vorrangig auf Servern innerhalb der EU durchzuführen.\n• Ein angemessenes Datenschutzniveau durch die Anwendung von EU-Standardvertragsklauseln und die Zertifizierung unter dem EU-U.S. Data Privacy Framework zu gewährleisten.\n• Den Zugriff auf Daten durch US-Einheiten auf das für den technischen Betrieb absolut notwendige Minimum zu beschränken.\n• Im Falle von Behördenanfragen gemäß den internen Richtlinien zur Transparenz zu verfahren und die Interessen von SafeMentor zu wahren.\n\n**Technische Details zu Nebius AI :** \n• Unternehmensform: Nebius AI B.V. (Niederlande) \n• Rechenzentren: Amsterdam (primär), Helsinki (Backup) \n• Zertifizierungen: ISO 27001, SOC 2 Type II \n• Datenresidenz: Alle Daten bleiben in EU-Rechenzentren \n• Trainingsverbot: Nebius nutzt KEINE Kundendaten für Modelltraining \n• Aufbewahrung: Anfragen werden nach Verarbeitung sofort gelöscht"
+      },
+      "4b": {
+        "title": "4b. Keine Drittstaatentransfers",
+        "content": "WICHTIG: Es erfolgt KEIN Datentransfer in Länder außerhalb der EU/EWR. Alle Datenverarbeitungen unterliegen ausschließlich der DSGVO."
+      },
+      "4c": {
+        "title": "4c. Auftragsverarbeitungsverträge (AVV)",
+        "content": "Alle Unterauftragsverarbeiter wurden gemäß Art. 28 DSGVO sorgfältig ausgewählt und haben mit SafeMentor rechtskonforme Auftragsverarbeitungsverträge abgeschlossen.\nDiese enthalten insbesondere:\n• Weisungsgebundenheit des Auftragsverarbeiters\n• Vertraulichkeitsverpflichtungen aller Mitarbeiter\n• Technische und organisatorische Maßnahmen (TOMs)\n• Unterstützung bei Betroffenenrechten\n• Pflicht zur sofortigen Meldung von Datenschutzverletzungen\n• Löschpflichten nach Vertragsende"
+      },
+      "4d": {
+        "title": "4d. Aktuelle Liste und Änderungshinweise",
+        "content": "Eine stets aktuelle Liste aller Unterauftragsverarbeiter mit Kontaktdaten finden Sie unter: /de/subprocessors\nBei Änderungen (z.B. neuer Provider) werden Sie rechtzeitig (mind. 30 Tage vorher) per E-Mail informiert. Sie haben dann das Recht, der Beauftragung zu widersprechen."
+      },
+      "4e": {
+        "title": "4e. Kein Datenverkauf",
+        "content": "Wir verkaufen NIEMALS Daten an Dritte – weder zu Werbe-, Marketing- noch zu sonstigen Zwecken. Ihre und die Daten Ihrer Kinder werden ausschließlich zur Erbringung unserer Dienste verarbeitet."
       },
       "5": {
         "title": "5. Cookie-Richtlinie",
-        "content": "Wir verwenden technisch notwendige Cookies, um Funktionen wie den Login zu ermöglichen. Sie können Cookies über Ihren Browser blockieren."
+        "content": "Wir verwenden technisch notwendige Cookies, um Funktionen wie den Login zu ermöglichen. Sie können Cookies über Ihren Browser blockieren.\n\n**TECHNISCH NOTWENDIGE COOKIES (ohne Einwilligung):**\n• Session-Cookie: Aufrechterhaltung des Logins (Laufzeit: bis Session-Ende)\n• CSRF-Token: Schutz vor Angriffen (Laufzeit: 24 Stunden)\n\nSie können Ihre Cookie-Einstellungen jederzeit anpassen oder Cookies generell in Ihrem Browser blockieren. Bitte beachten Sie, dass bei Deaktivierung technischer Cookies die Funktionalität eingeschränkt sein kann.\nWir verwenden KEINE Cookies von Drittanbietern (Google Analytics, Facebook Pixel etc.)."
       },
       "6": {
         "title": "6. Speicherdauer",
-        "content": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist oder gesetzliche Fristen bestehen. Bei Löschung des Accounts werden alle Chat-Verläufe innerhalb von 30 Tagen endgültig gelöscht."
+        "intro": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist oder gesetzliche Fristen bestehen.",
+        "table": {
+          "headers": ["DATENTYP", "SPEICHERFRIST", "RECHTSGRUNDLAGE"],
+          "rows": [
+            ["Account-Daten (Eltern)", "Bis Vertragsende + 10 Jahre", "§ 147 AO (Aufbewahrungspflicht)"],
+            ["Chat-Summaries (normal)", "7 Tage", "Art. 6 Abs. 1 lit. b DSGVO"],
+            ["Project Memory", "30 Tage nach letzter Nutzung", "Art. 6 Abs. 1 lit. b DSGVO"],
+            ["Yellow-/Red-Flag-Summaries", "30 Tage (automatische Löschung)", "Art. 6 Abs. 1 lit. f DSGVO (Kinderschutz)"],
+            ["Emotionstrends (aggregiert)", "30 Tage", "Art. 6 Abs. 1 lit. f DSGVO"],
+            ["Vollständige Chat-Protokolle", "Niemals serverseitig gespeichert", "Privacy by Design"]
+          ]
+        },
+        "content": "WICHTIG: Red-Flag-Summaries werden auch dann nach 30 Tagen gelöscht, wenn die Gefährdungslage fortbesteht. Dies dient dem Schutz der Privatsphäre des Kindes. Bei anhaltenden Sorgen empfehlen wir professionelle Unterstützung (z.B. Familien- beratung) statt technischer Dauerüberwachung.\n\n**Account-Löschung:** Bei Kündigung werden alle personenbezogenen Daten (außer steuerrechtlich relevante Dokumente) innerhalb von 30 Tagen vollständig gelöscht."
       },
       "7": {
         "title": "7. Ihre Rechte (Betroffenenrechte)",
@@ -743,8 +758,110 @@
       "8": {
         "title": "8. Datensicherheit",
         "content": "Wir setzen modernste TLS/SSL-Verschlüsselung ein. Der Zugriff auf das Eltern-Dashboard ist durch eine Multi-Faktor-Authentifizierung geschützt. Bei Sicherheitsvorfällen informieren wir die Behörden gemäß den gesetzlichen Vorschriften."
+      },
+      "9": {
+        "title": "9. Automatisierte Entscheidungsfindung und Profiling",
+        "intro": "SafeMentor nutzt KI-gestützte automatisierte Verarbeitung in folgenden Bereichen:",
+        "items": [
+          {
+            "title": "INTENT-KLASSIFIKATION (Nano-Router):",
+            "content": "• Zweck: Automatische Zuordnung der Anfrage zum passenden KI-Modell\n• Logik: Machine-Learning-Klassifikator (Emotion, Komplexität, Sicherheit)\n• Rechtsfolge: Keine nachteiligen Wirkungen für das Kind"
+          },
+          {
+            "title": "EMOTIONS-ERKENNUNG:",
+            "content": "• Zweck: Erkennung emotionaler Trends über mehrere Tage\n• Logik: Sentiment-Analyse auf Basis von NLP-Modellen\n• Rechtsfolge: Informierung der Eltern bei anhaltendem Negativtrend\n• Widerspruchsrecht: Eltern können Emotions-Reporting deaktivieren (Einstellungen)"
+          },
+          {
+            "title": "YELLOW-/RED-FLAG-ERKENNUNG:",
+            "content": "• Zweck: Schutz vor Gefahren (Gewalt, Missbrauch, Suizid)\n• Logik: Regelbasiertes System + KI-Klassifikator (Dual-Check bei kritischen fällen)\n• Rechtsfolge: Sofortige Elternbenachrichtigung\n• WICHTIG: Dies ist KEINE voll automatisierte Entscheidung im Sinne von Art. 22 DSGVO, da die finale Entscheidung über Schutzmaßnahmen bei den Eltern liegt."
+          }
+        ],
+        "content": "Sie haben das Recht, gegen diese Verarbeitungen Widerspruch einzulegen (Art. 21 DSGVO)."
+      },
+      "10": {
+        "title": "10. Beschwerderecht bei einer Aufsichtsbehörde",
+        "content": "Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, insbesondere in dem Mitgliedstaat Ihres Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die Datenschutz-Grundverordnung (DSGVO) verstößt.\n\n**Hinweis zur Zuständigkeit:**\nAls datenschutzrechtlich verantwortliche Stelle unterliegen wir der Aufsicht der für unseren Sitz zuständigen Aufsichtsbehörde oder der für den Hauptort unserer Datenverarbeitung maßgeblichen Behörde. Sie können Ihre Beschwerde jedoch auch an die Datenschutzbehörde in dem EU-Mitgliedstaat richten, in dem Sie wohnen, arbeiten oder in dem die mutmaßliche Verletzung stattgefunden hat. Eine Liste der Aufsichtsbehörden mit Kontaktdaten finden Sie unter: https://edpb.europa.eu/about-edpb/about-edpb/members_de"
+      },
+      "11": {
+        "title": "11. Freiwilligkeit der Datenbereitstellung",
+        "content": "Die Bereitstellung Ihrer personenbezogenen Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Sie sind auch nicht verpflichtet, uns personenbezogene Daten bereitzustellen. Vertragliche Verpflichtungen oder die Möglichkeit, Verträge abzuschließen, bestehen nicht.\n\n**Konsequenzen der Nichtbereitstellung:**\nEine Nichtbereitstellung Ihrer personenbezogenen Daten hat lediglich zur Folge, dass Sie unsere Dienste nicht nutzen können. Es entstehen Ihnen hieraus keine weiteren Nachteile.\n\n**Pflichtfelder und optionale Angaben:**\nIm Rahmen der Registrierung und Nutzung kennzeichnen wir Pflichtfelder, deren Angabe für den Vertragsschluss und die Bereitstellung unserer Dienste erforderlich ist (z.B. E-Mail-Adresse der Eltern, Geburtsdatum des Kindes). Alle weiteren Angaben sind freiwillig und können ohne Beeinträchtigung der Nutzungsmöglichkeiten weggelassen werden."
+      },
+      "12": {
+        "title": "12. Widerruf Ihrer Einwilligung",
+        "content": "Soweit die Verarbeitung Ihrer personenbezogenen Daten auf einer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) beruht, haben Sie das Recht, diese Einwilligung jederzeit für die Zukunft zu widerrufen. Die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung wird durch diesen nicht berührt.\n\n**Auswirkungen des Widerrufs:**\nDer Widerruf Ihrer Einwilligung kann zur Folge haben, dass bestimmte Funktionen von SafeMentor, die auf dieser Einwilligung basieren (z.B. die Nutzung bestimmter KI-Modelle oder detailliertere Analysen), nicht mehr oder nur eingeschränkt genutzt werden können. Die Kernfunktionalität der Plattform bleibt in der Regel erhalten, soweit andere Rechtsgrundlagen (z.B. Vertragserfüllung, Art. 6 Abs. 1 lit. b DSGVO) die Verarbeitung tragen.\n\n**Wie Sie widerrufen können:**\nSie können Ihre Einwilligung formlos mit Wirkung für die Zukunft widerrufen. Bitte richten Sie Ihren Widerruf an:\nPer E-Mail: privacy@safementor.app\nPer Post: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spanien.\n\nZur Sicherheit und eindeutigen Identifikation bitten wir Sie, in Ihrer Widerrufserklärung die E-Mail-Adresse anzugeben, mit der Sie bei SafeMentor registriert sind."
+      },
+      "13": {
+        "title": "13. Datenschutz-Folgenabschätzung (DPIA)",
+        "intro": "SafeMentor hat im Februar 2026 eine Datenschutz-Folgenabschätzung (DPIA) gemäß Art. 35 DSGVO durchgeführt, um die Risiken für die Rechte und Freiheiten der Kinder zu bewerten.\n\n**Grund für die DPIA-Pflicht:** Die Verarbeitung umfasst:\n• Systematische Überwachung (Red-Flag-Monitoring)\n• Verarbeitung sensibler Daten von Kindern (unter 16 Jahren)\n• Automatisierte Entscheidungsfindung (Emotionsanalyse, Intent-Routing)\n\n**Ergebnis der DPIA:** Die identifizierten Risiken (z.B. Reidentifizierung, psychologische Effekte, unbefugter Zugriff) wurden durch folgende Maßnahmen auf ein akzeptables Niveau reduziert:",
+        "items": [
+          {
+            "title": "TECHNISCHE SCHUTZMASSNAHMEN:",
+            "content": "• Privacy by Design Architektur (lokale Speicherung von Volltexten)\n• AES-256-Verschlüsselung aller sensiblen Daten\n• Pseudonymisierung vor Übertragung an KI-Provider\n• Ende-zu-Ende-Verschlüsselung (TLS 1.3)\n• Automatische Löschung nach 7/30 Tagen"
+          },
+          {
+            "title": "ORGANISATORISCHE SCHUTZMASSNAHMEN:",
+            "content": "• Strenge Zugriffskontrolle (Multi-Faktor-Authentifizierung)\n• Regelmäßige Sicherheitsaudits (alle 6 Monate)\n• Schulung aller Mitarbeiter zu Kinderschutz & DSGVO\n• Notfallplan bei Datenpannen"
+          }
+        ],
+        "content": "Die vollständige DPIA-Zusammenfassung kann unter privacy@safementor.app angefordert werden.\n\nNächste Überprüfung: Januar 2027"
       }
     }
+  },
+  "Subprocessors": {
+    "title": "Liste der Unterauftragsverarbeiter",
+    "intro": "SafeMentor arbeitet mit den folgenden Dienstleistern (Unterauftragsverarbeitern) zusammen, um unsere Dienste bereitzustellen. Alle Datenverarbeitungen finden ausschließlich auf Servern innerhalb der Europäischen Union (EU) statt.",
+    "headers": {
+      "category": "Kategorie",
+      "provider": "Anbieter",
+      "location": "Standort",
+      "purpose": "Zweck / Funktion",
+      "contact": "Kontaktdaten"
+    },
+    "providers": [
+      {
+        "category": "Hosting & Backend",
+        "provider": "Google Cloud (Google Ireland Limited)",
+        "location": "EU (Belgien)",
+        "purpose": "Server-Infrastruktur und Speicherung",
+        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irland. Datenschutz: [Anfrageformular](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
+      },
+      {
+        "category": "KI-Inference",
+        "provider": "Nebius AI B.V.",
+        "location": "EU (Amsterdam / Helsinki)",
+        "purpose": "Generierung von KI-Antworten",
+        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Niederlande. E-Mail: privacy@nebius.com"
+      },
+      {
+        "category": "Hosting Frontend",
+        "provider": "Vercel Inc.",
+        "location": "EU (Frankfurt)",
+        "purpose": "Infrastruktur für die Web-Applikation",
+        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Brüssel, Belgien. E-Mail: privacy@vercel.com"
+      },
+      {
+        "category": "Zahlungsabwicklung",
+        "provider": "Mollie B.V.",
+        "location": "EU",
+        "purpose": "Abwicklung von Kreditkartenzahlungen",
+        "contact": "Keizersgracht 313, 1016 EE Amsterdam, Niederlande. E-Mail: privacy@mollie.com"
+      },
+      {
+        "category": "Datenbank-Hosting",
+        "provider": "Supabase Ireland Ltd.",
+        "location": "EU (Frankfurt)",
+        "purpose": "Speicherung von Nutzerkonten und Projektdaten",
+        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland. E-Mail: privacy@supabase.com"
+      },
+      {
+        "category": "SMS-Authentifizierung",
+        "provider": "Twilio Ireland Limited",
+        "location": "EU (Irland)",
+        "purpose": "Eltern-Authentifizierung via SMS",
+        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Irland. E-Mail: privacy@twilio.com"
+      }
+    ],
+    "back": "Zurück zur Datenschutzerklärung"
   },
   "Access": {
     "title": "Hallo und willkommen beim SafeMentor-Pilot",
@@ -759,6 +876,9 @@
     "modalTitle": "Impressum & Datenschutz (Pilot)",
     "intro": "Für die Pilotphase gelten folgende Bestimmungen:",
     "provider": "Impressum - Anbieter gemäß § 5 DDG sind Andreas Greif & Heinrich Gronauer.",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "E-Mail: safementor-pilot@mail.com, Telefon: +49 176 34 901755",
+    "disputeResolution": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
     "privacy": "Datenschutz - Verantwortlich sind Andreas Greif & Heinrich Gronauer, Mühlenstr. 3, 78176 Blumberg. Beim Besuch dieser Seite wird Ihre IP-Adresse aus technischen Gründen und zur Sicherstellung der Systemsicherheit verarbeitet. Wir verwenden ein technisch notwendiges Session-Cookie, um den Zugriff über Ihren Zugangscode zu verwalten. Es werden keine Tracking- oder Marketing-Cookies eingesetzt. Nach dem Login finden Sie unsere ausführliche Datenschutzerklärung."
   },
   "LoginLegal": {
@@ -768,9 +888,9 @@
   },
   "Imprint": {
     "title": "Impressum",
-    "provider": "Anbieter dieser Internetseiten sind",
-    "names": "Andreas Greif & Heinrich Gronauer",
-    "address": "Mühlenstr.3, 78176 Blumberg",
+    "provider": "Anbieter dieser Internetseiten ist",
+    "names": "Lighthouse Engineering Architecture S.L. Geschäftsführer: Andreas Greif",
+    "address": "Av Lluc 58, BJ, 07300 Inca, Spanien. CIF B56925043.",
     "contactInfo": "E-Mail: safementor-pilot@mail.com, Telefon: +49 176 34 901755",
     "disputeResolution": "Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
     "copyright": "Alle Rechte an den Inhalten dieser Webseiten bleiben vorbehalten. Jede kommerzielle Verwertung bedarf der vorherigen Zustimmung des Rechtsinhabers.",

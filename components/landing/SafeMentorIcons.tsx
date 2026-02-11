@@ -42,6 +42,12 @@ export const ParentsIcon = () => (
     </svg>
 );
 
+export const EuIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <path d="M10 2C5.58 2 2 5.58 2 10C2 14.42 5.58 18 10 18C14.42 18 18 14.42 18 10C18 5.58 14.42 2 10 2ZM6 8H9V9H7V11H9V12H6V8ZM11 8H12V11C12 11.55 12.45 12 13 12C13.55 12 14 11.55 14 11V8H15V11C15 12.1 14.1 13 13 13C11.9 13 11 12.1 11 11V8Z" />
+    </svg>
+);
+
 export const CuriosityIcon = () => (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="10" stroke="#5A6B52" strokeWidth="2" fill="none" />

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
-import { KosaIcon, GdprIcon, ParentsIcon } from './SafeMentorIcons';
+import { KosaIcon, GdprIcon, ParentsIcon, EuIcon } from './SafeMentorIcons';
 
 export const TrustBadges = () => {
     const t = useTranslations('SafeMentor.Trust');
@@ -10,6 +10,7 @@ export const TrustBadges = () => {
     const badges = [
         { icon: <KosaIcon />, label: t('badge1') },
         { icon: <GdprIcon />, label: t('badge2') },
+        { icon: <EuIcon />, label: t('badge4') },
         { icon: <ParentsIcon />, label: t('badge3') },
     ];
 
