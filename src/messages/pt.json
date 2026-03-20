@@ -1,0 +1,409 @@
+{
+  "Access": {
+    "title": "Welcome to SafeMentor Pilot",
+    "description": "Please enter the password to get started.",
+    "placeholder": "Enter Password",
+    "button": "Unlock Access",
+    "error": "Incorrect Password"
+  },
+  "AccessLegal": {
+    "contactLabel": "Questions about the pilot:",
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy (Pilot)",
+    "intro": "The following provisions apply to the pilot phase:",
+    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer.",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
+  },
+  "Header": {
+    "title": "Safementor",
+    "home": "Início",
+    "login": "Entrar",
+    "register": "Cadastrar",
+    "logout": "Sair",
+    "welcome": "Bem-vindo",
+    "loggedIn": "Logado",
+    "chat": "Chat"
+  },
+  "Navigation": {
+    "language": "Idioma",
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
+  },
+  "HomePage": {
+    "title": "Bem-vindo ao Projeto Safementor",
+    "description": "Sistema de autenticação com Next.js e Supabase.",
+    "features": "Recursos incluídos:",
+    "feature1": "Registro com email e senha",
+    "feature2": "Login e logout seguro",
+    "feature3": "Persistência de sessão",
+    "feature4": "Proteção de rotas"
+  },
+  "Auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "confirmPassword": "Confirmar Senha",
+    "submit": "Enviar",
+    "loading": "Carregando...",
+    "createAccount": "Criar Conta",
+    "signIn": "Entrar",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "dontHaveAccount": "Não tem uma conta?",
+    "forgotPassword": "Esqueceu a senha?"
+  },
+  "RegisterPage": {
+    "title": "Criar Conta",
+    "emailPlaceholder": "seu@email.com",
+    "passwordPlaceholder": "Mínimo 6 caracteres",
+    "successMessage": "Cadastro realizado! Verifique seu email para confirmar.",
+    "successTitle": "Obrigado por se juntar ao Safementor!",
+    "successDescription": "Após clicar no link de ativação no seu e-mail, proceda ao login!",
+    "goHome": "Ir para o Início",
+    "goLogin": "Proceder ao Login"
+  },
+  "VerifiedPage": {
+    "title": "E-mail Ativado!",
+    "description": "Seu e-mail foi verificado com sucesso. Você já pode proceder ao login!",
+    "goLogin": "Ir para o Login"
+  },
+  "LoginPage": {
+    "title": "Entrar",
+    "emailPlaceholder": "seu@email.com"
+  },
+  "Dashboard": {
+    "title": "Painel de Controle",
+    "welcome": "Bem-vindo",
+    "protectedMessage": "Você está logado e esta página está protegida.",
+    "goToHome": "Ir para a página inicial",
+    "active": "Ativo",
+    "sections": {
+      "overview": "Visão Geral",
+      "children": "Filhos",
+      "privacy": "Privacidade",
+      "help": "Ajuda",
+      "personalInfo": "Informações Pessoais",
+      "contactInfo": "Informações de Contato",
+      "address": "Endereço de Entrega",
+      "billingAddress": "Endereço de Faturação",
+      "settings": "Inscrição e Configurações",
+      "privacySecurity": "Privacidade e Segurança",
+      "preferences": "Preferências do App",
+      "communication_preferences": "Preferências de Comunicação",
+      "social": "Social e Bio"
+    },
+    "fields": {
+      "firstname": "Primeiro Nome",
+      "lastname": "Apelido / Sobrenome",
+      "nickname": "Alcunha / Nickname",
+      "gender": "Género",
+      "relative_to_children": "Relação com os Filhos",
+      "email": "E-mail",
+      "phone": "Telemóvel / Telefone",
+      "phone_is_verified": "Telefone Verificado",
+      "address_line1": "Rua / Morada",
+      "address_additional_info": "Info Adicional (Porta, Bloco)",
+      "address_city": "Cidade",
+      "address_state": "Distrito / Estado",
+      "address_country": "País",
+      "address_postal_code": "Código Postal",
+      "address_timezone": "Fuso Horário",
+      "billing_same_as_shipping": "Faturação igual à entrega",
+      "billing_address_line1": "Rua de Faturação",
+      "billing_address_additional_info": "Info Adit. Faturação",
+      "billing_city": "Cidade de Faturação",
+      "billing_state": "Distrito de Faturação",
+      "billing_country": "País de Faturação",
+      "billing_postal_code": "Cód. Postal de Faturação",
+      "is_subscribed": "Subscrito na Newsletter",
+      "subscription_tier": "Plano",
+      "two_factor_enabled": "Autenticação de Dois Fatores",
+      "theme": "Tema do App",
+      "language": "Idioma do App",
+      "date_format": "Formato de Data",
+      "time_format": "Formato de Hora",
+      "bio": "Biografia / Notas",
+      "profile_picture_url": "URL da Foto de Perfil",
+      "childrenname": "Nome Completo",
+      "age": "Idade",
+      "medical_has_allergies": "Possui Alergias",
+      "medical_has_mental_disorders": "Possui Distúrbios Mentais",
+      "medical_has_physical_disorders": "Possui Distúrbios Físicos",
+      "selectChild": "Selecionar Filho"
+    },
+    "options": {
+      "genders": {
+        "male": "Masculino",
+        "female": "Feminino",
+        "diverse": "Diverso",
+        "prefer_not_to_say": "Prefiro não dizer"
+      },
+      "relations": {
+        "Mother": "Mãe",
+        "Father": "Pai",
+        "Uncle": "Tio",
+        "Aunt": "Tia",
+        "Grandfather": "Avô",
+        "Grandmother": "Avó",
+        "Other": "Outro"
+      },
+      "themes": {
+        "light": "Claro",
+        "dark": "Escuro",
+        "system": "Sistema"
+      }
+    },
+    "placeholders": {
+      "firstname": "João",
+      "lastname": "Silva",
+      "nickname": "Joni",
+      "phone": "+351 912 345 678",
+      "address_line1": "Rua Principal",
+      "city": "Lisboa",
+      "zip": "1000-001",
+      "bio": "Conte-nos um pouco sobre si...",
+      "childrenname": "Nome completo do filho",
+      "email": "filho@exemplo.com",
+      "selectChild": "Selecione um filho da lista",
+      "selectChildToEdit": "Por favor, selecione um filho na lista acima para visualizar ou editar as suas informações."
+    },
+    "content": {
+      "noChildren": "Nenhum filho listado ainda. Clique no botão abaixo para adicionar.",
+      "addChild": "Adicionar Filho",
+      "privacyDescription": "Gerencie seus dados e configurações de segurança aqui.",
+      "helpDescription": "Precisa de assistência? Entre em contato com nossa equipe de suporte.",
+      "supportTicket": "Abrir Ticket de Suporte"
+    },
+    "user": {
+      "role": "Pai / Guardião",
+      "status": "Estado Online"
+    },
+    "actions": {
+      "saveChanges": "Salvar Alterações",
+      "loading": "Salvando...",
+      "saveChild": "Salvar Filho",
+      "deleteChild": "Excluir Filho",
+      "cancel": "Cancelar",
+      "confirmDelete": "Tem certeza de que deseja excluir este filho? Esta ação não pode ser desfeita."
+    }
+  },
+  "Errors": {
+    "invalidEmail": "E-mail inválido",
+    "passwordLength": "Senha deve ter pelo menos 6 caracteres",
+    "passwordMismatch": "As senhas não coincidem",
+    "generic": "Ocorreu um erro. Tente novamente."
+  },
+  "Landing": {
+    "Hero": {
+      "title1": "Safementor",
+      "title2": "para",
+      "title3": "projeto Safementor",
+      "description": "Translation",
+      "emailPlaceholder": "Digite seu endereço de email",
+      "startTrial": "Iniciar Teste Grátis",
+      "noCreditCard": "Não requer cartão de crédito.",
+      "freeTrial": "14 dias de teste grátis.",
+      "cancelAnytime": "Cancele a qualquer momento."
+    },
+    "Trusted": {
+      "title": "Confiado por mais de 10000+ clientes",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "company": "Empresa"
+    },
+    "Features": {
+      "awesomeFeature": "Recurso Incrível",
+      "mainTitle": "Seu título aqui",
+      "mainDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia, nisl nisl aliquet nisl, nec tincidunt nisl lorem eu nunc.",
+      "featureTitle": "Seu título aqui",
+      "featureDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, nisl ut aliquam lacinia."
+    }
+  },
+  "SafeMentor": {
+    "Navigation": {
+      "values": "Our Values",
+      "approach": "Our Approach",
+      "learnMore": "Learn More"
+    },
+    "Hero": {
+      "eyebrow": "Nurturing Growth, Together",
+      "title": "Supporting children with guidance, trust, and space to grow",
+      "subtitle": "SafeMentor helps families nurture curiosity, build trust, and support healthy development — with technology that respects childhood.",
+      "ctaPrimary": "Discover Our Approach",
+      "ctaSecondary": "For Parents"
+    },
+    "Trust": {
+      "badge1": "Kids Online Safety Act inspired",
+      "badge2": "GDPR Compliant",
+      "badge3": "Made by parents for parents"
+    },
+    "Values": {
+      "eyebrow": "What SafeMentor Is",
+      "title": "SafeMentor is not another screen-time product",
+      "description": "It is a thinking and mentoring companion designed to help children develop curiosity, responsibility, emotional strength, and real-world connection — with strong support for parents.",
+      "emphasis": "Children don't need more apps. They need guidance, trust, and space to grow.",
+      "citation": "SafeMentor is built on internationally recognized child-development principles from Gerald Hüther, Jesper Juul, Dan Siegel, and principle-based thinking. We do not shape children through control. We invite development through relationship.",
+      "card1": {
+        "title": "Curiosity over pressure",
+        "desc": "Encouraging wonder and exploration, not performance metrics"
+      },
+      "card2": {
+        "title": "Connection over control",
+        "desc": "Development through relationship, not forced behavior"
+      },
+      "card3": {
+        "title": "Trust over surveillance",
+        "desc": "Insight for parents without invading children's privacy"
+      },
+      "learning": {
+        "eyebrow": "What SafeMentor Helps With",
+        "title": "Learning & Understanding",
+        "description": "SafeMentor supports children with understanding school topics, exploring ideas and interests, and working through problems step by step.",
+        "callout": {
+          "title": "Important:",
+          "desc1": "SafeMentor does not give instant answers for homework.",
+          "desc2": "Instead, it asks guiding questions, helps children think step by step, and encourages their own ideas."
+        },
+        "emphasis": "Because learning should activate the brain, not replace it."
+      },
+      "offline": {
+        "title": "Offline Life Comes First",
+        "description": "SafeMentor actively encourages offline activities, creativity in the real world, and time with friends, family, and nature.",
+        "emphasis": "The best moments don't happen on a screen."
+      },
+      "standards": {
+        "title": "Built to Global Standards",
+        "intro": "Trust is good, certified safety is better. SafeMentor was built from the ground up to use the world's strictest child safety guidelines as a foundation:",
+        "list": [
+          {
+            "title": "KOSA (Kids Online Safety Act):",
+            "desc": "A US standard that requires platforms to consistently put child welfare above profit and actively protect against addiction risks."
+          },
+          {
+            "title": "AADC (Age Appropriate Design Code):",
+            "desc": "A UK rulebook ensuring that technology prioritizes children's well-being and prohibits any form of manipulative design tricks."
+          },
+          {
+            "title": "EU AI Act & GDPR:",
+            "desc": "European laws for Artificial Intelligence and data protection that guarantee you maximum transparency and the highest protection of your child's personal data."
+          }
+        ],
+        "beliefTitle": "Because we believe: Technology should serve development, not addiction.",
+        "beliefText": "While most apps fight for every minute of your child's attention with psychological tricks, SafeMentor does the opposite. We consciously avoid reward systems, \"streaks\" (pressure through daily usage chains), or artificial incentives that glue children to the screen. Our goal is for your child to use SafeMentor to better understand the real world – and then put the device away with a good feeling to apply what they've learned in real life."
+      },
+      "emotional": {
+        "title": "Emotional Support — Without Replacing Humans",
+        "description": "SafeMentor listens when children want to talk. It can help children name emotions, encourage reflection, and suggest healthy next steps.",
+        "callout": {
+          "title": "But it is not a therapist",
+          "desc": "and never replaces real people."
+        },
+        "final": "When needed, SafeMentor gently encourages talking to parents, talking to trusted adults, and seeking real human support."
+      },
+      "safety": {
+        "eyebrow": "For Parents",
+        "title": "Safety & Early Warning",
+        "description": "SafeMentor looks for patterns, not secrets.",
+        "detect": {
+          "title": "What We Detect",
+          "list": [
+            "Emotional trends over time",
+            "Warning signs (distress, isolation)",
+            "Serious red flags: self-harm, grooming, bullying, drugs, harm to others"
+          ]
+        },
+        "see": {
+          "title": "What Parents See",
+          "list": [
+            "Aggregated insights",
+            "Clear explanations",
+            "Practical guidance"
+          ]
+        },
+        "notSee": {
+          "title": "What Parents Do NOT See",
+          "list": [
+            "Raw chat transcripts",
+            "Private confessions",
+            "Real-time surveillance"
+          ]
+        },
+        "protects": {
+          "title": "This Protects Trust",
+          "desc": "Between child and parent. Children need to know they can express themselves safely, while parents stay informed about their wellbeing."
+        }
+      }
+    },
+    "Approach": {
+      "eyebrow": "Our Approach",
+      "title": "Technology that knows when to step back",
+      "description": "SafeMentor is designed to support children's natural curiosity and emotional growth — then gently guide them back to real-world experiences, conversations, and play.",
+      "bullet1": {
+        "title": "Encourages offline exploration",
+        "desc": "Suggests activities, conversations, and experiences that happen away from screens."
+      },
+      "bullet2": {
+        "title": "Keeps parents informed",
+        "desc": "Clear, honest communication about what your child is learning and experiencing."
+      }
+    },
+    "Families": {
+      "title": "Supporting Parents — Not Judging Them",
+      "description": "SafeMentor exists to support parents, not replace them.",
+      "receives": {
+        "title": "Parents receive:",
+        "list": [
+          "Calm explanations of emotional trends",
+          "Context for what signals mean — and what they don't",
+          "Suggestions for how to talk to their child",
+          "Encouragement to build trust and connection"
+        ],
+        "emphasis": "We never shame parents. We help them grow together with their child."
+      },
+      "trust": {
+        "title": "Built on Trust",
+        "description": "We believe:",
+        "list": [
+          "Children grow through safe relationships",
+          "Development cannot be forced",
+          "Trust is more powerful than control"
+        ],
+        "final": "SafeMentor is designed to disappear when it's no longer needed.",
+        "emphasis": "Because success means: A child who thinks, feels, connects — and lives fully offline."
+      }
+    },
+    "Quote": {
+      "text": "\"SafeMentor helped our family have conversations we didn't know how to start. It's not about the technology — it's about bringing us closer together.\"",
+      "author": "Maria K.",
+      "role": "Mother of two"
+    },
+    "CTA": {
+      "title": "Ready to learn how SafeMentor works?",
+      "subtitle": "Discover a calmer, more thoughtful approach to technology for your family.",
+      "buttonPrimary": "Learn How SafeMentor Works",
+      "buttonSecondary": "Read Our Principles",
+      "disclaimer": "No commitment required. Just thoughtful information."
+    },
+    "Footer": {
+      "text": "Technology that respects childhood. Built with care, guided by ethics, focused on what matters most.",
+      "learnMore": "Learn More",
+      "company": "Company",
+      "links": {
+        "approach": "Our Approach",
+        "ethics": "Ethics Guidelines",
+        "educators": "For Educators",
+        "research": "Research",
+        "about": "About Us",
+        "privacy": "Privacy Policy",
+        "contact": "Contact"
+      },
+      "bottom": "Made with care for children and families."
+    }
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "Ops! A página que você está procurando não existe ou foi movida.",
+    "goHome": "Voltar para o Início"
+  }
+}

@@ -1,0 +1,25 @@
+please check info.txt for an idea for a project folder reorganization. Please plan a total refactoring of the folders and structure. the plan must include the relinking of the units dependencies to keep the project working. if you have a more professional strategy please apply it. this is a next.js project
+
+Reviewed info.txt and planned folder refactoring strategy
+I'll check the info.txt file first to see what ideas are outlined there, then analyze the project structure and create a comprehensive refactoring plan.
+
+Reviewed info.txt lines 1 to 251
+Now let me examine the current project structure more carefully to create a comprehensive refactoring plan:
+
+Reviewed 6 files
+Perfect! Now I have a complete understanding of the current state. Let me create a comprehensive refactoring plan for your Next.js project:
+
+Created 4 files and reviewed 2 files
+Perfect! I've created a comprehensive refactoring plan for your Next.js project. Here's what I've delivered:
+
+📋 Documentation Created
+I've created 4 detailed refactoring documents in your project root:
+
+1. REFACTORING_PLAN.md 📐
+Complete strategic analysis of current vs. target state
+Executive summary and problem identification
+Professional feature-first architecture design
+5-phase migration strategy
+Detailed dependency relinking guide
+Testing and implementation order
+Success criteria

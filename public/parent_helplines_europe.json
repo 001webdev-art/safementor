@@ -1,0 +1,142 @@
+{
+    "Austria": {
+        "name": "Rat auf Draht (Parental Support)",
+        "number": "147",
+        "info": "24/7 support for children and their caregivers."
+    },
+    "Belgium": {
+        "name": "Ecoute-Enfants (Wallonia) / Tele-Onthaal (Flanders)",
+        "number": "103 / 106",
+        "info": "General support lines that assist parents with family issues."
+    },
+    "Bulgaria": {
+        "name": "National Telephone Line for Children (includes parents)",
+        "number": "116 111",
+        "info": "Operated by the State Agency for Child Protection."
+    },
+    "Croatia": {
+        "name": "Hrabri Telefon (Brave Phone for Parents)",
+        "number": "0800 0800",
+        "info": "Specific line dedicated to parents and caregivers."
+    },
+    "Cyprus": {
+        "name": "Cyprus Childline (Parental Guidance)",
+        "number": "116 111",
+        "info": "European harmonized number providing support for families."
+    },
+    "Czech Republic": {
+        "name": "Linka bezpečí (Safety Line - Rodičovská linka)",
+        "number": "606 021 021",
+        "info": "Dedicated parental helpline for educational and family crisis."
+    },
+    "Denmark": {
+        "name": "ForældreTelefonen (Børns Vilkår)",
+        "number": "35 55 55 57",
+        "info": "Specialized helpline for parents and educators."
+    },
+    "Estonia": {
+        "name": "Lasteabi (Child Helpline for all)",
+        "number": "116 111",
+        "info": "24/7 service for child-related concerns, including parents."
+    },
+    "Finland": {
+        "name": "MLL Parent Telephone (Mannerheim League)",
+        "number": "0800 92277",
+        "info": "Professional guidance for parents on upbringing and family life."
+    },
+    "France": {
+        "name": "Allô Enfance en Danger",
+        "number": "119",
+        "info": "National service for children at risk, also serving parents."
+    },
+    "Germany": {
+        "name": "Elterntelefon (Nummer gegen Kummer)",
+        "number": "0800 111 0550",
+        "info": "Anonymous and free counseling for parents."
+    },
+    "Greece": {
+        "name": "Together for Children / The Smile of the Child",
+        "number": "11525 / 1056",
+        "info": "Counseling and psychological support for families."
+    },
+    "Hungary": {
+        "name": "Kék Vonal (Blue Line for Parents)",
+        "number": "116 000",
+        "info": "Provides a dedicated line for adults worried about children."
+    },
+    "Ireland": {
+        "name": "Parentline Ireland",
+        "number": "01 873 3500",
+        "info": "Volunteer-led helpline providing support and guidance to parents."
+    },
+    "Italy": {
+        "name": "Telefono Azzurro (Line for Adults)",
+        "number": "196 96",
+        "info": "Dedicated counseling for children and adults regarding child welfare."
+    },
+    "Latvia": {
+        "name": "Uzticības tālrunis (Trust Phone)",
+        "number": "116 111",
+        "info": "State-run helpline for children, adolescents, and parents."
+    },
+    "Lithuania": {
+        "name": "Tėvų linija (Parents Line)",
+        "number": "800 900 12",
+        "info": "Professional psychological help for parents."
+    },
+    "Luxembourg": {
+        "name": "Elterntelefon (Kanner-Jugendtelefon)",
+        "number": "26 64 05 55",
+        "info": "Direct line for parents and caregivers."
+    },
+    "Malta": {
+        "name": "Supportline 179",
+        "number": "179",
+        "info": "24/7 national helpline for all social welfare concerns."
+    },
+    "Netherlands": {
+        "name": "De Oudertelefoon (The Parent Helpline)",
+        "number": "085 130 4322",
+        "info": "Anonymized support specifically for parents."
+    },
+    "Poland": {
+        "name": "800 100 100 (Helpline for Parents/Teachers)",
+        "number": "800 100 100",
+        "info": "Focused on safety and mental health of children."
+    },
+    "Portugal": {
+        "name": "SOS Criança (IAC)",
+        "number": "116 111 / 800 210 555",
+        "info": "800 number is specialized for family and adoption support."
+    },
+    "Romania": {
+        "name": "Telefonul Copilului (Parental Support)",
+        "number": "116 111",
+        "info": "Counseling for children and their legal representatives."
+    },
+    "Slovakia": {
+        "name": "Linka detskej istoty (Child Safety Line)",
+        "number": "116 111",
+        "info": "Provides support for families in crisis."
+    },
+    "Slovenia": {
+        "name": "TOM Telefon (National Helpline)",
+        "number": "116 111",
+        "info": "General helpline often used by parents for advice."
+    },
+    "Spain": {
+        "name": "Teléfono ANAR para la Familia",
+        "number": "600 50 51 52",
+        "info": "Dedicated line for adults and family members."
+    },
+    "Sweden": {
+        "name": "BRIS Adult Helpline",
+        "number": "077 150 50 50",
+        "info": "Specialized support for adults regarding children's rights."
+    },
+    "Switzerland": {
+        "name": "Elternnotruf (Parental Emergency)",
+        "number": "0848 35 45 55",
+        "info": "24/7 specialist advice for parents and caregivers."
+    }
+}

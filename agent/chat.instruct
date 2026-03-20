@@ -1,0 +1,17 @@
+if not installed install the following packages: 
+
+for UI & Icons -> npm install lucide-react react-intersection-observer
+for State Management (lightweight) -> npm install zustand
+for PWA enhancements -> npm install @uidotdev/usehooks next-pwa
+
+1. follow the professional organization for components, forms, hooks, sections and others just like with dashboardboard system.
+
+2. Separate Concerns: Keep PWA styling isolated to avoid conflicts
+
+3. Use CSS Variables: For theming that works with both Tailwind/NextUI
+
+4. Service Worker: Implement for offline chat functionality
+
+5. Keyboard Avoidance: Crucial for mobile PWA
+
+6. Pull-to-Refresh: Native-like experience

@@ -1,0 +1,251 @@
+next1_intl/
+├── src/                              # ✅ Tudo dentro de src/
+│   ├── app/                          # ✅ APENAS rotas e layouts
+│   │   ├── [locale]/
+│   │   │   ├── layout.tsx            # Layout internacionalizado
+│   │   │   ├── page.tsx              # Landing page
+│   │   │   ├── not-found.tsx
+│   │   │   ├── access/               # Rota: página de acesso
+│   │   │   │   └── page.tsx
+│   │   │   ├── auth/                 # Rotas de autenticação
+│   │   │   │   ├── callback/
+│   │   │   │   │   └── route.ts
+│   │   │   │   └── verified/
+│   │   │   │       └── page.tsx
+│   │   │   ├── chat/                  # ✅ Rota chat (APENAS page.tsx)
+│   │   │   │   └── page.tsx
+│   │   │   ├── chat-history/          # ✅ Rota separada para histórico
+│   │   │   │   └── page.tsx
+│   │   │   ├── dashboard/              # ✅ Rota dashboard
+│   │   │   │   └── page.tsx
+│   │   │   ├── imprint/               # Páginas estáticas
+│   │   │   │   └── page.tsx
+│   │   │   ├── privacy/
+│   │   │   │   └── page.tsx
+│   │   │   ├── register/
+│   │   │   │   └── page.tsx
+│   │   │   ├── subprocessors/
+│   │   │   │   └── page.tsx
+│   │   │   ├── terms/
+│   │   │   │   └── page.tsx
+│   │   │   └── [...rest]/
+│   │   │       └── page.tsx
+│   │   └── api/                       # API routes
+│   │       ├── access/
+│   │       │   └── route.ts
+│   │       └── chat/
+│   │           └── route.ts
+│   │
+│   ├── features/                       # ✅ TODA LÓGICA DE NEGÓCIO AQUI
+│   │   ├── chat/                        # Feature: Chat do Mentor
+│   │   │   ├── components/
+│   │   │   │   ├── ChatScreen.tsx
+│   │   │   │   ├── ChatHeader.tsx
+│   │   │   │   ├── ChatFooter.tsx
+│   │   │   │   ├── MessageBubble.tsx
+│   │   │   │   ├── MessageList.tsx
+│   │   │   │   ├── MessageInput.tsx
+│   │   │   │   ├── SafetyBanner.tsx
+│   │   │   │   ├── ChatEmojiPicker.tsx
+│   │   │   │   └── ChildSelector.tsx
+│   │   │   ├── contexts/
+│   │   │   │   └── ChildContext.tsx
+│   │   │   ├── hooks/
+│   │   │   │   ├── useChat.ts
+│   │   │   │   └── usePWA.ts
+│   │   │   ├── services/
+│   │   │   │   ├── mentor-client.ts
+│   │   │   │   ├── pouchdb.ts
+│   │   │   │   └── syncManager.ts
+│   │   │   ├── store/
+│   │   │   │   └── useChatStore.ts     # ✅ Store separada de hooks
+│   │   │   ├── types/
+│   │   │   │   ├── chat.ts
+│   │   │   │   └── mentor.ts
+│   │   │   └── index.ts                 # ✅ Exportações públicas
+│   │   │
+│   │   ├── chat-history/                 # Feature: Histórico do Chat
+│   │   │   ├── components/
+│   │   │   │   ├── HistoryGrid.tsx
+│   │   │   │   ├── HistoryList.tsx
+│   │   │   │   └── HistoryHeader.tsx
+│   │   │   ├── hooks/
+│   │   │   │   └── useHistory.ts
+│   │   │   ├── types/
+│   │   │   │   └── history.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── dashboard/                     # Feature: Dashboard
+│   │   │   ├── components/
+│   │   │   │   ├── DashboardSidebar.tsx
+│   │   │   │   ├── DashboardMobileHeader.tsx
+│   │   │   │   └── SectionRenderer.tsx
+│   │   │   ├── forms/                     # Formulários complexos
+│   │   │   │   ├── PersonalInfoForm.tsx
+│   │   │   │   ├── AddressForm.tsx
+│   │   │   │   ├── BillingForm.tsx
+│   │   │   │   ├── BillingInformationForm.tsx
+│   │   │   │   ├── ChildForm.tsx
+│   │   │   │   ├── CommunicationForm.tsx
+│   │   │   │   ├── ContactInfoForm.tsx
+│   │   │   │   ├── PaymentDataForm.tsx
+│   │   │   │   └── PreferencesForm.tsx
+│   │   │   ├── hooks/
+│   │   │   │   ├── useDashboard.ts
+│   │   │   │   ├── useChildren.ts
+│   │   │   │   ├── useCollapsibleGroups.ts
+│   │   │   │   └── useProfile.ts
+│   │   │   ├── sections/
+│   │   │   │   ├── OverviewSection.tsx
+│   │   │   │   ├── ChildrenSection.tsx
+│   │   │   │   ├── HelpSection.tsx
+│   │   │   │   └── PrivacySection.tsx
+│   │   │   ├── types/
+│   │   │   │   └── dashboard.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── auth/                          # Feature: Autenticação
+│   │   │   ├── components/
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   ├── RegisterForm.tsx
+│   │   │   │   ├── AccessLegalModal.tsx
+│   │   │   │   └── LoginLegalModal.tsx
+│   │   │   ├── hooks/
+│   │   │   │   └── useAuth.ts
+│   │   │   ├── types/
+│   │   │   │   └── auth.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── register/                       # Feature: Registro (compliance)
+│   │   │   ├── components/
+│   │   │   │   ├── ComplianceFrame.tsx
+│   │   │   │   ├── ConsentToggles.tsx
+│   │   │   │   ├── DataUsageSection.tsx
+│   │   │   │   ├── FooterActions.tsx
+│   │   │   │   ├── PrivacySidebar.tsx
+│   │   │   │   └── TransparencyReport.tsx
+│   │   │   └── index.ts
+│   │   │
+│   │   ├── parent/                         # ✅ Feature: Área dos Pais
+│   │   │   ├── components/
+│   │   │   │   ├── ParentDashboardUI.tsx
+│   │   │   │   ├── ParentAccountOverview.tsx
+│   │   │   │   ├── ParentChildConnection.tsx
+│   │   │   │   ├── ParentEmotionOverview.tsx
+│   │   │   │   ├── ParentSafetyNotifications.tsx
+│   │   │   │   ├── ParentSettings.tsx
+│   │   │   │   ├── ParentHelp.tsx
+│   │   │   │   ├── ParentPrivacy.tsx
+│   │   │   │   ├── ParentLogin.tsx
+│   │   │   │   ├── ChildQRPairing.tsx
+│   │   │   │   └── ChildSafetyNotice.tsx
+│   │   │   ├── hooks/
+│   │   │   │   └── useParent.ts
+│   │   │   └── index.ts
+│   │   │
+│   │   └── landing/                         # Feature: Landing Page
+│   │       ├── components/
+│   │       │   ├── Hero.tsx
+│   │       │   ├── SafeMentorHero.tsx
+│   │       │   ├── Features.tsx
+│   │       │   ├── ApproachSection.tsx
+│   │       │   ├── CTASection.tsx
+│   │       │   ├── FamiliesSection.tsx
+│   │       │   ├── TestimonialSection.tsx
+│   │       │   ├── ValuesSection.tsx
+│   │       │   ├── TrustBadges.tsx
+│   │       │   ├── Trusted.tsx
+│   │       │   ├── Navigation.tsx
+│   │       │   ├── Footer.tsx
+│   │       │   ├── SafeMentorFooter.tsx
+│   │       │   └── Icons.tsx
+│   │       └── index.ts
+│   │
+│   ├── components/                          # ✅ Componentes GLOBAIS
+│   │   ├── ui/                              # shadcn/ui components
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── dropdown-menu.tsx
+│   │   │   ├── form.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── select.tsx
+│   │   │   ├── switch.tsx
+│   │   │   ├── tabs.tsx
+│   │   │   ├── toast.tsx
+│   │   │   ├── ... (demais 50+ componentes)
+│   │   │   ├── utils.ts
+│   │   │   └── use-mobile.ts
+│   │   ├── layout/                          # Componentes de layout global
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Providers.tsx
+│   │   └── shared/                          # Outros componentes reutilizáveis
+│   │       ├── ImageWithFallback.tsx
+│   │       └── NavigationFlow.tsx
+│   │
+│   ├── lib/                                  # ✅ Bibliotecas e configurações
+│   │   ├── supabase/
+│   │   │   ├── client.ts
+│   │   │   └── server.ts
+│   │   ├── i18n/
+│   │   │   └── config.ts
+│   │   ├── llm/
+│   │   │   └── llmService.ts
+│   │   └── utils/
+│   │       └── index.ts
+│   │
+│   └── types/                                # ✅ Types GLOBAIS
+│       ├── database.ts
+│       └── api.ts
+│
+├── messages/                                 # i18n (pode ficar na raiz)
+│   ├── de.json
+│   ├── en.json
+│   ├── es.json
+│   └── pt.json
+│
+├── public/                                    # Assets estáticos
+│   ├── images/
+│   │   ├── criancas2.jpg
+│   │   ├── criancas3.jpg
+│   │   └── svg/
+│   │       ├── approach-illustration.svg
+│   │       └── hero-illustration.svg
+│   ├── icons/
+│   │   ├── icon-192x192.png
+│   │   ├── icon-512x512.png
+│   │   └── favicon.ico
+│   ├── manifest.json
+│   └── sw-chat.js                             # Service Worker
+│
+├── backend/                                    # ✅ Backend separado (raiz)
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── routes.py
+│   │   ├── core/
+│   │   │   ├── config.py
+│   │   │   └── security.py
+│   │   ├── models/
+│   │   │   └── chat.py
+│   │   └── services/
+│   │       └── llm_service.py
+│   ├── tests/
+│   ├── requirements.txt
+│   ├── Dockerfile
+│   └── .env.local
+│
+├── sql/                                        # Scripts SQL (documentação)
+│   ├── schema/
+│   │   ├── 01_children.sql
+│   │   ├── 02_chat.sql
+│   │   └── 03_dashboard.sql
+│   └── migrations/
+│
+├── .env.local
+├── next.config.js
+├── tailwind.config.ts
+├── middleware.ts                               # i18n middleware
+├── package.json
+└── README.md
