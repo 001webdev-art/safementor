@@ -1,0 +1,401 @@
+================================================================================
+                    PRIORITIZED ACTION PLAN
+           Step-by-Step Implementation Guide for Refactoring
+================================================================================
+
+Project: next1_intl_proto
+Date: March 20, 2026
+Total Estimated Time: 24-36 hours
+
+================================================================================
+PHASE 1: IMMEDIATE CLEANUP (Day 1: 1-2 hours)
+================================================================================
+
+TASK 1.1: DELETE UNUSED PROFILE FEATURE
+──────────────────────────────────────────
+
+Priority: 🔴 CRITICAL
+Time: 30 minutes
+Risk: NONE (code is unused)
+
+DELETE: src/features/profile/ (all contents including 11 components)
+
+Steps:
+  1. Back up: git stash && git commit -m "backup: before profile deletion"
+  2. VERIFY no usage: Ctrl+Shift+F search "from '@/features/profile" → expect 0
+  3. DELETE directory: Right-click src/features/profile → Delete
+  4. UPDATE src/features/index.ts: Remove all profile exports
+  5. BUILD TEST: npm run build
+  6. COMMIT: git add -A && git commit -m "refactor: delete unused profile feature"
+
+Verification:
+  ✓ src/features/profile/ deleted
+  ✓ npm run build succeeds
+  ✓ No import errors in console
+
+---
+
+TASK 1.2: CONSOLIDATE PostCSS CONFIGURATIONS
+──────────────────────────────────────────────
+
+Priority: 🔴 CRITICAL
+Time: 5 minutes
+Risk: LOW
+
+Decision Tree:
+  → Check package.json for Tailwind version
+  → If ^3.x: DELETE postcss.config.mjs (KEEP postcss.config.js)
+  → If ^4.x: DELETE postcss.config.js (KEEP postcss.config.mjs)
+
+Steps:
+  1. CHECK: cat package.json | grep "tailwindcss"
+  2. DELETE conflicting file
+  3. TEST: npm run dev → Verify Tailwind loads
+  4. COMMIT: git add -A && git commit -m "refactor: consolidate postcss"
+
+---
+
+TASK 1.3: CLEAN UP UNUSED LANDING COMPONENTS
+──────────────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 15 minutes
+
+CHOOSE ONE:
+
+Option A - REMOVE (Recommended):
+  DELETE: src/features/landing/components/Features.tsx
+  DELETE: src/features/landing/components/plans.tsx
+  VERIFY: Ctrl+Shift+F search "Features1" → expect 0
+  UPDATE: src/features/landing/index.ts (remove exports if present)
+
+Option B - EXPORT (If planned):
+  ADD to src/features/landing/index.ts:
+    export { Features1 } from './components/Features';
+    export { Plans } from './components/plans';
+  ADD documentation comment in component files
+
+Recommendation: Option A (unless features are roadmapped within 3 months)
+
+---
+
+TASK 1.4: VERIFY API ROUTES
+─────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 15 minutes
+
+Steps:
+  1. SEARCH: "/api/auth" in entire codebase
+  2. RESULT: If 0 references → route not needed, document decision
+  3. VERIFY auth flow: Supabase handles directly? → YES → /api/auth NOT needed
+
+---
+
+TASK 1.5: CLARIFY DashboardService MOCK CLASS
+───────────────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 10 minutes
+
+File: src/types/dashboard.ts
+
+Steps:
+  1. SEARCH: "DashboardService" usage
+  2. FOUND in tests? → Keep for testing
+  3. NOT FOUND? → CHOOSE:
+     A) Delete
+     B) Move to __mocks__/ folder
+     C) Keep with deprecation comment
+  4. ADD documentation comment
+
+---
+
+PHASE 1 SUMMARY:
+  After completion: Health score 7.5 → 8.0
+  Time spent: 1-2 hours
+  Build status: ✅ GREEN
+
+================================================================================
+PHASE 2: STRUCTURAL IMPROVEMENTS (Days 2-3: 8-12 hours)
+================================================================================
+
+TASK 2.1: DELETE EMPTY LIBRARY DIRECTORIES
+────────────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 10 minutes
+
+DELETE:
+  rm -r src/lib/utils
+  rm -r src/lib/constants
+  rm -r src/lib/hooks
+
+UPDATE: src/lib/index.ts
+  Remove commented-out exports for deleted directories
+
+---
+
+TASK 2.2: CENTRALIZE UTILITY FUNCTIONS
+─────────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 30 minutes
+
+Current: cn() in src/app/utils.ts
+Target: cn() in src/lib/utils/helpers.ts
+
+Steps:
+  1. CREATE: src/lib/utils/helpers.ts
+  2. COPY: cn() function from src/app/utils.ts to helpers.ts
+  3. UPDATE src/lib/index.ts:
+     export { cn } from './utils/helpers';
+  4. FIND ALL: Ctrl+Shift+F search "from '@/app/utils"
+  5. REPLACE: Change to "from '@/lib'" in all files
+  6. DELETE: src/app/utils.ts
+  7. TEST: npm run build
+  8. COMMIT: git add -A && git commit -m "refactor: centralize cn() to lib"
+
+Verification:
+  ✓ src/lib/utils/helpers.ts exists
+  ✓ All imports use @/lib
+  ✓ npm run build succeeds
+
+---
+
+TASK 2.3: CREATE ENVIRONMENT VALIDATION MODULE
+────────────────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 45 minutes
+
+CREATE: src/lib/config/env.ts
+
+Content Template:
+  interface EnvConfig {
+    NEXT_PUBLIC_SUPABASE_URL: string;
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
+    SITE_PASSWORD: string;
+  }
+
+  function getEnvVar(key: keyof EnvConfig): string {
+    const value = process.env[key];
+    if (!value) {
+      throw new Error(`Missing environment variable: ${key}`);
+    }
+    return value;
+  }
+
+  export const env: EnvConfig = {
+    NEXT_PUBLIC_SUPABASE_URL: getEnvVar('NEXT_PUBLIC_SUPABASE_URL'),
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: getEnvVar('NEXT_PUBLIC_SUPABASE_ANON_KEY'),
+    SITE_PASSWORD: getEnvVar('SITE_PASSWORD'),
+  };
+
+Steps:
+  1. CREATE file
+  2. UPDATE src/lib/index.ts: export { env } from './config/env';
+  3. UPDATE src/middleware.ts: import { env } from '@/lib';
+  4. REPLACE: process.env.SITE_PASSWORD → env.SITE_PASSWORD
+  5. UPDATE src/app/api/access/route.ts: Same replacement
+  6. TEST: npm run dev → Should show error if env var missing
+  7. COMMIT
+
+---
+
+TASK 2.4: AUDIT & STANDARDIZE IMPORTS
+──────────────────────────────────────
+
+Priority: 🟡 MEDIUM
+Time: 60 minutes
+
+Goal: 100% of imports use @/features/X or @/lib patterns
+
+Steps:
+  1. SEARCH via regex: from '@/(features|lib)/[a-zA-Z]+/(?!index)
+     (Finds imports bypassing index.ts)
+  2. LIST all problematic files
+  3. FOR EACH FILE:
+     FIND: import X from '@/features/Feature/Type/File'
+     REPLACE: import { X } from '@/features/Feature'
+  4. USE Find/Replace: Ctrl+H to bulk update
+  5. TEST: npm run build
+  6. COMMIT
+
+---
+
+TASK 2.5: IMPLEMENT REAL LLM PROVIDER CALLS
+─────────────────────────────────────────────
+
+Priority: 🔴 CRITICAL
+Time: 4-6 hours
+
+ARCHITECTURE:
+  src/lib/llm/providers/
+  ├── base.ts (interface)
+  ├── gemini.ts (Google implementation)
+  ├── gpt.ts (OpenAI implementation)
+  ├── groq.ts (Groq implementation)
+  └── registry.ts (factory)
+
+FILES TO CREATE:
+
+1. src/lib/llm/providers/base.ts
+   - Define LLMProvider abstract class
+   - Define Message interface
+   - Define ProviderResponse interface
+
+2. src/lib/llm/providers/gemini.ts
+   - Extends LLMProvider
+   - Implements Gemini API calls
+
+3. src/lib/llm/providers/gpt.ts
+   - Extends LLMProvider
+   - Implements OpenAI API calls
+
+4. src/lib/llm/providers/groq.ts
+   - Extends LLMProvider
+   - Implements Groq API calls
+
+5. src/lib/llm/providers/registry.ts
+   - Factory pattern: getProvider(type) → returns instance
+
+UPDATE:
+  src/app/api/chat/route.ts
+  - Replace mock with: ProviderRegistry.getProvider(...)
+  - Call real provider methods
+
+.env.local:
+  Add: GEMINI_API_KEY=
+  Add: OPENAI_API_KEY=
+  Add: GROQ_API_KEY=
+
+TESTING:
+  curl -X POST http://localhost:3000/api/chat \
+    -H "Content-Type: application/json" \
+    -d '{"provider": "gemini", "messages": [...]}'
+
+Commit: git add -A && git commit -m "feat: implement real LLM providers"
+
+---
+
+PHASE 2 SUMMARY:
+  After completion: Health score 8.0 → 9.0
+  Time spent: 8-12 hours
+  Build status: ✅ GREEN
+  New features: ✅ Real LLM working
+
+================================================================================
+PHASE 3: SCALABILITY & DOCUMENTATION (Long-term)
+================================================================================
+
+TASK 3.1: CREATE FEATURE DOCUMENTATION
+────────────────────────────────────────
+
+CREATE: Doc/FEATURES.md
+
+Content:
+  • Feature overview
+  • Routes each feature serves
+  • Entry points for developers
+  • Dependencies (external & internal)
+  • Health status for each feature
+  • How to add new features
+  • Feature dependency graph
+
+Time: 2-3 hours
+
+---
+
+TASK 3.2: CREATE DEVELOPER SETUP GUIDE
+────────────────────────────────────────
+
+CREATE: Doc/DEVELOPER_SETUP.md
+
+Content:
+  • Quick start (clone, install, setup)
+  • Project structure explanation
+  • Creating new pages/features
+  • Environment variables list
+  • Common commands
+  • Testing procedures
+  • Troubleshooting
+
+Time: 2-3 hours
+
+================================================================================
+CLEANUP CHECKLIST
+================================================================================
+
+Priority 1 (Before Production):
+  [ ] DELETE src/features/profile/
+  [ ] DELETE postcss.config.mjs (keep .js)
+  [ ] EXPORT or REMOVE landing unused components
+  [ ] VERIFY /api/auth route necessity
+  [ ] CLARIFY DashboardService mock class
+
+Priority 2 (Before Scaling):
+  [ ] DELETE empty lib directories
+  [ ] MOVE src/app/utils.ts → src/lib/utils/helpers.ts
+  [ ] UPDATE all imports of cn() utility
+  [ ] CREATE src/lib/config/env.ts
+  [ ] IMPLEMENT real LLM provider calls
+  [ ] AUDIT & consolidate import paths
+  [ ] TEST build and deploy
+
+Priority 3 (Nice-to-have):
+  [ ] CREATE Doc/FEATURES.md
+  [ ] CREATE Doc/DEVELOPER_SETUP.md
+  [ ] EXTRACT shared form patterns
+  [ ] PLAN auth/account feature split
+
+================================================================================
+TIME BREAKDOWN
+================================================================================
+
+Cleanup Phase (Priority 1):        1.5 hours
+Structural Phase (Priority 2):     9.5 hours
+Scalability Phase (Priority 3):    10 hours
+───────────────────────────────────────────
+Total: 21 hours (or ~28 with testing)
+
+Recommended: 4-5 days × 6-7 hours/day
+
+================================================================================
+RISKS & MITIGATION
+================================================================================
+
+Risk: Breaking imports during consolidation
+  Likelihood: MEDIUM  |  Impact: MEDIUM
+  Mitigation: Test after each change, use find-replace carefully
+
+Risk: LLM provider implementation complexity
+  Likelihood: HIGH  |  Impact: HIGH
+  Mitigation: Test each provider independently before integrating
+
+Risk: Missing environment variables after validation
+  Likelihood: MEDIUM  |  Impact: HIGH
+  Mitigation: Document all required vars, validate at startup
+
+Risk: Deleting needed code
+  Likelihood: LOW  |  Impact: HIGH
+  Mitigation: Archive to git history first (git stash)
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+After completing this plan, the project will have:
+
+✅ ZERO dead code - No unused features or components
+✅ CONSISTENT imports - 100% use feature index pattern
+✅ CLEAN configuration - Single source of truth for tools
+✅ WORKING LLM integration - Real provider calls, not mock
+✅ PROFESSIONAL structure - Ready for team collaboration
+✅ CLEAR documentation - Easy onboarding for new developers
+
+Expected Outcome: 9.5/10 health score with production-ready codebase
+
+================================================================================
+END OF ACTION PLAN
+================================================================================

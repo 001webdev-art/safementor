@@ -11,9 +11,9 @@ This refactoring consolidates a fragmented Next.js project into a **professional
 
 ---
 
-## Current State Analysis
+### Current State Analysis
 
-### Problems Identified
+#### Problems Identified
 1. **Scattered root-level folders**: `app/`, `components/`, `types/`, `lib/`, etc. at root
 2. **Duplication**: Duplicate `src/app/`, `src/components/`, `src/lib/`
 3. **Fragmented components**: `components/` + `components_parents/` + scattered dashboard2/
@@ -21,7 +21,7 @@ This refactoring consolidates a fragmented Next.js project into a **professional
 5. **Global scope pollution**: All components treated as global
 6. **Import complexity**: Mix of relative and absolute imports with varying paths
 
-### Current Structure Overview
+##### Current Structure Overview
 ```
 next1_intl_proto/
 ├── app/                           ← Root level app (conflicting)

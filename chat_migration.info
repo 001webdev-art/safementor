@@ -1,0 +1,83 @@
+Chat Migration Plan
+===================
+
+Goal:
+- Migrate the existing `/app/[locale]/chat` experience from the current Next.js monorepo into a standalone Flutter mobile app.
+- Preserve the child-focused chat experience, shared authentication/session model, and existing chat service behavior.
+- Deliver a separate mobile product that can be deployed to Android and iOS.
+
+Context:
+- Current chat UI is implemented under `/app/[locale]/chat`.
+- Chat-related components and logic also exist in `/features/chat` and possibly shared UI/components elsewhere.
+- The app currently shares cookies and login session state with the dashboard login flow.
+- The mobile target should be a self-contained Flutter app with a clean separation from the Next.js web app.
+
+Primary Requirements:
+- New Flutter app should support locale-aware navigation and content.
+- Preserve child-friendly design and safety considerations.
+- Reuse backend chat and auth APIs where possible.
+- Maintain session continuity via the same authentication backend, but without browser cookies on mobile.
+- Support both Android and iOS deployment.
+
+Migration Strategy:
+1. Audit current chat behavior and dependencies
+   - Inventory chat screens, components, services, contexts, hooks, and data flows in `/app/[locale]/chat`, `/features/chat`, and shared modules.
+   - Identify backend endpoints used by chat and auth; e.g. API routes under `/src/app/api/chat`, `/src/app/api/auth`, `/src/app/api/access`.
+   - Document session cookie semantics and any server-side auth guards in middleware.
+
+2. Define the Flutter app architecture
+   - Use Flutter for UI and navigation.
+   - Create a modular feature structure: `auth`, `chat`, `localization`, `shared/ui`, `services`, `models`.
+   - Use secure token storage instead of browser cookies: e.g. OAuth/token-based auth or session exchange.
+   - Implement locale switching using Flutter internationalization packages.
+
+3. Design auth and session migration
+   - Preserve single auth backend and shared session across web/dashboard and mobile.
+   - Replace browser cookie auth with token-based auth for mobile: JWT, refresh token, or secure session token.
+   - If existing dashboard session is cookie-based, implement a mobile-specific auth flow that obtains tokens from the same backend.
+   - Ensure the backend supports mobile-friendly session management and appropriate CSRF protection if needed.
+
+4. Rebuild chat UI in Flutter
+   - Translate current chat screens and interactions into Flutter widgets.
+   - Keep the flow child-focused: simplified navigation, large touch targets, accessible text, and language-specific content.
+   - Reuse copy and locale resources where possible by extracting text values from `/src/messages/*.json`.
+   - Mirror chat history, message cards, and any UX patterns from the web chat in mobile.
+
+5. Reuse backend APIs and business logic
+   - Keep chat processing on existing backend/API server if possible.
+   - Call current chat endpoints from Flutter via HTTP/HTTPS.
+   - If there is server-side session middleware or auth guards, ensure mobile requests are accepted with tokens or a mobile session header.
+
+6. Develop backend compatibility layer if needed
+   - If the web app currently relies on cookie auth only, add a mobile-compatible auth endpoint.
+   - Create separate APIs for mobile login and session refresh if necessary.
+   - Preserve existing dashboard auth semantics while enabling token-based mobile access.
+
+7. Plan deployment for mobile
+   - Set up Flutter project with Android and iOS targets.
+   - Use app signing and distribution workflows for both platforms.
+   - Validate locale support, device-safe layout, and child-friendly UI on real devices/emulators.
+
+8. Testing and validation
+   - Functional tests for auth, chat, locale switching, and offline resilience.
+   - Security review for auth storage, token handling, and backend calls.
+   - User acceptance testing for the child-focused experience.
+
+Timing and Phases:
+- Phase 1: Discovery and API audit
+- Phase 2: Flutter project scaffolding and auth design
+- Phase 3: Chat UI implementation and localization
+- Phase 4: Backend compatibility and mobile auth integration
+- Phase 5: QA, device testing, and deployment preparation
+
+Risks and Mitigations:
+- Risk: existing auth is cookie-only. Mitigation: build a mobile auth token endpoint and adapt backend.
+- Risk: shared session semantics differ between web and mobile. Mitigation: design a clear mobile session flow with tokens and refresh.
+- Risk: translation/localization may need duplication. Mitigation: extract locale strings from current `/src/messages` resources.
+
+Deliverables:
+- `chat_migration.info` plan document (this file)
+- New Flutter project scaffold in a separate repo or root-adjacent folder
+- Mobile auth integration design and API contract
+- Recreated chat experience in Flutter
+- Deployment-ready Android and iOS builds
