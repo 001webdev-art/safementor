@@ -11,9 +11,10 @@
   },
   "Navigation": {
     "language": "Sprache",
-    "portuguese": "Portugiesisch",
-    "english": "Englisch",
-    "spanish": "Spanisch"
+    "de": "Deutsch",
+    "en": "Englisch",
+    "es": "Spanisch",
+    "pt": "Portugiesisch"
   },
   "HomePage": {
     "title": "Willkommen bei Safementor",
@@ -77,7 +78,8 @@
       "communication_preferences": "Kommunikationseinstellungen",
       "social": "Soziales & Bio",
       "profileDetails": "Profildetails",
-      "settingsSubtitle": "Verwalten Sie Ihr Konto und Ihre Sicherheitseinstellungen."
+      "settingsSubtitle": "Verwalten Sie Ihr Konto und Ihre Sicherheitseinstellungen.",
+      "basicinfo": "Basisinformationen"
     },
     "payment": {
       "title": "Zahlungsdaten",
@@ -129,7 +131,13 @@
       "date_format": "Datumsformat",
       "time_format": "Zeitformat",
       "bio": "Biografie / Notizen",
-      "profile_picture_url": "Profilbild-URL"
+      "profile_picture_url": "Profilbild-URL",
+      "age": "Alter",
+      "childrenname": "Vollständiger Name",
+      "medical_has_allergies": "Hat Allergien",
+      "medical_has_mental_disorders": "Hat psychische Störungen",
+      "medical_has_physical_disorders": "Hat körperliche Beeinträchtigungen",
+      "selectChild": "Kind auswählen"
     },
     "options": {
       "genders": {
@@ -161,7 +169,11 @@
       "address_line1": "Hauptstraße 1",
       "city": "Berlin",
       "zip": "10115",
-      "bio": "Erzählen Sie uns etwas über sich..."
+      "bio": "Erzählen Sie uns etwas über sich...",
+      "childrenname": "Vollständiger Name des Kindes",
+      "email": "kind@beispiel.de",
+      "selectChild": "Wählen Sie ein Kind aus der Liste",
+      "selectChildToEdit": "Bitte wählen Sie ein Kind aus der Liste oben aus, um dessen Informationen anzuzeigen oder zu bearbeiten."
     },
     "content": {
       "noChildren": "Noch keine Kinder gelistet. Klicken Sie auf die Schaltfläche unten, um eines hinzuzufügen.",
@@ -197,7 +209,7 @@
         "visibility": {
           "title": "Was Sie sehen (Datensichtbarkeit):",
           "items": [
-            "Nur aggregierte emotionale Trends",
+            "Warnungen bei kritischen Themen (mobbing, etc.)",
             "Sicherheitswarnungen mit minimalem Kontext",
             "Keine rohen Chat-Protokolle oder Überwachung"
           ]
@@ -262,7 +274,7 @@
           "items": [
             "Bietet KI-Begleiter für das Kind zum freien Sprechen",
             "Erkennt Muster, die auf Risiken hinweisen könnten",
-            "Sendet aggregierte emotionale Trends (keine Nachrichten)",
+            "Hilft bei Hausaufgaben, aber übernimmt nicht die Arbeit",
             "Alarmiert Eltern nur, wenn ernste Bedenken erkannt werden"
           ]
         },
@@ -290,24 +302,54 @@
       "works": {
         "title": "Wie SafeMentor funktioniert",
         "subtitle": "Unser Privacy-First-Ansatz",
-        "step1": { "title": "Kind spricht mit KI-Begleiter", "desc": "Private Gespräche in einem sicheren Raum" },
-        "step2": { "title": "KI analysiert Muster", "desc": "Suche nach emotionalen Trends und Risikoindikatoren" },
-        "step3": { "title": "Eltern sehen aggregierte Daten", "desc": "Allgemeine Stimmungstrends, keine rohen Nachrichten" },
-        "step4": { "title": "Warnungen im Bedarfsfall", "desc": "Nur ernste Bedenken lösen Benachrichtigungen aus" }
+        "step1": {
+          "title": "Kind spricht mit KI-Begleiter",
+          "desc": "Private Gespräche in einem sicheren Raum"
+        },
+        "step2": {
+          "title": "KI analysiert Muster",
+          "desc": "Suche nach schwierigen Themen und Risikoindikatoren"
+        },
+        "step3": {
+          "title": "Eltern sehen aggregierte Daten",
+          "desc": "Keine rohen Nachrichten"
+        },
+        "step4": {
+          "title": "Warnungen im Bedarfsfall",
+          "desc": "Nur ernste Bedenken lösen Benachrichtigungen aus"
+        }
       },
       "signals": {
         "title": "Signal-Typen verstehen",
         "subtitle": "WAS JEDE WARNSTUFE BEDEUTET",
-        "info": { "title": "Informationssignal", "desc": "Allgemeine Muster erkannt. Kein sofortiger Handlungsbedarf. Nur zu Ihrer Information." },
-        "yellow": { "title": "Gelbe Flagge", "desc": "Potenzielle Bedenken erkannt. Erwägen Sie ein behutsames Gespräch mit Ihrem Kind." },
-        "red": { "title": "Rote Flagge", "desc": "Ernsthaftes Bedenken, das sofortige Aufmerksamkeit erfordert. Sicherheitsproblem erkannt (Selbstverletzung, Missbrauch, etc.)" }
+        "info": {
+          "title": "Informationssignal",
+          "desc": "Allgemeine Muster erkannt. Kein sofortiger Handlungsbedarf. Nur zu Ihrer Information."
+        },
+        "yellow": {
+          "title": "Gelbe Flagge",
+          "desc": "Potenzielle Bedenken erkannt. Erwägen Sie ein behutsames Gespräch mit Ihrem Kind."
+        },
+        "red": {
+          "title": "Rote Flagge",
+          "desc": "Ernsthaftes Bedenken, das sofortige Aufmerksamkeit erfordert. Sicherheitsproblem erkannt (Selbstverletzung, Missbrauch, etc.)"
+        }
       },
       "limitations": {
         "title": "KI-Einschränkungen: Falsche Signale",
         "subtitle": "Erkennungfehler verstehen",
-        "positives": { "title": "Falsch-Positive (Übererkennung):", "desc": "KI kann harmlose Gespräche als besorgniserregend einstufen. Beispiel: \"Ich will sterben\" im Kontext eines Videospiels. Berücksichtigen Sie immer den Kontext und vertrauen Sie Ihrem Urteilsvermögen." },
-        "negatives": { "title": "Falsch-Negative (Untererkennung):", "desc": "KI kann subtile Anzeichen oder kodierte Sprache übersehen. Dieses Tool unterstützt — ersetzt aber nicht — Ihre elterliche Aufmerksamkeit und Beziehung zu Ihrem Kind." },
-        "reminder": { "title": "Kritische Erinnerung:", "desc": "SafeMentor sucht nach Mustern, die auf Risiken hinweisen können. Es kann nicht alles sehen und kann Signale übersehen oder missinterpretieren. Ihr Urteilsvermögen und Ihre Beziehung zu Ihrem Kind bleiben vorrangig." }
+        "positives": {
+          "title": "Falsch-Positive (Übererkennung):",
+          "desc": "KI kann harmlose Gespräche als besorgniserregend einstufen. Beispiel: \"Ich will sterben\" im Kontext eines Videospiels. Berücksichtigen Sie immer den Kontext und vertrauen Sie Ihrem Urteilsvermögen."
+        },
+        "negatives": {
+          "title": "Falsch-Negative (Untererkennung):",
+          "desc": "KI kann subtile Anzeichen oder kodierte Sprache übersehen. Dieses Tool unterstützt — ersetzt aber nicht — Ihre elterliche Aufmerksamkeit und Beziehung zu Ihrem Kind."
+        },
+        "reminder": {
+          "title": "Kritische Erinnerung:",
+          "desc": "SafeMentor sucht nach Mustern, die auf Risiken hinweisen können. Es kann nicht alles sehen und kann Signale übersehen oder missinterpretieren. Ihr Urteilsvermögen und Ihre Beziehung zu Ihrem Kind bleiben vorrangig."
+        }
       },
       "emergency": {
         "title": "Notfall-Ressourcen",
@@ -425,7 +467,11 @@
     },
     "actions": {
       "saveChanges": "Änderungen speichern",
-      "loading": "Speichert..."
+      "loading": "Speichert...",
+      "cancel": "Abbrechen",
+      "confirmDelete": "Sind Sie sicher, dass Sie dieses Kind löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "deleteChild": "Kind löschen",
+      "saveChild": "Kind speichern"
     }
   },
   "Errors": {
@@ -464,7 +510,9 @@
     "Navigation": {
       "values": "Unsere Werte",
       "approach": "Unsere Philosophie",
-      "learnMore": "Starten"
+      "learnMore": "Starten",
+      "howItWorks": "Wie es funktioniert",
+      "about": "Über uns"
     },
     "Hero": {
       "eyebrow": "Gemeinsam Wachstum fördern",
@@ -491,7 +539,7 @@
           },
           {
             "title": "Hält Eltern informiert.",
-            "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+            "desc": "Klare, ehrliche Kommunikation darüber, welche kritischen Themen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
           },
           {
             "title": "Entwickelt von Eltern für Eltern.",
@@ -499,17 +547,18 @@
           }
         ],
         "final": "Weil wir glauben, dass echte Abenteuer nicht auf Bildschirmen stattfinden. SafeMentor hilft Kindern, Neues über die Welt zu lernen – und schickt sie dann wieder zum Spielen nach draußen."
-      },      "card1": {
-        "title": "Intelligenter Begleit-Modus",
-        "desc": "Im Hintergrund läuft ein unabhängiges Sicherheits-Audit mit. Es greift diskret ein und filtert Inhalte nur dann, wenn sie nicht kindgerecht sind oder gegen unsere strengen Sicherheitsregeln verstoßen."
+      },
+      "card1": {
+        "title": "Stufe 1 – Normale Begleitung",
+        "desc": "SafeMentor antwortet warm, altersgerecht und pädagogisch durchdacht. Kein Eingriff, keine Benachrichtigung. Ihr Kind wird begleitet – Sie müssen nichts tun."
       },
       "card2": {
-        "title": "Emotions-Kompass",
-        "desc": "Unsere KI analysiert nicht nur Fakten, sondern erkennt die emotionale Ebene. Sie spürt Anzeichen von Stress, Manipulation oder Traurigkeit und passt den Tonfall sofort an die Bedürfnisse Ihres Kindes an."
+        "title": "Stufe 2 – Stiller Hinweis",
+        "desc": "Bei Themen wie Mobbing, emotionalem Druck oder bedenklichen Anfragen erkennt SafeMentor das Signal. Die KI antwortet einfühlsam und ermutigt Ihr Kind, mit Ihnen zu sprechen. Sie erhalten einen diskreten Hinweis in Ihrem Eltern-Dashboard – kein Alarm, aber ein Zeichen: hier lohnt sich ein Gespräch."
       },
       "card3": {
-        "title": "Krisen-Radar (Red Flags)",
-        "desc": "Nur bei echten Warnsignalen (wie Mobbing oder Selbstgefährdung) schaltet SafeMentor auf Soforthilfe: Die KI deeskaliert das Gespräch behutsam und benachrichtigt Sie gleichzeitig – damit Sie da sind, wenn Ihr Kind Sie braucht."
+        "title": "Stufe 3 – Sofortige Benachrichtigung",
+        "desc": "Bei ernsten Warnsignalen – Selbstverletzung, sexuelle Übergriffe, akute Gefahr – schaltet SafeMentor sofort um: Das Kind erhält eine ruhige, strukturierte Antwort mit konkreten Krisenressourcen. Sie werden umgehend benachrichtigt, mit einer klaren Zusammenfassung – damit Sie da sind, wenn Ihr Kind Sie braucht."
       },
       "learning": {
         "eyebrow": "Wie SafeMentor arbeitet",
@@ -525,7 +574,7 @@
       },
       "offline": {
         "title": "Sicherheit, die mitdenkt – ohne zu überwachen.",
-        "description": "SafeMentor antwortet nicht einfach darauf los. Unser System begleitet den Dialog in Echtzeit: Sobald schwierige Themen aufkommen, prüfen wir sowohl die Fragen Ihres Kindes als auch die Antworten der KI doppelt ab. Wir nennen das unsere 3-Stufen-Sicherheit, die sicherstellt, dass Ihr Kind nur Antworten erhält, die stärken statt verunsichern. Diese 3 Stufen sehen Sie hier :",
+        "description": "SafeMentor antwortet nicht einfach darauf los. Jede Nachricht Ihres Kindes wird in Echtzeit auf Sicherheitsrelevanz geprüft – bevor eine Antwort erscheint. Wir nennen das unsere 3-Stufen-Sicherheit.",
         "emphasis": "Sicherheit steht bei uns an erster Stelle."
       },
       "standards": {
@@ -551,11 +600,11 @@
       "safety": {
         "eyebrow": "Für Eltern",
         "title": "Vertrauen braucht Privatsphäre",
-        "description": "Vertrauen ist die Grundlage jeder Kindesentwicklung. Aus diesem Grund ist Privatsphäre nicht nur ein Feature, sondern das Fundament von Safementor. Bei uns entstehen keine digitalen Fußabdrücke. Sobald eine Sitzung endet, werden sämtliche Rohdaten der Chats unwiderruflich gelöscht. Wir bewahren lediglich Zusammenfassungen für einen Zeitraum von 7 bis maximal 30 Tagen auf. Was bleibt, ist das, was für Sie als Eltern wirklich zählt: Wir visualisieren emotionale Trends und identifizieren Themenbereiche, falls die Stimmung über mehrere Sitzungen hinweg sehr negativ bleibt. So erfahren Sie, was Ihr Kind bewegt, und erhalten wertvolle Impulse für echte Gespräche – während die Privatsphäre Ihres Kindes absolut geschützt bleibt.",
+        "description": "Vertrauen ist die Grundlage jeder Kindesentwicklung. Aus diesem Grund ist Privatsphäre nicht nur ein Feature, sondern das Fundament von Safementor. Bei uns entstehen keine digitalen Fußabdrücke. Sobald eine Sitzung endet, werden sämtliche Rohdaten der Chats unwiderruflich gelöscht. Wir bewahren lediglich Zusammenfassungen für einen Zeitraum von 7 bis maximal 30 Tagen auf. Was bleibt, ist das, was für Sie als Eltern wirklich zählt: Wir benachrichtigen Sie in dem Moment, in dem Ihre Aufmerksamkeit gefragt ist. Ob Mobbing, Selbstverletzung oder andere kritische Themen – wir halten Sie auf dem Laufenden, damit Sie genau dann für Ihr Kind da sein können, wenn es am wichtigsten ist.",
         "detect": {
           "title": "Was wir erkennen",
           "list": [
-            "Emotionale Trends im Zeitverlauf",
+            "Anfrage zur Erledigung der Hausaufgaben",
             "Warnzeichen (Not, Isolation)",
             "Ernste Warnsignale: Selbstverletzung, Grooming, Mobbing, Drogen, Fremdgefährdung"
           ]
@@ -563,9 +612,8 @@
         "see": {
           "title": "Was Eltern sehen",
           "list": [
-            "Aggregierte Erkenntnisse",
-            "Klare Erklärungen",
-            "Praktische Anleitung"
+            "Warnungen bei Risiken",
+            "Kontext bei kritischen Situationen"
           ]
         },
         "notSee": {
@@ -581,9 +629,16 @@
           "description": "Wir nehmen Datenschutz ernst. Deshalb werden alle Ihre Daten ausschließlich innerhalb der EU gespeichert und verarbeitet, geschützt durch strenge DSGVO-Standards."
         },
         "protects": {
-          "desc": "Dies schützt das Vertrauen zwischen Kind und Eltern. Kinder müssen wissen, dass sie sich sicher ausdrücken können, während Eltern über ihr Wohlbefinden informiert bleiben."
-        }
-      }
+          "desc": "Dies schützt das Vertrauen zwischen Kind und Eltern. Kinder müssen wissen, dass sie sich sicher ausdrücken können, während Eltern über ihr Wohlbefinden informiert bleiben.",
+          "title": "Das schützt das Vertrauen"
+        },
+        "summary": "Hier nochmal die Zusammenfassung:"
+      },
+      "eyebrow": "Was SafeMentor ist",
+      "title": "SafeMentor ist kein weiteres Bildschirmzeit-Produkt",
+      "description": "Es ist ein Denk- und Mentoring-Begleiter, der Kindern hilft, Neugier, Verantwortung, emotionale Stärke und echte Verbindung zur Welt zu entwickeln – mit starker Unterstützung für Eltern.",
+      "citation": "SafeMentor basiert auf international anerkannten Prinzipien der Kindesentwicklung von Gerald Hüther, Jesper Juul, Dan Siegel und prinzipienbasiertem Denken. Wir formen Kinder nicht durch Kontrolle. Wir laden zu Entwicklung durch Beziehung ein.",
+      "emphasis": "Kinder brauchen nicht mehr Apps. Sie brauchen Orientierung, Vertrauen und Raum zum Wachsen."
     },
     "Approach": {
       "eyebrow": "Unsere Philosophie",
@@ -595,13 +650,12 @@
       },
       "bullet2": {
         "title": "Hält Eltern informiert",
-        "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+        "desc": "Klare, ehrliche Kommunikation darüber, welche kritischen Themen wir erkannt haben, damit Sie den Kommunikationsfaden aufnehmen können."
       },
       "bullet3": {
         "title": "Entwickelt von Eltern für Eltern",
         "desc": "SafeMentor ist für Eltern wie uns gedacht: Ein Werkzeug, das den digitalen Raum so sicher macht, dass er die Kindheit bereichert, statt sie zu ersetzen."
       }
-
     },
     "Families": {
       "title": "Eltern unterstützen – nicht verurteilen",
@@ -609,7 +663,7 @@
       "receives": {
         "title": "Eltern erhalten:",
         "list": [
-          "Ruhige Erklärungen emotionaler Trends",
+          "Sichere KI-Begleitung: Damit Ihr Kind im Netz in guten Händen ist.",
           "Kontext für die Bedeutung von Signalen – und was sie nicht bedeuten",
           "Vorschläge für Gespräche mit ihrem Kind",
           "Ermutigung zum Aufbau von Vertrauen und Verbindung"
@@ -637,7 +691,8 @@
       "title": "Begleiten Sie uns auf diesem Weg.",
       "subtitle": "Entdecken Sie einen ruhigeren, durchdachteren Umgang mit Technologie für Ihre Familie.",
       "buttonPrimary": "Jetzt kostenlos Pilot-Nutzer werden",
-      "disclaimer": "Werden Sie Teil unserer Pilotphase und erleben Sie SafeMentor als einer der Ersten – völlig kostenlos."
+      "disclaimer": "Werden Sie Teil unserer Pilotphase und erleben Sie SafeMentor als einer der Ersten – völlig kostenlos.",
+      "buttonSecondary": "Unsere Grundsätze lesen"
     },
     "Footer": {
       "text": "Technologie, die die Kindheit respektiert. Mit Sorgfalt gebaut, von Ethik geleitet, fokussiert auf das, was am wichtigsten ist.",
@@ -647,7 +702,9 @@
         "privacy": "Datenschutz",
         "imprint": "Impressum",
         "terms": "AGB",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "howItWorks": "Wie es funktioniert",
+        "about": "Über uns"
       },
       "bottom": "Mit Sorgfalt für Kinder und Familien gemacht."
     }
@@ -703,14 +760,56 @@
         "title": "4a. Unterauftragsverarbeiter (EU-Server)",
         "intro": "Wir geben Daten nur zur Vertragserfüllung an sorgfältig ausgewählte Partner weiter:",
         "table": {
-          "headers": ["Kategorie", "Anbieter", "Standort", "Zweck", "Rechtsgrundlage"],
+          "headers": [
+            "Kategorie",
+            "Anbieter",
+            "Standort",
+            "Zweck",
+            "Rechtsgrundlage"
+          ],
           "rows": [
-            ["Hosting & Backend", "Google Cloud", "EU (Belgien)", "Server-Infrastruktur", "AVV nach Art. 28 DSGVO"],
-            ["KI-Inference und Reasoning", "Nebius AI B.V.", "EU (Amsterdam / Helsinki)", "KI Antworten generieren", "AVV nach Art. 28 DSGVO"],
-            ["Hosting Frontend", "Vercel Inc.", "EU (Frankfurt)", "Server-Infrastruktur", "AVV nach Art. 28 DSGVO"],
-            ["Zahlungsabwicklung", "Mollie B.V.", "EU", "Kreditkartenzahlungen", "AVV nach Art. 28 DSGVO"],
-            ["Datenbank-Hosting & Backend", "Supabase Ireland Ltd.", "EU (Frankfurt)", "Speicherung der Nutzerkonten (Eltern), Chat-Zusammenfassungen, Projektdaten", "AVV nach Art. 28 DSGVO"],
-            ["SMS Authentication", "Twilio", "EU (Ireland)", "Parent authentication", "AVV nach Art. 28 DSGVO"]
+            [
+              "Hosting & Backend",
+              "Google Cloud",
+              "EU (Belgien)",
+              "Server-Infrastruktur",
+              "AVV nach Art. 28 DSGVO"
+            ],
+            [
+              "KI-Inference und Reasoning",
+              "Nebius AI B.V.",
+              "EU (Amsterdam / Helsinki)",
+              "KI Antworten generieren",
+              "AVV nach Art. 28 DSGVO"
+            ],
+            [
+              "Hosting Frontend",
+              "Vercel Inc.",
+              "EU (Frankfurt)",
+              "Server-Infrastruktur",
+              "AVV nach Art. 28 DSGVO"
+            ],
+            [
+              "Zahlungsabwicklung",
+              "Mollie B.V.",
+              "EU",
+              "Kreditkartenzahlungen",
+              "AVV nach Art. 28 DSGVO"
+            ],
+            [
+              "Datenbank-Hosting & Backend",
+              "Supabase Ireland Ltd.",
+              "EU (Frankfurt)",
+              "Speicherung der Nutzerkonten (Eltern), Chat-Zusammenfassungen, Projektdaten",
+              "AVV nach Art. 28 DSGVO"
+            ],
+            [
+              "SMS Authentication",
+              "Twilio",
+              "EU (Ireland)",
+              "Parent authentication",
+              "AVV nach Art. 28 DSGVO"
+            ]
           ]
         },
         "content": "Obwohl Vercel Inc. seinen Hauptsitz in San Francisco (USA) hat, erfolgt die Datenverarbeitung für SafeMentor ausschließlich auf Servern in Frankfurt, Deutschland. Vercel hat sich vertraglich verpflichtet:\n• Daten nicht außerhalb der EU zu übertragen\n• Keinen Zugriff von US-Mitarbeitern auf EU-Server-Daten zu gewederte\n• Bei behördlichen Anfragen SafeMentor unverzüglich zu informieren. \nZusätzlicher Schutz: Alle sensiblen Daten (Chat-Inhalte, Emotionstrends) werden vor der Speicherung auf Vercel-Servern Ende-zu-Ende-verschlüsselt, sodass Vercel selbst keinen Zugriff auf Klartext-Daten hat.\n\nAuch die Twilio Inc. hat ihren Hauptsitz in den USA, SafeMentor nutzt aber für die Eltern-Authentifizierung die europäische Infrastruktur von Twilio in der Region Irland (IE1). Damit wird sichergestellt, dass die primäre Verarbeitung und Speicherung der Authentifizierungsdaten (wie Mobilfunknummern und Verifizierungscodes) innerhalb des EWR erfolgt.\nTwilio hat sich durch ein Data Processing Addendum (DPA) sowie ergänzende technische Maßnahmen dazu verpflichtet:\n• Die Speicherung und Verarbeitung personenbezogener Daten vorrangig auf Servern innerhalb der EU durchzuführen.\n• Ein angemessenes Datenschutzniveau durch die Anwendung von EU-Standardvertragsklauseln und die Zertifizierung unter dem EU-U.S. Data Privacy Framework zu gewährleisten.\n• Den Zugriff auf Daten durch US-Einheiten auf das für den technischen Betrieb absolut notwendige Minimum zu beschränken.\n• Im Falle von Behördenanfragen gemäß den internen Richtlinien zur Transparenz zu verfahren und die Interessen von SafeMentor zu wahren.\n\n**Technische Details zu Nebius AI :** \n• Unternehmensform: Nebius AI B.V. (Niederlande) \n• Rechenzentren: Amsterdam (primär), Helsinki (Backup) \n• Zertifizierungen: ISO 27001, SOC 2 Type II \n• Datenresidenz: Alle Daten bleiben in EU-Rechenzentren \n• Trainingsverbot: Nebius nutzt KEINE Kundendaten für Modelltraining \n• Aufbewahrung: Anfragen werden nach Verarbeitung sofort gelöscht"
@@ -739,14 +838,42 @@
         "title": "6. Speicherdauer",
         "intro": "Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist oder gesetzliche Fristen bestehen.",
         "table": {
-          "headers": ["DATENTYP", "SPEICHERFRIST", "RECHTSGRUNDLAGE"],
+          "headers": [
+            "DATENTYP",
+            "SPEICHERFRIST",
+            "RECHTSGRUNDLAGE"
+          ],
           "rows": [
-            ["Account-Daten (Eltern)", "Bis Vertragsende + 10 Jahre", "§ 147 AO (Aufbewahrungspflicht)"],
-            ["Chat-Summaries (normal)", "7 Tage", "Art. 6 Abs. 1 lit. b DSGVO"],
-            ["Project Memory", "30 Tage nach letzter Nutzung", "Art. 6 Abs. 1 lit. b DSGVO"],
-            ["Yellow-/Red-Flag-Summaries", "30 Tage (automatische Löschung)", "Art. 6 Abs. 1 lit. f DSGVO (Kinderschutz)"],
-            ["Emotionstrends (aggregiert)", "30 Tage", "Art. 6 Abs. 1 lit. f DSGVO"],
-            ["Vollständige Chat-Protokolle", "Niemals serverseitig gespeichert", "Privacy by Design"]
+            [
+              "Account-Daten (Eltern)",
+              "Bis Vertragsende + 10 Jahre",
+              "§ 147 AO (Aufbewahrungspflicht)"
+            ],
+            [
+              "Chat-Summaries (normal)",
+              "7 Tage",
+              "Art. 6 Abs. 1 lit. b DSGVO"
+            ],
+            [
+              "Project Memory",
+              "30 Tage nach letzter Nutzung",
+              "Art. 6 Abs. 1 lit. b DSGVO"
+            ],
+            [
+              "Yellow-/Red-Flag-Summaries",
+              "30 Tage (automatische Löschung)",
+              "Art. 6 Abs. 1 lit. f DSGVO (Kinderschutz)"
+            ],
+            [
+              "Emotionstrends (aggregiert)",
+              "30 Tage",
+              "Art. 6 Abs. 1 lit. f DSGVO"
+            ],
+            [
+              "Vollständige Chat-Protokolle",
+              "Niemals serverseitig gespeichert",
+              "Privacy by Design"
+            ]
           ]
         },
         "content": "WICHTIG: Red-Flag-Summaries werden auch dann nach 30 Tagen gelöscht, wenn die Gefährdungslage fortbesteht. Dies dient dem Schutz der Privatsphäre des Kindes. Bei anhaltenden Sorgen empfehlen wir professionelle Unterstützung (z.B. Familien- beratung) statt technischer Dauerüberwachung.\n\n**Account-Löschung:** Bei Kündigung werden alle personenbezogenen Daten (außer steuerrechtlich relevante Dokumente) innerhalb von 30 Tagen vollständig gelöscht."
@@ -961,6 +1088,12 @@
     }
   },
   "Compliance": {
+    "header": {
+      "alreadyHaveAccount": "Bereits ein Konto?",
+      "signIn": "Anmelden",
+      "createAccountTitle": "Erstellen Sie Ihr Konto",
+      "createAccountSubtitle": "Willkommen! Bitte füllen Sie die Details aus, um zu starten"
+    },
     "sidebar": {
       "title": "Privatsphäre Ihres Kindes",
       "description": "SafeMentor basiert auf dem Prinzip der „Datenminimierung“. Wir verarbeiten nur das, was strikt notwendig ist, um Ihr Kind zu schützen.",
@@ -1014,5 +1147,326 @@
       "back": "Zurück",
       "createAccount": "Konto erstellen"
     }
+  },
+  "HowItWorks": {
+    "meta": {
+      "title": "Wie SafeMentor funktioniert",
+      "description": "Was SafeMentor erkennt, wie das 3-Stufen-Sicherheitssystem funktioniert und was Sie als Elternteil sehen."
+    },
+    "hero": {
+      "eyebrow": "Wie es funktioniert",
+      "title": "Sicherheit, die vorausdenkt — ohne Überwachung.",
+      "subtitle": "Jede Nachricht Ihres Kindes wird in Echtzeit auf Sicherheitsrelevanz geprüft — bevor eine Antwort erscheint. Hier sehen Sie genau, was wir erkennen und was Sie als Elternteil sehen werden."
+    },
+    "tabs": {
+      "overview": "Übersicht",
+      "detection": "Was wir erkennen"
+    },
+    "intro": "SafeMentor beobachtet die Gespräche Ihres Kindes kontinuierlich auf Anzeichen von Belastung, Gefahr oder schädlichen Inhalten. Wenn etwas gravierendes erkannt wird, erhalten Sie eine Benachrichtigung im Eltern-Dashboard und bei sicherheitskritischen Themen wie z.B. Suizid auch mit einer für Sie verfassten Zusammenfassung, niemals den genauen Worten Ihres Kindes.",
+    "stages": {
+      "eyebrow": "Unsere 3-Stufen-Sicherheit",
+      "title": "Wie wir Ihr Kind schützen",
+      "stage1": {
+        "badge": "Stufe 1 — Immer aktiv",
+        "title": "Normale Begleitung",
+        "desc": "SafeMentor antwortet warm, altersgerecht und pädagogisch durchdacht. Kein Eingriff, keine Benachrichtigung. Ihr Kind wird begleitet — Sie müssen nichts tun."
+      },
+      "stage2": {
+        "badge": "Stufe 2 — Stiller Hinweis",
+        "title": "Diskreter Hinweis",
+        "desc": "Bei Themen wie Mobbing, Essstörungen oder bedenklichen Anfragen erkennt SafeMentor das Signal. Die KI antwortet einfühlsam und ermutigt Ihr Kind, mit Ihnen zu sprechen. Sie erhalten einen diskreten Hinweis im Eltern-Dashboard."
+      },
+      "stage3": {
+        "badge": "Stufe 3 — Sofort",
+        "title": "Sofortige Benachrichtigung",
+        "desc": "Bei ernsten Warnsignalen — Selbstverletzung, sexuelle Übergriffe, akute Gefahr — schaltet SafeMentor sofort um. Ihr Kind erhält eine vorformulierte, strukturierte Antwort mit Krisenressourcen. Diese wird nicht von der KI formuliert, um zu gewährleisten, dass SafeMentor in kritischen Situationen nicht halluziniert. Sie werden umgehend mit einer klaren Zusammenfassung benachrichtigt."
+      }
+    },
+    "pipeline": {
+      "title": "Wie das System funktioniert",
+      "step1": {
+        "title": "Ihr Kind schreibt eine Nachricht",
+        "desc": "Jede Nachricht wird sofort analysiert, bevor eine Antwort generiert wird."
+      },
+      "step2": {
+        "title": "Sicherheitsprüfung in Echtzeit",
+        "desc": "Unsere Klassifikations-Pipeline prüft in sehr kurzer Zeit auf sicherheitsrelevante Muster."
+      },
+      "step3": {
+        "title": "Passende Antwort",
+        "desc": "Die KI antwortet so, wie es der erkannten Situation entspricht — unterstützend, anleitend oder deeskalierend."
+      },
+      "step4": {
+        "title": "Eltern-Dashboard wird aktualisiert",
+        "desc": "Wenn ein Problem erkannt wird, erhalten Sie einen Hinweis und gegebenenfalls eine paraphrasierte Zusammenfassung. Niemals die genauen Worte Ihres Kindes."
+      }
+    },
+    "parentView": {
+      "title": "Was Sie als Elternteil sehen",
+      "alertLines": {
+        "red": "Sofortige Aufmerksamkeit — Ihr Kind benötigt möglicherweise direkte Unterstützung.",
+        "yellow": "Hinweis — Ihr Kind könnte ein Gespräch brauchen."
+      },
+      "labels": {
+        "what": "Was",
+        "context": "Kontext",
+        "affected": "Betroffen"
+      },
+      "yellow": {
+        "title": "🟡 Hinweis-Alert — Beispiel",
+        "what": "Anzeichen passiver Suizidgedanken",
+        "context": "Ihr Kind äußerte das Gefühl, eine Last zu sein und dass andere ohne sie besser dran wären",
+        "affected": "Ihr Kind als betroffene Person"
+      },
+      "red": {
+        "title": "🔴 Sofort-Alert — Beispiel",
+        "what": "Mögliche sexuelle Belästigung durch eine erwachsene Person",
+        "context": "Ihr Kind berichtete von unangemessenem Verhalten durch eine nahestehende Person",
+        "affected": "Ihr Kind als betroffene Person"
+      }
+    },
+    "legend": {
+      "title": "Alarmstufen",
+      "red": "Sofortige Aufmerksamkeit",
+      "yellow": "Hinweis",
+      "none": "Kein Alert",
+      "redDesc": "Sie werden sofort benachrichtigt. Ihr Kind benötigt möglicherweise direkte Unterstützung.",
+      "yellowDesc": "Etwas, das es wert ist, davon zu wissen. Keine unmittelbare Gefahr, aber ein Gespräch ist sinnvoll.",
+      "noneDesc": "SafeMentor antwortet, aber keine Elternbenachrichtigung wird gesendet."
+    },
+    "privacy": {
+      "label": "Datenschutz:",
+      "text": "SafeMentor teilt niemals die genauen Worte Ihres Kindes in Eltern-Alerts — alle Zusammenfassungen sind paraphrasiert. Ihr Kind wird immer informiert, dass seine Eltern benachrichtigt werden, wenn ein Sicherheitsproblem erkannt wird. Keine Gesprächsdaten werden verkauft oder an Dritte weitergegeben."
+    },
+    "cta": {
+      "title": "Bereit, Ihrem Kind einen sicheren Raum zu geben?",
+      "subtitle": "Werden Sie Teil unserer Pilotphase und erleben Sie SafeMentor als eine der ersten Familien — völlig kostenlos.",
+      "primary": "Jetzt kostenlos starten",
+      "secondary": "Sehen Sie, was wir erkennen"
+    },
+    "colHeaders": {
+      "scenario": "Was Ihr Kind schreiben könnte",
+      "alert": "Alarmstufe",
+      "example": "Beispiel"
+    },
+    "detection": {
+      "intro": "Diese Seite zeigt alle Szenarien, auf die SafeMentor trainiert ist, zusammen mit der Alarmstufe, die Sie in Ihrem Eltern-Dashboard sehen werden.",
+      "mental": {
+        "title": "Psychische Gesundheit & Krise",
+        "suicidal": {
+          "title": "Suizidgedanken",
+          "r1": {
+            "scenario": "Passiv — Wertlosigkeit, nicht existieren wollen",
+            "example": "\"Niemand würde mich vermissen\" · \"Ich wünschte, ich wäre nicht hier\""
+          },
+          "r2": {
+            "scenario": "Aktiv — geäußerter Wunsch zu sterben oder das Leben zu beenden",
+            "example": "\"Ich will sterben\" · \"Ich will nicht mehr leben\""
+          },
+          "r3": {
+            "scenario": "Konkreter Plan oder Mittel — Methode + Absicht zusammen geäußert",
+            "example": "\"Ich habe Tabletten gespart\" · \"Ich weiß, wie ich es tun würde\""
+          },
+          "r4": {
+            "scenario": "Akut — passiert gerade jetzt",
+            "example": "\"Ich habe gerade viele Tabletten genommen\""
+          }
+        },
+        "selfharm": {
+          "title": "Selbstverletzung",
+          "r1": {
+            "scenario": "Selbstverletzung — Schneiden, Brennen, sich selbst schlagen",
+            "example": "\"Ich schneide mich manchmal\" · \"Es ist das Einzige, das hilft\""
+          },
+          "r2": {
+            "scenario": "Akute Selbstverletzung — passiert gerade jetzt",
+            "example": "\"Ich verletze mich gerade\""
+          }
+        },
+        "eating": {
+          "title": "Essstörungen",
+          "r1": {
+            "scenario": "Gestörtes Essverhalten — Erbrechen, Hungern, Körperhass mit Verhalten",
+            "example": "\"Ich habe 3 Tage nicht gegessen\" · \"Ich erbreche nach dem Essen\""
+          }
+        }
+      },
+      "sexual": {
+        "title": "Sexuelle Sicherheit",
+        "grooming": {
+          "title": "Grooming — alle erkannten Situationen werden sofort gemeldet",
+          "r1": {
+            "scenario": "Erwachsener fordert Geheimhaltung, gibt Geschenke, überschreitet Grenzen",
+            "example": "\"Er sagt, ich soll es niemandem erzählen\" · \"Er gibt mir Geschenke\""
+          },
+          "r2": {
+            "scenario": "Sexueller Missbrauch — unangemessene Berührungen oder Handlungen durch Erwachsene",
+            "example": "\"Mein Onkel fasst mich an\" · \"Jemand hat Fotos von mir gemacht\""
+          },
+          "r3": {
+            "scenario": "Bericht über einen Freund — Kind sagt, es passiert jemand anderem",
+            "example": "\"Mein Freund trifft sich heimlich mit einem Erwachsenen\""
+          }
+        }
+      },
+      "violence": {
+        "title": "Schaden & Gewalt",
+        "physical": {
+          "title": "Körperliche Gefahr",
+          "r1": {
+            "scenario": "Drohung oder Waffe — konkreter Plan, jemanden zu verletzen",
+            "example": "\"Ich bringe morgen ein Messer mit\" · \"Ich weiß, wie ich sie verletzen kann\""
+          },
+          "r2": {
+            "scenario": "Körperlicher Missbrauch — Kind wird zu Hause geschlagen oder verletzt",
+            "example": "\"Mein Vater schlägt mich\" · \"Ich wurde wieder zu Hause verletzt\""
+          }
+        },
+        "social": {
+          "title": "Sozialer Schaden",
+          "r1": {
+            "scenario": "Mobbing — wiederholter Spott, Ausgrenzung oder Aggression",
+            "example": "\"Sie lachen jeden Tag über mich\" · \"Niemand lässt mich bei ihnen sitzen\""
+          },
+          "r2": {
+            "scenario": "Emotionaler Missbrauch — gesagt bekommen, wertlos oder dumm zu sein",
+            "example": "\"Mama sagt, ich bin wertlos\" · \"Er sagt mir immer, ich bin dumm\""
+          },
+          "r3": {
+            "scenario": "Manipulation — Druck, Drohungen zu gehen oder sich selbst zu verletzen",
+            "example": "\"Mein Freund sagt, er verletzt sich, wenn ich gehe\""
+          },
+          "r4": {
+            "scenario": "Hassrede — Beleidigungen oder diskriminierende Sprache gegen das Kind",
+            "example": "\"Sie nennen mich [Beleidigung] in der Schule\""
+          }
+        }
+      },
+      "content": {
+        "title": "Unangemessene Inhaltsanfragen",
+        "blocked": {
+          "title": "Gesperrte Themen — SafeMentor lehnt ab und leitet um",
+          "r1": {
+            "scenario": "Medizinische oder Medikamentenfragen — Dosierung, Behandlung, Diagnose",
+            "example": "\"Welche Tabletten soll ich bei Depressionen nehmen?\""
+          },
+          "r2": {
+            "scenario": "Anfragen nach erwachsenen / expliziten Inhalten",
+            "example": "\"Wo finde ich Erwachsenenvideos?\""
+          },
+          "r3": {
+            "scenario": "Anleitungen für illegale Aktivitäten",
+            "example": "\"Wie hacke ich in ein WLAN?\""
+          },
+          "r4": {
+            "scenario": "Erstellung von Fake-Medien — manipulierte Fotos oder Videos",
+            "example": "\"Mach ein Fake-Foto von meiner Lehrerin\""
+          }
+        }
+      },
+      "learning": {
+        "title": "Lernen & Hausaufgaben",
+        "homework": {
+          "title": "SafeMentor leitet an — macht die Arbeit nie für Ihr Kind",
+          "r1": {
+            "scenario": "SafeMentor bitten, eine Schulaufgabe zu schreiben oder zu lösen",
+            "example": "\"Schreib meinen Aufsatz\" · \"Löse diese Aufgaben\" — SafeMentor lehnt ab und leitet stattdessen an"
+          },
+          "r2": {
+            "scenario": "Versuchen, SafeMentor das Denken zu überlassen",
+            "example": "\"Mach das intelligenter\" · \"Beende diesen Abschnitt\" — zu eigenen Ideen umgeleitet"
+          },
+          "r3": {
+            "scenario": "Echtes Lernen — nach Erklärungen oder Verständnishilfe fragen",
+            "example": "\"Erkläre Photosynthese\" · \"Ich verstehe das nicht\" — Sokratische Führung + Hinweise"
+          }
+        }
+      }
+    }
+  },
+  "About": {
+    "meta": {
+      "title": "Über uns – SafeMentor",
+      "description": "Lern das Team hinter SafeMentor kennen: zwei Eltern, ein Ingenieur und ein Entwickler, die KI kindgerecht machen wollen."
+    },
+    "hero": {
+      "eyebrow": "Über uns",
+      "title": "Zwei Menschen. Eine Mission.",
+      "subtitle": "„Ich habe SafeMentor gebaut, weil ich es selbst gesucht habe.“ (Andreas, Vater von Zwillingen)"
+    },
+    "mission": {
+      "quote": "Alle Kinder werden als Künstler geboren. KI ist für uns alle die Chance, wieder zu Künstlern, Wissenschaftlern und Schöpfern zu werden – statt nur Konsumenten digitaler Medien."
+    },
+    "andreas": {
+      "name": "Andreas",
+      "role": "Mitgründer – Produkt & Architektur",
+      "eyebrow": "Ingenieur. Vater. Visionär.",
+      "headline": "Der Kopf hinter der Philosophie",
+      "trait1": "Ingenieur",
+      "trait2": "Vater von Zwillingen",
+      "trait3": "Aufgewachsen im Schwarzwald",
+      "timeline": [
+        "Robotik & sicherheitskritische Software",
+        "Erster elektrischer Vito bei Mercedes-Benz",
+        "E-Mobility Produktmanagement bei Mercedes-Benz und E.ON",
+        "KI-Projektmanagement Weiterbildung",
+        "Mitgründer SafeMentor"
+      ],
+      "paragraphs": [
+        "Aufgewachsen im Schwarzwald mit viel Natur und wenig Bildschirmzeit, hat Andreas früh gelernt, dass wahre Entfaltung im analogen Erleben beginnt. Seine Karriere als Ingenieur führte ihn von der Robotik über sicherheitskritische Software bis zur Entwicklung des ersten elektrischen Vito bei Mercedes-Benz.",
+        "Als Vater zweier neugieriger Zwillinge kennt er den unbändigen Wissensdrang junger Menschen aus erster Hand. Seine jüngste Weiterbildung zum KI-Projektmanager hat ihn zu einer zentralen Erkenntnis geführt: Wir stehen an einem Wendepunkt, an dem wir aktiv entscheiden müssen, welche Rolle Technik in der Entwicklung unserer Kinder spielen soll.",
+        "Für Andreas ist SafeMentor das Werkzeug, um aus dieser Vision Realität werden zu lassen – Technologie so gestalten, dass sie nicht die Kreativität begrenzt, sondern sie erst ermöglicht."
+      ],
+      "quote": "Alle Kinder werden als Künstler geboren. KI ist die Chance, wieder zu Schöpfern zu werden statt nur Konsumenten.",
+      "quoteSource": "Brian Chesky, Airbnb – von Andreas als Leitmotiv übernommen",
+      "closing": "Bei SafeMentor bauen wir keine Systeme, die nur funktionieren. Wir bauen Systeme, die Kindern helfen, ihr volles Potenzial als Gestalter der Zukunft zu entfalten."
+    },
+    "heinrich": {
+      "name": "Heinrich",
+      "role": "Mitgründer – Entwicklung & Architektur",
+      "eyebrow": "Entwickler. Optimist. Macher.",
+      "headline": "Das technologische Herz von SafeMentor",
+      "trait1": "Full-Stack & Flutter",
+      "trait2": "Gründer in Brasilien",
+      "trait3": "Oldtimer-Liebhaber",
+      "timeline": [
+        "Gründung eigener Softwarefirma in Brasilien",
+        "Betreuung zahlreicher Firmenkunden & anspruchsvoller Projekte",
+        "Von Brasilien nach Deutschland – internationaler Weitblick",
+        "Mitgründer SafeMentor"
+      ],
+      "paragraphs": [
+        "Heinrichs Weg in die Softwarewelt begann mit einer echten Leidenschaft fürs Lösen komplexer Probleme. Ob Systemimplementierungen, Anwenderschulungen oder maßgeschneiderte Lösungen – für Heinrich stand immer der Mensch im Mittelpunkt.",
+        "Mit der Erfahrung aus der Gründung seiner eigenen Softwarefirma in Brasilien weiß er genau, wie man Systeme baut, die eines sind: stabil, sicher und effizient. Sein Weg führte ihn von Brasilien nach Deutschland – ein Schritt, der Mut erfordert und seinen internationalen Blick bis heute prägt.",
+        "Sein Lebensmotto: \"Yes, we can.\" Er ist fest davon überzeugt, dass es für jedes Problem eine Lösung gibt, wenn man sie mit der richtigen Einstellung und einer ordentlichen Portion Herzblut sucht."
+      ],
+      "closing": "Heinrich bringt seinen Macher-Geist und seine positive Grundhaltung in die Entwicklung einer sicheren KI-Umgebung für Kinder ein. Für ihn ist SafeMentor die logische Fortsetzung seiner Laufbahn: komplexe Technik so gestalten, dass sie sicher, lehrreich und eine echte Bereicherung für die nächste Generation ist."
+    },
+    "shared": {
+      "eyebrow": "Was uns antreibt",
+      "title": "Gemeinsame Werte",
+      "value1": {
+        "title": "Kinder zuerst",
+        "desc": "Jede Entscheidung beginnt mit der Frage: Was ist das Beste für das Kind? Nicht für die Plattform, nicht für Wachstumszahlen."
+      },
+      "value2": {
+        "title": "Offline ist das Ziel",
+        "desc": "Wir bauen digitale Technologie, aber unser Erfolg misst sich daran, wie wenig Kinder uns brauchen – und wie viel sie draußen erleben."
+      },
+      "value3": {
+        "title": "Vertrauen durch Transparenz",
+        "desc": "Keine versteckten Algorithmen, keine dunklen Muster. Eltern und Kinder verdienen ehrliche, klare Kommunikation – immer."
+      }
+    },
+    "cta": {
+      "title": "Begleiten Sie uns auf diesem Weg.",
+      "subtitle": "Werden Sie Teil unserer Pilotphase und erleben Sie SafeMentor als einer der Ersten – völlig kostenlos.",
+      "button": "Jetzt kostenlos starten"
+    }
+  },
+  "NotFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Hoppla! Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Zurück zur Startseite"
   }
 }
