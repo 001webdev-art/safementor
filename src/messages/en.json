@@ -209,7 +209,7 @@
         "visibility": {
           "title": "What You See (Data Visibility):",
           "items": [
-            "Aggregated emotional trends only",
+            "Warnings for critical topics (bullying, etc.)",
             "Safety alerts with minimal context",
             "No raw chat logs or surveillance"
           ]
@@ -275,7 +275,7 @@
           "items": [
             "Provides AI companion for child to talk freely",
             "Detects patterns that may indicate risk",
-            "Sends aggregated emotional trends (not messages)",
+            "Helps with homework, but doesn't do the work",
             "Alerts parents only when serious concerns detected"
           ]
         },
@@ -303,24 +303,54 @@
       "works": {
         "title": "How SafeMentor Works",
         "subtitle": "Our privacy-first approach",
-        "step1": { "title": "Child Talks to AI Companion", "desc": "Private conversations in a safe space" },
-        "step2": { "title": "AI Analyzes Patterns", "desc": "Looking for emotional trends and risk indicators" },
-        "step3": { "title": "Parents See Aggregated Data", "desc": "General mood trends, no raw messages" },
-        "step4": { "title": "Alerts When Needed", "desc": "Only serious concerns trigger notifications" }
+        "step1": {
+          "title": "Child Talks to AI Companion",
+          "desc": "Private conversations in a safe space"
+        },
+        "step2": {
+          "title": "AI Analyzes Patterns",
+          "desc": "Looking for difficult topics and risk indicators"
+        },
+        "step3": {
+          "title": "Parents See Aggregated Data",
+          "desc": "No raw messages"
+        },
+        "step4": {
+          "title": "Alerts When Needed",
+          "desc": "Only serious concerns trigger notifications"
+        }
       },
       "signals": {
         "title": "Understanding Signal Types",
         "subtitle": "WHAT EACH ALERT LEVEL MEANS",
-        "info": { "title": "Informational Signal", "desc": "General patterns detected. No immediate action needed. For your awareness only." },
-        "yellow": { "title": "Yellow Flag", "desc": "Potential concern detected. Consider having a gentle check-in conversation with your child." },
-        "red": { "title": "Red Flag", "desc": "Serious concern requiring immediate attention. Safety issue detected (self-harm, abuse, etc.)" }
+        "info": {
+          "title": "Informational Signal",
+          "desc": "General patterns detected. No immediate action needed. For your awareness only."
+        },
+        "yellow": {
+          "title": "Yellow Flag",
+          "desc": "Potential concern detected. Consider having a gentle check-in conversation with your child."
+        },
+        "red": {
+          "title": "Red Flag",
+          "desc": "Serious concern requiring immediate attention. Safety issue detected (self-harm, abuse, etc.)"
+        }
       },
       "limitations": {
         "title": "AI Limitations: False Signals",
         "subtitle": "Understanding detection errors",
-        "positives": { "title": "False Positives (Over-detection):", "desc": "AI may flag innocent conversations as concerning. Example: \"I want to die\" in context of a video game. Always consider context and trust your judgment." },
-        "negatives": { "title": "False Negatives (Under-detection):", "desc": "AI may miss subtle signs or coded language. This tool supports—but does not replace—your parental awareness and relationship with your child." },
-        "reminder": { "title": "Critical Reminder:", "desc": "SafeMentor looks for patterns that may indicate risk. It cannot see everything and may miss or misinterpret signals. Your judgment and relationship with your child remain primary." }
+        "positives": {
+          "title": "False Positives (Over-detection):",
+          "desc": "AI may flag innocent conversations as concerning. Example: \"I want to die\" in context of a video game. Always consider context and trust your judgment."
+        },
+        "negatives": {
+          "title": "False Negatives (Under-detection):",
+          "desc": "AI may miss subtle signs or coded language. This tool supports—but does not replace—your parental awareness and relationship with your child."
+        },
+        "reminder": {
+          "title": "Critical Reminder:",
+          "desc": "SafeMentor looks for patterns that may indicate risk. It cannot see everything and may miss or misinterpret signals. Your judgment and relationship with your child remain primary."
+        }
       },
       "emergency": {
         "title": "Emergency Resources",
@@ -503,16 +533,16 @@
       "emphasis": "Children don't need more apps. They need guidance, trust, and space to grow.",
       "citation": "SafeMentor is built on internationally recognized child-development principles from Gerald Hüther, Jesper Juul, Dan Siegel, and principle-based thinking. We do not shape children through control. We invite development through relationship.",
       "card1": {
-        "title": "Curiosity over pressure",
-        "desc": "Encouraging wonder and exploration, not performance metrics"
+        "title": "Stage 1 – Normal Companionship",
+        "desc": "SafeMentor responds warmly, age-appropriately and with pedagogical care. No intervention, no notification. Your child is accompanied – you don't need to do anything."
       },
       "card2": {
-        "title": "Connection over control",
-        "desc": "Development through relationship, not forced behavior"
+        "title": "Stage 2 – Quiet Signal",
+        "desc": "For topics like bullying, emotional pressure or concerning requests, SafeMentor recognises the signal. The AI responds empathetically and encourages your child to talk to you. You receive a discreet note in your parent dashboard – not an alarm, but a sign: this is worth a conversation."
       },
       "card3": {
-        "title": "Trust over surveillance",
-        "desc": "Insight for parents without invading children's privacy"
+        "title": "Stage 3 – Immediate Notification",
+        "desc": "For serious warning signs – self-harm, sexual assault, acute danger – SafeMentor switches immediately: The child receives a calm, structured response with concrete crisis resources. You are notified promptly with a clear summary – so you are there when your child needs you."
       },
       "learning": {
         "eyebrow": "What SafeMentor Helps With",
@@ -528,7 +558,7 @@
       },
       "offline": {
         "title": "Safety that thinks ahead – without monitoring.",
-        "description": "SafeMentor doesn't just answer randomly. Our system accompanies the dialogue in real-time: As soon as difficult topics arise, we double-check both your child's questions and the AI's answers. We call this our 3-stage safety, which ensures that your child only receives answers that empower instead of unsettle. You can see these 3 stages here:",
+        "description": "SafeMentor doesn't just answer randomly. Every message from your child is checked for safety relevance in real time – before a response appears. We call this our 3-stage safety.",
         "emphasis": "Safety is our top priority."
       },
       "standards": {
@@ -554,12 +584,12 @@
       "safety": {
         "eyebrow": "For Parents",
         "title": "Trust Needs Privacy",
-        "description": "Trust is the foundation of every child's development. For this reason, privacy is not just a feature, but the foundation of Safementor. No digital footprints are created here. As soon as a session ends, all raw chat data is irrevocably deleted. We only keep summaries for a period of 7 to a maximum of 30 days. What remains is what really matters to you as parents: We visualize emotional trends and identify theme areas if the mood remains very negative over several sessions. This way, you find out what moves your child and receive valuable impulses for real conversations – while your child's privacy remains absolutely protected.",
+        "description": "Trust is the foundation of every child's development. For this reason, privacy is not just a feature, but the foundation of Safementor. No digital footprints are created here. As soon as a session ends, all raw chat data is irrevocably deleted. We only keep summaries for a period of 7 to a maximum of 30 days. What remains is what really matters to you as parents: We notify you the moment your attention is needed. Whether bullying, self-harm or other critical topics – we keep you informed so you can be there for your child exactly when it matters most.",
         "summary": "Here is the summary again:",
         "detect": {
           "title": "What We Detect",
           "list": [
-            "Emotional trends over time",
+            "Request to complete homework",
             "Warning signs (distress, isolation)",
             "Serious red flags: self-harm, grooming, bullying, drugs, harm to others"
           ]
@@ -587,6 +617,22 @@
         "protects": {
           "desc": "This protects trust between child and parent. Children need to know they can express themselves safely, while parents stay informed about their wellbeing."
         }
+      },
+      "philosophy": {
+        "list": [
+          {
+            "title": "Encourages offline exploration.",
+            "desc": "Suggests activities, conversations and experiences that take place away from screens."
+          },
+          {
+            "title": "Keeps parents informed.",
+            "desc": "Clear, honest communication about which critical topics we have identified, so you can pick up the thread of conversation."
+          },
+          {
+            "title": "Developed by parents for parents.",
+            "desc": "SafeMentor is intended for parents like us: A tool that makes the digital space so safe that it enriches childhood instead of replacing it."
+          }
+        ]
       }
     },
     "Approach": {
@@ -599,7 +645,7 @@
       },
       "bullet2": {
         "title": "Keeps parents informed",
-        "desc": "Clear, honest communication about what your child is learning and experiencing."
+        "desc": "Clear, honest communication about which critical topics we have identified, so you can pick up the thread of conversation."
       },
       "bullet3": {
         "title": "Developed by parents for parents",
@@ -612,9 +658,9 @@
       "receives": {
         "title": "Parents receive:",
         "list": [
-          "Calm explanations of emotional trends",
-          "Context for what signals mean — and what they don't",
-          "Suggestions for how to talk to their child",
+          "Safe AI companionship: So your child is in good hands online.",
+          "Context for the meaning of signals – and what they don't mean",
+          "Suggestions for conversations with their child",
           "Encouragement to build trust and connection"
         ],
         "emphasis": "We never shame parents. We help them grow together with their child."
@@ -707,14 +753,56 @@
         "title": "4a. Sub-processors (EU Servers)",
         "intro": "We only pass on data to carefully selected partners for contract fulfillment:",
         "table": {
-          "headers": ["Category", "Provider", "Location", "Purpose", "Legal Basis"],
+          "headers": [
+            "Category",
+            "Provider",
+            "Location",
+            "Purpose",
+            "Legal Basis"
+          ],
           "rows": [
-            ["Hosting & Backend", "Google Cloud", "EU (Belgium)", "Server infrastructure", "DPA according to Art. 28 GDPR"],
-            ["AI Inference and Reasoning", "Nebius AI B.V.", "EU (Amsterdam / Helsinki)", "Generate AI answers", "DPA according to Art. 28 GDPR"],
-            ["Hosting Frontend", "Vercel Inc.", "EU (Frankfurt)", "Server infrastructure", "DPA according to Art. 28 GDPR"],
-            ["Payment Processing", "Mollie B.V.", "EU", "Credit card payments", "DPA according to Art. 28 GDPR"],
-            ["Database Hosting & Backend", "Supabase Ireland Ltd.", "EU (Frankfurt)", "Storage of user accounts (parents), chat summaries, project data", "DPA according to Art. 28 GDPR"],
-            ["SMS Authentication", "Twilio", "EU (Ireland)", "Parent authentication", "DPA according to Art. 28 GDPR"]
+            [
+              "Hosting & Backend",
+              "Google Cloud",
+              "EU (Belgium)",
+              "Server infrastructure",
+              "DPA according to Art. 28 GDPR"
+            ],
+            [
+              "AI Inference and Reasoning",
+              "Nebius AI B.V.",
+              "EU (Amsterdam / Helsinki)",
+              "Generate AI answers",
+              "DPA according to Art. 28 GDPR"
+            ],
+            [
+              "Hosting Frontend",
+              "Vercel Inc.",
+              "EU (Frankfurt)",
+              "Server infrastructure",
+              "DPA according to Art. 28 GDPR"
+            ],
+            [
+              "Payment Processing",
+              "Mollie B.V.",
+              "EU",
+              "Credit card payments",
+              "DPA according to Art. 28 GDPR"
+            ],
+            [
+              "Database Hosting & Backend",
+              "Supabase Ireland Ltd.",
+              "EU (Frankfurt)",
+              "Storage of user accounts (parents), chat summaries, project data",
+              "DPA according to Art. 28 GDPR"
+            ],
+            [
+              "SMS Authentication",
+              "Twilio",
+              "EU (Ireland)",
+              "Parent authentication",
+              "DPA according to Art. 28 GDPR"
+            ]
           ]
         },
         "content": "Although Vercel Inc. is headquartered in San Francisco (USA), data processing for SafeMentor takes place exclusively on servers in Frankfurt, Germany. Vercel has contractually committed to:\n• Not transfer data outside the EU\n• Not grant access to US employees to EU server data\n• Inform SafeMentor immediately in case of official requests. \nAdditional protection: All sensitive data (chat content, emotional trends) is end-to-end encrypted before being stored on Vercel servers, so that Vercel itself has no access to plain text data.\n\nTwilio Inc. is also headquartered in the USA, but SafeMentor uses Twilio's European infrastructure in the Ireland region (IE1) for parent authentication. This ensures that the primary processing and storage of authentication data (such as mobile numbers and verification codes) takes place within the EEA.\nTwilio has committed through a Data Processing Addendum (DPA) and supplementary technical measures to:\n• Carry out the storage and processing of personal data primarily on servers within the EU.\n• Ensure an adequate level of data protection by applying EU Standard Contractual Clauses and certification under the EU-U.S. Data Privacy Framework.\n• Limit access to data by US entities to the absolute minimum necessary for technical operation.\n• In case of government requests, proceed according to internal transparency guidelines and protect the interests of SafeMentor.\n\n**Technical details about Nebius AI:** \n• Legal form: Nebius AI B.V. (Netherlands) \n• Data centers: Amsterdam (primary), Helsinki (backup) \n• Certifications: ISO 27001, SOC 2 Type II \n• Data residency: All data remains in EU data centers \n• Training ban: Nebius does NOT use customer data for model training \n• Retention: Requests are deleted immediately after processing"
@@ -743,14 +831,42 @@
         "title": "6. Storage Duration",
         "intro": "Personal data is stored only as long as necessary for the purposes or as required by legal deadlines.",
         "table": {
-          "headers": ["DATA TYPE", "RETENTION PERIOD", "LEGAL BASIS"],
+          "headers": [
+            "DATA TYPE",
+            "RETENTION PERIOD",
+            "LEGAL BASIS"
+          ],
           "rows": [
-            ["Account Data (Parents)", "Until contract end + 10 years", "§ 147 AO (Retention requirement)"],
-            ["Chat Summaries (normal)", "7 days", "Art. 6 (1) (b) GDPR"],
-            ["Project Memory", "30 days after last use", "Art. 6 (1) (b) GDPR"],
-            ["Yellow/Red Flag Summaries", "30 days (automatic deletion)", "Art. 6 (1) (f) GDPR (Child protection)"],
-            ["Emotional Trends (aggregated)", "30 days", "Art. 6 (1) (f) GDPR"],
-            ["Full Chat Protocols", "Never stored server-side", "Privacy by Design"]
+            [
+              "Account Data (Parents)",
+              "Until contract end + 10 years",
+              "§ 147 AO (Retention requirement)"
+            ],
+            [
+              "Chat Summaries (normal)",
+              "7 days",
+              "Art. 6 (1) (b) GDPR"
+            ],
+            [
+              "Project Memory",
+              "30 days after last use",
+              "Art. 6 (1) (b) GDPR"
+            ],
+            [
+              "Yellow/Red Flag Summaries",
+              "30 days (automatic deletion)",
+              "Art. 6 (1) (f) GDPR (Child protection)"
+            ],
+            [
+              "Emotional Trends (aggregated)",
+              "30 days",
+              "Art. 6 (1) (f) GDPR"
+            ],
+            [
+              "Full Chat Protocols",
+              "Never stored server-side",
+              "Privacy by Design"
+            ]
           ]
         },
         "content": "IMPORTANT: Red flag summaries are deleted after 30 days even if the hazard situation persists. This serves to protect the child's privacy. For ongoing concerns, we recommend professional support (e.g., family counseling) instead of technical permanent monitoring.\n\n**Account Deletion:** Upon termination, all personal data (except tax-relevant documents) will be completely deleted within 30 days."
@@ -970,6 +1086,12 @@
     "goHome": "Back to Home"
   },
   "Compliance": {
+    "header": {
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "createAccountTitle": "Create your account",
+      "createAccountSubtitle": "Welcome! Please fill in the details to get started"
+    },
     "sidebar": {
       "title": "Your Child’s Privacy",
       "description": "SafeMentor is built on the principle of \"Data Minimization.\" We only process what is strictly needed to keep your child safe.",
@@ -1007,8 +1129,8 @@
       "parents": {
         "title": "Parents Can See",
         "list": [
-          "Risk Alerts & Context",
-          "Emotion Trends"
+          "Risk Alerts",
+          "Context for red flag events"
         ]
       }
     },

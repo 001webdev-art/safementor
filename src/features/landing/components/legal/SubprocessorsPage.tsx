@@ -1,3 +1,5 @@
+'use client';
+
 import { Navigation } from '@/features/landing/components/Navigation'
 import { SafeMentorFooter } from '@/features/landing/components/SafeMentorFooter'
 import { useTranslations, useLocale } from 'next-intl'
