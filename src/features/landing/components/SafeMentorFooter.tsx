@@ -32,7 +32,7 @@ export const SafeMentorFooter = () => {
                     </div>
                 </div>
                 <div className="pt-8 border-t border-[#F5F2EC] flex flex-wrap justify-between items-center gap-4 text-[#4A4540]">
-                    <p className="text-sm opacity-60">© {new Date().getFullYear()} SafeMentor. All rights reserved.</p>
+                    <p className="text-sm opacity-60">© 2026 SafeMentor. All rights reserved.</p>
                     <p className="text-sm opacity-60">{t('bottom')}</p>
                 </div>
             </div>

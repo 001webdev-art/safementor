@@ -40,7 +40,7 @@ export const SafeMentorHero = () => {
                                     width={300}
                                     height={300}
                                     className="w-full h-full max-w-md mx-auto object-contain"
-                                    loading="lazy"
+                                    //loading="lazy"
                                 />
                             </div>
                         </div>
