@@ -1328,7 +1328,8 @@
       "title": "¿Listo para dar a su hijo un espacio seguro?",
       "subtitle": "Únase a nuestra fase piloto y experimente SafeMentor como una de las primeras familias — completamente gratis.",
       "primary": "Empezar gratis",
-      "secondary": "Ver qué detectamos"
+      "secondary": "Ver qué detectamos",
+      "tertiary": "¡Pruébelo!"
     },
     "colHeaders": {
       "scenario": "Lo que su hijo podría decir o escribir",

@@ -397,7 +397,7 @@ export default function HowItWorksPage() {
               <div className="max-w-2xl mx-auto text-center animate-fade-in">
                 <h2 className="font-serif text-3xl font-bold mb-4 text-[#4A4540]">{t('cta.title')}</h2>
                 <p className="opacity-75 text-lg mb-8 text-[#4A4540]">{t('cta.subtitle')}</p>
-                <div className="flex flex-wrap gap-4 justify-center">
+                <div className="flex flex-wrap gap-4 justify-center mb-4">
                   <Link
                     href={`/${locale}/register`}
                     className="px-8 py-3.5 rounded-full font-medium bg-[#7B8F71] text-[#FDFBF8] hover:opacity-90 transition-all shadow-sm"
@@ -410,6 +410,16 @@ export default function HowItWorksPage() {
                   >
                     {t('cta.secondary')}
                   </button>
+                </div>
+                <div className="flex justify-center">
+                  <a
+                    href="https://safementor-safety.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3.5 rounded-full font-medium border border-[#7B8F71] text-[#7B8F71] hover:bg-[#7B8F71]/5 transition-all"
+                  >
+                    {t('cta.tertiary')}
+                  </a>
                 </div>
               </div>
             </section>
@@ -446,6 +456,18 @@ export default function HowItWorksPage() {
               {/* Privacy note */}
               <div className="rounded-2xl p-5 bg-[#E8F1F8] text-[#1A5C8C] text-sm leading-relaxed mt-6">
                 <strong className="font-semibold">{t('privacy.label')}</strong> {t('privacy.text')}
+              </div>
+
+              {/* Try it out CTA */}
+              <div className="flex justify-center mt-10">
+                <a
+                  href="https://safementor-safety.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-3.5 rounded-full font-medium border border-[#7B8F71] text-[#7B8F71] hover:bg-[#7B8F71]/5 transition-all"
+                >
+                  {t('cta.tertiary')}
+                </a>
               </div>
             </div>
           </section>
