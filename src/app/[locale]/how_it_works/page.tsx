@@ -1,22 +1,20 @@
-import { LandingPage } from '@/features/landing/index.page'
 import { getTranslations } from 'next-intl/server'
 import { locales } from '@/lib/i18n/config'
+import HowItWorksPage from '@/features/landing/components/HowItWorksPage'
 
-// Gera metadados
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'HomePage' })
-
+  const t = await getTranslations({ locale, namespace: 'HowItWorks' })
   return {
-    title: t('title'),
+    title: t('meta.title'),
+    description: t('meta.description'),
   }
 }
 
-// Gera páginas estáticas para cada locale
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export default function HomePage() {
-  return <LandingPage />
+export default function Page() {
+  return <HowItWorksPage />
 }

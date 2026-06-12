@@ -11,8 +11,8 @@ export const Navigation = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { href: "#values", label: t('values') },
-        { href: "#approach", label: t('approach') },
+        { href: `/${locale}/about`, label: t('about'), isAnchor: false },
+        { href: `/${locale}/how_it_works`, label: t('howItWorks'), isAnchor: false },
     ];
 
     return (
