@@ -1,21 +1,21 @@
 {
   "Access": {
-    "title": "Bem-vindo ao Piloto do SafeMentor",
-    "description": "Por favor, insira a senha para começar.",
-    "placeholder": "Inserir Senha",
-    "button": "Desbloquear Acesso",
-    "error": "Senha Incorreta"
+    "title": "Welcome to SafeMentor Pilot",
+    "description": "Please enter the password to get started.",
+    "placeholder": "Enter Password",
+    "button": "Unlock Access",
+    "error": "Incorrect Password"
   },
   "AccessLegal": {
-    "contactLabel": "Perguntas sobre o piloto:",
-    "linkText": "Impressum e Privacidade",
-    "modalTitle": "Impressum e Privacidade (Piloto)",
-    "intro": "As seguintes disposições aplicam-se à fase piloto:",
-    "provider": "Impressum - Informações de acordo com o § 5 DDG: Provedor: Andreas Greif & Heinrich Gronauer.",
+    "contactLabel": "Questions about the pilot:",
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy (Pilot)",
+    "intro": "The following provisions apply to the pilot phase:",
+    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer.",
     "address": "Mühlenstr.3, 78176 Blumberg",
-    "contactInfo": "Email: safementor-pilot@mail.com, Telefone: +49 176 34 901755",
-    "disputeResolution": "Não estamos dispostos nem obrigados a participar de processos de resolução de litígios perante uma junta de arbitragem de consumo.",
-    "privacy": "Privacidade - Os responsáveis são Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. Ao visitar esta página, o seu endereço IP é processado por motivos técnicos e para garantir a segurança do sistema. Utilizamos um cookie de sessão tecnicamente necessário para gerir o acesso através do seu código de acesso. Não são utilizados cookies de rastreamento ou de marketing. Encontrará a nossa política de privacidade detalhada após o login."
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
   },
   "Header": {
     "title": "Safementor",
@@ -29,10 +29,9 @@
   },
   "Navigation": {
     "language": "Idioma",
-    "pt": "Português",
-    "en": "Inglês",
-    "es": "Espanhol",
-    "de": "Alemão"
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
   },
   "HomePage": {
     "title": "Bem-vindo ao Projeto Safementor",
@@ -93,11 +92,7 @@
       "privacySecurity": "Privacidade e Segurança",
       "preferences": "Preferências do App",
       "communication_preferences": "Preferências de Comunicação",
-      "social": "Social e Bio",
-      "notifications": "Notificações",
-      "basicinfo": "Informações básicas",
-      "profileDetails": "Detalhes do perfil",
-      "settingsSubtitle": "Gerencie a sua conta e preferências de segurança."
+      "social": "Social e Bio"
     },
     "fields": {
       "firstname": "Primeiro Nome",
@@ -192,320 +187,20 @@
       "deleteChild": "Excluir Filho",
       "cancel": "Cancelar",
       "confirmDelete": "Tem certeza de que deseja excluir este filho? Esta ação não pode ser desfeita."
-    },
-    "payment": {
-      "title": "Dados de pagamento",
-      "subtitle": "Gerencie a sua subscrição e faturação",
-      "currentMethod": "Método de pagamento atual",
-      "active": "Ativo",
-      "expires": "Expira",
-      "update": "Atualizar cartão",
-      "remove": "Remover cartão"
-    },
-    "billing": {
-      "title": "Informações de faturação",
-      "plan": "Plano atual",
-      "familyPlan": "Plano familiar"
-    },
-    "sidebar": {
-      "subtitle": "Painel dos pais",
-      "chat": "Ir para a aplicação de chat",
-      "logout": "Terminar sessão"
-    },
-    "privacy_new": {
-      "title": "Dados e privacidade",
-      "subtitle": "Como protegemos as informações da sua família.",
-      "basis": {
-        "title": "Base jurídica do tratamento (RGPD)",
-        "subtitle": "Por que razão podemos tratar os dados do seu filho",
-        "badge": "CONFORME COM A UE",
-        "safety": {
-          "title": "Segurança da criança (interesses vitais)",
-          "desc": "Análise de IA para detetar e prevenir danos a crianças"
-        },
-        "service": {
-          "title": "Operação do serviço (necessidade contratual)",
-          "desc": "Tratamento técnico necessário para prestar o serviço de acompanhante IA"
-        },
-        "interest": {
-          "title": "Interesse legítimo (com salvaguardas)",
-          "desc": "Melhoria das funcionalidades de segurança com proteção da privacidade da criança através de agregação"
-        },
-        "consent": "O seu consentimento: forneceu consentimento explícito durante a criação da conta. Para consultar o formulário ou retirar o seu consentimento, aceda às Definições."
-      },
-      "access": {
-        "title": "Acesso, visibilidade e eliminação de dados",
-        "subtitle": "Em conformidade com o RGPD",
-        "visibility": {
-          "title": "O que vê (visibilidade de dados):",
-          "items": [
-            "Avisos sobre tópicos críticos (bullying, etc.)",
-            "Alertas de segurança com contexto mínimo",
-            "Sem registos de chat em bruto nem vigilância"
-          ]
-        },
-        "request": {
-          "title": "O que pode solicitar (direitos de acesso a dados):",
-          "items": [
-            "Ao abrigo do RGPD, pode solicitar acesso completo aos dados",
-            "Este acesso é excecional e requer justificação legal",
-            "Todos os pedidos são registados e analisados",
-            "Protege a dignidade e confiança da criança"
-          ],
-          "button": "Solicitar acesso excecional a dados"
-        },
-        "deletion": {
-          "title": "Eliminação automática de dados:",
-          "desc": "Após 30 dias, todos os dados de conversa são eliminados permanentemente dos nossos servidores (conformidade com o RGPD)"
-        }
-      },
-      "rights": {
-        "title": "Os seus direitos ao abrigo do RGPD",
-        "subtitle": "Gerencie os seus dados e preferências de privacidade",
-        "access": {
-          "title": "Direito de acesso",
-          "desc": "Descarregue uma cópia de todos os dados que guardamos",
-          "button": "Solicitar exportação"
-        },
-        "erasure": {
-          "title": "Direito ao apagamento",
-          "desc": "Eliminar permanentemente todos os dados armazenados",
-          "button": "Eliminar dados"
-        },
-        "object": {
-          "title": "Direito de oposição",
-          "desc": "Retirar o consentimento e suspender o tratamento",
-          "button": "Retirar consentimento"
-        }
-      }
-    },
-    "help_new": {
-      "title": "Ajuda e suporte",
-      "subtitle": "Tudo o que precisa de saber sobre o SafeMentor.",
-      "docs": {
-        "title": "Documentação completa",
-        "desc": "Visite o nosso centro de ajuda para guias completos e perguntas frequentes",
-        "button": "Visitar centro de ajuda"
-      },
-      "surveillance": {
-        "title": "Porque não é uma ferramenta de vigilância",
-        "subtitle": "Proteger a privacidade da criança garantindo a segurança",
-        "notDo": {
-          "title": "O que o SafeMentor NÃO faz:",
-          "items": [
-            "Sem monitorização em tempo real das conversas",
-            "Sem reprodução de chats nem visualização do histórico de mensagens",
-            "Sem pontuação emocional nem vigilância comportamental",
-            "Sem rastreio da localização ou utilização do dispositivo da criança",
-            "Sem acesso dos pais aos registos de chat em bruto"
-          ]
-        },
-        "does": {
-          "title": "O que o SafeMentor faz:",
-          "items": [
-            "Fornece um acompanhante IA para a criança conversar livremente",
-            "Deteta padrões que podem indicar risco",
-            "Ajuda com os trabalhos de casa, mas não faz o trabalho",
-            "Alerta os pais apenas quando são detetadas preocupações graves"
-          ]
-        },
-        "whySafer": {
-          "title": "Porque é mais seguro para as crianças:",
-          "desc": "A proteção da privacidade encoraja uma comunicação honesta. As crianças precisam de um espaço confidencial para processar emoções sem medo de vigilância. Isso gera confiança e permite uma intervenção mais precoce quando necessário."
-        }
-      },
-      "rights": {
-        "title": "Como os direitos das crianças são protegidos",
-        "subtitle": "SALVAGUARDAS DE PRIVACIDADE EM CONFORMIDADE COM A UE",
-        "rawChat": {
-          "title": "Porque os pais não veem os chats em bruto:",
-          "desc": "Proteção da dignidade da criança e da autonomia no desenvolvimento. As crianças precisam de espaço privado para desenvolver a identidade e a regulação emocional. A vigilância constante prejudica a confiança e o desenvolvimento saudável."
-        },
-        "insulation": {
-          "title": "Como funciona o isolamento:",
-          "desc": "Apenas preocupações graves acionam alertas. Isto evita dinâmicas de «delação» em que as crianças deixam de falar com honestidade. A IA distingue entre dificuldades normais e riscos genuínos."
-        },
-        "balance": {
-          "title": "Equilíbrio entre confiança e segurança:",
-          "desc": "O SafeMentor foi concebido para apoiar a relação pais-filho, não para a substituir. A privacidade por defeito mantém a confiança, enquanto os alertas de segurança permitem uma intervenção atempada."
-        }
-      },
-      "works": {
-        "title": "Como funciona o SafeMentor",
-        "subtitle": "A nossa abordagem centrada na privacidade",
-        "step1": {
-          "title": "A criança fala com o acompanhante IA",
-          "desc": "Conversas privadas num espaço seguro"
-        },
-        "step2": {
-          "title": "A IA analisa padrões",
-          "desc": "À procura de tópicos difíceis e indicadores de risco"
-        },
-        "step3": {
-          "title": "Os pais veem dados agregados",
-          "desc": "Sem mensagens em bruto"
-        },
-        "step4": {
-          "title": "Alertas quando necessário",
-          "desc": "Apenas preocupações graves acionam notificações"
-        }
-      },
-      "signals": {
-        "title": "Compreender os tipos de sinal",
-        "subtitle": "O QUE SIGNIFICA CADA NÍVEL DE ALERTA",
-        "info": {
-          "title": "Sinal informativo",
-          "desc": "Padrões gerais detetados. Não é necessária ação imediata. Apenas para o seu conhecimento."
-        },
-        "yellow": {
-          "title": "Sinalização amarela",
-          "desc": "Possível preocupação detetada. Considere ter uma conversa gentil de verificação com o seu filho."
-        },
-        "red": {
-          "title": "Sinalização vermelha",
-          "desc": "Preocupação grave que requer atenção imediata. Problema de segurança detetado (automutilação, abuso, etc.)"
-        }
-      },
-      "limitations": {
-        "title": "Limitações da IA: sinais incorretos",
-        "subtitle": "Compreender erros de deteção",
-        "positives": {
-          "title": "Falsos positivos (sobredeteção):",
-          "desc": "A IA pode sinalizar conversas inocentes como preocupantes. Exemplo: «Quero morrer» no contexto de um videojogo. Considere sempre o contexto e confie no seu julgamento."
-        },
-        "negatives": {
-          "title": "Falsos negativos (subdeteção):",
-          "desc": "A IA pode não detetar sinais subtis ou linguagem codificada. Esta ferramenta apoia — mas não substitui — a sua consciência parental e relação com o seu filho."
-        },
-        "reminder": {
-          "title": "Aviso importante:",
-          "desc": "O SafeMentor procura padrões que possam indicar risco. Não consegue ver tudo e pode não detetar ou interpretar erroneamente alguns sinais. O seu julgamento e a sua relação com o seu filho são sempre primordiais."
-        }
-      },
-      "emergency": {
-        "title": "Recursos de emergência",
-        "subtitle": "Se tiver preocupações imediatas de segurança, contacte diretamente um profissional",
-        "crisisLine": "Linha nacional de crise:",
-        "crisisText": "Linha de crise por mensagem:",
-        "crisisTextAction": "Envie HOME para 741741",
-        "findTherapist": "Encontrar um terapeuta:"
-      }
-    },
-    "overview_new": {
-      "title": "Visão geral",
-      "subtitle": "Bem-vindo de volta! Aqui está o resumo de segurança do seu filho.",
-      "riskLevel": "Nível de risco atual",
-      "lastChecked": "Última verificação: agora mesmo",
-      "noConcerns": "Nenhuma preocupação detetada",
-      "healthyPatterns": "As conversas do seu filho mostram padrões saudáveis. Continue a fazer verificações regulares.",
-      "understandingSignals": "Compreender os sinais de risco:",
-      "signals": {
-        "info": "Informativo: padrões gerais",
-        "yellow": "Amarelo: possível preocupação",
-        "red": "Vermelho: ação imediata"
-      },
-      "viewingFor": "A ver dados de",
-      "timeRange": {
-        "7d": "Últimos 7 dias",
-        "30d": "Últimos 30 dias"
-      },
-      "trendTitle": "Resumo da tendência emocional",
-      "patterns": "Padrões emocionais agregados ao longo do tempo",
-      "legend": {
-        "positive": "Positivo",
-        "neutral": "Neutro",
-        "needsSupport": "Precisa de apoio"
-      },
-      "disclaimer": {
-        "title": "⚠️ Importante:",
-        "text": "O SafeMentor procura padrões que possam indicar risco. Não consegue ver tudo e pode não detetar ou interpretar erroneamente alguns sinais. Esta ferramenta apoia — mas não substitui — a sua relação com o seu filho."
-      },
-      "privacy": {
-        "title": "Proteção de privacidade ativa",
-        "desc": "Apenas são mostradas tendências emocionais agregadas. As mensagens individuais permanecem privadas para proteger o espaço confidencial do seu filho. Os alertas de segurança são apresentados separadamente se a IA detetar padrões preocupantes."
-      }
-    },
-    "children_new": {
-      "title": "Dados das crianças",
-      "subtitle": "Gerencie as crianças ligadas e as respetivas preferências de segurança.",
-      "management": "Gestão de crianças",
-      "managementSubtitle": "Ligue e gira dispositivos de crianças",
-      "addChild": "Adicionar criança",
-      "noChildren": "Ainda não há crianças registadas. Clique em «Adicionar criança» para começar.",
-      "settings": "Definições de {name}",
-      "child": "Criança",
-      "newChild": "Nova criança",
-      "newDevice": "Novo dispositivo",
-      "fields": {
-        "nickname": "Alcunha",
-        "birthdate": "Data de nascimento (MM/AA)",
-        "language": "Idioma",
-        "timeLimit": "Limite de tempo (minutos/dia)"
-      },
-      "languages": {
-        "en": "Inglês",
-        "pt": "Português",
-        "de": "Alemão"
-      },
-      "actions": {
-        "save": "Guardar",
-        "pause": "Pausar",
-        "delete": "Eliminar"
-      }
-    },
-    "notifications_new": {
-      "title": "Notificações de segurança",
-      "subtitle": "Monitorize e responda a alertas de segurança para os seus filhos.",
-      "activeAlerts": "Alertas ativos",
-      "redFlag": "SINALIZAÇÃO VERMELHA",
-      "guidance": {
-        "title": "Orientação",
-        "step1": "Fale com um especialista, linha de apoio 988",
-        "step2": "Mantenha a calma e seja gentil",
-        "step3": "Tenha uma conversa atenciosa"
-      },
-      "noActiveAlerts": "Sem alertas ativos neste momento",
-      "disclaimer": {
-        "title": "⚠️ Importante:",
-        "text": "O SafeMentor **não é** um especialista humano e **pode cometer erros**. Para obter ajuda, **contacte sempre em primeiro lugar um especialista humano**."
-      },
-      "support": {
-        "title": "Precisa de falar? Encontre apoio agora",
-        "desc": "Se tiver preocupações imediatas de segurança, existe ajuda profissional:",
-        "crisis": "Linha de crise: 988",
-        "emergency": "Serviços de emergência locais: 112"
-      },
-      "recent": "Notificações de segurança recentes",
-      "levels": {
-        "yellow": "Amarelo",
-        "info": "Informativo"
-      },
-      "actions": {
-        "getAdvice": "Obter aconselhamento",
-        "markRead": "Marcar como reconhecido",
-        "viewAll": "Ver todas as notificações →"
-      },
-      "noRecent": "Sem notificações recentes",
-      "nextSteps": {
-        "title": "O que fazer a seguir",
-        "desc": "As preocupações imediatas de segurança devem ser tratadas diretamente. Utilize o nosso guia para iniciar conversas.",
-        "button": "Ler guia de crise"
-      }
     }
   },
   "Errors": {
     "invalidEmail": "E-mail inválido",
     "passwordLength": "Senha deve ter pelo menos 6 caracteres",
     "passwordMismatch": "As senhas não coincidem",
-    "generic": "Ocorreu um erro. Tente novamente.",
-    "emailConflict": "Este e-mail já está em uso, a redirecionar para a página de início de sessão"
+    "generic": "Ocorreu um erro. Tente novamente."
   },
   "Landing": {
     "Hero": {
       "title1": "Safementor",
       "title2": "para",
       "title3": "projeto Safementor",
-      "description": "Tradução",
+      "description": "Translation",
       "emailPlaceholder": "Digite seu endereço de email",
       "startTrial": "Iniciar Teste Grátis",
       "noCreditCard": "Não requer cartão de crédito.",
@@ -527,641 +222,188 @@
   },
   "SafeMentor": {
     "Navigation": {
-      "values": "Nossos Valores",
-      "approach": "Nossa Abordagem",
-      "learnMore": "Saiba Mais"
+      "values": "Our Values",
+      "approach": "Our Approach",
+      "learnMore": "Learn More"
     },
     "Hero": {
-      "eyebrow": "Nutrindo o Crescimento, Juntos",
-      "title": "Apoiando crianças com orientação, confiança e espaço para crescer",
-      "subtitle": "O SafeMentor ajuda as famílias a nutrir a curiosidade, construir confiança e apoiar o desenvolvimento saudável — com uma tecnologia que respeita a infância.",
-      "ctaPrimary": "Descubra Nossa Abordagem",
-      "ctaSecondary": "Para os Pais"
+      "eyebrow": "Nurturing Growth, Together",
+      "title": "Supporting children with guidance, trust, and space to grow",
+      "subtitle": "SafeMentor helps families nurture curiosity, build trust, and support healthy development — with technology that respects childhood.",
+      "ctaPrimary": "Discover Our Approach",
+      "ctaSecondary": "For Parents"
     },
     "Trust": {
-      "badge1": "Inspirado no Kids Online Safety Act",
-      "badge2": "Compatível com o RGPD",
-      "badge3": "Feito por pais para pais",
-      "badge4": "Alojamento de dados na UE"
+      "badge1": "Kids Online Safety Act inspired",
+      "badge2": "GDPR Compliant",
+      "badge3": "Made by parents for parents"
     },
     "Values": {
-      "eyebrow": "O que é o SafeMentor",
-      "title": "O SafeMentor não é mais um produto de tempo de tela",
-      "description": "É um companheiro de pensamento e mentoria projetado para ajudar as crianças a desenvolver curiosidade, responsabilidade, força emocional e conexão com o mundo real — com forte apoio para os pais.",
-      "emphasis": "As crianças não precisam de mais aplicativos. Elas precisam de orientação, confiança e espaço para crescer.",
-      "citation": "O SafeMentor é construído sobre princípios de desenvolvimento infantil internacionalmente reconhecidos de Gerald Hüther, Jesper Juul, Dan Siegel e pensamento baseado em princípios. Não moldamos as crianças através do controle. Convidamos ao desenvolvimento através do relacionamento.",
+      "eyebrow": "What SafeMentor Is",
+      "title": "SafeMentor is not another screen-time product",
+      "description": "It is a thinking and mentoring companion designed to help children develop curiosity, responsibility, emotional strength, and real-world connection — with strong support for parents.",
+      "emphasis": "Children don't need more apps. They need guidance, trust, and space to grow.",
+      "citation": "SafeMentor is built on internationally recognized child-development principles from Gerald Hüther, Jesper Juul, Dan Siegel, and principle-based thinking. We do not shape children through control. We invite development through relationship.",
       "card1": {
-        "title": "Etapa 1 – Acompanhamento normal",
-        "desc": "O SafeMentor responde de forma calorosa, adequada à idade e pedagogicamente cuidada. Sem intervenção, sem notificação. O seu filho é acompanhado – não precisa de fazer nada."
+        "title": "Curiosity over pressure",
+        "desc": "Encouraging wonder and exploration, not performance metrics"
       },
       "card2": {
-        "title": "Etapa 2 – Sinal silencioso",
-        "desc": "Para tópicos como bullying, pressão emocional ou pedidos preocupantes, o SafeMentor reconhece o sinal. A IA responde com empatia e encoraja o seu filho a falar consigo. Recebe uma nota discreta no seu painel de pais – não um alarme, mas um sinal: aqui vale a pena uma conversa."
+        "title": "Connection over control",
+        "desc": "Development through relationship, not forced behavior"
       },
       "card3": {
-        "title": "Etapa 3 – Notificação imediata",
-        "desc": "Para sinais de alerta graves – automutilação, agressão sexual, perigo agudo – o SafeMentor muda imediatamente: A criança recebe uma resposta calma e estruturada com recursos de crise concretos. É notificado prontamente com um resumo claro – para que esteja presente quando o seu filho precisar de si."
+        "title": "Trust over surveillance",
+        "desc": "Insight for parents without invading children's privacy"
       },
       "learning": {
-        "eyebrow": "Com o que o SafeMentor Ajuda",
-        "title": "Aprendizado e Compreensão",
-        "description": "O SafeMentor apoia as crianças na compreensão de temas escolares, na exploração de ideias e interesses e na resolução de problemas passo a passo.",
+        "eyebrow": "What SafeMentor Helps With",
+        "title": "Learning & Understanding",
+        "description": "SafeMentor supports children with understanding school topics, exploring ideas and interests, and working through problems step by step.",
         "callout": {
-          "title": "Importante:",
-          "desc1": "O SafeMentor não dá respostas instantâneas para o dever de casa.",
-          "desc2": "Em vez disso, faz perguntas orientadoras, ajuda as crianças a pensar passo a passo e incentiva as suas próprias ideias."
+          "title": "Important:",
+          "desc1": "SafeMentor does not give instant answers for homework.",
+          "desc2": "Instead, it asks guiding questions, helps children think step by step, and encourages their own ideas."
         },
-        "emphasis": "Porque o aprendizado deve ativar o cérebro, não substituí-lo.",
-        "partnership": "O SafeMentor não é um 'Robô do Sim', mas um verdadeiro parceiro. As IAs convencionais tendem para a chamada servilidade: repetem o utilizador e concordam sempre, apenas para parecerem 'úteis'. Nós quebramos este padrão e desenvolvemos um mentor que não se limita a concordar, mas desafia gentilmente. Reconhece quando uma criança procura um atalho e encoraja o pensamento crítico em vez disso. É assim que promovemos a compreensão real em vez do mero consumo rápido."
+        "emphasis": "Because learning should activate the brain, not replace it."
       },
       "offline": {
-        "title": "Segurança que pensa à frente – sem vigiar.",
-        "description": "O SafeMentor não responde de qualquer forma. Cada mensagem do seu filho é verificada em tempo real quanto à relevância para a segurança – antes de aparecer uma resposta. Chamamos a isto a nossa segurança de 3 etapas.",
-        "emphasis": "A segurança é a nossa prioridade máxima."
+        "title": "Offline Life Comes First",
+        "description": "SafeMentor actively encourages offline activities, creativity in the real world, and time with friends, family, and nature.",
+        "emphasis": "The best moments don't happen on a screen."
       },
       "standards": {
-        "title": "Construído com Padrões Globais",
-        "intro": "Confiar é bom, segurança certificada é melhor. O SafeMentor foi construído desde o início usando as diretrizes de segurança infantil mais rigorosas do mundo como base:",
+        "title": "Built to Global Standards",
+        "intro": "Trust is good, certified safety is better. SafeMentor was built from the ground up to use the world's strictest child safety guidelines as a foundation:",
         "list": [
           {
             "title": "KOSA (Kids Online Safety Act):",
-            "desc": "Um padrão dos EUA que exige que as plataformas coloquem consistentemente o bem-estar infantil acima do lucro e protejam ativamente contra riscos de vício."
+            "desc": "A US standard that requires platforms to consistently put child welfare above profit and actively protect against addiction risks."
           },
           {
             "title": "AADC (Age Appropriate Design Code):",
-            "desc": "Um conjunto de regras do Reino Unido que garante que a tecnologia priorize o bem-estar das crianças e proíba qualquer forma de truque de design manipulativo."
+            "desc": "A UK rulebook ensuring that technology prioritizes children's well-being and prohibits any form of manipulative design tricks."
           },
           {
-            "title": "Lei de IA da UE e RGPD:",
-            "desc": "Leis europeias para Inteligência Artificial e proteção de dados que garantem máxima transparência e a mais alta proteção dos dados pessoais do seu filho."
+            "title": "EU AI Act & GDPR:",
+            "desc": "European laws for Artificial Intelligence and data protection that guarantee you maximum transparency and the highest protection of your child's personal data."
           }
         ],
-        "beliefTitle": "Porque acreditamos: A tecnologia deve servir ao desenvolvimento, não ao vício.",
-        "beliefText": "Enquanto a maioria dos aplicativos luta por cada minuto da atenção do seu filho com truques psicológicos, o SafeMentor faz o oposto. Evitamos conscientemente sistemas de recompensa, \"sequências\" (pressão através de cadeias de uso diário) ou incentivos artificiais que prendem as crianças à tela. O nosso objetivo é que o seu filho use o SafeMentor para compreender melhor o mundo real – e depois guarde o dispositivo com uma boa sensação para aplicar o que aprendeu na vida real."
+        "beliefTitle": "Because we believe: Technology should serve development, not addiction.",
+        "beliefText": "While most apps fight for every minute of your child's attention with psychological tricks, SafeMentor does the opposite. We consciously avoid reward systems, \"streaks\" (pressure through daily usage chains), or artificial incentives that glue children to the screen. Our goal is for your child to use SafeMentor to better understand the real world – and then put the device away with a good feeling to apply what they've learned in real life."
       },
       "emotional": {
-        "title": "Apoio Emocional — Sem Substituir Humanos",
-        "description": "O SafeMentor ouve quando as crianças querem conversar. Pode ajudar as crianças a nomear emoções, incentivar a reflexão e sugerir próximos passos saudáveis.",
+        "title": "Emotional Support — Without Replacing Humans",
+        "description": "SafeMentor listens when children want to talk. It can help children name emotions, encourage reflection, and suggest healthy next steps.",
         "callout": {
-          "title": "Mas não é um terapeuta",
-          "desc": "e nunca substitui pessoas reais."
+          "title": "But it is not a therapist",
+          "desc": "and never replaces real people."
         },
-        "final": "Quando necessário, o SafeMentor incentiva gentilmente a conversa com os pais, com adultos de confiança e a busca por apoio humano real."
+        "final": "When needed, SafeMentor gently encourages talking to parents, talking to trusted adults, and seeking real human support."
       },
       "safety": {
-        "eyebrow": "Para os Pais",
-        "title": "Segurança e Alerta Precoce",
-        "description": "A confiança é a base de todo o desenvolvimento infantil. Por isso, a privacidade não é apenas uma funcionalidade, mas o fundamento do Safementor. Aqui não são criadas pegadas digitais. Assim que uma sessão termina, todos os dados em bruto dos chats são eliminados de forma irrevogável. Guardamos apenas resumos por um período de 7 a um máximo de 30 dias. O que fica é o que realmente importa para si como pai ou mãe: Notificamo-lo no momento em que a sua atenção é necessária. Seja bullying, automutilação ou outros tópicos críticos – mantemo-lo informado para que possa estar presente para o seu filho exatamente quando mais importa.",
+        "eyebrow": "For Parents",
+        "title": "Safety & Early Warning",
+        "description": "SafeMentor looks for patterns, not secrets.",
         "detect": {
-          "title": "O Que Detetamos",
+          "title": "What We Detect",
           "list": [
-            "Pedido para fazer os trabalhos de casa",
-            "Sinais de alerta (angústia, isolamento)",
-            "Sinalizações graves: automutilação, grooming, bullying, drogas, dano a terceiros"
+            "Emotional trends over time",
+            "Warning signs (distress, isolation)",
+            "Serious red flags: self-harm, grooming, bullying, drugs, harm to others"
           ]
         },
         "see": {
-          "title": "O Que os Pais Veem",
+          "title": "What Parents See",
           "list": [
-            "Alertas de Risco",
-            "Contexto para eventos de alerta grave"
+            "Aggregated insights",
+            "Clear explanations",
+            "Practical guidance"
           ]
         },
         "notSee": {
-          "title": "O Que os Pais NÃO Veem",
+          "title": "What Parents Do NOT See",
           "list": [
-            "Transcrições brutas de chat",
-            "Confissões privadas",
-            "Vigilância em tempo real"
+            "Raw chat transcripts",
+            "Private confessions",
+            "Real-time surveillance"
           ]
         },
         "protects": {
-          "title": "Isto Protege a Confiança",
-          "desc": "Entre a criança e os pais. As crianças precisam de saber que se podem expressar em segurança, enquanto os pais se mantêm informados sobre o seu bem-estar."
-        },
-        "summary": "Aqui está o resumo novamente:",
-        "privacy": {
-          "title": "Os seus dados estão seguros connosco — e ficam na Europa",
-          "description": "Levamos a privacidade a sério. Por isso, todos os seus dados são armazenados e tratados exclusivamente na UE, protegidos pelas rigorosas normas do RGPD."
+          "title": "This Protects Trust",
+          "desc": "Between child and parent. Children need to know they can express themselves safely, while parents stay informed about their wellbeing."
         }
-      },
-      "philosophy": {
-        "eyebrow": "A nossa filosofia",
-        "title": "Tecnologia que sabe quando dar um passo atrás",
-        "description": "O SafeMentor foi desenvolvido para apoiar a curiosidade natural e o crescimento emocional das crianças — e depois guiá-las suavemente de volta a experiências no mundo real, conversas e brincadeiras.",
-        "list": [
-          {
-            "title": "Incentiva a exploração offline.",
-            "desc": "Sugere atividades, conversas e experiências que acontecem longe dos ecrãs."
-          },
-          {
-            "title": "Mantém os pais informados.",
-            "desc": "Comunicação clara e honesta sobre os tópicos críticos que identificámos, para que possa retomar o fio da conversa."
-          },
-          {
-            "title": "Desenvolvido por pais para pais.",
-            "desc": "O SafeMentor foi pensado para pais como nós: uma ferramenta que torna o espaço digital tão seguro que enriquece a infância em vez de a substituir."
-          }
-        ],
-        "final": "Porque acreditamos que as verdadeiras aventuras não acontecem em ecrãs. O SafeMentor ajuda as crianças a aprender coisas novas sobre o mundo — e depois manda-as de volta para brincar lá fora."
       }
     },
     "Approach": {
-      "eyebrow": "Nossa Abordagem",
-      "title": "Tecnologia que sabe quando dar um passo atrás",
-      "description": "O SafeMentor foi projetado para apoiar a curiosidade natural e o crescimento emocional das crianças — e depois guiá-las suavemente de volta às experiências do mundo real, conversas e brincadeiras.",
+      "eyebrow": "Our Approach",
+      "title": "Technology that knows when to step back",
+      "description": "SafeMentor is designed to support children's natural curiosity and emotional growth — then gently guide them back to real-world experiences, conversations, and play.",
       "bullet1": {
-        "title": "Incentiva a exploração offline",
-        "desc": "Sugere atividades, conversas e experiências que acontecem longe das telas."
+        "title": "Encourages offline exploration",
+        "desc": "Suggests activities, conversations, and experiences that happen away from screens."
       },
       "bullet2": {
-        "title": "Mantém os pais informados",
-        "desc": "Comunicação clara e honesta sobre os tópicos críticos que identificámos, para que possa retomar o fio da conversa."
-      },
-      "bullet3": {
-        "title": "Desenvolvido por pais para pais",
-        "desc": "O SafeMentor destina-se a pais como nós: uma ferramenta que torna o espaço digital tão seguro que enriquece a infância em vez de a substituir."
+        "title": "Keeps parents informed",
+        "desc": "Clear, honest communication about what your child is learning and experiencing."
       }
     },
     "Families": {
-      "title": "Apoiando os Pais — Sem Julgá-los",
-      "description": "O SafeMentor existe para apoiar os pais, não para os substituir.",
+      "title": "Supporting Parents — Not Judging Them",
+      "description": "SafeMentor exists to support parents, not replace them.",
       "receives": {
-        "title": "Os pais recebem:",
+        "title": "Parents receive:",
         "list": [
-          "Acompanhamento IA seguro: Para que o seu filho esteja em boas mãos na internet.",
-          "Contexto sobre o significado dos sinais – e o que não significam",
-          "Sugestões para conversas com o seu filho",
-          "Encorajamento para construir confiança e ligação"
+          "Calm explanations of emotional trends",
+          "Context for what signals mean — and what they don't",
+          "Suggestions for how to talk to their child",
+          "Encouragement to build trust and connection"
         ],
-        "emphasis": "Nunca envergonhamos os pais. Ajudamo-los a crescer junto com o seu filho."
+        "emphasis": "We never shame parents. We help them grow together with their child."
       },
       "trust": {
-        "title": "Construído sobre Confiança",
-        "description": "Nós acreditamos:",
+        "title": "Built on Trust",
+        "description": "We believe:",
         "list": [
-          "As crianças crescem através de relações seguras",
-          "O desenvolvimento não pode ser forçado",
-          "A confiança é mais poderosa que o controle"
+          "Children grow through safe relationships",
+          "Development cannot be forced",
+          "Trust is more powerful than control"
         ],
-        "final": "O SafeMentor foi projetado para desaparecer quando já não for necessário.",
-        "emphasis": "Porque o sucesso significa: Uma criança que pensa, sente, conecta-se — e vive plenamente offline."
+        "final": "SafeMentor is designed to disappear when it's no longer needed.",
+        "emphasis": "Because success means: A child who thinks, feels, connects — and lives fully offline."
       }
     },
     "Quote": {
-      "text": "\"O SafeMentor ajudou a nossa família a ter conversas que não sabíamos como começar. Não se trata da tecnologia — trata-se de nos aproximar.\"",
+      "text": "\"SafeMentor helped our family have conversations we didn't know how to start. It's not about the technology — it's about bringing us closer together.\"",
       "author": "Maria K.",
-      "role": "Mãe de dois"
+      "role": "Mother of two"
     },
     "CTA": {
-      "title": "Pronto para aprender como o SafeMentor funciona?",
-      "subtitle": "Descubra uma abordagem mais calma e ponderada à tecnologia para a sua família.",
-      "buttonPrimary": "Aprenda Como o SafeMentor Funciona",
-      "buttonSecondary": "Leia Nossos Princípios",
-      "disclaimer": "Sem compromisso. Apenas informação ponderada."
+      "title": "Ready to learn how SafeMentor works?",
+      "subtitle": "Discover a calmer, more thoughtful approach to technology for your family.",
+      "buttonPrimary": "Learn How SafeMentor Works",
+      "buttonSecondary": "Read Our Principles",
+      "disclaimer": "No commitment required. Just thoughtful information."
     },
     "Footer": {
-      "text": "Tecnologia que respeita a infância. Construída com cuidado, guiada pela ética, focada no que mais importa.",
-      "learnMore": "Saiba Mais",
-      "company": "Empresa",
+      "text": "Technology that respects childhood. Built with care, guided by ethics, focused on what matters most.",
+      "learnMore": "Learn More",
+      "company": "Company",
       "links": {
-        "approach": "Nossa Abordagem",
-        "ethics": "Diretrizes de Ética",
-        "educators": "Para Educadores",
-        "research": "Pesquisa",
-        "about": "Sobre Nós",
-        "privacy": "Política de Privacidade",
-        "contact": "Contato",
-        "imprint": "Aviso legal",
-        "terms": "Termos e condições"
+        "approach": "Our Approach",
+        "ethics": "Ethics Guidelines",
+        "educators": "For Educators",
+        "research": "Research",
+        "about": "About Us",
+        "privacy": "Privacy Policy",
+        "contact": "Contact"
       },
-      "bottom": "Feito com cuidado para crianças e famílias."
+      "bottom": "Made with care for children and families."
     }
   },
   "NotFound": {
     "title": "Página não encontrada",
     "description": "Ops! A página que você está procurando não existe ou foi movida.",
     "goHome": "Voltar para o Início"
-  },
-  "Compliance": {
-    "header": {
-      "alreadyHaveAccount": "Já tem uma conta?",
-      "signIn": "Entrar",
-      "createAccountTitle": "Crie sua conta",
-      "createAccountSubtitle": "Bem-vindo! Por favor preencha os dados para começar"
-    },
-    "sidebar": {
-      "title": "Privacidade do seu filho",
-      "description": "O SafeMentor é construído sob o princípio de \"Minimização de Dados\". Apenas processamos o que é estritamente necessário para manter seu filho seguro.",
-      "compliant": "Compatível com RGPD"
-    },
-    "dataUsage": {
-      "title": "Quais dados o SafeMentor usa",
-      "riskSignals": {
-        "label": "Sinais de Risco:",
-        "value": "Apenas palavras-chave que indicam bullying, atividades ilegais, dano público, aliciamento (grooming) ou automutilação são sinalizadas."
-      },
-      "usageStats": {
-        "label": "Estatísticas de Uso do App:",
-        "value": "Acompanhamos a duração das sessões e o uso de unidades de IA (tokens) para otimizar nosso serviço."
-      }
-    },
-    "consent": {
-      "improve": {
-        "title": "Ajude a melhorar o SafeMentor",
-        "optional": "(opcional)",
-        "description": "Permita-nos usar relatórios de erros 100% anonimizados para corrigir falhas."
-      }
-    },
-    "transparency": {
-      "title": "RELATÓRIO DE TRANSPARÊNCIA",
-      "never": {
-        "title": "Nunca Coletados",
-        "list": [
-          "Localização GPS Exata",
-          "Fotos da Câmera",
-          "Gravações de Voz",
-          "Históricos de Chat brutos"
-        ]
-      },
-      "parents": {
-        "title": "Os Pais Podem Ver",
-        "list": [
-          "Alertas de Risco e Contexto",
-          "Tendências Emocionais"
-        ]
-      }
-    },
-    "footer": {
-      "agreement": {
-        "terms": "Li e aceito os <terms>Termos e Condições Gerais (T&C)</terms>.",
-        "privacy": "Tomei conhecimento da <privacy>Política de Privacidade</privacy> e consinto com o processamento de dados.",
-        "guardian": "Confirmo que meu filho tem menos de 16 anos e sou o responsável legal.",
-        "marketing": "Não quero receber publicidade do SafeMentor por e-mail.",
-        "payment": "Quero começar a usar o chat de IA imediatamente após o pagamento. Entendo que meu direito de arrependimento de 14 dias termina assim que o chat for usado – minha assinatura permanece cancelável mensalmente."
-      },
-      "back": "Voltar",
-      "createAccount": "Criar Conta"
-    }
-  },
-  "LoginLegal": {
-    "linkText": "Aviso legal e privacidade",
-    "modalTitle": "Aviso legal e privacidade",
-    "modalContent": "Os avisos legais da área de início de sessão vão aqui..."
-  },
-  "Imprint": {
-    "title": "Aviso legal",
-    "provider": "Fornecedor deste sítio web",
-    "names": "Lighthouse Engineering Architecture S.L., CEO: Andreas Greif",
-    "address": "Av Lluc 58, BJ, 07300 Inca, Espanha. CIF B56925043.",
-    "contactInfo": "E-mail: safementor-pilot@mail.com, Telefone: +49 176 34 901755",
-    "disputeResolution": "Não estamos dispostos nem somos obrigados a participar em procedimentos de resolução de litígios perante uma comissão de arbitragem de consumo.",
-    "copyright": "Todos os direitos sobre os conteúdos deste sítio web estão reservados. Qualquer utilização comercial requer o consentimento prévio do titular dos direitos.",
-    "liability": "Este sítio web pode conter ligações a sítios web de terceiros. Não conseguimos identificar qualquer conteúdo ilegal nas páginas ligadas no momento da ligação. Não podemos assumir qualquer responsabilidade pelo conteúdo atual nem pelas alterações efetuadas após a ligação."
-  },
-  "Terms": {
-    "title": "Termos e condições gerais (TCG)",
-    "subtitle": "Fase piloto do SafeMentor",
-    "lastUpdated": "Estado: fevereiro de 2026",
-    "preamble": "O SafeMentor oferece uma plataforma de aprendizagem com IA para crianças. Uma vez que o projeto se encontra atualmente numa fase piloto fechada («Amigos e família»), este acordo serve para esclarecer o enquadramento jurídico entre a empresa e os utilizadores de teste.",
-    "sections": {
-      "s1": {
-        "title": "§ 1 Âmbito de aplicação e partes contratantes",
-        "content": "1. Estes TCG aplicam-se a todos os serviços prestados pelo SafeMentor a tutores legais (doravante «Utilizadores») que utilizem a oferta para os seus filhos menores.\n2. A parte contratante é: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Espanha. Representada pelo Diretor-Geral: Andreas Greif, CIF B56925043.\n3. Ao utilizar o sítio web e introduzir o código de acesso, o Utilizador aceita integralmente estes TCG."
-      },
-      "s2": {
-        "title": "§ 2 Mentor ID e requisitos de acesso",
-        "content": "1. Para criar uma conta no SafeMentor, o Utilizador deve ser maior de idade e ter plena capacidade jurídica.\n2. O Utilizador é responsável pela confidencialidade do seu código de acesso e responde pelos danos decorrentes de uma utilização indevida.\n3. O Utilizador garante que tem a guarda da criança registada ou que dispõe da autorização expressa dos tutores legais."
-      },
-      "s3": {
-        "title": "§ 3 Âmbito dos serviços e integridade académica",
-        "content": "1. O SafeMentor fornece uma interface de IA que apoia as crianças em projetos de aprendizagem e lazer.\n2. O SafeMentor serve de apoio à aprendizagem, não para a elaboração de trabalhos de casa ou provas prontas a entregar. A responsabilidade pelo cumprimento das regras de integridade académica recai exclusivamente no Utilizador.\n3. Não existe direito à utilização de modelos de IA específicos."
-      },
-      "s4": {
-        "title": "§ 4 Disponibilidade e manutenção",
-        "content": "1. O SafeMentor empenha-se em garantir uma elevada disponibilidade da plataforma e do painel dos pais. No entanto, não existe direito a disponibilidade ininterrupta.\n2. Podem ocorrer interrupções temporárias devido a trabalhos de manutenção necessários, atualizações de segurança ou falhas técnicas fora do controlo do SafeMentor (p. ex., falhas em fornecedores de alojamento ou interfaces como a API Groq).\n3. Os trabalhos de manutenção planeados serão comunicados aos Utilizadores com a maior antecedência possível (p. ex., por e-mail ou aviso no painel).\n4. O SafeMentor não é responsável por perdas de dados ou danos causados por falhas técnicas, salvo se forem devidos a negligência grave ou dolo."
-      },
-      "s5": {
-        "title": "§ 5 Monitorização de segurança e encaminhamento de intenção",
-        "content": "1. O SafeMentor analisa automaticamente os chats em busca de situações de perigo (p. ex., grooming, bullying). Caso sejam detetadas, é enviada uma notificação aos pais.\n2. O SafeMentor não garante a deteção completa de todos os perigos. A comunicação das crianças pode escapar às possibilidades técnicas de deteção.\n3. O sistema avalia as tendências emocionais. Em caso de humor negativo persistente durante mais de dois dias, os pais são informados sobre o tema geral e a emoção predominante."
-      },
-      "s6": {
-        "title": "§ 6 Obrigações dos pais (dever de supervisão)",
-        "content": "1. A utilização do SafeMentor não isenta os pais do seu dever legal de supervisão. O SafeMentor é uma ajuda técnica e não um substituto do cuidado humano.\n2. O Utilizador é responsável por garantir que a criança não utilize a IA como substituto da interação social humana. O SafeMentor não se responsabiliza pelas consequências psicológicas de uma antropomorfização excessiva da IA por parte da criança."
-      },
-      "s7": {
-        "title": "§ 7 Regras de conduta e utilização proibida",
-        "content": "1. A utilização do SafeMentor é permitida exclusivamente para fins lícitos. O Utilizador compromete-se a utilizar a plataforma de forma a não violar direitos de terceiros nem gerar ou distribuir conteúdo ilícito.\n2. É expressamente proibido utilizar o SafeMentor para atividades prejudiciais, ameaçadoras ou abusivas; que visem contornar as medidas de segurança da IA («jailbreaking») ou perturbar ou pôr em perigo o funcionamento da plataforma ou a segurança informática.\n3. O SafeMentor reserva-se o direito de bloquear contas temporária ou permanentemente em caso de violação destas regras."
-      },
-      "s8": {
-        "title": "§ 8 Exclusão de responsabilidade",
-        "content": "1. Os sistemas de IA podem gerar informações incorretas («alucinações»). O SafeMentor não é responsável pela exatidão das respostas.\n2. O SafeMentor não assume qualquer responsabilidade por declarações da IA que possam ser consideradas inadequadas ou prejudiciais apesar das medidas de segurança. Distanciamo-nos expressamente do conteúdo gerado por IA com tendências discriminatórias ou inadequadas. A responsabilidade fica excluída, salvo se o SafeMentor tiver ignorado intencionalmente os padrões de segurança.\n3. Todas as recomendações de ação, especialmente na área do artesanato, devem ser verificadas por um adulto antes de serem implementadas. Na execução física de projetos, a responsabilidade pela segurança recai exclusivamente nos pais.\n4. As respostas da IA não constituem aconselhamento profissional (p. ex., médico, jurídico ou relacionado com a segurança)."
-      },
-      "s9": {
-        "title": "§ 9 Limitação de responsabilidade",
-        "content": "1. O SafeMentor é responsável sem limitação pelos danos resultantes de lesões à vida, ao corpo ou à saúde com base numa violação dolosa ou negligente de obrigações.\n2. Por outros danos, o SafeMentor só é responsável em caso de dolo ou negligência grave. Em caso de negligência leve, o SafeMentor só é responsável se for violada uma obrigação cujo cumprimento torna possível a execução adequada do contrato (obrigação cardinal); neste caso, a responsabilidade limita-se ao dano típico e previsível.\n3. O SafeMentor não é responsável por lucros cessantes, danos indiretos ou consequentes. O SafeMentor só é responsável pela perda de dados se esta não pudesse ter sido evitada mediante medidas razoáveis de cópia de segurança por parte do Utilizador.\n4. Uma vez que o conteúdo de IA se baseia em modelos estocásticos, o SafeMentor não assume qualquer responsabilidade pela exatidão factual, integralidade ou adequação educativa das respostas geradas (ver § 3)."
-      },
-      "s10": {
-        "title": "§ 10 Prazo e revogação",
-        "content": "1. O serviço pode ser cancelado mensalmente.\n2. O direito legal de revogação caduca antecipadamente assim que começar a utilização do conteúdo digital (início do chat com IA)."
-      },
-      "s11": {
-        "title": "§ 11 Modelos de utilização gratuita (clientes piloto, edição social e amigos)",
-        "content": "1. O SafeMentor pode conceder acesso gratuito a grupos de utilizadores selecionados (p. ex., clientes piloto, famílias com comprovativo de apoio estatal).\n2. O acesso gratuito está tecnicamente limitado à utilização de modelos específicos. Não existe direito à utilização de modelos premium de alto custo nem de funções avançadas de raciocínio profundo nestes modelos.\n3. Em determinadas tarifas gratuitas, a prestação do serviço de IA realiza-se exclusivamente através de uma chave API a fornecer pelo próprio Utilizador. O Utilizador assume a responsabilidade exclusiva pela criação, limites de tokens e disponibilidade desta chave. Se a quota do fornecedor terceiro for esgotada, a função do SafeMentor é automaticamente pausada até renovação.\n4. Obrigação de comprovar: Para beneficiar da tarifa social, o SafeMentor está habilitado a solicitar comprovativos de elegibilidade (p. ex., notificação de prestações sociais) em intervalos razoáveis."
-      },
-      "s12": {
-        "title": "§ 12 Remuneração e condições de pagamento",
-        "content": "1. A utilização do SafeMentor pode estar sujeita a uma taxa consoante o modelo escolhido (p. ex., Básico, Premium, Equidade Social). Os preços e condições vigentes são claramente apresentados ao Utilizador na página de encomenda antes de concluir a subscrição.\n2. Regulamentação especial para a fase piloto: No âmbito da fase piloto, o SafeMentor pode prestar o serviço gratuitamente ou com tarifas reduzidas. Não existe direito a utilização gratuita permanente para além do período de teste acordado.\n3. Ajustes de preços: O SafeMentor reserva-se o direito de ajustar as tarifas para futuros períodos contratuais. Tais alterações serão comunicadas aos Utilizadores com antecedência suficiente por e-mail."
-      },
-      "s13": {
-        "title": "§ 13 Alteração dos termos",
-        "content": "1. Reservamo-nos o direito de alterar estes TCG a qualquer momento. O Utilizador será informado das alterações com a devida antecedência e terá a possibilidade de as aceitar ou cancelar o serviço. Se a alteração não for aceite, o contrato termina automaticamente.\n2. Todas as alterações ou adições aos TCG serão anunciadas no sítio web."
-      },
-      "s14": {
-        "title": "§ 14 Disposições finais",
-        "content": "1. Aplica-se o direito da República Federal da Alemanha.\n2. Caso alguma disposição seja inválida, as restantes disposições não serão afetadas.\n3. Em caso de litígio, as partes comprometem-se a tentar primeiro uma resolução amigável."
-      }
-    }
-  },
-  "Privacy": {
-    "title": "Política de privacidade do SafeMentor",
-    "lastUpdated": "Estado: fevereiro de 2026",
-    "intro": "Nesta política de privacidade, informamos sobre o tratamento de dados pessoais aquando da utilização da App SafeMentor, do Painel dos Pais e dos serviços de IA associados. A proteção da privacidade das crianças é a nossa prioridade máxima. Seguimos os princípios de «Privacidade desde a conceção» e «Privacidade por defeito» e cumprimos as melhores práticas internacionais de segurança infantil (como o KOSA e o AADC) para garantir um ambiente de aprendizagem seguro.\n\nO SafeMentor destina-se exclusivamente a crianças até aos 15 anos. O consentimento para o tratamento de dados é, por isso, concedido exclusivamente pelos tutores legais.",
-    "sections": {
-      "1": {
-        "title": "1. Responsável pelo tratamento e contacto",
-        "content": "Responsável pelo tratamento de dados: \nLighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Espanha, \nCIF B56925043. E-mail: privacy@safementor.app.\n\nO responsável pela proteção de dados é Andreas Greif, Mühlenstr. 3, 78176 Blumberg. privacy@safementor.app."
-      },
-      "2": {
-        "title": "2. Categorias de dados e finalidades de recolha",
-        "intro": "Recolhemos apenas os dados estritamente necessários para a prestação dos nossos serviços:",
-        "items": [
-          {
-            "title": "Dados de registo (pais):",
-            "content": "• Finalidade: \nNome e morada: Obrigação fiscal (§ 14 UStG - Faturação) \nNúmero de telefone: Verificação por SMS \nE-mail: Processamento contratual e acesso ao Painel dos Pais\nDados de pagamento: Processamento contratual\n• Base jurídica: Art. 6.º, n.º 1, alínea b) do RGPD (Execução de um contrato)."
-          },
-          {
-            "title": "Dados do perfil da criança:",
-            "content": "Pseudónimo e mês de nascimento da criança.\n• Finalidade: Adaptação das respostas da IA à idade e verificação do consentimento parental ao abrigo do Art. 8.º do RGPD."
-          },
-          {
-            "title": "Dados de interação e «Memória do projeto»:",
-            "content": "Conteúdo do chat, perguntas colocadas, respostas geradas e progresso do projeto (p. ex., código Python).\n• Finalidade: Continuidade no processo de aprendizagem. \n• Base jurídica: Art. 6.º, n.º 1, alínea b) do RGPD."
-          },
-          {
-            "title": "Informações recolhidas automaticamente:",
-            "content": "Endereço IP, tipo de browser, sistema operativo e dados de utilização do dispositivo.\n• Finalidade: Depuração e avaliação estatística para melhoria dos nossos serviços.\n• Base jurídica: Art. 6.º, n.º 1, alínea f) do RGPD (Interesse legítimo)."
-          }
-        ]
-      },
-      "3": {
-        "title": "3. Característica especial: Tratamento por IA e encaminhamento de intenção",
-        "content": "O SafeMentor utiliza vários modelos de IA que são selecionados automaticamente consoante o pedido:\n\n• Antes de transferirmos dados para interfaces de IA externas (atualmente Nebius B.V.), são removidos identificadores pessoais na medida do possível.\n• Cada entrada da criança é primeiro analisada por um «Nano-Router» especializado. Este verifica em tempo real se se trata de uma questão de aprendizagem factual, uma declaração emocional ou um pedido crítico (Flag).\n• Consoante o tema detetado, o pedido é encaminhado para o módulo adequado para garantir uma resposta educativamente válida e segura.\n• O conteúdo é automaticamente verificado quanto a situações de ameaça (p. ex., grooming, bullying). Em caso de perigo imediato, é enviado um relatório ao Painel dos Pais e, se necessário, também por e-mail ou SMS.\n\n**Monitorização de segurança e Painel dos Pais:**\n\n• O nosso sistema analisa o estado emocional geral das interações e apresenta a tendência emocional no painel. \n• Se for detetado um padrão emocional negativo persistente, informamos os tutores legais sobre a emoção predominante e a área temática geral (p. ex., «Escola» ou «Amizade») para permitir um diálogo educativo em família (sinalizações amarelas).\n• Se forem detetadas situações de ameaça imediata (p. ex., sinais de bullying, violência ou outros incidentes relevantes para a segurança), os pais são notificados imediatamente. Nestes casos excecionais, são também fornecidos aos pais resumos das secções de chat relevantes para que possam cumprir os seus deveres de supervisão e proteção.\n\nA base jurídica para a monitorização de sinalizações amarelas/vermelhas assenta no Art. 6.º, n.º 1, alínea f) do RGPD (Interesse legítimo na proteção das crianças contra perigos)\n\n**Ponderação de interesses:**\n• Nosso interesse: Cumprimento dos deveres de proteção da infância (§§ 1631, 1666 BGB)\n• Interesse dos pais: Exercício do dever de supervisão\n• Interesse da criança: Proteção contra perigos graves (violência, abuso, suicídio)\n\nIMPORTANTE: O sistema de sinalização vermelha é utilizado exclusivamente para proteção contra perigos graves. NÃO é utilizado para monitorização trivial de comportamentos.\nExemplos de sinalizações vermelhas: ✓ Anúncios concretos de suicídio ✓ Indícios de abuso ✓ Ameaças graves de violência ✗ NÃO: Palavrões, discussões normais, más notas.\n\nPara adolescentes (aprox. 13-15 anos), as notificações sobre tendências emocionais (sinalizações amarelas) são fornecidas de forma mais abstrata. Em caso de indícios de ameaças imediatas (sinalizações vermelhas), os pais continuam a receber informação contextual para poderem cumprir o seu dever de proteção. \nPara crianças com 14 anos ou mais: A criança é informada sobre a função de sinalização vermelha de forma adequada à sua idade. Se forem identificados perigos, a criança é primeiro encorajada a falar com os pais/pessoas de confiança antes de ser notificada automaticamente (exceto em caso de perigo imediato para a vida)."
-      },
-      "3a": {
-        "title": "3a. Modelos e fornecedores de IA",
-        "content": "PEDIDOS PADRÃO: \n• Modelo: Nebius AI \n• Localização: Amesterdão/Helsínquia, UE\n• Utilização: Questões gerais de aprendizagem, tarefas simples \n\nTAREFAS COMPLEXAS: \n• Modelo: Nebius AI High-Reasoning \n• Localização: Servidores da UE \n• Utilização: Problemas matemáticos, explicações complexas, temas muito emocionais ou pedidos sinalizados.  \n\nCRÍTICO PARA A SEGURANÇA: \n• Dupla verificação: Dois modelos Nebius independentes verificam em paralelo \n• Finalidade: Garantia de respostas seguras quando são detetadas sinalizações vermelhas\n\nTodos os modelos de IA são verificados quanto à segurança infantil e estão sujeitos a rigorosos requisitos do RGPD (Acordo de Tratamento de Dados ao abrigo do Art. 28.º do RGPD). \nIMPORTANTE: O tratamento realiza-se exclusivamente em servidores da UE. Não são criados dados de treino a partir dos chats das crianças."
-      },
-      "3b": {
-        "title": "3b. Arquitetura de armazenamento e localização dos dados",
-        "content": "O SafeMentor utiliza um modelo de armazenamento híbrido para proteger a privacidade: \n\n**ARMAZENAMENTO LOCAL (no dispositivo da criança):** \n• Históricos completos de chat: Cifrados com AES-256, apenas no dispositivo e apenas durante a sessão. \n• Resumos de chat: Criados após a sessão e eliminados automaticamente após 7 dias \n• Memória do projeto: Base de dados local para o progresso do projeto (p. ex., fragmentos de código, detalhes sobre um projeto). Os repositórios de projetos são eliminados após 30 dias de inatividade. \n\n**ARMAZENAMENTO NO SERVIDOR (cifrado em centros de dados da UE):** \n• Dados do Painel dos Pais: Tendências emocionais (agregadas, sem textos completos), máx. 30 dias. \n• Resumos de sinalizações amarelas/vermelhas: Resumos contextuais (máx. 30 dias)\n• Dados de conta: Informações de registo, dados de pagamento\n\nIMPORTANTE: Os protocolos completos de chat nunca saem do dispositivo da criança. Apenas pedidos pseudonimizados são transmitidos a servidores para processamento por IA. Em caso de perda do dispositivo, os dados locais são protegidos pelo PIN/biometria do dispositivo. A eliminação remota através do Painel dos Pais é possível."
-      },
-      "4": {
-        "title": "4. Divulgação a terceiros e tratamento de dados na UE",
-        "content": "O SafeMentor trata TODOS os dados exclusivamente na União Europeia. Escolhemos deliberadamente uma arquitetura exclusivamente europeia para garantir o mais elevado padrão de proteção de dados para as crianças."
-      },
-      "4a": {
-        "title": "4a. Subprocessadores (servidores da UE)",
-        "intro": "Partilhamos dados apenas com parceiros cuidadosamente selecionados para o cumprimento do contrato:",
-        "table": {
-          "headers": [
-            "Categoria",
-            "Fornecedor",
-            "Localização",
-            "Finalidade",
-            "Base jurídica"
-          ],
-          "rows": [
-            [
-              "Alojamento e backend",
-              "Google Cloud",
-              "UE (Bélgica)",
-              "Infraestrutura de servidores",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ],
-            [
-              "Inferência e raciocínio de IA",
-              "Nebius AI B.V.",
-              "UE (Amesterdão / Helsínquia)",
-              "Geração de respostas de IA",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ],
-            [
-              "Alojamento frontend",
-              "Vercel Inc.",
-              "UE (Frankfurt)",
-              "Infraestrutura de servidores",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ],
-            [
-              "Processamento de pagamentos",
-              "Mollie B.V.",
-              "UE",
-              "Pagamentos por cartão de crédito",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ],
-            [
-              "Alojamento de base de dados e backend",
-              "Supabase Ireland Ltd.",
-              "UE (Frankfurt)",
-              "Armazenamento de contas de utilizadores (pais), resumos de chat, dados de projetos",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ],
-            [
-              "Autenticação por SMS",
-              "Twilio",
-              "UE (Irlanda)",
-              "Autenticação dos pais",
-              "ATD ao abrigo do Art. 28.º do RGPD"
-            ]
-          ]
-        },
-        "content": "Embora a Vercel Inc. tenha sede em São Francisco (EUA), o tratamento de dados para o SafeMentor realiza-se exclusivamente em servidores em Frankfurt, Alemanha. A Vercel comprometeu-se contratualmente a:\n• Não transferir dados fora da UE\n• Não conceder acesso de funcionários dos EUA aos dados de servidores da UE\n• Informar o SafeMentor imediatamente em caso de pedidos oficiais. \nProteção adicional: Todos os dados sensíveis (conteúdo do chat, tendências emocionais) são cifrados de ponta a ponta antes de serem armazenados em servidores Vercel, pelo que a própria Vercel não tem acesso a dados em texto simples.\n\nA Twilio Inc. também tem sede nos EUA, mas o SafeMentor utiliza a infraestrutura europeia da Twilio na região da Irlanda (IE1) para autenticação dos pais. Isto garante que o tratamento e armazenamento primários dos dados de autenticação (como números de telemóvel e códigos de verificação) ocorrem dentro do EEE.\nA Twilio comprometeu-se através de um Acordo de Tratamento de Dados (ATD) e medidas técnicas complementares a:\n• Realizar o armazenamento e tratamento de dados pessoais principalmente em servidores dentro da UE.\n• Garantir um nível adequado de proteção de dados mediante a aplicação de Cláusulas Contratuais Padrão da UE e certificação ao abrigo do Quadro de Privacidade de Dados UE-EUA.\n• Limitar o acesso a dados por entidades dos EUA ao mínimo absolutamente necessário para a operação técnica.\n• Em caso de pedidos governamentais, proceder de acordo com as diretrizes internas de transparência e proteger os interesses do SafeMentor.\n\n**Detalhes técnicos sobre a Nebius AI:** \n• Forma jurídica: Nebius AI B.V. (Países Baixos) \n• Centros de dados: Amesterdão (principal), Helsínquia (backup) \n• Certificações: ISO 27001, SOC 2 Tipo II \n• Residência de dados: Todos os dados permanecem em centros de dados da UE \n• Proibição de treino: A Nebius NÃO utiliza dados de clientes para treino de modelos \n• Retenção: Os pedidos são eliminados imediatamente após o processamento"
-      },
-      "4b": {
-        "title": "4b. Sem transferências para países terceiros",
-        "content": "IMPORTANTE: Não existe transferência de dados para países fora da UE/EEE. Todo o tratamento de dados está sujeito exclusivamente ao RGPD."
-      },
-      "4c": {
-        "title": "4c. Acordos de tratamento de dados (ATD)",
-        "content": "Todos os subprocessadores foram cuidadosamente selecionados em conformidade com o Art. 28.º do RGPD e celebraram acordos de tratamento de dados juridicamente conformes com o SafeMentor.\nEstes incluem em especial:\n• Vinculação às instruções do responsável pelo tratamento\n• Obrigações de confidencialidade de todos os colaboradores\n• Medidas técnicas e organizativas (MTO)\n• Apoio aos direitos dos titulares de dados\n• Obrigação de comunicar violações de dados imediatamente\n• Obrigações de eliminação após o fim do contrato"
-      },
-      "4d": {
-        "title": "4d. Lista atualizada e avisos de alteração",
-        "content": "Uma lista constantemente atualizada de todos os subprocessadores com dados de contacto encontra-se em: /pt/subprocessors\nEm caso de alterações (p. ex., novo fornecedor), será informado com antecedência suficiente (pelo menos 30 dias de antecedência) por e-mail. Terá então o direito de se opor à subcontratação."
-      },
-      "4e": {
-        "title": "4e. Sem venda de dados",
-        "content": "NUNCA vendemos dados a terceiros — nem para publicidade, marketing, nem para quaisquer outros fins. Os seus dados e os dados dos seus filhos são tratados exclusivamente para a prestação dos nossos serviços."
-      },
-      "5": {
-        "title": "5. Política de cookies",
-        "content": "Utilizamos cookies tecnicamente necessários para ativar funções como o início de sessão. Pode bloquear cookies no seu browser.\n\n**COOKIES TECNICAMENTE NECESSÁRIOS (sem consentimento):**\n• Cookie de sessão: Manutenção da sessão de início de sessão (Duração: até ao fim da sessão)\n• Token CSRF: Proteção contra ataques (Duração: 24 horas)\n\nPode ajustar as suas configurações de cookies a qualquer momento ou bloquear cookies em geral no seu browser. Tenha em atenção que, se os cookies técnicos forem desativados, a funcionalidade pode ficar limitada.\nNÃO utilizamos cookies de terceiros (Google Analytics, Facebook Pixel, etc.)."
-      },
-      "6": {
-        "title": "6. Período de conservação",
-        "intro": "Os dados pessoais são conservados apenas pelo tempo necessário para as finalidades ou conforme exigido pelos prazos legais.",
-        "table": {
-          "headers": [
-            "TIPO DE DADOS",
-            "PERÍODO DE RETENÇÃO",
-            "BASE JURÍDICA"
-          ],
-          "rows": [
-            [
-              "Dados de conta (pais)",
-              "Até ao fim do contrato + 10 anos",
-              "§ 147 AO (Obrigação de conservação)"
-            ],
-            [
-              "Resumos de chat (normais)",
-              "7 dias",
-              "Art. 6.º, n.º 1, alínea b) do RGPD"
-            ],
-            [
-              "Memória do projeto",
-              "30 dias após a última utilização",
-              "Art. 6.º, n.º 1, alínea b) do RGPD"
-            ],
-            [
-              "Resumos de sinalizações amarelas/vermelhas",
-              "30 dias (eliminação automática)",
-              "Art. 6.º, n.º 1, alínea f) do RGPD (Proteção da infância)"
-            ],
-            [
-              "Tendências emocionais (agregadas)",
-              "30 dias",
-              "Art. 6.º, n.º 1, alínea f) do RGPD"
-            ],
-            [
-              "Protocolos completos de chat",
-              "Nunca armazenados no servidor",
-              "Privacidade desde a conceção"
-            ]
-          ]
-        },
-        "content": "IMPORTANTE: Os resumos de sinalizações vermelhas são eliminados após 30 dias mesmo que a situação de perigo persista. Isto serve para proteger a privacidade da criança. Para preocupações persistentes, recomendamos apoio profissional (p. ex., aconselhamento familiar) em vez de monitorização técnica permanente.\n\n**Eliminação de conta:** Após a rescisão, todos os dados pessoais (exceto documentos com relevância fiscal) serão completamente eliminados no prazo de 30 dias."
-      },
-      "7": {
-        "title": "7. Os seus direitos (direitos dos titulares de dados)",
-        "content": "Ao abrigo do RGPD, você (e o seu filho) têm o direito de acesso, retificação, apagamento («direito a ser esquecido»), limitação do tratamento, portabilidade de dados e o direito de apresentar reclamação junto de uma autoridade de controlo. Os pedidos devem incluir prova de identidade."
-      },
-      "8": {
-        "title": "8. Segurança dos dados",
-        "content": "Utilizamos encriptação TLS/SSL de última geração. O acesso ao Painel dos Pais está protegido por autenticação multifator. Em caso de incidentes de segurança, informamos as autoridades em conformidade com as disposições legais."
-      },
-      "9": {
-        "title": "9. Decisão automatizada e criação de perfis",
-        "intro": "O SafeMentor utiliza tratamento automatizado baseado em IA nas seguintes áreas:",
-        "items": [
-          {
-            "title": "CLASSIFICAÇÃO DE INTENÇÃO (Nano-Router):",
-            "content": "• Finalidade: Atribuição automática do pedido ao modelo de IA adequado\n• Lógica: Classificador de aprendizagem automática (emoção, complexidade, segurança)\n• Consequência jurídica: Sem efeitos desvantajosos para a criança"
-          },
-          {
-            "title": "RECONHECIMENTO DE EMOÇÕES:",
-            "content": "• Finalidade: Reconhecimento de tendências emocionais ao longo de vários dias\n• Lógica: Análise de sentimentos baseada em modelos de PLN\n• Consequência jurídica: Informação dos pais em caso de tendência negativa persistente\n• Direito de oposição: Os pais podem desativar os relatórios emocionais (definições)"
-          },
-          {
-            "title": "RECONHECIMENTO DE SINALIZAÇÕES AMARELAS/VERMELHAS:",
-            "content": "• Finalidade: Proteção contra perigos (violência, abuso, suicídio)\n• Lógica: Sistema baseado em regras + classificador de IA (dupla verificação para casos críticos)\n• Consequência jurídica: Notificação imediata dos pais\n• IMPORTANTE: Este NÃO é um processo de decisão totalmente automatizado na aceção do Art. 22.º do RGPD, uma vez que a decisão final sobre as medidas de proteção cabe aos pais."
-          }
-        ],
-        "content": "Tem o direito de se opor a estes tratamentos (Art. 21.º do RGPD)."
-      },
-      "10": {
-        "title": "10. Direito de reclamação junto de uma autoridade de controlo",
-        "content": "Sem prejuízo de qualquer outro recurso administrativo ou judicial, tem o direito de apresentar reclamação junto de uma autoridade de controlo, em particular no Estado-Membro da sua residência habitual, local de trabalho ou local da alegada infração, se considerar que o tratamento de dados pessoais que lhe diz respeito infringe o Regulamento Geral sobre a Proteção de Dados (RGPD).\n\n**Nota sobre a competência:**\nEnquanto entidade responsável pelo tratamento ao abrigo da legislação de proteção de dados, estamos sujeitos à supervisão da autoridade de controlo responsável pela nossa sede ou pela autoridade relevante para o local principal do nosso tratamento de dados. No entanto, pode também dirigir a sua reclamação à autoridade de proteção de dados do Estado-Membro da UE onde reside, trabalha ou onde ocorreu a alegada violação. Uma lista das autoridades de controlo com dados de contacto encontra-se em: https://edpb.europa.eu/about-edpb/about-edpb/members_en"
-      },
-      "11": {
-        "title": "11. Voluntariedade da prestação de dados",
-        "content": "A prestação dos seus dados pessoais não é nem legalmente nem contratualmente obrigatória. Também não é obrigado a fornecer-nos dados pessoais. Obrigações contratuais ou a possibilidade de celebrar contratos não existem.\n\n**Consequências da não prestação:**\nA não prestação dos seus dados pessoais significa apenas que não pode utilizar os nossos serviços. Não sofrerá quaisquer outras desvantagens por isso.\n\n**Campos obrigatórios e informações opcionais:**\nNo âmbito do registo e utilização, assinalamos os campos obrigatórios cuja introdução é necessária para a celebração do contrato e a prestação dos nossos serviços (p. ex., endereço de e-mail dos pais, data de nascimento da criança). Todas as outras informações são voluntárias e podem ser omitidas sem afetar negativamente as possibilidades de utilização."
-      },
-      "12": {
-        "title": "12. Revogação do seu consentimento",
-        "content": "Na medida em que o tratamento dos seus dados pessoais se baseie no consentimento (Art. 6.º, n.º 1, alínea a) do RGPD), tem o direito de revogar esse consentimento a qualquer momento para o futuro. A licitude do tratamento realizado com base no consentimento até à revogação não é afetada por esta.\n\n**Efeitos da revogação:**\nA revogação do seu consentimento pode significar que certas funções do SafeMentor baseadas nesse consentimento (p. ex., a utilização de determinados modelos de IA ou análises mais detalhadas) já não possam ser utilizadas ou só possam ser utilizadas de forma limitada. A funcionalidade central da plataforma permanece geralmente intacta enquanto outras bases jurídicas (p. ex., cumprimento do contrato, Art. 6.º, n.º 1, alínea b) do RGPD) suportarem o tratamento.\n\n**Como pode revogar:**\nPode revogar o seu consentimento informalmente com efeito para o futuro. Envie a sua revogação para:\nPor e-mail: privacy@safementor.app\nPor correio: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Espanha.\n\nPor razões de segurança e identificação clara, pedimos que indique na sua declaração de revogação o endereço de e-mail com que está registado no SafeMentor."
-      },
-      "13": {
-        "title": "13. Avaliação de impacto sobre a proteção de dados (AIPD)",
-        "intro": "O SafeMentor realizou uma Avaliação de Impacto sobre a Proteção de Dados (AIPD) em fevereiro de 2026, em conformidade com o Art. 35.º do RGPD, para avaliar os riscos para os direitos e liberdades das crianças.\n\n**Razão para a obrigatoriedade da AIPD:** O tratamento inclui:\n• Monitorização sistemática (monitorização de sinalizações vermelhas)\n• Tratamento de dados sensíveis de crianças (com menos de 16 anos)\n• Tomada de decisão automatizada (análise de emoções, encaminhamento de intenção)\n\n**Resultado da AIPD:** Os riscos identificados (p. ex., re-identificação, efeitos psicológicos, acesso não autorizado) foram reduzidos a um nível aceitável através das seguintes medidas:",
-        "items": [
-          {
-            "title": "MEDIDAS DE PROTEÇÃO TÉCNICAS:",
-            "content": "• Arquitetura de privacidade desde a conceção (armazenamento local de textos completos)\n• Cifração AES-256 de todos os dados sensíveis\n• Pseudonimização antes da transmissão a fornecedores de IA\n• Cifração de ponta a ponta (TLS 1.3)\n• Eliminação automática após 7/30 dias"
-          },
-          {
-            "title": "MEDIDAS DE PROTEÇÃO ORGANIZATIVAS:",
-            "content": "• Controlo de acesso rigoroso (autenticação multifator)\n• Auditorias de segurança regulares (de 6 em 6 meses)\n• Formação de todos os colaboradores em proteção da infância e RGPD\n• Plano de emergência para violações de dados"
-          }
-        ],
-        "content": "O resumo completo da AIPD pode ser solicitado em privacy@safementor.app.\n\nPróxima revisão: janeiro de 2027"
-      }
-    }
-  },
-  "Subprocessors": {
-    "title": "Lista de subprocessadores",
-    "intro": "O SafeMentor trabalha com os seguintes prestadores de serviços (subprocessadores) para fornecer os nossos serviços. Todo o tratamento de dados realiza-se exclusivamente em servidores dentro da União Europeia (UE).",
-    "headers": {
-      "category": "Categoria",
-      "provider": "Fornecedor",
-      "location": "Localização",
-      "purpose": "Finalidade/Função",
-      "contact": "Dados de contacto"
-    },
-    "providers": [
-      {
-        "category": "Alojamento e backend",
-        "provider": "Google Cloud (Google Ireland Limited)",
-        "location": "UE (Bélgica)",
-        "purpose": "Infraestrutura e armazenamento de servidores",
-        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irlanda. Privacidade: [Formulário de consulta de privacidade](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
-      },
-      {
-        "category": "Inferência de IA",
-        "provider": "Nebius AI B.V.",
-        "location": "UE (Amesterdão / Helsínquia)",
-        "purpose": "Geração de respostas de IA",
-        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Países Baixos. E-mail: privacy@nebius.com"
-      },
-      {
-        "category": "Alojamento frontend",
-        "provider": "Vercel Inc.",
-        "location": "UE (Frankfurt)",
-        "purpose": "Infraestrutura para a aplicação web",
-        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Bruxelas, Bélgica. E-mail: privacy@vercel.com"
-      },
-      {
-        "category": "Processamento de pagamentos",
-        "provider": "Mollie B.V.",
-        "location": "UE",
-        "purpose": "Processamento de pagamentos por cartão de crédito",
-        "contact": "Keizersgracht 313, 1016 EE Amesterdão, Países Baixos. E-mail: privacy@mollie.com"
-      },
-      {
-        "category": "Alojamento de base de dados",
-        "provider": "Supabase Ireland Ltd.",
-        "location": "UE (Frankfurt)",
-        "purpose": "Armazenamento de contas de utilizadores e dados de projetos",
-        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlanda. E-mail: privacy@supabase.com"
-      },
-      {
-        "category": "Autenticação por SMS",
-        "provider": "Twilio Ireland Limited",
-        "location": "UE (Irlanda)",
-        "purpose": "Autenticação dos pais por SMS",
-        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Irlanda. E-mail: privacy@twilio.com"
-      }
-    ],
-    "back": "Voltar à política de privacidade"
   }
 }

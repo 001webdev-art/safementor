@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { AcmeLogo } from './Icons';
 import { useTranslations } from 'next-intl';

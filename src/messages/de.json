@@ -197,7 +197,7 @@
         "visibility": {
           "title": "Was Sie sehen (Datensichtbarkeit):",
           "items": [
-            "Warnungen bei kritischen Themen (mobbing, etc.)",
+            "Nur aggregierte emotionale Trends",
             "Sicherheitswarnungen mit minimalem Kontext",
             "Keine rohen Chat-Protokolle oder Überwachung"
           ]
@@ -262,7 +262,7 @@
           "items": [
             "Bietet KI-Begleiter für das Kind zum freien Sprechen",
             "Erkennt Muster, die auf Risiken hinweisen könnten",
-            "Hilft bei Hausaufgaben, aber übernimmt nicht die Arbeit",
+            "Sendet aggregierte emotionale Trends (keine Nachrichten)",
             "Alarmiert Eltern nur, wenn ernste Bedenken erkannt werden"
           ]
         },
@@ -291,8 +291,8 @@
         "title": "Wie SafeMentor funktioniert",
         "subtitle": "Unser Privacy-First-Ansatz",
         "step1": { "title": "Kind spricht mit KI-Begleiter", "desc": "Private Gespräche in einem sicheren Raum" },
-        "step2": { "title": "KI analysiert Muster", "desc": "Suche nach schwierigen Themen und Risikoindikatoren" },
-        "step3": { "title": "Eltern sehen aggregierte Daten", "desc": "Keine rohen Nachrichten" },
+        "step2": { "title": "KI analysiert Muster", "desc": "Suche nach emotionalen Trends und Risikoindikatoren" },
+        "step3": { "title": "Eltern sehen aggregierte Daten", "desc": "Allgemeine Stimmungstrends, keine rohen Nachrichten" },
         "step4": { "title": "Warnungen im Bedarfsfall", "desc": "Nur ernste Bedenken lösen Benachrichtigungen aus" }
       },
       "signals": {
@@ -491,7 +491,7 @@
           },
           {
             "title": "Hält Eltern informiert.",
-            "desc": "Klare, ehrliche Kommunikation darüber, welche kritischen Themen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+            "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
           },
           {
             "title": "Entwickelt von Eltern für Eltern.",
@@ -500,16 +500,16 @@
         ],
         "final": "Weil wir glauben, dass echte Abenteuer nicht auf Bildschirmen stattfinden. SafeMentor hilft Kindern, Neues über die Welt zu lernen – und schickt sie dann wieder zum Spielen nach draußen."
       },      "card1": {
-        "title": "Stufe 1 – Normale Begleitung",
-        "desc": "SafeMentor antwortet warm, altersgerecht und pädagogisch durchdacht. Kein Eingriff, keine Benachrichtigung. Ihr Kind wird begleitet – Sie müssen nichts tun."
+        "title": "Intelligenter Begleit-Modus",
+        "desc": "Im Hintergrund läuft ein unabhängiges Sicherheits-Audit mit. Es greift diskret ein und filtert Inhalte nur dann, wenn sie nicht kindgerecht sind oder gegen unsere strengen Sicherheitsregeln verstoßen."
       },
       "card2": {
-        "title": "Stufe 2 – Stiller Hinweis",
-        "desc": "Bei Themen wie Mobbing, emotionalem Druck oder bedenklichen Anfragen erkennt SafeMentor das Signal. Die KI antwortet einfühlsam und ermutigt Ihr Kind, mit Ihnen zu sprechen. Sie erhalten einen diskreten Hinweis in Ihrem Eltern-Dashboard – kein Alarm, aber ein Zeichen: hier lohnt sich ein Gespräch."
+        "title": "Emotions-Kompass",
+        "desc": "Unsere KI analysiert nicht nur Fakten, sondern erkennt die emotionale Ebene. Sie spürt Anzeichen von Stress, Manipulation oder Traurigkeit und passt den Tonfall sofort an die Bedürfnisse Ihres Kindes an."
       },
       "card3": {
-        "title": "Stufe 3 – Sofortige Benachrichtigung",
-        "desc": "Bei ernsten Warnsignalen – Selbstverletzung, sexuelle Übergriffe, akute Gefahr – schaltet SafeMentor sofort um: Das Kind erhält eine ruhige, strukturierte Antwort mit konkreten Krisenressourcen. Sie werden umgehend benachrichtigt, mit einer klaren Zusammenfassung – damit Sie da sind, wenn Ihr Kind Sie braucht."
+        "title": "Krisen-Radar (Red Flags)",
+        "desc": "Nur bei echten Warnsignalen (wie Mobbing oder Selbstgefährdung) schaltet SafeMentor auf Soforthilfe: Die KI deeskaliert das Gespräch behutsam und benachrichtigt Sie gleichzeitig – damit Sie da sind, wenn Ihr Kind Sie braucht."
       },
       "learning": {
         "eyebrow": "Wie SafeMentor arbeitet",
@@ -525,7 +525,7 @@
       },
       "offline": {
         "title": "Sicherheit, die mitdenkt – ohne zu überwachen.",
-        "description": "SafeMentor antwortet nicht einfach darauf los. Jede Nachricht Ihres Kindes wird in Echtzeit auf Sicherheitsrelevanz geprüft – bevor eine Antwort erscheint. Wir nennen das unsere 3-Stufen-Sicherheit.",
+        "description": "SafeMentor antwortet nicht einfach darauf los. Unser System begleitet den Dialog in Echtzeit: Sobald schwierige Themen aufkommen, prüfen wir sowohl die Fragen Ihres Kindes als auch die Antworten der KI doppelt ab. Wir nennen das unsere 3-Stufen-Sicherheit, die sicherstellt, dass Ihr Kind nur Antworten erhält, die stärken statt verunsichern. Diese 3 Stufen sehen Sie hier :",
         "emphasis": "Sicherheit steht bei uns an erster Stelle."
       },
       "standards": {
@@ -551,11 +551,11 @@
       "safety": {
         "eyebrow": "Für Eltern",
         "title": "Vertrauen braucht Privatsphäre",
-        "description": "Vertrauen ist die Grundlage jeder Kindesentwicklung. Aus diesem Grund ist Privatsphäre nicht nur ein Feature, sondern das Fundament von Safementor. Bei uns entstehen keine digitalen Fußabdrücke. Sobald eine Sitzung endet, werden sämtliche Rohdaten der Chats unwiderruflich gelöscht. Wir bewahren lediglich Zusammenfassungen für einen Zeitraum von 7 bis maximal 30 Tagen auf. Was bleibt, ist das, was für Sie als Eltern wirklich zählt: Wir benachrichtigen Sie in dem Moment, in dem Ihre Aufmerksamkeit gefragt ist. Ob Mobbing, Selbstverletzung oder andere kritische Themen – wir halten Sie auf dem Laufenden, damit Sie genau dann für Ihr Kind da sein können, wenn es am wichtigsten ist.",
+        "description": "Vertrauen ist die Grundlage jeder Kindesentwicklung. Aus diesem Grund ist Privatsphäre nicht nur ein Feature, sondern das Fundament von Safementor. Bei uns entstehen keine digitalen Fußabdrücke. Sobald eine Sitzung endet, werden sämtliche Rohdaten der Chats unwiderruflich gelöscht. Wir bewahren lediglich Zusammenfassungen für einen Zeitraum von 7 bis maximal 30 Tagen auf. Was bleibt, ist das, was für Sie als Eltern wirklich zählt: Wir visualisieren emotionale Trends und identifizieren Themenbereiche, falls die Stimmung über mehrere Sitzungen hinweg sehr negativ bleibt. So erfahren Sie, was Ihr Kind bewegt, und erhalten wertvolle Impulse für echte Gespräche – während die Privatsphäre Ihres Kindes absolut geschützt bleibt.",
         "detect": {
           "title": "Was wir erkennen",
           "list": [
-            "Anfrage zur Erledigung der Hausaufgaben",
+            "Emotionale Trends im Zeitverlauf",
             "Warnzeichen (Not, Isolation)",
             "Ernste Warnsignale: Selbstverletzung, Grooming, Mobbing, Drogen, Fremdgefährdung"
           ]
@@ -563,8 +563,9 @@
         "see": {
           "title": "Was Eltern sehen",
           "list": [
-            "Warnungen bei Risiken",
-            "Kontext bei kritischen Situationen"
+            "Aggregierte Erkenntnisse",
+            "Klare Erklärungen",
+            "Praktische Anleitung"
           ]
         },
         "notSee": {
@@ -594,7 +595,7 @@
       },
       "bullet2": {
         "title": "Hält Eltern informiert",
-        "desc": "Klare, ehrliche Kommunikation darüber, welche kritischen Themen wir erkannt haben, damit Sie den Kommunikationsfaden aufnehmen können."
+        "desc": "Klare, ehrliche Kommunikation darüber, welche anhaltenden negativen Emotionen wir entdeckt haben, damit Sie den Kommunikationsfaden aufnehmen können."
       },
       "bullet3": {
         "title": "Entwickelt von Eltern für Eltern",
@@ -608,7 +609,7 @@
       "receives": {
         "title": "Eltern erhalten:",
         "list": [
-          "Sichere KI-Begleitung: Damit Ihr Kind im Netz in guten Händen ist.",
+          "Ruhige Erklärungen emotionaler Trends",
           "Kontext für die Bedeutung von Signalen – und was sie nicht bedeuten",
           "Vorschläge für Gespräche mit ihrem Kind",
           "Ermutigung zum Aufbau von Vertrauen und Verbindung"
@@ -960,12 +961,6 @@
     }
   },
   "Compliance": {
-    "header": {
-      "alreadyHaveAccount": "Bereits ein Konto?",
-      "signIn": "Anmelden",
-      "createAccountTitle": "Erstellen Sie Ihr Konto",
-      "createAccountSubtitle": "Willkommen! Bitte füllen Sie die Details aus, um zu starten"
-    },
     "sidebar": {
       "title": "Privatsphäre Ihres Kindes",
       "description": "SafeMentor basiert auf dem Prinzip der „Datenminimierung“. Wir verarbeiten nur das, was strikt notwendig ist, um Ihr Kind zu schützen.",
