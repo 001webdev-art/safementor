@@ -17,6 +17,141 @@
     "disputeResolution": "Não estamos dispostos nem obrigados a participar de processos de resolução de litígios perante uma junta de arbitragem de consumo.",
     "privacy": "Privacidade - Os responsáveis são Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. Ao visitar esta página, o seu endereço IP é processado por motivos técnicos e para garantir a segurança do sistema. Utilizamos um cookie de sessão tecnicamente necessário para gerir o acesso através do seu código de acesso. Não são utilizados cookies de rastreamento ou de marketing. Encontrará a nossa política de privacidade detalhada após o login."
   },
+  "Imprint": {
+    "title": "Aviso legal",
+    "provider": "Fornecedor deste sítio web",
+    "names": "Lighthouse Engineering Architecture S.L., CEO: Andreas Greif",
+    "address": "Av Lluc 58, BJ, 07300 Inca, Espanha. CIF B56925043.",
+    "contactInfo": "E-mail: safementor-pilot@mail.com, Telefone: +49 176 34 901755",
+    "disputeResolution": "Não estamos dispostos nem somos obrigados a participar em procedimentos de resolução de litígios perante uma comissão de arbitragem de consumo.",
+    "copyright": "Todos os direitos sobre os conteúdos deste sítio web estão reservados. Qualquer utilização comercial requer o consentimento prévio do titular dos direitos.",
+    "liability": "Este sítio web pode conter ligações a sítios web de terceiros. Não conseguimos identificar qualquer conteúdo ilegal nas páginas ligadas no momento da ligação. Não podemos assumir qualquer responsabilidade pelo conteúdo atual nem pelas alterações efetuadas após a ligação."
+  },
+  "Terms": {
+    "title": "Termos e condições gerais (TCG)",
+    "subtitle": "Fase piloto do SafeMentor",
+    "lastUpdated": "Estado: fevereiro de 2026",
+    "preamble": "O SafeMentor oferece uma plataforma de aprendizagem com IA para crianças. Uma vez que o projeto se encontra atualmente numa fase piloto fechada («Amigos e família»), este acordo serve para esclarecer o enquadramento jurídico entre a empresa e os utilizadores de teste.",
+    "sections": {
+      "s1": {
+        "title": "§ 1 Âmbito de aplicação e partes contratantes",
+        "content": "1. Estes TCG aplicam-se a todos os serviços prestados pelo SafeMentor a tutores legais (doravante «Utilizadores») que utilizem a oferta para os seus filhos menores.\n2. A parte contratante é: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Espanha. Representada pelo Diretor-Geral: Andreas Greif, CIF B56925043.\n3. Ao utilizar o sítio web e introduzir o código de acesso, o Utilizador aceita integralmente estes TCG."
+      },
+      "s2": {
+        "title": "§ 2 Mentor ID e requisitos de acesso",
+        "content": "1. Para criar uma conta no SafeMentor, o Utilizador deve ser maior de idade e ter plena capacidade jurídica.\n2. O Utilizador é responsável pela confidencialidade do seu código de acesso e responde pelos danos decorrentes de uma utilização indevida.\n3. O Utilizador garante que tem a guarda da criança registada ou que dispõe da autorização expressa dos tutores legais."
+      },
+      "s3": {
+        "title": "§ 3 Âmbito dos serviços e integridade académica",
+        "content": "1. O SafeMentor fornece uma interface de IA que apoia as crianças em projetos de aprendizagem e lazer.\n2. O SafeMentor serve de apoio à aprendizagem, não para a elaboração de trabalhos de casa ou provas prontas a entregar. A responsabilidade pelo cumprimento das regras de integridade académica recai exclusivamente no Utilizador.\n3. Não existe direito à utilização de modelos de IA específicos."
+      },
+      "s4": {
+        "title": "§ 4 Disponibilidade e manutenção",
+        "content": "1. O SafeMentor empenha-se em garantir uma elevada disponibilidade da plataforma e do painel dos pais. No entanto, não existe direito a disponibilidade ininterrupta.\n2. Podem ocorrer interrupções temporárias devido a trabalhos de manutenção necessários, atualizações de segurança ou falhas técnicas fora do controlo do SafeMentor (p. ex., falhas em fornecedores de alojamento ou interfaces como a API Groq).\n3. Os trabalhos de manutenção planeados serão comunicados aos Utilizadores com a maior antecedência possível (p. ex., por e-mail ou aviso no painel).\n4. O SafeMentor não é responsável por perdas de dados ou danos causados por falhas técnicas, salvo se forem devidos a negligência grave ou dolo."
+      },
+      "s5": {
+        "title": "§ 5 Monitorização de segurança e encaminhamento de intenção",
+        "content": "1. O SafeMentor analisa automaticamente os chats em busca de situações de perigo (p. ex., grooming, bullying). Caso sejam detetadas, é enviada uma notificação aos pais.\n2. O SafeMentor não garante a deteção completa de todos os perigos. A comunicação das crianças pode escapar às possibilidades técnicas de deteção.\n3. O sistema avalia as tendências emocionais. Em caso de humor negativo persistente durante mais de dois dias, os pais são informados sobre o tema geral e a emoção predominante."
+      },
+      "s6": {
+        "title": "§ 6 Obrigações dos pais (dever de supervisão)",
+        "content": "1. A utilização do SafeMentor não isenta os pais do seu dever legal de supervisão. O SafeMentor é uma ajuda técnica e não um substituto do cuidado humano.\n2. O Utilizador é responsável por garantir que a criança não utilize a IA como substituto da interação social humana. O SafeMentor não se responsabiliza pelas consequências psicológicas de uma antropomorfização excessiva da IA por parte da criança."
+      },
+      "s7": {
+        "title": "§ 7 Regras de conduta e utilização proibida",
+        "content": "1. A utilização do SafeMentor é permitida exclusivamente para fins lícitos. O Utilizador compromete-se a utilizar a plataforma de forma a não violar direitos de terceiros nem gerar ou distribuir conteúdo ilícito.\n2. É expressamente proibido utilizar o SafeMentor para atividades prejudiciais, ameaçadoras ou abusivas; que visem contornar as medidas de segurança da IA («jailbreaking») ou perturbar ou pôr em perigo o funcionamento da plataforma ou a segurança informática.\n3. O SafeMentor reserva-se o direito de bloquear contas temporária ou permanentemente em caso de violação destas regras."
+      },
+      "s8": {
+        "title": "§ 8 Exclusão de responsabilidade",
+        "content": "1. Os sistemas de IA podem gerar informações incorretas («alucinações»). O SafeMentor não é responsável pela exatidão das respostas.\n2. O SafeMentor não assume qualquer responsabilidade por declarações da IA que possam ser consideradas inadequadas ou prejudiciais apesar das medidas de segurança. Distanciamo-nos expressamente do conteúdo gerado por IA com tendências discriminatórias ou inadequadas. A responsabilidade fica excluída, salvo se o SafeMentor tiver ignorado intencionalmente os padrões de segurança.\n3. Todas as recomendações de ação, especialmente na área do artesanato, devem ser verificadas por um adulto antes de serem implementadas. Na execução física de projetos, a responsabilidade pela segurança recai exclusivamente nos pais.\n4. As respostas da IA não constituem aconselhamento profissional (p. ex., médico, jurídico ou relacionado com a segurança)."
+      },
+      "s9": {
+        "title": "§ 9 Limitação de responsabilidade",
+        "content": "1. O SafeMentor é responsável sem limitação pelos danos resultantes de lesões à vida, ao corpo ou à saúde com base numa violação dolosa ou negligente de obrigações.\n2. Por outros danos, o SafeMentor só é responsável em caso de dolo ou negligência grave. Em caso de negligência leve, o SafeMentor só é responsável se for violada uma obrigação cujo cumprimento torna possível a execução adequada do contrato (obrigação cardinal); neste caso, a responsabilidade limita-se ao dano típico e previsível.\n3. O SafeMentor não é responsável por lucros cessantes, danos indiretos ou consequentes. O SafeMentor só é responsável pela perda de dados se esta não pudesse ter sido evitada mediante medidas razoáveis de cópia de segurança por parte do Utilizador.\n4. Uma vez que o conteúdo de IA se baseia em modelos estocásticos, o SafeMentor não assume qualquer responsabilidade pela exatidão factual, integralidade ou adequação educativa das respostas geradas (ver § 3)."
+      },
+      "s10": {
+        "title": "§ 10 Prazo e revogação",
+        "content": "1. O serviço pode ser cancelado mensalmente.\n2. O direito legal de revogação caduca antecipadamente assim que começar a utilização do conteúdo digital (início do chat com IA)."
+      },
+      "s11": {
+        "title": "§ 11 Modelos de utilização gratuita (clientes piloto, edição social e amigos)",
+        "content": "1. O SafeMentor pode conceder acesso gratuito a grupos de utilizadores selecionados (p. ex., clientes piloto, famílias com comprovativo de apoio estatal).\n2. O acesso gratuito está tecnicamente limitado à utilização de modelos específicos. Não existe direito à utilização de modelos premium de alto custo nem de funções avançadas de raciocínio profundo nestes modelos.\n3. Em determinadas tarifas gratuitas, a prestação do serviço de IA realiza-se exclusivamente através de uma chave API a fornecer pelo próprio Utilizador. O Utilizador assume a responsabilidade exclusiva pela criação, limites de tokens e disponibilidade desta chave. Se a quota do fornecedor terceiro for esgotada, a função do SafeMentor é automaticamente pausada até renovação.\n4. Obrigação de comprovar: Para beneficiar da tarifa social, o SafeMentor está habilitado a solicitar comprovativos de elegibilidade (p. ex., notificação de prestações sociais) em intervalos razoáveis."
+      },
+      "s12": {
+        "title": "§ 12 Remuneração e condições de pagamento",
+        "content": "1. A utilização do SafeMentor pode estar sujeita a uma taxa consoante o modelo escolhido (p. ex., Básico, Premium, Equidade Social). Os preços e condições vigentes são claramente apresentados ao Utilizador na página de encomenda antes de concluir a subscrição.\n2. Regulamentação especial para a fase piloto: No âmbito da fase piloto, o SafeMentor pode prestar o serviço gratuitamente ou com tarifas reduzidas. Não existe direito a utilização gratuita permanente para além do período de teste acordado.\n3. Ajustes de preços: O SafeMentor reserva-se o direito de ajustar as tarifas para futuros períodos contratuais. Tais alterações serão comunicadas aos Utilizadores com antecedência suficiente por e-mail."
+      },
+      "s13": {
+        "title": "§ 13 Alteração dos termos",
+        "content": "1. Reservamo-nos o direito de alterar estes TCG a qualquer momento. O Utilizador será informado das alterações com a devida antecedência e terá a possibilidade de as aceitar ou cancelar o serviço. Se a alteração não for aceite, o contrato termina automaticamente.\n2. Todas as alterações ou adições aos TCG serão anunciadas no sítio web."
+      },
+      "s14": {
+        "title": "§ 14 Disposições finais",
+        "content": "1. Aplica-se o direito da República Federal da Alemanha.\n2. Caso alguma disposição seja inválida, as restantes disposições não serão afetadas.\n3. Em caso de litígio, as partes comprometem-se a tentar primeiro uma resolução amigável."
+      }
+    }
+  },
+  "Compliance": {
+    "header": {
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "signIn": "Entrar",
+      "createAccountTitle": "Crie sua conta",
+      "createAccountSubtitle": "Bem-vindo! Por favor preencha os dados para começar"
+    },
+    "sidebar": {
+      "title": "Privacidade do seu filho",
+      "description": "O SafeMentor é construído sob o princípio de \"Minimização de Dados\". Apenas processamos o que é estritamente necessário para manter seu filho seguro.",
+      "compliant": "Compatível com RGPD"
+    },
+    "dataUsage": {
+      "title": "Quais dados o SafeMentor usa",
+      "riskSignals": {
+        "label": "Sinais de Risco:",
+        "value": "Apenas palavras-chave que indicam bullying, atividades ilegais, dano público, aliciamento (grooming) ou automutilação são sinalizadas."
+      },
+      "usageStats": {
+        "label": "Estatísticas de Uso do App:",
+        "value": "Acompanhamos a duração das sessões e o uso de unidades de IA (tokens) para otimizar nosso serviço."
+      }
+    },
+    "consent": {
+      "improve": {
+        "title": "Ajude a melhorar o SafeMentor",
+        "optional": "(opcional)",
+        "description": "Permita-nos usar relatórios de erros 100% anonimizados para corrigir falhas."
+      }
+    },
+    "transparency": {
+      "title": "RELATÓRIO DE TRANSPARÊNCIA",
+      "never": {
+        "title": "Nunca Coletados",
+        "list": [
+          "Localização GPS Exata",
+          "Fotos da Câmera",
+          "Gravações de Voz",
+          "Históricos de Chat brutos"
+        ]
+      },
+      "parents": {
+        "title": "Os Pais Podem Ver",
+        "list": [
+          "Alertas de Risco e Contexto",
+          "Tendências Emocionais"
+        ]
+      }
+    },
+    "footer": {
+      "agreement": {
+        "terms": "Li e aceito os <terms>Termos e Condições Gerais (T&C)</terms>.",
+        "privacy": "Tomei conhecimento da <privacy>Política de Privacidade</privacy> e consinto com o processamento de dados.",
+        "guardian": "Confirmo que meu filho tem menos de 16 anos e sou o responsável legal.",
+        "marketing": "Não quero receber publicidade do SafeMentor por e-mail.",
+        "payment": "Quero começar a usar o chat de IA imediatamente após o pagamento. Entendo que meu direito de arrependimento de 14 dias termina assim que o chat for usado – minha assinatura permanece cancelável mensalmente."
+      },
+      "back": "Voltar",
+      "createAccount": "Criar Conta"
+    }
+  },
   "Header": {
     "title": "Safementor",
     "home": "Início",
@@ -82,6 +217,7 @@
     "active": "Ativo",
     "sections": {
       "overview": "Visão Geral",
+      "notifications": "Notificações",
       "children": "Filhos",
       "privacy": "Privacidade",
       "help": "Ajuda",
@@ -94,10 +230,28 @@
       "preferences": "Preferências do App",
       "communication_preferences": "Preferências de Comunicação",
       "social": "Social e Bio",
-      "notifications": "Notificações",
       "basicinfo": "Informações básicas",
       "profileDetails": "Detalhes do perfil",
       "settingsSubtitle": "Gerencie a sua conta e preferências de segurança."
+    },
+    "payment": {
+      "title": "Dados de pagamento",
+      "subtitle": "Gerencie a sua subscrição e faturação",
+      "currentMethod": "Método de pagamento atual",
+      "active": "Ativo",
+      "expires": "Expira",
+      "update": "Atualizar cartão",
+      "remove": "Remover cartão"
+    },
+    "billing": {
+      "title": "Informações de faturação",
+      "plan": "Plano atual",
+      "familyPlan": "Plano familiar"
+    },
+    "sidebar": {
+      "subtitle": "Painel dos pais",
+      "chat": "Ir para a aplicação de chat",
+      "logout": "Terminar sessão"
     },
     "fields": {
       "firstname": "Primeiro Nome",
@@ -180,37 +334,6 @@
       "privacyDescription": "Gerencie seus dados e configurações de segurança aqui.",
       "helpDescription": "Precisa de assistência? Entre em contato com nossa equipe de suporte.",
       "supportTicket": "Abrir Ticket de Suporte"
-    },
-    "user": {
-      "role": "Pai / Guardião",
-      "status": "Estado Online"
-    },
-    "actions": {
-      "saveChanges": "Salvar Alterações",
-      "loading": "Salvando...",
-      "saveChild": "Salvar Filho",
-      "deleteChild": "Excluir Filho",
-      "cancel": "Cancelar",
-      "confirmDelete": "Tem certeza de que deseja excluir este filho? Esta ação não pode ser desfeita."
-    },
-    "payment": {
-      "title": "Dados de pagamento",
-      "subtitle": "Gerencie a sua subscrição e faturação",
-      "currentMethod": "Método de pagamento atual",
-      "active": "Ativo",
-      "expires": "Expira",
-      "update": "Atualizar cartão",
-      "remove": "Remover cartão"
-    },
-    "billing": {
-      "title": "Informações de faturação",
-      "plan": "Plano atual",
-      "familyPlan": "Plano familiar"
-    },
-    "sidebar": {
-      "subtitle": "Painel dos pais",
-      "chat": "Ir para a aplicação de chat",
-      "logout": "Terminar sessão"
     },
     "privacy_new": {
       "title": "Dados e privacidade",
@@ -491,14 +614,82 @@
         "desc": "As preocupações imediatas de segurança devem ser tratadas diretamente. Utilize o nosso guia para iniciar conversas.",
         "button": "Ler guia de crise"
       }
+    },
+    "user": {
+      "role": "Pai / Guardião",
+      "status": "Estado Online"
+    },
+    "actions": {
+      "saveChanges": "Salvar Alterações",
+      "loading": "Salvando...",
+      "saveChild": "Salvar Filho",
+      "deleteChild": "Excluir Filho",
+      "cancel": "Cancelar",
+      "confirmDelete": "Tem certeza de que deseja excluir este filho? Esta ação não pode ser desfeita."
     }
   },
   "Errors": {
     "invalidEmail": "E-mail inválido",
     "passwordLength": "Senha deve ter pelo menos 6 caracteres",
     "passwordMismatch": "As senhas não coincidem",
-    "generic": "Ocorreu um erro. Tente novamente.",
-    "emailConflict": "Este e-mail já está em uso, a redirecionar para a página de início de sessão"
+    "emailConflict": "Este e-mail já está em uso, a redirecionar para a página de início de sessão",
+    "generic": "Ocorreu um erro. Tente novamente."
+  },
+  "Subprocessors": {
+    "title": "Lista de subprocessadores",
+    "intro": "O SafeMentor trabalha com os seguintes prestadores de serviços (subprocessadores) para fornecer os nossos serviços. Todo o tratamento de dados realiza-se exclusivamente em servidores dentro da União Europeia (UE).",
+    "headers": {
+      "category": "Categoria",
+      "provider": "Fornecedor",
+      "location": "Localização",
+      "purpose": "Finalidade/Função",
+      "contact": "Dados de contacto"
+    },
+    "providers": [
+      {
+        "category": "Alojamento e backend",
+        "provider": "Google Cloud (Google Ireland Limited)",
+        "location": "UE (Bélgica)",
+        "purpose": "Infraestrutura e armazenamento de servidores",
+        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irlanda. Privacidade: [Formulário de consulta de privacidade](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
+      },
+      {
+        "category": "Inferência de IA",
+        "provider": "Nebius AI B.V.",
+        "location": "UE (Amesterdão / Helsínquia)",
+        "purpose": "Geração de respostas de IA",
+        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Países Baixos. E-mail: privacy@nebius.com"
+      },
+      {
+        "category": "Alojamento frontend",
+        "provider": "Vercel Inc.",
+        "location": "UE (Frankfurt)",
+        "purpose": "Infraestrutura para a aplicação web",
+        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Bruxelas, Bélgica. E-mail: privacy@vercel.com"
+      },
+      {
+        "category": "Processamento de pagamentos",
+        "provider": "Mollie B.V.",
+        "location": "UE",
+        "purpose": "Processamento de pagamentos por cartão de crédito",
+        "contact": "Keizersgracht 313, 1016 EE Amesterdão, Países Baixos. E-mail: privacy@mollie.com"
+      },
+      {
+        "category": "Alojamento de base de dados",
+        "provider": "Supabase Ireland Ltd.",
+        "location": "UE (Frankfurt)",
+        "purpose": "Armazenamento de contas de utilizadores e dados de projetos",
+        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlanda. E-mail: privacy@supabase.com"
+      },
+      {
+        "category": "Autenticação por SMS",
+        "provider": "Twilio Ireland Limited",
+        "location": "UE (Irlanda)",
+        "purpose": "Autenticação dos pais por SMS",
+        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Irlanda. E-mail: privacy@twilio.com"
+      }
+    ],
+    "back": "Voltar à política de privacidade"
   },
   "Landing": {
     "Hero": {
@@ -573,8 +764,8 @@
           "desc1": "O SafeMentor não dá respostas instantâneas para o dever de casa.",
           "desc2": "Em vez disso, faz perguntas orientadoras, ajuda as crianças a pensar passo a passo e incentiva as suas próprias ideias."
         },
-        "emphasis": "Porque o aprendizado deve ativar o cérebro, não substituí-lo.",
-        "partnership": "O SafeMentor não é um 'Robô do Sim', mas um verdadeiro parceiro. As IAs convencionais tendem para a chamada servilidade: repetem o utilizador e concordam sempre, apenas para parecerem 'úteis'. Nós quebramos este padrão e desenvolvemos um mentor que não se limita a concordar, mas desafia gentilmente. Reconhece quando uma criança procura um atalho e encoraja o pensamento crítico em vez disso. É assim que promovemos a compreensão real em vez do mero consumo rápido."
+        "partnership": "O SafeMentor não é um 'Robô do Sim', mas um verdadeiro parceiro. As IAs convencionais tendem para a chamada servilidade: repetem o utilizador e concordam sempre, apenas para parecerem 'úteis'. Nós quebramos este padrão e desenvolvemos um mentor que não se limita a concordar, mas desafia gentilmente. Reconhece quando uma criança procura um atalho e encoraja o pensamento crítico em vez disso. É assim que promovemos a compreensão real em vez do mero consumo rápido.",
+        "emphasis": "Porque o aprendizado deve ativar o cérebro, não substituí-lo."
       },
       "offline": {
         "title": "Segurança que pensa à frente – sem vigiar.",
@@ -605,6 +796,7 @@
         "eyebrow": "Para os Pais",
         "title": "Segurança e Alerta Precoce",
         "description": "A confiança é a base de todo o desenvolvimento infantil. Por isso, a privacidade não é apenas uma funcionalidade, mas o fundamento do Safementor. Aqui não são criadas pegadas digitais. Assim que uma sessão termina, todos os dados em bruto dos chats são eliminados de forma irrevogável. Guardamos apenas resumos por um período de 7 a um máximo de 30 dias. O que fica é o que realmente importa para si como pai ou mãe: Notificamo-lo no momento em que a sua atenção é necessária. Seja bullying, automutilação ou outros tópicos críticos – mantemo-lo informado para que possa estar presente para o seu filho exatamente quando mais importa.",
+        "summary": "Aqui está o resumo novamente:",
         "detect": {
           "title": "O Que Detetamos",
           "list": [
@@ -628,14 +820,13 @@
             "Vigilância em tempo real"
           ]
         },
-        "protects": {
-          "title": "Isto Protege a Confiança",
-          "desc": "Entre a criança e os pais. As crianças precisam de saber que se podem expressar em segurança, enquanto os pais se mantêm informados sobre o seu bem-estar."
-        },
-        "summary": "Aqui está o resumo novamente:",
         "privacy": {
           "title": "Os seus dados estão seguros connosco — e ficam na Europa",
           "description": "Levamos a privacidade a sério. Por isso, todos os seus dados são armazenados e tratados exclusivamente na UE, protegidos pelas rigorosas normas do RGPD."
+        },
+        "protects": {
+          "desc": "Entre a criança e os pais. As crianças precisam de saber que se podem expressar em segurança, enquanto os pais se mantêm informados sobre o seu bem-estar.",
+          "title": "Isto Protege a Confiança"
         }
       },
       "philosophy": {
@@ -718,159 +909,14 @@
       "learnMore": "Saiba Mais",
       "company": "Empresa",
       "links": {
-        "about": "Sobre nós",
         "privacy": "Política de Privacidade",
-        "contact": "Contato",
         "imprint": "Aviso legal",
         "terms": "Termos e condições",
+        "contact": "Contato",
+        "about": "Sobre nós",
         "howItWorks": "Como funciona"
       },
       "bottom": "Feito com cuidado para crianças e famílias."
-    }
-  },
-  "NotFound": {
-    "title": "Página não encontrada",
-    "description": "Ops! A página que você está procurando não existe ou foi movida.",
-    "goHome": "Voltar para o Início"
-  },
-  "Compliance": {
-    "header": {
-      "alreadyHaveAccount": "Já tem uma conta?",
-      "signIn": "Entrar",
-      "createAccountTitle": "Crie sua conta",
-      "createAccountSubtitle": "Bem-vindo! Por favor preencha os dados para começar"
-    },
-    "sidebar": {
-      "title": "Privacidade do seu filho",
-      "description": "O SafeMentor é construído sob o princípio de \"Minimização de Dados\". Apenas processamos o que é estritamente necessário para manter seu filho seguro.",
-      "compliant": "Compatível com RGPD"
-    },
-    "dataUsage": {
-      "title": "Quais dados o SafeMentor usa",
-      "riskSignals": {
-        "label": "Sinais de Risco:",
-        "value": "Apenas palavras-chave que indicam bullying, atividades ilegais, dano público, aliciamento (grooming) ou automutilação são sinalizadas."
-      },
-      "usageStats": {
-        "label": "Estatísticas de Uso do App:",
-        "value": "Acompanhamos a duração das sessões e o uso de unidades de IA (tokens) para otimizar nosso serviço."
-      }
-    },
-    "consent": {
-      "improve": {
-        "title": "Ajude a melhorar o SafeMentor",
-        "optional": "(opcional)",
-        "description": "Permita-nos usar relatórios de erros 100% anonimizados para corrigir falhas."
-      }
-    },
-    "transparency": {
-      "title": "RELATÓRIO DE TRANSPARÊNCIA",
-      "never": {
-        "title": "Nunca Coletados",
-        "list": [
-          "Localização GPS Exata",
-          "Fotos da Câmera",
-          "Gravações de Voz",
-          "Históricos de Chat brutos"
-        ]
-      },
-      "parents": {
-        "title": "Os Pais Podem Ver",
-        "list": [
-          "Alertas de Risco e Contexto",
-          "Tendências Emocionais"
-        ]
-      }
-    },
-    "footer": {
-      "agreement": {
-        "terms": "Li e aceito os <terms>Termos e Condições Gerais (T&C)</terms>.",
-        "privacy": "Tomei conhecimento da <privacy>Política de Privacidade</privacy> e consinto com o processamento de dados.",
-        "guardian": "Confirmo que meu filho tem menos de 16 anos e sou o responsável legal.",
-        "marketing": "Não quero receber publicidade do SafeMentor por e-mail.",
-        "payment": "Quero começar a usar o chat de IA imediatamente após o pagamento. Entendo que meu direito de arrependimento de 14 dias termina assim que o chat for usado – minha assinatura permanece cancelável mensalmente."
-      },
-      "back": "Voltar",
-      "createAccount": "Criar Conta"
-    }
-  },
-  "LoginLegal": {
-    "linkText": "Aviso legal e privacidade",
-    "modalTitle": "Aviso legal e privacidade",
-    "modalContent": "Os avisos legais da área de início de sessão vão aqui..."
-  },
-  "Imprint": {
-    "title": "Aviso legal",
-    "provider": "Fornecedor deste sítio web",
-    "names": "Lighthouse Engineering Architecture S.L., CEO: Andreas Greif",
-    "address": "Av Lluc 58, BJ, 07300 Inca, Espanha. CIF B56925043.",
-    "contactInfo": "E-mail: safementor-pilot@mail.com, Telefone: +49 176 34 901755",
-    "disputeResolution": "Não estamos dispostos nem somos obrigados a participar em procedimentos de resolução de litígios perante uma comissão de arbitragem de consumo.",
-    "copyright": "Todos os direitos sobre os conteúdos deste sítio web estão reservados. Qualquer utilização comercial requer o consentimento prévio do titular dos direitos.",
-    "liability": "Este sítio web pode conter ligações a sítios web de terceiros. Não conseguimos identificar qualquer conteúdo ilegal nas páginas ligadas no momento da ligação. Não podemos assumir qualquer responsabilidade pelo conteúdo atual nem pelas alterações efetuadas após a ligação."
-  },
-  "Terms": {
-    "title": "Termos e condições gerais (TCG)",
-    "subtitle": "Fase piloto do SafeMentor",
-    "lastUpdated": "Estado: fevereiro de 2026",
-    "preamble": "O SafeMentor oferece uma plataforma de aprendizagem com IA para crianças. Uma vez que o projeto se encontra atualmente numa fase piloto fechada («Amigos e família»), este acordo serve para esclarecer o enquadramento jurídico entre a empresa e os utilizadores de teste.",
-    "sections": {
-      "s1": {
-        "title": "§ 1 Âmbito de aplicação e partes contratantes",
-        "content": "1. Estes TCG aplicam-se a todos os serviços prestados pelo SafeMentor a tutores legais (doravante «Utilizadores») que utilizem a oferta para os seus filhos menores.\n2. A parte contratante é: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Espanha. Representada pelo Diretor-Geral: Andreas Greif, CIF B56925043.\n3. Ao utilizar o sítio web e introduzir o código de acesso, o Utilizador aceita integralmente estes TCG."
-      },
-      "s2": {
-        "title": "§ 2 Mentor ID e requisitos de acesso",
-        "content": "1. Para criar uma conta no SafeMentor, o Utilizador deve ser maior de idade e ter plena capacidade jurídica.\n2. O Utilizador é responsável pela confidencialidade do seu código de acesso e responde pelos danos decorrentes de uma utilização indevida.\n3. O Utilizador garante que tem a guarda da criança registada ou que dispõe da autorização expressa dos tutores legais."
-      },
-      "s3": {
-        "title": "§ 3 Âmbito dos serviços e integridade académica",
-        "content": "1. O SafeMentor fornece uma interface de IA que apoia as crianças em projetos de aprendizagem e lazer.\n2. O SafeMentor serve de apoio à aprendizagem, não para a elaboração de trabalhos de casa ou provas prontas a entregar. A responsabilidade pelo cumprimento das regras de integridade académica recai exclusivamente no Utilizador.\n3. Não existe direito à utilização de modelos de IA específicos."
-      },
-      "s4": {
-        "title": "§ 4 Disponibilidade e manutenção",
-        "content": "1. O SafeMentor empenha-se em garantir uma elevada disponibilidade da plataforma e do painel dos pais. No entanto, não existe direito a disponibilidade ininterrupta.\n2. Podem ocorrer interrupções temporárias devido a trabalhos de manutenção necessários, atualizações de segurança ou falhas técnicas fora do controlo do SafeMentor (p. ex., falhas em fornecedores de alojamento ou interfaces como a API Groq).\n3. Os trabalhos de manutenção planeados serão comunicados aos Utilizadores com a maior antecedência possível (p. ex., por e-mail ou aviso no painel).\n4. O SafeMentor não é responsável por perdas de dados ou danos causados por falhas técnicas, salvo se forem devidos a negligência grave ou dolo."
-      },
-      "s5": {
-        "title": "§ 5 Monitorização de segurança e encaminhamento de intenção",
-        "content": "1. O SafeMentor analisa automaticamente os chats em busca de situações de perigo (p. ex., grooming, bullying). Caso sejam detetadas, é enviada uma notificação aos pais.\n2. O SafeMentor não garante a deteção completa de todos os perigos. A comunicação das crianças pode escapar às possibilidades técnicas de deteção.\n3. O sistema avalia as tendências emocionais. Em caso de humor negativo persistente durante mais de dois dias, os pais são informados sobre o tema geral e a emoção predominante."
-      },
-      "s6": {
-        "title": "§ 6 Obrigações dos pais (dever de supervisão)",
-        "content": "1. A utilização do SafeMentor não isenta os pais do seu dever legal de supervisão. O SafeMentor é uma ajuda técnica e não um substituto do cuidado humano.\n2. O Utilizador é responsável por garantir que a criança não utilize a IA como substituto da interação social humana. O SafeMentor não se responsabiliza pelas consequências psicológicas de uma antropomorfização excessiva da IA por parte da criança."
-      },
-      "s7": {
-        "title": "§ 7 Regras de conduta e utilização proibida",
-        "content": "1. A utilização do SafeMentor é permitida exclusivamente para fins lícitos. O Utilizador compromete-se a utilizar a plataforma de forma a não violar direitos de terceiros nem gerar ou distribuir conteúdo ilícito.\n2. É expressamente proibido utilizar o SafeMentor para atividades prejudiciais, ameaçadoras ou abusivas; que visem contornar as medidas de segurança da IA («jailbreaking») ou perturbar ou pôr em perigo o funcionamento da plataforma ou a segurança informática.\n3. O SafeMentor reserva-se o direito de bloquear contas temporária ou permanentemente em caso de violação destas regras."
-      },
-      "s8": {
-        "title": "§ 8 Exclusão de responsabilidade",
-        "content": "1. Os sistemas de IA podem gerar informações incorretas («alucinações»). O SafeMentor não é responsável pela exatidão das respostas.\n2. O SafeMentor não assume qualquer responsabilidade por declarações da IA que possam ser consideradas inadequadas ou prejudiciais apesar das medidas de segurança. Distanciamo-nos expressamente do conteúdo gerado por IA com tendências discriminatórias ou inadequadas. A responsabilidade fica excluída, salvo se o SafeMentor tiver ignorado intencionalmente os padrões de segurança.\n3. Todas as recomendações de ação, especialmente na área do artesanato, devem ser verificadas por um adulto antes de serem implementadas. Na execução física de projetos, a responsabilidade pela segurança recai exclusivamente nos pais.\n4. As respostas da IA não constituem aconselhamento profissional (p. ex., médico, jurídico ou relacionado com a segurança)."
-      },
-      "s9": {
-        "title": "§ 9 Limitação de responsabilidade",
-        "content": "1. O SafeMentor é responsável sem limitação pelos danos resultantes de lesões à vida, ao corpo ou à saúde com base numa violação dolosa ou negligente de obrigações.\n2. Por outros danos, o SafeMentor só é responsável em caso de dolo ou negligência grave. Em caso de negligência leve, o SafeMentor só é responsável se for violada uma obrigação cujo cumprimento torna possível a execução adequada do contrato (obrigação cardinal); neste caso, a responsabilidade limita-se ao dano típico e previsível.\n3. O SafeMentor não é responsável por lucros cessantes, danos indiretos ou consequentes. O SafeMentor só é responsável pela perda de dados se esta não pudesse ter sido evitada mediante medidas razoáveis de cópia de segurança por parte do Utilizador.\n4. Uma vez que o conteúdo de IA se baseia em modelos estocásticos, o SafeMentor não assume qualquer responsabilidade pela exatidão factual, integralidade ou adequação educativa das respostas geradas (ver § 3)."
-      },
-      "s10": {
-        "title": "§ 10 Prazo e revogação",
-        "content": "1. O serviço pode ser cancelado mensalmente.\n2. O direito legal de revogação caduca antecipadamente assim que começar a utilização do conteúdo digital (início do chat com IA)."
-      },
-      "s11": {
-        "title": "§ 11 Modelos de utilização gratuita (clientes piloto, edição social e amigos)",
-        "content": "1. O SafeMentor pode conceder acesso gratuito a grupos de utilizadores selecionados (p. ex., clientes piloto, famílias com comprovativo de apoio estatal).\n2. O acesso gratuito está tecnicamente limitado à utilização de modelos específicos. Não existe direito à utilização de modelos premium de alto custo nem de funções avançadas de raciocínio profundo nestes modelos.\n3. Em determinadas tarifas gratuitas, a prestação do serviço de IA realiza-se exclusivamente através de uma chave API a fornecer pelo próprio Utilizador. O Utilizador assume a responsabilidade exclusiva pela criação, limites de tokens e disponibilidade desta chave. Se a quota do fornecedor terceiro for esgotada, a função do SafeMentor é automaticamente pausada até renovação.\n4. Obrigação de comprovar: Para beneficiar da tarifa social, o SafeMentor está habilitado a solicitar comprovativos de elegibilidade (p. ex., notificação de prestações sociais) em intervalos razoáveis."
-      },
-      "s12": {
-        "title": "§ 12 Remuneração e condições de pagamento",
-        "content": "1. A utilização do SafeMentor pode estar sujeita a uma taxa consoante o modelo escolhido (p. ex., Básico, Premium, Equidade Social). Os preços e condições vigentes são claramente apresentados ao Utilizador na página de encomenda antes de concluir a subscrição.\n2. Regulamentação especial para a fase piloto: No âmbito da fase piloto, o SafeMentor pode prestar o serviço gratuitamente ou com tarifas reduzidas. Não existe direito a utilização gratuita permanente para além do período de teste acordado.\n3. Ajustes de preços: O SafeMentor reserva-se o direito de ajustar as tarifas para futuros períodos contratuais. Tais alterações serão comunicadas aos Utilizadores com antecedência suficiente por e-mail."
-      },
-      "s13": {
-        "title": "§ 13 Alteração dos termos",
-        "content": "1. Reservamo-nos o direito de alterar estes TCG a qualquer momento. O Utilizador será informado das alterações com a devida antecedência e terá a possibilidade de as aceitar ou cancelar o serviço. Se a alteração não for aceite, o contrato termina automaticamente.\n2. Todas as alterações ou adições aos TCG serão anunciadas no sítio web."
-      },
-      "s14": {
-        "title": "§ 14 Disposições finais",
-        "content": "1. Aplica-se o direito da República Federal da Alemanha.\n2. Caso alguma disposição seja inválida, as restantes disposições não serão afetadas.\n3. Em caso de litígio, as partes comprometem-se a tentar primeiro uma resolução amigável."
-      }
     }
   },
   "Privacy": {
@@ -1098,61 +1144,15 @@
       }
     }
   },
-  "Subprocessors": {
-    "title": "Lista de subprocessadores",
-    "intro": "O SafeMentor trabalha com os seguintes prestadores de serviços (subprocessadores) para fornecer os nossos serviços. Todo o tratamento de dados realiza-se exclusivamente em servidores dentro da União Europeia (UE).",
-    "headers": {
-      "category": "Categoria",
-      "provider": "Fornecedor",
-      "location": "Localização",
-      "purpose": "Finalidade/Função",
-      "contact": "Dados de contacto"
-    },
-    "providers": [
-      {
-        "category": "Alojamento e backend",
-        "provider": "Google Cloud (Google Ireland Limited)",
-        "location": "UE (Bélgica)",
-        "purpose": "Infraestrutura e armazenamento de servidores",
-        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Irlanda. Privacidade: [Formulário de consulta de privacidade](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
-      },
-      {
-        "category": "Inferência de IA",
-        "provider": "Nebius AI B.V.",
-        "location": "UE (Amesterdão / Helsínquia)",
-        "purpose": "Geração de respostas de IA",
-        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Países Baixos. E-mail: privacy@nebius.com"
-      },
-      {
-        "category": "Alojamento frontend",
-        "provider": "Vercel Inc.",
-        "location": "UE (Frankfurt)",
-        "purpose": "Infraestrutura para a aplicação web",
-        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Bruxelas, Bélgica. E-mail: privacy@vercel.com"
-      },
-      {
-        "category": "Processamento de pagamentos",
-        "provider": "Mollie B.V.",
-        "location": "UE",
-        "purpose": "Processamento de pagamentos por cartão de crédito",
-        "contact": "Keizersgracht 313, 1016 EE Amesterdão, Países Baixos. E-mail: privacy@mollie.com"
-      },
-      {
-        "category": "Alojamento de base de dados",
-        "provider": "Supabase Ireland Ltd.",
-        "location": "UE (Frankfurt)",
-        "purpose": "Armazenamento de contas de utilizadores e dados de projetos",
-        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irlanda. E-mail: privacy@supabase.com"
-      },
-      {
-        "category": "Autenticação por SMS",
-        "provider": "Twilio Ireland Limited",
-        "location": "UE (Irlanda)",
-        "purpose": "Autenticação dos pais por SMS",
-        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Irlanda. E-mail: privacy@twilio.com"
-      }
-    ],
-    "back": "Voltar à política de privacidade"
+  "LoginLegal": {
+    "linkText": "Aviso legal e privacidade",
+    "modalTitle": "Aviso legal e privacidade",
+    "modalContent": "Os avisos legais da área de início de sessão vão aqui..."
+  },
+  "NotFound": {
+    "title": "Página não encontrada",
+    "description": "Ops! A página que você está procurando não existe ou foi movida.",
+    "goHome": "Voltar para o Início"
   },
   "About": {
     "meta": {

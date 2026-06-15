@@ -1,27 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter, Libre_Baskerville, Source_Sans_3 } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
+import Script from 'next/script'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const libreBaskerville = Libre_Baskerville({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-  variable: '--font-serif-main',
-  style: ['normal', 'italic']
-})
-const sourceSans3 = Source_Sans_3({
-  subsets: ['latin'],
-  variable: '--font-sans-main'
-})
 
 // Importe a configuração
 import { locales } from '@/lib/i18n/config'
 
 export const metadata: Metadata = {
-  title: 'Safementor Project',
+  title: 'SafeMentor Project',
   description: 'Modern project with almost all the modern features possible',
   robots: {
     index: false,
@@ -68,9 +56,12 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${libreBaskerville.variable} ${sourceSans3.variable}`}>
-      <body className={sourceSans3.className}>
-        <script
+    <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link rel="stylesheet" href="/fonts/fonts.css" />
+        <Script
+          id="pwa-prompt-handler"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.deferredPWAPrompt = null;
@@ -84,6 +75,8 @@ export default async function LocaleLayout({
             `,
           }}
         />
+      </head>
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}

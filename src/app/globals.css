@@ -3,6 +3,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-inter: 'Inter', sans-serif;
+  --font-serif-main: 'Libre Baskerville', serif;
+  --font-sans-main: 'Source Sans 3', sans-serif;
 }
 
 @theme inline {
@@ -15,7 +18,7 @@ body {
   height: 100%;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans-main);
   margin: 0;
   padding: 0;
 }

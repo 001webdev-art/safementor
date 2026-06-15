@@ -1,4 +1,157 @@
 {
+  "Access": {
+    "title": "Hello and welcome to the SafeMentor Pilot",
+    "description": "Please enter the password so you can get started right away.",
+    "placeholder": "Enter password",
+    "button": "Unlock Access",
+    "error": "Incorrect password"
+  },
+  "AccessLegal": {
+    "contactLabel": "For questions about the pilot project:",
+    "linkText": "Imprint & Privacy",
+    "modalTitle": "Imprint & Privacy (Pilot)",
+    "intro": "The following provisions apply to the pilot phase:",
+    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer. Email: safementor-pilot@mail.com; Phone: +49 176 34901755. Responsible for content according to § 18 Para. 2 MStV: Andreas Greif.",
+    "address": "Mühlenstr.3, 78176 Blumberg",
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
+  },
+  "Imprint": {
+    "title": "Imprint",
+    "provider": "Providers of this website is",
+    "names": "Lighthouse Engineering Architecture S.L., CEO: Andreas Greif",
+    "address": "Av Lluc 58, BJ, 07300 Inca, Spain. CIF B56925043.",
+    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
+    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "copyright": "All rights to the contents of this website are reserved. Any commercial use requires the prior consent of the rights holder.",
+    "liability": "This website may contain links to third-party websites. We were unable to identify any illegal content on the linked pages at the time of linking. We cannot assume any liability for the current content and any changes made after linking."
+  },
+  "Terms": {
+    "title": "Terms and Conditions (T&C)",
+    "subtitle": "SafeMentor Pilot Phase",
+    "lastUpdated": "Status: February 2026",
+    "preamble": "SafeMentor offers an AI-powered learning platform for children. Since the project is currently in a closed pilot phase (\"Friends & Family\"), this agreement serves to clarify the legal framework between the company and the test users.",
+    "sections": {
+      "s1": {
+        "title": "§ 1 Scope and Contracting Parties",
+        "content": "1. These T&C apply to all services provided by SafeMentor to legal guardians (hereinafter \"Users\") who use the offer for their minor children.\n2. The contracting party is: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spain. Represented by the Managing Director: Andreas Greif, CIF B56925043.\n3. By using the website and entering the access code, the User agrees to these T&C in their entirety."
+      },
+      "s2": {
+        "title": "§ 2 Mentor ID and Access Requirements",
+        "content": "1. To create a SafeMentor account, the User must be of legal age and have legal capacity.\n2. The User is responsible for the confidentiality of their access code and is liable for damages resulting from improper use.\n3. The User warrants that they have custody of the registered child or that the express permission of the legal guardians is available."
+      },
+      "s3": {
+        "title": "§ 3 Scope of Services and Educational Integrity",
+        "content": "1. SafeMentor provides an AI interface that supports children in learning and leisure projects.\n2. SafeMentor serves as a learning support, not for the creation of turnkey homework or exam performances. Responsibility for compliance with academic integrity rules lies solely with the User.\n3. There is no entitlement to the use of specific AI models."
+      },
+      "s4": {
+        "title": "§ 4 Availability and Maintenance",
+        "content": "1. SafeMentor strives for high availability of the platform and the parent dashboard. However, there is no entitlement to uninterrupted availability.\n2. Temporary interruptions may occur due to necessary maintenance work, security updates, or technical malfunctions outside of SafeMentor's control (e.g., failures at hosting providers or interfaces such as the Groq API).\n3. Planned maintenance work will be announced to Users in a timely manner if possible (e.g., via email or dashboard notice).\n4. SafeMentor is not liable for data loss or damage caused by technical failures, unless these are due to gross negligence or intent."
+      },
+      "s5": {
+        "title": "§ 5 Safety Monitoring & Intent Routing",
+        "content": "1. SafeMentor automatically analyzes chats for hazardous situations (e.g., grooming, bullying). If detected, a notification is sent to the parents.\n2. SafeMentor assumes no guarantee for the complete detection of all dangers. Children's communication may move outside the technical detection possibilities.\n3. The system evaluates emotional trends. In the event of persistent negative mood for more than two days, parents are informed about the rough topic and the prevailing emotion."
+      },
+      "s6": {
+        "title": "§ 6 Parental Duties (Duty of Supervision)",
+        "content": "1. The use of SafeMentor does not release parents from their legal duty of supervision. SafeMentor is a technical aid and not a substitute for human care.\n2. The User is responsible for ensuring that the child does not use the AI as a substitute for human social interaction. SafeMentor is not liable for psychological consequences of excessive anthropomorphization of the AI by the child."
+      },
+      "s7": {
+        "title": "§ 7 Rules of Conduct and Prohibited Use",
+        "content": "1. The use of SafeMentor is permitted exclusively for lawful purposes. The User undertakes to use the platform in such a way that no rights of third parties are violated and no unlawful content is generated or distributed.\n2. It is expressly prohibited to use SafeMentor for activities that are harmful, threatening, or abusive; that aim to bypass the safety precautions of the AI (\"jailbreaking\") or disrupt or endanger the operation of the platform or IT security.\n3. SafeMentor reserves the right to temporarily or permanently block accounts in the event of violations of these rules."
+      },
+      "s8": {
+        "title": "§ 8 Disclaimer and Exclusion of Liability",
+        "content": "1. AI systems can generate incorrect information (\"hallucinations\"). SafeMentor is not liable for the accuracy of the answers.\n2. SafeMentor assumes no liability for statements made by the AI that could be perceived as inappropriate or harmful despite safety precautions. We expressly distance ourselves from AI-generated content with discriminatory or inappropriate tendencies. Liability is excluded unless SafeMentor has intentionally disregarded safety standards.\n3. All recommendations for action, especially in the manual crafts area, must be checked for safety by an adult before they are implemented. In the physical implementation of projects, the responsibility for safety lies solely with the parents.\n4. The AI answers do not constitute professional advice (e.g., medical, legal, or safety-related)."
+      },
+      "s9": {
+        "title": "§ 9 Limitation of Liability",
+        "content": "1. SafeMentor is liable without limitation for damages resulting from injury to life, body, or health based on an intentional or negligent breach of duty.\n2. For other damages, SafeMentor is only liable in the event of intent or gross negligence. In the case of slight negligence, SafeMentor is only liable if a duty is breached whose fulfillment makes the proper performance of the contract possible in the first place (cardinal duty); in this case, liability is limited to the contractually typical, foreseeable damage.\n3. SafeMentor is not liable for lost profit, indirect damage, or consequential damage. SafeMentor is only liable for the loss of data if this could not have been avoided by reasonable data backup measures by the User.\n4. Since the AI content is based on stochastic models, SafeMentor assumes no liability for the factual correctness, completeness, or educational suitability of the generated answers (see § 3)."
+      },
+      "s10": {
+        "title": "§ 10 Term and Revocation",
+        "content": "1. The service can be canceled monthly.\n2. The legal right of revocation expires prematurely as soon as the use of digital content (start of the AI chat) has begun."
+      },
+      "s11": {
+        "title": "§ 11 Free Usage Models (Pilot Customers, Social Edition & Friends)",
+        "content": "1. SafeMentor may grant selected user groups (e.g., pilot customers, families with proof of state support) free access to the platform.\n2. Free access is technically limited to the use of specific models. There is no entitlement to the use of cost-intensive premium models or extended deep reasoning functions in these models.\n3. In certain free tariffs, the provision of AI performance takes place exclusively via an API key to be provided by the User themselves. The User bears sole responsibility for the creation, token limits, and availability of this key. If the third-party provider's quota is exhausted, the function of SafeMentor is automatically paused until renewal.\n4. Duty to provide proof: For the receipt of the social tariff, SafeMentor is entitled to request proof of eligibility (e.g., notice of social benefits) at reasonable intervals."
+      },
+      "s12": {
+        "title": "§ 12 Remuneration and Payment Terms",
+        "content": "1. The use of SafeMentor may be subject to a fee depending on the chosen model (e.g., Basic, Premium, Social Equity). The currently valid prices and terms are clearly displayed to the User on the order page before the subscription is completed.\n2. Special regulation for pilot phase: Within the framework of the pilot phase, SafeMentor can provide the service free of charge or at reduced fees. There is no entitlement to permanent free use beyond the agreed test period.\n3. Price adjustments: SafeMentor reserves the right to adjust the fees for future contract terms. Such changes will be communicated to Users in a timely manner in advance by email."
+      },
+      "s13": {
+        "title": "§ 13 Amendment of Terms",
+        "content": "1. We reserve the right to change these T&C at any time. The User will be informed of changes in good time and has the possibility to accept them or cancel the service. If the change is not accepted, the contract ends automatically.\n2. All changes or additions to the T&C will be announced on the website."
+      },
+      "s14": {
+        "title": "§ 14 Final Provisions",
+        "content": "1. The law of the Federal Republic of Germany applies.\n2. Should any provision be invalid, the remaining provisions shall remain unaffected.\n3. In the event of disputes, the parties undertake to first attempt an amicable settlement."
+      }
+    }
+  },
+  "Compliance": {
+    "header": {
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in",
+      "createAccountTitle": "Create your account",
+      "createAccountSubtitle": "Welcome! Please fill in the details to get started"
+    },
+    "sidebar": {
+      "title": "Your Child’s Privacy",
+      "description": "SafeMentor is built on the principle of \"Data Minimization.\" We only process what is strictly needed to keep your child safe.",
+      "compliant": "GDPR Compliant"
+    },
+    "dataUsage": {
+      "title": "What data SafeMentor uses",
+      "riskSignals": {
+        "label": "Risk Signals:",
+        "value": "Only keywords indicating bullying, illegal activities, public-harm, groomingor self-harm are flagged."
+      },
+      "usageStats": {
+        "label": "App Usage Statistics:",
+        "value": "We track session durations and AI unit usage (tokens) to optimize our service."
+      }
+    },
+    "consent": {
+      "improve": {
+        "title": "Help improve SafeMentor",
+        "optional": "(optional)",
+        "description": "Allow us to use 100% anonymized crash logs to fix bugs."
+      }
+    },
+    "transparency": {
+      "title": "TRANSPARENCY REPORT",
+      "never": {
+        "title": "Never Collected",
+        "list": [
+          "Exact GPS Location",
+          "Camera Photos",
+          "Voice Recordings",
+          "Raw Chat Logs"
+        ]
+      },
+      "parents": {
+        "title": "Parents Can See",
+        "list": [
+          "Risk Alerts",
+          "Context for red flag events"
+        ]
+      }
+    },
+    "footer": {
+      "agreement": {
+        "terms": "I have read and accept the <terms>General Terms and Conditions (T&C)</terms>.",
+        "privacy": "I have taken note of the <privacy>Privacy Policy</privacy> and consent to data processing.",
+        "guardian": "I confirm that my child is under 16 years old and I am the legal guardian.",
+        "marketing": "I do not want to receive advertising from SafeMentor via email.",
+        "payment": "I want to start using the KI chat immediately after payment. I understand that my 14-day right of withdrawal ends once the chat is used – my subscription remains cancelable on a monthly basis."
+      },
+      "back": "Back",
+      "createAccount": "Create Account"
+    }
+  },
   "Header": {
     "title": "Safementor",
     "home": "Home",
@@ -482,6 +635,62 @@
     "emailConflict": "This email is already in use, redirecting to the Login Page",
     "generic": "An error occurred. Please try again."
   },
+  "Subprocessors": {
+    "title": "List of Sub-processors",
+    "intro": "SafeMentor works with the following service providers (sub-processors) to provide our services. All data processing takes place exclusively on servers within the European Union (EU).",
+    "headers": {
+      "category": "Category",
+      "provider": "Provider",
+      "location": "Location",
+      "purpose": "Purpose/Function",
+      "contact": "Contact Details"
+    },
+    "providers": [
+      {
+        "category": "Hosting & Backend",
+        "provider": "Google Cloud (Google Ireland Limited)",
+        "location": "EU (Belgium)",
+        "purpose": "Server infrastructure and storage",
+        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Ireland. Privacy: [Privacy Inquiry Form](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
+      },
+      {
+        "category": "AI Inference",
+        "provider": "Nebius AI B.V.",
+        "location": "EU (Amsterdam / Helsinki)",
+        "purpose": "Generation of AI answers",
+        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Netherlands. Email: privacy@nebius.com"
+      },
+      {
+        "category": "Hosting Frontend",
+        "provider": "Vercel Inc.",
+        "location": "EU (Frankfurt)",
+        "purpose": "Infrastructure for the web application",
+        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Brussels, Belgium. Email: privacy@vercel.com"
+      },
+      {
+        "category": "Payment Processing",
+        "provider": "Mollie B.V.",
+        "location": "EU",
+        "purpose": "Processing of credit card payments",
+        "contact": "Keizersgracht 313, 1016 EE Amsterdam, Netherlands. Email: privacy@mollie.com"
+      },
+      {
+        "category": "Database Hosting",
+        "provider": "Supabase Ireland Ltd.",
+        "location": "EU (Frankfurt)",
+        "purpose": "Storage of user accounts and project data",
+        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland. Email: privacy@supabase.com"
+      },
+      {
+        "category": "SMS Authentication",
+        "provider": "Twilio Ireland Limited",
+        "location": "EU (Ireland)",
+        "purpose": "Parent authentication via SMS",
+        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Ireland. Email: privacy@twilio.com"
+      }
+    ],
+    "back": "Back to Privacy Policy"
+  },
   "Landing": {
     "Hero": {
       "title1": "Welcome to Safementor",
@@ -936,224 +1145,15 @@
       }
     }
   },
-  "Subprocessors": {
-    "title": "List of Sub-processors",
-    "intro": "SafeMentor works with the following service providers (sub-processors) to provide our services. All data processing takes place exclusively on servers within the European Union (EU).",
-    "headers": {
-      "category": "Category",
-      "provider": "Provider",
-      "location": "Location",
-      "purpose": "Purpose/Function",
-      "contact": "Contact Details"
-    },
-    "providers": [
-      {
-        "category": "Hosting & Backend",
-        "provider": "Google Cloud (Google Ireland Limited)",
-        "location": "EU (Belgium)",
-        "purpose": "Server infrastructure and storage",
-        "contact": "Gordon House, Barrow Street, Dublin 4, D04 E5W5, Ireland. Privacy: [Privacy Inquiry Form](https://support.google.com/cloud/contact/google_cloud_privacy_inquiry)"
-      },
-      {
-        "category": "AI Inference",
-        "provider": "Nebius AI B.V.",
-        "location": "EU (Amsterdam / Helsinki)",
-        "purpose": "Generation of AI answers",
-        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Netherlands. Email: privacy@nebius.com"
-      },
-      {
-        "category": "Hosting Frontend",
-        "provider": "Vercel Inc.",
-        "location": "EU (Frankfurt)",
-        "purpose": "Infrastructure for the web application",
-        "contact": "c/o EDPO, Avenue Huart Hamoir 71, 1030 Brussels, Belgium. Email: privacy@vercel.com"
-      },
-      {
-        "category": "Payment Processing",
-        "provider": "Mollie B.V.",
-        "location": "EU",
-        "purpose": "Processing of credit card payments",
-        "contact": "Keizersgracht 313, 1016 EE Amsterdam, Netherlands. Email: privacy@mollie.com"
-      },
-      {
-        "category": "Database Hosting",
-        "provider": "Supabase Ireland Ltd.",
-        "location": "EU (Frankfurt)",
-        "purpose": "Storage of user accounts and project data",
-        "contact": "One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland. Email: privacy@supabase.com"
-      },
-      {
-        "category": "SMS Authentication",
-        "provider": "Twilio Ireland Limited",
-        "location": "EU (Ireland)",
-        "purpose": "Parent authentication via SMS",
-        "contact": "70 Sir John Rogerson's Quay, Dublin 2, D02 R296, Ireland. Email: privacy@twilio.com"
-      }
-    ],
-    "back": "Back to Privacy Policy"
-  },
-  "Access": {
-    "title": "Hello and welcome to the SafeMentor Pilot",
-    "description": "Please enter the password so you can get started right away.",
-    "placeholder": "Enter password",
-    "button": "Unlock Access",
-    "error": "Incorrect password"
-  },
-  "AccessLegal": {
-    "contactLabel": "For questions about the pilot project:",
-    "linkText": "Imprint & Privacy",
-    "modalTitle": "Imprint & Privacy (Pilot)",
-    "intro": "The following provisions apply to the pilot phase:",
-    "provider": "Imprint - Information according to § 5 DDG: Provider: Andreas Greif & Heinrich Gronauer. Email: safementor-pilot@mail.com; Phone: +49 176 34901755. Responsible for content according to § 18 Para. 2 MStV: Andreas Greif.",
-    "address": "Mühlenstr.3, 78176 Blumberg",
-    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
-    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
-    "privacy": "Privacy - Responsible parties are Andreas Greif & Heinrich Gronauer, Mühlenstr.3, 78176 Blumberg. When visiting this page, your IP address is processed for technical reasons and to ensure system security. We use a technically necessary session cookie to manage access via your access code. No tracking or marketing cookies are used. You will find our detailed privacy policy after logging in."
-  },
   "LoginLegal": {
     "linkText": "Imprint & Privacy",
     "modalTitle": "Imprint & Privacy",
     "modalContent": "Legal notices for the login area go here..."
   },
-  "Imprint": {
-    "title": "Imprint",
-    "provider": "Providers of this website is",
-    "names": "Lighthouse Engineering Architecture S.L., CEO: Andreas Greif",
-    "address": "Av Lluc 58, BJ, 07300 Inca, Spain. CIF B56925043.",
-    "contactInfo": "Email: safementor-pilot@mail.com, Phone: +49 176 34 901755",
-    "disputeResolution": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
-    "copyright": "All rights to the contents of this website are reserved. Any commercial use requires the prior consent of the rights holder.",
-    "liability": "This website may contain links to third-party websites. We were unable to identify any illegal content on the linked pages at the time of linking. We cannot assume any liability for the current content and any changes made after linking."
-  },
-  "Terms": {
-    "title": "Terms and Conditions (T&C)",
-    "subtitle": "SafeMentor Pilot Phase",
-    "lastUpdated": "Status: February 2026",
-    "preamble": "SafeMentor offers an AI-powered learning platform for children. Since the project is currently in a closed pilot phase (\"Friends & Family\"), this agreement serves to clarify the legal framework between the company and the test users.",
-    "sections": {
-      "s1": {
-        "title": "§ 1 Scope and Contracting Parties",
-        "content": "1. These T&C apply to all services provided by SafeMentor to legal guardians (hereinafter \"Users\") who use the offer for their minor children.\n2. The contracting party is: Lighthouse Engineering Architecture S.L., Av Lluc 58, BJ, 07300 Inca, Spain. Represented by the Managing Director: Andreas Greif, CIF B56925043.\n3. By using the website and entering the access code, the User agrees to these T&C in their entirety."
-      },
-      "s2": {
-        "title": "§ 2 Mentor ID and Access Requirements",
-        "content": "1. To create a SafeMentor account, the User must be of legal age and have legal capacity.\n2. The User is responsible for the confidentiality of their access code and is liable for damages resulting from improper use.\n3. The User warrants that they have custody of the registered child or that the express permission of the legal guardians is available."
-      },
-      "s3": {
-        "title": "§ 3 Scope of Services and Educational Integrity",
-        "content": "1. SafeMentor provides an AI interface that supports children in learning and leisure projects.\n2. SafeMentor serves as a learning support, not for the creation of turnkey homework or exam performances. Responsibility for compliance with academic integrity rules lies solely with the User.\n3. There is no entitlement to the use of specific AI models."
-      },
-      "s4": {
-        "title": "§ 4 Availability and Maintenance",
-        "content": "1. SafeMentor strives for high availability of the platform and the parent dashboard. However, there is no entitlement to uninterrupted availability.\n2. Temporary interruptions may occur due to necessary maintenance work, security updates, or technical malfunctions outside of SafeMentor's control (e.g., failures at hosting providers or interfaces such as the Groq API).\n3. Planned maintenance work will be announced to Users in a timely manner if possible (e.g., via email or dashboard notice).\n4. SafeMentor is not liable for data loss or damage caused by technical failures, unless these are due to gross negligence or intent."
-      },
-      "s5": {
-        "title": "§ 5 Safety Monitoring & Intent Routing",
-        "content": "1. SafeMentor automatically analyzes chats for hazardous situations (e.g., grooming, bullying). If detected, a notification is sent to the parents.\n2. SafeMentor assumes no guarantee for the complete detection of all dangers. Children's communication may move outside the technical detection possibilities.\n3. The system evaluates emotional trends. In the event of persistent negative mood for more than two days, parents are informed about the rough topic and the prevailing emotion."
-      },
-      "s6": {
-        "title": "§ 6 Parental Duties (Duty of Supervision)",
-        "content": "1. The use of SafeMentor does not release parents from their legal duty of supervision. SafeMentor is a technical aid and not a substitute for human care.\n2. The User is responsible for ensuring that the child does not use the AI as a substitute for human social interaction. SafeMentor is not liable for psychological consequences of excessive anthropomorphization of the AI by the child."
-      },
-      "s7": {
-        "title": "§ 7 Rules of Conduct and Prohibited Use",
-        "content": "1. The use of SafeMentor is permitted exclusively for lawful purposes. The User undertakes to use the platform in such a way that no rights of third parties are violated and no unlawful content is generated or distributed.\n2. It is expressly prohibited to use SafeMentor for activities that are harmful, threatening, or abusive; that aim to bypass the safety precautions of the AI (\"jailbreaking\") or disrupt or endanger the operation of the platform or IT security.\n3. SafeMentor reserves the right to temporarily or permanently block accounts in the event of violations of these rules."
-      },
-      "s8": {
-        "title": "§ 8 Disclaimer and Exclusion of Liability",
-        "content": "1. AI systems can generate incorrect information (\"hallucinations\"). SafeMentor is not liable for the accuracy of the answers.\n2. SafeMentor assumes no liability for statements made by the AI that could be perceived as inappropriate or harmful despite safety precautions. We expressly distance ourselves from AI-generated content with discriminatory or inappropriate tendencies. Liability is excluded unless SafeMentor has intentionally disregarded safety standards.\n3. All recommendations for action, especially in the manual crafts area, must be checked for safety by an adult before they are implemented. In the physical implementation of projects, the responsibility for safety lies solely with the parents.\n4. The AI answers do not constitute professional advice (e.g., medical, legal, or safety-related)."
-      },
-      "s9": {
-        "title": "§ 9 Limitation of Liability",
-        "content": "1. SafeMentor is liable without limitation for damages resulting from injury to life, body, or health based on an intentional or negligent breach of duty.\n2. For other damages, SafeMentor is only liable in the event of intent or gross negligence. In the case of slight negligence, SafeMentor is only liable if a duty is breached whose fulfillment makes the proper performance of the contract possible in the first place (cardinal duty); in this case, liability is limited to the contractually typical, foreseeable damage.\n3. SafeMentor is not liable for lost profit, indirect damage, or consequential damage. SafeMentor is only liable for the loss of data if this could not have been avoided by reasonable data backup measures by the User.\n4. Since the AI content is based on stochastic models, SafeMentor assumes no liability for the factual correctness, completeness, or educational suitability of the generated answers (see § 3)."
-      },
-      "s10": {
-        "title": "§ 10 Term and Revocation",
-        "content": "1. The service can be canceled monthly.\n2. The legal right of revocation expires prematurely as soon as the use of digital content (start of the AI chat) has begun."
-      },
-      "s11": {
-        "title": "§ 11 Free Usage Models (Pilot Customers, Social Edition & Friends)",
-        "content": "1. SafeMentor may grant selected user groups (e.g., pilot customers, families with proof of state support) free access to the platform.\n2. Free access is technically limited to the use of specific models. There is no entitlement to the use of cost-intensive premium models or extended deep reasoning functions in these models.\n3. In certain free tariffs, the provision of AI performance takes place exclusively via an API key to be provided by the User themselves. The User bears sole responsibility for the creation, token limits, and availability of this key. If the third-party provider's quota is exhausted, the function of SafeMentor is automatically paused until renewal.\n4. Duty to provide proof: For the receipt of the social tariff, SafeMentor is entitled to request proof of eligibility (e.g., notice of social benefits) at reasonable intervals."
-      },
-      "s12": {
-        "title": "§ 12 Remuneration and Payment Terms",
-        "content": "1. The use of SafeMentor may be subject to a fee depending on the chosen model (e.g., Basic, Premium, Social Equity). The currently valid prices and terms are clearly displayed to the User on the order page before the subscription is completed.\n2. Special regulation for pilot phase: Within the framework of the pilot phase, SafeMentor can provide the service free of charge or at reduced fees. There is no entitlement to permanent free use beyond the agreed test period.\n3. Price adjustments: SafeMentor reserves the right to adjust the fees for future contract terms. Such changes will be communicated to Users in a timely manner in advance by email."
-      },
-      "s13": {
-        "title": "§ 13 Amendment of Terms",
-        "content": "1. We reserve the right to change these T&C at any time. The User will be informed of changes in good time and has the possibility to accept them or cancel the service. If the change is not accepted, the contract ends automatically.\n2. All changes or additions to the T&C will be announced on the website."
-      },
-      "s14": {
-        "title": "§ 14 Final Provisions",
-        "content": "1. The law of the Federal Republic of Germany applies.\n2. Should any provision be invalid, the remaining provisions shall remain unaffected.\n3. In the event of disputes, the parties undertake to first attempt an amicable settlement."
-      }
-    }
-  },
   "NotFound": {
     "title": "Page Not Found",
     "description": "Oops! The page you are looking for doesn't exist or has been moved.",
     "goHome": "Back to Home"
-  },
-  "Compliance": {
-    "header": {
-      "alreadyHaveAccount": "Already have an account?",
-      "signIn": "Sign in",
-      "createAccountTitle": "Create your account",
-      "createAccountSubtitle": "Welcome! Please fill in the details to get started"
-    },
-    "sidebar": {
-      "title": "Your Child’s Privacy",
-      "description": "SafeMentor is built on the principle of \"Data Minimization.\" We only process what is strictly needed to keep your child safe.",
-      "compliant": "GDPR Compliant"
-    },
-    "dataUsage": {
-      "title": "What data SafeMentor uses",
-      "riskSignals": {
-        "label": "Risk Signals:",
-        "value": "Only keywords indicating bullying, illegal activities, public-harm, groomingor self-harm are flagged."
-      },
-      "usageStats": {
-        "label": "App Usage Statistics:",
-        "value": "We track session durations and AI unit usage (tokens) to optimize our service."
-      }
-    },
-    "consent": {
-      "improve": {
-        "title": "Help improve SafeMentor",
-        "optional": "(optional)",
-        "description": "Allow us to use 100% anonymized crash logs to fix bugs."
-      }
-    },
-    "transparency": {
-      "title": "TRANSPARENCY REPORT",
-      "never": {
-        "title": "Never Collected",
-        "list": [
-          "Exact GPS Location",
-          "Camera Photos",
-          "Voice Recordings",
-          "Raw Chat Logs"
-        ]
-      },
-      "parents": {
-        "title": "Parents Can See",
-        "list": [
-          "Risk Alerts",
-          "Context for red flag events"
-        ]
-      }
-    },
-    "footer": {
-      "agreement": {
-        "terms": "I have read and accept the <terms>General Terms and Conditions (T&C)</terms>.",
-        "privacy": "I have taken note of the <privacy>Privacy Policy</privacy> and consent to data processing.",
-        "guardian": "I confirm that my child is under 16 years old and I am the legal guardian.",
-        "marketing": "I do not want to receive advertising from SafeMentor via email.",
-        "payment": "I want to start using the KI chat immediately after payment. I understand that my 14-day right of withdrawal ends once the chat is used – my subscription remains cancelable on a monthly basis."
-      },
-      "back": "Back",
-      "createAccount": "Create Account"
-    }
   },
   "About": {
     "meta": {
