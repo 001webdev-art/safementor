@@ -20,7 +20,7 @@ export const ApproachSection = () => {
                                     width={300}
                                     height={300}
                                     className="w-full h-full max-w-sm mx-auto object-contain"
-                                    loading="lazy"
+                                    //loading="lazy"
                                 />
                             </div>
                         </div>

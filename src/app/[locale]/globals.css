@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-inter: 'Inter', sans-serif;
+  --font-serif-main: 'Libre Baskerville', serif;
+  --font-sans-main: 'Source Sans 3', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-main);
+  margin: 0;
+  padding: 0;
+}
+
 @layer components {
   .organic-blob {
     border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
