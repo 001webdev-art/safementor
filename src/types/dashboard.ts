@@ -5,10 +5,15 @@ export type Section = 'overview' | 'notifications' | 'personal-data' | 'children
 export interface Child {
     id: string;
     parent_id: string;
+    childrenname: string;
     nickname: string | null;
     age: number | null;
+    gender: string | null; // Male, Female, Diverse, Prefer Not to Say
     email: string | null;
     phone: string | null;
+    medical_has_allergies: boolean;
+    medical_has_mental_disorders: boolean;
+    medical_has_physical_disorders: boolean;
     birth_month: number | null;
     birth_year: number | null;
     language: string | null;
@@ -41,9 +46,14 @@ export class DashboardService {
                 id: 'child-1',
                 parent_id: 'parent-1',
                 nickname: 'Alex',
+                childrenname: 'Alex Johnson',
                 email: 'alex@example.com',
                 phone: null,
                 age: null,
+                gender: null,
+                medical_has_allergies: false,
+                medical_has_mental_disorders: false,
+                medical_has_physical_disorders: false,
                 birth_month: 5,
                 birth_year: 2018,
                 language: 'en',
@@ -54,9 +64,14 @@ export class DashboardService {
                 id: 'child-2',
                 parent_id: 'parent-1',
                 nickname: 'Sam',
+                childrenname: 'Sam Smith',
                 email: 'sam@example.com',
                 phone: null,
                 age: null,
+                gender: null,
+                medical_has_allergies: false,
+                medical_has_mental_disorders: false,
+                medical_has_physical_disorders: false,
                 birth_month: 12,
                 birth_year: 2020,
                 language: 'en',
