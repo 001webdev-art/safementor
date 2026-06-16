@@ -51,7 +51,7 @@
       },
       "s5": {
         "title": "§ 5 Supervisión de seguridad y enrutamiento de intención",
-        "content": "1. SafeMentor analiza automáticamente los chats en busca de situaciones de peligro (p. ej., grooming, acoso). Si se detectan, se envía una notificación a los padres.\n2. SafeMentor no garantiza la detección completa de todos los peligros. La comunicación de los niños puede escapar a las posibilidades técnicas de detección.\n3. El sistema evalúa las tendencias emocionales. En caso de estado de ánimo negativo persistente durante más de dos días, se informa a los padres sobre el tema general y la emoción predominante."
+        "content": "1. SafeMentor analiza automáticamente los chats en busca de situaciones de peligro (p. ej., grooming, acoso, autolesiones, violencia). Si se detectan, se notifica a los padres, según el nivel de gravedad (Bandera Amarilla y Roja).\n2. SafeMentor no garantiza la detección completa de todos los peligros. La comunicación de los niños puede escapar a las posibilidades técnicas de detección."
       },
       "s6": {
         "title": "§ 6 Obligaciones de los padres (deber de supervisión)",
@@ -135,8 +135,7 @@
       "parents": {
         "title": "Los Padres Pueden Ver",
         "list": [
-          "Alertas de Riesgo y Contexto",
-          "Tendencias Emocionales"
+          "Alertas de Riesgo y Contexto"
         ]
       }
     },
@@ -532,11 +531,11 @@
         "7d": "Últimos 7 Días",
         "30d": "Últimos 30 Días"
       },
-      "trendTitle": "Resumen de Tendencia Emocional",
-      "patterns": "Patrones emocionales agregados a lo largo del tiempo",
+      "trendTitle": "Resumen del Estado de Seguridad",
+      "patterns": "Resumen de preocupaciones detectadas a lo largo del tiempo",
       "legend": {
-        "positive": "Positivo",
-        "neutral": "Neutral",
+        "positive": "Sin preocupaciones",
+        "neutral": "En seguimiento",
         "needsSupport": "Necesita Apoyo"
       },
       "disclaimer": {
@@ -545,7 +544,7 @@
       },
       "privacy": {
         "title": "Protección de Privacidad Activa",
-        "desc": "Solo se muestran tendencias emocionales agregadas. Los mensajes individuales permanecen privados para proteger el espacio confidencial de tu hijo. Las alertas de seguridad se muestran por separado si la IA detecta patrones preocupantes."
+        "desc": "Los mensajes individuales permanecen privados para proteger el espacio confidencial de tu hijo. Las alertas de seguridad se muestran por separado si la IA detecta patrones preocupantes."
       }
     },
     "children_new": {
@@ -655,10 +654,10 @@
       },
       {
         "category": "Inferencia de IA",
-        "provider": "Nebius AI B.V.",
-        "location": "UE (Ámsterdam / Helsinki)",
+        "provider": "OVHcloud (OVH SAS)",
+        "location": "UE (Francia)",
         "purpose": "Generación de respuestas de IA",
-        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Netherlands. Email: privacy@nebius.com"
+        "contact": "2 rue Kellermann, 59100 Roubaix, Francia. Correo electrónico: privacy@ovhcloud.com"
       },
       {
         "category": "Alojamiento Frontend",
@@ -952,15 +951,15 @@
       },
       "3": {
         "title": "3. Característica Especial: Procesamiento de IA y Enrutamiento de Intenciones",
-        "content": "SafeMentor utiliza varios modelos de IA que se seleccionan automáticamente según la solicitud:\n\n• Antes de transferir datos a interfaces de IA externas (actualmente Nebius B.V.), se eliminan los identificadores personales en la medida de lo posible.\n• Cada entrada del niño es analizada primero por un 'Nano-Router' especializado. Este verifica en tiempo real si es una pregunta de aprendizaje factual, una declaración emocional o una solicitud crítica (Bandera).\n• Dependiendo del tema detectado, la solicitud se reenvía al módulo apropiado para garantizar una respuesta educativa valiosa y segura.\n• El contenido se comprueba automáticamente en busca de situaciones de amenaza (por ejemplo, acoso, intimidación). En caso de peligro grave, se envía un informe al Panel de Control para Padres y, si es necesario, también por correo electrónico o SMS.\n\n**Monitoreo de Seguridad y Panel de Control para Padres:**\n\n• Nuestro sistema analiza el estado de ánimo emocional básico de las interacciones y muestra la tendencia emocional en el panel. \n• Si se detecta un cierto patrón emocional negativo, informamos a los tutores legales sobre la emoción predominante y el área temática general (por ejemplo, \"Escuela\" o \"Amistad\") para permitir un intercambio educativo en la familia (banderas amarillas).\n• Si se detectan situaciones de amenaza grave (por ejemplo, signos de acoso, violencia u otros incidentes relevantes para la seguridad), se notifica a los padres de inmediato. En estos casos excepcionales, también se proporciona a los padres resúmenes de las secciones de chat relevantes para que puedan cumplir con sus deberes de supervisión y protección.\n\nLa base legal para el monitoreo de banderas amarillas/rojas se basa en el Art. 6 (1) (f) RGPD (Interés legítimo en proteger a los niños del peligro)\n\n**Equilibrio de Intereses:**\n• Nuestro interés: Cumplimiento de los deberes de protección infantil (§§ 1631, 1666 BGB)\n• Interés de los padres: Ejercicio del deber de supervisión\n• Interés del niño: Protección contra peligros graves (violencia, abuso, suicidio)\n\nIMPORTANTE: El sistema de bandera roja se utiliza exclusivamente para la protección contra peligros graves. NO se utiliza para el monitoreo de comportamiento trivial.\nEjemplos de Banderas Rojas: ✓ Anuncios concretos de suicidio ✓ Indicios de abuso ✓ Amenazas graves de violencia ✗ NO: Malas palabras, discusiones normales, malas notas.\n\nPara adolescentes (aprox. 13-15 años), las notificaciones sobre tendencias emocionales (banderas amarillas) se dan de una forma más abstracta. En caso de indicios de amenazas graves (banderas rojas), los padres continúan recibiendo información contextual para poder cumplir con su deber de protección. \nPara niños de 14 años en adelante: Se informa al niño sobre la función de bandera roja de una manera apropiada para su edad. Si se identifican peligros, se anima primero al niño a hablar con los padres/personas de confianza antes de ser informado automáticamente (excepto en caso de peligro grave para la vida)."
+        "content": "SafeMentor utiliza varios modelos de IA que se seleccionan automáticamente según la solicitud:\n\n• Antes de transferir datos a interfaces de IA externas (actualmente OVHcloud), se eliminan los identificadores personales en la medida de lo posible.\n• Cada entrada del niño es analizada primero por un clasificador especializado. Este verifica en tiempo real si se trata de una pregunta de aprendizaje factual o de una solicitud relevante para la seguridad.\n• Dependiendo del tema detectado, la solicitud se reenvía al módulo apropiado para garantizar una respuesta educativa valiosa y segura.\n• El contenido se comprueba automáticamente en busca de situaciones de amenaza (por ejemplo, grooming, acoso, autolesiones, violencia). En caso de peligro grave, se envía un informe al Panel de Control para Padres y, si es necesario, también por correo electrónico o SMS.\n\n**Monitoreo de Seguridad y Panel de Control para Padres:**\n\n• Si se detecta una preocupación relevante para la seguridad de menor urgencia (Bandera Amarilla), informamos a los tutores legales sobre el área temática general y el motivo detectado, para permitir un intercambio educativo en la familia.\n• Si se detectan situaciones de amenaza grave (Bandera Roja, por ejemplo, indicios de autolesión, abuso, violencia u otros incidentes relevantes para la seguridad), se notifica a los padres de inmediato. En estos casos, también se proporciona a los padres un resumen objetivo y no literal de la situación relevante para que puedan cumplir con sus deberes de supervisión y protección.\n\nLa base legal para el monitoreo de Bandera Amarilla/Roja se basa en el Art. 6 (1) (f) RGPD (Interés legítimo en proteger a los niños del peligro)\n\n**Equilibrio de Intereses:**\n• Nuestro interés: Cumplimiento de los deberes de protección infantil (§§ 1631, 1666 BGB)\n• Interés de los padres: Ejercicio del deber de supervisión\n• Interés del niño: Protección contra peligros graves (violencia, abuso, suicidio)\n\nIMPORTANTE: El sistema de Bandera Roja se utiliza exclusivamente para la protección contra peligros graves. NO se utiliza para el monitoreo de comportamiento trivial.\nEjemplos de Banderas Rojas: ✓ Anuncios concretos de suicidio ✓ Indicios de abuso ✓ Amenazas graves de violencia ✗ NO: Malas palabras, discusiones normales, malas notas.\n\nPara niños de 14 años en adelante: Se informa al niño sobre la función de monitoreo de seguridad de una manera apropiada para su edad. Si se identifican peligros, se anima primero al niño a hablar con los padres/personas de confianza antes de ser informado automáticamente (excepto en caso de peligro grave para la vida)."
       },
       "3a": {
         "title": "3a. Modelos de IA y Proveedores",
-        "content": "SOLICITUDES ESTÁNDAR: \n• Modelo: Nebius AI \n• Ubicación: Ámsterdam/Helsinki, UE\n• Uso: Preguntas generales de aprendizaje, tareas simples \n\nTAREAS COMPLEJAS: \n• Modelo: Nebius AI High-Reasoning \n• Ubicación: Servidores de la UE \n• Uso: Problemas matemáticos, explicaciones complejas, temas muy emocionales o solicitudes marcadas como banderas.  \n\nCRÍTICO PARA LA SEGURIDAD: \n• Verificación Dual: Dos modelos independientes de Nebius verifican en paralelo \n• Propósito: Cumplimiento con respuestas seguras cuando se detectan banderas rojas\n\nTodos los modelos de IA se comprueban para la seguridad infantil y están sujetos a estrictos requisitos de RGPD (Acuerdo de Procesamiento de Datos según el Art. 28 RGPD). \nIMPORTANTE: El procesamiento se lleva a cabo exclusivamente en servidores de la UE. No se crean datos de entrenamiento a partir de chats de niños."
+        "content": "SOLICITUDES ESTÁNDAR:\n• Proveedor: OVHcloud\n• Ubicación: UE (Francia)\n• Uso: Preguntas generales de aprendizaje, tareas simples\n\nTAREAS COMPLEJAS:\n• Proveedor: OVHcloud, procesamiento de contexto extendido\n• Ubicación: Servidores UE\n• Uso: Problemas matemáticos, explicaciones complejas, solicitudes marcadas como relevantes para la seguridad\n\nCRÍTICO PARA LA SEGURIDAD:\n• Doble verificación: Dos clasificadores independientes verifican en paralelo\n• Propósito: Cumplimiento de respuestas seguras al detectar situaciones de peligro\n\nLos modelos de IA utilizados se verifican para la seguridad infantil y están sujetos a estrictos requisitos del RGPD (Acuerdo de Procesamiento de Datos según el Art. 28 RGPD). El proveedor concreto puede cambiar en el marco del desarrollo técnico; siempre encontrará una visión actualizada en nuestra lista de subencargados del tratamiento.\nIMPORTANTE: El procesamiento se realiza exclusivamente en servidores de la UE. No se crean datos de entrenamiento a partir de los chats de los niños."
       },
       "3b": {
         "title": "3b. Arquitectura de Almacenamiento y Ubicación de Datos",
-        "content": "SafeMentor utiliza un modelo de almacenamiento híbrido para proteger la privacidad: \n\n**ALMACENAMIENTO LOCAL (en el dispositivo del niño):** \n• Historiales completos de chat: Cifrados con AES-256, solo en el dispositivo y solo durante la sesión. \n• Resúmenes de chat: Creados después de la sesión y eliminados automáticamente después de 7 días \n• Memoria del Proyecto: Base de datos local para el progreso del proyecto (por ejemplo, fragmentos de código, detalles sobre un proyecto). Los almacenes de proyectos se eliminan después de 30 días de inactividad. \n\n**ALMACENAMIENTO EN EL SERVIDOR (cifrado en centros de datos de la UE):** \n• Datos del Panel de Control para Padres: Tendencias emocionales (agregadas, sin textos completos), máx. 30 días. \n• Resúmenes de Bandera Amarilla / Roja: Resúmenes de contexto (máx. 30 días)\n• Datos de la cuenta: Información de registro, datos de pago\n\nIMPORTANTE: Los protocolos completos de chat nunca salen del dispositivo del niño. Solo las solicitudes seudonimizadas se transmiten a los servidores para el procesamiento de IA. En caso de pérdida del dispositivo, los datos locales están protegidos por PIN/biometría del dispositivo. Es posible la eliminación remota a través del Panel de Control para Padres."
+        "content": "SafeMentor utiliza un modelo de almacenamiento híbrido para proteger la privacidad:\n\n**ALMACENAMIENTO LOCAL (en el dispositivo del niño):**\n• Historiales de chat completos: cifrados con AES-256, solo en el dispositivo y solo durante la sesión.\n• Resúmenes de chat: creados después de la sesión y eliminados automáticamente después de 7 días\n• Memoria del proyecto: base de datos local para el progreso del proyecto (p. ej., fragmentos de código, detalles sobre un proyecto). Los almacenes de proyectos se eliminan después de 30 días de inactividad.\n\n**ALMACENAMIENTO EN SERVIDOR (cifrado en centros de datos de la UE):**\n• Resúmenes de Bandera Amarilla y Roja: resúmenes de contexto para el Panel de Control para Padres (máx. 30 días)\n• Datos de cuenta: información de registro, datos de pago\n\nIMPORTANTE: Los protocolos de chat completos nunca salen del dispositivo del niño. Solo las solicitudes pseudonimizadas se transmiten a los servidores para el procesamiento de IA. En caso de pérdida del dispositivo, los datos locales están protegidos por PIN del dispositivo/biometría. La eliminación remota a través del Panel de Control para Padres es posible."
       },
       "4": {
         "title": "4. Divulgación a Terceros y Procesamiento de Datos en la UE",
@@ -987,9 +986,9 @@
             ],
             [
               "Inferencia y Razonamiento de IA",
-              "Nebius AI B.V.",
-              "UE (Ámsterdam / Helsinki)",
-              "Generar respuestas de IA",
+              "OVHcloud",
+              "UE (Francia)",
+              "Generación de respuestas de IA",
               "APD según el Art. 28 RGPD"
             ],
             [
@@ -1022,7 +1021,7 @@
             ]
           ]
         },
-        "content": "Aunque Vercel Inc. tiene su sede en San Francisco (EE. UU.), el procesamiento de datos para SafeMentor se lleva a cabo exclusivamente en servidores en Fráncfort, Alemania. Vercel se ha comprometido contractualmente a:\n• No transferir datos fuera de la UE\n• No otorgar acceso a empleados de EE. UU. a datos de servidores de la UE\n• Informar a SafeMentor de inmediato en caso de solicitudes oficiales. \nProtección adicional: Todos los datos sensibles (contenido del chat, tendencias emocionales) se cifran de extremo a extremo antes de almacenarse en servidores de Vercel, para que Vercel mismo no tenga acceso a datos de texto sin formato.\n\nTwilio Inc. también tiene su sede en los EE. UU., pero SafeMentor utiliza la infraestructura europea de Twilio en la región de Irlanda (IE1) para la autenticación de padres. Esto asegura que el procesamiento y almacenamiento principal de datos de autenticación (como números móviles y códigos de verificación) se realice dentro del EEE.\nTwilio se ha comprometido a través de un Anexo de Procesamiento de Datos (DPA) y medidas técnicas complementarias a:\n• Llevar a cabo el almacenamiento y procesamiento de datos personales principalmente en servidores dentro de la UE.\n• Garantizar un nivel adecuado de protección de datos mediante la aplicación de Cláusulas Contractuales Estándar de la UE y la certificación bajo el Marco de Privacidad de Datos UE-EE. UU.\n• Limitar el acceso a datos por entidades de EE. UU. al mínimo absoluto necesario para la operación técnica.\n• En caso de solicitudes gubernamentales, proceder de acuerdo con las pautas internas de transparencia y proteger los intereses de SafeMentor.\n\n**Detalles técnicos sobre Nebius AI:** \n• Forma legal: Nebius AI B.V. (Países Bajos) \n• Centros de datos: Ámsterdam (primario), Helsinki (respaldo) \n• Certificaciones: ISO 27001, SOC 2 Tipo II \n• Residencia de datos: Todos los datos permanecen en centros de datos de la UE \n• Prohibición de entrenamiento: Nebius NO utiliza datos de clientes para el entrenamiento de modelos \n• Retención: Las solicitudes se eliminan inmediatamente después del procesamiento"
+        "content": "Aunque Vercel Inc. tiene su sede en San Francisco (EE. UU.), el procesamiento de datos para SafeMentor se lleva a cabo exclusivamente en servidores en Fráncfort, Alemania. Vercel se ha comprometido contractualmente a:\n• No transferir datos fuera de la UE\n• No otorgar acceso a empleados de EE. UU. a datos de servidores de la UE\n• Informar a SafeMentor de inmediato en caso de solicitudes oficiales. \nProtección adicional: Todos los datos sensibles (contenido del chat, tendencias emocionales) se cifran de extremo a extremo antes de almacenarse en servidores de Vercel, para que Vercel mismo no tenga acceso a datos de texto sin formato.\n\nTwilio Inc. también tiene su sede en los EE. UU., pero SafeMentor utiliza la infraestructura europea de Twilio en la región de Irlanda (IE1) para la autenticación de padres. Esto asegura que el procesamiento y almacenamiento principal de datos de autenticación (como números móviles y códigos de verificación) se realice dentro del EEE.\nTwilio se ha comprometido a través de un Anexo de Procesamiento de Datos (DPA) y medidas técnicas complementarias a:\n• Llevar a cabo el almacenamiento y procesamiento de datos personales principalmente en servidores dentro de la UE.\n• Garantizar un nivel adecuado de protección de datos mediante la aplicación de Cláusulas Contractuales Estándar de la UE y la certificación bajo el Marco de Privacidad de Datos UE-EE. UU.\n• Limitar el acceso a datos por entidades de EE. UU. al mínimo absoluto necesario para la operación técnica.\n• En caso de solicitudes gubernamentales, proceder de acuerdo con las pautas internas de transparencia y proteger los intereses de SafeMentor.\n\n**Detalles técnicos sobre OVHcloud:**\n• Forma jurídica: OVH SAS (Francia)\n• Centros de datos: Francia (principal)\n• Certificaciones: ISO 27001, SOC 2 Tipo II\n• Residencia de datos: Todos los datos permanecen en centros de datos de la UE\n• Prohibición de entrenamiento: NO se utilizan datos de clientes para el entrenamiento de modelos\n• Retención: Las solicitudes se eliminan inmediatamente después del procesamiento"
       },
       "4b": {
         "title": "4b. Sin Transferencias a Terceros Países",
@@ -1075,11 +1074,6 @@
               "Art. 6 (1) (f) RGPD (Protección infantil)"
             ],
             [
-              "Tendencias Emocionales (agregadas)",
-              "30 días",
-              "Art. 6 (1) (f) RGPD"
-            ],
-            [
               "Protocolos Completos de Chat",
               "Nunca almacenados en el servidor",
               "Privacidad por Diseño"
@@ -1101,12 +1095,8 @@
         "intro": "SafeMentor utiliza procesamiento automatizado basado en IA en las siguientes áreas:",
         "items": [
           {
-            "title": "CLASIFICACIÓN DE INTENCIÓN (Nano-Router):",
-            "content": "• Propósito: Asignación automática de la solicitud al modelo de IA correspondiente\n• Lógica: Clasificador de Aprendizaje Automático (emoción, complejidad, seguridad)\n• Consecuencia legal: Sin efectos desventajosos para el niño"
-          },
-          {
-            "title": "RECONOCIMIENTO DE EMOCIONES:",
-            "content": "• Propósito: Reconocimiento de tendencias emocionales durante varios días\n• Lógica: Análisis de sentimiento basado en modelos de PNL\n• Consecuencia legal: Informar a los padres en caso de una tendencia negativa continua\n• Derecho a oponerse: Los padres pueden desactivar los informes emocionales (configuración)"
+            "title": "CLASIFICACIÓN DE INTENCIÓN:",
+            "content": "• Propósito: Asignación de la solicitud a diferentes niveles de seguridad y, por tanto, a las respuestas correspondientes del modelo de IA\n• Lógica: Modelo de IA con los prompts correspondientes\n• Consecuencia legal: Sin efectos perjudiciales para el niño"
           },
           {
             "title": "RECONOCIMIENTO DE BANDERA AMARILLA/ROJA:",
@@ -1129,18 +1119,18 @@
       },
       "13": {
         "title": "13. Evaluación de Impacto de Protección de Datos (EIPD)",
-        "intro": "SafeMentor realizó una Evaluación de Impacto de Protección de Datos (EIPD) en febrero de 2026 de acuerdo con el Art. 35 RGPD para evaluar los riesgos para los derechos y libertades de los niños.\n\n**Razón de la obligación de EIPD:** El procesamiento incluye:\n• Monitoreo sistemático (Monitoreo de Bandera Roja)\n• Procesamiento de datos sensibles de niños (menores de 16 años)\n• Toma de decisiones automatizada (análisis de emociones, enrutamiento de intenciones)\n\n**Resultado de la EIPD:** Los riesgos identificados (por ejemplo, reidentificación, efectos psicológicos, acceso no autorizado) se redujeron a un nivel aceptable a través de las siguientes medidas:",
+        "intro": "SafeMentor realizará, cuando sea necesario, una Evaluación de Impacto de Protección de Datos (EIPD) de acuerdo con el Art. 35 RGPD tras la finalización de la fase piloto, para evaluar los riesgos para los derechos y libertades de los niños.\n\n**Razón de la obligación de EIPD:** El procesamiento incluye:\n• Monitoreo sistemático (Monitoreo de Bandera Roja)\n• Procesamiento de datos sensibles de niños (menores de 16 años)\n• Toma de decisiones automatizada (enrutamiento de intenciones, clasificación de seguridad)",
         "items": [
           {
-            "title": "MEDIDAS DE PROTECCIÓN TÉCNICAS:",
+            "title": "MEDIDAS DE PROTECCIÓN TÉCNICAS YA IMPLEMENTADAS:",
             "content": "• Arquitectura de Privacidad desde el Diseño (almacenamiento local de textos completos)\n• Cifrado AES-256 de todos los datos sensibles\n• Seudonimización antes de la transmisión a proveedores de IA\n• Cifrado de extremo a extremo (TLS 1.3)\n• Eliminación automática después de 7/30 días"
           },
           {
-            "title": "MEDIDAS DE PROTECCIÓN ORGANIZATIVAS:",
+            "title": "MEDIDAS DE PROTECCIÓN ORGANIZATIVAS YA IMPLEMENTADAS:",
             "content": "• Control de acceso estricto (autenticación multifactor)\n• Auditorías de seguridad regulares (cada 6 meses)\n• Formación de todos los empleados sobre protección infantil y RGPD\n• Plan de emergencia para violaciones de datos"
           }
         ],
-        "content": "El resumen completo de la EIPD puede solicitarse en privacy@safementor.app.\n\nPróxima revisión: enero de 2027"
+        "content": "Una vez realizada una EIPD, su resumen podrá solicitarse en privacy@safementor.app."
       }
     }
   },
