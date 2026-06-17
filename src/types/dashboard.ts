@@ -14,7 +14,6 @@ export interface Child {
     medical_has_allergies: boolean;
     medical_has_mental_disorders: boolean;
     medical_has_physical_disorders: boolean;
-    // date_birth: string | null;
     birth_month: number | null;
     birth_year: number | null;
     language: string | null;

@@ -79,8 +79,6 @@ export default function DashboardClient({ user }: DashboardClientProps) {
                     {activeSection === 'overview' && (
                         <Overview
                             children={children as any}
-                            alerts={[]} // Alerts migration can follow
-                            onNavigate={(view) => setActiveSection(view as any)}
                         />
                     )}
 

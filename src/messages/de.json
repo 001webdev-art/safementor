@@ -43,7 +43,7 @@
       },
       "s3": {
         "title": "§ 3 Leistungsumfang und pädagogische Integrität",
-        "content": "1. SafeMentor stellt eine KI-Schnittstelle zur Verfügung, die Kinder bei Lern- und Freizeitprojekten unterstützt.\n2. SafeMentor dient der Lernunterstützung, nicht der Erstellung schlüsselfertiger Hausaufgaben oder Prüfungsleistungen. Die Verantwortung für die Einhaltung schulischer Integritätsregeln liegt ausschließlich beim Nutzer.\n3. Ein Anspruch auf die Nutzung spezifischer KI-Modelle besteht nicht."
+        "content": "1. SafeMentor stellt eine KI-Schnittstelle zur Verfügung, die Kinder bei Lern- und Freizeitprojekten unterstützt.\n2. SafeMentor dient der Lernunterstützung, nicht der Erstellung schlüsselfertiger Hausaufgaben oder Prüfungsleistungen. Die KI führt das Kind durch Rückfragen und Hinweise zur eigenständigen Lösung, statt fertige Ergebnisse zu liefern. Die Verantwortung für die Einhaltung schulischer Integritätsregeln liegt ausschließlich beim Nutzer.\n3. Ein Anspruch auf die Nutzung spezifischer KI-Modelle besteht nicht."
       },
       "s4": {
         "title": "§ 4 Verfügbarkeit und Wartung",
@@ -51,7 +51,7 @@
       },
       "s5": {
         "title": "§ 5 Sicherheits-Monitoring & Intent-Routing",
-        "content": "1. SafeMentor analysiert Chats automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing). Bei Erkennung erfolgt eine Benachrichtigung an die Eltern.\n2. SafeMentor übernimmt keine Gewähr für die lückenlose Erkennung aller Gefahren. Die Kommunikation von Kindern kann sich außerhalb der technischen Erkennungsmöglichkeiten bewegen.\n3. Das System wertet emotionale Trends aus. Bei anhaltend negativer Stimmung über mehr als zwei Tage werden Eltern über das grobe Thema und die vorherrschende Emotion informiert."
+        "content": "1. SafeMentor analysiert Chats automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing, Selbstgefährdung, Gewalt). Bei Erkennung erfolgt eine Benachrichtigung an die Eltern, abgestuft nach Schweregrad (Gelb- und Rotmeldungen).\n2. SafeMentor übernimmt keine Gewähr für die lückenlose Erkennung aller Gefahren. Die Kommunikation von Kindern kann sich außerhalb der technischen Erkennungsmöglichkeiten bewegen."
       },
       "s6": {
         "title": "§ 6 Pflichten der Eltern (Aufsichtspflicht)",
@@ -135,8 +135,7 @@
       "parents": {
         "title": "Eltern können sehen",
         "list": [
-          "Risikowarnungen & Kontext",
-          "Emotionale Trends"
+          "Risikowarnungen & Kontext"
         ]
       }
     },
@@ -531,11 +530,11 @@
         "7d": "Letzte 7 Tage",
         "30d": "Letzte 30 Tage"
       },
-      "trendTitle": "Zusammenfassung der emotionalen Trends",
-      "patterns": "Aggregated emotional patterns over time",
+      "trendTitle": "Zusammenfassung der Sicherheitslage",
+      "patterns": "Übersicht erkannter Auffälligkeiten im Zeitverlauf",
       "legend": {
-        "positive": "Positiv",
-        "neutral": "Neutral",
+        "positive": "Unauffällig",
+        "neutral": "Beobachtung",
         "needsSupport": "Benötigt Unterstützung"
       },
       "disclaimer": {
@@ -544,7 +543,7 @@
       },
       "privacy": {
         "title": "Datenschutz aktiv",
-        "desc": "Es werden nur aggregierte emotionale Trends angezeigt. Einzelne Nachrichten bleiben privat, um den vertraulichen Raum Ihres Kindes zu schützen. Sicherheitswarnungen werden separat angezeigt, wenn die KI besorgniserregende Muster erkennt."
+        "desc": "Einzelne Nachrichten bleiben privat, um den vertraulichen Raum Ihres Kindes zu schützen. Sicherheitswarnungen werden separat angezeigt, wenn die KI besorgniserregende Muster erkennt."
       }
     },
     "children_new": {
@@ -589,7 +588,7 @@
       "noActiveAlerts": "Derzeit keine aktiven Warnungen",
       "disclaimer": {
         "title": "⚠️ Wichtig:",
-        "text": "SafeMentor **ist kein** menschlicher Experte und **kann Fehler machen**. Bitte kontaktieren Sie bei Hilfe **immer zuerst einen menschlichen Experten**."
+        "text": "SafeMentor ist KEIN menschlicher Experte und kann Fehler machen. Bitte kontaktieren Sie bei Hilfe IMMER zuerst einen menschlichen Experten."
       },
       "support": {
         "title": "Möchten Sie sprechen? Finden Sie jetzt Unterstützung",
@@ -654,10 +653,10 @@
       },
       {
         "category": "KI-Inference",
-        "provider": "Nebius AI B.V.",
-        "location": "EU (Amsterdam / Helsinki)",
+        "provider": "OVHcloud (OVH SAS)",
+        "location": "EU (Frankreich)",
         "purpose": "Generierung von KI-Antworten",
-        "contact": "Schiphol Boulevard 165, 1118 BG Schiphol, Niederlande. E-Mail: privacy@nebius.com"
+        "contact": "2 rue Kellermann, 59100 Roubaix, Frankreich. E-Mail: privacy@ovhcloud.com"
       },
       {
         "category": "Hosting Frontend",
@@ -951,15 +950,15 @@
       },
       "3": {
         "title": "3. Besonderheit: KI-Verarbeitung und Intent-Routing",
-        "content": "SafeMentor nutzt verschiedene KI-Modelle, die je nach Anfrage automatisch ausgewählt werden:\n\n• Bevor wir Daten an externe KI-Schnittstellen (derzeit Nebius B.V.) übertragen, werden diese soweit möglich von persönlichen Identifikatoren bereinigt.\n• Jede Eingabe des Kindes wird zunächst durch einen spezialisierten „Nano-Router“ analysiert. Dieser prüft in Echtzeit, ob es sich um eine sachliche Lernfrage, eine emotionale Äußerung oder eine kritische Anfrage (Flag) handelt.\n• Je nach erkanntem Thema wird die Anfrage an das passende Modul weitergeleitet, um eine pädagogisch wertvolle und sichere Antwort zu garantieren.\n• Inhalte werden automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing) geprüft. Bei akuter Gefahr erfolgt eine Meldung an das Eltern-Dashboard und ggf. auch per E-Mail oder SMS.\n\n**Sicherheits-Monitoring & Eltern-Dashboard bereit:**\n\n• Unser System analysiert die emotionale Grundstimmung der Interaktionen und zeigt den emotionalen Trend im Dashboard. \n• Wenn ein bestimmtes negatives emotionales Muster erkannt wird, informieren wir die Erziehungsberechtigten über die vorherrschende Emotion und das grobe Themenfeld (z. B. \"Schule\" oder \"Freundschaften\"), um einen pädagogischen Austausch in der Familie zu ermöglichen (yellow flags).\n• Bei der Erkennung von akuten Gefährdungslagen (z. B. Anzeichen von Mobbing, Gewalt oder anderen sicherheitsrelevanten Vorfällen) erfolgt eine sofortige Benachrichtigung der Eltern. In diesen Ausnahmefällen werden den Eltern auch Zusammenfassungen der relevanten Chat-Abschnitte zur Verfügung gestellt, damit diese ihrer Aufsichts- und Schutzpflicht nachkommen können.\n\nDie Rechtsgrundlage für das Yellow-/Red-Flag-Monitoring basiert auf Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse am Schutz von Kindern vor Gefahren)\n\n**Interessenabwägung:**\n• Unser Interesse: Erfüllung von Kinderschutzpflichten (§§ 1631, 1666 BGB)\n• Interesse der Eltern: Wahrnehmung der Aufsichtspflicht\n• Interesse des Kindes: Schutz vor ernsthaften Gefahren (Gewalt, Missbrauch, Suizid)\n\nWICHTIG: Das Red-Flag-System dient ausschließlich dem Schutz vor schwerwiegenden Gefahren. Es wird NICHT für triviale Verhaltensüberwachung genutzt.\nBeispiele für Red Flags: ✓ Konkrete Suizidankündigungen ✓ Hinweise auf Missbrauch ✓ Schwere Gewaltandrohungen ✗ NICHT: Schimpfwörter, normale Streits, schlechte Noten.\n\nFür Jugendliche (ca. 13-15 Jahre) werden Benachrichtigungen zu emotionalen Trends (Yellow Flags) in abstrakterer Form gegeben. Bei Hinweisen auf akute Gefährdungen (Red Flags) erhalten Eltern weiterhin kontextuelle Informationen, um ihrer Schutzpflicht nachkommen zu können. \nBei Kindern ab 14 Jahren: Das Kind wird über die Red-Flag-Funktion altersgerecht informiert. Bei erkannten Gefahren wird zunächst das Kind selbst ermutigt, mit Eltern/Vertrauenspersonen zu sprechen, bevor automatisch informiert wird (außer bei akuter Lebensgefahr)."
+        "content": "SafeMentor nutzt verschiedene KI-Modelle, die je nach Anfrage automatisch ausgewählt werden:\n\n• Bevor wir Daten an externe KI-Schnittstellen (derzeit OVHcloud) übertragen, werden diese soweit möglich von persönlichen Identifikatoren bereinigt.\n• Jede Eingabe des Kindes wird zunächst durch einen spezialisierten Klassifikator analysiert. Dieser prüft in Echtzeit, ob es sich um eine sachliche Lernfrage oder eine sicherheitsrelevante Anfrage handelt.\n• Je nach erkanntem Thema wird die Anfrage an das passende Modul weitergeleitet, um eine pädagogisch wertvolle und sichere Antwort zu garantieren.\n• Inhalte werden automatisiert auf Gefährdungslagen (z. B. Grooming, Mobbing, Selbstgefährdung, Gewalt) geprüft. Bei akuter Gefahr erfolgt eine Meldung an das Eltern-Dashboard und ggf. auch per E-Mail oder SMS.\n\n**Sicherheits-Monitoring & Eltern-Dashboard:**\n\n• Bei der Erkennung von sicherheitsrelevanten Auffälligkeiten geringerer Dringlichkeit (Gelbmeldung) informieren wir die Erziehungsberechtigten über das grobe Themenfeld und den erkannten Anlass, um einen pädagogischen Austausch in der Familie zu ermöglichen.\n• Bei der Erkennung von akuten Gefährdungslagen (Rotmeldung, z. B. Anzeichen von Selbstgefährdung, Missbrauch, Gewalt oder anderen sicherheitsrelevanten Vorfällen) erfolgt eine sofortige Benachrichtigung der Eltern. In diesen Fällen wird den Eltern zusätzlich eine sachliche, nicht wörtliche Zusammenfassung der relevanten Situation zur Verfügung gestellt, damit diese ihrer Aufsichts- und Schutzpflicht nachkommen können.\n\nDie Rechtsgrundlage für das Gelb-/Rotmeldungs-Monitoring basiert auf Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse am Schutz von Kindern vor Gefahren)\n\n**Interessenabwägung:**\n• Unser Interesse: Erfüllung von Kinderschutzpflichten (§§ 1631, 1666 BGB)\n• Interesse der Eltern: Wahrnehmung der Aufsichtspflicht\n• Interesse des Kindes: Schutz vor ernsthaften Gefahren (Gewalt, Missbrauch, Suizid)\n\nWICHTIG: Das Rotmeldungs-System dient ausschließlich dem Schutz vor schwerwiegenden Gefahren. Es wird NICHT für triviale Verhaltensüberwachung genutzt.\nBeispiele für Rotmeldungen: ✓ Konkrete Suizidankündigungen ✓ Hinweise auf Missbrauch ✓ Schwere Gewaltandrohungen ✗ NICHT: Schimpfwörter, normale Streits, schlechte Noten.\n\nBei Kindern ab 14 Jahren: Das Kind wird über die Sicherheits-Monitoring-Funktion altersgerecht informiert. Bei erkannten Gefahren wird zunächst das Kind selbst ermutigt, mit Eltern/Vertrauenspersonen zu sprechen, bevor automatisch informiert wird (außer bei akuter Lebensgefahr)."
       },
       "3a": {
         "title": "3a. KI-Modelle und Anbieter",
-        "content": "STANDARD-ANFRAGEN: \n• Modell: Nebius AI \n• Standort: Amsterdam/Helsinki, EU\n• Einsatz: Allgemeine Lernfragen, einfache Aufgaben \n\nKOMPLEXE AUFGABEN: \n• Modell: Nebius AI High-Reasoning \n• Standort: EU-Server \n• Einsatz: Mathematische Probleme, komplexe Erklärungen, sehr emotionale Themen oder als Flags gekennzeichnete Anfragen.  \n\nSICHERHEITSKRITISCH: \n• Dual-Check: Zwei unabhängige Nebius-Modelle prüfen parallel \n• Zweck: Einhaltung von sicheren Antworten bei Erkennung von Red Flags\n\nAlle KI-Modelle werden auf Kindersicherheit geprüft und unterliegen strengen DSGVO-Vorgaben (Auftragsverarbeitungsvertrag nach Art. 28 DSGVO). \nWICHTIG: Die Verarbeitung erfolgt ausschließlich auf EU-Servern. Es werden keine Trainingsdaten aus Kinder-Chats erstellt."
+        "content": "STANDARD-ANFRAGEN:\n• Anbieter: OVHcloud\n• Standort: EU (Frankreich)\n• Einsatz: Allgemeine Lernfragen, einfache Aufgaben\n\nKOMPLEXE AUFGABEN:\n• Anbieter: OVHcloud, erweiterte Kontextverarbeitung\n• Standort: EU-Server\n• Einsatz: Mathematische Probleme, komplexe Erklärungen, als sicherheitsrelevant gekennzeichnete Anfragen\n\nSICHERHEITSKRITISCH:\n• Dual-Check: Zwei unabhängige Klassifikatoren prüfen parallel\n• Zweck: Einhaltung von sicheren Antworten bei Erkennung von Gefährdungslagen\n\nDie eingesetzten KI-Modelle werden auf Kindersicherheit geprüft und unterliegen strengen DSGVO-Vorgaben (Auftragsverarbeitungsvertrag nach Art. 28 DSGVO). Der konkrete Anbieter kann sich im Rahmen technischer Weiterentwicklung ändern; eine aktuelle Übersicht findet sich stets in der Liste unserer Unterauftragsverarbeiter.\nWICHTIG: Die Verarbeitung erfolgt ausschließlich auf EU-Servern. Es werden keine Trainingsdaten aus Kinder-Chats erstellt."
       },
       "3b": {
         "title": "3b. Speicherarchitektur und Datenlokation",
-        "content": "SafeMentor verwendet ein hybrides Speichermodell zum Schutz der Privatsphäre: \n\n**LOKALE SPEICHERUNG (auf dem Gerät des Kindes):** \n• Vollständige Chat-Verläufe: AES-256-verschlüsselt, nur auf dem Gerät und nur während der Sitzung. \n• Chat-Summaries: Werden nach Abschluss der Sitzung erstellt und nach 7 Tagen automatisch gelöscht \n• Project Memory: Lokale Datenbank für Projektfortschritte (z.B. Code-Snippets, Details über ein Projekt). Projektspeicher werden nach 30 Tagen Inaktivität gelöscht. \n\n**SERVERSEITIGE SPEICHERUNG (verschlüsselt in EU-Rechenzentren):** \n• Eltern-Dashboard-Daten: Emotionstrends (aggregiert, keine Volltexte), max. 30 Tage. \n• Yellow / Red-Flag-Summaries: Kontextzusammenfassungen (max. 30 Tage)\n• Account-Daten: Registrierungsinformationen, Zahlungsdaten\n\nWICHTIG: Vollständige Chat-Protokolle verlassen niemals das Gerät des Kindes. Nur pseudonymisierte Anfragen werden zur KI-Verarbeitung an Server übermittelt. Bei Geräteverlust sind lokale Daten sind durch Geräte-PIN/Biometrie geschützt. Eine Remote-Löschung über das Eltern-Dashboard ist möglich."
+        "content": "SafeMentor verwendet ein hybrides Speichermodell zum Schutz der Privatsphäre:\n\n**LOKALE SPEICHERUNG (auf dem Gerät des Kindes):**\n• Vollständige Chat-Verläufe: AES-256-verschlüsselt, nur auf dem Gerät und nur während der Sitzung.\n• Chat-Summaries: Werden nach Abschluss der Sitzung erstellt und nach 7 Tagen automatisch gelöscht\n• Project Memory: Lokale Datenbank für Projektfortschritte (z.B. Code-Snippets, Details über ein Projekt). Projektspeicher werden nach 30 Tagen Inaktivität gelöscht.\n\n**SERVERSEITIGE SPEICHERUNG (verschlüsselt in EU-Rechenzentren):**\n• Gelb- und Rotmeldungs-Zusammenfassungen: Kontextzusammenfassungen für das Eltern-Dashboard (max. 30 Tage)\n• Account-Daten: Registrierungsinformationen, Zahlungsdaten\n\nWICHTIG: Vollständige Chat-Protokolle verlassen niemals das Gerät des Kindes. Nur pseudonymisierte Anfragen werden zur KI-Verarbeitung an Server übermittelt. Bei Geräteverlust sind lokale Daten durch Geräte-PIN/Biometrie geschützt. Eine Remote-Löschung über das Eltern-Dashboard ist möglich."
       },
       "4": {
         "title": "4. Weitergabe an Dritte und EU-Datenverarbeitung",
@@ -986,8 +985,8 @@
             ],
             [
               "KI-Inference und Reasoning",
-              "Nebius AI B.V.",
-              "EU (Amsterdam / Helsinki)",
+              "OVHcloud",
+              "EU (Frankreich)",
               "KI Antworten generieren",
               "AVV nach Art. 28 DSGVO"
             ],
@@ -1021,7 +1020,7 @@
             ]
           ]
         },
-        "content": "Obwohl Vercel Inc. seinen Hauptsitz in San Francisco (USA) hat, erfolgt die Datenverarbeitung für SafeMentor ausschließlich auf Servern in Frankfurt, Deutschland. Vercel hat sich vertraglich verpflichtet:\n• Daten nicht außerhalb der EU zu übertragen\n• Keinen Zugriff von US-Mitarbeitern auf EU-Server-Daten zu gewederte\n• Bei behördlichen Anfragen SafeMentor unverzüglich zu informieren. \nZusätzlicher Schutz: Alle sensiblen Daten (Chat-Inhalte, Emotionstrends) werden vor der Speicherung auf Vercel-Servern Ende-zu-Ende-verschlüsselt, sodass Vercel selbst keinen Zugriff auf Klartext-Daten hat.\n\nAuch die Twilio Inc. hat ihren Hauptsitz in den USA, SafeMentor nutzt aber für die Eltern-Authentifizierung die europäische Infrastruktur von Twilio in der Region Irland (IE1). Damit wird sichergestellt, dass die primäre Verarbeitung und Speicherung der Authentifizierungsdaten (wie Mobilfunknummern und Verifizierungscodes) innerhalb des EWR erfolgt.\nTwilio hat sich durch ein Data Processing Addendum (DPA) sowie ergänzende technische Maßnahmen dazu verpflichtet:\n• Die Speicherung und Verarbeitung personenbezogener Daten vorrangig auf Servern innerhalb der EU durchzuführen.\n• Ein angemessenes Datenschutzniveau durch die Anwendung von EU-Standardvertragsklauseln und die Zertifizierung unter dem EU-U.S. Data Privacy Framework zu gewährleisten.\n• Den Zugriff auf Daten durch US-Einheiten auf das für den technischen Betrieb absolut notwendige Minimum zu beschränken.\n• Im Falle von Behördenanfragen gemäß den internen Richtlinien zur Transparenz zu verfahren und die Interessen von SafeMentor zu wahren.\n\n**Technische Details zu Nebius AI :** \n• Unternehmensform: Nebius AI B.V. (Niederlande) \n• Rechenzentren: Amsterdam (primär), Helsinki (Backup) \n• Zertifizierungen: ISO 27001, SOC 2 Type II \n• Datenresidenz: Alle Daten bleiben in EU-Rechenzentren \n• Trainingsverbot: Nebius nutzt KEINE Kundendaten für Modelltraining \n• Aufbewahrung: Anfragen werden nach Verarbeitung sofort gelöscht"
+        "content": "Obwohl Vercel Inc. seinen Hauptsitz in San Francisco (USA) hat, erfolgt die Datenverarbeitung für SafeMentor ausschließlich auf Servern in Frankfurt, Deutschland. Vercel hat sich vertraglich verpflichtet:\n• Daten nicht außerhalb der EU zu übertragen\n• Keinen Zugriff von US-Mitarbeitern auf EU-Server-Daten zu gewähren\n• Bei behördlichen Anfragen SafeMentor unverzüglich zu informieren.\nZusätzlicher Schutz: Alle sensiblen Daten (Chat-Inhalte) werden vor der Speicherung auf Vercel-Servern Ende-zu-Ende-verschlüsselt, sodass Vercel selbst keinen Zugriff auf Klartext-Daten hat.\n\nAuch die Twilio Inc. hat ihren Hauptsitz in den USA, SafeMentor nutzt aber für die Eltern-Authentifizierung die europäische Infrastruktur von Twilio in der Region Irland (IE1). Damit wird sichergestellt, dass die primäre Verarbeitung und Speicherung der Authentifizierungsdaten (wie Mobilfunknummern und Verifizierungscodes) innerhalb des EWR erfolgt.\nTwilio hat sich durch ein Data Processing Addendum (DPA) sowie ergänzende technische Maßnahmen dazu verpflichtet:\n• Die Speicherung und Verarbeitung personenbezogener Daten vorrangig auf Servern innerhalb der EU durchzuführen.\n• Ein angemessenes Datenschutzniveau durch die Anwendung von EU-Standardvertragsklauseln und die Zertifizierung unter dem EU-U.S. Data Privacy Framework zu gewährleisten.\n• Den Zugriff auf Daten durch US-Einheiten auf das für den technischen Betrieb absolut notwendige Minimum zu beschränken.\n• Im Falle von Behördenanfragen gemäß den internen Richtlinien zur Transparenz zu verfahren und die Interessen von SafeMentor zu wahren.\n\n**Technische Details zu OVHcloud:**\n• Unternehmensform: OVH SAS (Frankreich)\n• Rechenzentren: Frankreich (primär)\n• Zertifizierungen: ISO 27001, SOC 2 Type II\n• Datenresidenz: Alle Daten bleiben in EU-Rechenzentren\n• Trainingsverbot: Es werden KEINE Kundendaten für Modelltraining genutzt\n• Aufbewahrung: Anfragen werden nach Verarbeitung sofort gelöscht"
       },
       "4b": {
         "title": "4b. Keine Drittstaatentransfers",
@@ -1069,14 +1068,9 @@
               "Art. 6 Abs. 1 lit. b DSGVO"
             ],
             [
-              "Yellow-/Red-Flag-Summaries",
+              "Gelb-/Rotmeldungs-Zusammenfassungen",
               "30 Tage (automatische Löschung)",
               "Art. 6 Abs. 1 lit. f DSGVO (Kinderschutz)"
-            ],
-            [
-              "Emotionstrends (aggregiert)",
-              "30 Tage",
-              "Art. 6 Abs. 1 lit. f DSGVO"
             ],
             [
               "Vollständige Chat-Protokolle",
@@ -1085,7 +1079,7 @@
             ]
           ]
         },
-        "content": "WICHTIG: Red-Flag-Summaries werden auch dann nach 30 Tagen gelöscht, wenn die Gefährdungslage fortbesteht. Dies dient dem Schutz der Privatsphäre des Kindes. Bei anhaltenden Sorgen empfehlen wir professionelle Unterstützung (z.B. Familien- beratung) statt technischer Dauerüberwachung.\n\n**Account-Löschung:** Bei Kündigung werden alle personenbezogenen Daten (außer steuerrechtlich relevante Dokumente) innerhalb von 30 Tagen vollständig gelöscht."
+        "content": "WICHTIG: Rotmeldungs-Zusammenfassungen werden auch dann nach 30 Tagen gelöscht, wenn die Gefährdungslage fortbesteht. Dies dient dem Schutz der Privatsphäre des Kindes. Bei anhaltenden Sorgen empfehlen wir professionelle Unterstützung (z.B. Familienberatung) statt technischer Dauerüberwachung.\n\n**Account-Löschung:** Bei Kündigung werden alle personenbezogenen Daten (außer steuerrechtlich relevante Dokumente) innerhalb von 30 Tagen vollständig gelöscht."
       },
       "7": {
         "title": "7. Ihre Rechte (Betroffenenrechte)",
@@ -1100,16 +1094,12 @@
         "intro": "SafeMentor nutzt KI-gestützte automatisierte Verarbeitung in folgenden Bereichen:",
         "items": [
           {
-            "title": "INTENT-KLASSIFIKATION (Nano-Router):",
-            "content": "• Zweck: Automatische Zuordnung der Anfrage zum passenden KI-Modell\n• Logik: Machine-Learning-Klassifikator (Emotion, Komplexität, Sicherheit)\n• Rechtsfolge: Keine nachteiligen Wirkungen für das Kind"
+            "title": "INTENT-KLASSIFIKATION:",
+            "content": "• Zweck: Zuordnung der Anfrage zu verschiedenen Sicherheitsstufen und damit zu den entsprechenden Antworten des KI-Modells\n• Logik: KI-Modell mit entsprechenden Prompts\n• Rechtsfolge: Keine nachteiligen Wirkungen für das Kind"
           },
           {
-            "title": "EMOTIONS-ERKENNUNG:",
-            "content": "• Zweck: Erkennung emotionaler Trends über mehrere Tage\n• Logik: Sentiment-Analyse auf Basis von NLP-Modellen\n• Rechtsfolge: Informierung der Eltern bei anhaltendem Negativtrend\n• Widerspruchsrecht: Eltern können Emotions-Reporting deaktivieren (Einstellungen)"
-          },
-          {
-            "title": "YELLOW-/RED-FLAG-ERKENNUNG:",
-            "content": "• Zweck: Schutz vor Gefahren (Gewalt, Missbrauch, Suizid)\n• Logik: Regelbasiertes System + KI-Klassifikator (Dual-Check bei kritischen fällen)\n• Rechtsfolge: Sofortige Elternbenachrichtigung\n• WICHTIG: Dies ist KEINE voll automatisierte Entscheidung im Sinne von Art. 22 DSGVO, da die finale Entscheidung über Schutzmaßnahmen bei den Eltern liegt."
+            "title": "GELB-/ROTMELDUNGS-ERKENNUNG:",
+            "content": "• Zweck: Schutz vor Gefahren (Gewalt, Missbrauch, Suizid)\n• Logik: Regelbasiertes System + KI-Klassifikator (Dual-Check bei kritischen Fällen)\n• Rechtsfolge: Sofortige Elternbenachrichtigung bei Rotmeldungen\n• WICHTIG: Dies ist KEINE voll automatisierte Entscheidung im Sinne von Art. 22 DSGVO, da die finale Entscheidung über Schutzmaßnahmen bei den Eltern liegt."
           }
         ],
         "content": "Sie haben das Recht, gegen diese Verarbeitungen Widerspruch einzulegen (Art. 21 DSGVO)."
@@ -1128,18 +1118,18 @@
       },
       "13": {
         "title": "13. Datenschutz-Folgenabschätzung (DPIA)",
-        "intro": "SafeMentor hat im Februar 2026 eine Datenschutz-Folgenabschätzung (DPIA) gemäß Art. 35 DSGVO durchgeführt, um die Risiken für die Rechte und Freiheiten der Kinder zu bewerten.\n\n**Grund für die DPIA-Pflicht:** Die Verarbeitung umfasst:\n• Systematische Überwachung (Red-Flag-Monitoring)\n• Verarbeitung sensibler Daten von Kindern (unter 16 Jahren)\n• Automatisierte Entscheidungsfindung (Emotionsanalyse, Intent-Routing)\n\n**Ergebnis der DPIA:** Die identifizierten Risiken (z.B. Reidentifizierung, psychologische Effekte, unbefugter Zugriff) wurden durch folgende Maßnahmen auf ein akzeptables Niveau reduziert:",
+        "intro": "SafeMentor wird bei entsprechender Notwendigkeit nach Abschluss der Pilotphase eine Datenschutz-Folgenabschätzung (DPIA) gemäß Art. 35 DSGVO durchführen, um Risiken für die Rechte und Freiheiten von Kindern zu bewerten.\n\n**Grund für die DPIA-Pflicht:** Die Verarbeitung umfasst:\n• Systematische Überwachung (Rotmeldungs-Monitoring)\n• Verarbeitung sensibler Daten von Kindern (unter 16 Jahren)\n• Automatisierte Entscheidungsfindung (Intent-Routing, Sicherheitsklassifikation)",
         "items": [
           {
-            "title": "TECHNISCHE SCHUTZMASSNAHMEN:",
+            "title": "BEREITS UMGESETZTE TECHNISCHE SCHUTZMASSNAHMEN:",
             "content": "• Privacy by Design Architektur (lokale Speicherung von Volltexten)\n• AES-256-Verschlüsselung aller sensiblen Daten\n• Pseudonymisierung vor Übertragung an KI-Provider\n• Ende-zu-Ende-Verschlüsselung (TLS 1.3)\n• Automatische Löschung nach 7/30 Tagen"
           },
           {
-            "title": "ORGANISATORISCHE SCHUTZMASSNAHMEN:",
+            "title": "BEREITS UMGESETZTE ORGANISATORISCHE SCHUTZMASSNAHMEN:",
             "content": "• Strenge Zugriffskontrolle (Multi-Faktor-Authentifizierung)\n• Regelmäßige Sicherheitsaudits (alle 6 Monate)\n• Schulung aller Mitarbeiter zu Kinderschutz & DSGVO\n• Notfallplan bei Datenpannen"
           }
         ],
-        "content": "Die vollständige DPIA-Zusammenfassung kann unter privacy@safementor.app angefordert werden.\n\nNächste Überprüfung: Januar 2027"
+        "content": "Sobald eine DPIA durchgeführt wurde, kann deren Zusammenfassung unter privacy@safementor.app angefordert werden."
       }
     }
   },

@@ -30,8 +30,8 @@ export function ChildrenData({
         const newChild: Child = {
             id,
             parent_id: '',
+            childrenname: '',
             nickname: t('newChild'),
-            childrenname: t('newChild'),
             age: null,
             gender: null,
             email: null,
@@ -70,13 +70,9 @@ export function ChildrenData({
             if (onUpsertChild) {
                 const draft = drafts[id] || {};
                 const finalChild = { ...originalChild, ...draft };
-
-                // Ensure childrenname is provided because it's NOT NULL in DB
-                // If it's a new or updated child, we sync childrenname with nickname if needed
                 const payload = {
                     ...finalChild,
-                    id,
-                    childrenname: finalChild.nickname || finalChild.childrenname || 'Unnamed'
+                    id
                 };
 
                 await onUpsertChild(payload);

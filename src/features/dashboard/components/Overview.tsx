@@ -2,27 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import { Card, CardBody, CardHeader, Select, SelectItem } from '@nextui-org/react';
-import { Clock, CheckCircle, AlertTriangle, Info, Loader2, Lock, ShieldAlert } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { Child, SafetyAlert, EmotionTrend, DashboardService } from '@/types/dashboard';
+import { Clock, CheckCircle, AlertTriangle, Info, Lock, ShieldAlert } from 'lucide-react';
+import { Child } from '@/types/dashboard';
 import { useTranslations } from 'next-intl';
 import { createClient } from '@/lib/supabase/client';
 import { Button } from '@nextui-org/react';
 
 interface OverviewProps {
     children: Child[];
-    alerts: SafetyAlert[];
-    onNavigate: (view: string) => void;
 }
 
-export function Overview({ children, alerts, onNavigate }: OverviewProps) {
+export function Overview({ children }: OverviewProps) {
     const t = useTranslations('Dashboard.overview_new');
     const [selectedChild, setSelectedChild] = useState<string>(children[0]?.id || '');
     const [timeRange, setTimeRange] = useState<'7d' | '30d'>('7d');
-    const [trends, setTrends] = useState<EmotionTrend[]>([]);
-    const [isLoading, setIsLoading] = useState(false);
     const [riskAlerts, setRiskAlerts] = useState<any[]>([]);
-    const [isLoadingRisks, setIsLoadingRisks] = useState(true);
+    const [warnings, setWarnings] = useState<any[]>([]);
+    const [isLoadingWarnings, setIsLoadingWarnings] = useState(false);
 
     const supabase = createClient();
 
@@ -45,14 +41,37 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
             setRiskAlerts(data || []);
         } catch (err) {
             console.error('Error fetching risks:', err);
-        } finally {
-            setIsLoadingRisks(false);
         }
     };
 
     useEffect(() => {
         fetchRisks();
     }, []);
+
+    const fetchWarnings = async () => {
+        if (!selectedChild) return;
+        setIsLoadingWarnings(true);
+        try {
+            const days = timeRange === '7d' ? 7 : 30;
+            const since = new Date();
+            since.setDate(since.getDate() - days);
+
+            const { data, error } = await supabase
+                .from('chat_messages')
+                .select('id, created_at, user_intent_summary, user_intent_flag, content')
+                .eq('child_id', selectedChild)
+                .gt('created_at', since.toISOString())
+                .in('user_intent_flag', ['yellow', 'red'])
+                .order('created_at', { ascending: false });
+
+            if (error) throw error;
+            setWarnings(data || []);
+        } catch (err) {
+            console.error('Error fetching warnings:', err);
+        } finally {
+            setIsLoadingWarnings(false);
+        }
+    };
 
     const handleAcknowledge = async (messageId: string) => {
         try {
@@ -71,14 +90,7 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
     };
 
     useEffect(() => {
-        if (selectedChild) {
-            setIsLoading(true);
-            DashboardService.getEmotionTrends(selectedChild, timeRange === '7d' ? 7 : 30)
-                .then(data => {
-                    setTrends(data);
-                    setIsLoading(false);
-                });
-        }
+        fetchWarnings();
     }, [selectedChild, timeRange]);
 
     return (
@@ -184,8 +196,8 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                 className="max-w-md"
             >
                 {children.map(child => (
-                    <SelectItem key={child.id} textValue={child.nickname ?? child.childrenname ?? 'Child'}>
-                        {child.nickname ?? child.childrenname ?? 'Child'}
+                    <SelectItem key={child.id} textValue={child.nickname ?? 'Child'}>
+                        {child.nickname ?? 'Child'}
                     </SelectItem>
                 ))}
             </Select>
@@ -212,54 +224,74 @@ export function Overview({ children, alerts, onNavigate }: OverviewProps) {
                 </button>
             </div>
 
-            {/* 4. Emotional Trend Summary Chart */}
+            {/* 4. Warnings List */}
             <Card className="border border-gray-200 shadow-sm">
-                <CardHeader className="flex justify-between items-center">
-                    <h2 className="text-lg font-bold text-gray-900">{t('trendTitle')}</h2>
-                    <div className="flex gap-4">
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                            <span className="text-xs text-gray-500">{t('legend.positive')}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full bg-gray-300"></div>
-                            <span className="text-xs text-gray-500">{t('legend.neutral')}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                            <span className="text-xs text-gray-500">{t('legend.needsSupport')}</span>
-                        </div>
-                    </div>
+                <CardHeader>
+                    <h2 className="text-lg font-bold text-gray-900">
+                        {timeRange === '7d' ? 'Warnungen (letzte 7 Tage)' : 'Warnungen (letzte 30 Tage)'}
+                    </h2>
                 </CardHeader>
                 <CardBody>
-                    <p className="text-sm text-gray-600 mb-4">{t('patterns')}</p>
-                    <div className="h-80">
-                        {isLoading ? (
-                            <div className="h-full flex items-center justify-center">
-                                <Loader2 className="w-8 h-8 animate-spin text-[#889A7F]" />
-                            </div>
-                        ) : (
-                            <ResponsiveContainer width="100%" height="100%">
-                                <LineChart data={trends}>
-                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
-                                    <XAxis dataKey="date" axisLine={false} tickLine={false} tick={{ fill: '#6B7280', fontSize: 12 }} />
-                                    <YAxis hide domain={[0, 100]} />
-                                    <Tooltip
-                                        contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                                        cursor={{ stroke: '#9CA3AF', strokeWidth: 1, strokeDasharray: '4 4' }}
-                                    />
-                                    <Line
-                                        type="monotone"
-                                        dataKey="score"
-                                        stroke="#10B981"
-                                        strokeWidth={3}
-                                        dot={{ fill: '#10B981', strokeWidth: 2, r: 4, stroke: '#fff' }}
-                                        activeDot={{ r: 6, strokeWidth: 0 }}
-                                    />
-                                </LineChart>
-                            </ResponsiveContainer>
-                        )}
-                    </div>
+                    {isLoadingWarnings ? (
+                        <div className="flex justify-center py-8">
+                            <div className="text-gray-500">Loading...</div>
+                        </div>
+                    ) : warnings.length === 0 ? (
+                        <div className="text-center py-8 bg-gray-50 rounded-xl border border-dashed border-gray-300">
+                            <p className="text-gray-500 italic">Keine Warnungen in diesem Zeitraum</p>
+                        </div>
+                    ) : (
+                        <div className="space-y-3">
+                            {warnings.map((warning) => (
+                                <div key={warning.id} className={`border rounded-lg p-4 ${
+                                    warning.user_intent_flag === 'red'
+                                        ? 'bg-red-50 border-red-200'
+                                        : 'bg-yellow-50 border-yellow-200'
+                                }`}>
+                                    <div className="flex gap-3">
+                                        <div className={`flex-shrink-0 mt-1 ${
+                                            warning.user_intent_flag === 'red'
+                                                ? 'bg-red-100 p-2 rounded-full'
+                                                : 'bg-yellow-100 p-2 rounded-full'
+                                        }`}>
+                                            <AlertTriangle className={`w-4 h-4 ${
+                                                warning.user_intent_flag === 'red'
+                                                    ? 'text-red-600'
+                                                    : 'text-yellow-600'
+                                            }`} />
+                                        </div>
+                                        <div className="flex-1">
+                                            <div className="flex justify-between items-start gap-2">
+                                                <div>
+                                                    <p className={`font-semibold mb-1 ${
+                                                        warning.user_intent_flag === 'red'
+                                                            ? 'text-red-900'
+                                                            : 'text-yellow-900'
+                                                    }`}>
+                                                        {warning.user_intent_summary || 'Warnung'}
+                                                    </p>
+                                                    <p className={`text-sm mb-2 ${
+                                                        warning.user_intent_flag === 'red'
+                                                            ? 'text-red-800'
+                                                            : 'text-yellow-800'
+                                                    }`}>
+                                                        {warning.content}
+                                                    </p>
+                                                    <p className={`text-xs ${
+                                                        warning.user_intent_flag === 'red'
+                                                            ? 'text-red-700'
+                                                            : 'text-yellow-700'
+                                                    }`}>
+                                                        {new Date(warning.created_at).toLocaleString('de-DE')}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </CardBody>
             </Card>
 
