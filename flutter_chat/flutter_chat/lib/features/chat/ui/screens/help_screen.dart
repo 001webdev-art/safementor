@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../core/localization/app_strings.dart';
 import '../../../../core/theme/app_theme.dart';
 
+/// Child/youth helpline number dialed by the help screen.
+const String _helplineNumber = '116111';
+
+Future<void> _callHelpline() async {
+  final uri = Uri(scheme: 'tel', path: _helplineNumber);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri);
+  }
+}
+
 class HelpScreen extends StatelessWidget {
-  const HelpScreen({super.key, required this.strings, required this.onBack});
+  const HelpScreen({
+    super.key,
+    required this.strings,
+    required this.onBack,
+    required this.onSignOut,
+  });
 
   final AppStrings strings;
   final VoidCallback onBack;
+  final VoidCallback onSignOut;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +41,7 @@ class HelpScreen extends StatelessWidget {
                   child: ListView(
                     padding: const EdgeInsets.all(18),
                     children: [
-                      _HeroHelpCard(),
+                      _HeroHelpCard(strings: strings),
                       const SizedBox(height: 22),
                       _SectionTitle(
                         icon: Icons.favorite_rounded,
@@ -32,45 +49,68 @@ class HelpScreen extends StatelessWidget {
                         color: Colors.pink,
                       ),
                       _ListCard(
-                        items: const [
-                          'You feel scared or unsafe',
-                          'Someone is hurting you',
-                          'You feel very sad or confused',
-                          "I can't truly understand these feelings, but adults can.",
+                        items: [
+                          strings.helpFeel1,
+                          strings.helpFeel2,
+                          strings.helpFeel3,
+                          strings.helpFeel4,
                         ],
                       ),
                       const SizedBox(height: 22),
-                      const _SectionTitle(
+                      _SectionTitle(
                         icon: Icons.groups_rounded,
-                        title: 'Trusted Adults',
+                        title: strings.helpAdultsTitle,
                         color: AppTheme.primary,
                       ),
                       Wrap(
                         spacing: 8,
                         runSpacing: 8,
                         children:
-                            const ['Parent', 'Teacher', 'Coach', 'Relative']
+                            [
+                                  strings.helpAdultParent,
+                                  strings.helpAdultTeacher,
+                                  strings.helpAdultCoach,
+                                  strings.helpAdultRelative,
+                                ]
                                 .map(
                                   (text) => Chip(
                                     label: Text(text),
                                     backgroundColor: Colors.white,
-                                    side: BorderSide(color: AppTheme.border),
+                                    side: const BorderSide(
+                                      color: AppTheme.border,
+                                    ),
                                   ),
                                 )
                                 .toList(),
                       ),
                       const SizedBox(height: 22),
+                      _SectionTitle(
+                        icon: Icons.phone_in_talk_rounded,
+                        title: strings.helplineSection,
+                        color: AppTheme.primary,
+                      ),
+                      _HelplineBadge(text: strings.helplineBadge),
+                      const SizedBox(height: 12),
+                      Text(
+                        strings.helplineHint,
+                        style: const TextStyle(
+                          color: AppTheme.body,
+                          height: 1.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: _callHelpline,
                         icon: const Icon(Icons.phone_rounded),
-                        label: const Text('Call Kids Helpline: 116 111'),
+                        label: Text(strings.helpCallButton),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Colors.pink,
-                          side: BorderSide(
-                            color: Colors.pink.shade100,
+                          foregroundColor: AppTheme.primaryDark,
+                          side: const BorderSide(
+                            color: AppTheme.primary,
                             width: 2,
                           ),
-                          backgroundColor: Colors.pink.shade50,
+                          backgroundColor: AppTheme.soft,
                           minimumSize: const Size.fromHeight(52),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
@@ -78,12 +118,18 @@ class HelpScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 22),
-                      const _SectionTitle(
+                      _SectionTitle(
                         icon: Icons.auto_awesome_rounded,
-                        title: 'Things to Remember',
+                        title: strings.helpRememberTitle,
                         color: AppTheme.primary,
                       ),
-                      const _ReminderCard(),
+                      _ReminderCard(strings: strings),
+                      const SizedBox(height: 22),
+                      _SwitchChildButton(
+                        label: strings.switchChild,
+                        hint: strings.switchChildHint,
+                        onPressed: onSignOut,
+                      ),
                     ],
                   ),
                 ),
@@ -124,6 +170,10 @@ class _Header extends StatelessWidget {
 }
 
 class _HeroHelpCard extends StatelessWidget {
+  const _HeroHelpCard({required this.strings});
+
+  final AppStrings strings;
+
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
@@ -140,32 +190,32 @@ class _HeroHelpCard extends StatelessWidget {
           ),
         ],
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(20),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               backgroundColor: Colors.white24,
               child: Icon(Icons.mode_comment_outlined, color: Colors.white),
             ),
-            SizedBox(width: 14),
+            const SizedBox(width: 14),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'How I can help',
-                    style: TextStyle(
+                    strings.helpHeroTitle,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
                       fontWeight: FontWeight.w900,
                     ),
                   ),
-                  SizedBox(height: 6),
+                  const SizedBox(height: 6),
                   Text(
-                    "I'm here to help you think through problems and chat. Remember, I'm a computer program, not a person.",
-                    style: TextStyle(
+                    strings.helpHeroBody,
+                    style: const TextStyle(
                       color: AppTheme.soft,
                       height: 1.4,
                       fontWeight: FontWeight.w600,
@@ -176,6 +226,99 @@ class _HeroHelpCard extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class _HelplineBadge extends StatelessWidget {
+  const _HelplineBadge({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+        decoration: BoxDecoration(
+          color: AppTheme.soft,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: AppTheme.border),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(
+              Icons.shield_outlined,
+              size: 14,
+              color: AppTheme.primary,
+            ),
+            const SizedBox(width: 6),
+            Text(
+              text.toUpperCase(),
+              style: const TextStyle(
+                color: AppTheme.primaryDark,
+                fontWeight: FontWeight.w800,
+                fontSize: 11,
+                letterSpacing: 0.5,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SwitchChildButton extends StatelessWidget {
+  const _SwitchChildButton({
+    required this.label,
+    required this.hint,
+    required this.onPressed,
+  });
+
+  final String label;
+  final String hint;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      onPressed: onPressed,
+      style: OutlinedButton.styleFrom(
+        foregroundColor: AppTheme.primary,
+        backgroundColor: Colors.white,
+        side: const BorderSide(color: AppTheme.primary, width: 2),
+        minimumSize: const Size.fromHeight(60),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.w900,
+              fontSize: 16,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            hint,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: AppTheme.primary.withValues(alpha: 0.85),
+              fontWeight: FontWeight.w600,
+              fontSize: 11,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -254,7 +397,9 @@ class _ListCard extends StatelessWidget {
 }
 
 class _ReminderCard extends StatelessWidget {
-  const _ReminderCard();
+  const _ReminderCard({required this.strings});
+
+  final AppStrings strings;
 
   @override
   Widget build(BuildContext context) {
@@ -264,22 +409,22 @@ class _ReminderCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: AppTheme.border),
       ),
-      child: const Column(
+      child: Column(
         children: [
           _ReminderItem(
             icon: Icons.shield_outlined,
-            title: 'Stay Safe',
-            text: 'I must tell your parents if things get dangerous.',
+            title: strings.helpSafeTitle,
+            text: strings.helpSafeBody,
           ),
           _ReminderItem(
             icon: Icons.psychology_alt_rounded,
-            title: 'Learn Together',
-            text: "I help you think, but I won't do your homework!",
+            title: strings.helpLearnTitle,
+            text: strings.helpLearnBody,
           ),
           _ReminderItem(
             icon: Icons.lock_outline_rounded,
-            title: 'Privacy',
-            text: 'Our chats stay private unless you are in danger.',
+            title: strings.helpPrivacyTitle,
+            text: strings.helpPrivacyBody,
           ),
         ],
       ),

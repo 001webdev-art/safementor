@@ -2,23 +2,27 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/localization/app_strings.dart';
 import '../../../../core/theme/app_theme.dart';
-import '../../../../core/widgets/app_icon.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({
     super.key,
     required this.strings,
-    required this.locale,
-    required this.onLocaleChanged,
+    required this.band,
     required this.onStart,
-    required this.onSignOut,
   });
 
   final AppStrings strings;
-  final AppLocale locale;
-  final ValueChanged<AppLocale> onLocaleChanged;
+
+  /// 8-11 -> AgeBand.young (friendly Samy), 12-15 -> AgeBand.teen (cool Samy).
+  final AgeBand band;
   final VoidCallback onStart;
-  final Future<void> Function() onSignOut;
+
+  /// Both mascots render at the SAME height so they look equally big.
+  static const double _mascotHeight = 184;
+
+  String get _mascotAsset => band == AgeBand.young
+      ? 'assets/images/samy_8_11.png'
+      : 'assets/images/samy_12_15.png';
 
   @override
   Widget build(BuildContext context) {
@@ -45,60 +49,39 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton.icon(
-                        onPressed: onSignOut,
-                        icon: const Icon(Icons.logout_rounded, size: 18),
-                        label: Text(strings.signOut),
-                      ),
-                      DropdownButton<AppLocale>(
-                        value: locale,
-                        underline: const SizedBox.shrink(),
-                        items: AppLocale.values
-                            .map(
-                              (item) => DropdownMenuItem(
-                                value: item,
-                                child: Text(item.label),
-                              ),
-                            )
-                            .toList(),
-                        onChanged: (value) {
-                          if (value != null) onLocaleChanged(value);
-                        },
-                      ),
-                    ],
-                  ),
-                ),
                 Expanded(
                   child: Center(
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(maxWidth: 680),
                       child: ListView(
-                        padding: const EdgeInsets.fromLTRB(22, 18, 22, 24),
+                        padding: const EdgeInsets.fromLTRB(22, 24, 22, 24),
                         children: [
-                          const Center(
-                            child: AppBrainIcon(size: 72, rotate: true),
+                          Center(
+                            child: SizedBox(
+                              height: _mascotHeight,
+                              child: Image.asset(
+                                _mascotAsset,
+                                height: _mascotHeight,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
                           ),
-                          const SizedBox(height: 28),
+                          const SizedBox(height: 20),
                           Text(
-                            strings.welcomeTitle,
+                            strings.ageText('welcomeTitle', band),
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.headlineLarge,
                           ),
                           const SizedBox(height: 12),
                           Text(
-                            strings.welcomeSubtitle,
+                            strings.ageText('welcomeSubtitle', band),
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.bodyLarge,
                           ),
                           const SizedBox(height: 26),
-                          _FeatureCard(strings: strings),
+                          _FeatureCard(strings: strings, band: band),
                           const SizedBox(height: 14),
-                          _TransparencyCard(strings: strings),
+                          _TransparencyCard(strings: strings, band: band),
                         ],
                       ),
                     ),
@@ -119,7 +102,7 @@ class WelcomeScreen extends StatelessWidget {
                         child: FilledButton.icon(
                           onPressed: onStart,
                           icon: const Icon(Icons.arrow_forward_rounded),
-                          label: Text(strings.startChatting),
+                          label: Text(strings.ageText('startChatting', band)),
                         ),
                       ),
                     ),
@@ -135,8 +118,9 @@ class WelcomeScreen extends StatelessWidget {
 }
 
 class _FeatureCard extends StatelessWidget {
-  const _FeatureCard({required this.strings});
+  const _FeatureCard({required this.strings, required this.band});
   final AppStrings strings;
+  final AgeBand band;
 
   @override
   Widget build(BuildContext context) {
@@ -159,7 +143,7 @@ class _FeatureCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              strings.whatWeCanDo.toUpperCase(),
+              strings.ageText('whatWeCanDo', band).toUpperCase(),
               style: const TextStyle(
                 color: AppTheme.primary,
                 fontSize: 12,
@@ -171,17 +155,17 @@ class _FeatureCard extends StatelessWidget {
             _FeatureItem(
               icon: Icons.menu_book_rounded,
               color: Colors.orange.shade100,
-              text: strings.homework,
+              text: strings.ageText('homework', band),
             ),
             _FeatureItem(
               icon: Icons.auto_awesome_rounded,
               color: Colors.purple.shade100,
-              text: strings.projects,
+              text: strings.ageText('projects', band),
             ),
             _FeatureItem(
               icon: Icons.celebration_rounded,
               color: Colors.green.shade100,
-              text: strings.ideas,
+              text: strings.ageText('ideas', band),
             ),
           ],
         ),
@@ -213,11 +197,13 @@ class _FeatureItem extends StatelessWidget {
             child: Icon(icon, size: 18, color: AppTheme.ink),
           ),
           const SizedBox(width: 12),
-          Text(
-            text,
-            style: const TextStyle(
-              color: AppTheme.body,
-              fontWeight: FontWeight.w800,
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                color: AppTheme.body,
+                fontWeight: FontWeight.w800,
+              ),
             ),
           ),
         ],
@@ -227,8 +213,9 @@ class _FeatureItem extends StatelessWidget {
 }
 
 class _TransparencyCard extends StatelessWidget {
-  const _TransparencyCard({required this.strings});
+  const _TransparencyCard({required this.strings, required this.band});
   final AppStrings strings;
+  final AgeBand band;
 
   @override
   Widget build(BuildContext context) {
@@ -260,8 +247,8 @@ class _TransparencyCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 10),
-            _Bullet(strings.notHuman),
-            _Bullet(strings.dangerTell),
+            _Bullet(strings.ageText('notHuman', band)),
+            _Bullet(strings.ageText('dangerTell', band)),
           ],
         ),
       ),

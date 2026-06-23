@@ -10,7 +10,7 @@ import '../data/mentor_api.dart';
 import '../models/chat_message.dart';
 import '../models/child_profile.dart';
 
-enum ChatView { hello, chat, help, history, exit }
+enum ChatView { hello, chat, help }
 
 enum StreamingStatus { idle, analyzing, streaming, error }
 
@@ -44,14 +44,17 @@ class ChatController extends ChangeNotifier {
     if (session == null) return;
     isLoadingChildren = true;
     error = null;
+    // Always start at the child-selection screen: clear any child kept from a
+    // previous session so the parent picks who is using the chat each time.
+    activeChild = null;
+    messages = [];
     notifyListeners();
     try {
       children = await _chatRepository.fetchChildren(session);
-      final prefs = await SharedPreferences.getInstance();
-      final savedChildId = prefs.getString('chat_selected_child');
-      if (savedChildId != null &&
-          children.any((child) => child.id == savedChildId)) {
-        await selectChild(savedChildId);
+      // With a single child there is nothing to pick: skip the selection
+      // screen and go straight to the welcome screen.
+      if (children.length == 1) {
+        await selectChild(children.first.id);
       }
     } catch (err) {
       error = err.toString().replaceFirst('Exception: ', '');
@@ -72,6 +75,8 @@ class ChatController extends ChangeNotifier {
     }
 
     activeChild = children.where((child) => child.id == childId).firstOrNull;
+    // Show the age-appropriate welcome screen right after a child is picked.
+    view = ChatView.hello;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('chat_selected_child', childId);
     notifyListeners();

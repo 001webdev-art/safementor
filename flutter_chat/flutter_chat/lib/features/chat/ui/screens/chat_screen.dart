@@ -85,20 +85,6 @@ class _ChatScreenState extends State<ChatScreen> {
     return AnimatedBuilder(
       animation: widget.controller,
       builder: (context, _) {
-        if (widget.controller.isLoadingChildren) {
-          return const Scaffold(
-            backgroundColor: AppTheme.surface,
-            body: Center(child: CircularProgressIndicator()),
-          );
-        }
-
-        if (widget.controller.activeChild == null) {
-          return _ChildGate(
-            strings: widget.strings,
-            controller: widget.controller,
-          );
-        }
-
         return Scaffold(
           backgroundColor: AppTheme.surface,
           body: SafeArea(
@@ -109,7 +95,6 @@ class _ChatScreenState extends State<ChatScreen> {
                   locale: widget.locale,
                   onLocaleChanged: widget.onLocaleChanged,
                   controller: widget.controller,
-                  onSignOut: widget.authController.signOut,
                 ),
                 Expanded(
                   child: ListView.builder(
@@ -142,12 +127,6 @@ class _ChatScreenState extends State<ChatScreen> {
                   onChanged: (text) =>
                       setState(() => _showPiiWarning = _containsPii(text)),
                   onSend: _send,
-                  onEmoji: (emoji) {
-                    _message.text = '${_message.text}$emoji';
-                    _message.selection = TextSelection.collapsed(
-                      offset: _message.text.length,
-                    );
-                  },
                 ),
               ],
             ),
@@ -161,16 +140,16 @@ class _ChatScreenState extends State<ChatScreen> {
       widget.controller.streamingStatus == StreamingStatus.idle ? 0 : 1;
 }
 
-class _ChildGate extends StatefulWidget {
-  const _ChildGate({required this.strings, required this.controller});
+class ChildGate extends StatefulWidget {
+  const ChildGate({super.key, required this.strings, required this.controller});
   final AppStrings strings;
   final ChatController controller;
 
   @override
-  State<_ChildGate> createState() => _ChildGateState();
+  State<ChildGate> createState() => _ChildGateState();
 }
 
-class _ChildGateState extends State<_ChildGate> {
+class _ChildGateState extends State<ChildGate> {
   String? _selectedChildId;
 
   @override
@@ -323,10 +302,6 @@ class _ChildGateState extends State<_ChildGate> {
               : () => widget.controller.selectChild(_selectedChildId),
           child: Text(widget.strings.proceed),
         ),
-        TextButton(
-          onPressed: () => widget.controller.setView(ChatView.hello),
-          child: Text(widget.strings.cancelExit),
-        ),
       ],
     );
   }
@@ -350,14 +325,12 @@ class _ChatHeader extends StatelessWidget {
     required this.locale,
     required this.onLocaleChanged,
     required this.controller,
-    required this.onSignOut,
   });
 
   final AppStrings strings;
   final AppLocale locale;
   final ValueChanged<AppLocale> onLocaleChanged;
   final ChatController controller;
-  final Future<void> Function() onSignOut;
 
   @override
   Widget build(BuildContext context) {
@@ -382,73 +355,34 @@ class _ChatHeader extends StatelessWidget {
             children: [
               SizedBox(
                 height: 46,
-                child: Stack(
-                  alignment: Alignment.center,
+                child: Row(
                   children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: IconButton(
-                        tooltip: strings.hello,
-                        onPressed: () => controller.setView(ChatView.hello),
-                        icon: const Icon(
-                          Icons.chevron_left_rounded,
-                          color: AppTheme.body,
-                        ),
+                    SizedBox(
+                      height: 40,
+                      child: Image.asset(
+                        ageBandForAge(child.age) == AgeBand.young
+                            ? 'assets/images/samy_8_11_chat.png'
+                            : 'assets/images/samy_12_15_chat.png',
+                        height: 40,
+                        fit: BoxFit.contain,
                       ),
                     ),
-                    const Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        AppBrainIcon(size: 40),
-                        SizedBox(width: 8),
-                        Text(
-                          'SafeMentor',
-                          style: TextStyle(
-                            color: AppTheme.ink,
-                            fontWeight: FontWeight.w900,
-                            fontSize: 18,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(width: 8),
+                    const Text(
+                      'SAMY',
+                      style: TextStyle(
+                        color: AppTheme.ink,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 18,
+                      ),
                     ),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: PopupMenuButton<String>(
-                        tooltip: 'Menu',
-                        onSelected: (value) {
-                          switch (value) {
-                            case 'child':
-                              controller.selectChild(null);
-                              break;
-                            case 'history':
-                              controller.setView(ChatView.history);
-                              break;
-                            case 'help':
-                              controller.setView(ChatView.help);
-                              break;
-                            case 'logout':
-                              onSignOut();
-                              break;
-                          }
-                        },
-                        itemBuilder: (context) => [
-                          PopupMenuItem(
-                            value: 'child',
-                            child: Text(strings.changeChild),
-                          ),
-                          PopupMenuItem(
-                            value: 'history',
-                            child: Text(strings.history),
-                          ),
-                          PopupMenuItem(
-                            value: 'help',
-                            child: Text(strings.help),
-                          ),
-                          PopupMenuItem(
-                            value: 'logout',
-                            child: Text(strings.signOut),
-                          ),
-                        ],
+                    const Spacer(),
+                    IconButton(
+                      tooltip: strings.help,
+                      onPressed: () => controller.setView(ChatView.help),
+                      icon: const Icon(
+                        Icons.help_outline_rounded,
+                        color: AppTheme.body,
                       ),
                     ),
                   ],
@@ -678,7 +612,7 @@ class _TypingDotState extends State<_TypingDot>
   }
 }
 
-class _Composer extends StatelessWidget {
+class _Composer extends StatefulWidget {
   const _Composer({
     required this.strings,
     required this.controller,
@@ -686,7 +620,6 @@ class _Composer extends StatelessWidget {
     required this.isBusy,
     required this.onChanged,
     required this.onSend,
-    required this.onEmoji,
   });
 
   final AppStrings strings;
@@ -695,11 +628,17 @@ class _Composer extends StatelessWidget {
   final bool isBusy;
   final ValueChanged<String> onChanged;
   final VoidCallback onSend;
-  final ValueChanged<String> onEmoji;
+
+  @override
+  State<_Composer> createState() => _ComposerState();
+}
+
+class _ComposerState extends State<_Composer> {
+  bool _showAttachments = false;
 
   @override
   Widget build(BuildContext context) {
-    const emojis = ['🙂', '✨', '👍', '💡', '📚', '🎉'];
+    final strings = widget.strings;
     return SafeArea(
       top: false,
       child: Container(
@@ -716,7 +655,17 @@ class _Composer extends StatelessWidget {
               children: [
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 170),
-                  child: showPiiWarning
+                  child: _showAttachments
+                      ? _AttachmentPanel(
+                          strings: strings,
+                          onSelected: () =>
+                              setState(() => _showAttachments = false),
+                        )
+                      : const SizedBox.shrink(),
+                ),
+                AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 170),
+                  child: widget.showPiiWarning
                       ? Container(
                           key: const ValueKey('pii'),
                           width: double.infinity,
@@ -765,32 +714,30 @@ class _Composer extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    PopupMenuButton<String>(
-                      tooltip: 'Emoji',
-                      icon: const Icon(
-                        Icons.sentiment_satisfied_alt_rounded,
-                        color: AppTheme.primary,
+                    IconButton(
+                      tooltip: strings.attachUploadTitle,
+                      onPressed: () => setState(
+                        () => _showAttachments = !_showAttachments,
                       ),
-                      onSelected: onEmoji,
-                      itemBuilder: (context) => emojis
-                          .map(
-                            (emoji) => PopupMenuItem(
-                              value: emoji,
-                              child: Text(
-                                emoji,
-                                style: const TextStyle(fontSize: 24),
-                              ),
-                            ),
-                          )
-                          .toList(),
+                      style: IconButton.styleFrom(
+                        foregroundColor: AppTheme.primary,
+                        side: const BorderSide(color: AppTheme.border),
+                        shape: const CircleBorder(),
+                      ),
+                      icon: Icon(
+                        _showAttachments
+                            ? Icons.close_rounded
+                            : Icons.add_rounded,
+                      ),
                     ),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: TextField(
-                        controller: controller,
+                        controller: widget.controller,
                         minLines: 1,
                         maxLines: 4,
-                        onChanged: onChanged,
-                        onSubmitted: (_) => onSend(),
+                        onChanged: widget.onChanged,
+                        onSubmitted: (_) => widget.onSend(),
                         decoration: InputDecoration(
                           hintText: strings.chatHint,
                           filled: true,
@@ -811,13 +758,13 @@ class _Composer extends StatelessWidget {
                       width: 42,
                       height: 42,
                       child: FilledButton(
-                        onPressed: isBusy ? null : onSend,
+                        onPressed: widget.isBusy ? null : widget.onSend,
                         style: FilledButton.styleFrom(
                           padding: EdgeInsets.zero,
                           shape: const CircleBorder(),
                           minimumSize: const Size(42, 42),
                         ),
-                        child: const Icon(Icons.send_rounded, size: 20),
+                        child: const Icon(Icons.arrow_upward_rounded, size: 20),
                       ),
                     ),
                   ],
@@ -825,6 +772,128 @@ class _Composer extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _AttachmentPanel extends StatelessWidget {
+  const _AttachmentPanel({required this.strings, required this.onSelected});
+
+  final AppStrings strings;
+  final VoidCallback onSelected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppTheme.border),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: _AttachmentCard(
+                  icon: Icons.image_outlined,
+                  title: strings.attachUploadTitle,
+                  subtitle: strings.attachUploadSubtitle,
+                  onTap: onSelected,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: _AttachmentCard(
+                  icon: Icons.alt_route_rounded,
+                  title: strings.attachSecondOpinionTitle,
+                  subtitle: strings.attachSecondOpinionSubtitle,
+                  onTap: onSelected,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Expanded(
+                child: _AttachmentCard(
+                  icon: Icons.menu_book_rounded,
+                  title: strings.attachModulesTitle,
+                  subtitle: strings.attachModulesSubtitle,
+                  onTap: onSelected,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: _AttachmentCard(
+                  icon: Icons.folder_outlined,
+                  title: strings.attachProjectsTitle,
+                  subtitle: strings.attachProjectsSubtitle,
+                  onTap: onSelected,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _AttachmentCard extends StatelessWidget {
+  const _AttachmentCard({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.onTap,
+  });
+
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(16),
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: AppTheme.border),
+        ),
+        child: Column(
+          children: [
+            Icon(icon, color: AppTheme.primary, size: 26),
+            const SizedBox(height: 8),
+            Text(
+              title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: AppTheme.ink,
+                fontWeight: FontWeight.w800,
+                fontSize: 14,
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: AppTheme.primary,
+                fontWeight: FontWeight.w600,
+                fontSize: 12,
+              ),
+            ),
+          ],
         ),
       ),
     );

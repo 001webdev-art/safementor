@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/localization/app_strings.dart';
+import '../../../core/theme/app_theme.dart';
 import '../../auth/state/auth_controller.dart';
 import '../state/chat_controller.dart';
 import 'screens/chat_screen.dart';
-import 'screens/exit_screen.dart';
 import 'screens/help_screen.dart';
-import 'screens/history_screen.dart';
 import 'screens/welcome_screen.dart';
-import 'widgets/chat_bottom_nav.dart';
 
 class ChatShell extends StatefulWidget {
   const ChatShell({
@@ -42,17 +40,22 @@ class _ChatShellState extends State<ChatShell> {
     return AnimatedBuilder(
       animation: widget.chatController,
       builder: (context, _) {
-        final view = widget.chatController.view;
-        return Scaffold(
-          body: _bodyFor(view),
-          bottomNavigationBar: view == ChatView.hello || view == ChatView.exit
-              ? null
-              : ChatBottomNav(
-                  strings: widget.strings,
-                  currentView: view,
-                  onChanged: widget.chatController.setView,
-                ),
-        );
+        final controller = widget.chatController;
+
+        if (controller.isLoadingChildren) {
+          return const Scaffold(
+            backgroundColor: AppTheme.surface,
+            body: Center(child: CircularProgressIndicator()),
+          );
+        }
+
+        // Child selection comes first; only after a child is picked do we
+        // show the age-appropriate welcome and the rest of the app.
+        if (controller.activeChild == null) {
+          return ChildGate(strings: widget.strings, controller: controller);
+        }
+
+        return Scaffold(body: _bodyFor(controller.view));
       },
     );
   }
@@ -61,10 +64,8 @@ class _ChatShellState extends State<ChatShell> {
     return switch (view) {
       ChatView.hello => WelcomeScreen(
         strings: widget.strings,
-        locale: widget.locale,
-        onLocaleChanged: widget.onLocaleChanged,
+        band: ageBandForAge(widget.chatController.activeChild?.age ?? 10),
         onStart: () => widget.chatController.setView(ChatView.chat),
-        onSignOut: widget.authController.signOut,
       ),
       ChatView.chat => ChatScreen(
         strings: widget.strings,
@@ -76,15 +77,7 @@ class _ChatShellState extends State<ChatShell> {
       ChatView.help => HelpScreen(
         strings: widget.strings,
         onBack: () => widget.chatController.setView(ChatView.chat),
-      ),
-      ChatView.history => HistoryScreen(
-        strings: widget.strings,
-        controller: widget.chatController,
-        onBack: () => widget.chatController.setView(ChatView.chat),
-      ),
-      ChatView.exit => ExitScreen(
-        strings: widget.strings,
-        onNewSession: () => widget.chatController.setView(ChatView.hello),
+        onSignOut: widget.authController.signOut,
       ),
     };
   }
