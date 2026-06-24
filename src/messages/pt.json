@@ -561,13 +561,16 @@
       "fields": {
         "nickname": "Alcunha",
         "birthdate": "Data de nascimento (MM/AA)",
+        "birthMonth": "Mês de nascimento",
+        "birthYear": "Ano de nascimento",
         "language": "Idioma",
         "timeLimit": "Limite de tempo (minutos/dia)"
       },
       "languages": {
         "en": "Inglês",
         "pt": "Português",
-        "de": "Alemão"
+        "de": "Alemão",
+        "es": "Espanhol"
       },
       "actions": {
         "save": "Guardar",

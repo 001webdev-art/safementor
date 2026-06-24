@@ -159,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
                 const SizedBox(height: 20),
-                const _SessionNote(),
+                _SessionNote(strings: strings),
               ],
             ),
           ),
@@ -170,7 +170,9 @@ class _LoginScreenState extends State<LoginScreen> {
 }
 
 class _SessionNote extends StatelessWidget {
-  const _SessionNote();
+  const _SessionNote({required this.strings});
+
+  final AppStrings strings;
 
   @override
   Widget build(BuildContext context) {
@@ -180,17 +182,17 @@ class _SessionNote extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
         border: Border.all(color: AppTheme.border),
       ),
-      child: const Padding(
-        padding: EdgeInsets.all(12),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.shield_outlined, color: AppTheme.primary, size: 20),
-            SizedBox(width: 10),
+            const Icon(Icons.shield_outlined, color: AppTheme.primary, size: 20),
+            const SizedBox(width: 10),
             Expanded(
               child: Text(
-                'Mobile session bridge: this app authenticates against the same Supabase backend as the dashboard and stores tokens securely on device.',
-                style: TextStyle(color: AppTheme.body, height: 1.35),
+                strings.sessionNote,
+                style: const TextStyle(color: AppTheme.body, height: 1.35),
               ),
             ),
           ],

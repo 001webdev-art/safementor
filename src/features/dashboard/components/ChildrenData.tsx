@@ -246,6 +246,7 @@ export function ChildrenData({
                                                     <SelectItem key="en" textValue={t('languages.en')}>{t('languages.en')}</SelectItem>
                                                     <SelectItem key="pt" textValue={t('languages.pt')}>{t('languages.pt')}</SelectItem>
                                                     <SelectItem key="de" textValue={t('languages.de')}>{t('languages.de')}</SelectItem>
+                                                    <SelectItem key="es" textValue={t('languages.es')}>{t('languages.es')}</SelectItem>
                                                 </Select>
                                                 <Input
                                                     label={t('fields.timeLimit')}

@@ -562,13 +562,16 @@
       "fields": {
         "nickname": "Nickname",
         "birthdate": "Birthdate (MM/YY)",
+        "birthMonth": "Birth Month",
+        "birthYear": "Birth Year",
         "language": "Language",
         "timeLimit": "Time Limit (minutes/day)"
       },
       "languages": {
         "en": "English",
         "pt": "Portuguese",
-        "de": "German"
+        "de": "German",
+        "es": "Spanish"
       },
       "actions": {
         "save": "Save",
