@@ -411,9 +411,8 @@ class _ChatHeader extends StatelessWidget {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        strings.safetyBadge(child.nickname),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+                        strings.safetyBadge(ageBandForAge(child.age)),
+                        softWrap: true,
                         style: const TextStyle(
                           color: AppTheme.body,
                           fontSize: 12,
@@ -653,15 +652,15 @@ class _ComposerState extends State<_Composer> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 170),
-                  child: _showAttachments
-                      ? _AttachmentPanel(
-                          strings: strings,
-                          onSelected: () =>
-                              setState(() => _showAttachments = false),
-                        )
-                      : const SizedBox.shrink(),
+                Flexible(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 170),
+                    child: _showAttachments
+                        ? SingleChildScrollView(
+                            child: _AttachmentPanel(strings: strings),
+                          )
+                        : const SizedBox.shrink(),
+                  ),
                 ),
                 AnimatedSwitcher(
                   duration: const Duration(milliseconds: 170),
@@ -779,10 +778,9 @@ class _ComposerState extends State<_Composer> {
 }
 
 class _AttachmentPanel extends StatelessWidget {
-  const _AttachmentPanel({required this.strings, required this.onSelected});
+  const _AttachmentPanel({required this.strings});
 
   final AppStrings strings;
-  final VoidCallback onSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -795,7 +793,19 @@ class _AttachmentPanel extends StatelessWidget {
         border: Border.all(color: AppTheme.border),
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 2, bottom: 10),
+            child: Text(
+              strings.attachComingSoon,
+              style: const TextStyle(
+                color: AppTheme.body,
+                fontWeight: FontWeight.w700,
+                fontSize: 13,
+              ),
+            ),
+          ),
           Row(
             children: [
               Expanded(
@@ -803,7 +813,6 @@ class _AttachmentPanel extends StatelessWidget {
                   icon: Icons.image_outlined,
                   title: strings.attachUploadTitle,
                   subtitle: strings.attachUploadSubtitle,
-                  onTap: onSelected,
                 ),
               ),
               const SizedBox(width: 10),
@@ -812,7 +821,6 @@ class _AttachmentPanel extends StatelessWidget {
                   icon: Icons.alt_route_rounded,
                   title: strings.attachSecondOpinionTitle,
                   subtitle: strings.attachSecondOpinionSubtitle,
-                  onTap: onSelected,
                 ),
               ),
             ],
@@ -825,7 +833,6 @@ class _AttachmentPanel extends StatelessWidget {
                   icon: Icons.menu_book_rounded,
                   title: strings.attachModulesTitle,
                   subtitle: strings.attachModulesSubtitle,
-                  onTap: onSelected,
                 ),
               ),
               const SizedBox(width: 10),
@@ -834,7 +841,6 @@ class _AttachmentPanel extends StatelessWidget {
                   icon: Icons.folder_outlined,
                   title: strings.attachProjectsTitle,
                   subtitle: strings.attachProjectsSubtitle,
-                  onTap: onSelected,
                 ),
               ),
             ],
@@ -850,37 +856,36 @@ class _AttachmentCard extends StatelessWidget {
     required this.icon,
     required this.title,
     required this.subtitle,
-    required this.onTap,
   });
 
   final IconData icon;
   final String title;
   final String subtitle;
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
+    // Feature not yet available: rendered greyed out and non-interactive.
+    return Opacity(
+      opacity: 0.45,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppTheme.soft.withValues(alpha: 0.4),
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: AppTheme.border),
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: AppTheme.primary, size: 26),
-            const SizedBox(height: 8),
+            Icon(icon, color: AppTheme.body, size: 22),
+            const SizedBox(height: 6),
             Text(
               title,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: AppTheme.ink,
+                color: AppTheme.body,
                 fontWeight: FontWeight.w800,
-                fontSize: 14,
+                fontSize: 13,
               ),
             ),
             const SizedBox(height: 2),
@@ -888,9 +893,9 @@ class _AttachmentCard extends StatelessWidget {
               subtitle,
               textAlign: TextAlign.center,
               style: const TextStyle(
-                color: AppTheme.primary,
+                color: AppTheme.body,
                 fontWeight: FontWeight.w600,
-                fontSize: 12,
+                fontSize: 11,
               ),
             ),
           ],
