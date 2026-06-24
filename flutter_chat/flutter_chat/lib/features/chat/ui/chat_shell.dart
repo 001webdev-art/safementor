@@ -77,7 +77,12 @@ class _ChatShellState extends State<ChatShell> {
       ChatView.help => HelpScreen(
         strings: widget.strings,
         onBack: () => widget.chatController.setView(ChatView.chat),
-        onSignOut: widget.authController.signOut,
+        onSignOut: () async {
+          // Clear the remembered child so the next login asks who is using
+          // the chat again, while a plain app restart keeps the selection.
+          await widget.chatController.selectChild(null);
+          await widget.authController.signOut();
+        },
       ),
     };
   }

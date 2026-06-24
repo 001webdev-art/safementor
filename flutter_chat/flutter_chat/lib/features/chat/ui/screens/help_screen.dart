@@ -53,8 +53,18 @@ class HelpScreen extends StatelessWidget {
                           strings.helpFeel1,
                           strings.helpFeel2,
                           strings.helpFeel3,
-                          strings.helpFeel4,
                         ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 12, left: 4, right: 4),
+                        child: Text(
+                          strings.helpFeel4,
+                          style: const TextStyle(
+                            color: AppTheme.body,
+                            height: 1.5,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 22),
                       _SectionTitle(
