@@ -560,13 +560,16 @@
       "fields": {
         "nickname": "Spitzname",
         "birthdate": "Geburtsdatum (MM/JJ)",
+        "birthMonth": "Geburtsmonat",
+        "birthYear": "Geburtsjahr",
         "language": "Sprache",
         "timeLimit": "Zeitlimit (Minuten/Tag)"
       },
       "languages": {
         "en": "Englisch",
         "pt": "Portugiesisch",
-        "de": "Deutsch"
+        "de": "Deutsch",
+        "es": "Spanisch"
       },
       "actions": {
         "save": "Speichern",

@@ -561,13 +561,16 @@
       "fields": {
         "nickname": "Apodo",
         "birthdate": "Fecha de nacimiento (MM/AA)",
+        "birthMonth": "Mes de nacimiento",
+        "birthYear": "Año de nacimiento",
         "language": "Idioma",
         "timeLimit": "Límite de Tiempo (minutos/día)"
       },
       "languages": {
         "en": "Inglés",
         "pt": "Portugués",
-        "de": "Alemán"
+        "de": "Alemán",
+        "es": "Español"
       },
       "actions": {
         "save": "Guardar",
