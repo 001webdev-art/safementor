@@ -269,11 +269,18 @@ class AppStrings {
       'es': 'Escribe un mensaje...',
       'de': 'Nachricht schreiben...',
     },
-    'safetyBadge': {
-      'en': 'Hi {name}, I look for unsafe language to keep you safe',
-      'pt': 'Oi {name}, procuro linguagem insegura para proteger você',
-      'es': 'Hola {name}, busco lenguaje inseguro para protegerte',
-      'de': 'Hallo {name}, ich achte auf unsichere Sprache',
+    'safetyBadge_young': {
+      'en': "I read along to keep you safe. If you're in danger, I tell your parents.",
+      'pt': 'Eu leio junto para te proteger. Se você estiver em perigo, eu aviso seus pais.',
+      'es': 'Leo contigo para protegerte. Si estás en peligro, aviso a tus padres.',
+      'de': 'Ich lese mit, um dich zu schützen. Wenn du in Gefahr bist, sage ich deinen Eltern Bescheid.',
+    },
+    'safetyBadge_teen': {
+      'en':
+          "Your chat is private, unless you're in danger. Then, we must alert your parents.",
+      'pt': 'Seu chat é privado, a não ser que você esteja em perigo. Então, temos que avisar seus pais.',
+      'es': 'Tu chat es privado, salvo que estés en peligro. Entonces, debemos avisar a tus padres.',
+      'de': 'Dein Chat ist privat – außer du bist in Gefahr. Dann müssen wir deine Eltern informieren.',
     },
     'piiTitle': {
       'en': 'Wait a second',
@@ -436,6 +443,12 @@ class AppStrings {
       'es': 'Llamar a la línea de ayuda · 116 111',
       'de': 'Kinder-Sorgentelefon anrufen · 116 111',
     },
+    'attachComingSoon': {
+      'en': '🛠️ Coming soon…',
+      'pt': '🛠️ Em breve…',
+      'es': '🛠️ Próximamente…',
+      'de': '🛠️ Bald verfügbar…',
+    },
     'attachUploadTitle': {
       'en': 'Upload image',
       'pt': 'Enviar imagem',
@@ -579,6 +592,7 @@ class AppStrings {
   String get helpPrivacyTitle => text('helpPrivacyTitle');
   String get helpPrivacyBody => text('helpPrivacyBody');
   String get helpCallButton => text('helpCallButton');
+  String get attachComingSoon => text('attachComingSoon');
   String get attachUploadTitle => text('attachUploadTitle');
   String get attachUploadSubtitle => text('attachUploadSubtitle');
   String get attachSecondOpinionTitle => text('attachSecondOpinionTitle');
@@ -594,8 +608,7 @@ class AppStrings {
   String get switchChildHint => text('switchChildHint');
   String get sessionNote => text('sessionNote');
 
-  String safetyBadge(String name) =>
-      text('safetyBadge').replaceAll('{name}', name);
+  String safetyBadge(AgeBand band) => ageText('safetyBadge', band);
 
   /// Returns the age-appropriate variant for a base key, e.g.
   /// ageText('welcomeTitle', AgeBand.teen) -> 'Hey, Samy hier!'.

@@ -52,7 +52,7 @@ dev_dependencies:
 
 # Konfiguration für App-Launcher-Icons (generiert via `dart run flutter_launcher_icons`)
 flutter_launcher_icons:
-  image_path: "assets/images/samy_app.png"
+  image_path: "assets/images/samy_splash.png"
   android: true
   ios: true
   remove_alpha_ios: true
