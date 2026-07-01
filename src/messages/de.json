@@ -325,7 +325,8 @@
       "childrenname": "Vollständiger Name des Kindes",
       "email": "kind@beispiel.de",
       "selectChild": "Wähle ein Kind aus der Liste",
-      "selectChildToEdit": "Bitte wähle ein Kind aus der obigen Liste aus, um dessen Informationen anzuzeigen oder zu bearbeiten."
+      "selectChildToEdit": "Bitte wähle ein Kind aus der obigen Liste aus, um dessen Informationen anzuzeigen oder zu bearbeiten.",
+      "country": "Land auswählen"
     },
     "content": {
       "noChildren": "Noch keine Kinder gelistet. Klicken Sie auf die Schaltfläche unten, um eines hinzuzufügen.",
@@ -544,7 +545,11 @@
       "privacy": {
         "title": "Datenschutz aktiv",
         "desc": "Einzelne Nachrichten bleiben privat, um den vertraulichen Raum Ihres Kindes zu schützen. Sicherheitswarnungen werden separat angezeigt, wenn die KI besorgniserregende Muster erkennt."
-      }
+      },
+      "warningsTitle7d": "Warnungen (letzte 7 Tage)",
+      "warningsTitle30d": "Warnungen (letzte 30 Tage)",
+      "noWarnings": "Keine Warnungen in diesem Zeitraum",
+      "warningText": "Warnung"
     },
     "children_new": {
       "title": "Kinderdaten",

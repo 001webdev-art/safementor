@@ -325,7 +325,8 @@
       "childrenname": "Nome completo do filho",
       "email": "filho@exemplo.com",
       "selectChild": "Selecione um filho da lista",
-      "selectChildToEdit": "Por favor, selecione um filho na lista acima para visualizar ou editar as suas informações."
+      "selectChildToEdit": "Por favor, selecione um filho na lista acima para visualizar ou editar as suas informações.",
+      "country": "Selecionar país"
     },
     "content": {
       "noChildren": "Nenhum filho listado ainda. Clique no botão abaixo para adicionar.",
@@ -545,7 +546,11 @@
       "privacy": {
         "title": "Proteção de privacidade ativa",
         "desc": "As mensagens individuais permanecem privadas para proteger o espaço confidencial do seu filho. Os alertas de segurança são apresentados separadamente se a IA detetar padrões preocupantes."
-      }
+      },
+      "warningsTitle7d": "Avisos (últimos 7 dias)",
+      "warningsTitle30d": "Avisos (últimos 30 dias)",
+      "noWarnings": "Sem avisos neste período",
+      "warningText": "Aviso"
     },
     "children_new": {
       "title": "Dados das crianças",

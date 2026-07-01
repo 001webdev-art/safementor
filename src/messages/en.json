@@ -326,7 +326,8 @@
       "childrenname": "Child's full name",
       "email": "child@example.com",
       "selectChild": "Select a child from the list",
-      "selectChildToEdit": "Please select a child from the list above to view or edit their information."
+      "selectChildToEdit": "Please select a child from the list above to view or edit their information.",
+      "country": "Select country"
     },
     "content": {
       "noChildren": "No children listed yet. Click button below to add.",
@@ -546,7 +547,11 @@
       "privacy": {
         "title": "Privacy Protection Active",
         "desc": "Only aggregated emotional trends are shown. Individual messages remain private to protect your child's confidential space. Safety alerts are shown separately if AI detects concerning patterns."
-      }
+      },
+      "warningsTitle7d": "Warnings (last 7 days)",
+      "warningsTitle30d": "Warnings (last 30 days)",
+      "noWarnings": "No warnings in this period",
+      "warningText": "Warning"
     },
     "children_new": {
       "title": "Children Data",
