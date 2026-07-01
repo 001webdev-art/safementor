@@ -12,9 +12,9 @@ import ContactInfoForm from '@/features/dashboard/forms/ContactInfoForm';
 import AddressForm from '@/features/dashboard/forms/AddressForm';
 import BillingForm from '@/features/dashboard/forms/BillingForm';
 import CommunicationForm from '@/features/dashboard/forms/CommunicationForm';
-import PreferencesForm from '@/features/dashboard/forms/PreferencesForm';
 import PaymentDataForm from '@/features/dashboard/forms/PaymentDataForm';
 import BillingInformationForm from '@/features/dashboard/forms/BillingInformationForm';
+import ConsentForm from '@/features/dashboard/forms/ConsentForm';
 import SaveButton from '../components/ui/SaveButton';
 
 interface PersonalDataProps {
@@ -126,12 +126,6 @@ export function PersonalData({
                                     onProfileChange={handleProfileChange}
                                     t={t}
                                 />
-
-                                <PreferencesForm
-                                    profile={currentProfile}
-                                    onProfileChange={handleProfileChange}
-                                    t={t}
-                                />
                             </div>
                         </div>
 
@@ -140,6 +134,7 @@ export function PersonalData({
                         <div className="space-y-6">
                             <PaymentDataForm t={t} />
                             <BillingInformationForm t={t} />
+                            <ConsentForm t={t} />
                         </div>
                     </div>
                 </CardBody>

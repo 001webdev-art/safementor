@@ -15,10 +15,10 @@ export const ApproachSection = () => {
                         <div className="relative">
                             <div className="w-full aspect-square rounded-3xl p-8 bg-[#FDFBF8]/50 shadow-inner" id="approach-illustration-bg">
                                 <Image
-                                    src="/svg/approach-illustration.svg"
-                                    alt="Child exploring nature with a magnifying glass"
-                                    width={300}
-                                    height={300}
+                                    src="/images/approach-illustration-remove.png"
+                                    alt="Child planting with mother"
+                                    width={400}
+                                    height={400}
                                     className="w-full h-full max-w-sm mx-auto object-contain"
                                     //loading="lazy"
                                 />

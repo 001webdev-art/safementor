@@ -228,7 +228,7 @@ export function Overview({ children }: OverviewProps) {
             <Card className="border border-gray-200 shadow-sm">
                 <CardHeader>
                     <h2 className="text-lg font-bold text-gray-900">
-                        {timeRange === '7d' ? 'Warnungen (letzte 7 Tage)' : 'Warnungen (letzte 30 Tage)'}
+                        {timeRange === '7d' ? t('warningsTitle7d') : t('warningsTitle30d')}
                     </h2>
                 </CardHeader>
                 <CardBody>
@@ -238,7 +238,7 @@ export function Overview({ children }: OverviewProps) {
                         </div>
                     ) : warnings.length === 0 ? (
                         <div className="text-center py-8 bg-gray-50 rounded-xl border border-dashed border-gray-300">
-                            <p className="text-gray-500 italic">Keine Warnungen in diesem Zeitraum</p>
+                            <p className="text-gray-500 italic">{t('noWarnings')}</p>
                         </div>
                     ) : (
                         <div className="space-y-3">
@@ -268,7 +268,7 @@ export function Overview({ children }: OverviewProps) {
                                                             ? 'text-red-900'
                                                             : 'text-yellow-900'
                                                     }`}>
-                                                        {warning.user_intent_summary || 'Warnung'}
+                                                        {warning.user_intent_summary || t('warningText')}
                                                     </p>
                                                     <p className={`text-sm mb-2 ${
                                                         warning.user_intent_flag === 'red'
