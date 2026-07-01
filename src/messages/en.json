@@ -248,6 +248,26 @@
       "plan": "Current Plan",
       "familyPlan": "Family Plan"
     },
+    "consent": {
+      "title": "Consent, Revocation and Termination",
+      "privacyTitle": "Privacy Policy",
+      "privacySubtitle": "Version 2.3 – accepted on 12.03.2026",
+      "termsTitle": "General Terms and Conditions",
+      "termsSubtitle": "Version 1.5 – accepted on 12.03.2026",
+      "active": "Active",
+      "view": "view",
+      "withdraw": "Revoke",
+      "modalTitle": "Revoke Contract",
+      "modalWarning": "Do you really want to revoke? This will automatically revoke the contract and you will not be able to continue using Safementor after the agreed duration of use has expired.",
+      "cancel": "Terminate",
+      "back": "Back",
+      "thankYou": "Thank you for being a Safementor customer. We are sorry to see you go. We would appreciate feedback on why you no longer want to be a customer.",
+      "feedbackBtn": "Feedback",
+      "feedbackPlaceholder": "Share your reasons with us...",
+      "submitFeedback": "Submit",
+      "close": "Close",
+      "feedbackSuccess": "Thank you for your feedback!"
+    },
     "sidebar": {
       "subtitle": "Parent Dashboard",
       "chat": "Go to Chat APP",
@@ -420,14 +440,13 @@
             "No live monitoring of conversations",
             "No chat replay or message history viewing",
             "No emotion scoring or behavioral surveillance",
-            "No tracking of child's location or device usage",
             "No parent access to raw chat logs"
           ]
         },
         "does": {
           "title": "What SafeMentor Does:",
           "items": [
-            "Provides AI companion for child to talk freely",
+            "Is a child friendly AI companion",
             "Detects patterns that may indicate risk",
             "Helps with homework, but doesn't do the work",
             "Alerts parents only when serious concerns detected"
@@ -509,6 +528,7 @@
       "emergency": {
         "title": "Emergency Resources",
         "subtitle": "If you have immediate safety concerns, contact professional help directly",
+        "emergencyCall": "Emergency Call (Europe-wide):",
         "crisisLine": "National Crisis Line:",
         "crisisText": "Crisis Text Line:",
         "crisisTextAction": "Text HOME to 741741",

@@ -247,6 +247,26 @@
       "plan": "Plan Actual",
       "familyPlan": "Plan Familiar"
     },
+    "consent": {
+      "title": "Consentimiento, Revocación y Cancelación",
+      "privacyTitle": "Política de Privacidad",
+      "privacySubtitle": "Versión 2.3 – aceptada el 12.03.2026",
+      "termsTitle": "Términos y Condiciones Generales",
+      "termsSubtitle": "Versión 1.5 – aceptada el 12.03.2026",
+      "active": "Activo",
+      "view": "ver",
+      "withdraw": "Revocar",
+      "modalTitle": "Revocar Contrato",
+      "modalWarning": "¿Realmente desea revocar? Esto revocará automáticamente el contrato y no podrá seguir utilizando Safementor una vez transcurrido el periodo de uso acordado.",
+      "cancel": "Cancelar contrato",
+      "back": "Atrás",
+      "thankYou": "Gracias por haber sido cliente de Safementor. Lamentamos que se vaya. Le agradeceríamos que nos dejara sus comentarios sobre por qué no desea seguir siendo cliente.",
+      "feedbackBtn": "Feedback",
+      "feedbackPlaceholder": "Comparta sus motivos con nosotros...",
+      "submitFeedback": "Enviar",
+      "close": "Cerrar",
+      "feedbackSuccess": "¡Muchas gracias por su feedback!"
+    },
     "sidebar": {
       "subtitle": "Panel para Padres",
       "chat": "Ir a la App de Chat",
@@ -419,14 +439,13 @@
             "Sin monitoreo en vivo de conversaciones",
             "Sin repetición de chat o visualización de historial de mensajes",
             "Sin puntuación de emociones o vigilancia conductual",
-            "Sin seguimiento de la ubicación o uso del dispositivo del niño",
             "Sin acceso de los padres a registros de chat sin procesar"
           ]
         },
         "does": {
           "title": "Lo Que Hace SafeMentor:",
           "items": [
-            "Proporciona un acompañante IA para que el niño hable libremente",
+            "Es un acompañante IA adecuado para niños",
             "Detecta patrones que pueden indicar riesgo",
             "Ayuda con los deberes, pero no hace el trabajo",
             "Alerta a los padres solo cuando se detectan preocupaciones graves"
@@ -508,6 +527,7 @@
       "emergency": {
         "title": "Recursos de Emergencia",
         "subtitle": "Si tienes preocupaciones inmediatas de seguridad, contacta ayuda profesional directamente",
+        "emergencyCall": "Llamada de Emergencia (Europa):",
         "crisisLine": "Línea Nacional de Crisis:",
         "crisisText": "Línea de Texto de Crisis:",
         "crisisTextAction": "Envía HOME al 741741 (EE.UU.)",

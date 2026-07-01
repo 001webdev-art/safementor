@@ -14,6 +14,7 @@ import BillingForm from '@/features/dashboard/forms/BillingForm';
 import CommunicationForm from '@/features/dashboard/forms/CommunicationForm';
 import PaymentDataForm from '@/features/dashboard/forms/PaymentDataForm';
 import BillingInformationForm from '@/features/dashboard/forms/BillingInformationForm';
+import ConsentForm from '@/features/dashboard/forms/ConsentForm';
 import SaveButton from '../components/ui/SaveButton';
 
 interface PersonalDataProps {
@@ -133,6 +134,7 @@ export function PersonalData({
                         <div className="space-y-6">
                             <PaymentDataForm t={t} />
                             <BillingInformationForm t={t} />
+                            <ConsentForm t={t} />
                         </div>
                     </div>
                 </CardBody>

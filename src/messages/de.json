@@ -247,6 +247,26 @@
       "plan": "Aktueller Plan",
       "familyPlan": "Familien-Plan"
     },
+    "consent": {
+      "title": "Zustimmung, Widerruf und Kündigung",
+      "privacyTitle": "Datenschutzerklärung",
+      "privacySubtitle": "Version 2.3 – akzeptiert am 12.03.2026",
+      "termsTitle": "Allgemeine Geschäftsbedingungen",
+      "termsSubtitle": "Version 1.5 – akzeptiert am 12.03.2026",
+      "active": "Aktiv",
+      "view": "ansehen",
+      "withdraw": "Widerruf",
+      "modalTitle": "Vertrag widerrufen",
+      "modalWarning": "Wollen Sie wirklich widerrufen? Damit wird automatisch der Vertrag widerrufen und Sie können nach Ablauf der vereinbarten Nutzungsdauer Safementor nicht weiter verwenden",
+      "cancel": "Kündigen",
+      "back": "Zurück",
+      "thankYou": "Vielen Dank dass Sie Kunde von Safementor waren. Es tut uns leid, Sie gehen zu sehen. Wir würden uns über ein Feedback freuen, warum Sie nicht weiter Kunde sein wollen",
+      "feedbackBtn": "Feedback",
+      "feedbackPlaceholder": "Teilen Sie uns Ihre Gründe mit...",
+      "submitFeedback": "Senden",
+      "close": "Schließen",
+      "feedbackSuccess": "Vielen Dank für Ihr Feedback!"
+    },
     "sidebar": {
       "subtitle": "Eltern-Dashboard",
       "chat": "Zum Chat-App",
@@ -419,13 +439,13 @@
             "Keine Live-Überwachung von Gesprächen",
             "Keine Chat-Wiedergabe oder Einsicht in den Nachrichtenverlauf",
             "Kein Emotions-Scoring oder Verhaltensüberwachung",
-            "Kein Eigentumszugriff auf rohe Chat-Protokolle"
+            "Kein Zugriff auf Chat-Verläufe"
           ]
         },
         "does": {
           "title": "Was SafeMentor tut:",
           "items": [
-            "Bietet KI-Begleiter für das Kind zum freien Sprechen",
+            "Ist ein kindgerechter KI-Begleiter",
             "Erkennt Muster, die auf Risiken hinweisen könnten",
             "Hilft bei Hausaufgaben, aber übernimmt nicht die Arbeit",
             "Alarmiert Eltern nur, wenn ernste Bedenken erkannt werden"
@@ -507,6 +527,7 @@
       "emergency": {
         "title": "Notfall-Ressourcen",
         "subtitle": "Bei unmittelbaren Sicherheitsbedenken wenden Sie sich direkt an professionelle Hilfe",
+        "emergencyCall": "Notruf (Europaweit):",
         "crisisLine": "Bundesweite Krisenleitung:",
         "crisisText": "Krisen-Text-Leitung:",
         "crisisTextAction": "Text HOME an 741741",

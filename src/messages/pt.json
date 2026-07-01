@@ -419,14 +419,13 @@
             "Sem monitorização em tempo real das conversas",
             "Sem reprodução de chats nem visualização do histórico de mensagens",
             "Sem pontuação emocional nem vigilância comportamental",
-            "Sem rastreio da localização ou utilização do dispositivo da criança",
             "Sem acesso dos pais aos registos de chat em bruto"
           ]
         },
         "does": {
           "title": "O que o SafeMentor faz:",
           "items": [
-            "Fornece um acompanhante IA para a criança conversar livremente",
+            "É um companheiro de IA adequado para crianças",
             "Deteta padrões que podem indicar risco",
             "Ajuda com os trabalhos de casa, mas não faz o trabalho",
             "Alerta os pais apenas quando são detetadas preocupações graves"
@@ -508,6 +507,7 @@
       "emergency": {
         "title": "Recursos de emergência",
         "subtitle": "Se tiver preocupações imediatas de segurança, contacte diretamente um profissional",
+        "emergencyCall": "Número de Emergência (Europa):",
         "crisisLine": "Linha nacional de crise:",
         "crisisText": "Linha de crise por mensagem:",
         "crisisTextAction": "Envie HOME para 741741",

@@ -1,0 +1,215 @@
+{
+  "mappings": {
+    "germany": "DE",
+    "deutschland": "DE",
+    "allemagne": "DE",
+    "austria": "AT",
+    "österreich": "AT",
+    "switzerland": "CH",
+    "schweiz": "CH",
+    "suisse": "CH",
+    "spain": "ES",
+    "spanien": "ES",
+    "españa": "ES",
+    "united kingdom": "GB",
+    "großbritannien": "GB",
+    "uk": "GB",
+    "ireland": "IE",
+    "irland": "IE",
+    "norway": "NO",
+    "norwegen": "NO",
+    "poland": "PL",
+    "polen": "PL",
+    "hungary": "HU",
+    "ungarn": "HU",
+    "czech republic": "CZ",
+    "tschechien": "CZ",
+    "france": "FR",
+    "frankreich": "FR",
+    "italy": "IT",
+    "italien": "IT",
+    "netherlands": "NL",
+    "niederlande": "NL",
+    "sweden": "SE",
+    "schweden": "SE",
+    "denmark": "DK",
+    "dänemark": "DK",
+    "portugal": "PT"
+  },
+  "countries": {
+    "DEFAULT": {
+      "emergencyNumber": "112",
+      "hotlines": []
+    },
+    "DE": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "TelefonSeelsorge",
+          "number": "116 123 (oder 0800 111 0 111)",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "GB": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Samaritans",
+          "number": "116 123",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "IE": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Samaritans Ireland",
+          "number": "116 123",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "NO": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Mental Helse",
+          "number": "116 123",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "PL": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Instytut Psychologii Zdrowia (IPZ)",
+          "number": "116 123",
+          "availability": "Täglich, meist 14:00 – 22:00 Uhr"
+        }
+      ]
+    },
+    "HU": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "LESZ (Mental Health Hotline)",
+          "number": "116 123",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "CZ": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Linka bezpečí / První psychická pomoc",
+          "number": "116 123",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "AT": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Telefonseelsorge Österreich",
+          "number": "142",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "CH": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Die Dargebotene Hand",
+          "number": "143",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "FR": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "National Suicide Prevention Helpline",
+          "number": "3114",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "ES": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Teléfono de la Esperanza / Linea 024",
+          "number": "024",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "IT": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Telefono Amico Italia",
+          "number": "02 2327 2327",
+          "availability": "Täglich von 10:00 – 24:00 Uhr"
+        }
+      ]
+    },
+    "NL": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "De Luisterlijn",
+          "number": "088 0767 000",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "SE": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Mind (Självmordslinjen) / Jourhavande Medmänniska",
+          "number": "90101",
+          "availability": "24/7"
+        }
+      ]
+    },
+    "DK": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "Livslinien",
+          "number": "70 201 201",
+          "availability": "Täglich von 11:00 – 05:00 Uhr"
+        }
+      ]
+    },
+    "PT": {
+      "emergencyNumber": "112",
+      "hotlines": [
+        {
+          "name": "SNS 24 (Linha de Apoio Psicológico)",
+          "number": "1411 (oder 808 24 24 24)",
+          "availability": "24/7"
+        },
+        {
+          "name": "SOS Voz Amiga",
+          "number": "213 544 545 (oder 912 802 669 / 963 524 660)",
+          "availability": "Täglich von 15:30 bis 00:30 Uhr"
+        },
+        {
+          "name": "Conversa Amiga",
+          "number": "808 237 327 (oder 210 027 159)",
+          "availability": "Täglich von 15:00 bis 22:00 Uhr"
+        }
+      ]
+    }
+  }
+}
