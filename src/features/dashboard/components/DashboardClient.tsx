@@ -104,7 +104,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
                     )}
 
                     {activeSection === 'privacy' && <Privacy />}
-                    {activeSection === 'help' && <HelpSupport />}
+                    {activeSection === 'help' && <HelpSupport profile={profile} />}
                 </div>
             </main>
         </div>

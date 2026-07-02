@@ -325,7 +325,8 @@
       "childrenname": "Nome completo do filho",
       "email": "filho@exemplo.com",
       "selectChild": "Selecione um filho da lista",
-      "selectChildToEdit": "Por favor, selecione um filho na lista acima para visualizar ou editar as suas informações."
+      "selectChildToEdit": "Por favor, selecione um filho na lista acima para visualizar ou editar as suas informações.",
+      "country": "Selecionar país"
     },
     "content": {
       "noChildren": "Nenhum filho listado ainda. Clique no botão abaixo para adicionar.",
@@ -418,14 +419,13 @@
             "Sem monitorização em tempo real das conversas",
             "Sem reprodução de chats nem visualização do histórico de mensagens",
             "Sem pontuação emocional nem vigilância comportamental",
-            "Sem rastreio da localização ou utilização do dispositivo da criança",
             "Sem acesso dos pais aos registos de chat em bruto"
           ]
         },
         "does": {
           "title": "O que o SafeMentor faz:",
           "items": [
-            "Fornece um acompanhante IA para a criança conversar livremente",
+            "É um companheiro de IA adequado para crianças",
             "Deteta padrões que podem indicar risco",
             "Ajuda com os trabalhos de casa, mas não faz o trabalho",
             "Alerta os pais apenas quando são detetadas preocupações graves"
@@ -507,6 +507,7 @@
       "emergency": {
         "title": "Recursos de emergência",
         "subtitle": "Se tiver preocupações imediatas de segurança, contacte diretamente um profissional",
+        "emergencyCall": "Número de Emergência (Europa):",
         "crisisLine": "Linha nacional de crise:",
         "crisisText": "Linha de crise por mensagem:",
         "crisisTextAction": "Envie HOME para 741741",
@@ -545,7 +546,11 @@
       "privacy": {
         "title": "Proteção de privacidade ativa",
         "desc": "As mensagens individuais permanecem privadas para proteger o espaço confidencial do seu filho. Os alertas de segurança são apresentados separadamente se a IA detetar padrões preocupantes."
-      }
+      },
+      "warningsTitle7d": "Avisos (últimos 7 dias)",
+      "warningsTitle30d": "Avisos (últimos 30 dias)",
+      "noWarnings": "Sem avisos neste período",
+      "warningText": "Aviso"
     },
     "children_new": {
       "title": "Dados das crianças",
@@ -728,8 +733,8 @@
     },
     "Hero": {
       "eyebrow": "Nutrindo o Crescimento, Juntos",
-      "title": "Apoiando crianças com orientação, confiança e espaço para crescer",
-      "subtitle": "O SafeMentor ajuda as famílias a nutrir a curiosidade, construir confiança e apoiar o desenvolvimento saudável — com uma tecnologia que respeita a infância.",
+      "title": "A curiosidade merece um espaço seguro para crescer",
+      "subtitle": "Conheça o SafeMentor. Um companheiro de IA criado para crianças. Desenvolvido para ajudá-las a pensar e resolver problemas, não para fazer por elas.",
       "ctaPrimary": "Descubra Nossa Abordagem",
       "ctaSecondary": "Para os Pais"
     },

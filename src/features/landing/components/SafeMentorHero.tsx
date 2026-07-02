@@ -35,8 +35,8 @@ export const SafeMentorHero = () => {
                         <div className="relative">
                             <div className="w-full aspect-square organic-blob-2 p-8 flex items-center justify-center bg-[#F5F2EC]/50" id="hero-illustration-bg">
                                 <Image
-                                    src="/svg/hero-illustration.svg"
-                                    alt="Parent and child reading together"
+                                    src="/images/hero-illustration-remove.png"
+                                    alt="Parent and child"
                                     width={300}
                                     height={300}
                                     className="w-full h-full max-w-md mx-auto object-contain"

@@ -8,10 +8,23 @@ import {
     MessageSquare, Activity, LayoutDashboard, BellRing
 } from 'lucide-react';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { Profile } from '@/types/database';
+import emergencyData from '../data/emergencyResources.json';
 
-export function HelpSupport() {
+export function HelpSupport({ profile }: { profile?: Partial<Profile> }) {
     const t = useTranslations('Dashboard.help_new');
+    const locale = useLocale();
+
+    const fallbackCountryCode = locale === 'de' ? 'DE' : locale === 'es' ? 'ES' : locale === 'pt' ? 'PT' : 'GB';
+    const userCountryRaw = profile?.address_country && profile.address_country.trim();
+    
+    let countryCode = fallbackCountryCode;
+    if (userCountryRaw) {
+        const normalized = userCountryRaw.toLowerCase().trim();
+        countryCode = emergencyData.mappings[normalized as keyof typeof emergencyData.mappings] || fallbackCountryCode;
+    }
+    const resource = emergencyData.countries[countryCode as keyof typeof emergencyData.countries] || emergencyData.countries.DEFAULT;
 
     return (
         <div className="space-y-6 animate-in fade-in duration-500">
@@ -20,26 +33,6 @@ export function HelpSupport() {
                 <h1 className="text-3xl font-bold text-gray-900 mb-1">{t('title')}</h1>
                 <p className="text-gray-600">{t('subtitle')}</p>
             </div>
-
-            {/* Section 1: Documentation */}
-            <Card shadow="none" className="border-none bg-[#EBF0E9] p-2">
-                <CardBody className="flex flex-col items-center text-center py-6 space-y-4">
-                    <div className="p-3 bg-white/50 rounded-2xl">
-                        <FileText className="w-8 h-8 text-[#5E6B56]" />
-                    </div>
-                    <div>
-                        <h3 className="text-lg font-bold text-[#424B3C]">{t('docs.title')}</h3>
-                        <p className="text-[#5E6B56] text-sm">{t('docs.desc')}</p>
-                    </div>
-                    <Button 
-                        className="bg-[#8CAB7D] text-white font-bold px-8"
-                        endContent={<ChevronRight size={16} />}
-                        radius="full"
-                    >
-                        {t('docs.button')}
-                    </Button>
-                </CardBody>
-            </Card>
 
             {/* Section 2: Why This Is Not a Surveillance Tool */}
             <Card shadow="none" className="border border-divider bg-default-50/30 p-2">
@@ -61,7 +54,6 @@ export function HelpSupport() {
                                 <li>• {t('surveillance.notDo.items.1')}</li>
                                 <li>• {t('surveillance.notDo.items.2')}</li>
                                 <li>• {t('surveillance.notDo.items.3')}</li>
-                                <li>• {t('surveillance.notDo.items.4')}</li>
                             </ul>
                         </div>
 
@@ -241,21 +233,27 @@ export function HelpSupport() {
                     </div>
 
                     <div className="space-y-2">
+                        {/* 112 European Emergency */}
                         <div className="bg-white p-3 rounded-xl border border-danger-100 text-center">
                             <p className="text-xs font-medium text-gray-700">
-                                {t('emergency.crisisLine')} <span className="text-danger font-bold">988</span>
+                                {t('emergency.emergencyCall') || 'Notruf (Europaweit):'} <span className="text-danger font-bold">{resource.emergencyNumber}</span>
                             </p>
                         </div>
-                        <div className="bg-white p-3 rounded-xl border border-danger-100 text-center">
-                            <p className="text-xs font-medium text-gray-700">
-                                {t('emergency.crisisText')} <span className="text-danger font-bold uppercase">{t('emergency.crisisTextAction')}</span>
-                            </p>
-                        </div>
-                        <div className="bg-white p-3 rounded-xl border border-danger-100 text-center">
-                            <p className="text-xs font-medium text-gray-700">
-                                {t('emergency.findTherapist')} <span className="text-danger font-bold">www.1116117.de</span>
-                            </p>
-                        </div>
+
+                        {/* Country-Specific Hotlines */}
+                        {resource.hotlines.map((hotline: any, idx: number) => (
+                            <div key={idx} className="bg-white p-3 rounded-xl border border-danger-100 text-center">
+                                <p className="text-xs font-medium text-gray-700">
+                                    <span className="font-semibold">{hotline.name}:</span>{' '}
+                                    <span className="text-danger font-bold">{hotline.number}</span>
+                                    {hotline.availability && (
+                                        <span className="text-gray-500 text-[11px] block mt-0.5">
+                                            ({hotline.availability})
+                                        </span>
+                                    )}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </CardBody>
             </Card>

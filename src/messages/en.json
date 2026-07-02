@@ -248,6 +248,26 @@
       "plan": "Current Plan",
       "familyPlan": "Family Plan"
     },
+    "consent": {
+      "title": "Consent, Revocation and Termination",
+      "privacyTitle": "Privacy Policy",
+      "privacySubtitle": "Version 2.3 – accepted on 12.03.2026",
+      "termsTitle": "General Terms and Conditions",
+      "termsSubtitle": "Version 1.5 – accepted on 12.03.2026",
+      "active": "Active",
+      "view": "view",
+      "withdraw": "Revoke",
+      "modalTitle": "Revoke Contract",
+      "modalWarning": "Do you really want to revoke? This will automatically revoke the contract and you will not be able to continue using Safementor after the agreed duration of use has expired.",
+      "cancel": "Terminate",
+      "back": "Back",
+      "thankYou": "Thank you for being a Safementor customer. We are sorry to see you go. We would appreciate feedback on why you no longer want to be a customer.",
+      "feedbackBtn": "Feedback",
+      "feedbackPlaceholder": "Share your reasons with us...",
+      "submitFeedback": "Submit",
+      "close": "Close",
+      "feedbackSuccess": "Thank you for your feedback!"
+    },
     "sidebar": {
       "subtitle": "Parent Dashboard",
       "chat": "Go to Chat APP",
@@ -326,7 +346,8 @@
       "childrenname": "Child's full name",
       "email": "child@example.com",
       "selectChild": "Select a child from the list",
-      "selectChildToEdit": "Please select a child from the list above to view or edit their information."
+      "selectChildToEdit": "Please select a child from the list above to view or edit their information.",
+      "country": "Select country"
     },
     "content": {
       "noChildren": "No children listed yet. Click button below to add.",
@@ -419,14 +440,13 @@
             "No live monitoring of conversations",
             "No chat replay or message history viewing",
             "No emotion scoring or behavioral surveillance",
-            "No tracking of child's location or device usage",
             "No parent access to raw chat logs"
           ]
         },
         "does": {
           "title": "What SafeMentor Does:",
           "items": [
-            "Provides AI companion for child to talk freely",
+            "Is a child friendly AI companion",
             "Detects patterns that may indicate risk",
             "Helps with homework, but doesn't do the work",
             "Alerts parents only when serious concerns detected"
@@ -508,6 +528,7 @@
       "emergency": {
         "title": "Emergency Resources",
         "subtitle": "If you have immediate safety concerns, contact professional help directly",
+        "emergencyCall": "Emergency Call (Europe-wide):",
         "crisisLine": "National Crisis Line:",
         "crisisText": "Crisis Text Line:",
         "crisisTextAction": "Text HOME to 741741",
@@ -546,7 +567,11 @@
       "privacy": {
         "title": "Privacy Protection Active",
         "desc": "Only aggregated emotional trends are shown. Individual messages remain private to protect your child's confidential space. Safety alerts are shown separately if AI detects concerning patterns."
-      }
+      },
+      "warningsTitle7d": "Warnings (last 7 days)",
+      "warningsTitle30d": "Warnings (last 30 days)",
+      "noWarnings": "No warnings in this period",
+      "warningText": "Warning"
     },
     "children_new": {
       "title": "Children Data",
@@ -729,8 +754,8 @@
     },
     "Hero": {
       "eyebrow": "Nurturing Growth, Together",
-      "title": "safeMentor - a digital Mentor for Children",
-      "subtitle": "SafeMentor helps families nurture curiosity, build trust, and support healthy development — with technology that respects childhood.",
+      "title": "Curiosity Deserves a Safe Space to Grow",
+      "subtitle": "Meet SafeMentor. An AI companion built for children. Designed to help them think and solve problems, not do it for them.",
       "ctaPrimary": "Discover Our Approach",
       "ctaSecondary": "For Parents"
     },
