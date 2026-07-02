@@ -368,7 +368,7 @@
         },
         "service": {
           "title": "Operación del Servicio (Necesidad Contractual)",
-          "desc": "Procesamiento técnico requerido para prestar el servicio de compañero de IA"
+          "desc": "Procesamiento técnico requerido para prestar el servicio de compañero de aprendizaje de IA"
         },
         "interest": {
           "title": "Interés Legítimo (Con Salvaguardias)",
@@ -445,7 +445,7 @@
         "does": {
           "title": "Lo Que Hace SafeMentor:",
           "items": [
-            "Es un acompañante IA adecuado para niños",
+            "Es un compañero de aprendizaje de IA adecuado para niños",
             "Detecta patrones que pueden indicar riesgo",
             "Ayuda con los deberes, pero no hace el trabajo",
             "Alerta a los padres solo cuando se detectan preocupaciones graves"
@@ -476,7 +476,7 @@
         "title": "Cómo Funciona SafeMentor",
         "subtitle": "Nuestro enfoque de privacidad primero",
         "step1": {
-          "title": "El Niño Habla con el Compañero de IA",
+          "title": "El Niño Habla con el compañero de aprendizaje de IA",
           "desc": "Conversaciones privadas en un espacio seguro"
         },
         "step2": {
@@ -754,7 +754,7 @@
     "Hero": {
       "eyebrow": "Creciendo Juntos",
       "title": "La curiosidad merece un espacio seguro para crecer",
-      "subtitle": "Conoce a SafeMentor. Un compañero de IA creado para niños. Diseñado para ayudarlos a pensar y resolver problemas, no para hacerlo por ellos.",
+      "subtitle": "Conoce a SafeMentor. Un compañero de aprendizaje de IA creado para niños. Diseñado para fomentar el pensamiento crítico y la resolución de problemas en lugar de solo dar respuestas.",
       "ctaPrimary": "Descubre Nuestro Enfoque",
       "ctaSecondary": "Para Padres"
     },
@@ -767,11 +767,11 @@
     "Values": {
       "eyebrow": "Qué es SafeMentor",
       "title": "SafeMentor no es otro producto de tiempo frente a la pantalla",
-      "description": "Es un compañero de pensamiento y mentoría diseñado para ayudar a los niños a desarrollar curiosidad, responsabilidad, fortaleza emocional y conexión con el mundo real — con un fuerte apoyo para los padres.",
+      "description": "Es un compañero de aprendizaje, pensamiento y mentoría diseñado para ayudar a los niños a desarrollar curiosidad, responsabilidad, fortaleza emocional y conexión con el mundo real — con un fuerte apoyo para los padres.",
       "emphasis": "Los niños no necesitan más aplicaciones. Necesitan orientación, confianza y espacio para crecer.",
       "citation": "SafeMentor se basa en principios de desarrollo infantil reconocidos internacionalmente de Gerald Hüther, Jesper Juul, Dan Siegel y pensamiento basado en principios. No moldeamos a los niños mediante el control. Invitamos al desarrollo a través de la relación.",
       "card1": {
-        "title": "Etapa 1 – Acompañamiento normal",
+        "title": "Etapa 1 – Tutoría normal",
         "desc": "SafeMentor responde de forma cálida, adecuada a la edad y pedagógicamente cuidada. Sin intervención, sin notificación. Su hijo es acompañado – usted no tiene que hacer nada."
       },
       "card2": {
@@ -900,7 +900,7 @@
       "receives": {
         "title": "Los padres reciben:",
         "list": [
-          "Acompañamiento IA seguro: Para que su hijo esté en buenas manos en internet.",
+          "Tutoría de IA segura: Para que su hijo esté en buenas manos en internet.",
           "Contexto sobre el significado de las señales – y lo que no significan",
           "Sugerencias para conversaciones con su hijo",
           "Estímulo para construir confianza y conexión"
@@ -1272,7 +1272,7 @@
       "title": "Cómo protegemos a su hijo",
       "stage1": {
         "badge": "Etapa 1 — Siempre activa",
-        "title": "Acompañamiento normal",
+        "title": "Tutoría normal",
         "desc": "SafeMentor responde de forma cálida, adecuada a la edad y pedagógicamente cuidada. Sin intervención, sin notificación. Su hijo es acompañado — usted no tiene que hacer nada."
       },
       "stage2": {
