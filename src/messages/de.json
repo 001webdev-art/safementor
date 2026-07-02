@@ -368,7 +368,7 @@
         },
         "service": {
           "title": "Servicebetrieb (Vertragliche Notwendigkeit)",
-          "desc": "Technische Verarbeitung, die für die Bereitstellung des KI-Begleiter-Dienstes erforderlich ist"
+          "desc": "Technische Verarbeitung, die für die Bereitstellung des KI-Lernpartner-Dienstes erforderlich ist"
         },
         "interest": {
           "title": "Berechtigtes Interesse (Mit Schutzmaßnahmen)",
@@ -445,7 +445,7 @@
         "does": {
           "title": "Was SafeMentor tut:",
           "items": [
-            "Ist ein kindgerechter KI-Begleiter",
+            "Ist ein kindgerechter KI-Lernpartner",
             "Erkennt Muster, die auf Risiken hinweisen könnten",
             "Hilft bei Hausaufgaben, aber übernimmt nicht die Arbeit",
             "Alarmiert Eltern nur, wenn ernste Bedenken erkannt werden"
@@ -476,7 +476,7 @@
         "title": "Wie SafeMentor funktioniert",
         "subtitle": "Unser Privacy-First-Ansatz",
         "step1": {
-          "title": "Kind spricht mit KI-Begleiter",
+          "title": "Kind spricht mit KI-Lernpartner",
           "desc": "Private Gespräche in einem sicheren Raum"
         },
         "step2": {
@@ -754,7 +754,7 @@
     "Hero": {
       "eyebrow": "Gemeinsam Wachstum fördern",
       "title": "Neugier braucht einen sicheren Raum zum Wachsen",
-      "subtitle": "Lerne SafeMentor kennen. Ein KI-Begleiter, der für Kinder entwickelt wurde. Er hilft beim Denken und Lösen von Problemen, anstatt es für sie zu übernehmen.",
+      "subtitle": "Lerne SafeMentor kennen. Ein KI-Lernpartner für Kinder. Entwickelt, um kritisches Denken und Problemlösung zu fördern, statt nur Antworten vorzugeben.",
       "ctaPrimary": "Unseren Ansatz entdecken",
       "ctaSecondary": "Für Eltern"
     },
@@ -767,11 +767,11 @@
     "Values": {
       "eyebrow": "Was SafeMentor ist",
       "title": "SafeMentor ist kein weiteres Bildschirmzeit-Produkt",
-      "description": "Es ist ein Denk- und Mentoring-Begleiter, der Kindern hilft, Neugier, Verantwortung, emotionale Stärke und echte Verbindung zur Welt zu entwickeln – mit starker Unterstützung für Eltern.",
+      "description": "Es ist ein Denk- und Mentoring-Lernpartner, der Kindern hilft, Neugier, Verantwortung, emotionale Stärke und echte Verbindung zur Welt zu entwickeln – mit starker Unterstützung für Eltern.",
       "emphasis": "Kinder brauchen nicht mehr Apps. Sie brauchen Orientierung, Vertrauen und Raum zum Wachsen.",
       "citation": "SafeMentor basiert auf international anerkannten Prinzipien der Kindesentwicklung von Gerald Hüther, Jesper Juul, Dan Siegel und prinzipienbasiertem Denken. Wir formen Kinder nicht durch Kontrolle. Wir laden zu Entwicklung durch Beziehung ein.",
       "card1": {
-        "title": "Stufe 1 – Normale Begleitung",
+        "title": "Stufe 1 – Normale Lernbegleitung",
         "desc": "SafeMentor antwortet warm, altersgerecht und pädagogisch durchdacht. Kein Eingriff, keine Benachrichtigung. Ihr Kind wird begleitet – Sie müssen nichts tun."
       },
       "card2": {
@@ -900,7 +900,7 @@
       "receives": {
         "title": "Eltern erhalten:",
         "list": [
-          "Sichere KI-Begleitung: Damit Ihr Kind im Netz in guten Händen ist.",
+          "Sichere KI-Lernbegleitung: Damit Ihr Kind im Netz in guten Händen ist.",
           "Kontext für die Bedeutung von Signalen – und was sie nicht bedeuten",
           "Vorschläge für Gespräche mit ihrem Kind",
           "Ermutigung zum Aufbau von Vertrauen und Verbindung"
@@ -1272,7 +1272,7 @@
       "title": "Wie wir Ihr Kind schützen",
       "stage1": {
         "badge": "Stufe 1 — Immer aktiv",
-        "title": "Normale Begleitung",
+        "title": "Normale Lernbegleitung",
         "desc": "SafeMentor antwortet warm, altersgerecht und pädagogisch durchdacht. Kein Eingriff, keine Benachrichtigung. Ihr Kind wird begleitet — Sie müssen nichts tun."
       },
       "stage2": {

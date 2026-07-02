@@ -348,7 +348,7 @@
         },
         "service": {
           "title": "Operação do serviço (necessidade contratual)",
-          "desc": "Tratamento técnico necessário para prestar o serviço de acompanhante IA"
+          "desc": "Tratamento técnico necessário para prestar o serviço de parceiro de aprendizagem de IA"
         },
         "interest": {
           "title": "Interesse legítimo (com salvaguardas)",
@@ -425,7 +425,7 @@
         "does": {
           "title": "O que o SafeMentor faz:",
           "items": [
-            "É um companheiro de IA adequado para crianças",
+            "É um parceiro de aprendizagem de IA adequado para crianças",
             "Deteta padrões que podem indicar risco",
             "Ajuda com os trabalhos de casa, mas não faz o trabalho",
             "Alerta os pais apenas quando são detetadas preocupações graves"
@@ -456,7 +456,7 @@
         "title": "Como funciona o SafeMentor",
         "subtitle": "A nossa abordagem centrada na privacidade",
         "step1": {
-          "title": "A criança fala com o acompanhante IA",
+          "title": "A criança fala com o parceiro de aprendizagem de IA",
           "desc": "Conversas privadas num espaço seguro"
         },
         "step2": {
@@ -734,7 +734,7 @@
     "Hero": {
       "eyebrow": "Nutrindo o Crescimento, Juntos",
       "title": "A curiosidade merece um espaço seguro para crescer",
-      "subtitle": "Conheça o SafeMentor. Um companheiro de IA criado para crianças. Desenvolvido para ajudá-las a pensar e resolver problemas, não para fazer por elas.",
+      "subtitle": "Conheça o SafeMentor. Um parceiro de aprendizagem de IA criado para crianças. Desenvolvido para promover o pensamento crítico e a resolução de problemas em vez de apenas dar respostas.",
       "ctaPrimary": "Descubra Nossa Abordagem",
       "ctaSecondary": "Para os Pais"
     },
@@ -747,11 +747,11 @@
     "Values": {
       "eyebrow": "O que é o SafeMentor",
       "title": "O SafeMentor não é mais um produto de tempo de tela",
-      "description": "É um companheiro de pensamento e mentoria projetado para ajudar as crianças a desenvolver curiosidade, responsabilidade, força emocional e conexão com o mundo real — com forte apoio para os pais.",
+      "description": "É um parceiro de aprendizagem, pensamento e mentoria projetado para ajudar as crianças a desenvolver curiosidade, responsabilidade, força emocional e conexão com o mundo real — com forte apoio para os pais.",
       "emphasis": "As crianças não precisam de mais aplicativos. Elas precisam de orientação, confiança e espaço para crescer.",
       "citation": "O SafeMentor é construído sobre princípios de desenvolvimento infantil internacionalmente reconhecidos de Gerald Hüther, Jesper Juul, Dan Siegel e pensamento baseado em princípios. Não moldamos as crianças através do controle. Convidamos ao desenvolvimento através do relacionamento.",
       "card1": {
-        "title": "Etapa 1 – Acompanhamento normal",
+        "title": "Etapa 1 – Tutoria normal",
         "desc": "O SafeMentor responde de forma calorosa, adequada à idade e pedagogicamente cuidada. Sem intervenção, sem notificação. O seu filho é acompanhado – não precisa de fazer nada."
       },
       "card2": {
@@ -880,7 +880,7 @@
       "receives": {
         "title": "Os pais recebem:",
         "list": [
-          "Acompanhamento IA seguro: Para que o seu filho esteja em boas mãos na internet.",
+          "Tutoria de IA segura: Para que o seu filho esteja em boas mãos na internet.",
           "Contexto sobre o significado dos sinais – e o que não significam",
           "Sugestões para conversas com o seu filho",
           "Encorajamento para construir confiança e ligação"
@@ -1252,7 +1252,7 @@
       "title": "Como protegemos o seu filho",
       "stage1": {
         "badge": "Etapa 1 — Sempre ativa",
-        "title": "Acompanhamento normal",
+        "title": "Tutoria normal",
         "desc": "O SafeMentor responde de forma calorosa, adequada à idade e pedagogicamente cuidada. Sem intervenção, sem notificação. O seu filho é acompanhado — não precisa de fazer nada."
       },
       "stage2": {

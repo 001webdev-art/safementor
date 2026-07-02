@@ -369,7 +369,7 @@
         },
         "service": {
           "title": "Service Operation (Contractual Necessity)",
-          "desc": "Technical processing required to deliver the AI companion service"
+          "desc": "Technical processing required to deliver the AI learning partner service"
         },
         "interest": {
           "title": "Legitimate Interest (With Safeguards)",
@@ -446,7 +446,7 @@
         "does": {
           "title": "What SafeMentor Does:",
           "items": [
-            "Is a child friendly AI companion",
+            "Is a child friendly AI learning partner",
             "Detects patterns that may indicate risk",
             "Helps with homework, but doesn't do the work",
             "Alerts parents only when serious concerns detected"
@@ -477,7 +477,7 @@
         "title": "How SafeMentor Works",
         "subtitle": "Our privacy-first approach",
         "step1": {
-          "title": "Child Talks to AI Companion",
+          "title": "Child Talks to AI learning partner",
           "desc": "Private conversations in a safe space"
         },
         "step2": {
@@ -755,7 +755,7 @@
     "Hero": {
       "eyebrow": "Nurturing Growth, Together",
       "title": "Curiosity Deserves a Safe Space to Grow",
-      "subtitle": "Meet SafeMentor. An AI companion built for children. Designed to help them think and solve problems, not do it for them.",
+      "subtitle": "Meet SafeMentor. An AI learning partner built for children. Designed to foster critical thinking and problem solving instead of just giving answers.",
       "ctaPrimary": "Discover Our Approach",
       "ctaSecondary": "For Parents"
     },
@@ -768,11 +768,11 @@
     "Values": {
       "eyebrow": "What SafeMentor Is",
       "title": "SafeMentor is not another screen-time product",
-      "description": "It is a thinking and mentoring companion designed to help children develop curiosity, responsibility, emotional strength, and real-world connection — with strong support for parents.",
+      "description": "It is a thinking and mentoring learning partner designed to help children develop curiosity, responsibility, emotional strength, and real-world connection — with strong support for parents.",
       "emphasis": "Children don't need more apps. They need guidance, trust, and space to grow.",
       "citation": "SafeMentor is built on internationally recognized child-development principles from Gerald Hüther, Jesper Juul, Dan Siegel, and principle-based thinking. We do not shape children through control. We invite development through relationship.",
       "card1": {
-        "title": "Stage 1 – Normal Companionship",
+        "title": "Stage 1 – Normal tutoring",
         "desc": "SafeMentor responds warmly, age-appropriately and with pedagogical care. No intervention, no notification. Your child is accompanied – you don't need to do anything."
       },
       "card2": {
@@ -902,7 +902,7 @@
       "receives": {
         "title": "Parents receive:",
         "list": [
-          "Safe AI companionship: So your child is in good hands online.",
+          "Safe AI tutoring: So your child is in good hands online.",
           "Context for the meaning of signals – and what they don't mean",
           "Suggestions for conversations with their child",
           "Encouragement to build trust and connection"
@@ -1274,7 +1274,7 @@
       "title": "How we protect your child",
       "stage1": {
         "badge": "Stage 1 — Always active",
-        "title": "Normal companionship",
+        "title": "Normal tutoring",
         "desc": "SafeMentor responds warmly, age-appropriately and with pedagogical care. No intervention, no notification. Your child is accompanied — you don't need to do anything."
       },
       "stage2": {
