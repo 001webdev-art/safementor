@@ -1,0 +1,186 @@
+{
+  "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+  "language": "java",
+  "sha256": "ac951e151f6be1ffef2ab1800ecd1e5b9a288a2aa95242aa0c9ddd0821a00a72",
+  "flows": [
+    {
+      "id": "flow-4f51a0a0dfd7b9e6",
+      "name": "GeneratedPluginRegistrant.registerWith",
+      "symbol": "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:GeneratedPluginRegistrant.registerWith",
+      "language": "java",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+        "start_line": 17,
+        "end_line": 23
+      },
+      "nodes": [
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:n1",
+          "kind": "entry",
+          "label": "GeneratedPluginRegistrant.registerWith",
+          "location": {
+            "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+            "start_line": 17,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:GeneratedPluginRegistrant.registerWith",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:n2",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+            "start_line": 18,
+            "end_line": 22
+          },
+          "evidence": "INFERRED",
+          "detail": "try { flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin()); } catch (Exception e) { Log.e(TAG, \"Error registering plugin shared_preferences_android, io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin\", e); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:n3",
+          "kind": "call",
+          "label": "Call add()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());",
+          "metadata": {
+            "calls": [
+              "add",
+              "getPlugins",
+              "io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:add",
+              "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:getPlugins",
+              "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"
+            ]
+          }
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:n4",
+          "kind": "call",
+          "label": "Call e()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "Log.e(TAG, \"Error registering plugin shared_preferences_android, io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin\", e);",
+          "metadata": {
+            "calls": [
+              "e"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.android.app.src.main.java.io.flutter.plugins:e"
+            ]
+          }
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:n5",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java",
+            "start_line": 17,
+            "end_line": 23
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:e1",
+          "source": "flow-4f51a0a0dfd7b9e6:n1",
+          "target": "flow-4f51a0a0dfd7b9e6:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:e2",
+          "source": "flow-4f51a0a0dfd7b9e6:n2",
+          "target": "flow-4f51a0a0dfd7b9e6:n3",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:e3",
+          "source": "flow-4f51a0a0dfd7b9e6:n2",
+          "target": "flow-4f51a0a0dfd7b9e6:n4",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:e4",
+          "source": "flow-4f51a0a0dfd7b9e6:n3",
+          "target": "flow-4f51a0a0dfd7b9e6:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4f51a0a0dfd7b9e6:e5",
+          "source": "flow-4f51a0a0dfd7b9e6:n4",
+          "target": "flow-4f51a0a0dfd7b9e6:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

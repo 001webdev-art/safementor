@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ParentEmotionOverview.tsx",
+  "language": "typescript",
+  "sha256": "95a684b2d480e298993e404e759617263d5cff5e5b642222aa586b2c2c5a521d",
+  "flows": [
+    {
+      "id": "flow-b52f9403b0769a3e",
+      "name": "ParentEmotionOverview",
+      "symbol": "src.features.profile.components.ParentEmotionOverview:ParentEmotionOverview",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentEmotionOverview.tsx",
+        "start_line": 1,
+        "end_line": 144
+      },
+      "nodes": [
+        {
+          "id": "flow-b52f9403b0769a3e:n1",
+          "kind": "entry",
+          "label": "Component: ParentEmotionOverview",
+          "location": {
+            "path": "src/features/profile/components/ParentEmotionOverview.tsx",
+            "start_line": 1,
+            "end_line": 144
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentEmotionOverview:ParentEmotionOverview",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b52f9403b0769a3e:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden bo...",
+          "location": {
+            "path": "src/features/profile/components/ParentEmotionOverview.tsx",
+            "start_line": 2,
+            "end_line": 143
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden border-b-2 border-black p-4 flex justify-between items-center shrink-0\"> <div> <p className=\"text-sm font-bold\">SafeMentor</p> <p className=\"text-xs text-gray-600\">Parent Dashboard</p> </div> </div> {/* Main Content */} <div className=\"flex-1 p-4 md:p-8 overflow-y-auto\"> <h1 className=\"text-lg font-bold mb-6\">Emotion Overview</h1> {/* Child Selector */} <div className=\"mb-6 flex....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b52f9403b0769a3e:e1",
+          "source": "flow-b52f9403b0769a3e:n1",
+          "target": "flow-b52f9403b0769a3e:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

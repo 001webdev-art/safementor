@@ -1,0 +1,170 @@
+{
+  "path": "src/features/landing/components/CTASection.tsx",
+  "language": "typescript",
+  "sha256": "ad9b21e7729d32463c78ae12a1ca0c115cf38eb0ef0735c2ccfcb2a12cd30271",
+  "flows": [
+    {
+      "id": "flow-50b9f91929d64616",
+      "name": "CTASection",
+      "symbol": "src.features.landing.components.CTASection:CTASection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/CTASection.tsx",
+        "start_line": 5,
+        "end_line": 32
+      },
+      "nodes": [
+        {
+          "id": "flow-50b9f91929d64616:n1",
+          "kind": "entry",
+          "label": "Component: CTASection",
+          "location": {
+            "path": "src/features/landing/components/CTASection.tsx",
+            "start_line": 5,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.CTASection:CTASection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-50b9f91929d64616:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/CTASection.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('SafeMentor.CTA');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.CTASection:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-50b9f91929d64616:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/landing/components/CTASection.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.CTASection:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-50b9f91929d64616:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/CTASection.tsx",
+            "start_line": 9,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"max-w-4xl mx-auto\"> <div className=\"rounded-3xl p-10 md:p-16 text-center animate-fade-in bg-[#F5F2EC]/50\" id=\"cta-card\"> <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-6 text-[#4A4540]\" id=\"cta-title\"> {t('title')} </h2> <p className=\"text-lg opacity-80 mb-8 max-w-xl mx-auto text-[#4A4540]\" id=\"cta-subtitle\"> {t('subtitle')} </p> <div className=\"flex flex-wrap justify-center gap...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.CTASection:t",
+              "src.features.landing.components.CTASection:t",
+              "src.features.landing.components.CTASection:t",
+              "src.features.landing.components.CTASection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-50b9f91929d64616:n5",
+          "kind": "terminal",
+          "label": "Return ( <section className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"max-w-4xl mx-a...",
+          "location": {
+            "path": "src/features/landing/components/CTASection.tsx",
+            "start_line": 9,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"max-w-4xl mx-auto\"> <div className=\"rounded-3xl p-10 md:p-16 text-center animate-fade-in bg-[#F5F2EC]/50\" id=\"cta-card\"> <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-6 text-[#4A4540]\" id=\"cta-title\"> {t('title')} </h2> <p className=\"text-lg opacity-80 mb-8 max-w-xl mx-auto text-[#4A4540]\" id=\"cta-subtitle\"> {t('subtitle')} </p> <div className=\"flex flex-wrap justify-center gap...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-50b9f91929d64616:e1",
+          "source": "flow-50b9f91929d64616:n1",
+          "target": "flow-50b9f91929d64616:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-50b9f91929d64616:e2",
+          "source": "flow-50b9f91929d64616:n2",
+          "target": "flow-50b9f91929d64616:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-50b9f91929d64616:e3",
+          "source": "flow-50b9f91929d64616:n3",
+          "target": "flow-50b9f91929d64616:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-50b9f91929d64616:e4",
+          "source": "flow-50b9f91929d64616:n4",
+          "target": "flow-50b9f91929d64616:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

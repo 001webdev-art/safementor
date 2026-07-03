@@ -1,0 +1,30 @@
+{
+  "path": "src/types/database.ts",
+  "language": "typescript",
+  "sha256": "362c9ea04cb50df598501d0a8bf34cf7c5a67988221138470c15439b4a6f6121",
+  "flows": [],
+  "enums": {
+    "Gender": [
+      "male",
+      "female",
+      "diverse",
+      "prefer_not_to_say"
+    ],
+    "RelativeToChildren": [
+      "Mother",
+      "Father",
+      "Uncle",
+      "Aunt",
+      "Grandfather",
+      "Grandmother",
+      "Other"
+    ],
+    "Theme": [
+      "light",
+      "dark",
+      "system"
+    ]
+  },
+  "constants": {},
+  "dependencies": []
+}

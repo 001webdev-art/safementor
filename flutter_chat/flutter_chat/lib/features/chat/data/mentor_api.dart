@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../core/config/app_config.dart';
@@ -22,7 +23,7 @@ class MentorApi {
 
   Stream<MentorChunk> streamResponse({
     required String message,
-    required String childAge,
+    required int childAge,
     required String childLanguage,
     required List<Map<String, String>> chatHistory,
   }) async* {
@@ -43,6 +44,7 @@ class MentorApi {
     final response = await _client.send(request);
     if (response.statusCode < 200 || response.statusCode >= 300) {
       final body = await response.stream.bytesToString();
+      debugPrint('Mentor API error (${response.statusCode}): $body');
       throw Exception('Mentor API error (${response.statusCode}): $body');
     }
 

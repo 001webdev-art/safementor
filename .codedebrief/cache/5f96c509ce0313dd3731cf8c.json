@@ -1,0 +1,77 @@
+{
+  "path": "src/features/chat/components/screens/ExitScreen.tsx",
+  "language": "typescript",
+  "sha256": "207276fb48c5177ab7c3fde43c98439048f6359f884c165c05db667019019844",
+  "flows": [
+    {
+      "id": "flow-b1ca677968e6b07b",
+      "name": "ExitScreen",
+      "symbol": "src.features.chat.components.screens.ExitScreen:ExitScreen",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/screens/ExitScreen.tsx",
+        "start_line": 13,
+        "end_line": 62
+      },
+      "nodes": [
+        {
+          "id": "flow-b1ca677968e6b07b:n1",
+          "kind": "entry",
+          "label": "Component: ExitScreen",
+          "location": {
+            "path": "src/features/chat/components/screens/ExitScreen.tsx",
+            "start_line": 13,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.ExitScreen:ExitScreen",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b1ca677968e6b07b:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans items-center justify-center p-8 text-center relati...",
+          "location": {
+            "path": "src/features/chat/components/screens/ExitScreen.tsx",
+            "start_line": 14,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans items-center justify-center p-8 text-center relative overflow-hidden\"> {/* Background Decor */} <div className=\"absolute top-[-20%] left-[-20%] w-96 h-96 bg-[#E8EDE6] rounded-full blur-[100px] opacity-40 pointer-events-none\" /> <div className=\"relative z-10 animate-in zoom-in-95 duration-500\"> <div className=\"w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-8 shadow-xl shadow-[#D4DDD0] ring-4 ring-wh...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b1ca677968e6b07b:e1",
+          "source": "flow-b1ca677968e6b07b:n1",
+          "target": "flow-b1ca677968e6b07b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

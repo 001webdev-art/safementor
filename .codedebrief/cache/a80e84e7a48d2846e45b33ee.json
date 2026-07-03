@@ -1,0 +1,77 @@
+{
+  "path": "src/features/chat/components/ChatEmojiPicker.tsx",
+  "language": "typescript",
+  "sha256": "9158995fe8feef9cc4a6328a491a191afc8d2a09db00f59bc2c0d42ae4d8f67c",
+  "flows": [
+    {
+      "id": "flow-d715de17c890ee67",
+      "name": "ChatEmojiPicker",
+      "symbol": "src.features.chat.components.ChatEmojiPicker:ChatEmojiPicker",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/ChatEmojiPicker.tsx",
+        "start_line": 10,
+        "end_line": 27
+      },
+      "nodes": [
+        {
+          "id": "flow-d715de17c890ee67:n1",
+          "kind": "entry",
+          "label": "Component: ChatEmojiPicker",
+          "location": {
+            "path": "src/features/chat/components/ChatEmojiPicker.tsx",
+            "start_line": 10,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.ChatEmojiPicker:ChatEmojiPicker",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d715de17c890ee67:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"emoji-picker-wrapper\"> <EmojiPicker onEmojiClick={onEmojiClick} width={300} height={400} lazyL...",
+          "location": {
+            "path": "src/features/chat/components/ChatEmojiPicker.tsx",
+            "start_line": 11,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"emoji-picker-wrapper\"> <EmojiPicker onEmojiClick={onEmojiClick} width={300} height={400} lazyLoadEmojis={true} theme={Theme.AUTO} searchDisabled={true} skinTonesDisabled={false} previewConfig={{ showPreview: false }} /> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d715de17c890ee67:e1",
+          "source": "flow-d715de17c890ee67:n1",
+          "target": "flow-d715de17c890ee67:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "path": "src/features/dashboard/index.ts",
+  "language": "typescript",
+  "sha256": "b269b7a68d525974a03a3df698236717cfaf3849470e24de4367355a858745f1",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

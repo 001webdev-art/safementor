@@ -1,0 +1,167 @@
+{
+  "path": "src/app/[locale]/chat/layout.tsx",
+  "language": "typescript",
+  "sha256": "fd9ef9df06a97654c3b2c5764df6a4319fe7e37df650f705bc855fe1e52786e0",
+  "flows": [
+    {
+      "id": "flow-33046ed6bd06525a",
+      "name": "generateMetadata",
+      "symbol": "src.app.[locale].chat.layout:generateMetadata",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/chat/layout.tsx",
+        "start_line": 3,
+        "end_line": 19
+      },
+      "nodes": [
+        {
+          "id": "flow-33046ed6bd06525a:n1",
+          "kind": "entry",
+          "label": "Component: generateMetadata",
+          "location": {
+            "path": "src/app/[locale]/chat/layout.tsx",
+            "start_line": 3,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].chat.layout:generateMetadata",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-33046ed6bd06525a:n2",
+          "kind": "action",
+          "label": "Set { locale }",
+          "location": {
+            "path": "src/app/[locale]/chat/layout.tsx",
+            "start_line": 4,
+            "end_line": 4
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { locale } = params;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-33046ed6bd06525a:n3",
+          "kind": "terminal",
+          "label": "Return { manifest: `/${locale}/chat/manifest.json`, appleWebApp: { capable: true, statusBarStyle: 'default', title: 'Sa...",
+          "location": {
+            "path": "src/app/[locale]/chat/layout.tsx",
+            "start_line": 5,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { manifest: `/${locale}/chat/manifest.json`, appleWebApp: { capable: true, statusBarStyle: 'default', title: 'Safementor Chat', }, formatDetection: { telephone: false, }, other: { 'mobile-web-app-capable': 'yes', } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-33046ed6bd06525a:e1",
+          "source": "flow-33046ed6bd06525a:n1",
+          "target": "flow-33046ed6bd06525a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-33046ed6bd06525a:e2",
+          "source": "flow-33046ed6bd06525a:n2",
+          "target": "flow-33046ed6bd06525a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-127cea447d290dee",
+      "name": "ChatLayout",
+      "symbol": "src.app.[locale].chat.layout:ChatLayout",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/chat/layout.tsx",
+        "start_line": 23,
+        "end_line": 33
+      },
+      "nodes": [
+        {
+          "id": "flow-127cea447d290dee:n1",
+          "kind": "entry",
+          "label": "Component: ChatLayout",
+          "location": {
+            "path": "src/app/[locale]/chat/layout.tsx",
+            "start_line": 23,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].chat.layout:ChatLayout",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-127cea447d290dee:n2",
+          "kind": "terminal",
+          "label": "Return ( <ChildProvider> {children} </ChildProvider> )",
+          "location": {
+            "path": "src/app/[locale]/chat/layout.tsx",
+            "start_line": 28,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <ChildProvider> {children} </ChildProvider> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-127cea447d290dee:e1",
+          "source": "flow-127cea447d290dee:n1",
+          "target": "flow-127cea447d290dee:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,152 @@
+{
+  "path": "src/app/[locale]/chat/manifest.json/route.ts",
+  "language": "typescript",
+  "sha256": "96bd0b4f474414c5a99c41c2cb1b3c6e2d89fa817d423a362e40c9d87d060032",
+  "flows": [
+    {
+      "id": "flow-48a97f60f308a8b4",
+      "name": "GET",
+      "symbol": "src.app.[locale].chat.manifest.json.route:GET",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "route",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/chat/manifest.json/route.ts",
+        "start_line": 3,
+        "end_line": 49
+      },
+      "nodes": [
+        {
+          "id": "flow-48a97f60f308a8b4:n1",
+          "kind": "entry",
+          "label": "Route: GET",
+          "location": {
+            "path": "src/app/[locale]/chat/manifest.json/route.ts",
+            "start_line": 3,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].chat.manifest.json.route:GET",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:n2",
+          "kind": "action",
+          "label": "Set locale",
+          "location": {
+            "path": "src/app/[locale]/chat/manifest.json/route.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = params.locale;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:n3",
+          "kind": "action",
+          "label": "Set manifest",
+          "location": {
+            "path": "src/app/[locale]/chat/manifest.json/route.ts",
+            "start_line": 9,
+            "end_line": 46
+          },
+          "evidence": "VERIFIED",
+          "detail": "const manifest = { \"name\": \"Safementor - AI Chat PWA\", \"short_name\": \"Safementor\", \"description\": \"Secure and intelligent AI Chat for your daily needs.\", \"start_url\": `/${locale}/chat`, \"id\": `/${locale}/chat`, \"display\": \"standalone\", \"background_color\": \"#ffffff\", \"theme_color\": \"#006FEE\", \"orientation\": \"portrait\", \"scope\": `/${locale}/chat`, \"icons\": [ { \"src\": \"/icon-192x192.png\", \"sizes\": \"192x192\", \"type\": \"image/png\", \"purpose\": \"any\" }, { \"src\": \"/icon-192x192.png\", \"sizes\": \"192x192\",...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:n4",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/[locale]/chat/manifest.json/route.ts",
+            "start_line": 48,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json(manifest);",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].chat.manifest.json.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:n5",
+          "kind": "terminal",
+          "label": "Return NextResponse.json(manifest)",
+          "location": {
+            "path": "src/app/[locale]/chat/manifest.json/route.ts",
+            "start_line": 48,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json(manifest);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-48a97f60f308a8b4:e1",
+          "source": "flow-48a97f60f308a8b4:n1",
+          "target": "flow-48a97f60f308a8b4:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:e2",
+          "source": "flow-48a97f60f308a8b4:n2",
+          "target": "flow-48a97f60f308a8b4:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:e3",
+          "source": "flow-48a97f60f308a8b4:n3",
+          "target": "flow-48a97f60f308a8b4:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-48a97f60f308a8b4:e4",
+          "source": "flow-48a97f60f308a8b4:n4",
+          "target": "flow-48a97f60f308a8b4:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

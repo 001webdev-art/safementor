@@ -1,0 +1,210 @@
+{
+  "path": "src/features/dashboard/components/DashboardNav.tsx",
+  "language": "typescript",
+  "sha256": "0d0283044f69625e888b7c67ec21bb20b79a732109bbf4a3ac6d438df892cd8e",
+  "flows": [
+    {
+      "id": "flow-41a4e422b0762982",
+      "name": "DashboardNav",
+      "symbol": "src.features.dashboard.components.DashboardNav:DashboardNav",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/DashboardNav.tsx",
+        "start_line": 29,
+        "end_line": 168
+      },
+      "nodes": [
+        {
+          "id": "flow-41a4e422b0762982:n1",
+          "kind": "entry",
+          "label": "Component: DashboardNav",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 29,
+            "end_line": 168
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.DashboardNav:DashboardNav",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardNav:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isSettingsOpen, setIsSettingsOpen] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardNav:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n4",
+          "kind": "action",
+          "label": "Set navItems",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 33,
+            "end_line": 46
+          },
+          "evidence": "VERIFIED",
+          "detail": "const navItems: NavItem[] = [ { id: 'overview', label: 'Overview', icon: Shield }, { id: 'notifications', label: 'Notifications', icon: Bell }, { id: 'settings', label: 'Settings', icon: Settings, subItems: [ { id: 'personal-data', label: 'Personal data', icon: User }, { id: 'children-data', label: 'Children data', icon: Baby }, ] }, { id: 'privacy', label: 'Privacy', icon: Lock }, ];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n5",
+          "kind": "action",
+          "label": "Set MobileToggle",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 48,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "const MobileToggle = () => ( <button className=\"md:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg\" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} > {isMobileMenuOpen ? <X className=\"w-6 h-6\" /> : <Menu className=\"w-6 h-6\" />} </button> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n6",
+          "kind": "call",
+          "label": "Call navItems.map()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 57,
+            "end_line": 167
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <> <MobileToggle /> <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 flex flex-col h-full `}> <div className=\"p-6 border-b border-gray-100\"> <div className=\"flex items-center gap-3\"> <div className=\"w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <div...",
+          "metadata": {
+            "calls": [
+              "navItems.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardNav:navItems.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-41a4e422b0762982:n7",
+          "kind": "terminal",
+          "label": "Return ( <> <MobileToggle /> <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gr...",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardNav.tsx",
+            "start_line": 57,
+            "end_line": 167
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <> <MobileToggle /> <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 flex flex-col h-full `}> <div className=\"p-6 border-b border-gray-100\"> <div className=\"flex items-center gap-3\"> <div className=\"w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <div...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-41a4e422b0762982:e1",
+          "source": "flow-41a4e422b0762982:n1",
+          "target": "flow-41a4e422b0762982:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-41a4e422b0762982:e2",
+          "source": "flow-41a4e422b0762982:n2",
+          "target": "flow-41a4e422b0762982:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-41a4e422b0762982:e3",
+          "source": "flow-41a4e422b0762982:n3",
+          "target": "flow-41a4e422b0762982:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-41a4e422b0762982:e4",
+          "source": "flow-41a4e422b0762982:n4",
+          "target": "flow-41a4e422b0762982:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-41a4e422b0762982:e5",
+          "source": "flow-41a4e422b0762982:n5",
+          "target": "flow-41a4e422b0762982:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-41a4e422b0762982:e6",
+          "source": "flow-41a4e422b0762982:n6",
+          "target": "flow-41a4e422b0762982:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,77 @@
+{
+  "path": "src/app/api.ts",
+  "language": "typescript",
+  "sha256": "4c9e8616f62efc15a9ffbffc677616516111f34612f00ab375b822c83c5cf030",
+  "flows": [
+    {
+      "id": "flow-7092bfad1f704cb1",
+      "name": "delay",
+      "symbol": "src.app.api:delay",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/app/api.ts",
+        "start_line": 61,
+        "end_line": 61
+      },
+      "nodes": [
+        {
+          "id": "flow-7092bfad1f704cb1:n1",
+          "kind": "entry",
+          "label": "delay",
+          "location": {
+            "path": "src/app/api.ts",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.api:delay",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7092bfad1f704cb1:n2",
+          "kind": "terminal",
+          "label": "Return new Promise(resolve => setTimeout(resolve, ms))",
+          "location": {
+            "path": "src/app/api.ts",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "new Promise(resolve => setTimeout(resolve, ms))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7092bfad1f704cb1:e1",
+          "source": "flow-7092bfad1f704cb1:n1",
+          "target": "flow-7092bfad1f704cb1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

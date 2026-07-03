@@ -1,0 +1,189 @@
+{
+  "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+  "language": "typescript",
+  "sha256": "dcbad593a6b2cc3c52e17aa3aeae64e0cf2f1a676e004d8afaa57ecc415283a9",
+  "flows": [
+    {
+      "id": "flow-490d3dc6c421bc10",
+      "name": "CommunicationForm",
+      "symbol": "src.features.dashboard.forms.CommunicationForm:CommunicationForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+        "start_line": 12,
+        "end_line": 53
+      },
+      "nodes": [
+        {
+          "id": "flow-490d3dc6c421bc10:n1",
+          "kind": "entry",
+          "label": "Component: CommunicationForm",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 12,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.CommunicationForm:CommunicationForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:n2",
+          "kind": "action",
+          "label": "// Ensure communication_preferences exists to avoid render errors",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Ensure communication_preferences exists to avoid render errors",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:n3",
+          "kind": "action",
+          "label": "// Using any as fallback to satisfy the dynamic Object.entries approach",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Using any as fallback to satisfy the dynamic Object.entries approach",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:n4",
+          "kind": "call",
+          "label": "Call Object.fromEntries()",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 15,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "const preferences = Object.fromEntries( Object.entries((profile.communication_preferences || {}) as Record<string, any>) .filter(([key]) => !['security_alerts_via_push', 'marketing_emails', 'product_updates'].includes(key)) );",
+          "metadata": {
+            "calls": [
+              "Object.fromEntries",
+              "Object.entries((profile.communication_preferences || {}) as Record<string, any>) .filter",
+              "Object.entries"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.CommunicationForm:Object.fromEntries",
+              "src.features.dashboard.forms.CommunicationForm:Object.entries((profile.communication_preferences || {}) as Record<string, any>) .filter",
+              "src.features.dashboard.forms.CommunicationForm:Object.entries"
+            ]
+          }
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:n5",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 20,
+            "end_line": 52
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <Mail className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.communication_preferences')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"> {Object.entries(preferences).map(([key, val]) => ( <div key={key} className=\"flex flex-col gap-2 p-4 bg-white rounded...",
+          "metadata": {
+            "calls": [
+              "t",
+              "Object.entries(preferences).map",
+              "Object.entries"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.CommunicationForm:t",
+              "src.features.dashboard.forms.CommunicationForm:Object.entries(preferences).map",
+              "src.features.dashboard.forms.CommunicationForm:Object.entries"
+            ]
+          }
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:n6",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\">...",
+          "location": {
+            "path": "src/features/dashboard/forms/CommunicationForm.tsx",
+            "start_line": 20,
+            "end_line": 52
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <Mail className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.communication_preferences')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"> {Object.entries(preferences).map(([key, val]) => ( <div key={key} className=\"flex flex-col gap-2 p-4 bg-white rounded...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-490d3dc6c421bc10:e1",
+          "source": "flow-490d3dc6c421bc10:n1",
+          "target": "flow-490d3dc6c421bc10:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:e2",
+          "source": "flow-490d3dc6c421bc10:n2",
+          "target": "flow-490d3dc6c421bc10:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:e3",
+          "source": "flow-490d3dc6c421bc10:n3",
+          "target": "flow-490d3dc6c421bc10:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:e4",
+          "source": "flow-490d3dc6c421bc10:n4",
+          "target": "flow-490d3dc6c421bc10:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-490d3dc6c421bc10:e5",
+          "source": "flow-490d3dc6c421bc10:n5",
+          "target": "flow-490d3dc6c421bc10:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

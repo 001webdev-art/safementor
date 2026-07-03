@@ -1,0 +1,20 @@
+{
+  "path": "src/features/chat/types/chat.ts",
+  "language": "typescript",
+  "sha256": "885fe079d306a5d6c3a8cbfd5ffedaa972937ae9a3b6063da43f76126fae9fd8",
+  "flows": [],
+  "enums": {
+    "LLMProvider": [
+      "gemini",
+      "gpt",
+      "groq"
+    ],
+    "SyncStatus": [
+      "pending",
+      "synced",
+      "failed"
+    ]
+  },
+  "constants": {},
+  "dependencies": []
+}

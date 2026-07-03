@@ -1,0 +1,129 @@
+{
+  "path": "src/features/chat/components/ChatFooter.tsx",
+  "language": "typescript",
+  "sha256": "512f3ce729d5548b96ab44ee42445d96e79abd8d46211d370b0208f6ab021f14",
+  "flows": [
+    {
+      "id": "flow-5de68fc4ff1cbb82",
+      "name": "ChatFooter",
+      "symbol": "src.features.chat.components.ChatFooter:ChatFooter",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/ChatFooter.tsx",
+        "start_line": 13,
+        "end_line": 39
+      },
+      "nodes": [
+        {
+          "id": "flow-5de68fc4ff1cbb82:n1",
+          "kind": "entry",
+          "label": "Component: ChatFooter",
+          "location": {
+            "path": "src/features/chat/components/ChatFooter.tsx",
+            "start_line": 13,
+            "end_line": 39
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.ChatFooter:ChatFooter",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5de68fc4ff1cbb82:n2",
+          "kind": "action",
+          "label": "Set navItems",
+          "location": {
+            "path": "src/features/chat/components/ChatFooter.tsx",
+            "start_line": 14,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "const navItems = [ { icon: <Hand size={24} />, label: 'Hello', key: 'hello' }, { icon: <MessageSquare size={24} />, label: 'Chat', key: 'chat' }, { icon: <HelpCircle size={24} />, label: 'Help', key: 'help' }, { icon: <LogOut size={24} />, label: 'Exit', key: 'exit' }, ];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5de68fc4ff1cbb82:n3",
+          "kind": "call",
+          "label": "Call navItems.map()",
+          "location": {
+            "path": "src/features/chat/components/ChatFooter.tsx",
+            "start_line": 21,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <footer className=\"h-16 bg-white dark:bg-[#202c33] border-t border-divider flex items-center justify-around px-2 shrink-0 z-10\"> {navItems.map((item) => ( <Button key={item.key} isIconOnly variant=\"light\" radius=\"full\" className={`flex flex-col gap-1 h-12 w-12 ${currentView === item.key ? 'text-primary' : 'text-default-500' }`} onPress={() => onViewChange(item.key)} > {item.icon} <span className=\"text-[10px] font-medium leading-none\">{item.label}</span> </Button> ))} </footer> );",
+          "metadata": {
+            "calls": [
+              "navItems.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.ChatFooter:navItems.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-5de68fc4ff1cbb82:n4",
+          "kind": "terminal",
+          "label": "Return ( <footer className=\"h-16 bg-white dark:bg-[#202c33] border-t border-divider flex items-center justify-around px...",
+          "location": {
+            "path": "src/features/chat/components/ChatFooter.tsx",
+            "start_line": 21,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <footer className=\"h-16 bg-white dark:bg-[#202c33] border-t border-divider flex items-center justify-around px-2 shrink-0 z-10\"> {navItems.map((item) => ( <Button key={item.key} isIconOnly variant=\"light\" radius=\"full\" className={`flex flex-col gap-1 h-12 w-12 ${currentView === item.key ? 'text-primary' : 'text-default-500' }`} onPress={() => onViewChange(item.key)} > {item.icon} <span className=\"text-[10px] font-medium leading-none\">{item.label}</span> </Button> ))} </footer> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5de68fc4ff1cbb82:e1",
+          "source": "flow-5de68fc4ff1cbb82:n1",
+          "target": "flow-5de68fc4ff1cbb82:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5de68fc4ff1cbb82:e2",
+          "source": "flow-5de68fc4ff1cbb82:n2",
+          "target": "flow-5de68fc4ff1cbb82:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5de68fc4ff1cbb82:e3",
+          "source": "flow-5de68fc4ff1cbb82:n3",
+          "target": "flow-5de68fc4ff1cbb82:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

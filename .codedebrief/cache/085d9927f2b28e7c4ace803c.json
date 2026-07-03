@@ -1,0 +1,108 @@
+{
+  "path": "src/features/chat/history/HistoryHeader.tsx",
+  "language": "typescript",
+  "sha256": "5ae56cf691c0ac63c3ed58d384ab14284e94244300514970e9c4c4a9c839877d",
+  "flows": [
+    {
+      "id": "flow-2f4b74f837f5c384",
+      "name": "HistoryHeader",
+      "symbol": "src.features.chat.history.HistoryHeader:HistoryHeader",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/history/HistoryHeader.tsx",
+        "start_line": 14,
+        "end_line": 74
+      },
+      "nodes": [
+        {
+          "id": "flow-2f4b74f837f5c384:n1",
+          "kind": "entry",
+          "label": "Component: HistoryHeader",
+          "location": {
+            "path": "src/features/chat/history/HistoryHeader.tsx",
+            "start_line": 14,
+            "end_line": 74
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.history.HistoryHeader:HistoryHeader",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2f4b74f837f5c384:n2",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/chat/history/HistoryHeader.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryHeader:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-2f4b74f837f5c384:n3",
+          "kind": "terminal",
+          "label": "Return ( <header className=\"h-16 bg-[#f0f2f5] dark:bg-[#202c33] border-b border-divider flex items-center justify-betwe...",
+          "location": {
+            "path": "src/features/chat/history/HistoryHeader.tsx",
+            "start_line": 17,
+            "end_line": 73
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <header className=\"h-16 bg-[#f0f2f5] dark:bg-[#202c33] border-b border-divider flex items-center justify-between px-4 shrink-0 shadow-sm z-20\"> <div className=\"flex items-center gap-2\"> <Button isIconOnly variant=\"light\" radius=\"full\" onPress={() => router.back()} > <ChevronLeft size={24} /> </Button> <div className=\"flex items-center gap-2\"> <History size={20} className=\"text-primary\" /> <h1 className=\"text-xl font-bold hidden sm:block\">Messages Stored</h1> </div> </div> <div classNam...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2f4b74f837f5c384:e1",
+          "source": "flow-2f4b74f837f5c384:n1",
+          "target": "flow-2f4b74f837f5c384:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f4b74f837f5c384:e2",
+          "source": "flow-2f4b74f837f5c384:n2",
+          "target": "flow-2f4b74f837f5c384:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/components/ChildSelector.tsx"
+  ]
+}

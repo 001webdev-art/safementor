@@ -1,0 +1,168 @@
+{
+  "path": "src/app/[locale]/auth/verified/page.tsx",
+  "language": "typescript",
+  "sha256": "6bbe7f9654e2670acd351c73a0812229897844f264e89e6594d2f96e8080c2f1",
+  "flows": [
+    {
+      "id": "flow-a2574e7a46794308",
+      "name": "VerifiedPage",
+      "symbol": "src.app.[locale].auth.verified.page:VerifiedPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/auth/verified/page.tsx",
+        "start_line": 9,
+        "end_line": 44
+      },
+      "nodes": [
+        {
+          "id": "flow-a2574e7a46794308:n1",
+          "kind": "entry",
+          "label": "Component: VerifiedPage",
+          "location": {
+            "path": "src/app/[locale]/auth/verified/page.tsx",
+            "start_line": 9,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].auth.verified.page:VerifiedPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a2574e7a46794308:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/app/[locale]/auth/verified/page.tsx",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('VerifiedPage');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.verified.page:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-a2574e7a46794308:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/app/[locale]/auth/verified/page.tsx",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.verified.page:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-a2574e7a46794308:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/app/[locale]/auth/verified/page.tsx",
+            "start_line": 13,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[450px] w-full p-6 rounded-2xl border border-gray-100 shadow-sm animate-in fade-in zoom-in duration-500\"> <CardBody className=\"flex flex-col items-center text-center gap-6 py-8\"> <div className=\"p-4 bg-[#889A7F]/10 rounded-full\"> <CheckCircle2 size={64} className=\"text-[#889A7F]\" /> </div> <div className=\"space-y-3\"> <h1 className=\"text-2xl font-bold text-gray-900 leading-tight\"> {t...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.verified.page:t",
+              "src.app.[locale].auth.verified.page:t",
+              "src.app.[locale].auth.verified.page:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-a2574e7a46794308:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[450p...",
+          "location": {
+            "path": "src/app/[locale]/auth/verified/page.tsx",
+            "start_line": 13,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[450px] w-full p-6 rounded-2xl border border-gray-100 shadow-sm animate-in fade-in zoom-in duration-500\"> <CardBody className=\"flex flex-col items-center text-center gap-6 py-8\"> <div className=\"p-4 bg-[#889A7F]/10 rounded-full\"> <CheckCircle2 size={64} className=\"text-[#889A7F]\" /> </div> <div className=\"space-y-3\"> <h1 className=\"text-2xl font-bold text-gray-900 leading-tight\"> {t...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-a2574e7a46794308:e1",
+          "source": "flow-a2574e7a46794308:n1",
+          "target": "flow-a2574e7a46794308:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a2574e7a46794308:e2",
+          "source": "flow-a2574e7a46794308:n2",
+          "target": "flow-a2574e7a46794308:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a2574e7a46794308:e3",
+          "source": "flow-a2574e7a46794308:n3",
+          "target": "flow-a2574e7a46794308:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a2574e7a46794308:e4",
+          "source": "flow-a2574e7a46794308:n4",
+          "target": "flow-a2574e7a46794308:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

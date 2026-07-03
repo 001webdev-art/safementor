@@ -1,0 +1,306 @@
+{
+  "path": "src/features/chat/components/screens/HelpScreen.tsx",
+  "language": "typescript",
+  "sha256": "bf6e360499a7a9779663361d8a2c95a49beccea2f358b2c253517b1cf460fb26",
+  "flows": [
+    {
+      "id": "flow-96dd5e7fd2ce5e66",
+      "name": "HelpScreen",
+      "symbol": "src.features.chat.components.screens.HelpScreen:HelpScreen",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/screens/HelpScreen.tsx",
+        "start_line": 17,
+        "end_line": 124
+      },
+      "nodes": [
+        {
+          "id": "flow-96dd5e7fd2ce5e66:n1",
+          "kind": "entry",
+          "label": "Component: HelpScreen",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 17,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.HelpScreen:HelpScreen",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-96dd5e7fd2ce5e66:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans relative w-full\"> {/* Header */} <div className=\"p...",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 20,
+            "end_line": 123
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans relative w-full\"> {/* Header */} <div className=\"p-4 bg-white border-b border-[#D4DDD0] flex items-center gap-3 shadow-sm sticky top-0 z-20 justify-center pt-8\"> <div className=\"w-full max-w-2xl mx-auto flex items-center gap-3\"> <button onClick={() => onNavigate(\"chat\")} className=\"p-1.5 -ml-1.5 hover:bg-[#F5F7F4] rounded-full transition-colors text-[#4A5445]\" > <ChevronLeft className=\"w-5 h-5\" /> </button> <h1 className=\"text...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-96dd5e7fd2ce5e66:e1",
+          "source": "flow-96dd5e7fd2ce5e66:n1",
+          "target": "flow-96dd5e7fd2ce5e66:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/chat/components/screens/HelpScreen.tsx",
+          "line": 32,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/chat/components/screens/HelpScreen.tsx:32 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-8c1f08b443c8e5f6",
+      "name": "InfoItem",
+      "symbol": "src.features.chat.components.screens.HelpScreen:InfoItem",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/components/screens/HelpScreen.tsx",
+        "start_line": 126,
+        "end_line": 150
+      },
+      "nodes": [
+        {
+          "id": "flow-8c1f08b443c8e5f6:n1",
+          "kind": "entry",
+          "label": "Component: InfoItem",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 126,
+            "end_line": 150
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.HelpScreen:InfoItem",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8c1f08b443c8e5f6:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-3 hover:bg-[#F5F7F4] transition-colors\"> <div className=\"flex gap-2.5\"> <div className=\"flex...",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 135,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-3 hover:bg-[#F5F7F4] transition-colors\"> <div className=\"flex gap-2.5\"> <div className=\"flex-shrink-0 mt-0.5\"> <span className=\"text-lg\" role=\"img\" aria-label={title}> {emoji} </span> </div> <div className=\"flex-1\"> <h4 className=\"font-bold text-[#2F3A2A] mb-0.5 text-xs\">{title}:</h4> <p className=\"text-xs text-[#4A5445] leading-relaxed\">{text}</p> </div> </div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8c1f08b443c8e5f6:e1",
+          "source": "flow-8c1f08b443c8e5f6:n1",
+          "target": "flow-8c1f08b443c8e5f6:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/chat/components/screens/HelpScreen.tsx",
+          "line": 32,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/chat/components/screens/HelpScreen.tsx:32 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-01d087e767a285ac",
+      "name": "ListItem",
+      "symbol": "src.features.chat.components.screens.HelpScreen:ListItem",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/components/screens/HelpScreen.tsx",
+        "start_line": 152,
+        "end_line": 158
+      },
+      "nodes": [
+        {
+          "id": "flow-01d087e767a285ac:n1",
+          "kind": "entry",
+          "label": "Component: ListItem",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 152,
+            "end_line": 158
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.HelpScreen:ListItem",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-01d087e767a285ac:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-3 hover:bg-[#F5F7F4] transition-colors\"> <p className=\"font-medium text-[#2F3A2A] text-xs\">{...",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 153,
+            "end_line": 157
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-3 hover:bg-[#F5F7F4] transition-colors\"> <p className=\"font-medium text-[#2F3A2A] text-xs\">{text}</p> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-01d087e767a285ac:e1",
+          "source": "flow-01d087e767a285ac:n1",
+          "target": "flow-01d087e767a285ac:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/chat/components/screens/HelpScreen.tsx",
+          "line": 32,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/chat/components/screens/HelpScreen.tsx:32 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-8c1aeb0384437f6a",
+      "name": "Tag",
+      "symbol": "src.features.chat.components.screens.HelpScreen:Tag",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/components/screens/HelpScreen.tsx",
+        "start_line": 160,
+        "end_line": 166
+      },
+      "nodes": [
+        {
+          "id": "flow-8c1aeb0384437f6a:n1",
+          "kind": "entry",
+          "label": "Component: Tag",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 160,
+            "end_line": 166
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.HelpScreen:Tag",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8c1aeb0384437f6a:n2",
+          "kind": "terminal",
+          "label": "Return ( <span className=\"px-3 py-1.5 bg-white border border-[#D4DDD0] rounded-lg text-xs font-semibold text-[#4A5445]...",
+          "location": {
+            "path": "src/features/chat/components/screens/HelpScreen.tsx",
+            "start_line": 161,
+            "end_line": 165
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <span className=\"px-3 py-1.5 bg-white border border-[#D4DDD0] rounded-lg text-xs font-semibold text-[#4A5445] shadow-sm hover:border-[#889A7F] hover:text-[#889A7F] transition-colors cursor-default\"> {text} </span> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8c1aeb0384437f6a:e1",
+          "source": "flow-8c1aeb0384437f6a:n1",
+          "target": "flow-8c1aeb0384437f6a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/chat/components/screens/HelpScreen.tsx",
+          "line": 32,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/chat/components/screens/HelpScreen.tsx:32 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

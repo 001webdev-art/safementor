@@ -144,7 +144,7 @@ class ChatController extends ChangeNotifier {
     try {
       await for (final chunk in _mentorApi.streamResponse(
         message: _greetingPrompt,
-        childAge: child.age.toString(),
+        childAge: _mentorAge(child),
         childLanguage: child.language ?? 'en',
         chatHistory: const [],
       )) {
@@ -231,7 +231,7 @@ class ChatController extends ChangeNotifier {
       _streamSub = _mentorApi
           .streamResponse(
             message: content.trim(),
-            childAge: child.age.toString(),
+            childAge: _mentorAge(child),
             childLanguage: child.language ?? 'en',
             chatHistory: history,
           )
@@ -319,6 +319,8 @@ class ChatController extends ChangeNotifier {
     streamingContent = '';
     notifyListeners();
   }
+
+  int _mentorAge(ChildProfile child) => child.age.clamp(8, 15).toInt();
 
   @override
   void dispose() {

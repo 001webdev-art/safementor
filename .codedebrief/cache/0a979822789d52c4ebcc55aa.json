@@ -1,0 +1,130 @@
+{
+  "path": "src/features/dashboard/forms/PersonalInfoForm.tsx",
+  "language": "typescript",
+  "sha256": "0e528c83e4297eb879da7d2d4411941836209543a37b828dcbadafb38024d2e0",
+  "flows": [
+    {
+      "id": "flow-734b028f0bbee9a0",
+      "name": "PersonalInfoForm",
+      "symbol": "src.features.dashboard.forms.PersonalInfoForm:PersonalInfoForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/PersonalInfoForm.tsx",
+        "start_line": 13,
+        "end_line": 85
+      },
+      "nodes": [
+        {
+          "id": "flow-734b028f0bbee9a0:n1",
+          "kind": "entry",
+          "label": "Component: PersonalInfoForm",
+          "location": {
+            "path": "src/features/dashboard/forms/PersonalInfoForm.tsx",
+            "start_line": 13,
+            "end_line": 85
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.PersonalInfoForm:PersonalInfoForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-734b028f0bbee9a0:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/PersonalInfoForm.tsx",
+            "start_line": 14,
+            "end_line": 84
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <UserCircle className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.personalInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-5\"> <Input label={t('fields.firstname')} placeholder={t('placeholders.firstname')} value={profile.firstname || ''} onValueChange={(v) => onProf...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t",
+              "src.features.dashboard.forms.PersonalInfoForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-734b028f0bbee9a0:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\">...",
+          "location": {
+            "path": "src/features/dashboard/forms/PersonalInfoForm.tsx",
+            "start_line": 14,
+            "end_line": 84
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <UserCircle className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.personalInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-5\"> <Input label={t('fields.firstname')} placeholder={t('placeholders.firstname')} value={profile.firstname || ''} onValueChange={(v) => onProf...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-734b028f0bbee9a0:e1",
+          "source": "flow-734b028f0bbee9a0:n1",
+          "target": "flow-734b028f0bbee9a0:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-734b028f0bbee9a0:e2",
+          "source": "flow-734b028f0bbee9a0:n2",
+          "target": "flow-734b028f0bbee9a0:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

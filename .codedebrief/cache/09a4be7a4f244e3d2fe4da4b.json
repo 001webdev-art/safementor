@@ -1,0 +1,232 @@
+{
+  "path": "src/features/register/components/TransparencyReport.tsx",
+  "language": "typescript",
+  "sha256": "1f723a0788a0625a5239475de3a8547da3ab13092bc27910381856ba4ddd842e",
+  "flows": [
+    {
+      "id": "flow-b973b85e9ec0c583",
+      "name": "TransparencyReport",
+      "symbol": "src.features.register.components.TransparencyReport:TransparencyReport",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/TransparencyReport.tsx",
+        "start_line": 6,
+        "end_line": 55
+      },
+      "nodes": [
+        {
+          "id": "flow-b973b85e9ec0c583:n1",
+          "kind": "entry",
+          "label": "Component: TransparencyReport",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 6,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.TransparencyReport:TransparencyReport",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Compliance.transparency')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.TransparencyReport:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n3",
+          "kind": "action",
+          "label": "// We need to handle the lists manually since next-intl doesn't automatically return arra...",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "// We need to handle the lists manually since next-intl doesn't automatically return arrays for keys",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 10,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const neverList = [ t('never.list.0'), t('never.list.1'), t('never.list.2'), t('never.list.3') ]",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n5",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 17,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "const parentsList = [ t('parents.list.0'), t('parents.list.1') ]",
+          "metadata": {
+            "calls": [
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n6",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 22,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"bg-gray-50 rounded-2xl p-6 border border-gray-100\"> <h3 className=\"text-xs font-bold tracking-widest text-gray-500 mb-4 uppercase\"> {t('title')} </h3> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8 text-sm\"> {/* Never Collected */} <div> <h4 className=\"font-bold text-red-600 mb-3 flex items-center gap-2\"> <Ban size={18} /> {t('never.title')} </h4> <ul className=\"space-y-2 text-gray-700 font-medium\"> {neverList.map((item, index) => ( <li key={index} className=...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "neverList.map",
+              "t",
+              "parentsList.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:neverList.map",
+              "src.features.register.components.TransparencyReport:t",
+              "src.features.register.components.TransparencyReport:parentsList.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:n7",
+          "kind": "terminal",
+          "label": "Return ( <section className=\"bg-gray-50 rounded-2xl p-6 border border-gray-100\"> <h3 className=\"text-xs font-bold track...",
+          "location": {
+            "path": "src/features/register/components/TransparencyReport.tsx",
+            "start_line": 22,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"bg-gray-50 rounded-2xl p-6 border border-gray-100\"> <h3 className=\"text-xs font-bold tracking-widest text-gray-500 mb-4 uppercase\"> {t('title')} </h3> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8 text-sm\"> {/* Never Collected */} <div> <h4 className=\"font-bold text-red-600 mb-3 flex items-center gap-2\"> <Ban size={18} /> {t('never.title')} </h4> <ul className=\"space-y-2 text-gray-700 font-medium\"> {neverList.map((item, index) => ( <li key={index} className=...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b973b85e9ec0c583:e1",
+          "source": "flow-b973b85e9ec0c583:n1",
+          "target": "flow-b973b85e9ec0c583:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:e2",
+          "source": "flow-b973b85e9ec0c583:n2",
+          "target": "flow-b973b85e9ec0c583:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:e3",
+          "source": "flow-b973b85e9ec0c583:n3",
+          "target": "flow-b973b85e9ec0c583:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:e4",
+          "source": "flow-b973b85e9ec0c583:n4",
+          "target": "flow-b973b85e9ec0c583:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:e5",
+          "source": "flow-b973b85e9ec0c583:n5",
+          "target": "flow-b973b85e9ec0c583:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b973b85e9ec0c583:e6",
+          "source": "flow-b973b85e9ec0c583:n6",
+          "target": "flow-b973b85e9ec0c583:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,2657 @@
+{
+  "path": "src/features/chat/services/syncManager.ts",
+  "language": "typescript",
+  "sha256": "a3e46748e69775271fb5eb327a8201434c0ad999160439307c3bf37e6e6e5191",
+  "flows": [
+    {
+      "id": "flow-653406e37cc132a8",
+      "name": "SyncManager.constructor",
+      "symbol": "src.features.chat.services.syncManager:SyncManager.constructor",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/syncManager.ts",
+        "start_line": 10,
+        "end_line": 15
+      },
+      "nodes": [
+        {
+          "id": "flow-653406e37cc132a8:n1",
+          "kind": "entry",
+          "label": "SyncManager.constructor",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 10,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.syncManager:SyncManager.constructor",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-653406e37cc132a8:n2",
+          "kind": "decision",
+          "label": "typeof window !== 'undefined'",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "typeof window !== 'undefined'",
+          "metadata": {
+            "condition": "typeof window !== 'undefined'",
+            "domain": "",
+            "values": [
+              "undefined"
+            ],
+            "subject": "typeof window",
+            "operator": "!=",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-653406e37cc132a8:n3",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-653406e37cc132a8:n4",
+          "kind": "call",
+          "label": "Call window.addEventListener()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "window.addEventListener('online', () => this.sync());",
+          "metadata": {
+            "calls": [
+              "window.addEventListener"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:window.addEventListener"
+            ]
+          }
+        },
+        {
+          "id": "flow-653406e37cc132a8:n5",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 10,
+            "end_line": 15
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-653406e37cc132a8:e1",
+          "source": "flow-653406e37cc132a8:n1",
+          "target": "flow-653406e37cc132a8:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-653406e37cc132a8:e2",
+          "source": "flow-653406e37cc132a8:n2",
+          "target": "flow-653406e37cc132a8:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-653406e37cc132a8:e3",
+          "source": "flow-653406e37cc132a8:n3",
+          "target": "flow-653406e37cc132a8:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-653406e37cc132a8:e4",
+          "source": "flow-653406e37cc132a8:n4",
+          "target": "flow-653406e37cc132a8:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-653406e37cc132a8:e5",
+          "source": "flow-653406e37cc132a8:n2",
+          "target": "flow-653406e37cc132a8:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-25ee2004926daab6",
+      "name": "SyncManager.sync",
+      "symbol": "src.features.chat.services.syncManager:SyncManager.sync",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/syncManager.ts",
+        "start_line": 17,
+        "end_line": 57
+      },
+      "nodes": [
+        {
+          "id": "flow-25ee2004926daab6:n1",
+          "kind": "entry",
+          "label": "SyncManager.sync",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 17,
+            "end_line": 57
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.syncManager:SyncManager.sync",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n2",
+          "kind": "decision",
+          "label": "!navigator.onLine",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "!navigator.onLine",
+          "metadata": {
+            "condition": "!navigator.onLine",
+            "domain": "",
+            "values": [],
+            "subject": "navigator.onLine",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n3",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log('Sync skipped: Offline');",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n5",
+          "kind": "decision",
+          "label": "!this.supabase",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 23,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.supabase",
+          "metadata": {
+            "condition": "!this.supabase",
+            "domain": "",
+            "values": [],
+            "subject": "this.supabase",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n6",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n7",
+          "kind": "decision",
+          "label": "!this.supabase",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.supabase",
+          "metadata": {
+            "condition": "!this.supabase",
+            "domain": "",
+            "values": [],
+            "subject": "this.supabase",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n8",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Sync failed: Supabase client not initialized');",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n9",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n10",
+          "kind": "decision",
+          "label": "this.isSyncing",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 32,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.isSyncing",
+          "metadata": {
+            "condition": "this.isSyncing",
+            "domain": "",
+            "values": [],
+            "subject": "this.isSyncing",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n11",
+          "kind": "action",
+          "label": "this.retrySync = true",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 33,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.retrySync = true;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n12",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n13",
+          "kind": "action",
+          "label": "this.isSyncing = true",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 36,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.isSyncing = true;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n14",
+          "kind": "action",
+          "label": "this.retrySync = false",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.retrySync = false;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n15",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 39,
+            "end_line": 56
+          },
+          "evidence": "INFERRED",
+          "detail": "try { console.log('Starting sync...'); do { this.retrySync = false; const unsynced = await chatDb.getUnsyncedMessages(); console.log(`Found ${unsynced.length} unsynced messages`); for (const localMsg of unsynced) { await this.syncMessage(localMsg); } } while (this.retrySync || (await chatDb.getUnsyncedMessages()).length > 0); } catch (error) { console.error('Sync failed with error:', error); } finally { this.isSyncing = false; this.retrySync = false; console.log('Sync finished'); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n16",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 40,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log('Starting sync...');",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n17",
+          "kind": "action",
+          "label": "Repeat: do",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 41,
+            "end_line": 49
+          },
+          "evidence": "INFERRED",
+          "detail": "do { this.retrySync = false; const unsynced = await chatDb.getUnsyncedMessages(); console.log(`Found ${unsynced.length} unsynced messages`); for (const localMsg of unsynced) { await this.syncMessage(localMsg); } } while (this.retrySync || (await chatDb.getUnsyncedMessages()).length > 0);",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n18",
+          "kind": "action",
+          "label": "this.retrySync = false",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.retrySync = false;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n19",
+          "kind": "call",
+          "label": "Call chatDb.getUnsyncedMessages()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 43,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "const unsynced = await chatDb.getUnsyncedMessages();",
+          "metadata": {
+            "calls": [
+              "chatDb.getUnsyncedMessages"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:#default.getUnsyncedMessages"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n20",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 44,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Found ${unsynced.length} unsynced messages`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n21",
+          "kind": "action",
+          "label": "Repeat: for (const localMsg of unsynced)",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 46,
+            "end_line": 48
+          },
+          "evidence": "INFERRED",
+          "detail": "for (const localMsg of unsynced) { await this.syncMessage(localMsg); }",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n22",
+          "kind": "call",
+          "label": "Call this.syncMessage()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 47,
+            "end_line": 47
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.syncMessage(localMsg);",
+          "metadata": {
+            "calls": [
+              "this.syncMessage"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:this.syncMessage"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n23",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 51,
+            "end_line": 51
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Sync failed with error:', error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n24",
+          "kind": "action",
+          "label": "this.isSyncing = false",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 53,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.isSyncing = false;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n25",
+          "kind": "action",
+          "label": "this.retrySync = false",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 54,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.retrySync = false;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n26",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 55,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log('Sync finished');",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-25ee2004926daab6:n27",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 17,
+            "end_line": 57
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-25ee2004926daab6:e1",
+          "source": "flow-25ee2004926daab6:n1",
+          "target": "flow-25ee2004926daab6:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e2",
+          "source": "flow-25ee2004926daab6:n2",
+          "target": "flow-25ee2004926daab6:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e3",
+          "source": "flow-25ee2004926daab6:n3",
+          "target": "flow-25ee2004926daab6:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e4",
+          "source": "flow-25ee2004926daab6:n2",
+          "target": "flow-25ee2004926daab6:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e5",
+          "source": "flow-25ee2004926daab6:n5",
+          "target": "flow-25ee2004926daab6:n6",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e6",
+          "source": "flow-25ee2004926daab6:n6",
+          "target": "flow-25ee2004926daab6:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e7",
+          "source": "flow-25ee2004926daab6:n5",
+          "target": "flow-25ee2004926daab6:n7",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e8",
+          "source": "flow-25ee2004926daab6:n7",
+          "target": "flow-25ee2004926daab6:n8",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e9",
+          "source": "flow-25ee2004926daab6:n8",
+          "target": "flow-25ee2004926daab6:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e10",
+          "source": "flow-25ee2004926daab6:n7",
+          "target": "flow-25ee2004926daab6:n10",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e11",
+          "source": "flow-25ee2004926daab6:n10",
+          "target": "flow-25ee2004926daab6:n11",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e12",
+          "source": "flow-25ee2004926daab6:n11",
+          "target": "flow-25ee2004926daab6:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e13",
+          "source": "flow-25ee2004926daab6:n10",
+          "target": "flow-25ee2004926daab6:n13",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e14",
+          "source": "flow-25ee2004926daab6:n13",
+          "target": "flow-25ee2004926daab6:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e15",
+          "source": "flow-25ee2004926daab6:n14",
+          "target": "flow-25ee2004926daab6:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e16",
+          "source": "flow-25ee2004926daab6:n15",
+          "target": "flow-25ee2004926daab6:n16",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e17",
+          "source": "flow-25ee2004926daab6:n16",
+          "target": "flow-25ee2004926daab6:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e18",
+          "source": "flow-25ee2004926daab6:n17",
+          "target": "flow-25ee2004926daab6:n18",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e19",
+          "source": "flow-25ee2004926daab6:n18",
+          "target": "flow-25ee2004926daab6:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e20",
+          "source": "flow-25ee2004926daab6:n19",
+          "target": "flow-25ee2004926daab6:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e21",
+          "source": "flow-25ee2004926daab6:n20",
+          "target": "flow-25ee2004926daab6:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e22",
+          "source": "flow-25ee2004926daab6:n21",
+          "target": "flow-25ee2004926daab6:n22",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e23",
+          "source": "flow-25ee2004926daab6:n15",
+          "target": "flow-25ee2004926daab6:n23",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e24",
+          "source": "flow-25ee2004926daab6:n17",
+          "target": "flow-25ee2004926daab6:n24",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e25",
+          "source": "flow-25ee2004926daab6:n21",
+          "target": "flow-25ee2004926daab6:n24",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e26",
+          "source": "flow-25ee2004926daab6:n22",
+          "target": "flow-25ee2004926daab6:n24",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e27",
+          "source": "flow-25ee2004926daab6:n23",
+          "target": "flow-25ee2004926daab6:n24",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e28",
+          "source": "flow-25ee2004926daab6:n24",
+          "target": "flow-25ee2004926daab6:n25",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e29",
+          "source": "flow-25ee2004926daab6:n25",
+          "target": "flow-25ee2004926daab6:n26",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-25ee2004926daab6:e30",
+          "source": "flow-25ee2004926daab6:n26",
+          "target": "flow-25ee2004926daab6:n27",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-f329cc55bc5755f2",
+      "name": "SyncManager.syncMessage",
+      "symbol": "src.features.chat.services.syncManager:SyncManager.syncMessage",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/syncManager.ts",
+        "start_line": 59,
+        "end_line": 110
+      },
+      "nodes": [
+        {
+          "id": "flow-f329cc55bc5755f2:n1",
+          "kind": "entry",
+          "label": "SyncManager.syncMessage",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 59,
+            "end_line": 110
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.syncManager:SyncManager.syncMessage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n2",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 60,
+            "end_line": 109
+          },
+          "evidence": "INFERRED",
+          "detail": "try { console.log(`Syncing message ${localMsg.id} for child ${localMsg.child_id}`); let parentId = localMsg.parent_message_id; // If we have a parent_message_id, check if it's a local ID that needs resolving if (parentId && !this.isUUID(parentId)) { const parentMsg = await chatDb.getMessageByLocalId(parentId); if (parentMsg && parentMsg.is_synced && parentMsg.id) { parentId = parentMsg.id; // Resolve to Supabase UUID } else if (!parentMsg) { parentId = undefined; } else { console.log(`Deferring...",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n3",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Syncing message ${localMsg.id} for child ${localMsg.child_id}`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n4",
+          "kind": "action",
+          "label": "Set parentId",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 62,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "let parentId = localMsg.parent_message_id;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n5",
+          "kind": "action",
+          "label": "// If we have a parent_message_id, check if it's a local ID that needs resolving",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "// If we have a parent_message_id, check if it's a local ID that needs resolving",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n6",
+          "kind": "decision",
+          "label": "parentId && !this.isUUID(parentId)",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 65,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "parentId && !this.isUUID(parentId)",
+          "metadata": {
+            "condition": "parentId && !this.isUUID(parentId)",
+            "domain": "",
+            "values": [],
+            "subject": "parentId && !this.isUUID(parentId)",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n7",
+          "kind": "call",
+          "label": "Call chatDb.getMessageByLocalId()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 66,
+            "end_line": 66
+          },
+          "evidence": "VERIFIED",
+          "detail": "const parentMsg = await chatDb.getMessageByLocalId(parentId);",
+          "metadata": {
+            "calls": [
+              "chatDb.getMessageByLocalId"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:#default.getMessageByLocalId"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n8",
+          "kind": "action",
+          "label": "Handle internal condition: parentMsg && parentMsg.is_synced && parentMsg.id",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 67,
+            "end_line": 74
+          },
+          "evidence": "INFERRED",
+          "detail": "if (parentMsg && parentMsg.is_synced && parentMsg.id) { parentId = parentMsg.id; // Resolve to Supabase UUID } else if (!parentMsg) { parentId = undefined; } else { console.log(`Deferring sync for message ${localMsg.id} until parent ${parentId} is synced.`); return; }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n9",
+          "kind": "call",
+          "label": "Call this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, c...",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 77,
+            "end_line": 96
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { data, error } = await this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, content: localMsg.content, timestamp: localMsg.timestamp, parent_message_id: parentId, is_synced: true, local_id: localMsg.local_id || localMsg.id, user_intent_intensity: localMsg.user_intent_intensity, user_intent_valence: localMsg.user_intent_valence, user_intent_flag: localMsg.user_intent_flag, user_intent_means: localMsg.user_intent_means, user_inten...",
+          "metadata": {
+            "calls": [
+              "this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, content: localMsg.content, timestamp: localMsg.timestamp, parent_message_id: parentId, is_synced: true, local_id: localMsg.local_id || localMsg.id, user_intent_intensity: localMsg.user_intent_intensity, user_intent_valence: localMsg.user_intent_valence, user_intent_flag: localMsg.user_intent_flag, user_intent_means: localMsg.user_intent_means, user_intent_actionable: localMsg.user_in...",
+              "this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, content: localMsg.content, timestamp: localMsg.timestamp, parent_message_id: parentId, is_synced: true, local_id: localMsg.local_id || localMsg.id, user_intent_intensity: localMsg.user_intent_intensity, user_intent_valence: localMsg.user_intent_valence, user_intent_flag: localMsg.user_intent_flag, user_intent_means: localMsg.user_intent_means, user_intent_actionable: localMsg.user_in...",
+              "this.supabase .from('chat_messages') .insert",
+              "this.supabase .from"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, content: localMsg.content, timestamp: localMsg.timestamp, parent_message_id: parentId, is_synced: true, local_id: localMsg.local_id || localMsg.id, user_intent_intensity: localMsg.user_intent_intensity, user_intent_valence: localMsg.user_intent_valence, user_intent_flag: localMsg.user_intent_flag, user_intent_means: localMsg.user_intent_means, user_intent_actionable: localMsg.user_in...",
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .insert({ child_id: localMsg.child_id, message_type: localMsg.message_type, content: localMsg.content, timestamp: localMsg.timestamp, parent_message_id: parentId, is_synced: true, local_id: localMsg.local_id || localMsg.id, user_intent_intensity: localMsg.user_intent_intensity, user_intent_valence: localMsg.user_intent_valence, user_intent_flag: localMsg.user_intent_flag, user_intent_means: localMsg.user_intent_means, user_intent_actionable: localMsg.user_in...",
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .insert",
+              "src.features.chat.services.syncManager:this.supabase .from"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n10",
+          "kind": "decision",
+          "label": "error",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 98,
+            "end_line": 98
+          },
+          "evidence": "VERIFIED",
+          "detail": "error",
+          "metadata": {
+            "condition": "error",
+            "domain": "",
+            "values": [],
+            "subject": "error",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n11",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 99,
+            "end_line": 99
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error(`Supabase Insert Error for ID ${localMsg.id}:`, error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n12",
+          "kind": "error",
+          "label": "Throw error",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 100,
+            "end_line": 100
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw error;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n13",
+          "kind": "decision",
+          "label": "data",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 103,
+            "end_line": 103
+          },
+          "evidence": "VERIFIED",
+          "detail": "data",
+          "metadata": {
+            "condition": "data",
+            "domain": "",
+            "values": [],
+            "subject": "data",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n14",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 104,
+            "end_line": 104
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Successfully synced message ${localMsg.id}. Supabase ID: ${data.id}`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n15",
+          "kind": "call",
+          "label": "Call chatDb.updateMessageSyncStatus()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 105,
+            "end_line": 105
+          },
+          "evidence": "VERIFIED",
+          "detail": "await chatDb.updateMessageSyncStatus(localMsg.local_id || localMsg.id, 'synced', data.id);",
+          "metadata": {
+            "calls": [
+              "chatDb.updateMessageSyncStatus"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:#default.updateMessageSyncStatus"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n16",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 108,
+            "end_line": 108
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error(`Failed to sync message ${localMsg.id}:`, error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:n17",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 59,
+            "end_line": 110
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f329cc55bc5755f2:e1",
+          "source": "flow-f329cc55bc5755f2:n1",
+          "target": "flow-f329cc55bc5755f2:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e2",
+          "source": "flow-f329cc55bc5755f2:n2",
+          "target": "flow-f329cc55bc5755f2:n3",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e3",
+          "source": "flow-f329cc55bc5755f2:n3",
+          "target": "flow-f329cc55bc5755f2:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e4",
+          "source": "flow-f329cc55bc5755f2:n4",
+          "target": "flow-f329cc55bc5755f2:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e5",
+          "source": "flow-f329cc55bc5755f2:n5",
+          "target": "flow-f329cc55bc5755f2:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e6",
+          "source": "flow-f329cc55bc5755f2:n6",
+          "target": "flow-f329cc55bc5755f2:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e7",
+          "source": "flow-f329cc55bc5755f2:n7",
+          "target": "flow-f329cc55bc5755f2:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e8",
+          "source": "flow-f329cc55bc5755f2:n8",
+          "target": "flow-f329cc55bc5755f2:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e9",
+          "source": "flow-f329cc55bc5755f2:n6",
+          "target": "flow-f329cc55bc5755f2:n9",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e10",
+          "source": "flow-f329cc55bc5755f2:n9",
+          "target": "flow-f329cc55bc5755f2:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e11",
+          "source": "flow-f329cc55bc5755f2:n10",
+          "target": "flow-f329cc55bc5755f2:n11",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e12",
+          "source": "flow-f329cc55bc5755f2:n11",
+          "target": "flow-f329cc55bc5755f2:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e13",
+          "source": "flow-f329cc55bc5755f2:n10",
+          "target": "flow-f329cc55bc5755f2:n13",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e14",
+          "source": "flow-f329cc55bc5755f2:n13",
+          "target": "flow-f329cc55bc5755f2:n14",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e15",
+          "source": "flow-f329cc55bc5755f2:n14",
+          "target": "flow-f329cc55bc5755f2:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e16",
+          "source": "flow-f329cc55bc5755f2:n2",
+          "target": "flow-f329cc55bc5755f2:n16",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e17",
+          "source": "flow-f329cc55bc5755f2:n15",
+          "target": "flow-f329cc55bc5755f2:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e18",
+          "source": "flow-f329cc55bc5755f2:n13",
+          "target": "flow-f329cc55bc5755f2:n17",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f329cc55bc5755f2:e19",
+          "source": "flow-f329cc55bc5755f2:n16",
+          "target": "flow-f329cc55bc5755f2:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-851252708e1d13a3",
+      "name": "SyncManager.isUUID",
+      "symbol": "src.features.chat.services.syncManager:SyncManager.isUUID",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/syncManager.ts",
+        "start_line": 112,
+        "end_line": 115
+      },
+      "nodes": [
+        {
+          "id": "flow-851252708e1d13a3:n1",
+          "kind": "entry",
+          "label": "SyncManager.isUUID",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 112,
+            "end_line": 115
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.syncManager:SyncManager.isUUID",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-851252708e1d13a3:n2",
+          "kind": "action",
+          "label": "Set uuidRegex",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 113,
+            "end_line": 113
+          },
+          "evidence": "VERIFIED",
+          "detail": "const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-851252708e1d13a3:n3",
+          "kind": "call",
+          "label": "Call uuidRegex.test()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 114,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "return uuidRegex.test(id);",
+          "metadata": {
+            "calls": [
+              "uuidRegex.test"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:uuidRegex.test"
+            ]
+          }
+        },
+        {
+          "id": "flow-851252708e1d13a3:n4",
+          "kind": "terminal",
+          "label": "Return uuidRegex.test(id)",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 114,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "return uuidRegex.test(id);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-851252708e1d13a3:e1",
+          "source": "flow-851252708e1d13a3:n1",
+          "target": "flow-851252708e1d13a3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-851252708e1d13a3:e2",
+          "source": "flow-851252708e1d13a3:n2",
+          "target": "flow-851252708e1d13a3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-851252708e1d13a3:e3",
+          "source": "flow-851252708e1d13a3:n3",
+          "target": "flow-851252708e1d13a3:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-8cab40c4395f32df",
+      "name": "SyncManager.fetchNewMessages",
+      "symbol": "src.features.chat.services.syncManager:SyncManager.fetchNewMessages",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/syncManager.ts",
+        "start_line": 117,
+        "end_line": 182
+      },
+      "nodes": [
+        {
+          "id": "flow-8cab40c4395f32df:n1",
+          "kind": "entry",
+          "label": "SyncManager.fetchNewMessages",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 117,
+            "end_line": 182
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.syncManager:SyncManager.fetchNewMessages",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n2",
+          "kind": "decision",
+          "label": "!navigator.onLine",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "!navigator.onLine",
+          "metadata": {
+            "condition": "!navigator.onLine",
+            "domain": "",
+            "values": [],
+            "subject": "navigator.onLine",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n3",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n4",
+          "kind": "decision",
+          "label": "!this.supabase",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 120,
+            "end_line": 120
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.supabase",
+          "metadata": {
+            "condition": "!this.supabase",
+            "domain": "",
+            "values": [],
+            "subject": "this.supabase",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n5",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 121,
+            "end_line": 121
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n6",
+          "kind": "decision",
+          "label": "!this.supabase",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 124,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.supabase",
+          "metadata": {
+            "condition": "!this.supabase",
+            "domain": "",
+            "values": [],
+            "subject": "this.supabase",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n7",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 124,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n8",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 126,
+            "end_line": 181
+          },
+          "evidence": "INFERRED",
+          "detail": "try { console.log(`Fetching new messages for child ${childId}...`); // Get last synced timestamp for this child const localMessages = await chatDb.getMessages(childId, 100); const lastTimestamp = localMessages.length > 0 ? localMessages[0].timestamp : new Date(0).toISOString(); console.log(`Last local timestamp: ${lastTimestamp}`); // Join with children to get nickname const { data, error } = await this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .g...",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n9",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 127,
+            "end_line": 127
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Fetching new messages for child ${childId}...`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n10",
+          "kind": "action",
+          "label": "// Get last synced timestamp for this child",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 128,
+            "end_line": 128
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Get last synced timestamp for this child",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n11",
+          "kind": "call",
+          "label": "Call chatDb.getMessages()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 129,
+            "end_line": 129
+          },
+          "evidence": "VERIFIED",
+          "detail": "const localMessages = await chatDb.getMessages(childId, 100);",
+          "metadata": {
+            "calls": [
+              "chatDb.getMessages"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:#default.getMessages"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n12",
+          "kind": "call",
+          "label": "Call new Date(0).toISOString()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 130,
+            "end_line": 132
+          },
+          "evidence": "VERIFIED",
+          "detail": "const lastTimestamp = localMessages.length > 0 ? localMessages[0].timestamp : new Date(0).toISOString();",
+          "metadata": {
+            "calls": [
+              "new Date(0).toISOString"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:new Date(0).toISOString"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n13",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 134,
+            "end_line": 134
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Last local timestamp: ${lastTimestamp}`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n14",
+          "kind": "action",
+          "label": "// Join with children to get nickname",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 136,
+            "end_line": 136
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Join with children to get nickname",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n15",
+          "kind": "call",
+          "label": "Call this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt('timestamp', la...",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 137,
+            "end_line": 142
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { data, error } = await this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt('timestamp', lastTimestamp) .order('timestamp', { ascending: true });",
+          "metadata": {
+            "calls": [
+              "this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt('timestamp', lastTimestamp) .order",
+              "this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt",
+              "this.supabase .from('chat_messages') .select('*, children(nickname)') .eq",
+              "this.supabase .from('chat_messages') .select",
+              "this.supabase .from"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt('timestamp', lastTimestamp) .order",
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .select('*, children(nickname)') .eq('child_id', childId) .gt",
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .select('*, children(nickname)') .eq",
+              "src.features.chat.services.syncManager:this.supabase .from('chat_messages') .select",
+              "src.features.chat.services.syncManager:this.supabase .from"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n16",
+          "kind": "decision",
+          "label": "error",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 144,
+            "end_line": 144
+          },
+          "evidence": "VERIFIED",
+          "detail": "error",
+          "metadata": {
+            "condition": "error",
+            "domain": "",
+            "values": [],
+            "subject": "error",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n17",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 145,
+            "end_line": 145
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Supabase fetch error:', error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n18",
+          "kind": "error",
+          "label": "Throw error",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 146,
+            "end_line": 146
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw error;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n19",
+          "kind": "decision",
+          "label": "data && data.length > 0",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 149,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "data && data.length > 0",
+          "metadata": {
+            "condition": "data && data.length > 0",
+            "domain": "",
+            "values": [],
+            "subject": "data && data.length > 0",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n20",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 150,
+            "end_line": 150
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Fetched ${data.length} new messages from server`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n21",
+          "kind": "action",
+          "label": "Repeat: for (const remoteMsg of data)",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 151,
+            "end_line": 175
+          },
+          "evidence": "INFERRED",
+          "detail": "for (const remoteMsg of data) { const exists = localMessages.some(m => m.id === remoteMsg.id); if (exists) continue; await chatDb.saveMessage({ id: remoteMsg.id, child_id: remoteMsg.child_id, message_type: remoteMsg.message_type, content: remoteMsg.content, timestamp: remoteMsg.timestamp, parent_message_id: remoteMsg.parent_message_id, is_synced: true, sync_status: 'synced', date: remoteMsg.timestamp.split('T')[0], time: remoteMsg.timestamp.split('T')[1].split('.')[0], nickname: (remoteMsg.chil...",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n22",
+          "kind": "call",
+          "label": "Call localMessages.some()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 152,
+            "end_line": 152
+          },
+          "evidence": "VERIFIED",
+          "detail": "const exists = localMessages.some(m => m.id === remoteMsg.id);",
+          "metadata": {
+            "calls": [
+              "localMessages.some"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:localMessages.some"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n23",
+          "kind": "decision",
+          "label": "exists",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 153,
+            "end_line": 153
+          },
+          "evidence": "VERIFIED",
+          "detail": "exists",
+          "metadata": {
+            "condition": "exists",
+            "domain": "",
+            "values": [],
+            "subject": "exists",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "continues",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n24",
+          "kind": "action",
+          "label": "Continue loop",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 153,
+            "end_line": 153
+          },
+          "evidence": "VERIFIED",
+          "detail": "continue;",
+          "metadata": {
+            "loop_control": "continue",
+            "reachable_from_entry": true,
+            "reaches_terminal": false
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n25",
+          "kind": "call",
+          "label": "Call chatDb.saveMessage()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 155,
+            "end_line": 174
+          },
+          "evidence": "VERIFIED",
+          "detail": "await chatDb.saveMessage({ id: remoteMsg.id, child_id: remoteMsg.child_id, message_type: remoteMsg.message_type, content: remoteMsg.content, timestamp: remoteMsg.timestamp, parent_message_id: remoteMsg.parent_message_id, is_synced: true, sync_status: 'synced', date: remoteMsg.timestamp.split('T')[0], time: remoteMsg.timestamp.split('T')[1].split('.')[0], nickname: (remoteMsg.children as any)?.nickname, user_intent_intensity: remoteMsg.user_intent_intensity, user_intent_valence: remoteMsg.user_i...",
+          "metadata": {
+            "calls": [
+              "chatDb.saveMessage",
+              "remoteMsg.timestamp.split",
+              "remoteMsg.timestamp.split('T')[1].split",
+              "remoteMsg.timestamp.split"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:#default.saveMessage",
+              "src.features.chat.services.syncManager:remoteMsg.timestamp.split",
+              "src.features.chat.services.syncManager:remoteMsg.timestamp.split('T')[1].split",
+              "src.features.chat.services.syncManager:remoteMsg.timestamp.split"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n26",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 177,
+            "end_line": 177
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log('No new messages on server');",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n27",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 180,
+            "end_line": 180
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Fetch new messages failed:', error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.syncManager:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-8cab40c4395f32df:n28",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/syncManager.ts",
+            "start_line": 117,
+            "end_line": 182
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8cab40c4395f32df:e1",
+          "source": "flow-8cab40c4395f32df:n1",
+          "target": "flow-8cab40c4395f32df:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e2",
+          "source": "flow-8cab40c4395f32df:n2",
+          "target": "flow-8cab40c4395f32df:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e3",
+          "source": "flow-8cab40c4395f32df:n2",
+          "target": "flow-8cab40c4395f32df:n4",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e4",
+          "source": "flow-8cab40c4395f32df:n4",
+          "target": "flow-8cab40c4395f32df:n5",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e5",
+          "source": "flow-8cab40c4395f32df:n5",
+          "target": "flow-8cab40c4395f32df:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e6",
+          "source": "flow-8cab40c4395f32df:n4",
+          "target": "flow-8cab40c4395f32df:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e7",
+          "source": "flow-8cab40c4395f32df:n6",
+          "target": "flow-8cab40c4395f32df:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e8",
+          "source": "flow-8cab40c4395f32df:n6",
+          "target": "flow-8cab40c4395f32df:n8",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e9",
+          "source": "flow-8cab40c4395f32df:n8",
+          "target": "flow-8cab40c4395f32df:n9",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e10",
+          "source": "flow-8cab40c4395f32df:n9",
+          "target": "flow-8cab40c4395f32df:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e11",
+          "source": "flow-8cab40c4395f32df:n10",
+          "target": "flow-8cab40c4395f32df:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e12",
+          "source": "flow-8cab40c4395f32df:n11",
+          "target": "flow-8cab40c4395f32df:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e13",
+          "source": "flow-8cab40c4395f32df:n12",
+          "target": "flow-8cab40c4395f32df:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e14",
+          "source": "flow-8cab40c4395f32df:n13",
+          "target": "flow-8cab40c4395f32df:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e15",
+          "source": "flow-8cab40c4395f32df:n14",
+          "target": "flow-8cab40c4395f32df:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e16",
+          "source": "flow-8cab40c4395f32df:n15",
+          "target": "flow-8cab40c4395f32df:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e17",
+          "source": "flow-8cab40c4395f32df:n16",
+          "target": "flow-8cab40c4395f32df:n17",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e18",
+          "source": "flow-8cab40c4395f32df:n17",
+          "target": "flow-8cab40c4395f32df:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e19",
+          "source": "flow-8cab40c4395f32df:n16",
+          "target": "flow-8cab40c4395f32df:n19",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e20",
+          "source": "flow-8cab40c4395f32df:n19",
+          "target": "flow-8cab40c4395f32df:n20",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e21",
+          "source": "flow-8cab40c4395f32df:n20",
+          "target": "flow-8cab40c4395f32df:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e22",
+          "source": "flow-8cab40c4395f32df:n21",
+          "target": "flow-8cab40c4395f32df:n22",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e23",
+          "source": "flow-8cab40c4395f32df:n22",
+          "target": "flow-8cab40c4395f32df:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e24",
+          "source": "flow-8cab40c4395f32df:n23",
+          "target": "flow-8cab40c4395f32df:n24",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e25",
+          "source": "flow-8cab40c4395f32df:n23",
+          "target": "flow-8cab40c4395f32df:n25",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e26",
+          "source": "flow-8cab40c4395f32df:n19",
+          "target": "flow-8cab40c4395f32df:n26",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e27",
+          "source": "flow-8cab40c4395f32df:n8",
+          "target": "flow-8cab40c4395f32df:n27",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e28",
+          "source": "flow-8cab40c4395f32df:n21",
+          "target": "flow-8cab40c4395f32df:n28",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e29",
+          "source": "flow-8cab40c4395f32df:n25",
+          "target": "flow-8cab40c4395f32df:n28",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e30",
+          "source": "flow-8cab40c4395f32df:n26",
+          "target": "flow-8cab40c4395f32df:n28",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8cab40c4395f32df:e31",
+          "source": "flow-8cab40c4395f32df:n27",
+          "target": "flow-8cab40c4395f32df:n28",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/services/pouchdb.ts",
+    "src/features/chat/types/chat.ts"
+  ]
+}

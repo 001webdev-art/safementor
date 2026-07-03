@@ -1,0 +1,505 @@
+{
+  "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+  "language": "typescript",
+  "sha256": "c087dec791bf7cba51d8916f10e795e5f1fdd883892f71a6e2a362f1c32a1ed6",
+  "flows": [
+    {
+      "id": "flow-f94982fc2a11d589",
+      "name": "DashboardSidebar",
+      "symbol": "src.features.dashboard.components.DashboardSidebar:DashboardSidebar",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+        "start_line": 37,
+        "end_line": 252
+      },
+      "nodes": [
+        {
+          "id": "flow-f94982fc2a11d589:n1",
+          "kind": "entry",
+          "label": "Component: DashboardSidebar",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 37,
+            "end_line": 252
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.DashboardSidebar:DashboardSidebar",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 46,
+            "end_line": 46
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isSettingsOpen, setIsSettingsOpen] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n3",
+          "kind": "call",
+          "label": "Call usePathname()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 47,
+            "end_line": 47
+          },
+          "evidence": "VERIFIED",
+          "detail": "const pathname = usePathname();",
+          "metadata": {
+            "calls": [
+              "usePathname"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:usePathname"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n4",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 48,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n5",
+          "kind": "action",
+          "label": "// Extract current locale from URL",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 50,
+            "end_line": 50
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Extract current locale from URL",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n6",
+          "kind": "call",
+          "label": "Call pathname.split('/').filter()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 51,
+            "end_line": 51
+          },
+          "evidence": "VERIFIED",
+          "detail": "const pathSegments = pathname.split('/').filter(Boolean);",
+          "metadata": {
+            "calls": [
+              "pathname.split('/').filter",
+              "pathname.split"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:pathname.split('/').filter",
+              "src.features.dashboard.components.DashboardSidebar:pathname.split"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n7",
+          "kind": "call",
+          "label": "Call locales.includes()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 52,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentLocale = locales.includes(pathSegments[0] as any) ? pathSegments[0] : defaultLocale;",
+          "metadata": {
+            "calls": [
+              "locales.includes"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:locales.includes"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n8",
+          "kind": "action",
+          "label": "Set switchLanguage",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 56,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "const switchLanguage = (newLocale: string) => { if (pathname.startsWith(`/${currentLocale}`)) { const newPathname = pathname.replace(`/${currentLocale}`, `/${newLocale}`); router.push(newPathname); } else { const newPathname = `/${newLocale}${pathname}`; router.push(newPathname); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n9",
+          "kind": "action",
+          "label": "Set getFlag",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 66,
+            "end_line": 74
+          },
+          "evidence": "VERIFIED",
+          "detail": "const getFlag = (locale: string) => { switch (locale) { case 'pt': return '🇧🇷'; case 'en': return '🇺🇸'; case 'es': return '🇪🇸'; case 'de': return '🇩🇪'; default: return '🌐'; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n10",
+          "kind": "action",
+          "label": "// Translation for languages (could be unified with Header's tNav)",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 76,
+            "end_line": 76
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Translation for languages (could be unified with Header's tNav)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n11",
+          "kind": "action",
+          "label": "Set getLanguageName",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 77,
+            "end_line": 85
+          },
+          "evidence": "VERIFIED",
+          "detail": "const getLanguageName = (locale: string) => { switch (locale) { case 'pt': return 'Português'; case 'en': return 'English'; case 'es': return 'Español'; case 'de': return 'Deutsch'; default: return locale; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n12",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 87,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoggingOut, setIsLoggingOut] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n13",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 88,
+            "end_line": 88
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n14",
+          "kind": "action",
+          "label": "Set handleLogout",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 90,
+            "end_line": 101
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleLogout = async () => { setIsLoggingOut(true); try { await supabase.auth.signOut(); router.push(`/${currentLocale}/login`); router.refresh(); // Ensure the layout/server components re-check session } catch (error) { console.error('Error logging out:', error); } finally { setIsLoggingOut(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n15",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 103,
+            "end_line": 117
+          },
+          "evidence": "VERIFIED",
+          "detail": "const navItems: NavItem[] = [ { id: 'overview', label: t('sections.overview'), icon: Shield }, { id: 'notifications', label: t('sections.notifications') || 'Notifications', icon: Bell }, { id: 'settings', label: t('sections.settings') || 'Settings', icon: Settings, subItems: [ { id: 'personal-data', label: t('sections.personalInfo') || 'Personal data', icon: UserIcon }, { id: 'children-data', label: t('sections.children') || 'Children data', icon: Baby }, ] }, { id: 'privacy', label: t('section...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n16",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 119,
+            "end_line": 251
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 flex flex-col h-full `}> <div className=\"p-6 border-b border-gray-100\"> <div className=\"flex items-center gap-3\"> <div className=\"w-10 h-10 bg-[#889A7F] rounded-xl flex items-center justify-center\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <div> <p className=\"font...",
+          "metadata": {
+            "calls": [
+              "t",
+              "navItems.map",
+              "getLanguageName",
+              "getFlag",
+              "locales.map",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:navItems.map",
+              "src.features.dashboard.components.DashboardSidebar:getLanguageName",
+              "src.features.dashboard.components.DashboardSidebar:getFlag",
+              "src.features.dashboard.components.DashboardSidebar:locales.map",
+              "src.features.dashboard.components.DashboardSidebar:t",
+              "src.features.dashboard.components.DashboardSidebar:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-f94982fc2a11d589:n17",
+          "kind": "terminal",
+          "label": "Return ( <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform tra...",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardSidebar.tsx",
+            "start_line": 119,
+            "end_line": 251
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <aside className={` fixed md:static inset-y-0 left-0 z-40 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 flex flex-col h-full `}> <div className=\"p-6 border-b border-gray-100\"> <div className=\"flex items-center gap-3\"> <div className=\"w-10 h-10 bg-[#889A7F] rounded-xl flex items-center justify-center\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <div> <p className=\"font...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f94982fc2a11d589:e1",
+          "source": "flow-f94982fc2a11d589:n1",
+          "target": "flow-f94982fc2a11d589:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e2",
+          "source": "flow-f94982fc2a11d589:n2",
+          "target": "flow-f94982fc2a11d589:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e3",
+          "source": "flow-f94982fc2a11d589:n3",
+          "target": "flow-f94982fc2a11d589:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e4",
+          "source": "flow-f94982fc2a11d589:n4",
+          "target": "flow-f94982fc2a11d589:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e5",
+          "source": "flow-f94982fc2a11d589:n5",
+          "target": "flow-f94982fc2a11d589:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e6",
+          "source": "flow-f94982fc2a11d589:n6",
+          "target": "flow-f94982fc2a11d589:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e7",
+          "source": "flow-f94982fc2a11d589:n7",
+          "target": "flow-f94982fc2a11d589:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e8",
+          "source": "flow-f94982fc2a11d589:n8",
+          "target": "flow-f94982fc2a11d589:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e9",
+          "source": "flow-f94982fc2a11d589:n9",
+          "target": "flow-f94982fc2a11d589:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e10",
+          "source": "flow-f94982fc2a11d589:n10",
+          "target": "flow-f94982fc2a11d589:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e11",
+          "source": "flow-f94982fc2a11d589:n11",
+          "target": "flow-f94982fc2a11d589:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e12",
+          "source": "flow-f94982fc2a11d589:n12",
+          "target": "flow-f94982fc2a11d589:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e13",
+          "source": "flow-f94982fc2a11d589:n13",
+          "target": "flow-f94982fc2a11d589:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e14",
+          "source": "flow-f94982fc2a11d589:n14",
+          "target": "flow-f94982fc2a11d589:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e15",
+          "source": "flow-f94982fc2a11d589:n15",
+          "target": "flow-f94982fc2a11d589:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f94982fc2a11d589:e16",
+          "source": "flow-f94982fc2a11d589:n16",
+          "target": "flow-f94982fc2a11d589:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

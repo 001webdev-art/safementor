@@ -1,0 +1,84 @@
+{
+  "path": "src/features/profile/components/ParentHelp.tsx",
+  "language": "typescript",
+  "sha256": "f7428022840ad908a49d8a5ec58ca5ec139dd4f5b05062b81d3a8dabede87e42",
+  "flows": [
+    {
+      "id": "flow-82c48e7f66a1cb1a",
+      "name": "ParentHelp",
+      "symbol": "src.features.profile.components.ParentHelp:ParentHelp",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentHelp.tsx",
+        "start_line": 3,
+        "end_line": 349
+      },
+      "nodes": [
+        {
+          "id": "flow-82c48e7f66a1cb1a:n1",
+          "kind": "entry",
+          "label": "Component: ParentHelp",
+          "location": {
+            "path": "src/features/profile/components/ParentHelp.tsx",
+            "start_line": 3,
+            "end_line": 349
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentHelp:ParentHelp",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-82c48e7f66a1cb1a:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-4xl mx-auto overflow-y...",
+          "location": {
+            "path": "src/features/profile/components/ParentHelp.tsx",
+            "start_line": 4,
+            "end_line": 348
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-4xl mx-auto overflow-y-auto\"> <h1 className=\"text-2xl font-bold mb-6 border-b-2 border-black pb-2\"> HELP & SUPPORT </h1> {/* Link to Website Help */} <div className=\"bg-gray-100 border-2 border-black p-4 mb-6\"> <p className=\"text-sm font-bold mb-2\"> 📚 Complete Documentation </p> <p className=\"text-sm mb-3\"> Visit www.safementor.com/help for full guides, FAQs, and resources. </p> <button className=\"b...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-82c48e7f66a1cb1a:e1",
+          "source": "flow-82c48e7f66a1cb1a:n1",
+          "target": "flow-82c48e7f66a1cb1a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentHelp.tsx",
+          "line": 7,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentHelp.tsx:7 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

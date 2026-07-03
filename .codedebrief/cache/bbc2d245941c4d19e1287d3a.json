@@ -1,0 +1,9 @@
+{
+  "path": "src/features/chat/types/mentor.ts",
+  "language": "typescript",
+  "sha256": "6be4c77356759ec8350ffcd46795909d69863561ba2255eeb2cd15a8768d6d49",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

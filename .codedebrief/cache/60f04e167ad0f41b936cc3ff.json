@@ -1,0 +1,321 @@
+{
+  "path": "src/app/[locale]/page.tsx",
+  "language": "typescript",
+  "sha256": "34ec046e97df2ae7257704637ba06c02b668b6cf3dab175a97c9e385c26b70af",
+  "flows": [
+    {
+      "id": "flow-07ef570a9e0bd1db",
+      "name": "generateMetadata",
+      "symbol": "src.app.[locale].page:generateMetadata",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/page.tsx",
+        "start_line": 13,
+        "end_line": 20
+      },
+      "nodes": [
+        {
+          "id": "flow-07ef570a9e0bd1db:n1",
+          "kind": "entry",
+          "label": "Component: generateMetadata",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 13,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].page:generateMetadata",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:n2",
+          "kind": "action",
+          "label": "Set { locale }",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { locale } = await params",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:n3",
+          "kind": "call",
+          "label": "Call getTranslations()",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = await getTranslations({ locale, namespace: 'HomePage' })",
+          "metadata": {
+            "calls": [
+              "getTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].page:getTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 17,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { title: t('title'), }",
+          "metadata": {
+            "calls": [
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].page:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:n5",
+          "kind": "terminal",
+          "label": "Return { title: t('title'), }",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 17,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { title: t('title'), }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-07ef570a9e0bd1db:e1",
+          "source": "flow-07ef570a9e0bd1db:n1",
+          "target": "flow-07ef570a9e0bd1db:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:e2",
+          "source": "flow-07ef570a9e0bd1db:n2",
+          "target": "flow-07ef570a9e0bd1db:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:e3",
+          "source": "flow-07ef570a9e0bd1db:n3",
+          "target": "flow-07ef570a9e0bd1db:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-07ef570a9e0bd1db:e4",
+          "source": "flow-07ef570a9e0bd1db:n4",
+          "target": "flow-07ef570a9e0bd1db:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-e0c66b3d485a931b",
+      "name": "generateStaticParams",
+      "symbol": "src.app.[locale].page:generateStaticParams",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/page.tsx",
+        "start_line": 23,
+        "end_line": 25
+      },
+      "nodes": [
+        {
+          "id": "flow-e0c66b3d485a931b:n1",
+          "kind": "entry",
+          "label": "Component: generateStaticParams",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 23,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].page:generateStaticParams",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-e0c66b3d485a931b:n2",
+          "kind": "call",
+          "label": "Call locales.map()",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "return locales.map((locale) => ({ locale }))",
+          "metadata": {
+            "calls": [
+              "locales.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].page:locales.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-e0c66b3d485a931b:n3",
+          "kind": "terminal",
+          "label": "Return locales.map((locale) => ({ locale }))",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "return locales.map((locale) => ({ locale }))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-e0c66b3d485a931b:e1",
+          "source": "flow-e0c66b3d485a931b:n1",
+          "target": "flow-e0c66b3d485a931b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-e0c66b3d485a931b:e2",
+          "source": "flow-e0c66b3d485a931b:n2",
+          "target": "flow-e0c66b3d485a931b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-8ea2344570f5bf7e",
+      "name": "HomePage",
+      "symbol": "src.app.[locale].page:HomePage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/page.tsx",
+        "start_line": 27,
+        "end_line": 44
+      },
+      "nodes": [
+        {
+          "id": "flow-8ea2344570f5bf7e:n1",
+          "kind": "entry",
+          "label": "Component: HomePage",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 27,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].page:HomePage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8ea2344570f5bf7e:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen bg-[#FDFBF8] text-[#4A4540]\"> <Navigation /> <main className=\"flex flex-col\"> <Sa...",
+          "location": {
+            "path": "src/app/[locale]/page.tsx",
+            "start_line": 28,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen bg-[#FDFBF8] text-[#4A4540]\"> <Navigation /> <main className=\"flex flex-col\"> <SafeMentorHero /> <TrustBadges /> <ValuesSection /> <ApproachSection /> <TestimonialSection /> <CTASection /> </main> <SafeMentorFooter /> </div> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8ea2344570f5bf7e:e1",
+          "source": "flow-8ea2344570f5bf7e:n1",
+          "target": "flow-8ea2344570f5bf7e:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

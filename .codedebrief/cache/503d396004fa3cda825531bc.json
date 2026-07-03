@@ -1,0 +1,77 @@
+{
+  "path": "src/features/dashboard/components/ui/LoadingState.tsx",
+  "language": "typescript",
+  "sha256": "106d3ef81259de603d1a913ac9cbeb60c72a5b2db2d3fd0212513ac22ac9c114",
+  "flows": [
+    {
+      "id": "flow-ae5a3dd33222acac",
+      "name": "LoadingState",
+      "symbol": "src.features.dashboard.components.ui.LoadingState:LoadingState",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/ui/LoadingState.tsx",
+        "start_line": 10,
+        "end_line": 20
+      },
+      "nodes": [
+        {
+          "id": "flow-ae5a3dd33222acac:n1",
+          "kind": "entry",
+          "label": "Component: LoadingState",
+          "location": {
+            "path": "src/features/dashboard/components/ui/LoadingState.tsx",
+            "start_line": 10,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.ui.LoadingState:LoadingState",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ae5a3dd33222acac:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex justify-center p-10 flex-col items-center\"> <Spacer y={10} /> <div className=\"animate-pul...",
+          "location": {
+            "path": "src/features/dashboard/components/ui/LoadingState.tsx",
+            "start_line": 11,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex justify-center p-10 flex-col items-center\"> <Spacer y={10} /> <div className=\"animate-pulse flex flex-col items-center gap-2\"> <div className=\"w-12 h-12 rounded-full border-4 border-primary border-t-transparent animate-spin\" /> <p className=\"text-default-500 font-medium\">{message}</p> </div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ae5a3dd33222acac:e1",
+          "source": "flow-ae5a3dd33222acac:n1",
+          "target": "flow-ae5a3dd33222acac:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

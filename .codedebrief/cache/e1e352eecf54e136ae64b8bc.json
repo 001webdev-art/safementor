@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ParentAccountOverview.tsx",
+  "language": "typescript",
+  "sha256": "f34273860de4d34caa3f48b1044948d9a90b214fc07c96df5add88d5e0e6eb7f",
+  "flows": [
+    {
+      "id": "flow-3994bb5207a40a4d",
+      "name": "ParentAccountOverview",
+      "symbol": "src.features.profile.components.ParentAccountOverview:ParentAccountOverview",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentAccountOverview.tsx",
+        "start_line": 1,
+        "end_line": 173
+      },
+      "nodes": [
+        {
+          "id": "flow-3994bb5207a40a4d:n1",
+          "kind": "entry",
+          "label": "Component: ParentAccountOverview",
+          "location": {
+            "path": "src/features/profile/components/ParentAccountOverview.tsx",
+            "start_line": 1,
+            "end_line": 173
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentAccountOverview:ParentAccountOverview",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3994bb5207a40a4d:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden bo...",
+          "location": {
+            "path": "src/features/profile/components/ParentAccountOverview.tsx",
+            "start_line": 2,
+            "end_line": 172
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden border-b-2 border-black p-4 flex justify-between items-center shrink-0\"> <div> <p className=\"text-sm font-bold\">SafeMentor</p> <p className=\"text-xs text-gray-600\"> Parent Dashboard </p> </div> </div> {/* Main Content */} <div className=\"flex-1 p-4 md:p-8 overflow-y-auto\"> <h1 className=\"text-lg font-bold mb-6\">Overview</h1> {/* Risk Level - Most Important */} <div className=\"bor...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3994bb5207a40a4d:e1",
+          "source": "flow-3994bb5207a40a4d:n1",
+          "target": "flow-3994bb5207a40a4d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,376 @@
+{
+  "path": "src/features/dashboard/components/PersonalData.tsx",
+  "language": "typescript",
+  "sha256": "6bb7b6a52a6e87b77493578e345000727fa9c8e95685ca2edd205cea03c8a95b",
+  "flows": [
+    {
+      "id": "flow-f1e1c43d19eb105b",
+      "name": "PersonalData",
+      "symbol": "src.features.dashboard.components.PersonalData:PersonalData",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/PersonalData.tsx",
+        "start_line": 27,
+        "end_line": 160
+      },
+      "nodes": [
+        {
+          "id": "flow-f1e1c43d19eb105b:n1",
+          "kind": "entry",
+          "label": "Component: PersonalData",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 27,
+            "end_line": 160
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.PersonalData:PersonalData",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 33,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [localIsSaving, setLocalIsSaving] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [countries, setCountries] = useState<{ country_id: number; country_name: string }[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n5",
+          "kind": "call",
+          "label": "Call React.useEffect()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 37,
+            "end_line": 47
+          },
+          "evidence": "VERIFIED",
+          "detail": "React.useEffect(() => { const fetchCountries = async () => { const supabase = createClient(); const { data } = await supabase .from('countries') .select('country_id, country_name') .order('country_name'); if (data) setCountries(data); }; fetchCountries(); }, []);",
+          "metadata": {
+            "calls": [
+              "React.useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:React.useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n6",
+          "kind": "action",
+          "label": "// Initial mock profile state if no external profile is provided",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 49,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Initial mock profile state if no external profile is provided",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 50,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [localProfile, setLocalProfile] = useState<Partial<Profile>>({ firstname: 'John', lastname: 'Doe', nickname: 'JD', gender: 'male' as any, relative_to_children: 'Father' as any, email: 'john@example.com', phone: '+1 (555) 123-4567', address_line1: '123 Main St', address_city: 'Berlin', address_country: 'Germany', billing_same_as_shipping_address: true });",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n8",
+          "kind": "action",
+          "label": "Set currentProfile",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentProfile = (externalProfile || localProfile) as Profile;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n9",
+          "kind": "action",
+          "label": "Set isSaving",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 65,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isSaving = externalIsSaving ?? localIsSaving;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n10",
+          "kind": "action",
+          "label": "Set handleSave",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 67,
+            "end_line": 75
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSave = async () => { if (onExternalSave) { await onExternalSave(); } else { setLocalIsSaving(true); await new Promise(resolve => setTimeout(resolve, 1500)); setLocalIsSaving(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n11",
+          "kind": "action",
+          "label": "Set handleProfileChange",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 77,
+            "end_line": 83
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleProfileChange = (newProfile: Partial<Profile>) => { if (onExternalProfileChange) { onExternalProfileChange(newProfile); } else { setLocalProfile(newProfile); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n12",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 85,
+            "end_line": 159
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <div className=\"flex flex-col gap-1\"> <h1 className=\"text-3xl font-bold text-gray-900 tracking-tight\">{t('sections.settings')}</h1> <p className=\"text-gray-500 text-lg\">{t('sections.settingsSubtitle')}</p> </div> <Card className=\"border border-gray-200 shadow-sm rounded-2xl overflow-hidden\"> <CardBody className=\"p-0\"> <div className=\"p-6 md:p-8 space-y-8\"> <div className=\"space-y-4\"> <h3 className=\"text-xl font-bold text...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.PersonalData:t",
+              "src.features.dashboard.components.PersonalData:t",
+              "src.features.dashboard.components.PersonalData:t",
+              "src.features.dashboard.components.PersonalData:t",
+              "src.features.dashboard.components.PersonalData:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:n13",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <div className=\"flex flex-col gap-1\"> <h1 cl...",
+          "location": {
+            "path": "src/features/dashboard/components/PersonalData.tsx",
+            "start_line": 85,
+            "end_line": 159
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <div className=\"flex flex-col gap-1\"> <h1 className=\"text-3xl font-bold text-gray-900 tracking-tight\">{t('sections.settings')}</h1> <p className=\"text-gray-500 text-lg\">{t('sections.settingsSubtitle')}</p> </div> <Card className=\"border border-gray-200 shadow-sm rounded-2xl overflow-hidden\"> <CardBody className=\"p-0\"> <div className=\"p-6 md:p-8 space-y-8\"> <div className=\"space-y-4\"> <h3 className=\"text-xl font-bold text...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f1e1c43d19eb105b:e1",
+          "source": "flow-f1e1c43d19eb105b:n1",
+          "target": "flow-f1e1c43d19eb105b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e2",
+          "source": "flow-f1e1c43d19eb105b:n2",
+          "target": "flow-f1e1c43d19eb105b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e3",
+          "source": "flow-f1e1c43d19eb105b:n3",
+          "target": "flow-f1e1c43d19eb105b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e4",
+          "source": "flow-f1e1c43d19eb105b:n4",
+          "target": "flow-f1e1c43d19eb105b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e5",
+          "source": "flow-f1e1c43d19eb105b:n5",
+          "target": "flow-f1e1c43d19eb105b:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e6",
+          "source": "flow-f1e1c43d19eb105b:n6",
+          "target": "flow-f1e1c43d19eb105b:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e7",
+          "source": "flow-f1e1c43d19eb105b:n7",
+          "target": "flow-f1e1c43d19eb105b:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e8",
+          "source": "flow-f1e1c43d19eb105b:n8",
+          "target": "flow-f1e1c43d19eb105b:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e9",
+          "source": "flow-f1e1c43d19eb105b:n9",
+          "target": "flow-f1e1c43d19eb105b:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e10",
+          "source": "flow-f1e1c43d19eb105b:n10",
+          "target": "flow-f1e1c43d19eb105b:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e11",
+          "source": "flow-f1e1c43d19eb105b:n11",
+          "target": "flow-f1e1c43d19eb105b:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f1e1c43d19eb105b:e12",
+          "source": "flow-f1e1c43d19eb105b:n12",
+          "target": "flow-f1e1c43d19eb105b:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/dashboard/components/ui/SaveButton.tsx"
+  ]
+}

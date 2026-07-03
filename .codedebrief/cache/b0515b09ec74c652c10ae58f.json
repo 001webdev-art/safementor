@@ -1,0 +1,9 @@
+{
+  "path": "src/features/profile/index.ts",
+  "language": "typescript",
+  "sha256": "b196d942cc58d2a1fa8255b54fc6f99c5433d33dbcdf689089a759bd2a8aef00",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

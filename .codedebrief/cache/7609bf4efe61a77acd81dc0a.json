@@ -1,0 +1,143 @@
+{
+  "path": "src/features/landing/components/Features.tsx",
+  "language": "typescript",
+  "sha256": "a44faa06eb1028a310527e8cdfc9f1d34a07cb1f75f5c7a75efdf50dc5578d89",
+  "flows": [
+    {
+      "id": "flow-b4890a70296b468d",
+      "name": "Features1",
+      "symbol": "src.features.landing.components.Features:Features1",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Features.tsx",
+        "start_line": 5,
+        "end_line": 42
+      },
+      "nodes": [
+        {
+          "id": "flow-b4890a70296b468d:n1",
+          "kind": "entry",
+          "label": "Component: Features1",
+          "location": {
+            "path": "src/features/landing/components/Features.tsx",
+            "start_line": 5,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Features:Features1",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b4890a70296b468d:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/Features.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Landing.Features');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Features:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-b4890a70296b468d:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/Features.tsx",
+            "start_line": 8,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 py-20 w-full max-w-7xl mx-auto\"> <div className=\"flex flex-col gap-8 md:w-1/2\"> <div className=\"space-y-4\"> <span className=\"text-blue-600 font-medium\">{t('awesomeFeature')}</span> <h3 className=\"text-3xl font-bold\">{t('mainTitle')}</h3> <p className=\"text-gray-500 max-w-md\"> {t('mainDescription')} </p> </div> <div className=\"flex flex-col gap-6\"> {[1, 2, 3].map((i) => ( <div key={i} className=\"fl...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "[1, 2, 3].map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Features:t",
+              "src.features.landing.components.Features:t",
+              "src.features.landing.components.Features:t",
+              "src.features.landing.components.Features:[1, 2, 3].map"
+            ]
+          }
+        },
+        {
+          "id": "flow-b4890a70296b468d:n4",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 py-20 w-full max-w-7...",
+          "location": {
+            "path": "src/features/landing/components/Features.tsx",
+            "start_line": 8,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-6 py-20 w-full max-w-7xl mx-auto\"> <div className=\"flex flex-col gap-8 md:w-1/2\"> <div className=\"space-y-4\"> <span className=\"text-blue-600 font-medium\">{t('awesomeFeature')}</span> <h3 className=\"text-3xl font-bold\">{t('mainTitle')}</h3> <p className=\"text-gray-500 max-w-md\"> {t('mainDescription')} </p> </div> <div className=\"flex flex-col gap-6\"> {[1, 2, 3].map((i) => ( <div key={i} className=\"fl...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b4890a70296b468d:e1",
+          "source": "flow-b4890a70296b468d:n1",
+          "target": "flow-b4890a70296b468d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b4890a70296b468d:e2",
+          "source": "flow-b4890a70296b468d:n2",
+          "target": "flow-b4890a70296b468d:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b4890a70296b468d:e3",
+          "source": "flow-b4890a70296b468d:n3",
+          "target": "flow-b4890a70296b468d:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/Icons.tsx"
+  ]
+}

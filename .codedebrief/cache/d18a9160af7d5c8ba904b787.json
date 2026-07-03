@@ -1,0 +1,420 @@
+{
+  "path": "src/app/[locale]/[...rest]/page.tsx",
+  "language": "typescript",
+  "sha256": "8243ac59ddc036b45891ef0b6959cda2c8f5f1dd7b584563d8754ef4e3883515",
+  "flows": [
+    {
+      "id": "flow-4eab60536ea09c72",
+      "name": "CatchAllPage",
+      "symbol": "src.app.[locale].[...rest].page:CatchAllPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/[...rest]/page.tsx",
+        "start_line": 13,
+        "end_line": 23
+      },
+      "nodes": [
+        {
+          "id": "flow-4eab60536ea09c72:n1",
+          "kind": "entry",
+          "label": "Component: CatchAllPage",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 13,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].[...rest].page:CatchAllPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n2",
+          "kind": "action",
+          "label": "Set { rest = [] }",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { rest = [] } = await params",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n3",
+          "kind": "action",
+          "label": "Set slug",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const slug = rest[0]",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n4",
+          "kind": "decision",
+          "label": "slug === 'imprint'",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "slug === 'imprint'",
+          "metadata": {
+            "condition": "slug === 'imprint'",
+            "domain": "",
+            "values": [
+              "imprint"
+            ],
+            "subject": "slug",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n5",
+          "kind": "terminal",
+          "label": "Return <ImprintPage />",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <ImprintPage />",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n6",
+          "kind": "decision",
+          "label": "slug === 'privacy'",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "slug === 'privacy'",
+          "metadata": {
+            "condition": "slug === 'privacy'",
+            "domain": "",
+            "values": [
+              "privacy"
+            ],
+            "subject": "slug",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n7",
+          "kind": "terminal",
+          "label": "Return <PrivacyPage />",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <PrivacyPage />",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n8",
+          "kind": "decision",
+          "label": "slug === 'terms'",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "slug === 'terms'",
+          "metadata": {
+            "condition": "slug === 'terms'",
+            "domain": "",
+            "values": [
+              "terms"
+            ],
+            "subject": "slug",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n9",
+          "kind": "terminal",
+          "label": "Return <TermsPage />",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <TermsPage />",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n10",
+          "kind": "decision",
+          "label": "slug === 'subprocessors'",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "slug === 'subprocessors'",
+          "metadata": {
+            "condition": "slug === 'subprocessors'",
+            "domain": "",
+            "values": [
+              "subprocessors"
+            ],
+            "subject": "slug",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n11",
+          "kind": "terminal",
+          "label": "Return <SubprocessorsPage />",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <SubprocessorsPage />",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n12",
+          "kind": "call",
+          "label": "Call notFound()",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "notFound()",
+          "metadata": {
+            "calls": [
+              "notFound"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].[...rest].page:notFound"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eab60536ea09c72:n13",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/app/[locale]/[...rest]/page.tsx",
+            "start_line": 13,
+            "end_line": 23
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4eab60536ea09c72:e1",
+          "source": "flow-4eab60536ea09c72:n1",
+          "target": "flow-4eab60536ea09c72:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e2",
+          "source": "flow-4eab60536ea09c72:n2",
+          "target": "flow-4eab60536ea09c72:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e3",
+          "source": "flow-4eab60536ea09c72:n3",
+          "target": "flow-4eab60536ea09c72:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e4",
+          "source": "flow-4eab60536ea09c72:n4",
+          "target": "flow-4eab60536ea09c72:n5",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e5",
+          "source": "flow-4eab60536ea09c72:n4",
+          "target": "flow-4eab60536ea09c72:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e6",
+          "source": "flow-4eab60536ea09c72:n6",
+          "target": "flow-4eab60536ea09c72:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e7",
+          "source": "flow-4eab60536ea09c72:n6",
+          "target": "flow-4eab60536ea09c72:n8",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e8",
+          "source": "flow-4eab60536ea09c72:n8",
+          "target": "flow-4eab60536ea09c72:n9",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e9",
+          "source": "flow-4eab60536ea09c72:n8",
+          "target": "flow-4eab60536ea09c72:n10",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e10",
+          "source": "flow-4eab60536ea09c72:n10",
+          "target": "flow-4eab60536ea09c72:n11",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e11",
+          "source": "flow-4eab60536ea09c72:n10",
+          "target": "flow-4eab60536ea09c72:n12",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eab60536ea09c72:e12",
+          "source": "flow-4eab60536ea09c72:n12",
+          "target": "flow-4eab60536ea09c72:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

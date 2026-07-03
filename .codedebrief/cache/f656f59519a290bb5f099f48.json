@@ -1,0 +1,106 @@
+{
+  "path": "src/app/not-found.tsx",
+  "language": "typescript",
+  "sha256": "7d70301749a89064b7832520b59d4f3ca21f75120e20a1f440759bf478f5d437",
+  "flows": [
+    {
+      "id": "flow-a2adfef573f692b3",
+      "name": "GlobalNotFound",
+      "symbol": "src.app.not-found:GlobalNotFound",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/not-found.tsx",
+        "start_line": 7,
+        "end_line": 9
+      },
+      "nodes": [
+        {
+          "id": "flow-a2adfef573f692b3:n1",
+          "kind": "entry",
+          "label": "Component: GlobalNotFound",
+          "location": {
+            "path": "src/app/not-found.tsx",
+            "start_line": 7,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.not-found:GlobalNotFound",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a2adfef573f692b3:n2",
+          "kind": "call",
+          "label": "Call redirect()",
+          "location": {
+            "path": "src/app/not-found.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "redirect(`/${defaultLocale}`);",
+          "metadata": {
+            "calls": [
+              "redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.not-found:redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-a2adfef573f692b3:n3",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/app/not-found.tsx",
+            "start_line": 7,
+            "end_line": 9
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-a2adfef573f692b3:e1",
+          "source": "flow-a2adfef573f692b3:n1",
+          "target": "flow-a2adfef573f692b3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a2adfef573f692b3:e2",
+          "source": "flow-a2adfef573f692b3:n2",
+          "target": "flow-a2adfef573f692b3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

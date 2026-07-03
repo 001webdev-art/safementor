@@ -1,0 +1,109 @@
+{
+  "path": "src/lib/supabase/client.ts",
+  "language": "typescript",
+  "sha256": "0b27a63f99784a2c5f540e9fdeffe7d59a1ad9fa509ae04115216bbd565e6b25",
+  "flows": [
+    {
+      "id": "flow-f22de30dfe3b4657",
+      "name": "createClient",
+      "symbol": "src.lib.supabase.client:createClient",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/lib/supabase/client.ts",
+        "start_line": 3,
+        "end_line": 7
+      },
+      "nodes": [
+        {
+          "id": "flow-f22de30dfe3b4657:n1",
+          "kind": "entry",
+          "label": "createClient",
+          "location": {
+            "path": "src/lib/supabase/client.ts",
+            "start_line": 3,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.lib.supabase.client:createClient",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f22de30dfe3b4657:n2",
+          "kind": "call",
+          "label": "Call createBrowserClient()",
+          "location": {
+            "path": "src/lib/supabase/client.ts",
+            "start_line": 4,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "createBrowserClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY! )",
+          "metadata": {
+            "calls": [
+              "createBrowserClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.lib.supabase.client:createBrowserClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-f22de30dfe3b4657:n3",
+          "kind": "terminal",
+          "label": "Return createBrowserClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY! )",
+          "location": {
+            "path": "src/lib/supabase/client.ts",
+            "start_line": 4,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "createBrowserClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY! )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f22de30dfe3b4657:e1",
+          "source": "flow-f22de30dfe3b4657:n1",
+          "target": "flow-f22de30dfe3b4657:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f22de30dfe3b4657:e2",
+          "source": "flow-f22de30dfe3b4657:n2",
+          "target": "flow-f22de30dfe3b4657:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

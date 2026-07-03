@@ -1,0 +1,187 @@
+{
+  "path": "src/features/dashboard/forms/BillingForm.tsx",
+  "language": "typescript",
+  "sha256": "174035fdb6604118ee30ae179fec75c88f52ab94a8012128a93b5d3e3e07e3bb",
+  "flows": [
+    {
+      "id": "flow-b235d77418b17d03",
+      "name": "BillingForm",
+      "symbol": "src.features.dashboard.forms.BillingForm:BillingForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/BillingForm.tsx",
+        "start_line": 12,
+        "end_line": 85
+      },
+      "nodes": [
+        {
+          "id": "flow-b235d77418b17d03:n1",
+          "kind": "entry",
+          "label": "Component: BillingForm",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingForm.tsx",
+            "start_line": 12,
+            "end_line": 85
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.BillingForm:BillingForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b235d77418b17d03:n2",
+          "kind": "decision",
+          "label": "profile.billing_same_as_shipping_address",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingForm.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "profile.billing_same_as_shipping_address",
+          "metadata": {
+            "condition": "profile.billing_same_as_shipping_address",
+            "domain": "",
+            "values": [],
+            "subject": "profile.billing_same_as_shipping_address",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b235d77418b17d03:n3",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingForm.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b235d77418b17d03:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingForm.tsx",
+            "start_line": 15,
+            "end_line": 84
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in slide-in-from-top-2\"> <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex items-center gap-2 mb-2\"> <CreditCard className=\"text-default-400\" size={18} /> <span className=\"font-bold\">{t('sections.billingAddress')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\"> <Input label={t('fields.billing_address_line1')} value={profile.billing_address_line1 || ''} onValueCh...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "(countries || []).map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:t",
+              "src.features.dashboard.forms.BillingForm:(countries || []).map"
+            ]
+          }
+        },
+        {
+          "id": "flow-b235d77418b17d03:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in slide-in-from-top-2\"> <Card shadow=\"none\" className=\"border border-divider bg-defau...",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingForm.tsx",
+            "start_line": 15,
+            "end_line": 84
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in slide-in-from-top-2\"> <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex items-center gap-2 mb-2\"> <CreditCard className=\"text-default-400\" size={18} /> <span className=\"font-bold\">{t('sections.billingAddress')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\"> <Input label={t('fields.billing_address_line1')} value={profile.billing_address_line1 || ''} onValueCh...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b235d77418b17d03:e1",
+          "source": "flow-b235d77418b17d03:n1",
+          "target": "flow-b235d77418b17d03:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b235d77418b17d03:e2",
+          "source": "flow-b235d77418b17d03:n2",
+          "target": "flow-b235d77418b17d03:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b235d77418b17d03:e3",
+          "source": "flow-b235d77418b17d03:n2",
+          "target": "flow-b235d77418b17d03:n4",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b235d77418b17d03:e4",
+          "source": "flow-b235d77418b17d03:n4",
+          "target": "flow-b235d77418b17d03:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

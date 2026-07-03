@@ -1,0 +1,181 @@
+{
+  "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+  "language": "typescript",
+  "sha256": "4d43063f16ce178ed1e0f23c08e654ff90b20493135840b628dde7b9510126b8",
+  "flows": [
+    {
+      "id": "flow-9ba3c53ee6dfa26e",
+      "name": "useDashboardSections",
+      "symbol": "src.features.dashboard.hooks.useDashboardSections:useDashboardSections",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+        "start_line": 6,
+        "end_line": 21
+      },
+      "nodes": [
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n1",
+          "kind": "entry",
+          "label": "Hook: useDashboardSections",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 6,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.hooks.useDashboardSections:useDashboardSections",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [activeSection, setActiveSection] = useState<Section>('overview');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useDashboardSections:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useDashboardSections:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n4",
+          "kind": "action",
+          "label": "Set toggleMobileMenu",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n5",
+          "kind": "action",
+          "label": "Set closeMobileMenu",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const closeMobileMenu = () => setIsMobileMenuOpen(false);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:n6",
+          "kind": "terminal",
+          "label": "Return { activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen, toggleMobileMenu, closeMobileMenu }",
+          "location": {
+            "path": "src/features/dashboard/hooks/useDashboardSections.ts",
+            "start_line": 13,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { activeSection, setActiveSection, isMobileMenuOpen, setIsMobileMenuOpen, toggleMobileMenu, closeMobileMenu };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-9ba3c53ee6dfa26e:e1",
+          "source": "flow-9ba3c53ee6dfa26e:n1",
+          "target": "flow-9ba3c53ee6dfa26e:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:e2",
+          "source": "flow-9ba3c53ee6dfa26e:n2",
+          "target": "flow-9ba3c53ee6dfa26e:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:e3",
+          "source": "flow-9ba3c53ee6dfa26e:n3",
+          "target": "flow-9ba3c53ee6dfa26e:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:e4",
+          "source": "flow-9ba3c53ee6dfa26e:n4",
+          "target": "flow-9ba3c53ee6dfa26e:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9ba3c53ee6dfa26e:e5",
+          "source": "flow-9ba3c53ee6dfa26e:n5",
+          "target": "flow-9ba3c53ee6dfa26e:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

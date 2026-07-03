@@ -1,0 +1,583 @@
+{
+  "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+  "language": "python",
+  "sha256": "05cfe3977fdee593efad2049a4f62d374e55c69cedc8aabeee5566b37acb8384",
+  "flows": [
+    {
+      "id": "flow-d2fece9c9aec0ab1",
+      "name": "handle_new_rx_page",
+      "symbol": "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:handle_new_rx_page",
+      "language": "python",
+      "framework": "generic",
+      "entry_kind": "event_handler",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+        "start_line": 7,
+        "end_line": 22
+      },
+      "nodes": [
+        {
+          "id": "flow-d2fece9c9aec0ab1:n1",
+          "kind": "entry",
+          "label": "handle_new_rx_page",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 7,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:handle_new_rx_page",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n2",
+          "kind": "action",
+          "label": "'Intercept NOTIFY_DEBUGGER_ABOUT_RX_PAGES and touch the pages.'",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "\"\"\"Intercept NOTIFY_DEBUGGER_ABOUT_RX_PAGES and touch the pages.\"\"\"",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n3",
+          "kind": "call",
+          "label": "Call GetValueAsAddress()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "base = frame.register[\"x0\"].GetValueAsAddress()",
+          "metadata": {
+            "calls": [
+              "GetValueAsAddress"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:GetValueAsAddress"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n4",
+          "kind": "call",
+          "label": "Call GetValueAsUnsigned()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "page_len = frame.register[\"x1\"].GetValueAsUnsigned()",
+          "metadata": {
+            "calls": [
+              "GetValueAsUnsigned"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:GetValueAsUnsigned"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n5",
+          "kind": "call",
+          "label": "Call bytearray()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "data = bytearray(page_len)",
+          "metadata": {
+            "calls": [
+              "bytearray"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:bytearray"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n6",
+          "kind": "action",
+          "label": "Set data[0:8]",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "data[0:8] = b'IHELPED!'",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n7",
+          "kind": "call",
+          "label": "Call lldb.SBError()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "error = lldb.SBError()",
+          "metadata": {
+            "calls": [
+              "lldb.SBError"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "lldb:SBError"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n8",
+          "kind": "call",
+          "label": "Call WriteMemory()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "frame.GetThread().GetProcess().WriteMemory(base, data, error)",
+          "metadata": {
+            "calls": [
+              "WriteMemory",
+              "GetProcess",
+              "frame.GetThread"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:WriteMemory",
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:GetProcess",
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:frame.GetThread"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n9",
+          "kind": "decision",
+          "label": "not error.Success()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "not error.Success()",
+          "metadata": {
+            "condition": "not error.Success()",
+            "domain": "",
+            "values": [],
+            "subject": "error.Success()",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n10",
+          "kind": "call",
+          "label": "Call print()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "print(f'Failed to write into {base}[+{page_len}]', error)",
+          "metadata": {
+            "calls": [
+              "print"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:print"
+            ]
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n11",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "return",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:n12",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 7,
+            "end_line": 22
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d2fece9c9aec0ab1:e1",
+          "source": "flow-d2fece9c9aec0ab1:n1",
+          "target": "flow-d2fece9c9aec0ab1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e2",
+          "source": "flow-d2fece9c9aec0ab1:n2",
+          "target": "flow-d2fece9c9aec0ab1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e3",
+          "source": "flow-d2fece9c9aec0ab1:n3",
+          "target": "flow-d2fece9c9aec0ab1:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e4",
+          "source": "flow-d2fece9c9aec0ab1:n4",
+          "target": "flow-d2fece9c9aec0ab1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e5",
+          "source": "flow-d2fece9c9aec0ab1:n5",
+          "target": "flow-d2fece9c9aec0ab1:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e6",
+          "source": "flow-d2fece9c9aec0ab1:n6",
+          "target": "flow-d2fece9c9aec0ab1:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e7",
+          "source": "flow-d2fece9c9aec0ab1:n7",
+          "target": "flow-d2fece9c9aec0ab1:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e8",
+          "source": "flow-d2fece9c9aec0ab1:n8",
+          "target": "flow-d2fece9c9aec0ab1:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e9",
+          "source": "flow-d2fece9c9aec0ab1:n9",
+          "target": "flow-d2fece9c9aec0ab1:n10",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e10",
+          "source": "flow-d2fece9c9aec0ab1:n10",
+          "target": "flow-d2fece9c9aec0ab1:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d2fece9c9aec0ab1:e11",
+          "source": "flow-d2fece9c9aec0ab1:n9",
+          "target": "flow-d2fece9c9aec0ab1:n12",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "async": false,
+        "test": false,
+        "decorators": [],
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-72240541ff085947",
+      "name": "__lldb_init_module",
+      "symbol": "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:__lldb_init_module",
+      "language": "python",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": false,
+      "location": {
+        "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+        "start_line": 24,
+        "end_line": 32
+      },
+      "nodes": [
+        {
+          "id": "flow-72240541ff085947:n1",
+          "kind": "entry",
+          "label": "__lldb_init_module",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 24,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:__lldb_init_module",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n2",
+          "kind": "call",
+          "label": "Call debugger.GetDummyTarget()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "target = debugger.GetDummyTarget()",
+          "metadata": {
+            "calls": [
+              "debugger.GetDummyTarget"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:debugger.GetDummyTarget"
+            ]
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n3",
+          "kind": "call",
+          "label": "Call target.BreakpointCreateByRegex()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "bp = target.BreakpointCreateByRegex(\"^NOTIFY_DEBUGGER_ABOUT_RX_PAGES$\")",
+          "metadata": {
+            "calls": [
+              "target.BreakpointCreateByRegex"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:target.BreakpointCreateByRegex"
+            ]
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n4",
+          "kind": "call",
+          "label": "Call bp.SetScriptCallbackFunction()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "bp.SetScriptCallbackFunction('{}.handle_new_rx_page'.format(__name__))",
+          "metadata": {
+            "calls": [
+              "bp.SetScriptCallbackFunction",
+              "format"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:bp.SetScriptCallbackFunction",
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:format"
+            ]
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n5",
+          "kind": "call",
+          "label": "Call bp.SetAutoContinue()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "bp.SetAutoContinue(True)",
+          "metadata": {
+            "calls": [
+              "bp.SetAutoContinue"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:bp.SetAutoContinue"
+            ]
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n6",
+          "kind": "call",
+          "label": "Call print()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 32,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "print(\"-- LLDB integration loaded --\")",
+          "metadata": {
+            "calls": [
+              "print"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.ios.Flutter.ephemeral.flutter_lldb_helper:print"
+            ]
+          }
+        },
+        {
+          "id": "flow-72240541ff085947:n7",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py",
+            "start_line": 24,
+            "end_line": 32
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-72240541ff085947:e1",
+          "source": "flow-72240541ff085947:n1",
+          "target": "flow-72240541ff085947:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-72240541ff085947:e2",
+          "source": "flow-72240541ff085947:n2",
+          "target": "flow-72240541ff085947:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-72240541ff085947:e3",
+          "source": "flow-72240541ff085947:n3",
+          "target": "flow-72240541ff085947:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-72240541ff085947:e4",
+          "source": "flow-72240541ff085947:n4",
+          "target": "flow-72240541ff085947:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-72240541ff085947:e5",
+          "source": "flow-72240541ff085947:n5",
+          "target": "flow-72240541ff085947:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-72240541ff085947:e6",
+          "source": "flow-72240541ff085947:n6",
+          "target": "flow-72240541ff085947:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "async": false,
+        "test": false,
+        "decorators": [],
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

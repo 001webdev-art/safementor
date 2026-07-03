@@ -1,0 +1,372 @@
+{
+  "path": "src/features/dashboard/components/ChildrenData.tsx",
+  "language": "typescript",
+  "sha256": "5b50df542ae9aa70b099f94bc0a06c8fb09bc745746f0a1bbe2903273639e2a1",
+  "flows": [
+    {
+      "id": "flow-4efbef9bc9f423b1",
+      "name": "ChildrenData",
+      "symbol": "src.features.dashboard.components.ChildrenData:ChildrenData",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/ChildrenData.tsx",
+        "start_line": 15,
+        "end_line": 278
+      },
+      "nodes": [
+        {
+          "id": "flow-4efbef9bc9f423b1:n1",
+          "kind": "entry",
+          "label": "Component: ChildrenData",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 15,
+            "end_line": 278
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.ChildrenData:ChildrenData",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard.children_new');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.ChildrenData:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n3",
+          "kind": "action",
+          "label": "// Initializing with an empty array as per user request to start fresh",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Initializing with an empty array as per user request to start fresh",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [localChildren, setLocalChildren] = useState<Child[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.ChildrenData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 23,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [drafts, setDrafts] = useState<Record<string, Partial<Child & { time_limit?: string }>>>({});",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.ChildrenData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isSaving, setIsSaving] = useState<Record<string, boolean>>({});",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.ChildrenData:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n7",
+          "kind": "action",
+          "label": "Set currentChildren",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 26,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentChildren = [...(externalChildren || []), ...localChildren];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n8",
+          "kind": "action",
+          "label": "Set handleAddChild",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 28,
+            "end_line": 50
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleAddChild = () => { const id = `temp-${Date.now()}`; const newChild: Child = { id, parent_id: '', nickname: t('newChild'), childrenname: t('newChild'), age: null, gender: null, email: null, phone: null, medical_has_allergies: false, medical_has_mental_disorders: false, medical_has_physical_disorders: false, birth_month: 1, birth_year: 2022, language: 'en', device: t('newDevice'), updated_at: new Date().toISOString(), updated_by: null }; setLocalChildren([...localChildren, newChild]);...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n9",
+          "kind": "action",
+          "label": "Set handleDelete",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 52,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleDelete = async (id: string) => { if (id.toString().startsWith('temp-')) { setLocalChildren(localChildren.filter(c => c.id !== id)); setDrafts(prev => { const next = { ...prev }; delete next[id]; return next; }); return; } if (onDeleteChild) { await onDeleteChild(id); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n10",
+          "kind": "action",
+          "label": "Set handleSaveChild",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 67,
+            "end_line": 101
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSaveChild = async (id: string, originalChild: Child) => { setIsSaving(prev => ({ ...prev, [id]: true })); try { if (onUpsertChild) { const draft = drafts[id] || {}; const finalChild = { ...originalChild, ...draft }; // Ensure childrenname is provided because it's NOT NULL in DB // If it's a new or updated child, we sync childrenname with nickname if needed const payload = { ...finalChild, id, childrenname: finalChild.nickname || finalChild.childrenname || 'Unnamed' }; await onUpsert...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n11",
+          "kind": "action",
+          "label": "Set updateChildField",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 103,
+            "end_line": 111
+          },
+          "evidence": "VERIFIED",
+          "detail": "const updateChildField = (id: string, field: string, value: any) => { setDrafts(prev => ({ ...prev, [id]: { ...(prev[id] || {}), [field]: value } })); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n12",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 113,
+            "end_line": 277
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> <Card className=\"border border-gray-200 shadow-sm\"> <CardHeader className=\"flex justify-between items-center\"> <div> <h3 className=\"font-bold text-gray-900\">{t('management')}</h3> <p className=\"text-sm text-gray-500\">{t('managementSubtitle')}</p> </div> <Button className=\"bg-[#889A7F] text-white...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "currentChildren.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:t",
+              "src.features.dashboard.components.ChildrenData:currentChildren.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:n13",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-...",
+          "location": {
+            "path": "src/features/dashboard/components/ChildrenData.tsx",
+            "start_line": 113,
+            "end_line": 277
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> <Card className=\"border border-gray-200 shadow-sm\"> <CardHeader className=\"flex justify-between items-center\"> <div> <h3 className=\"font-bold text-gray-900\">{t('management')}</h3> <p className=\"text-sm text-gray-500\">{t('managementSubtitle')}</p> </div> <Button className=\"bg-[#889A7F] text-white...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4efbef9bc9f423b1:e1",
+          "source": "flow-4efbef9bc9f423b1:n1",
+          "target": "flow-4efbef9bc9f423b1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e2",
+          "source": "flow-4efbef9bc9f423b1:n2",
+          "target": "flow-4efbef9bc9f423b1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e3",
+          "source": "flow-4efbef9bc9f423b1:n3",
+          "target": "flow-4efbef9bc9f423b1:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e4",
+          "source": "flow-4efbef9bc9f423b1:n4",
+          "target": "flow-4efbef9bc9f423b1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e5",
+          "source": "flow-4efbef9bc9f423b1:n5",
+          "target": "flow-4efbef9bc9f423b1:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e6",
+          "source": "flow-4efbef9bc9f423b1:n6",
+          "target": "flow-4efbef9bc9f423b1:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e7",
+          "source": "flow-4efbef9bc9f423b1:n7",
+          "target": "flow-4efbef9bc9f423b1:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e8",
+          "source": "flow-4efbef9bc9f423b1:n8",
+          "target": "flow-4efbef9bc9f423b1:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e9",
+          "source": "flow-4efbef9bc9f423b1:n9",
+          "target": "flow-4efbef9bc9f423b1:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e10",
+          "source": "flow-4efbef9bc9f423b1:n10",
+          "target": "flow-4efbef9bc9f423b1:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e11",
+          "source": "flow-4efbef9bc9f423b1:n11",
+          "target": "flow-4efbef9bc9f423b1:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4efbef9bc9f423b1:e12",
+          "source": "flow-4efbef9bc9f423b1:n12",
+          "target": "flow-4efbef9bc9f423b1:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

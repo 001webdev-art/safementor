@@ -1,0 +1,232 @@
+{
+  "path": "src/features/landing/components/Navigation.tsx",
+  "language": "typescript",
+  "sha256": "607996d96300fb7def9eb30845e41b39d1dd3ce0b0e84bd7404822d812701e22",
+  "flows": [
+    {
+      "id": "flow-70589a49aee6b00f",
+      "name": "Navigation",
+      "symbol": "src.features.landing.components.Navigation:Navigation",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Navigation.tsx",
+        "start_line": 8,
+        "end_line": 82
+      },
+      "nodes": [
+        {
+          "id": "flow-70589a49aee6b00f:n1",
+          "kind": "entry",
+          "label": "Component: Navigation",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 8,
+            "end_line": 82
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Navigation:Navigation",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('SafeMentor.Navigation');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Navigation:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Navigation:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isMenuOpen, setIsMenuOpen] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Navigation:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n5",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 13,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const navLinks = [ { href: \"#values\", label: t('values') }, { href: \"#approach\", label: t('approach') }, ];",
+          "metadata": {
+            "calls": [
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Navigation:t",
+              "src.features.landing.components.Navigation:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n6",
+          "kind": "call",
+          "label": "Call navLinks.map()",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 18,
+            "end_line": 81
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <nav id=\"nav-bar\" className=\"w-full px-6 py-5 md:px-12 lg:px-20 bg-white/80 backdrop-blur-sm sticky top-0 z-50\"> <div className=\"max-w-6xl mx-auto flex items-center justify-between\"> <Link href={`/${locale}`} className=\"flex items-center gap-3 group\"> <SafeMentorLogo className=\"group-hover:scale-110 transition-transform duration-300\" /> <span id=\"logo-text\" className=\"font-serif text-xl font-bold tracking-tight text-[#4A4540]\"> SafeMentor </span> </Link> {/* Desktop Navigation */} <div...",
+          "metadata": {
+            "calls": [
+              "navLinks.map",
+              "t",
+              "navLinks.map",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Navigation:navLinks.map",
+              "src.features.landing.components.Navigation:t",
+              "src.features.landing.components.Navigation:navLinks.map",
+              "src.features.landing.components.Navigation:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-70589a49aee6b00f:n7",
+          "kind": "terminal",
+          "label": "Return ( <nav id=\"nav-bar\" className=\"w-full px-6 py-5 md:px-12 lg:px-20 bg-white/80 backdrop-blur-sm sticky top-0 z-50...",
+          "location": {
+            "path": "src/features/landing/components/Navigation.tsx",
+            "start_line": 18,
+            "end_line": 81
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <nav id=\"nav-bar\" className=\"w-full px-6 py-5 md:px-12 lg:px-20 bg-white/80 backdrop-blur-sm sticky top-0 z-50\"> <div className=\"max-w-6xl mx-auto flex items-center justify-between\"> <Link href={`/${locale}`} className=\"flex items-center gap-3 group\"> <SafeMentorLogo className=\"group-hover:scale-110 transition-transform duration-300\" /> <span id=\"logo-text\" className=\"font-serif text-xl font-bold tracking-tight text-[#4A4540]\"> SafeMentor </span> </Link> {/* Desktop Navigation */} <div...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-70589a49aee6b00f:e1",
+          "source": "flow-70589a49aee6b00f:n1",
+          "target": "flow-70589a49aee6b00f:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70589a49aee6b00f:e2",
+          "source": "flow-70589a49aee6b00f:n2",
+          "target": "flow-70589a49aee6b00f:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70589a49aee6b00f:e3",
+          "source": "flow-70589a49aee6b00f:n3",
+          "target": "flow-70589a49aee6b00f:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70589a49aee6b00f:e4",
+          "source": "flow-70589a49aee6b00f:n4",
+          "target": "flow-70589a49aee6b00f:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70589a49aee6b00f:e5",
+          "source": "flow-70589a49aee6b00f:n5",
+          "target": "flow-70589a49aee6b00f:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70589a49aee6b00f:e6",
+          "source": "flow-70589a49aee6b00f:n6",
+          "target": "flow-70589a49aee6b00f:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/SafeMentorIcons.tsx"
+  ]
+}

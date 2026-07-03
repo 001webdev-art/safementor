@@ -1,0 +1,397 @@
+{
+  "path": "src/types/dashboard.ts",
+  "language": "typescript",
+  "sha256": "06444410d9786db79e49fb35c01e0b7476843181f6aa656927d681c1b5a35c6b",
+  "flows": [
+    {
+      "id": "flow-d255351efe1e0105",
+      "name": "DashboardService.getChildren",
+      "symbol": "src.types.dashboard:DashboardService.getChildren",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/types/dashboard.ts",
+        "start_line": 44,
+        "end_line": 83
+      },
+      "nodes": [
+        {
+          "id": "flow-d255351efe1e0105:n1",
+          "kind": "entry",
+          "label": "DashboardService.getChildren",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 44,
+            "end_line": 83
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.types.dashboard:DashboardService.getChildren",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d255351efe1e0105:n2",
+          "kind": "call",
+          "label": "Call new Date().toISOString()",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 45,
+            "end_line": 82
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [ { id: 'child-1', parent_id: 'parent-1', nickname: 'Alex', childrenname: 'Alex Johnson', email: 'alex@example.com', phone: null, age: null, gender: null, medical_has_allergies: false, medical_has_mental_disorders: false, medical_has_physical_disorders: false, birth_month: 5, birth_year: 2018, language: 'en', updated_at: new Date().toISOString(), updated_by: null }, { id: 'child-2', parent_id: 'parent-1', nickname: 'Sam', childrenname: 'Sam Smith', email: 'sam@example.com', phone: null,....",
+          "metadata": {
+            "calls": [
+              "new Date().toISOString",
+              "new Date().toISOString"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.types.dashboard:new Date().toISOString",
+              "src.types.dashboard:new Date().toISOString"
+            ]
+          }
+        },
+        {
+          "id": "flow-d255351efe1e0105:n3",
+          "kind": "terminal",
+          "label": "Return [ { id: 'child-1', parent_id: 'parent-1', nickname: 'Alex', childrenname: 'Alex Johnson', email: 'alex@example.c...",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 45,
+            "end_line": 82
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [ { id: 'child-1', parent_id: 'parent-1', nickname: 'Alex', childrenname: 'Alex Johnson', email: 'alex@example.com', phone: null, age: null, gender: null, medical_has_allergies: false, medical_has_mental_disorders: false, medical_has_physical_disorders: false, birth_month: 5, birth_year: 2018, language: 'en', updated_at: new Date().toISOString(), updated_by: null }, { id: 'child-2', parent_id: 'parent-1', nickname: 'Sam', childrenname: 'Sam Smith', email: 'sam@example.com', phone: null,....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d255351efe1e0105:e1",
+          "source": "flow-d255351efe1e0105:n1",
+          "target": "flow-d255351efe1e0105:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d255351efe1e0105:e2",
+          "source": "flow-d255351efe1e0105:n2",
+          "target": "flow-d255351efe1e0105:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-cc97a0f557c669c3",
+      "name": "DashboardService.getAlerts",
+      "symbol": "src.types.dashboard:DashboardService.getAlerts",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/types/dashboard.ts",
+        "start_line": 85,
+        "end_line": 105
+      },
+      "nodes": [
+        {
+          "id": "flow-cc97a0f557c669c3:n1",
+          "kind": "entry",
+          "label": "DashboardService.getAlerts",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 85,
+            "end_line": 105
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.types.dashboard:DashboardService.getAlerts",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-cc97a0f557c669c3:n2",
+          "kind": "terminal",
+          "label": "Return [ { id: '1', type: 'red', title: 'Self-Harm Mention Detected', description: 'Immediate attention required', time...",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 86,
+            "end_line": 104
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [ { id: '1', type: 'red', title: 'Self-Harm Mention Detected', description: 'Immediate attention required', timestamp: '2 hours ago', childId: 'child-1', quote: 'I just want to disappear...' }, { id: '2', type: 'yellow', title: 'Sleep Pattern Change', description: 'Child mentioned difficulty sleeping', timestamp: '1 day ago', childId: 'child-2' } ];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-cc97a0f557c669c3:e1",
+          "source": "flow-cc97a0f557c669c3:n1",
+          "target": "flow-cc97a0f557c669c3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-c7319b067427198c",
+      "name": "DashboardService.getEmotionTrends",
+      "symbol": "src.types.dashboard:DashboardService.getEmotionTrends",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/types/dashboard.ts",
+        "start_line": 107,
+        "end_line": 119
+      },
+      "nodes": [
+        {
+          "id": "flow-c7319b067427198c:n1",
+          "kind": "entry",
+          "label": "DashboardService.getEmotionTrends",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 107,
+            "end_line": 119
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.types.dashboard:DashboardService.getEmotionTrends",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n2",
+          "kind": "action",
+          "label": "Set data",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 108,
+            "end_line": 108
+          },
+          "evidence": "VERIFIED",
+          "detail": "const data: EmotionTrend[] = [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n3",
+          "kind": "action",
+          "label": "Repeat: for (let i = days - 1; i >= 0; i -= 1)",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 109,
+            "end_line": 117
+          },
+          "evidence": "INFERRED",
+          "detail": "for (let i = days - 1; i >= 0; i -= 1) { const date = new Date(); date.setDate(date.getDate() - i); data.push({ date: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), score: 60 + Math.random() * 30, label: 'Positive' }); }",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n4",
+          "kind": "action",
+          "label": "Set date",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 110,
+            "end_line": 110
+          },
+          "evidence": "VERIFIED",
+          "detail": "const date = new Date();",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n5",
+          "kind": "call",
+          "label": "Call date.setDate()",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 111,
+            "end_line": 111
+          },
+          "evidence": "VERIFIED",
+          "detail": "date.setDate(date.getDate() - i);",
+          "metadata": {
+            "calls": [
+              "date.setDate",
+              "date.getDate"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.types.dashboard:date.setDate",
+              "src.types.dashboard:date.getDate"
+            ]
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n6",
+          "kind": "call",
+          "label": "Call data.push()",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 112,
+            "end_line": 116
+          },
+          "evidence": "VERIFIED",
+          "detail": "data.push({ date: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }), score: 60 + Math.random() * 30, label: 'Positive' });",
+          "metadata": {
+            "calls": [
+              "data.push",
+              "date.toLocaleDateString",
+              "Math.random"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.types.dashboard:data.push",
+              "src.types.dashboard:date.toLocaleDateString",
+              "src.types.dashboard:Math.random"
+            ]
+          }
+        },
+        {
+          "id": "flow-c7319b067427198c:n7",
+          "kind": "terminal",
+          "label": "Return data",
+          "location": {
+            "path": "src/types/dashboard.ts",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "return data;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c7319b067427198c:e1",
+          "source": "flow-c7319b067427198c:n1",
+          "target": "flow-c7319b067427198c:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e2",
+          "source": "flow-c7319b067427198c:n2",
+          "target": "flow-c7319b067427198c:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e3",
+          "source": "flow-c7319b067427198c:n3",
+          "target": "flow-c7319b067427198c:n4",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e4",
+          "source": "flow-c7319b067427198c:n4",
+          "target": "flow-c7319b067427198c:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e5",
+          "source": "flow-c7319b067427198c:n5",
+          "target": "flow-c7319b067427198c:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e6",
+          "source": "flow-c7319b067427198c:n3",
+          "target": "flow-c7319b067427198c:n7",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c7319b067427198c:e7",
+          "source": "flow-c7319b067427198c:n6",
+          "target": "flow-c7319b067427198c:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {
+    "Section": [
+      "overview",
+      "notifications",
+      "personal-data",
+      "children-data",
+      "privacy",
+      "children",
+      "help"
+    ]
+  },
+  "constants": {},
+  "dependencies": [
+    "src/types/database.ts"
+  ]
+}

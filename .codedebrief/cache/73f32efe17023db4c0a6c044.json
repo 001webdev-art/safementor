@@ -1,0 +1,77 @@
+{
+  "path": "src/app/[locale]/register/page.tsx",
+  "language": "typescript",
+  "sha256": "f466fc0ac3c5a65d62ef34dc67312ac01a0aa14e424793ad7acbf5489f2b54da",
+  "flows": [
+    {
+      "id": "flow-06fdfc4515e6ee55",
+      "name": "Page",
+      "symbol": "src.app.[locale].register.page:Page",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/register/page.tsx",
+        "start_line": 3,
+        "end_line": 5
+      },
+      "nodes": [
+        {
+          "id": "flow-06fdfc4515e6ee55:n1",
+          "kind": "entry",
+          "label": "Component: Page",
+          "location": {
+            "path": "src/app/[locale]/register/page.tsx",
+            "start_line": 3,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].register.page:Page",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-06fdfc4515e6ee55:n2",
+          "kind": "terminal",
+          "label": "Return <RegisterPage />",
+          "location": {
+            "path": "src/app/[locale]/register/page.tsx",
+            "start_line": 4,
+            "end_line": 4
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <RegisterPage />",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-06fdfc4515e6ee55:e1",
+          "source": "flow-06fdfc4515e6ee55:n1",
+          "target": "flow-06fdfc4515e6ee55:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

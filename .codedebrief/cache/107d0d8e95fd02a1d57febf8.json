@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/i18n/index.ts",
+  "language": "typescript",
+  "sha256": "3d7b285c74f57f8ff84785061da0da86a13bbee2703ce96ffdb4577da21282a8",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

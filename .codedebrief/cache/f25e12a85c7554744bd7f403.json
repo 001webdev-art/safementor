@@ -1,0 +1,181 @@
+{
+  "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+  "language": "typescript",
+  "sha256": "388271533350d8d54dc0880ef3d92154ade8a93b4db417d31a56f07e990c8d28",
+  "flows": [
+    {
+      "id": "flow-ff62eb6bcc91386c",
+      "name": "useCollapsibleGroups",
+      "symbol": "src.features.dashboard.hooks.useCollapsibleGroups:useCollapsibleGroups",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+        "start_line": 5,
+        "end_line": 33
+      },
+      "nodes": [
+        {
+          "id": "flow-ff62eb6bcc91386c:n1",
+          "kind": "entry",
+          "label": "Hook: useCollapsibleGroups",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 5,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.hooks.useCollapsibleGroups:useCollapsibleGroups",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [collapsedGroups, setCollapsedGroups] = useState<Record<string, boolean>>({});",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useCollapsibleGroups:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:n3",
+          "kind": "action",
+          "label": "// Load collapsed states from localStorage on mount",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Load collapsed states from localStorage on mount",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:n4",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 9,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const saved = localStorage.getItem('dashboard_collapsed_groups'); if (saved) { try { setCollapsedGroups(JSON.parse(saved)); } catch (e) { console.error('Failed to parse collapsed groups:', e); } } }, []);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useCollapsibleGroups:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:n5",
+          "kind": "action",
+          "label": "Set toggleGroup",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 20,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "const toggleGroup = (groupId: string) => { const newState = { ...collapsedGroups, [groupId]: !collapsedGroups[groupId] }; setCollapsedGroups(newState); localStorage.setItem('dashboard_collapsed_groups', JSON.stringify(newState)); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:n6",
+          "kind": "terminal",
+          "label": "Return { collapsedGroups, toggleGroup }",
+          "location": {
+            "path": "src/features/dashboard/hooks/useCollapsibleGroups.ts",
+            "start_line": 29,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { collapsedGroups, toggleGroup };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ff62eb6bcc91386c:e1",
+          "source": "flow-ff62eb6bcc91386c:n1",
+          "target": "flow-ff62eb6bcc91386c:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:e2",
+          "source": "flow-ff62eb6bcc91386c:n2",
+          "target": "flow-ff62eb6bcc91386c:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:e3",
+          "source": "flow-ff62eb6bcc91386c:n3",
+          "target": "flow-ff62eb6bcc91386c:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:e4",
+          "source": "flow-ff62eb6bcc91386c:n4",
+          "target": "flow-ff62eb6bcc91386c:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff62eb6bcc91386c:e5",
+          "source": "flow-ff62eb6bcc91386c:n5",
+          "target": "flow-ff62eb6bcc91386c:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

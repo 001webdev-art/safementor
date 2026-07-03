@@ -32,12 +32,7 @@ class ChatMessage {
       'message_type': role.name,
       'content': content,
       'timestamp': timestamp.toIso8601String(),
-      'sync_status': syncStatus.name,
       'is_synced': false,
-      'date': timestamp.toIso8601String().split('T').first,
-      'time': timestamp.toIso8601String().split('T').last.split('.').first,
-      'nickname': nickname,
-      'parent_message_id': parentMessageId,
     };
     if (intent != null) {
       base.addAll({

@@ -1,0 +1,9 @@
+{
+  "path": "src/features/register/index.ts",
+  "language": "typescript",
+  "sha256": "c31ece062398752fd3e22d49c1b09f72bb939a28e40b723ef5b062830bad3095",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

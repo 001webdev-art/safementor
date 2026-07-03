@@ -1,0 +1,239 @@
+{
+  "path": "src/features/dashboard/components/HelpSupport.tsx",
+  "language": "typescript",
+  "sha256": "d03ccaa34c9fffdbc6c62a2e97b3996698caf24830f366b85d9c2b29bd63bc08",
+  "flows": [
+    {
+      "id": "flow-01682725c109708a",
+      "name": "HelpSupport",
+      "symbol": "src.features.dashboard.components.HelpSupport:HelpSupport",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/HelpSupport.tsx",
+        "start_line": 13,
+        "end_line": 264
+      },
+      "nodes": [
+        {
+          "id": "flow-01682725c109708a:n1",
+          "kind": "entry",
+          "label": "Component: HelpSupport",
+          "location": {
+            "path": "src/features/dashboard/components/HelpSupport.tsx",
+            "start_line": 13,
+            "end_line": 264
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.HelpSupport:HelpSupport",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-01682725c109708a:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/HelpSupport.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard.help_new');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.HelpSupport:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-01682725c109708a:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/HelpSupport.tsx",
+            "start_line": 16,
+            "end_line": 263
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Page Header */} <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-1\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Section 1: Documentation */} <Card shadow=\"none\" className=\"border-none bg-[#EBF0E9] p-2\"> <CardBody className=\"flex flex-col items-center text-center py-6 space-y-4\"> <div className=\"p-3 bg-white/50 rounded-2xl\"> <FileText className=\"w-8 h-8 text-[#5E6B56]\" /> </div> <di...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "[ { step: 1, key: 'step1', icon: MessageSquare }, { step: 2, key: 'step2', icon: Search }, { step: 3, key: 'step3', icon: LayoutDashboard }, { step: 4, key: 'step4', icon: BellRing } ].map",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:[ { step: 1, key: 'step1', icon: MessageSquare }, { step: 2, key: 'step2', icon: Search }, { step: 3, key: 'step3', icon: LayoutDashboard }, { step: 4, key: 'step4', icon: BellRing } ].map",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t",
+              "src.features.dashboard.components.HelpSupport:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-01682725c109708a:n4",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Page Header */} <div> <h1 className=\"text-3xl...",
+          "location": {
+            "path": "src/features/dashboard/components/HelpSupport.tsx",
+            "start_line": 16,
+            "end_line": 263
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Page Header */} <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-1\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Section 1: Documentation */} <Card shadow=\"none\" className=\"border-none bg-[#EBF0E9] p-2\"> <CardBody className=\"flex flex-col items-center text-center py-6 space-y-4\"> <div className=\"p-3 bg-white/50 rounded-2xl\"> <FileText className=\"w-8 h-8 text-[#5E6B56]\" /> </div> <di...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-01682725c109708a:e1",
+          "source": "flow-01682725c109708a:n1",
+          "target": "flow-01682725c109708a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-01682725c109708a:e2",
+          "source": "flow-01682725c109708a:n2",
+          "target": "flow-01682725c109708a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-01682725c109708a:e3",
+          "source": "flow-01682725c109708a:n3",
+          "target": "flow-01682725c109708a:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

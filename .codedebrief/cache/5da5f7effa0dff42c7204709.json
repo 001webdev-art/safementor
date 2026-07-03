@@ -1,0 +1,106 @@
+{
+  "path": "src/app/[locale]/chat/page.tsx",
+  "language": "typescript",
+  "sha256": "1cec7d47878679a81a113a676a7412d89d05341c41008a1ca774b4b7f658a986",
+  "flows": [
+    {
+      "id": "flow-0e030dece4ee5d47",
+      "name": "ChatPage",
+      "symbol": "src.app.[locale].chat.page:ChatPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/chat/page.tsx",
+        "start_line": 5,
+        "end_line": 13
+      },
+      "nodes": [
+        {
+          "id": "flow-0e030dece4ee5d47:n1",
+          "kind": "entry",
+          "label": "Component: ChatPage",
+          "location": {
+            "path": "src/app/[locale]/chat/page.tsx",
+            "start_line": 5,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].chat.page:ChatPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-0e030dece4ee5d47:n2",
+          "kind": "call",
+          "label": "Call getMessages()",
+          "location": {
+            "path": "src/app/[locale]/chat/page.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const messages = await getMessages();",
+          "metadata": {
+            "calls": [
+              "getMessages"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].chat.page:getMessages"
+            ]
+          }
+        },
+        {
+          "id": "flow-0e030dece4ee5d47:n3",
+          "kind": "terminal",
+          "label": "Return ( <NextIntlClientProvider locale={locale} messages={messages}> <ChatClient /> </NextIntlClientProvider> )",
+          "location": {
+            "path": "src/app/[locale]/chat/page.tsx",
+            "start_line": 8,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <NextIntlClientProvider locale={locale} messages={messages}> <ChatClient /> </NextIntlClientProvider> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-0e030dece4ee5d47:e1",
+          "source": "flow-0e030dece4ee5d47:n1",
+          "target": "flow-0e030dece4ee5d47:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0e030dece4ee5d47:e2",
+          "source": "flow-0e030dece4ee5d47:n2",
+          "target": "flow-0e030dece4ee5d47:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

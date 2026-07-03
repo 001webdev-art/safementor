@@ -1,0 +1,202 @@
+{
+  "path": "public/sw-chat.js",
+  "language": "javascript",
+  "sha256": "9a0333c170882be03cf57e50ae49bc2eadd9fa1846b793367e154e452d8f4fdb",
+  "flows": [
+    {
+      "id": "flow-c16ca5046323652b",
+      "name": "a",
+      "symbol": "public.sw-chat:a",
+      "language": "javascript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": false,
+      "location": {
+        "path": "public/sw-chat.js",
+        "start_line": 1,
+        "end_line": 1
+      },
+      "nodes": [
+        {
+          "id": "flow-c16ca5046323652b:n1",
+          "kind": "entry",
+          "label": "a",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "public.sw-chat:a",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c16ca5046323652b:n2",
+          "kind": "call",
+          "label": "Call new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");e.src=a,e.onload=s,document.head.ap...",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "(a=new URL(a+\".js\",c).href,s[a]||new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()}).then(()=>{let e=s[a];if(!e)throw new Error(`Module ${a} didn’t register its module`);return e}))",
+          "metadata": {
+            "calls": [
+              "new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()}).then"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "public.sw-chat:new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()}).then"
+            ]
+          }
+        },
+        {
+          "id": "flow-c16ca5046323652b:n3",
+          "kind": "terminal",
+          "label": "Return (a=new URL(a+\".js\",c).href,s[a]||new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");...",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "(a=new URL(a+\".js\",c).href,s[a]||new Promise(s=>{if(\"document\"in self){const e=document.createElement(\"script\");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()}).then(()=>{let e=s[a];if(!e)throw new Error(`Module ${a} didn’t register its module`);return e}))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c16ca5046323652b:e1",
+          "source": "flow-c16ca5046323652b:n1",
+          "target": "flow-c16ca5046323652b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c16ca5046323652b:e2",
+          "source": "flow-c16ca5046323652b:n2",
+          "target": "flow-c16ca5046323652b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-b57b60179d8ee505",
+      "name": "r",
+      "symbol": "public.sw-chat:r",
+      "language": "javascript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": false,
+      "location": {
+        "path": "public/sw-chat.js",
+        "start_line": 1,
+        "end_line": 1
+      },
+      "nodes": [
+        {
+          "id": "flow-b57b60179d8ee505:n1",
+          "kind": "entry",
+          "label": "r",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "public.sw-chat:r",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-b57b60179d8ee505:n2",
+          "kind": "call",
+          "label": "Call a()",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "a(e,n)",
+          "metadata": {
+            "calls": [
+              "a"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "public.sw-chat:a"
+            ]
+          }
+        },
+        {
+          "id": "flow-b57b60179d8ee505:n3",
+          "kind": "terminal",
+          "label": "Return a(e,n)",
+          "location": {
+            "path": "public/sw-chat.js",
+            "start_line": 1,
+            "end_line": 1
+          },
+          "evidence": "VERIFIED",
+          "detail": "a(e,n)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-b57b60179d8ee505:e1",
+          "source": "flow-b57b60179d8ee505:n1",
+          "target": "flow-b57b60179d8ee505:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-b57b60179d8ee505:e2",
+          "source": "flow-b57b60179d8ee505:n2",
+          "target": "flow-b57b60179d8ee505:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/NavigationFlow.tsx",
+  "language": "typescript",
+  "sha256": "5a162cb2561586038a4926ab35634cbdd08391c0e8dbdb409e6f9e15e76dcae3",
+  "flows": [
+    {
+      "id": "flow-053db918588172d0",
+      "name": "NavigationFlow",
+      "symbol": "src.features.profile.components.NavigationFlow:NavigationFlow",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/NavigationFlow.tsx",
+        "start_line": 4,
+        "end_line": 6
+      },
+      "nodes": [
+        {
+          "id": "flow-053db918588172d0:n1",
+          "kind": "entry",
+          "label": "Component: NavigationFlow",
+          "location": {
+            "path": "src/features/profile/components/NavigationFlow.tsx",
+            "start_line": 4,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.NavigationFlow:NavigationFlow",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-053db918588172d0:n2",
+          "kind": "terminal",
+          "label": "Return <div>Navigation component - deprecated</div>",
+          "location": {
+            "path": "src/features/profile/components/NavigationFlow.tsx",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <div>Navigation component - deprecated</div>;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-053db918588172d0:e1",
+          "source": "flow-053db918588172d0:n1",
+          "target": "flow-053db918588172d0:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

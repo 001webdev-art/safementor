@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../core/config/app_config.dart';
@@ -26,7 +27,9 @@ class ChatRepository {
     );
     final response = await _client.get(uri, headers: _headers(session));
     if (response.statusCode < 200 || response.statusCode >= 300) {
-      throw Exception('Failed to load children');
+      throw Exception(
+        _readError(response, fallback: 'Failed to load children'),
+      );
     }
     final rows = jsonDecode(response.body) as List<dynamic>;
     return rows
@@ -43,6 +46,7 @@ class ChatRepository {
     );
     final response = await _client.get(uri, headers: _headers(session));
     if (response.statusCode < 200 || response.statusCode >= 300) {
+      _logSupabaseError('load chat messages', response);
       return const [];
     }
     final rows = jsonDecode(response.body) as List<dynamic>;
@@ -57,6 +61,29 @@ class ChatRepository {
       headers: {..._headers(session), 'Prefer': 'return=minimal'},
       body: jsonEncode(message.toSupabaseJson()),
     );
-    return response.statusCode >= 200 && response.statusCode < 300;
+    final didSave = response.statusCode >= 200 && response.statusCode < 300;
+    if (!didSave) {
+      _logSupabaseError('save chat message', response);
+    }
+    return didSave;
+  }
+
+  String _readError(http.Response response, {required String fallback}) {
+    try {
+      final data = jsonDecode(response.body) as Map<String, dynamic>;
+      return data['message'] as String? ??
+          data['hint'] as String? ??
+          data['details'] as String? ??
+          fallback;
+    } catch (_) {
+      return fallback;
+    }
+  }
+
+  void _logSupabaseError(String action, http.Response response) {
+    debugPrint(
+      'Supabase failed to $action '
+      '(${response.statusCode}): ${response.body}',
+    );
   }
 }

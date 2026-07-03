@@ -1,0 +1,696 @@
+{
+  "path": "src/middleware.ts",
+  "language": "typescript",
+  "sha256": "052ecf5bb776dc68cf09457551ad4dc310ea4825b56e6c6e510468da33802b3b",
+  "flows": [
+    {
+      "id": "flow-61293848338f3180",
+      "name": "middleware",
+      "symbol": "src.middleware:middleware",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "middleware",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/middleware.ts",
+        "start_line": 12,
+        "end_line": 41
+      },
+      "nodes": [
+        {
+          "id": "flow-61293848338f3180:n1",
+          "kind": "entry",
+          "label": "Middleware: middleware",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 12,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.middleware:middleware",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n2",
+          "kind": "action",
+          "label": "Set { pathname }",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { pathname } = req.nextUrl",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n3",
+          "kind": "action",
+          "label": "// Check for password cookie",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Check for password cookie",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n4",
+          "kind": "call",
+          "label": "Call req.cookies.get()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isAuthenticated = req.cookies.get('site-access')?.value === 'true'",
+          "metadata": {
+            "calls": [
+              "req.cookies.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:req.cookies.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n5",
+          "kind": "call",
+          "label": "Call pathname.endsWith()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isAccessPage = pathname.endsWith('/access')",
+          "metadata": {
+            "calls": [
+              "pathname.endsWith"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:pathname.endsWith"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n6",
+          "kind": "action",
+          "label": "// Skip check for API routes or static files (handled by matcher, but good to be explicit...",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Skip check for API routes or static files (handled by matcher, but good to be explicit for logic flow)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n7",
+          "kind": "decision",
+          "label": "pathname.startsWith('/api') || pathname.includes('.')",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "pathname.startsWith('/api') || pathname.includes('.')",
+          "metadata": {
+            "condition": "pathname.startsWith('/api') || pathname.includes('.')",
+            "domain": "",
+            "values": [],
+            "subject": "pathname.startsWith('/api') || pathname.includes('.')",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n8",
+          "kind": "call",
+          "label": "Call NextResponse.next()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.next()",
+          "metadata": {
+            "calls": [
+              "NextResponse.next"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:NextResponse.next"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n9",
+          "kind": "terminal",
+          "label": "Return NextResponse.next()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.next()",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n10",
+          "kind": "action",
+          "label": "// If not authenticated and not on access page, redirect",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "// If not authenticated and not on access page, redirect",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n11",
+          "kind": "decision",
+          "label": "!isAuthenticated && !isAccessPage",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "!isAuthenticated && !isAccessPage",
+          "metadata": {
+            "condition": "!isAuthenticated && !isAccessPage",
+            "domain": "",
+            "values": [],
+            "subject": "isAuthenticated && !isAccessPage",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n12",
+          "kind": "action",
+          "label": "// Attempt to preserve locale if present",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 26,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Attempt to preserve locale if present",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n13",
+          "kind": "call",
+          "label": "Call locales.find()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "const localeMatch = locales.find(loc => pathname.startsWith(`/${loc}`))",
+          "metadata": {
+            "calls": [
+              "locales.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.lib.i18n.config:locales.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n14",
+          "kind": "action",
+          "label": "Set locale",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = localeMatch || defaultLocale",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n15",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(new URL(`/${locale}/access`, req.url))",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n16",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(new URL(`/${locale}/access`, req.url))",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(new URL(`/${locale}/access`, req.url))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n17",
+          "kind": "action",
+          "label": "// If authenticated and on access page, redirect to home",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 33,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "// If authenticated and on access page, redirect to home",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n18",
+          "kind": "decision",
+          "label": "isAuthenticated && isAccessPage",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "isAuthenticated && isAccessPage",
+          "metadata": {
+            "condition": "isAuthenticated && isAccessPage",
+            "domain": "",
+            "values": [],
+            "subject": "isAuthenticated && isAccessPage",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n19",
+          "kind": "call",
+          "label": "Call locales.find()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "const localeMatch = locales.find(loc => pathname.startsWith(`/${loc}`))",
+          "metadata": {
+            "calls": [
+              "locales.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.lib.i18n.config:locales.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n20",
+          "kind": "action",
+          "label": "Set locale",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 36,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = localeMatch || defaultLocale",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n21",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(new URL(`/${locale}`, req.url))",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n22",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(new URL(`/${locale}`, req.url))",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(new URL(`/${locale}`, req.url))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n23",
+          "kind": "call",
+          "label": "Call intlMiddleware()",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 40,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "return intlMiddleware(req)",
+          "metadata": {
+            "calls": [
+              "intlMiddleware"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.middleware:intlMiddleware"
+            ]
+          }
+        },
+        {
+          "id": "flow-61293848338f3180:n24",
+          "kind": "terminal",
+          "label": "Return intlMiddleware(req)",
+          "location": {
+            "path": "src/middleware.ts",
+            "start_line": 40,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "return intlMiddleware(req)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-61293848338f3180:e1",
+          "source": "flow-61293848338f3180:n1",
+          "target": "flow-61293848338f3180:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e2",
+          "source": "flow-61293848338f3180:n2",
+          "target": "flow-61293848338f3180:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e3",
+          "source": "flow-61293848338f3180:n3",
+          "target": "flow-61293848338f3180:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e4",
+          "source": "flow-61293848338f3180:n4",
+          "target": "flow-61293848338f3180:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e5",
+          "source": "flow-61293848338f3180:n5",
+          "target": "flow-61293848338f3180:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e6",
+          "source": "flow-61293848338f3180:n6",
+          "target": "flow-61293848338f3180:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e7",
+          "source": "flow-61293848338f3180:n7",
+          "target": "flow-61293848338f3180:n8",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e8",
+          "source": "flow-61293848338f3180:n8",
+          "target": "flow-61293848338f3180:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e9",
+          "source": "flow-61293848338f3180:n7",
+          "target": "flow-61293848338f3180:n10",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e10",
+          "source": "flow-61293848338f3180:n10",
+          "target": "flow-61293848338f3180:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e11",
+          "source": "flow-61293848338f3180:n11",
+          "target": "flow-61293848338f3180:n12",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e12",
+          "source": "flow-61293848338f3180:n12",
+          "target": "flow-61293848338f3180:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e13",
+          "source": "flow-61293848338f3180:n13",
+          "target": "flow-61293848338f3180:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e14",
+          "source": "flow-61293848338f3180:n14",
+          "target": "flow-61293848338f3180:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e15",
+          "source": "flow-61293848338f3180:n15",
+          "target": "flow-61293848338f3180:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e16",
+          "source": "flow-61293848338f3180:n11",
+          "target": "flow-61293848338f3180:n17",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e17",
+          "source": "flow-61293848338f3180:n17",
+          "target": "flow-61293848338f3180:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e18",
+          "source": "flow-61293848338f3180:n18",
+          "target": "flow-61293848338f3180:n19",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e19",
+          "source": "flow-61293848338f3180:n19",
+          "target": "flow-61293848338f3180:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e20",
+          "source": "flow-61293848338f3180:n20",
+          "target": "flow-61293848338f3180:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e21",
+          "source": "flow-61293848338f3180:n21",
+          "target": "flow-61293848338f3180:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e22",
+          "source": "flow-61293848338f3180:n18",
+          "target": "flow-61293848338f3180:n23",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-61293848338f3180:e23",
+          "source": "flow-61293848338f3180:n23",
+          "target": "flow-61293848338f3180:n24",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/lib/i18n/config.ts"
+  ]
+}

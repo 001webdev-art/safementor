@@ -1,0 +1,183 @@
+{
+  "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+  "language": "typescript",
+  "sha256": "9eca170e7e40147b3c5e432be74cd9394c6e6f4bc14d65d98b14445ca06b77cc",
+  "flows": [
+    {
+      "id": "flow-ac475394b61e4280",
+      "name": "PaymentDataForm",
+      "symbol": "src.features.dashboard.forms.PaymentDataForm:PaymentDataForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+        "start_line": 8,
+        "end_line": 56
+      },
+      "nodes": [
+        {
+          "id": "flow-ac475394b61e4280:n1",
+          "kind": "entry",
+          "label": "Component: PaymentDataForm",
+          "location": {
+            "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+            "start_line": 8,
+            "end_line": 56
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.PaymentDataForm:PaymentDataForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ac475394b61e4280:n2",
+          "kind": "decision",
+          "label": "!t",
+          "location": {
+            "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "!t",
+          "metadata": {
+            "condition": "!t",
+            "domain": "",
+            "values": [],
+            "subject": "t",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ac475394b61e4280:n3",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ac475394b61e4280:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+            "start_line": 10,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-5 animate-in slide-in-from-top-2 duration-300\"> <div> <h3 className=\"text-xl font-bold text-gray-900\">{t('payment.title')}</h3> <p className=\"text-gray-500 text-sm\">{t('payment.subtitle')}</p> </div> <Card className=\"border border-gray-100 bg-white shadow-sm rounded-2xl overflow-hidden\"> <CardBody className=\"p-6 md:p-8 space-y-6\"> <div className=\"flex justify-between items-center mb-2\"> <span className=\"font-bold text-lg text-gray-900\">{t('payment.currentMethod'...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t",
+              "src.features.dashboard.forms.PaymentDataForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-ac475394b61e4280:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-5 animate-in slide-in-from-top-2 duration-300\"> <div> <h3 className=\"text-xl font-bold...",
+          "location": {
+            "path": "src/features/dashboard/forms/PaymentDataForm.tsx",
+            "start_line": 10,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-5 animate-in slide-in-from-top-2 duration-300\"> <div> <h3 className=\"text-xl font-bold text-gray-900\">{t('payment.title')}</h3> <p className=\"text-gray-500 text-sm\">{t('payment.subtitle')}</p> </div> <Card className=\"border border-gray-100 bg-white shadow-sm rounded-2xl overflow-hidden\"> <CardBody className=\"p-6 md:p-8 space-y-6\"> <div className=\"flex justify-between items-center mb-2\"> <span className=\"font-bold text-lg text-gray-900\">{t('payment.currentMethod'...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ac475394b61e4280:e1",
+          "source": "flow-ac475394b61e4280:n1",
+          "target": "flow-ac475394b61e4280:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ac475394b61e4280:e2",
+          "source": "flow-ac475394b61e4280:n2",
+          "target": "flow-ac475394b61e4280:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ac475394b61e4280:e3",
+          "source": "flow-ac475394b61e4280:n2",
+          "target": "flow-ac475394b61e4280:n4",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ac475394b61e4280:e4",
+          "source": "flow-ac475394b61e4280:n4",
+          "target": "flow-ac475394b61e4280:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

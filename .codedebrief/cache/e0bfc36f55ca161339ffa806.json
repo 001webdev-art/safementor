@@ -1,0 +1,835 @@
+{
+  "path": "src/features/chat/components/screens/ChatScreen.tsx",
+  "language": "typescript",
+  "sha256": "b81543ea140ad96a26a327baba36fd29c3817dc1ce080f63455da63349e2567f",
+  "flows": [
+    {
+      "id": "flow-1cfab8cc89f58061",
+      "name": "ChatScreen",
+      "symbol": "src.features.chat.components.screens.ChatScreen:ChatScreen",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/screens/ChatScreen.tsx",
+        "start_line": 51,
+        "end_line": 477
+      },
+      "nodes": [
+        {
+          "id": "flow-1cfab8cc89f58061:n1",
+          "kind": "entry",
+          "label": "Component: ChatScreen",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 51,
+            "end_line": 477
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.ChatScreen:ChatScreen",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 54,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [inputValue, setInputValue] = useState(\"\");",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 55,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [showPiiWarning, setShowPiiWarning] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n4",
+          "kind": "call",
+          "label": "Call useRef()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 56,
+            "end_line": 56
+          },
+          "evidence": "VERIFIED",
+          "detail": "const messagesEndRef = useRef<HTMLDivElement>(null);",
+          "metadata": {
+            "calls": [
+              "useRef"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useRef"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n5",
+          "kind": "call",
+          "label": "Call usePWA()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 57,
+            "end_line": 57
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { isInstallable, installApp } = usePWA();",
+          "metadata": {
+            "calls": [
+              "usePWA"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:usePWA"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n6",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 58,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n7",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 59,
+            "end_line": 59
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentLocale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n8",
+          "kind": "call",
+          "label": "Call useAuth()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { user, loading: authLoading } = useAuth();",
+          "metadata": {
+            "calls": [
+              "useAuth"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useAuth:useAuth"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n9",
+          "kind": "call",
+          "label": "Call useChildContext()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 62,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { setSelectedChildId, isLoading: contextLoading } = useChildContext();",
+          "metadata": {
+            "calls": [
+              "useChildContext"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.contexts.ChildContext:useChildContext"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n10",
+          "kind": "call",
+          "label": "Call useChatStore()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 63,
+            "end_line": 76
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { messages, activeChildId, setActiveChildId, activeChildNickname, sendMessage, streamingStatus, streamingContent, stopStreaming, setError: setStoreError, setLoading: setStoreLoading, provider } = useChatStore();",
+          "metadata": {
+            "calls": [
+              "useChatStore"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useChatStore:useChatStore"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n11",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 78,
+            "end_line": 78
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [children, setChildren] = useState<Child[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n12",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 79,
+            "end_line": 79
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoadingChildren, setIsLoadingChildren] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n13",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 80,
+            "end_line": 80
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [errorMsg, setErrorMsg] = useState<string | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n14",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 82,
+            "end_line": 116
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const fetchAndValidate = async () => { if (authLoading || !user) return; setIsLoadingChildren(true); try { const supabase = createClient(); const { data, error } = await supabase .from(\"children\") .select(\"id, nickname\") .eq(\"parent_id\", user.id); if (error) throw error; setChildren(data || []); const storedId = localStorage.getItem('chat_selected_child'); if (storedId) { const isValid = data?.some(c => c.id === storedId); if (isValid) { await setActiveChildId(storedId); } els...",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n15",
+          "kind": "action",
+          "label": "Set handleMenuAction",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 118,
+            "end_line": 132
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleMenuAction = (key: string) => { if (key === \"install\") { if (confirm(\"Would you like to install this app?\")) { installApp(); } } else if (key === \"help\") { router.push(`/${currentLocale}/dashboard?section=help`); } else if (key === \"history\") { router.push(`/${currentLocale}/chat/history`); } else if (key === \"change_child\") { setActiveChildId(null); } else if (key === \"exit\") { router.push(\"/\"); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n16",
+          "kind": "action",
+          "label": "Set scrollToBottom",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 134,
+            "end_line": 138
+          },
+          "evidence": "VERIFIED",
+          "detail": "const scrollToBottom = () => { messagesEndRef.current?.scrollIntoView({ behavior: \"smooth\", }); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n17",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 140,
+            "end_line": 142
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { scrollToBottom(); }, [messages, streamingContent, streamingStatus]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n18",
+          "kind": "action",
+          "label": "Set checkSafety",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 144,
+            "end_line": 165
+          },
+          "evidence": "VERIFIED",
+          "detail": "const checkSafety = (text: string) => { const phoneRegex = /(\\+\\d{1,2}\\s?)?\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}/; const emailRegex = /\\S+@\\S+\\.\\S+/; const addressKeywords = [ \"my address is\", \"i live at\", \"come to my house\", ]; if ( phoneRegex.test(text) || emailRegex.test(text) || addressKeywords.some((k) => text.toLowerCase().includes(k), ) ) { setShowPiiWarning(true); } else { setShowPiiWarning(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n19",
+          "kind": "action",
+          "label": "Set handleInputChange",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 167,
+            "end_line": 173
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleInputChange = ( e: React.ChangeEvent<HTMLTextAreaElement>, ) => { const text = e.target.value; setInputValue(text); checkSafety(text); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n20",
+          "kind": "action",
+          "label": "Set handleSend",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 175,
+            "end_line": 187
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSend = async () => { if (!inputValue.trim() || streamingStatus !== 'idle') return; const userMessageContent = inputValue.trim(); setInputValue(\"\"); setShowPiiWarning(false); try { await sendMessage(userMessageContent); } catch (error) { console.error(\"Failed to send message\", error); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n21",
+          "kind": "action",
+          "label": "Set handleKeyPress",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 189,
+            "end_line": 194
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleKeyPress = (e: React.KeyboardEvent) => { if (e.key === \"Enter\" && !e.shiftKey) { e.preventDefault(); handleSend(); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n22",
+          "kind": "action",
+          "label": "Set handleEmojiClick",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 196,
+            "end_line": 198
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleEmojiClick = (emojiData: EmojiClickData) => { setInputValue((prev) => prev + emojiData.emoji); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n23",
+          "kind": "action",
+          "label": "Set handleProceed",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 200,
+            "end_line": 202
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleProceed = (childId: string) => { setActiveChildId(childId); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n24",
+          "kind": "decision",
+          "label": "authLoading || isLoadingChildren",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 204,
+            "end_line": 204
+          },
+          "evidence": "VERIFIED",
+          "detail": "authLoading || isLoadingChildren",
+          "metadata": {
+            "condition": "authLoading || isLoadingChildren",
+            "domain": "",
+            "values": [],
+            "subject": "authLoading || isLoadingChildren",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n25",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col items-center justify-center h-full bg-[#f0f2f5] dark:bg-[#111b21]\"> <Spinner siz...",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 205,
+            "end_line": 209
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center h-full bg-[#f0f2f5] dark:bg-[#111b21]\"> <Spinner size=\"lg\" color=\"primary\" label=\"Readying Chat...\" /> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n26",
+          "kind": "decision",
+          "label": "!activeChildId",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 212,
+            "end_line": 212
+          },
+          "evidence": "VERIFIED",
+          "detail": "!activeChildId",
+          "metadata": {
+            "condition": "!activeChildId",
+            "domain": "",
+            "values": [],
+            "subject": "activeChildId",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n27",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"fixed inset-0 bg-white dark:bg-[#111b21] z-50 flex flex-col items-center justify-center p-6 te...",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 213,
+            "end_line": 277
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"fixed inset-0 bg-white dark:bg-[#111b21] z-50 flex flex-col items-center justify-center p-6 text-center animate-in fade-in duration-300\"> {errorMsg && ( <div className=\"absolute top-10 left-0 right-0 px-6\"> <div className=\"bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm animate-bounce\"> {errorMsg} </div> </div> )} {children.length === 0 ? ( <Card className=\"max-w-md w-full border-none shadow-xl bg-white/80 backdrop-blur-md\"> <CardBody className...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n28",
+          "kind": "call",
+          "label": "Call (messages || []).map()",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 280,
+            "end_line": 476
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans w-full relative\"> <div className=\"flex-none bg-white/90 backdrop-blur-md border-b border-[#D4DDD0]/60 p-3 z-30 shadow-sm flex justify-center pt-8\"> <div className=\"w-full max-w-2xl mx-auto flex flex-col gap-2 relative\"> <div className=\"relative flex items-center justify-between min-h-[44px]\"> {/* Left: Back Button */} <div className=\"flex items-center z-10\"> <button onClick={() => onNavigate(\"hello\")} className=\"p-1.5 -ml-1.5....",
+          "metadata": {
+            "calls": [
+              "(messages || []).map",
+              "inputValue.trim"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.screens.ChatScreen:(messages || []).map",
+              "src.features.chat.components.screens.ChatScreen:inputValue.trim"
+            ]
+          }
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:n29",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans w-full relative\"> <div className=\"flex-none bg-whi...",
+          "location": {
+            "path": "src/features/chat/components/screens/ChatScreen.tsx",
+            "start_line": 280,
+            "end_line": 476
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#F5F7F4] font-sans w-full relative\"> <div className=\"flex-none bg-white/90 backdrop-blur-md border-b border-[#D4DDD0]/60 p-3 z-30 shadow-sm flex justify-center pt-8\"> <div className=\"w-full max-w-2xl mx-auto flex flex-col gap-2 relative\"> <div className=\"relative flex items-center justify-between min-h-[44px]\"> {/* Left: Back Button */} <div className=\"flex items-center z-10\"> <button onClick={() => onNavigate(\"hello\")} className=\"p-1.5 -ml-1.5....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-1cfab8cc89f58061:e1",
+          "source": "flow-1cfab8cc89f58061:n1",
+          "target": "flow-1cfab8cc89f58061:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e2",
+          "source": "flow-1cfab8cc89f58061:n2",
+          "target": "flow-1cfab8cc89f58061:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e3",
+          "source": "flow-1cfab8cc89f58061:n3",
+          "target": "flow-1cfab8cc89f58061:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e4",
+          "source": "flow-1cfab8cc89f58061:n4",
+          "target": "flow-1cfab8cc89f58061:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e5",
+          "source": "flow-1cfab8cc89f58061:n5",
+          "target": "flow-1cfab8cc89f58061:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e6",
+          "source": "flow-1cfab8cc89f58061:n6",
+          "target": "flow-1cfab8cc89f58061:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e7",
+          "source": "flow-1cfab8cc89f58061:n7",
+          "target": "flow-1cfab8cc89f58061:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e8",
+          "source": "flow-1cfab8cc89f58061:n8",
+          "target": "flow-1cfab8cc89f58061:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e9",
+          "source": "flow-1cfab8cc89f58061:n9",
+          "target": "flow-1cfab8cc89f58061:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e10",
+          "source": "flow-1cfab8cc89f58061:n10",
+          "target": "flow-1cfab8cc89f58061:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e11",
+          "source": "flow-1cfab8cc89f58061:n11",
+          "target": "flow-1cfab8cc89f58061:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e12",
+          "source": "flow-1cfab8cc89f58061:n12",
+          "target": "flow-1cfab8cc89f58061:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e13",
+          "source": "flow-1cfab8cc89f58061:n13",
+          "target": "flow-1cfab8cc89f58061:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e14",
+          "source": "flow-1cfab8cc89f58061:n14",
+          "target": "flow-1cfab8cc89f58061:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e15",
+          "source": "flow-1cfab8cc89f58061:n15",
+          "target": "flow-1cfab8cc89f58061:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e16",
+          "source": "flow-1cfab8cc89f58061:n16",
+          "target": "flow-1cfab8cc89f58061:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e17",
+          "source": "flow-1cfab8cc89f58061:n17",
+          "target": "flow-1cfab8cc89f58061:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e18",
+          "source": "flow-1cfab8cc89f58061:n18",
+          "target": "flow-1cfab8cc89f58061:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e19",
+          "source": "flow-1cfab8cc89f58061:n19",
+          "target": "flow-1cfab8cc89f58061:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e20",
+          "source": "flow-1cfab8cc89f58061:n20",
+          "target": "flow-1cfab8cc89f58061:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e21",
+          "source": "flow-1cfab8cc89f58061:n21",
+          "target": "flow-1cfab8cc89f58061:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e22",
+          "source": "flow-1cfab8cc89f58061:n22",
+          "target": "flow-1cfab8cc89f58061:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e23",
+          "source": "flow-1cfab8cc89f58061:n23",
+          "target": "flow-1cfab8cc89f58061:n24",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e24",
+          "source": "flow-1cfab8cc89f58061:n24",
+          "target": "flow-1cfab8cc89f58061:n25",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e25",
+          "source": "flow-1cfab8cc89f58061:n24",
+          "target": "flow-1cfab8cc89f58061:n26",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e26",
+          "source": "flow-1cfab8cc89f58061:n26",
+          "target": "flow-1cfab8cc89f58061:n27",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e27",
+          "source": "flow-1cfab8cc89f58061:n26",
+          "target": "flow-1cfab8cc89f58061:n28",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1cfab8cc89f58061:e28",
+          "source": "flow-1cfab8cc89f58061:n28",
+          "target": "flow-1cfab8cc89f58061:n29",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/components/ChatEmojiPicker.tsx",
+    "src/features/chat/hooks/usePWA.ts",
+    "src/features/chat/hooks/useChatStore.ts",
+    "src/features/chat/hooks/useAuth.ts",
+    "src/features/chat/contexts/ChildContext.tsx",
+    "src/features/chat/components/ChildSelector.tsx"
+  ]
+}

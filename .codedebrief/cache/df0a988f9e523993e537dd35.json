@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/index.ts",
+  "language": "typescript",
+  "sha256": "c099899c06eaa1c5c7e9bdba1b9b27f91063d5d9f8559eef13e389ad61012c62",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

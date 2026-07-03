@@ -1,0 +1,83 @@
+{
+  "path": "src/features/register/components/ComplianceFrame.tsx",
+  "language": "typescript",
+  "sha256": "1f0ce5e771f40a2125cb8a71eaa9649a42afec686b1c6f1ddc076475f5fcf078",
+  "flows": [
+    {
+      "id": "flow-706197839642a7a6",
+      "name": "ComplianceFrame",
+      "symbol": "src.features.register.components.ComplianceFrame:ComplianceFrame",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/ComplianceFrame.tsx",
+        "start_line": 23,
+        "end_line": 46
+      },
+      "nodes": [
+        {
+          "id": "flow-706197839642a7a6:n1",
+          "kind": "entry",
+          "label": "Component: ComplianceFrame",
+          "location": {
+            "path": "src/features/register/components/ComplianceFrame.tsx",
+            "start_line": 23,
+            "end_line": 46
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.ComplianceFrame:ComplianceFrame",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-706197839642a7a6:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <div className=\"w-full max-w...",
+          "location": {
+            "path": "src/features/register/components/ComplianceFrame.tsx",
+            "start_line": 24,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <div className=\"w-full max-w-6xl bg-white rounded-2xl shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 border border-gray-100\"> <PrivacySidebar /> <main className=\"col-span-2 p-8 md:p-12 space-y-8 max-h-[90vh] overflow-y-auto\"> <DataUsageSection /> <ConsentToggles helpImprove={complianceData.helpImprove} safetyAnalysis={complianceData.safetyAnalysis} onChange={onDataChange} /> <TransparencyReport...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-706197839642a7a6:e1",
+          "source": "flow-706197839642a7a6:n1",
+          "target": "flow-706197839642a7a6:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/register/components/PrivacySidebar.tsx",
+    "src/features/register/components/DataUsageSection.tsx",
+    "src/features/register/components/ConsentToggles.tsx",
+    "src/features/register/components/TransparencyReport.tsx",
+    "src/features/register/components/FooterActions.tsx"
+  ]
+}

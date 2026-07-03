@@ -1,0 +1,344 @@
+{
+  "path": "src/app/[locale]/access/page.tsx",
+  "language": "typescript",
+  "sha256": "067ff16ef1caa93144b20fdcd18f4d37f2ab5f27de1d2f415bcac341c74360d2",
+  "flows": [
+    {
+      "id": "flow-2d8d938100dafb56",
+      "name": "AccessPage",
+      "symbol": "src.app.[locale].access.page:AccessPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/access/page.tsx",
+        "start_line": 10,
+        "end_line": 96
+      },
+      "nodes": [
+        {
+          "id": "flow-2d8d938100dafb56:n1",
+          "kind": "entry",
+          "label": "Component: AccessPage",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 10,
+            "end_line": 96
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].access.page:AccessPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Access');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n3",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tLegal = useTranslations('AccessLegal');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n4",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [password, setPassword] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [error, setError] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [loading, setLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n8",
+          "kind": "call",
+          "label": "Call useDisclosure()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { isOpen, onOpen, onOpenChange } = useDisclosure();",
+          "metadata": {
+            "calls": [
+              "useDisclosure"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:useDisclosure"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n9",
+          "kind": "action",
+          "label": "Set handleSubmit",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 19,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setLoading(true); setError(false); try { const res = await fetch('/api/access', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password }), }); if (res.ok) { router.refresh(); router.push('/'); } else { setError(true); } } catch (err) { setError(true); } finally { setLoading(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n10",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 44,
+            "end_line": 95
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen bg-[#FDFBF8] flex flex-col items-center justify-center p-4\"> <div className=\"mb-8\"> <SafeMentorLogo size={64} /> </div> <div className=\"max-w-md w-full bg-white p-8 rounded-3xl shadow-sm border border-[#F5F2EC]\"> <h1 className=\"font-serif text-2xl font-bold mb-4 text-[#4A4540] text-center\">{t('title')}</h1> <p className=\"text-[#4A4540] opacity-80 mb-6 text-center\">{t('description')}</p> <form onSubmit={handleSubmit} className=\"space-y-4\"> <div> <input type=...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "tLegal",
+              "tLegal"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].access.page:t",
+              "src.app.[locale].access.page:t",
+              "src.app.[locale].access.page:t",
+              "src.app.[locale].access.page:t",
+              "src.app.[locale].access.page:t",
+              "src.app.[locale].access.page:tLegal",
+              "src.app.[locale].access.page:tLegal"
+            ]
+          }
+        },
+        {
+          "id": "flow-2d8d938100dafb56:n11",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen bg-[#FDFBF8] flex flex-col items-center justify-center p-4\"> <div className=\"mb-8...",
+          "location": {
+            "path": "src/app/[locale]/access/page.tsx",
+            "start_line": 44,
+            "end_line": 95
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen bg-[#FDFBF8] flex flex-col items-center justify-center p-4\"> <div className=\"mb-8\"> <SafeMentorLogo size={64} /> </div> <div className=\"max-w-md w-full bg-white p-8 rounded-3xl shadow-sm border border-[#F5F2EC]\"> <h1 className=\"font-serif text-2xl font-bold mb-4 text-[#4A4540] text-center\">{t('title')}</h1> <p className=\"text-[#4A4540] opacity-80 mb-6 text-center\">{t('description')}</p> <form onSubmit={handleSubmit} className=\"space-y-4\"> <div> <input type=...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2d8d938100dafb56:e1",
+          "source": "flow-2d8d938100dafb56:n1",
+          "target": "flow-2d8d938100dafb56:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e2",
+          "source": "flow-2d8d938100dafb56:n2",
+          "target": "flow-2d8d938100dafb56:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e3",
+          "source": "flow-2d8d938100dafb56:n3",
+          "target": "flow-2d8d938100dafb56:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e4",
+          "source": "flow-2d8d938100dafb56:n4",
+          "target": "flow-2d8d938100dafb56:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e5",
+          "source": "flow-2d8d938100dafb56:n5",
+          "target": "flow-2d8d938100dafb56:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e6",
+          "source": "flow-2d8d938100dafb56:n6",
+          "target": "flow-2d8d938100dafb56:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e7",
+          "source": "flow-2d8d938100dafb56:n7",
+          "target": "flow-2d8d938100dafb56:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e8",
+          "source": "flow-2d8d938100dafb56:n8",
+          "target": "flow-2d8d938100dafb56:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e9",
+          "source": "flow-2d8d938100dafb56:n9",
+          "target": "flow-2d8d938100dafb56:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2d8d938100dafb56:e10",
+          "source": "flow-2d8d938100dafb56:n10",
+          "target": "flow-2d8d938100dafb56:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,350 @@
+{
+  "path": "src/features/chat/contexts/ChildContext.tsx",
+  "language": "typescript",
+  "sha256": "15eedb0daa1db8d3b55b8c8640f2647e452e665ff6036421d6a335e73734de65",
+  "flows": [
+    {
+      "id": "flow-a3948e2e0d4f4467",
+      "name": "ChildProvider",
+      "symbol": "src.features.chat.contexts.ChildContext:ChildProvider",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/contexts/ChildContext.tsx",
+        "start_line": 24,
+        "end_line": 50
+      },
+      "nodes": [
+        {
+          "id": "flow-a3948e2e0d4f4467:n1",
+          "kind": "entry",
+          "label": "Component: ChildProvider",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 24,
+            "end_line": 50
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.contexts.ChildContext:ChildProvider",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [selectedChildId, setSelectedChildIdState] = useState<string | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.contexts.ChildContext:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 26,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.contexts.ChildContext:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:n4",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 28,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const storedId = localStorage.getItem('chat_selected_child'); if (storedId) { setSelectedChildIdState(storedId); } setIsLoading(false); }, []);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.contexts.ChildContext:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:n5",
+          "kind": "action",
+          "label": "Set setSelectedChildId",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 36,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "const setSelectedChildId = (id: string | null) => { setSelectedChildIdState(id); if (id) { localStorage.setItem('chat_selected_child', id); } else { localStorage.removeItem('chat_selected_child'); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:n6",
+          "kind": "terminal",
+          "label": "Return ( <ChildContext.Provider value={{ selectedChildId, setSelectedChildId, isLoading }}> {children} </ChildContext.P...",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 45,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <ChildContext.Provider value={{ selectedChildId, setSelectedChildId, isLoading }}> {children} </ChildContext.Provider> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-a3948e2e0d4f4467:e1",
+          "source": "flow-a3948e2e0d4f4467:n1",
+          "target": "flow-a3948e2e0d4f4467:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:e2",
+          "source": "flow-a3948e2e0d4f4467:n2",
+          "target": "flow-a3948e2e0d4f4467:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:e3",
+          "source": "flow-a3948e2e0d4f4467:n3",
+          "target": "flow-a3948e2e0d4f4467:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:e4",
+          "source": "flow-a3948e2e0d4f4467:n4",
+          "target": "flow-a3948e2e0d4f4467:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a3948e2e0d4f4467:e5",
+          "source": "flow-a3948e2e0d4f4467:n5",
+          "target": "flow-a3948e2e0d4f4467:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-26058534b5d2b274",
+      "name": "useChildContext",
+      "symbol": "src.features.chat.contexts.ChildContext:useChildContext",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/contexts/ChildContext.tsx",
+        "start_line": 52,
+        "end_line": 58
+      },
+      "nodes": [
+        {
+          "id": "flow-26058534b5d2b274:n1",
+          "kind": "entry",
+          "label": "Hook: useChildContext",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 52,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.contexts.ChildContext:useChildContext",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-26058534b5d2b274:n2",
+          "kind": "call",
+          "label": "Call useContext()",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 53,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "const context = useContext(ChildContext);",
+          "metadata": {
+            "calls": [
+              "useContext"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.contexts.ChildContext:useContext"
+            ]
+          }
+        },
+        {
+          "id": "flow-26058534b5d2b274:n3",
+          "kind": "decision",
+          "label": "context === undefined",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 54,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "context === undefined",
+          "metadata": {
+            "condition": "context === undefined",
+            "domain": "",
+            "values": [
+              "undefined"
+            ],
+            "subject": "context",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-26058534b5d2b274:n4",
+          "kind": "error",
+          "label": "Throw new Error('useChildContext must be used within a ChildProvider')",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 55,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw new Error('useChildContext must be used within a ChildProvider');",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-26058534b5d2b274:n5",
+          "kind": "terminal",
+          "label": "Return context",
+          "location": {
+            "path": "src/features/chat/contexts/ChildContext.tsx",
+            "start_line": 57,
+            "end_line": 57
+          },
+          "evidence": "VERIFIED",
+          "detail": "return context;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-26058534b5d2b274:e1",
+          "source": "flow-26058534b5d2b274:n1",
+          "target": "flow-26058534b5d2b274:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-26058534b5d2b274:e2",
+          "source": "flow-26058534b5d2b274:n2",
+          "target": "flow-26058534b5d2b274:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-26058534b5d2b274:e3",
+          "source": "flow-26058534b5d2b274:n3",
+          "target": "flow-26058534b5d2b274:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-26058534b5d2b274:e4",
+          "source": "flow-26058534b5d2b274:n3",
+          "target": "flow-26058534b5d2b274:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

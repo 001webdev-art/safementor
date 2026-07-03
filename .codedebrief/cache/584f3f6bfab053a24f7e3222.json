@@ -1,0 +1,146 @@
+{
+  "path": "src/features/dashboard/forms/ChildForm.tsx",
+  "language": "typescript",
+  "sha256": "326759114e7ee8f98b9bbe5606657a0eebecc702bbff9b25caa3b5840754db81",
+  "flows": [
+    {
+      "id": "flow-93554f6ca07d4c9a",
+      "name": "ChildForm",
+      "symbol": "src.features.dashboard.forms.ChildForm:ChildForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/ChildForm.tsx",
+        "start_line": 12,
+        "end_line": 125
+      },
+      "nodes": [
+        {
+          "id": "flow-93554f6ca07d4c9a:n1",
+          "kind": "entry",
+          "label": "Component: ChildForm",
+          "location": {
+            "path": "src/features/dashboard/forms/ChildForm.tsx",
+            "start_line": 12,
+            "end_line": 125
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.ChildForm:ChildForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-93554f6ca07d4c9a:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/ChildForm.tsx",
+            "start_line": 13,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6\"> {/* Basic Information */} <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex items-center gap-2 mb-2\"> <User size={18} className=\"text-primary\" /> <span className=\"font-bold\">{t('sections.basicInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\"> <Input label={t('fields.childrenname')} placeholder={t('placeholders.childrenname')} value={child.childrenname |...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "child.age?.toString",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:child.age?.toString",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t",
+              "src.features.dashboard.forms.ChildForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-93554f6ca07d4c9a:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6\"> {/* Basic Information */} <Card shadow=\"none\" className=\"border border-divider bg-...",
+          "location": {
+            "path": "src/features/dashboard/forms/ChildForm.tsx",
+            "start_line": 13,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6\"> {/* Basic Information */} <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex items-center gap-2 mb-2\"> <User size={18} className=\"text-primary\" /> <span className=\"font-bold\">{t('sections.basicInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-4\"> <Input label={t('fields.childrenname')} placeholder={t('placeholders.childrenname')} value={child.childrenname |...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-93554f6ca07d4c9a:e1",
+          "source": "flow-93554f6ca07d4c9a:n1",
+          "target": "flow-93554f6ca07d4c9a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-93554f6ca07d4c9a:e2",
+          "source": "flow-93554f6ca07d4c9a:n2",
+          "target": "flow-93554f6ca07d4c9a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

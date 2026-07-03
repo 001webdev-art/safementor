@@ -1,0 +1,16 @@
+{
+  "path": "src/lib/i18n/config.ts",
+  "language": "typescript",
+  "sha256": "2c9410417076929c840d12a177fcdec4d1cf127493deb2b5be5ab9c5bcefdd80",
+  "flows": [],
+  "enums": {
+    "Locale": [
+      "en",
+      "pt",
+      "es",
+      "de"
+    ]
+  },
+  "constants": {},
+  "dependencies": []
+}

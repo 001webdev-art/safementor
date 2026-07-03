@@ -1,0 +1,154 @@
+{
+  "path": "src/features/dashboard/forms/AddressForm.tsx",
+  "language": "typescript",
+  "sha256": "91bfb1f3312a403e1e4f69ccf77ec719d676a9b0a339833d71623f5aadf3ddd4",
+  "flows": [
+    {
+      "id": "flow-507737c5d0660d60",
+      "name": "AddressForm",
+      "symbol": "src.features.dashboard.forms.AddressForm:AddressForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/AddressForm.tsx",
+        "start_line": 12,
+        "end_line": 208
+      },
+      "nodes": [
+        {
+          "id": "flow-507737c5d0660d60:n1",
+          "kind": "entry",
+          "label": "Component: AddressForm",
+          "location": {
+            "path": "src/features/dashboard/forms/AddressForm.tsx",
+            "start_line": 12,
+            "end_line": 208
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.AddressForm:AddressForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-507737c5d0660d60:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/AddressForm.tsx",
+            "start_line": 13,
+            "end_line": 207
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <MapPin className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.address')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-5\"> <Input label={t('fields.address_line1')} placeholder={t('placeholders.address_line1')} value={profile.address_line1 || ''} onValueChange={(v) => onP...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "(countries || []).map",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:(countries || []).map",
+              "src.features.dashboard.forms.AddressForm:t",
+              "src.features.dashboard.forms.AddressForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-507737c5d0660d60:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\">...",
+          "location": {
+            "path": "src/features/dashboard/forms/AddressForm.tsx",
+            "start_line": 13,
+            "end_line": 207
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <MapPin className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.address')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-5\"> <Input label={t('fields.address_line1')} placeholder={t('placeholders.address_line1')} value={profile.address_line1 || ''} onValueChange={(v) => onP...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-507737c5d0660d60:e1",
+          "source": "flow-507737c5d0660d60:n1",
+          "target": "flow-507737c5d0660d60:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-507737c5d0660d60:e2",
+          "source": "flow-507737c5d0660d60:n2",
+          "target": "flow-507737c5d0660d60:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

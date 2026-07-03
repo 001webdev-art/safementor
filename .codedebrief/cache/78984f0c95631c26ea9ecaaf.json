@@ -1,0 +1,118 @@
+{
+  "path": "src/features/dashboard/sections/OverviewSection.tsx",
+  "language": "typescript",
+  "sha256": "ce679324a6e4ab2bea9dffeeb2bff7b61f07421581e18c5fc342e74efed715b0",
+  "flows": [
+    {
+      "id": "flow-268e8f2d2dcbe126",
+      "name": "OverviewSection",
+      "symbol": "src.features.dashboard.sections.OverviewSection:OverviewSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/sections/OverviewSection.tsx",
+        "start_line": 17,
+        "end_line": 88
+      },
+      "nodes": [
+        {
+          "id": "flow-268e8f2d2dcbe126:n1",
+          "kind": "entry",
+          "label": "Component: OverviewSection",
+          "location": {
+            "path": "src/features/dashboard/sections/OverviewSection.tsx",
+            "start_line": 17,
+            "end_line": 88
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.sections.OverviewSection:OverviewSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-268e8f2d2dcbe126:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/sections/OverviewSection.tsx",
+            "start_line": 26,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('sections.overview')}</h2> <PersonalInfoForm profile={profile} onProfileChange={onProfileChange} isCollapsed={collapsedGroups['personalInfo']} onToggle={() => toggleGroup('personalInfo')} t={t} /> <ContactInfoForm profile={profile} onProfileChange={onProfileChange} isCollapsed={collapsedGroups['contactInfo']} onToggle={() => toggleGroup('contactInfo')} t={t} /> <AddressForm profile={...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.sections.OverviewSection:t",
+              "src.features.dashboard.sections.OverviewSection:t",
+              "src.features.dashboard.sections.OverviewSection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-268e8f2d2dcbe126:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('secti...",
+          "location": {
+            "path": "src/features/dashboard/sections/OverviewSection.tsx",
+            "start_line": 26,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-8 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('sections.overview')}</h2> <PersonalInfoForm profile={profile} onProfileChange={onProfileChange} isCollapsed={collapsedGroups['personalInfo']} onToggle={() => toggleGroup('personalInfo')} t={t} /> <ContactInfoForm profile={profile} onProfileChange={onProfileChange} isCollapsed={collapsedGroups['contactInfo']} onToggle={() => toggleGroup('contactInfo')} t={t} /> <AddressForm profile={...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-268e8f2d2dcbe126:e1",
+          "source": "flow-268e8f2d2dcbe126:n1",
+          "target": "flow-268e8f2d2dcbe126:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-268e8f2d2dcbe126:e2",
+          "source": "flow-268e8f2d2dcbe126:n2",
+          "target": "flow-268e8f2d2dcbe126:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/dashboard/forms/PersonalInfoForm.tsx",
+    "src/features/dashboard/forms/ContactInfoForm.tsx",
+    "src/features/dashboard/forms/AddressForm.tsx",
+    "src/features/dashboard/forms/BillingForm.tsx",
+    "src/features/dashboard/forms/CommunicationForm.tsx",
+    "src/features/dashboard/forms/PreferencesForm.tsx",
+    "src/features/dashboard/components/ui/SaveButton.tsx"
+  ]
+}

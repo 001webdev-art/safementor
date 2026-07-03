@@ -1,0 +1,144 @@
+{
+  "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+  "language": "cpp",
+  "sha256": "905b4dfa4eab584c1eb6244899b7d5ef56d0bceaf3bffb5ea335ed7e0ba3c549",
+  "flows": [
+    {
+      "id": "flow-0086bc20603bdcea",
+      "name": "main",
+      "symbol": "flutter_chat.flutter_chat.linux.runner:main",
+      "language": "cpp",
+      "framework": "cpp",
+      "entry_kind": "main",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+        "start_line": 3,
+        "end_line": 6
+      },
+      "nodes": [
+        {
+          "id": "flow-0086bc20603bdcea:n1",
+          "kind": "entry",
+          "label": "main",
+          "location": {
+            "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+            "start_line": 3,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.linux.runner:main",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-0086bc20603bdcea:n2",
+          "kind": "call",
+          "label": "Call g_autoptr()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+            "start_line": 4,
+            "end_line": 4
+          },
+          "evidence": "VERIFIED",
+          "detail": "g_autoptr(MyApplication) app = my_application_new();",
+          "metadata": {
+            "calls": [
+              "g_autoptr",
+              "my_application_new"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.linux.runner:g_autoptr",
+              "flutter_chat.flutter_chat.linux.runner:my_application_new"
+            ]
+          }
+        },
+        {
+          "id": "flow-0086bc20603bdcea:n3",
+          "kind": "call",
+          "label": "Call g_application_run()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "return g_application_run(G_APPLICATION(app), argc, argv);",
+          "metadata": {
+            "calls": [
+              "g_application_run",
+              "G_APPLICATION"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.linux.runner:g_application_run",
+              "flutter_chat.flutter_chat.linux.runner:G_APPLICATION"
+            ]
+          }
+        },
+        {
+          "id": "flow-0086bc20603bdcea:n4",
+          "kind": "terminal",
+          "label": "Return g_application_run(G_APPLICATION(app), argc, argv)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "return g_application_run(G_APPLICATION(app), argc, argv);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-0086bc20603bdcea:e1",
+          "source": "flow-0086bc20603bdcea:n1",
+          "target": "flow-0086bc20603bdcea:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0086bc20603bdcea:e2",
+          "source": "flow-0086bc20603bdcea:n2",
+          "target": "flow-0086bc20603bdcea:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0086bc20603bdcea:e3",
+          "source": "flow-0086bc20603bdcea:n3",
+          "target": "flow-0086bc20603bdcea:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "cpp",
+          "path": "flutter_chat/flutter_chat/linux/runner/main.cc",
+          "line": 4,
+          "kind": "ERROR",
+          "reason": "cpp parse error in flutter_chat/flutter_chat/linux/runner/main.cc:4 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

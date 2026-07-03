@@ -1,0 +1,647 @@
+{
+  "path": "src/components/layout/Header.tsx",
+  "language": "typescript",
+  "sha256": "32e9a9fc05c09dc22202ea95d2e9508fb8df20e1a6d4db1cb99346a3a8dd7c1b",
+  "flows": [
+    {
+      "id": "flow-af8e92aa01f2a53c",
+      "name": "Header",
+      "symbol": "src.components.layout.Header:Header",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/components/layout/Header.tsx",
+        "start_line": 27,
+        "end_line": 221
+      },
+      "nodes": [
+        {
+          "id": "flow-af8e92aa01f2a53c:n1",
+          "kind": "entry",
+          "label": "Component: Header",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 27,
+            "end_line": 221
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.components.layout.Header:Header",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoggedIn, setIsLoggedIn] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n4",
+          "kind": "call",
+          "label": "Call usePathname()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "const pathname = usePathname();",
+          "metadata": {
+            "calls": [
+              "usePathname"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:usePathname"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n5",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n6",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 32,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.components.layout.Header:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n7",
+          "kind": "action",
+          "label": "// Translations",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Translations",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n8",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Header');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n9",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 36,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tNav = useTranslations('Navigation');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n10",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tDash = useTranslations('Dashboard');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n11",
+          "kind": "action",
+          "label": "// Extract current locale from URL",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 39,
+            "end_line": 39
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Extract current locale from URL",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n12",
+          "kind": "call",
+          "label": "Call pathname.split('/').filter()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 40,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "const pathSegments = pathname.split('/').filter(Boolean);",
+          "metadata": {
+            "calls": [
+              "pathname.split('/').filter",
+              "pathname.split"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:pathname.split('/').filter",
+              "src.components.layout.Header:pathname.split"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n13",
+          "kind": "call",
+          "label": "Call locales.includes()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 41,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentLocale = locales.includes(pathSegments[0] as any) ? pathSegments[0] : defaultLocale;",
+          "metadata": {
+            "calls": [
+              "locales.includes"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:locales.includes"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n14",
+          "kind": "action",
+          "label": "// Check authentication",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 45,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Check authentication",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n15",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 46,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const checkAuth = async () => { const { data: { session } } = await supabase.auth.getSession(); setIsLoggedIn(!!session); setIsLoading(false); }; checkAuth(); const { data: { subscription } } = supabase.auth.onAuthStateChange( (event, session) => { setIsLoggedIn(!!session); } ); return () => subscription.unsubscribe(); }, [supabase.auth]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n16",
+          "kind": "action",
+          "label": "Set switchLanguage",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 64,
+            "end_line": 72
+          },
+          "evidence": "VERIFIED",
+          "detail": "const switchLanguage = (newLocale: string) => { if (pathname.startsWith(`/${currentLocale}`)) { const newPathname = pathname.replace(`/${currentLocale}`, `/${newLocale}`); router.push(newPathname); } else { const newPathname = `/${newLocale}${pathname}`; router.push(newPathname); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n17",
+          "kind": "action",
+          "label": "Set handleLogout",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 74,
+            "end_line": 77
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleLogout = async () => { await supabase.auth.signOut(); router.push(`/${currentLocale}`); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n18",
+          "kind": "action",
+          "label": "Set getFlag",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 79,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "const getFlag = (locale: string) => { switch (locale) { case 'pt': return '🇧🇷'; case 'en': return '🇺🇸'; case 'es': return '🇪🇸'; case 'de': return '🇩🇪'; default: return '🌐'; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n19",
+          "kind": "decision",
+          "label": "isLoading",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 89,
+            "end_line": 89
+          },
+          "evidence": "VERIFIED",
+          "detail": "isLoading",
+          "metadata": {
+            "condition": "isLoading",
+            "domain": "",
+            "values": [],
+            "subject": "isLoading",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n20",
+          "kind": "terminal",
+          "label": "Return ( <header className=\"bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-divider\"> <nav className=\"co...",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 90,
+            "end_line": 100
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <header className=\"bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-divider\"> <nav className=\"container mx-auto px-6 h-16 flex items-center justify-between\"> <div className=\"h-8 bg-default-200 rounded animate-pulse w-32\" /> <div className=\"flex gap-4\"> <div className=\"h-10 w-10 bg-default-200 rounded-full animate-pulse\" /> <div className=\"h-10 w-10 bg-default-200 rounded-full animate-pulse\" /> </div> </nav> </header> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n21",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 103,
+            "end_line": 220
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <header className=\"bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-divider\"> <nav className=\"container mx-auto px-6 h-16 flex items-center justify-between\"> {/* Logo Section */} <div className=\"flex items-center gap-8\"> <Link href={`/${currentLocale}`} className=\"flex items-center gap-2 group\"> <div className=\"w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold group-hover:scale-105 transition-transform\"> S </div> <span className=\"text-xl....",
+          "metadata": {
+            "calls": [
+              "t",
+              "getFlag",
+              "locales.map",
+              "tDash",
+              "tDash",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.components.layout.Header:t",
+              "src.components.layout.Header:getFlag",
+              "src.components.layout.Header:locales.map",
+              "src.components.layout.Header:tDash",
+              "src.components.layout.Header:tDash",
+              "src.components.layout.Header:t",
+              "src.components.layout.Header:t",
+              "src.components.layout.Header:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:n22",
+          "kind": "terminal",
+          "label": "Return ( <header className=\"bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-divider\"> <nav className=\"co...",
+          "location": {
+            "path": "src/components/layout/Header.tsx",
+            "start_line": 103,
+            "end_line": 220
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <header className=\"bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-divider\"> <nav className=\"container mx-auto px-6 h-16 flex items-center justify-between\"> {/* Logo Section */} <div className=\"flex items-center gap-8\"> <Link href={`/${currentLocale}`} className=\"flex items-center gap-2 group\"> <div className=\"w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold group-hover:scale-105 transition-transform\"> S </div> <span className=\"text-xl....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-af8e92aa01f2a53c:e1",
+          "source": "flow-af8e92aa01f2a53c:n1",
+          "target": "flow-af8e92aa01f2a53c:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e2",
+          "source": "flow-af8e92aa01f2a53c:n2",
+          "target": "flow-af8e92aa01f2a53c:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e3",
+          "source": "flow-af8e92aa01f2a53c:n3",
+          "target": "flow-af8e92aa01f2a53c:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e4",
+          "source": "flow-af8e92aa01f2a53c:n4",
+          "target": "flow-af8e92aa01f2a53c:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e5",
+          "source": "flow-af8e92aa01f2a53c:n5",
+          "target": "flow-af8e92aa01f2a53c:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e6",
+          "source": "flow-af8e92aa01f2a53c:n6",
+          "target": "flow-af8e92aa01f2a53c:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e7",
+          "source": "flow-af8e92aa01f2a53c:n7",
+          "target": "flow-af8e92aa01f2a53c:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e8",
+          "source": "flow-af8e92aa01f2a53c:n8",
+          "target": "flow-af8e92aa01f2a53c:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e9",
+          "source": "flow-af8e92aa01f2a53c:n9",
+          "target": "flow-af8e92aa01f2a53c:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e10",
+          "source": "flow-af8e92aa01f2a53c:n10",
+          "target": "flow-af8e92aa01f2a53c:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e11",
+          "source": "flow-af8e92aa01f2a53c:n11",
+          "target": "flow-af8e92aa01f2a53c:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e12",
+          "source": "flow-af8e92aa01f2a53c:n12",
+          "target": "flow-af8e92aa01f2a53c:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e13",
+          "source": "flow-af8e92aa01f2a53c:n13",
+          "target": "flow-af8e92aa01f2a53c:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e14",
+          "source": "flow-af8e92aa01f2a53c:n14",
+          "target": "flow-af8e92aa01f2a53c:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e15",
+          "source": "flow-af8e92aa01f2a53c:n15",
+          "target": "flow-af8e92aa01f2a53c:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e16",
+          "source": "flow-af8e92aa01f2a53c:n16",
+          "target": "flow-af8e92aa01f2a53c:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e17",
+          "source": "flow-af8e92aa01f2a53c:n17",
+          "target": "flow-af8e92aa01f2a53c:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e18",
+          "source": "flow-af8e92aa01f2a53c:n18",
+          "target": "flow-af8e92aa01f2a53c:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e19",
+          "source": "flow-af8e92aa01f2a53c:n19",
+          "target": "flow-af8e92aa01f2a53c:n20",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e20",
+          "source": "flow-af8e92aa01f2a53c:n19",
+          "target": "flow-af8e92aa01f2a53c:n21",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-af8e92aa01f2a53c:e21",
+          "source": "flow-af8e92aa01f2a53c:n21",
+          "target": "flow-af8e92aa01f2a53c:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

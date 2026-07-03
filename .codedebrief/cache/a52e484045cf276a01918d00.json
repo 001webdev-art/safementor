@@ -1,0 +1,989 @@
+{
+  "path": "src/features/chat/services/mentor-client.ts",
+  "language": "typescript",
+  "sha256": "e7d8e5305a36ff8c507ca8f8ee682cc238c9880d1d150bf6e1de4addf7b0d6ac",
+  "flows": [
+    {
+      "id": "flow-eda3f9c40ed011f1",
+      "name": "streamMentorResponse",
+      "symbol": "src.features.chat.services.mentor-client:streamMentorResponse",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/services/mentor-client.ts",
+        "start_line": 9,
+        "end_line": 72
+      },
+      "nodes": [
+        {
+          "id": "flow-eda3f9c40ed011f1:n1",
+          "kind": "entry",
+          "label": "streamMentorResponse",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 9,
+            "end_line": 72
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.mentor-client:streamMentorResponse",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n2",
+          "kind": "call",
+          "label": "Call fetch()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 14,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "const response = await fetch(`${BACKEND_URL}/mentor`, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/x-ndjson', }, body: JSON.stringify(payload), signal, });",
+          "metadata": {
+            "calls": [
+              "fetch",
+              "JSON.stringify"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:fetch",
+              "src.features.chat.services.mentor-client:JSON.stringify"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n3",
+          "kind": "decision",
+          "label": "!response.ok",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "!response.ok",
+          "metadata": {
+            "condition": "!response.ok",
+            "domain": "",
+            "values": [],
+            "subject": "response.ok",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n4",
+          "kind": "call",
+          "label": "Call response.text()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "const errorText = await response.text();",
+          "metadata": {
+            "calls": [
+              "response.text"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:response.text"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n5",
+          "kind": "error",
+          "label": "Throw new Error(`Mentor API Error (${response.status}): ${errorText}`)",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 26,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw new Error(`Mentor API Error (${response.status}): ${errorText}`);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n6",
+          "kind": "decision",
+          "label": "!response.body",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "!response.body",
+          "metadata": {
+            "condition": "!response.body",
+            "domain": "",
+            "values": [],
+            "subject": "response.body",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n7",
+          "kind": "error",
+          "label": "Throw new Error('No response body received from Mentor API')",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw new Error('No response body received from Mentor API');",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n8",
+          "kind": "call",
+          "label": "Call response.body.getReader()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 33,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "const reader = response.body.getReader();",
+          "metadata": {
+            "calls": [
+              "response.body.getReader"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:response.body.getReader"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n9",
+          "kind": "action",
+          "label": "Set decoder",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "const decoder = new TextDecoder();",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n10",
+          "kind": "action",
+          "label": "Set buffer",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "let buffer = '';",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n11",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 37,
+            "end_line": 71
+          },
+          "evidence": "INFERRED",
+          "detail": "try { while (true) { const { done, value } = await reader.read(); if (done) break; // Decode current chunk and append to buffer buffer += decoder.decode(value, { stream: true }); // Split buffer by newlines to parse complete JSON lines const lines = buffer.split('\\n'); // Keep the last part of the split in the buffer (it might be incomplete) buffer = lines.pop() || ''; for (const line of lines) { const trimmedLine = line.trim(); if (!trimmedLine) continue; try { const chunk: StreamChunk = JSON....",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n12",
+          "kind": "action",
+          "label": "Repeat: while (true)",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 38,
+            "end_line": 62
+          },
+          "evidence": "INFERRED",
+          "detail": "while (true) { const { done, value } = await reader.read(); if (done) break; // Decode current chunk and append to buffer buffer += decoder.decode(value, { stream: true }); // Split buffer by newlines to parse complete JSON lines const lines = buffer.split('\\n'); // Keep the last part of the split in the buffer (it might be incomplete) buffer = lines.pop() || ''; for (const line of lines) { const trimmedLine = line.trim(); if (!trimmedLine) continue; try { const chunk: StreamChunk = JSON.parse(...",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n13",
+          "kind": "call",
+          "label": "Call reader.read()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 39,
+            "end_line": 39
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { done, value } = await reader.read();",
+          "metadata": {
+            "calls": [
+              "reader.read"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:reader.read"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n14",
+          "kind": "action",
+          "label": "Handle internal condition: done",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 40,
+            "end_line": 40
+          },
+          "evidence": "INFERRED",
+          "detail": "if (done) break;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n15",
+          "kind": "action",
+          "label": "// Decode current chunk and append to buffer",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Decode current chunk and append to buffer",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n16",
+          "kind": "call",
+          "label": "Call decoder.decode()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 43,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "buffer += decoder.decode(value, { stream: true });",
+          "metadata": {
+            "calls": [
+              "decoder.decode"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:decoder.decode"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n17",
+          "kind": "action",
+          "label": "// Split buffer by newlines to parse complete JSON lines",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 45,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Split buffer by newlines to parse complete JSON lines",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n18",
+          "kind": "call",
+          "label": "Call buffer.split()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 46,
+            "end_line": 46
+          },
+          "evidence": "VERIFIED",
+          "detail": "const lines = buffer.split('\\n');",
+          "metadata": {
+            "calls": [
+              "buffer.split"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:buffer.split"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n19",
+          "kind": "action",
+          "label": "// Keep the last part of the split in the buffer (it might be incomplete)",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 48,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Keep the last part of the split in the buffer (it might be incomplete)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n20",
+          "kind": "call",
+          "label": "Call lines.pop()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 49,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "buffer = lines.pop() || '';",
+          "metadata": {
+            "calls": [
+              "lines.pop"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:lines.pop"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n21",
+          "kind": "action",
+          "label": "Repeat: for (const line of lines)",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 51,
+            "end_line": 61
+          },
+          "evidence": "INFERRED",
+          "detail": "for (const line of lines) { const trimmedLine = line.trim(); if (!trimmedLine) continue; try { const chunk: StreamChunk = JSON.parse(trimmedLine); onChunk(chunk); } catch (e) { console.warn('Failed to parse NDJSON line:', trimmedLine, e); } }",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n22",
+          "kind": "call",
+          "label": "Call line.trim()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 52,
+            "end_line": 52
+          },
+          "evidence": "VERIFIED",
+          "detail": "const trimmedLine = line.trim();",
+          "metadata": {
+            "calls": [
+              "line.trim"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:line.trim"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n23",
+          "kind": "action",
+          "label": "Handle internal condition: !trimmedLine",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 53,
+            "end_line": 53
+          },
+          "evidence": "INFERRED",
+          "detail": "if (!trimmedLine) continue;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n24",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 55,
+            "end_line": 60
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const chunk: StreamChunk = JSON.parse(trimmedLine); onChunk(chunk); } catch (e) { console.warn('Failed to parse NDJSON line:', trimmedLine, e); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n25",
+          "kind": "call",
+          "label": "Call JSON.parse()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 56,
+            "end_line": 56
+          },
+          "evidence": "VERIFIED",
+          "detail": "const chunk: StreamChunk = JSON.parse(trimmedLine);",
+          "metadata": {
+            "calls": [
+              "JSON.parse"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:JSON.parse"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n26",
+          "kind": "call",
+          "label": "Call onChunk()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 57,
+            "end_line": 57
+          },
+          "evidence": "VERIFIED",
+          "detail": "onChunk(chunk);",
+          "metadata": {
+            "calls": [
+              "onChunk"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:onChunk"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n27",
+          "kind": "call",
+          "label": "Call console.warn()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 59,
+            "end_line": 59
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.warn('Failed to parse NDJSON line:', trimmedLine, e);",
+          "metadata": {
+            "calls": [
+              "console.warn"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:console.warn"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n28",
+          "kind": "decision",
+          "label": "error.name === 'AbortError'",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "error.name === 'AbortError'",
+          "metadata": {
+            "condition": "error.name === 'AbortError'",
+            "domain": "",
+            "values": [
+              "AbortError"
+            ],
+            "subject": "error.name",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "raises",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n29",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 65,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log('Mentor stream aborted');",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n30",
+          "kind": "error",
+          "label": "Throw error",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 67,
+            "end_line": 67
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw error;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n31",
+          "kind": "call",
+          "label": "Call reader.releaseLock()",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 70,
+            "end_line": 70
+          },
+          "evidence": "VERIFIED",
+          "detail": "reader.releaseLock();",
+          "metadata": {
+            "calls": [
+              "reader.releaseLock"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.mentor-client:reader.releaseLock"
+            ]
+          }
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:n32",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/mentor-client.ts",
+            "start_line": 9,
+            "end_line": 72
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-eda3f9c40ed011f1:e1",
+          "source": "flow-eda3f9c40ed011f1:n1",
+          "target": "flow-eda3f9c40ed011f1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e2",
+          "source": "flow-eda3f9c40ed011f1:n2",
+          "target": "flow-eda3f9c40ed011f1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e3",
+          "source": "flow-eda3f9c40ed011f1:n3",
+          "target": "flow-eda3f9c40ed011f1:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e4",
+          "source": "flow-eda3f9c40ed011f1:n4",
+          "target": "flow-eda3f9c40ed011f1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e5",
+          "source": "flow-eda3f9c40ed011f1:n3",
+          "target": "flow-eda3f9c40ed011f1:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e6",
+          "source": "flow-eda3f9c40ed011f1:n6",
+          "target": "flow-eda3f9c40ed011f1:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e7",
+          "source": "flow-eda3f9c40ed011f1:n6",
+          "target": "flow-eda3f9c40ed011f1:n8",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e8",
+          "source": "flow-eda3f9c40ed011f1:n8",
+          "target": "flow-eda3f9c40ed011f1:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e9",
+          "source": "flow-eda3f9c40ed011f1:n9",
+          "target": "flow-eda3f9c40ed011f1:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e10",
+          "source": "flow-eda3f9c40ed011f1:n10",
+          "target": "flow-eda3f9c40ed011f1:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e11",
+          "source": "flow-eda3f9c40ed011f1:n11",
+          "target": "flow-eda3f9c40ed011f1:n12",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e12",
+          "source": "flow-eda3f9c40ed011f1:n12",
+          "target": "flow-eda3f9c40ed011f1:n13",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e13",
+          "source": "flow-eda3f9c40ed011f1:n13",
+          "target": "flow-eda3f9c40ed011f1:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e14",
+          "source": "flow-eda3f9c40ed011f1:n14",
+          "target": "flow-eda3f9c40ed011f1:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e15",
+          "source": "flow-eda3f9c40ed011f1:n15",
+          "target": "flow-eda3f9c40ed011f1:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e16",
+          "source": "flow-eda3f9c40ed011f1:n16",
+          "target": "flow-eda3f9c40ed011f1:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e17",
+          "source": "flow-eda3f9c40ed011f1:n17",
+          "target": "flow-eda3f9c40ed011f1:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e18",
+          "source": "flow-eda3f9c40ed011f1:n18",
+          "target": "flow-eda3f9c40ed011f1:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e19",
+          "source": "flow-eda3f9c40ed011f1:n19",
+          "target": "flow-eda3f9c40ed011f1:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e20",
+          "source": "flow-eda3f9c40ed011f1:n20",
+          "target": "flow-eda3f9c40ed011f1:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e21",
+          "source": "flow-eda3f9c40ed011f1:n21",
+          "target": "flow-eda3f9c40ed011f1:n22",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e22",
+          "source": "flow-eda3f9c40ed011f1:n22",
+          "target": "flow-eda3f9c40ed011f1:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e23",
+          "source": "flow-eda3f9c40ed011f1:n23",
+          "target": "flow-eda3f9c40ed011f1:n24",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e24",
+          "source": "flow-eda3f9c40ed011f1:n24",
+          "target": "flow-eda3f9c40ed011f1:n25",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e25",
+          "source": "flow-eda3f9c40ed011f1:n25",
+          "target": "flow-eda3f9c40ed011f1:n26",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e26",
+          "source": "flow-eda3f9c40ed011f1:n24",
+          "target": "flow-eda3f9c40ed011f1:n27",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e27",
+          "source": "flow-eda3f9c40ed011f1:n11",
+          "target": "flow-eda3f9c40ed011f1:n28",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e28",
+          "source": "flow-eda3f9c40ed011f1:n28",
+          "target": "flow-eda3f9c40ed011f1:n29",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e29",
+          "source": "flow-eda3f9c40ed011f1:n28",
+          "target": "flow-eda3f9c40ed011f1:n30",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e30",
+          "source": "flow-eda3f9c40ed011f1:n12",
+          "target": "flow-eda3f9c40ed011f1:n31",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e31",
+          "source": "flow-eda3f9c40ed011f1:n21",
+          "target": "flow-eda3f9c40ed011f1:n31",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e32",
+          "source": "flow-eda3f9c40ed011f1:n26",
+          "target": "flow-eda3f9c40ed011f1:n31",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e33",
+          "source": "flow-eda3f9c40ed011f1:n27",
+          "target": "flow-eda3f9c40ed011f1:n31",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e34",
+          "source": "flow-eda3f9c40ed011f1:n29",
+          "target": "flow-eda3f9c40ed011f1:n31",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eda3f9c40ed011f1:e35",
+          "source": "flow-eda3f9c40ed011f1:n31",
+          "target": "flow-eda3f9c40ed011f1:n32",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/types/mentor.ts"
+  ]
+}

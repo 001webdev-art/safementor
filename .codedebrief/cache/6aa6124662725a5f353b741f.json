@@ -1,0 +1,142 @@
+{
+  "path": "src/lib/supabase/server.ts",
+  "language": "typescript",
+  "sha256": "132f349d727df8fe51c0e42949e5f187e7054931b1cbd3c4276e45fe20972130",
+  "flows": [
+    {
+      "id": "flow-77a430f6acbf6c26",
+      "name": "createClient",
+      "symbol": "src.lib.supabase.server:createClient",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/lib/supabase/server.ts",
+        "start_line": 4,
+        "end_line": 25
+      },
+      "nodes": [
+        {
+          "id": "flow-77a430f6acbf6c26:n1",
+          "kind": "entry",
+          "label": "createClient",
+          "location": {
+            "path": "src/lib/supabase/server.ts",
+            "start_line": 4,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.lib.supabase.server:createClient",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-77a430f6acbf6c26:n2",
+          "kind": "call",
+          "label": "Call cookies()",
+          "location": {
+            "path": "src/lib/supabase/server.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "const cookieStore = await cookies()",
+          "metadata": {
+            "calls": [
+              "cookies"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.lib.supabase.server:cookies"
+            ]
+          }
+        },
+        {
+          "id": "flow-77a430f6acbf6c26:n3",
+          "kind": "call",
+          "label": "Call createServerClient()",
+          "location": {
+            "path": "src/lib/supabase/server.ts",
+            "start_line": 7,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "return createServerClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, { cookies: { getAll() { return cookieStore.getAll() }, setAll(cookiesToSet) { try { cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options) ) } catch {} }, }, } )",
+          "metadata": {
+            "calls": [
+              "createServerClient",
+              "cookieStore.getAll",
+              "cookiesToSet.forEach"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.lib.supabase.server:createServerClient",
+              "src.lib.supabase.server:cookieStore.getAll",
+              "src.lib.supabase.server:cookiesToSet.forEach"
+            ]
+          }
+        },
+        {
+          "id": "flow-77a430f6acbf6c26:n4",
+          "kind": "terminal",
+          "label": "Return createServerClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, { cookies...",
+          "location": {
+            "path": "src/lib/supabase/server.ts",
+            "start_line": 7,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "return createServerClient( process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, { cookies: { getAll() { return cookieStore.getAll() }, setAll(cookiesToSet) { try { cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options) ) } catch {} }, }, } )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-77a430f6acbf6c26:e1",
+          "source": "flow-77a430f6acbf6c26:n1",
+          "target": "flow-77a430f6acbf6c26:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-77a430f6acbf6c26:e2",
+          "source": "flow-77a430f6acbf6c26:n2",
+          "target": "flow-77a430f6acbf6c26:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-77a430f6acbf6c26:e3",
+          "source": "flow-77a430f6acbf6c26:n3",
+          "target": "flow-77a430f6acbf6c26:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,700 @@
+{
+  "path": "src/app/[locale]/auth/callback/route.ts",
+  "language": "typescript",
+  "sha256": "87e0b439ae65ed1b7ff501ba61aad69248e7167bff2db89d82e865f745d3949d",
+  "flows": [
+    {
+      "id": "flow-8fd72a72fab80f3f",
+      "name": "GET",
+      "symbol": "src.app.[locale].auth.callback.route:GET",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "route",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/auth/callback/route.ts",
+        "start_line": 4,
+        "end_line": 29
+      },
+      "nodes": [
+        {
+          "id": "flow-8fd72a72fab80f3f:n1",
+          "kind": "entry",
+          "label": "Route: GET",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 4,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].auth.callback.route:GET",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n2",
+          "kind": "action",
+          "label": "Set { searchParams, origin }",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { searchParams, origin } = new URL(request.url)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n3",
+          "kind": "call",
+          "label": "Call searchParams.get()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const code = searchParams.get('code')",
+          "metadata": {
+            "calls": [
+              "searchParams.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:searchParams.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n4",
+          "kind": "action",
+          "label": "// if \"next\" is in search params, use it as the redirection URL",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "// if \"next\" is in search params, use it as the redirection URL",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n5",
+          "kind": "call",
+          "label": "Call searchParams.get()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const next = searchParams.get('next') ?? '/auth/verified'",
+          "metadata": {
+            "calls": [
+              "searchParams.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:searchParams.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n6",
+          "kind": "decision",
+          "label": "code",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "code",
+          "metadata": {
+            "condition": "code",
+            "domain": "",
+            "values": [],
+            "subject": "code",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n7",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = await createClient()",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n8",
+          "kind": "call",
+          "label": "Call supabase.auth.exchangeCodeForSession()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { error } = await supabase.auth.exchangeCodeForSession(code)",
+          "metadata": {
+            "calls": [
+              "supabase.auth.exchangeCodeForSession"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:supabase.auth.exchangeCodeForSession"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n9",
+          "kind": "decision",
+          "label": "!error",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "!error",
+          "metadata": {
+            "condition": "!error",
+            "domain": "",
+            "values": [],
+            "subject": "error",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n10",
+          "kind": "call",
+          "label": "Call request.headers.get()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const forwardedHost = request.headers.get('x-forwarded-host') // localhost:3000",
+          "metadata": {
+            "calls": [
+              "request.headers.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:request.headers.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n11",
+          "kind": "action",
+          "label": "Set isLocalEnv",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isLocalEnv = process.env.NODE_ENV === 'development'",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n12",
+          "kind": "decision",
+          "label": "isLocalEnv",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "isLocalEnv",
+          "metadata": {
+            "condition": "isLocalEnv",
+            "domain": "",
+            "values": [],
+            "subject": "isLocalEnv",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n13",
+          "kind": "action",
+          "label": "// we can be sure that originated from the same origin anyway",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "// we can be sure that originated from the same origin anyway",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n14",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}${next}`)",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n15",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(`${origin}${next}`)",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}${next}`)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n16",
+          "kind": "decision",
+          "label": "forwardedHost",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "forwardedHost",
+          "metadata": {
+            "condition": "forwardedHost",
+            "domain": "",
+            "values": [],
+            "subject": "forwardedHost",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n17",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`https://${forwardedHost}${next}`)",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n18",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(`https://${forwardedHost}${next}`)",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`https://${forwardedHost}${next}`)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n19",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}${next}`)",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n20",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(`${origin}${next}`)",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}${next}`)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n21",
+          "kind": "action",
+          "label": "// return the user to an error page with instructions",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "// return the user to an error page with instructions",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n22",
+          "kind": "call",
+          "label": "Call NextResponse.redirect()",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}/auth/auth-code-error`)",
+          "metadata": {
+            "calls": [
+              "NextResponse.redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].auth.callback.route:NextResponse.redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:n23",
+          "kind": "terminal",
+          "label": "Return NextResponse.redirect(`${origin}/auth/auth-code-error`)",
+          "location": {
+            "path": "src/app/[locale]/auth/callback/route.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.redirect(`${origin}/auth/auth-code-error`)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8fd72a72fab80f3f:e1",
+          "source": "flow-8fd72a72fab80f3f:n1",
+          "target": "flow-8fd72a72fab80f3f:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e2",
+          "source": "flow-8fd72a72fab80f3f:n2",
+          "target": "flow-8fd72a72fab80f3f:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e3",
+          "source": "flow-8fd72a72fab80f3f:n3",
+          "target": "flow-8fd72a72fab80f3f:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e4",
+          "source": "flow-8fd72a72fab80f3f:n4",
+          "target": "flow-8fd72a72fab80f3f:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e5",
+          "source": "flow-8fd72a72fab80f3f:n5",
+          "target": "flow-8fd72a72fab80f3f:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e6",
+          "source": "flow-8fd72a72fab80f3f:n6",
+          "target": "flow-8fd72a72fab80f3f:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e7",
+          "source": "flow-8fd72a72fab80f3f:n7",
+          "target": "flow-8fd72a72fab80f3f:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e8",
+          "source": "flow-8fd72a72fab80f3f:n8",
+          "target": "flow-8fd72a72fab80f3f:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e9",
+          "source": "flow-8fd72a72fab80f3f:n9",
+          "target": "flow-8fd72a72fab80f3f:n10",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e10",
+          "source": "flow-8fd72a72fab80f3f:n10",
+          "target": "flow-8fd72a72fab80f3f:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e11",
+          "source": "flow-8fd72a72fab80f3f:n11",
+          "target": "flow-8fd72a72fab80f3f:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e12",
+          "source": "flow-8fd72a72fab80f3f:n12",
+          "target": "flow-8fd72a72fab80f3f:n13",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e13",
+          "source": "flow-8fd72a72fab80f3f:n13",
+          "target": "flow-8fd72a72fab80f3f:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e14",
+          "source": "flow-8fd72a72fab80f3f:n14",
+          "target": "flow-8fd72a72fab80f3f:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e15",
+          "source": "flow-8fd72a72fab80f3f:n12",
+          "target": "flow-8fd72a72fab80f3f:n16",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e16",
+          "source": "flow-8fd72a72fab80f3f:n16",
+          "target": "flow-8fd72a72fab80f3f:n17",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e17",
+          "source": "flow-8fd72a72fab80f3f:n17",
+          "target": "flow-8fd72a72fab80f3f:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e18",
+          "source": "flow-8fd72a72fab80f3f:n16",
+          "target": "flow-8fd72a72fab80f3f:n19",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e19",
+          "source": "flow-8fd72a72fab80f3f:n19",
+          "target": "flow-8fd72a72fab80f3f:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e20",
+          "source": "flow-8fd72a72fab80f3f:n9",
+          "target": "flow-8fd72a72fab80f3f:n21",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e21",
+          "source": "flow-8fd72a72fab80f3f:n6",
+          "target": "flow-8fd72a72fab80f3f:n21",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e22",
+          "source": "flow-8fd72a72fab80f3f:n21",
+          "target": "flow-8fd72a72fab80f3f:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8fd72a72fab80f3f:e23",
+          "source": "flow-8fd72a72fab80f3f:n22",
+          "target": "flow-8fd72a72fab80f3f:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

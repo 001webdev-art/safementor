@@ -1,0 +1,180 @@
+{
+  "path": "src/features/landing/components/SafeMentorFooter.tsx",
+  "language": "typescript",
+  "sha256": "c57df1a0a1c4987f324f668a5df727b4fdaf1e142a5a28cef0839f2652ba19c3",
+  "flows": [
+    {
+      "id": "flow-4c60afa4fb85ce40",
+      "name": "SafeMentorFooter",
+      "symbol": "src.features.landing.components.SafeMentorFooter:SafeMentorFooter",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/SafeMentorFooter.tsx",
+        "start_line": 6,
+        "end_line": 41
+      },
+      "nodes": [
+        {
+          "id": "flow-4c60afa4fb85ce40:n1",
+          "kind": "entry",
+          "label": "Component: SafeMentorFooter",
+          "location": {
+            "path": "src/features/landing/components/SafeMentorFooter.tsx",
+            "start_line": 6,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.SafeMentorFooter:SafeMentorFooter",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/SafeMentorFooter.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('SafeMentor.Footer');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.SafeMentorFooter:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/landing/components/SafeMentorFooter.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.SafeMentorFooter:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/SafeMentorFooter.tsx",
+            "start_line": 10,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <footer className=\"w-full px-6 md:px-12 lg:px-20 py-16 border-t border-[#F5F2EC] bg-[#FDFBF8]\" id=\"footer-section\"> <div className=\"max-w-6xl mx-auto\"> <div className=\"grid md:grid-cols-4 gap-10 mb-12\"> <div className=\"md:col-span-2\"> <div className=\"flex items-center gap-3 mb-4\"> <SafeMentorLogo size={32} className=\"\" /> <span className=\"font-serif text-lg font-bold text-[#4A4540]\">SafeMentor</span> </div> <p className=\"opacity-70 leading-relaxed mb-4 max-w-sm text-[#4A4540]\" id=\"foot...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "new Date().getFullYear",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:t",
+              "src.features.landing.components.SafeMentorFooter:new Date().getFullYear",
+              "src.features.landing.components.SafeMentorFooter:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:n5",
+          "kind": "terminal",
+          "label": "Return ( <footer className=\"w-full px-6 md:px-12 lg:px-20 py-16 border-t border-[#F5F2EC] bg-[#FDFBF8]\" id=\"footer-sect...",
+          "location": {
+            "path": "src/features/landing/components/SafeMentorFooter.tsx",
+            "start_line": 10,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <footer className=\"w-full px-6 md:px-12 lg:px-20 py-16 border-t border-[#F5F2EC] bg-[#FDFBF8]\" id=\"footer-section\"> <div className=\"max-w-6xl mx-auto\"> <div className=\"grid md:grid-cols-4 gap-10 mb-12\"> <div className=\"md:col-span-2\"> <div className=\"flex items-center gap-3 mb-4\"> <SafeMentorLogo size={32} className=\"\" /> <span className=\"font-serif text-lg font-bold text-[#4A4540]\">SafeMentor</span> </div> <p className=\"opacity-70 leading-relaxed mb-4 max-w-sm text-[#4A4540]\" id=\"foot...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4c60afa4fb85ce40:e1",
+          "source": "flow-4c60afa4fb85ce40:n1",
+          "target": "flow-4c60afa4fb85ce40:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:e2",
+          "source": "flow-4c60afa4fb85ce40:n2",
+          "target": "flow-4c60afa4fb85ce40:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:e3",
+          "source": "flow-4c60afa4fb85ce40:n3",
+          "target": "flow-4c60afa4fb85ce40:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4c60afa4fb85ce40:e4",
+          "source": "flow-4c60afa4fb85ce40:n4",
+          "target": "flow-4c60afa4fb85ce40:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/SafeMentorIcons.tsx"
+  ]
+}

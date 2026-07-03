@@ -20,7 +20,7 @@ class AppConfig {
     ),
     mentorBaseUrl: String.fromEnvironment(
       'MENTOR_BASE_URL',
-      defaultValue: 'http://localhost:8080',
+      defaultValue: 'https://safementor-api-762553995544.us-central1.run.app',
     ),
   );
 

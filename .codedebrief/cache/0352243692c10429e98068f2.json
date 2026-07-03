@@ -1,0 +1,108 @@
+{
+  "path": "src/app/utils.ts",
+  "language": "typescript",
+  "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+  "flows": [
+    {
+      "id": "flow-5808de0099c9c1e5",
+      "name": "cn",
+      "symbol": "src.app.utils:cn",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/utils.ts",
+        "start_line": 4,
+        "end_line": 6
+      },
+      "nodes": [
+        {
+          "id": "flow-5808de0099c9c1e5:n1",
+          "kind": "entry",
+          "label": "cn",
+          "location": {
+            "path": "src/app/utils.ts",
+            "start_line": 4,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.utils:cn",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5808de0099c9c1e5:n2",
+          "kind": "call",
+          "label": "Call twMerge()",
+          "location": {
+            "path": "src/app/utils.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "return twMerge(clsx(inputs));",
+          "metadata": {
+            "calls": [
+              "twMerge",
+              "clsx"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.utils:twMerge",
+              "src.app.utils:clsx"
+            ]
+          }
+        },
+        {
+          "id": "flow-5808de0099c9c1e5:n3",
+          "kind": "terminal",
+          "label": "Return twMerge(clsx(inputs))",
+          "location": {
+            "path": "src/app/utils.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "return twMerge(clsx(inputs));",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5808de0099c9c1e5:e1",
+          "source": "flow-5808de0099c9c1e5:n1",
+          "target": "flow-5808de0099c9c1e5:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5808de0099c9c1e5:e2",
+          "source": "flow-5808de0099c9c1e5:n2",
+          "target": "flow-5808de0099c9c1e5:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

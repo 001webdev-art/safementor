@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ChildQRPairing.tsx",
+  "language": "typescript",
+  "sha256": "9258c67fd022e52a4aa9127b8368cc1744e8d69656401243baee08c35da495d5",
+  "flows": [
+    {
+      "id": "flow-7f201c9df6a7ea63",
+      "name": "ChildQRPairing",
+      "symbol": "src.features.profile.components.ChildQRPairing:ChildQRPairing",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ChildQRPairing.tsx",
+        "start_line": 3,
+        "end_line": 22
+      },
+      "nodes": [
+        {
+          "id": "flow-7f201c9df6a7ea63:n1",
+          "kind": "entry",
+          "label": "Component: ChildQRPairing",
+          "location": {
+            "path": "src/features/profile/components/ChildQRPairing.tsx",
+            "start_line": 3,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ChildQRPairing:ChildQRPairing",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7f201c9df6a7ea63:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-sm mx-auto items-cente...",
+          "location": {
+            "path": "src/features/profile/components/ChildQRPairing.tsx",
+            "start_line": 4,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-sm mx-auto items-center justify-center text-center\"> <h1 className=\"text-2xl font-bold mb-8\">PAIR DEVICE</h1> <div className=\"w-64 h-64 border-4 border-black bg-gray-200 mb-8 flex items-center justify-center relative\"> <div className=\"absolute inset-0 border-b-2 border-black animate-pulse bg-black opacity-10 h-1 top-1/2\"></div> <p className=\"font-bold\">[ CAMERA VIEW ]</p> <p className=\"text-xs absol...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7f201c9df6a7ea63:e1",
+          "source": "flow-7f201c9df6a7ea63:n1",
+          "target": "flow-7f201c9df6a7ea63:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

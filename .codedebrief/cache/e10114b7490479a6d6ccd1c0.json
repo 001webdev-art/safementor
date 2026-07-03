@@ -1,0 +1,143 @@
+{
+  "path": "src/features/register/components/DataUsageSection.tsx",
+  "language": "typescript",
+  "sha256": "d3239aa81b6c129ecf4fdf8e6a656db93401bded01379bf29c39082dafa1b209",
+  "flows": [
+    {
+      "id": "flow-6529c437a9cb36cb",
+      "name": "DataUsageSection",
+      "symbol": "src.features.register.components.DataUsageSection:DataUsageSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/DataUsageSection.tsx",
+        "start_line": 5,
+        "end_line": 32
+      },
+      "nodes": [
+        {
+          "id": "flow-6529c437a9cb36cb:n1",
+          "kind": "entry",
+          "label": "Component: DataUsageSection",
+          "location": {
+            "path": "src/features/register/components/DataUsageSection.tsx",
+            "start_line": 5,
+            "end_line": 32
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.DataUsageSection:DataUsageSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-6529c437a9cb36cb:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/components/DataUsageSection.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Compliance.dataUsage')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.DataUsageSection:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-6529c437a9cb36cb:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/DataUsageSection.tsx",
+            "start_line": 8,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section> <h2 className=\"text-xl font-semibold mb-4 text-gray-900\"> {t('title')} </h2> <ul className=\"space-y-3 text-gray-700 font-medium\"> <li className=\"flex gap-3\"> <span className=\"text-[#889A7F] font-bold mt-1\">•</span> <p> <strong className=\"text-gray-900\">{t('riskSignals.label')}</strong>{' '} {t('riskSignals.value')} </p> </li> <li className=\"flex gap-3\"> <span className=\"text-[#889A7F] font-bold mt-1\">•</span> <p> <strong className=\"text-gray-900\">{t('usageStats.label')}</stro...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.DataUsageSection:t",
+              "src.features.register.components.DataUsageSection:t",
+              "src.features.register.components.DataUsageSection:t",
+              "src.features.register.components.DataUsageSection:t",
+              "src.features.register.components.DataUsageSection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-6529c437a9cb36cb:n4",
+          "kind": "terminal",
+          "label": "Return ( <section> <h2 className=\"text-xl font-semibold mb-4 text-gray-900\"> {t('title')} </h2> <ul className=\"space-y-...",
+          "location": {
+            "path": "src/features/register/components/DataUsageSection.tsx",
+            "start_line": 8,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section> <h2 className=\"text-xl font-semibold mb-4 text-gray-900\"> {t('title')} </h2> <ul className=\"space-y-3 text-gray-700 font-medium\"> <li className=\"flex gap-3\"> <span className=\"text-[#889A7F] font-bold mt-1\">•</span> <p> <strong className=\"text-gray-900\">{t('riskSignals.label')}</strong>{' '} {t('riskSignals.value')} </p> </li> <li className=\"flex gap-3\"> <span className=\"text-[#889A7F] font-bold mt-1\">•</span> <p> <strong className=\"text-gray-900\">{t('usageStats.label')}</stro...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-6529c437a9cb36cb:e1",
+          "source": "flow-6529c437a9cb36cb:n1",
+          "target": "flow-6529c437a9cb36cb:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-6529c437a9cb36cb:e2",
+          "source": "flow-6529c437a9cb36cb:n2",
+          "target": "flow-6529c437a9cb36cb:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-6529c437a9cb36cb:e3",
+          "source": "flow-6529c437a9cb36cb:n3",
+          "target": "flow-6529c437a9cb36cb:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

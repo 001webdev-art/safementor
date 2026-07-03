@@ -1,0 +1,245 @@
+{
+  "path": "src/features/chat/hooks/usePWA.ts",
+  "language": "typescript",
+  "sha256": "27d79617e40603e9df162d51ff06cdfe24e2488a246d1034e3b70751fff4c704",
+  "flows": [
+    {
+      "id": "flow-46ba6f2bd2e18259",
+      "name": "usePWA",
+      "symbol": "src.features.chat.hooks.usePWA:usePWA",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/hooks/usePWA.ts",
+        "start_line": 6,
+        "end_line": 92
+      },
+      "nodes": [
+        {
+          "id": "flow-46ba6f2bd2e18259:n1",
+          "kind": "entry",
+          "label": "Hook: usePWA",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 6,
+            "end_line": 92
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.hooks.usePWA:usePWA",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [deferredPrompt, setDeferredPrompt] = useState<any>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isInstallable, setIsInstallable] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 9,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [debugInfo, setDebugInfo] = useState({ secureContext: false, serviceWorker: 'checking', beforeInstallPrompt: 'not_fired', });",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n5",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n6",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 17,
+            "end_line": 77
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { // Check secure context setDebugInfo(prev => ({ ...prev, secureContext: window.isSecureContext })); // Manual Service Worker Registration for isolation if ('serviceWorker' in navigator && window.location.pathname.includes(`/${locale}/chat`)) { navigator.serviceWorker.register('/sw-chat.js', { scope: `/${locale}/chat` }).then( (registration) => { setDebugInfo(prev => ({ ...prev, serviceWorker: 'registered' })); }, (err) => { console.error('SW: registration failed', err); setDeb...",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.usePWA:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n7",
+          "kind": "action",
+          "label": "Set installApp",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 79,
+            "end_line": 89
+          },
+          "evidence": "VERIFIED",
+          "detail": "const installApp = async () => { if (!deferredPrompt) { alert(`Debug Info:\\n- Secure: ${debugInfo.secureContext}\\n- SW: ${debugInfo.serviceWorker}\\n- Event: ${debugInfo.beforeInstallPrompt}\\n\\nChrome requires HTTPS and a registered Service Worker to show the install prompt.`); return; } deferredPrompt.prompt(); const { outcome } = await deferredPrompt.userChoice; setDeferredPrompt(null); setIsInstallable(false); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:n8",
+          "kind": "terminal",
+          "label": "Return { isInstallable, installApp, debugInfo }",
+          "location": {
+            "path": "src/features/chat/hooks/usePWA.ts",
+            "start_line": 91,
+            "end_line": 91
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { isInstallable, installApp, debugInfo };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-46ba6f2bd2e18259:e1",
+          "source": "flow-46ba6f2bd2e18259:n1",
+          "target": "flow-46ba6f2bd2e18259:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e2",
+          "source": "flow-46ba6f2bd2e18259:n2",
+          "target": "flow-46ba6f2bd2e18259:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e3",
+          "source": "flow-46ba6f2bd2e18259:n3",
+          "target": "flow-46ba6f2bd2e18259:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e4",
+          "source": "flow-46ba6f2bd2e18259:n4",
+          "target": "flow-46ba6f2bd2e18259:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e5",
+          "source": "flow-46ba6f2bd2e18259:n5",
+          "target": "flow-46ba6f2bd2e18259:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e6",
+          "source": "flow-46ba6f2bd2e18259:n6",
+          "target": "flow-46ba6f2bd2e18259:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-46ba6f2bd2e18259:e7",
+          "source": "flow-46ba6f2bd2e18259:n7",
+          "target": "flow-46ba6f2bd2e18259:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

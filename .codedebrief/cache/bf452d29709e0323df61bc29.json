@@ -1,0 +1,77 @@
+{
+  "path": "src/features/dashboard/components/ui/SaveButton.tsx",
+  "language": "typescript",
+  "sha256": "07c5dbf8f3847559e495d8ccfee3cd97fd8708008068463cd724887a6400735f",
+  "flows": [
+    {
+      "id": "flow-fee8b0219be25485",
+      "name": "SaveButton",
+      "symbol": "src.features.dashboard.components.ui.SaveButton:SaveButton",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/ui/SaveButton.tsx",
+        "start_line": 13,
+        "end_line": 27
+      },
+      "nodes": [
+        {
+          "id": "flow-fee8b0219be25485:n1",
+          "kind": "entry",
+          "label": "Component: SaveButton",
+          "location": {
+            "path": "src/features/dashboard/components/ui/SaveButton.tsx",
+            "start_line": 13,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.ui.SaveButton:SaveButton",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fee8b0219be25485:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex justify-end sticky bottom-6 z-10 mt-6 pointer-events-none\"> <Button color=\"primary\" class...",
+          "location": {
+            "path": "src/features/dashboard/components/ui/SaveButton.tsx",
+            "start_line": 14,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex justify-end sticky bottom-6 z-10 mt-6 pointer-events-none\"> <Button color=\"primary\" className=\"font-bold shadow-lg h-14 px-8 pointer-events-auto\" isLoading={isLoading} onClick={onClick} size=\"lg\" > {isLoading ? loadingLabel : label} </Button> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-fee8b0219be25485:e1",
+          "source": "flow-fee8b0219be25485:n1",
+          "target": "flow-fee8b0219be25485:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

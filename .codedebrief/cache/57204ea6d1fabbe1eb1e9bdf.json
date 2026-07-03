@@ -1,0 +1,106 @@
+{
+  "path": "src/app/[locale]/chat/history/page.tsx",
+  "language": "typescript",
+  "sha256": "26e0bfa5a90d58bd4103027a53ba6a70dbf952672b3984ab466ce78ffc2507a5",
+  "flows": [
+    {
+      "id": "flow-2b2f29a34f2d0b02",
+      "name": "HistoryPage",
+      "symbol": "src.app.[locale].chat.history.page:HistoryPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/chat/history/page.tsx",
+        "start_line": 6,
+        "end_line": 14
+      },
+      "nodes": [
+        {
+          "id": "flow-2b2f29a34f2d0b02:n1",
+          "kind": "entry",
+          "label": "Component: HistoryPage",
+          "location": {
+            "path": "src/app/[locale]/chat/history/page.tsx",
+            "start_line": 6,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].chat.history.page:HistoryPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2b2f29a34f2d0b02:n2",
+          "kind": "call",
+          "label": "Call getMessages()",
+          "location": {
+            "path": "src/app/[locale]/chat/history/page.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const messages = await getMessages();",
+          "metadata": {
+            "calls": [
+              "getMessages"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].chat.history.page:getMessages"
+            ]
+          }
+        },
+        {
+          "id": "flow-2b2f29a34f2d0b02:n3",
+          "kind": "terminal",
+          "label": "Return ( <NextIntlClientProvider messages={messages} locale={locale}> <HistoryClient /> </NextIntlClientProvider> )",
+          "location": {
+            "path": "src/app/[locale]/chat/history/page.tsx",
+            "start_line": 9,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <NextIntlClientProvider messages={messages} locale={locale}> <HistoryClient /> </NextIntlClientProvider> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2b2f29a34f2d0b02:e1",
+          "source": "flow-2b2f29a34f2d0b02:n1",
+          "target": "flow-2b2f29a34f2d0b02:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2b2f29a34f2d0b02:e2",
+          "source": "flow-2b2f29a34f2d0b02:n2",
+          "target": "flow-2b2f29a34f2d0b02:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

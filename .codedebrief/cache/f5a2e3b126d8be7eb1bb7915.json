@@ -1,0 +1,207 @@
+{
+  "path": "src/features/dashboard/components/Privacy.tsx",
+  "language": "typescript",
+  "sha256": "769b5a644885752fb263ca6f13040d4d92c32f149234bf51609d55bacf5c9325",
+  "flows": [
+    {
+      "id": "flow-7100c6f568e10577",
+      "name": "Privacy",
+      "symbol": "src.features.dashboard.components.Privacy:Privacy",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/Privacy.tsx",
+        "start_line": 8,
+        "end_line": 150
+      },
+      "nodes": [
+        {
+          "id": "flow-7100c6f568e10577:n1",
+          "kind": "entry",
+          "label": "Component: Privacy",
+          "location": {
+            "path": "src/features/dashboard/components/Privacy.tsx",
+            "start_line": 8,
+            "end_line": 150
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.Privacy:Privacy",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7100c6f568e10577:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/Privacy.tsx",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard.privacy_new');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Privacy:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-7100c6f568e10577:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/Privacy.tsx",
+            "start_line": 11,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Section 1: Legal Basis */} <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex justify-between items-start mb-2\"> <div> <h3 className=\"text-xl font-bold\">{t('basis.title')}</h3> <p className=\"text-gray-500 text-xs\"...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t",
+              "src.features.dashboard.components.Privacy:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-7100c6f568e10577:n4",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-...",
+          "location": {
+            "path": "src/features/dashboard/components/Privacy.tsx",
+            "start_line": 11,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Section 1: Legal Basis */} <Card shadow=\"none\" className=\"border border-divider bg-default-50/30 p-2\"> <CardBody className=\"space-y-4\"> <div className=\"flex justify-between items-start mb-2\"> <div> <h3 className=\"text-xl font-bold\">{t('basis.title')}</h3> <p className=\"text-gray-500 text-xs\"...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7100c6f568e10577:e1",
+          "source": "flow-7100c6f568e10577:n1",
+          "target": "flow-7100c6f568e10577:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7100c6f568e10577:e2",
+          "source": "flow-7100c6f568e10577:n2",
+          "target": "flow-7100c6f568e10577:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7100c6f568e10577:e3",
+          "source": "flow-7100c6f568e10577:n3",
+          "target": "flow-7100c6f568e10577:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

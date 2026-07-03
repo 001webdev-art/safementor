@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ParentSettings.tsx",
+  "language": "typescript",
+  "sha256": "223c94b25a98736a804b031fd0114c44ab8be8cbed6e07b2f1a7f391ae2202e4",
+  "flows": [
+    {
+      "id": "flow-48367db4d25f69ed",
+      "name": "ParentSettings",
+      "symbol": "src.features.profile.components.ParentSettings:ParentSettings",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentSettings.tsx",
+        "start_line": 1,
+        "end_line": 444
+      },
+      "nodes": [
+        {
+          "id": "flow-48367db4d25f69ed:n1",
+          "kind": "entry",
+          "label": "Component: ParentSettings",
+          "location": {
+            "path": "src/features/profile/components/ParentSettings.tsx",
+            "start_line": 1,
+            "end_line": 444
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentSettings:ParentSettings",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-48367db4d25f69ed:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden bo...",
+          "location": {
+            "path": "src/features/profile/components/ParentSettings.tsx",
+            "start_line": 2,
+            "end_line": 443
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden border-b-2 border-black p-4 flex justify-between items-center shrink-0\"> <div> <p className=\"text-sm font-bold\">SafeMentor</p> <p className=\"text-xs text-gray-600\">Parent Dashboard</p> </div> </div> {/* Main Content */} <div className=\"flex-1 p-4 md:p-8 overflow-y-auto\"> <h1 className=\"text-lg font-bold mb-6\">Settings</h1> {/* 1) Child Access Control */} <div className=\"border-2....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-48367db4d25f69ed:e1",
+          "source": "flow-48367db4d25f69ed:n1",
+          "target": "flow-48367db4d25f69ed:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

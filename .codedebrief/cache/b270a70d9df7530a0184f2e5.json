@@ -1,0 +1,433 @@
+{
+  "path": "src/app/[locale]/dashboard/page.tsx",
+  "language": "typescript",
+  "sha256": "00eaba8c0435597cc99be300472f1119af97f5130330d5cfe330848ee25751be",
+  "flows": [
+    {
+      "id": "flow-5ebc5f1fda37aff1",
+      "name": "generateMetadata",
+      "symbol": "src.app.[locale].dashboard.page:generateMetadata",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/dashboard/page.tsx",
+        "start_line": 6,
+        "end_line": 13
+      },
+      "nodes": [
+        {
+          "id": "flow-5ebc5f1fda37aff1:n1",
+          "kind": "entry",
+          "label": "Component: generateMetadata",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 6,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].dashboard.page:generateMetadata",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:n2",
+          "kind": "action",
+          "label": "Set { locale }",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { locale } = await params",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:n3",
+          "kind": "call",
+          "label": "Call getTranslations()",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = await getTranslations({ locale, namespace: 'Dashboard' })",
+          "metadata": {
+            "calls": [
+              "getTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].dashboard.page:getTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 10,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { title: t('title'), }",
+          "metadata": {
+            "calls": [
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].dashboard.page:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:n5",
+          "kind": "terminal",
+          "label": "Return { title: t('title'), }",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 10,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { title: t('title'), }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5ebc5f1fda37aff1:e1",
+          "source": "flow-5ebc5f1fda37aff1:n1",
+          "target": "flow-5ebc5f1fda37aff1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:e2",
+          "source": "flow-5ebc5f1fda37aff1:n2",
+          "target": "flow-5ebc5f1fda37aff1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:e3",
+          "source": "flow-5ebc5f1fda37aff1:n3",
+          "target": "flow-5ebc5f1fda37aff1:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5ebc5f1fda37aff1:e4",
+          "source": "flow-5ebc5f1fda37aff1:n4",
+          "target": "flow-5ebc5f1fda37aff1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-74ccda007edc54e3",
+      "name": "DashboardPage",
+      "symbol": "src.app.[locale].dashboard.page:DashboardPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/dashboard/page.tsx",
+        "start_line": 15,
+        "end_line": 36
+      },
+      "nodes": [
+        {
+          "id": "flow-74ccda007edc54e3:n1",
+          "kind": "entry",
+          "label": "Component: DashboardPage",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 15,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].dashboard.page:DashboardPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n2",
+          "kind": "action",
+          "label": "Set { locale }",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { locale } = await params",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n3",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = await createClient()",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.app.[locale].dashboard.page:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n4",
+          "kind": "call",
+          "label": "Call supabase.auth.getSession()",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { data: { session } } = await supabase.auth.getSession()",
+          "metadata": {
+            "calls": [
+              "supabase.auth.getSession"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].dashboard.page:supabase.auth.getSession"
+            ]
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n5",
+          "kind": "decision",
+          "label": "!session",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "!session",
+          "metadata": {
+            "condition": "!session",
+            "domain": "",
+            "values": [],
+            "subject": "session",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n6",
+          "kind": "call",
+          "label": "Call redirect()",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "redirect(`/${locale}/login`)",
+          "metadata": {
+            "calls": [
+              "redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].dashboard.page:redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n7",
+          "kind": "action",
+          "label": "// Simplified user object for client component",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 24,
+            "end_line": 24
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Simplified user object for client component",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n8",
+          "kind": "action",
+          "label": "Set user",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 25,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "const user = { id: session.user.id, email: session.user.email, created_at: session.user.created_at, }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-74ccda007edc54e3:n9",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen\"> <DashboardClient user={user} /> </div> )",
+          "location": {
+            "path": "src/app/[locale]/dashboard/page.tsx",
+            "start_line": 31,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen\"> <DashboardClient user={user} /> </div> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-74ccda007edc54e3:e1",
+          "source": "flow-74ccda007edc54e3:n1",
+          "target": "flow-74ccda007edc54e3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e2",
+          "source": "flow-74ccda007edc54e3:n2",
+          "target": "flow-74ccda007edc54e3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e3",
+          "source": "flow-74ccda007edc54e3:n3",
+          "target": "flow-74ccda007edc54e3:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e4",
+          "source": "flow-74ccda007edc54e3:n4",
+          "target": "flow-74ccda007edc54e3:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e5",
+          "source": "flow-74ccda007edc54e3:n5",
+          "target": "flow-74ccda007edc54e3:n6",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e6",
+          "source": "flow-74ccda007edc54e3:n6",
+          "target": "flow-74ccda007edc54e3:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e7",
+          "source": "flow-74ccda007edc54e3:n5",
+          "target": "flow-74ccda007edc54e3:n7",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e8",
+          "source": "flow-74ccda007edc54e3:n7",
+          "target": "flow-74ccda007edc54e3:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-74ccda007edc54e3:e9",
+          "source": "flow-74ccda007edc54e3:n8",
+          "target": "flow-74ccda007edc54e3:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

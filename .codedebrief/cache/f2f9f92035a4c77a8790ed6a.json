@@ -1,0 +1,168 @@
+{
+  "path": "src/app/[locale]/not-found.tsx",
+  "language": "typescript",
+  "sha256": "b492f1dacd8c0397c2d567526b943e363a6287eb40a1cb754ea24d86aaf7bdc5",
+  "flows": [
+    {
+      "id": "flow-03ae613904eff43c",
+      "name": "NotFound",
+      "symbol": "src.app.[locale].not-found:NotFound",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/not-found.tsx",
+        "start_line": 9,
+        "end_line": 44
+      },
+      "nodes": [
+        {
+          "id": "flow-03ae613904eff43c:n1",
+          "kind": "entry",
+          "label": "Component: NotFound",
+          "location": {
+            "path": "src/app/[locale]/not-found.tsx",
+            "start_line": 9,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].not-found:NotFound",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-03ae613904eff43c:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/app/[locale]/not-found.tsx",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('NotFound');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].not-found:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-03ae613904eff43c:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/app/[locale]/not-found.tsx",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].not-found:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-03ae613904eff43c:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/app/[locale]/not-found.tsx",
+            "start_line": 13,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[500px] w-full p-8 shadow-xl border-none\"> <CardBody className=\"flex flex-col items-center text-center gap-6\"> <div className=\"p-4 bg-danger-50 rounded-full\"> <AlertCircle size={64} className=\"text-danger\" /> </div> <div className=\"space-y-2\"> <h1 className=\"text-4xl font-black text-gray-900\">404</h1> <h2 className=\"text-2xl font-bold text-gray-800\">{t('title')}</h2> <p className=\"t...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].not-found:t",
+              "src.app.[locale].not-found:t",
+              "src.app.[locale].not-found:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-03ae613904eff43c:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[500p...",
+          "location": {
+            "path": "src/app/[locale]/not-found.tsx",
+            "start_line": 13,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[500px] w-full p-8 shadow-xl border-none\"> <CardBody className=\"flex flex-col items-center text-center gap-6\"> <div className=\"p-4 bg-danger-50 rounded-full\"> <AlertCircle size={64} className=\"text-danger\" /> </div> <div className=\"space-y-2\"> <h1 className=\"text-4xl font-black text-gray-900\">404</h1> <h2 className=\"text-2xl font-bold text-gray-800\">{t('title')}</h2> <p className=\"t...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-03ae613904eff43c:e1",
+          "source": "flow-03ae613904eff43c:n1",
+          "target": "flow-03ae613904eff43c:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-03ae613904eff43c:e2",
+          "source": "flow-03ae613904eff43c:n2",
+          "target": "flow-03ae613904eff43c:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-03ae613904eff43c:e3",
+          "source": "flow-03ae613904eff43c:n3",
+          "target": "flow-03ae613904eff43c:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-03ae613904eff43c:e4",
+          "source": "flow-03ae613904eff43c:n4",
+          "target": "flow-03ae613904eff43c:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,392 @@
+{
+  "path": "src/features/dashboard/components/Notifications.tsx",
+  "language": "typescript",
+  "sha256": "767de0b7ecb2d173274b1df616d119d5773336e534d5fe6f9daa80712bfdfb2b",
+  "flows": [
+    {
+      "id": "flow-8388dcd48aa383d3",
+      "name": "Notifications",
+      "symbol": "src.features.dashboard.components.Notifications:Notifications",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/Notifications.tsx",
+        "start_line": 16,
+        "end_line": 293
+      },
+      "nodes": [
+        {
+          "id": "flow-8388dcd48aa383d3:n1",
+          "kind": "entry",
+          "label": "Component: Notifications",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 16,
+            "end_line": 293
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.Notifications:Notifications",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard.notifications_new');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [riskAlerts, setRiskAlerts] = useState<any[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoadingRisks, setIsLoadingRisks] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [helplineInfo, setHelplineInfo] = useState<any>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n6",
+          "kind": "call",
+          "label": "Call alerts.filter()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "const otherAlerts = alerts.filter(a => a.type !== 'red');",
+          "metadata": {
+            "calls": [
+              "alerts.filter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:alerts.filter"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n7",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n8",
+          "kind": "action",
+          "label": "Set fetchRisks",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 24,
+            "end_line": 47
+          },
+          "evidence": "VERIFIED",
+          "detail": "const fetchRisks = async () => { try { const { data, error } = await supabase .from('chat_messages') .select(` id, user_intent_summary, user_intent_flag, child_id, created_at, children:children(nickname) `) .not('user_intent_flag', 'is', null) .neq('user_intent_flag', 'none') .eq('parent_reviewed', false); if (error) throw error; setRiskAlerts(data || []); } catch (err) { console.error('Error fetching risks:', err); } finally { setIsLoadingRisks(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n9",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 49,
+            "end_line": 73
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { fetchRisks(); const fetchHelplines = async () => { if (profile?.address_country) { try { const response = await fetch('/parent_helplines_europe.json'); const helplines = await response.json(); // Match country name (assuming profile stores full name like \"Germany\") const countryInfo = helplines[profile.address_country]; if (countryInfo) { setHelplineInfo({ country: profile.address_country, ...countryInfo }); } } catch (error) { console.error('Error loading helplines:', error);...",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n10",
+          "kind": "action",
+          "label": "Set handleAcknowledge",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 75,
+            "end_line": 89
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleAcknowledge = async (messageId: string) => { try { const { error } = await supabase .from('chat_messages') .update({ parent_reviewed: true }) .eq('id', messageId); if (error) throw error; // Remove from local state setRiskAlerts(prev => prev.filter(alert => alert.id !== messageId)); } catch (err) { console.error('Error acknowledging risk:', err); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n11",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 91,
+            "end_line": 292
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Header */} <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Active Alerts Section */} <div> <h2 className=\"text-lg font-semibold text-gray-900 mb-4\">{t('activeAlerts')}</h2> {isLoadingRisks ? ( <div className=\"flex justify-center p-8\"> <Spinner color=\"danger\" /> </div> ) : riskAlerts.length > 0 ? ( <div className=\"space-y-4\"> {riskAler...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "riskAlerts.map",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "otherAlerts.map",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:riskAlerts.map",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:otherAlerts.map",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t",
+              "src.features.dashboard.components.Notifications:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:n12",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Header */} <div> <h1 className=\"text-3xl font-...",
+          "location": {
+            "path": "src/features/dashboard/components/Notifications.tsx",
+            "start_line": 91,
+            "end_line": 292
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> {/* Header */} <div> <h1 className=\"text-3xl font-bold text-gray-900 mb-2\">{t('title')}</h1> <p className=\"text-gray-600\">{t('subtitle')}</p> </div> {/* Active Alerts Section */} <div> <h2 className=\"text-lg font-semibold text-gray-900 mb-4\">{t('activeAlerts')}</h2> {isLoadingRisks ? ( <div className=\"flex justify-center p-8\"> <Spinner color=\"danger\" /> </div> ) : riskAlerts.length > 0 ? ( <div className=\"space-y-4\"> {riskAler...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8388dcd48aa383d3:e1",
+          "source": "flow-8388dcd48aa383d3:n1",
+          "target": "flow-8388dcd48aa383d3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e2",
+          "source": "flow-8388dcd48aa383d3:n2",
+          "target": "flow-8388dcd48aa383d3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e3",
+          "source": "flow-8388dcd48aa383d3:n3",
+          "target": "flow-8388dcd48aa383d3:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e4",
+          "source": "flow-8388dcd48aa383d3:n4",
+          "target": "flow-8388dcd48aa383d3:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e5",
+          "source": "flow-8388dcd48aa383d3:n5",
+          "target": "flow-8388dcd48aa383d3:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e6",
+          "source": "flow-8388dcd48aa383d3:n6",
+          "target": "flow-8388dcd48aa383d3:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e7",
+          "source": "flow-8388dcd48aa383d3:n7",
+          "target": "flow-8388dcd48aa383d3:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e8",
+          "source": "flow-8388dcd48aa383d3:n8",
+          "target": "flow-8388dcd48aa383d3:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e9",
+          "source": "flow-8388dcd48aa383d3:n9",
+          "target": "flow-8388dcd48aa383d3:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e10",
+          "source": "flow-8388dcd48aa383d3:n10",
+          "target": "flow-8388dcd48aa383d3:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8388dcd48aa383d3:e11",
+          "source": "flow-8388dcd48aa383d3:n11",
+          "target": "flow-8388dcd48aa383d3:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

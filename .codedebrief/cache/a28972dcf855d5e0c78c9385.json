@@ -1,0 +1,15 @@
+{
+  "path": "src/features/chat/hooks/useChatStore.ts",
+  "language": "typescript",
+  "sha256": "0cf272620e3780a9b6bf8aef362b30c265c68caee77bda24f9572e4caa8b753d",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/types/chat.ts",
+    "src/features/chat/services/pouchdb.ts",
+    "src/features/chat/services/syncManager.ts",
+    "src/features/chat/services/mentor-client.ts",
+    "src/features/chat/types/mentor.ts"
+  ]
+}

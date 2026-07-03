@@ -1,0 +1,347 @@
+{
+  "path": "src/features/landing/components/ValuesSection.tsx",
+  "language": "typescript",
+  "sha256": "b8f795266df85b127d1e26fd3dcd761efbd363739ce9020e171c8409e0ebf288",
+  "flows": [
+    {
+      "id": "flow-9e6001c3ba10ebc4",
+      "name": "ValueCard",
+      "symbol": "src.features.landing.components.ValuesSection:ValueCard",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/landing/components/ValuesSection.tsx",
+        "start_line": 7,
+        "end_line": 15
+      },
+      "nodes": [
+        {
+          "id": "flow-9e6001c3ba10ebc4:n1",
+          "kind": "entry",
+          "label": "Component: ValueCard",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 7,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.ValuesSection:ValueCard",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9e6001c3ba10ebc4:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className={`card-hover gentle-shadow rounded-3xl p-8 animate-fade-in ${delay} bg-[#F5F2EC]/50`}> <div cla...",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 7,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className={`card-hover gentle-shadow rounded-3xl p-8 animate-fade-in ${delay} bg-[#F5F2EC]/50`}> <div className=\"w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-[#A8B5A0]/40 text-[#7B8F71]\"> {icon} </div> <h3 className=\"font-serif text-lg font-bold mb-2 text-[#4A4540]\">{title}</h3> <p className=\"opacity-70 leading-relaxed text-sm text-[#4A4540]\">{desc}</p> </div> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-9e6001c3ba10ebc4:e1",
+          "source": "flow-9e6001c3ba10ebc4:n1",
+          "target": "flow-9e6001c3ba10ebc4:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-52e1f8446b8795e7",
+      "name": "SubSection",
+      "symbol": "src.features.landing.components.ValuesSection:SubSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/landing/components/ValuesSection.tsx",
+        "start_line": 17,
+        "end_line": 27
+      },
+      "nodes": [
+        {
+          "id": "flow-52e1f8446b8795e7:n1",
+          "kind": "entry",
+          "label": "Component: SubSection",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 17,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.ValuesSection:SubSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-52e1f8446b8795e7:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className={`${padding}`}> <div className=\"text-center mb-12\"> {eyebrow && <p className=\"text-sm font-medi...",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 17,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className={`${padding}`}> <div className=\"text-center mb-12\"> {eyebrow && <p className=\"text-sm font-medium tracking-widest uppercase mb-4 opacity-70 text-[#4A4540]\">{eyebrow}</p>} <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-6 text-[#4A4540]\">{title}</h2> </div> <div className=\"max-w-3xl mx-auto gentle-shadow rounded-3xl p-10 md:p-12 bg-[#F5F2EC]/50\"> {children} </div> </div> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-52e1f8446b8795e7:e1",
+          "source": "flow-52e1f8446b8795e7:n1",
+          "target": "flow-52e1f8446b8795e7:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-269fba5cf3c22f55",
+      "name": "ValuesSection",
+      "symbol": "src.features.landing.components.ValuesSection:ValuesSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/ValuesSection.tsx",
+        "start_line": 29,
+        "end_line": 168
+      },
+      "nodes": [
+        {
+          "id": "flow-269fba5cf3c22f55:n1",
+          "kind": "entry",
+          "label": "Component: ValuesSection",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 29,
+            "end_line": 168
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.ValuesSection:ValuesSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-269fba5cf3c22f55:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('SafeMentor.Values');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.ValuesSection:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-269fba5cf3c22f55:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 32,
+            "end_line": 167
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section id=\"values\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"max-w-6xl mx-auto\"> {/* Intro */} {/* Intro */} {/* Safety - Intro & Cards */} <div className=\"py-20\"> <div className=\"text-center mb-12\"> <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-6 text-[#4A4540]\">{t('offline.title')}</h2> <p className=\"max-w-3xl mx-auto opacity-80 text-lg leading-relaxed text-[#4A4540]\">{t('offline.description')}</p> </div> {/* Core Values Ca...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "(t.raw('safety.detect.list') as string[]).map",
+              "t.raw",
+              "t",
+              "(t.raw('safety.see.list') as string[]).map",
+              "t.raw",
+              "t",
+              "(t.raw('safety.notSee.list') as string[]).map",
+              "t.raw",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "Array.isArray",
+              "t.raw",
+              "(t.raw('standards.list') as Array<{title: string, desc: string}>).map",
+              "t.raw",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:(t.raw('safety.detect.list') as string[]).map",
+              "src.features.landing.components.ValuesSection:t.raw",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:(t.raw('safety.see.list') as string[]).map",
+              "src.features.landing.components.ValuesSection:t.raw",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:(t.raw('safety.notSee.list') as string[]).map",
+              "src.features.landing.components.ValuesSection:t.raw",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:Array.isArray",
+              "src.features.landing.components.ValuesSection:t.raw",
+              "src.features.landing.components.ValuesSection:(t.raw('standards.list') as Array<{title: string, desc: string}>).map",
+              "src.features.landing.components.ValuesSection:t.raw",
+              "src.features.landing.components.ValuesSection:t",
+              "src.features.landing.components.ValuesSection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-269fba5cf3c22f55:n4",
+          "kind": "terminal",
+          "label": "Return ( <section id=\"values\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"ma...",
+          "location": {
+            "path": "src/features/landing/components/ValuesSection.tsx",
+            "start_line": 32,
+            "end_line": 167
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section id=\"values\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#FDFBF8]\"> <div className=\"max-w-6xl mx-auto\"> {/* Intro */} {/* Intro */} {/* Safety - Intro & Cards */} <div className=\"py-20\"> <div className=\"text-center mb-12\"> <h2 className=\"font-serif text-3xl md:text-4xl font-bold mb-6 text-[#4A4540]\">{t('offline.title')}</h2> <p className=\"max-w-3xl mx-auto opacity-80 text-lg leading-relaxed text-[#4A4540]\">{t('offline.description')}</p> </div> {/* Core Values Ca...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-269fba5cf3c22f55:e1",
+          "source": "flow-269fba5cf3c22f55:n1",
+          "target": "flow-269fba5cf3c22f55:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-269fba5cf3c22f55:e2",
+          "source": "flow-269fba5cf3c22f55:n2",
+          "target": "flow-269fba5cf3c22f55:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-269fba5cf3c22f55:e3",
+          "source": "flow-269fba5cf3c22f55:n3",
+          "target": "flow-269fba5cf3c22f55:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/SafeMentorIcons.tsx"
+  ]
+}

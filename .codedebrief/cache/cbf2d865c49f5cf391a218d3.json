@@ -1,0 +1,613 @@
+{
+  "path": "src/features/chat/ChatClient.tsx",
+  "language": "typescript",
+  "sha256": "df880c67262752412b4be04ec706641f6626ef045f9b4445baf35fb67c30dd42",
+  "flows": [
+    {
+      "id": "flow-70018b5993f7b50b",
+      "name": "ChatClient",
+      "symbol": "src.features.chat.ChatClient:ChatClient",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/ChatClient.tsx",
+        "start_line": 15,
+        "end_line": 124
+      },
+      "nodes": [
+        {
+          "id": "flow-70018b5993f7b50b:n1",
+          "kind": "entry",
+          "label": "Component: ChatClient",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 15,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.ChatClient:ChatClient",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n2",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter();",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentLocale = useLocale();",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [mounted, setMounted] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [currentView, setCurrentView] = useState('hello');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n7",
+          "kind": "action",
+          "label": "// null = loading",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "// null = loading",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n8",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [countdown, setCountdown] = useState(10);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n9",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 23,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { setMounted(true); const checkAuth = async () => { const supabase = createClient(); const { data: { session } } = await supabase.auth.getSession(); setIsAuthenticated(!!session); }; checkAuth(); }, []);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n10",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 35,
+            "end_line": 50
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { if (isAuthenticated === false) { const timer = setInterval(() => { setCountdown((prev) => { if (prev <= 1) { clearInterval(timer); router.push('/'); return 0; } return prev - 1; }); }, 1000); return () => clearInterval(timer); } }, [isAuthenticated, router]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n11",
+          "kind": "decision",
+          "label": "!mounted",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 52,
+            "end_line": 52
+          },
+          "evidence": "VERIFIED",
+          "detail": "!mounted",
+          "metadata": {
+            "condition": "!mounted",
+            "domain": "",
+            "values": [],
+            "subject": "mounted",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n12",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 52,
+            "end_line": 52
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n13",
+          "kind": "decision",
+          "label": "isAuthenticated === false",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 54,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "isAuthenticated === false",
+          "metadata": {
+            "condition": "isAuthenticated === false",
+            "domain": "",
+            "values": [
+              "false"
+            ],
+            "subject": "isAuthenticated",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n14",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21] p-6 text-center...",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 55,
+            "end_line": 84
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21] p-6 text-center space-y-6\"> <div className=\"space-y-2\"> <h1 className=\"text-2xl font-bold text-red-500\"> I am very sorry, but you are not logged </h1> <p className=\"text-lg text-default-600\"> Redirecting to Home page in {countdown} seconds </p> </div> <div className=\"flex flex-col sm:flex-row gap-3\"> <Button color=\"primary\" variant=\"solid\" onPress={() => router.push(`/${currentLocale}/login`)...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n15",
+          "kind": "action",
+          "label": "// Show loading state while checking auth",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 87,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Show loading state while checking auth",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n16",
+          "kind": "decision",
+          "label": "isAuthenticated === null",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 88,
+            "end_line": 88
+          },
+          "evidence": "VERIFIED",
+          "detail": "isAuthenticated === null",
+          "metadata": {
+            "condition": "isAuthenticated === null",
+            "domain": "",
+            "values": [
+              "null"
+            ],
+            "subject": "isAuthenticated",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n17",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21]\"> <div className=\"animat...",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 89,
+            "end_line": 93
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex items-center justify-center h-dvh bg-[#f0f2f5] dark:bg-[#111b21]\"> <div className=\"animate-pulse text-default-500\">Checking authentication...</div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n18",
+          "kind": "action",
+          "label": "Set renderContent",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 96,
+            "end_line": 111
+          },
+          "evidence": "VERIFIED",
+          "detail": "const renderContent = () => { switch (currentView) { case 'hello': return <WelcomeSection onNavigate={setCurrentView} />; case 'chat': return <ChatScreen onNavigate={setCurrentView} />; case 'help': return <HelpScreen onNavigate={setCurrentView} />; case 'exit': return <ExitScreen onNavigate={setCurrentView} />; case 'profile': return <ProfileSection />; default: return <WelcomeSection onNavigate={setCurrentView} />; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n19",
+          "kind": "call",
+          "label": "Call renderContent()",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 113,
+            "end_line": 123
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden\"> <main className=\"flex-1 overflow-hidden relative\"> {renderContent()} </main> {currentView !== 'hello' && currentView !== 'exit' && ( <ChatFooter currentView={currentView} onViewChange={setCurrentView} /> )} </div> );",
+          "metadata": {
+            "calls": [
+              "renderContent"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.ChatClient:renderContent"
+            ]
+          }
+        },
+        {
+          "id": "flow-70018b5993f7b50b:n20",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden\"> <main className=\"flex-1 o...",
+          "location": {
+            "path": "src/features/chat/ChatClient.tsx",
+            "start_line": 113,
+            "end_line": 123
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#111b21] overflow-hidden\"> <main className=\"flex-1 overflow-hidden relative\"> {renderContent()} </main> {currentView !== 'hello' && currentView !== 'exit' && ( <ChatFooter currentView={currentView} onViewChange={setCurrentView} /> )} </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-70018b5993f7b50b:e1",
+          "source": "flow-70018b5993f7b50b:n1",
+          "target": "flow-70018b5993f7b50b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e2",
+          "source": "flow-70018b5993f7b50b:n2",
+          "target": "flow-70018b5993f7b50b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e3",
+          "source": "flow-70018b5993f7b50b:n3",
+          "target": "flow-70018b5993f7b50b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e4",
+          "source": "flow-70018b5993f7b50b:n4",
+          "target": "flow-70018b5993f7b50b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e5",
+          "source": "flow-70018b5993f7b50b:n5",
+          "target": "flow-70018b5993f7b50b:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e6",
+          "source": "flow-70018b5993f7b50b:n6",
+          "target": "flow-70018b5993f7b50b:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e7",
+          "source": "flow-70018b5993f7b50b:n7",
+          "target": "flow-70018b5993f7b50b:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e8",
+          "source": "flow-70018b5993f7b50b:n8",
+          "target": "flow-70018b5993f7b50b:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e9",
+          "source": "flow-70018b5993f7b50b:n9",
+          "target": "flow-70018b5993f7b50b:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e10",
+          "source": "flow-70018b5993f7b50b:n10",
+          "target": "flow-70018b5993f7b50b:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e11",
+          "source": "flow-70018b5993f7b50b:n11",
+          "target": "flow-70018b5993f7b50b:n12",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e12",
+          "source": "flow-70018b5993f7b50b:n11",
+          "target": "flow-70018b5993f7b50b:n13",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e13",
+          "source": "flow-70018b5993f7b50b:n13",
+          "target": "flow-70018b5993f7b50b:n14",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e14",
+          "source": "flow-70018b5993f7b50b:n13",
+          "target": "flow-70018b5993f7b50b:n15",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e15",
+          "source": "flow-70018b5993f7b50b:n15",
+          "target": "flow-70018b5993f7b50b:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e16",
+          "source": "flow-70018b5993f7b50b:n16",
+          "target": "flow-70018b5993f7b50b:n17",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e17",
+          "source": "flow-70018b5993f7b50b:n16",
+          "target": "flow-70018b5993f7b50b:n18",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e18",
+          "source": "flow-70018b5993f7b50b:n18",
+          "target": "flow-70018b5993f7b50b:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-70018b5993f7b50b:e19",
+          "source": "flow-70018b5993f7b50b:n19",
+          "target": "flow-70018b5993f7b50b:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/components/ChatFooter.tsx",
+    "src/features/chat/components/screens/WelcomeSection.tsx",
+    "src/features/chat/components/screens/ProfileSection.tsx",
+    "src/features/chat/components/screens/ChatScreen.tsx",
+    "src/features/chat/components/screens/HelpScreen.tsx",
+    "src/features/chat/components/screens/ExitScreen.tsx"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ParentSafetyNotifications.tsx",
+  "language": "typescript",
+  "sha256": "95e0ea24cd959143640d0ec7fdeedf5ecca406e44e73c21bb1243c35a66b7bf9",
+  "flows": [
+    {
+      "id": "flow-d98ece8b43f15432",
+      "name": "ParentSafetyNotifications",
+      "symbol": "src.features.profile.components.ParentSafetyNotifications:ParentSafetyNotifications",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentSafetyNotifications.tsx",
+        "start_line": 3,
+        "end_line": 164
+      },
+      "nodes": [
+        {
+          "id": "flow-d98ece8b43f15432:n1",
+          "kind": "entry",
+          "label": "Component: ParentSafetyNotifications",
+          "location": {
+            "path": "src/features/profile/components/ParentSafetyNotifications.tsx",
+            "start_line": 3,
+            "end_line": 164
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentSafetyNotifications:ParentSafetyNotifications",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d98ece8b43f15432:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-md mx-auto\"> <h1 class...",
+          "location": {
+            "path": "src/features/profile/components/ParentSafetyNotifications.tsx",
+            "start_line": 4,
+            "end_line": 163
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-white p-6 font-sans border-2 border-black max-w-md mx-auto\"> <h1 className=\"text-2xl font-bold mb-6 border-b-2 border-black pb-2\">SAFETY NOTIFICATIONS</h1> <div className=\"mb-6\"> <h2 className=\"text-xl font-bold mb-4\">ACTIVE ALERTS</h2> <div className=\"border-2 border-black p-4 mb-4\"> <div className=\"flex justify-between items-start mb-2\"> <span className=\"font-bold bg-black text-white px-2 py-0.5 text-sm\">RED FLAG</span> <span className=\"text-sm...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d98ece8b43f15432:e1",
+          "source": "flow-d98ece8b43f15432:n1",
+          "target": "flow-d98ece8b43f15432:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

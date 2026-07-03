@@ -1,0 +1,120 @@
+{
+  "path": "src/features/dashboard/sections/PrivacySection.tsx",
+  "language": "typescript",
+  "sha256": "bd15bd246b3e6c9bd33bb63386e42a8b2985524038a633f589fa8d6b6550700a",
+  "flows": [
+    {
+      "id": "flow-d423d9c74b072b6d",
+      "name": "PrivacySection",
+      "symbol": "src.features.dashboard.sections.PrivacySection:PrivacySection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/sections/PrivacySection.tsx",
+        "start_line": 12,
+        "end_line": 66
+      },
+      "nodes": [
+        {
+          "id": "flow-d423d9c74b072b6d:n1",
+          "kind": "entry",
+          "label": "Component: PrivacySection",
+          "location": {
+            "path": "src/features/dashboard/sections/PrivacySection.tsx",
+            "start_line": 12,
+            "end_line": 66
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.sections.PrivacySection:PrivacySection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d423d9c74b072b6d:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/sections/PrivacySection.tsx",
+            "start_line": 19,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('sections.privacySecurity') || t('sections.privacy')}</h2> <Card className=\"p-6 border-none bg-white/70 backdrop-blur-md\"> <CardHeader className=\"flex gap-3 pb-2\"> <Shield className=\"text-danger\" /> <p className=\"text-lg font-bold\">{t('sections.privacySecurity')}</p> </CardHeader> <Divider /> <CardBody className=\"space-y-6 pt-4\"> <p className=\"text-default-500\">{t('content.privacyDes...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "new Date(profile.last_password_change).toLocaleString",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:new Date(profile.last_password_change).toLocaleString",
+              "src.features.dashboard.sections.PrivacySection:t",
+              "src.features.dashboard.sections.PrivacySection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-d423d9c74b072b6d:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('secti...",
+          "location": {
+            "path": "src/features/dashboard/sections/PrivacySection.tsx",
+            "start_line": 19,
+            "end_line": 65
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500 pb-20\"> <h2 className=\"text-2xl font-bold\">{t('sections.privacySecurity') || t('sections.privacy')}</h2> <Card className=\"p-6 border-none bg-white/70 backdrop-blur-md\"> <CardHeader className=\"flex gap-3 pb-2\"> <Shield className=\"text-danger\" /> <p className=\"text-lg font-bold\">{t('sections.privacySecurity')}</p> </CardHeader> <Divider /> <CardBody className=\"space-y-6 pt-4\"> <p className=\"text-default-500\">{t('content.privacyDes...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d423d9c74b072b6d:e1",
+          "source": "flow-d423d9c74b072b6d:n1",
+          "target": "flow-d423d9c74b072b6d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d423d9c74b072b6d:e2",
+          "source": "flow-d423d9c74b072b6d:n2",
+          "target": "flow-d423d9c74b072b6d:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

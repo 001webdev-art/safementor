@@ -1,0 +1,852 @@
+{
+  "cache_version": "7",
+  "artifact_format_version": "2",
+  "config_hash": "fbff93aa052b4cc2a69089c9ed579729",
+  "generated_at": "2026-06-23T07:42:49.790167+00:00",
+  "files": {
+    "create_dirs.py": {
+      "sha256": "6e0ad2c448f10e93c2a72c7736de96f6e08f7638e3f7526001fce82162db0566",
+      "cache": "8cd20f03672314c38716b736.json"
+    },
+    "eslint.config.mjs": {
+      "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+      "cache": "9601a8f6c734c2001be34a23.json"
+    },
+    "flutter_chat/flutter_chat/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java": {
+      "sha256": "ac951e151f6be1ffef2ab1800ecd1e5b9a288a2aa95242aa0c9ddd0821a00a72",
+      "cache": "d982afdd29a4917f9d62822b.json"
+    },
+    "flutter_chat/flutter_chat/ios/Flutter/ephemeral/flutter_lldb_helper.py": {
+      "sha256": "05cfe3977fdee593efad2049a4f62d374e55c69cedc8aabeee5566b37acb8384",
+      "cache": "cb1b70790908a5904548e507.json"
+    },
+    "flutter_chat/flutter_chat/ios/Runner/GeneratedPluginRegistrant.h": {
+      "sha256": "a5f88cc6415d2e639d2cb549348b84e02a7fdd0261603b0063abef6fa11f075a",
+      "cache": "378751644bf8afa1803d517c.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/ios/Runner/GeneratedPluginRegistrant.h:14 near ERROR"
+    },
+    "flutter_chat/flutter_chat/ios/Runner/Runner-Bridging-Header.h": {
+      "sha256": "efe657d8b27f7f8595a0d416bffb33fe7d93bd2869d81f7353b556c439d7a1a7",
+      "cache": "883e30cd4a4f639532726a08.json"
+    },
+    "flutter_chat/flutter_chat/linux/flutter/generated_plugin_registrant.cc": {
+      "sha256": "7861b227b10a10cc1d7643f82a246b7db35b503f2d9ff1d3c906136e6c260dce",
+      "cache": "01edb6284936293c3da135e3.json"
+    },
+    "flutter_chat/flutter_chat/linux/flutter/generated_plugin_registrant.h": {
+      "sha256": "00f93bb5b1faefdede8f6065df327522900fb0b8efee86bacf424fd947ed14bb",
+      "cache": "ccb0b88af06ece912aa81bd7.json"
+    },
+    "flutter_chat/flutter_chat/linux/runner/main.cc": {
+      "sha256": "905b4dfa4eab584c1eb6244899b7d5ef56d0bceaf3bffb5ea335ed7e0ba3c549",
+      "cache": "fe980966da4c18d80fd67172.json"
+    },
+    "flutter_chat/flutter_chat/linux/runner/my_application.cc": {
+      "sha256": "85c1baaae15227316684497ad62a972e072a00144f0af2c728f886e061c1d504",
+      "cache": "4864ffc30cebc55fe88940da.json"
+    },
+    "flutter_chat/flutter_chat/linux/runner/my_application.h": {
+      "sha256": "880393cb82d7feaaa95d9acd6c2317749afae0e17ea5f5ee44b456bc081b5987",
+      "cache": "50c1bc7a29d3499c9b55bc4c.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/linux/runner/my_application.h:18 near ;"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h": {
+      "sha256": "e88a83b20f44a2454594d0bd6d9ac158a9beb30b40bbce10ddbef482053d9c7f",
+      "cache": "615def35c9ae46f1aa03eb4a.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/binary_messenger_impl.h:19 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/byte_buffer_streams.h": {
+      "sha256": "b6cf6e45871ab2fac6ba6f50fefc68b4bd377c16345ac06f8d196aa2800f7b57",
+      "cache": "5258db9bd682398acb49786a.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/byte_buffer_streams.h:19 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc": {
+      "sha256": "3d6157197edfe8996358739a2adcfb25dc8fa5786571ce9e5d60d2a42943e1c8",
+      "cache": "7fc932f9ef50fe51611c8502.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/engine_method_result.cc": {
+      "sha256": "53794963d2397e381492b04298c6b8b31e2243f9e6fb2c4153689640f50ef4c8",
+      "cache": "ba8e847de1e4d9dd1bd362c0.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc": {
+      "sha256": "68c5c465429594be184b81b403d91cc5c460b75b0ee0ffa880d3479884e22d1d",
+      "cache": "bd0782f5754e452ee6038656.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc": {
+      "sha256": "ea67ebea6a75638512d39d09160a8ec3fe1d66bee7212146457d45cfda74f7db",
+      "cache": "e867a4113cbf3ff2b0097e76.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h": {
+      "sha256": "2b483d016862c88e403137c77e28cb290213901b806670b970b9fb5606d3d25d",
+      "cache": "ce28f6afd8419cb5bbfaf30f.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/basic_message_channel.h:24 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h": {
+      "sha256": "a9c148126433a73cf45bee50a830047f5c54cbe9f97e6d0ff1236691246f7964",
+      "cache": "75bd903f28eec1cd9898b1b7.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/binary_messenger.h:17 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/byte_streams.h": {
+      "sha256": "5b4852d2dc1bfbe58187d9bc262a01042845510c7029d044b64d71309b128e83",
+      "cache": "4312c629bbf33765c8c7ca8c.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/byte_streams.h:16 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/dart_project.h": {
+      "sha256": "21acdafdd7a339c9bd5d9eb234b3413f973a231b61a3cd3656767542f61f071b",
+      "cache": "28696a71d7ce4f7f3dd628c4.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/dart_project.h:5 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/encodable_value.h": {
+      "sha256": "2672440b287ebf0551a4475a54bc0e8f888a1c8be556bfcd9f4b3d9c15e1fd37",
+      "cache": "75edb7de0a27064d935c0c03.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/encodable_value.h:63 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/engine_method_result.h": {
+      "sha256": "3300d3fe6ac2282de919076e17dfad9c014832e8ce1fd0794897bdfad60bccfd",
+      "cache": "da565a84f281c7c3e56b2599.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/engine_method_result.h:28 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_channel.h": {
+      "sha256": "eaf20bae4076a3645de7fa4f0d6803d3599c43983cdb4197923a8bd0bfa60daf",
+      "cache": "0badc234d47e87cfa5f4c8d7.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_channel.h:32 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_sink.h": {
+      "sha256": "206eefcdc44c679b3944eccecfab55817b681ee01eb2876744c92dcb4befd5cc",
+      "cache": "221d14f001f5d9139f949ad4.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_sink.h:14 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_stream_handler.h": {
+      "sha256": "6500dc235b0756f316794d31409894b95e0a3932fd0590ed011522e1017814b9",
+      "cache": "eceaaf2969fde75316003543.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_stream_handler.h:17 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_stream_handler_functions.h": {
+      "sha256": "14eb1da5c1b8dce313d363bddd560c4db1f3dbcb43bb91c8a11889e51f531de2",
+      "cache": "6e95243b94ef736bb438592a.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/event_stream_handler_functions.h:19 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_engine.h": {
+      "sha256": "bd057a1026c24054942fdc20286df172f06b79cccf44e2006f0e38efe7707fd3",
+      "cache": "0679652a4d9167b227123c6f.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_engine.h:28 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_view.h": {
+      "sha256": "2785b219b1f4bb430bd97b8737e7511da2d54efaa163336f2323d4ac58384fca",
+      "cache": "ea65c098f4323e4c9b263197.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_view.h:18 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_view_controller.h": {
+      "sha256": "f8e58f453c1af8892e452d259c6a9405b7847e2b49dc95c6dcdf883f6d7f7a9f",
+      "cache": "2a6f85ba239c4c067ddca025.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/flutter_view_controller.h:33 near )"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h": {
+      "sha256": "3186a27f7d5073bb52f3ed2e1ad1f0d5d23c5cffc0bdebdf833354470bf232f1",
+      "cache": "bc22a3749b6d875263f691db.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/message_codec.h:16 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h": {
+      "sha256": "951b7bb05c0d7335d1d8929fce451fe4a5815cd83b9bb6f7fb70f0080c4215e9",
+      "cache": "2f1f5dcdacba4218d042f42c.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_call.h:17 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h": {
+      "sha256": "560bd71ef4c34b302f32747cdbc42f27db0f3310ba9af3837bae0b41b06ff87b",
+      "cache": "8831f0438d9bb93cfc8fa159.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_channel.h:26 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h": {
+      "sha256": "361e3c353d2f32b5781375b5bc6a930da994aa4ac5c86f27bd95db302d6cd8f4",
+      "cache": "c97418067bc4897db49bb376.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_codec.h:19 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result.h": {
+      "sha256": "906538745431284e00f2857ddff03666fd61422f704518baabb860d75df4fa81",
+      "cache": "d8a8ef08e75edc5575f02915.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result.h:16 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result_functions.h": {
+      "sha256": "ec341cf21ccd93b04725a564d2a9ed0d05aac088e1fe153de2b529bb2c061dd4",
+      "cache": "fb15626baf46fcda492ef807.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/method_result_functions.h:19 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registrar.h": {
+      "sha256": "ef4be66c6da2efa835e6cfdfcde3b09e8ffa714f7579783cf470c0e95744cb69",
+      "cache": "5f488e370d0389377b03700f.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registrar.h:33 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registrar_windows.h": {
+      "sha256": "4bbf64581e6a84586b7896ba5b845b222a71946b5369340525623b638eb73c44",
+      "cache": "d18dbd0f16900524e8eb55d2.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registrar_windows.h:23 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registry.h": {
+      "sha256": "45ca53f15f1e7bd5a41e9358f586c5fa76aa2ef39b5383f38086dbacf43c50a3",
+      "cache": "2d2cef338b44168c7fc1243e.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/plugin_registry.h:21 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_codec_serializer.h": {
+      "sha256": "eb20d05f9bf201125fea8332bd1216f773976ad4b2c2e0d0bf8931f2bded68c2",
+      "cache": "dbb6ecae436737660a6b6083.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_codec_serializer.h:20 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_message_codec.h": {
+      "sha256": "178070c1353c533f7ab082ddd4018923629e345963a72d9ffab71d555b17d732",
+      "cache": "19fc27b3cf888963817fc356.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_message_codec.h:18 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h": {
+      "sha256": "de3ee98c8f1d13a5685f442914caa8820c024959419bc70049484c8e54dd10be",
+      "cache": "ca3a2d2925f3eedaa7bab1b0.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/standard_method_codec.h:18 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/texture_registrar.h": {
+      "sha256": "5083efbb90d1c0999a4a64330880c08d0e3d9f354cc6ace04ab332a79cd5c2df",
+      "cache": "32067f270e01597ff2277620.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/include/flutter/texture_registrar.h:20 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc": {
+      "sha256": "1e1a5242ac2dbdebb2e3da99bb34d5fd9beb003c8621e1a155931b3342e7d7a0",
+      "cache": "c88fe7b1631f45121de29ce8.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/standard_codec.cc": {
+      "sha256": "3d75b7f17d482e0047672ea5e3cb7adf309976e7877fd3c5cc04d293ba671641",
+      "cache": "d3b91195fbdd0626128fa8f9.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/texture_registrar_impl.h": {
+      "sha256": "b61f467d683d8c43f9bfb59da797f23b33e397398e31b9960b4bd1751e6f5d41",
+      "cache": "24e627d2b41aaa88578ca02a.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/texture_registrar_impl.h:14 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_export.h": {
+      "sha256": "dc37c1d36f5410374dc93c1780809ff03e456cbcf0efe2d07205f3e541e29cdb",
+      "cache": "8d10e76d8018cb19ffd13b63.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_messenger.h": {
+      "sha256": "0bc7adeb55fe45c555135b17a02f9d357d4006658df633873d705ad253599619",
+      "cache": "12cde087c9d05bcdfa538fc9.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_messenger.h:55 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_plugin_registrar.h": {
+      "sha256": "0c39b36d8b0ff7d307afa58c97f9c4607d9e8673b2f85969ce2a0bf3e50532b8",
+      "cache": "7de2483073d9751cffb13bff.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_plugin_registrar.h:27 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_texture_registrar.h": {
+      "sha256": "f5ca8a82f76e5de09d5f9a68599cb4baed2cd866e98af8c6ec45f14f66a87e96",
+      "cache": "8b34a3c12db8e75b84e605e6.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_texture_registrar.h:161 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_windows.h": {
+      "sha256": "5ded0ea1a99fc330fddb63d607ebca189901d32d9a602c2b8756b337f26603bf",
+      "cache": "7f00776b93ae971082847532.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/ephemeral/flutter_windows.h:121 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.cc": {
+      "sha256": "82e02567f2faf5e732dc92a2fb0d01104f7ba8c48973f8cfd41a860b4fac3f3b",
+      "cache": "ad4733dddafa821e97351b1a.json"
+    },
+    "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.h": {
+      "sha256": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a",
+      "cache": "a81c99c8f669a53094c953a8.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.h:13 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/runner/flutter_window.cpp": {
+      "sha256": "d615eedc06ae37321e59c2c00c7687d1887dcd97904eb7225fafd8dcb5b83da6",
+      "cache": "611e82c5a29aa8aec8f85120.json"
+    },
+    "flutter_chat/flutter_chat/windows/runner/flutter_window.h": {
+      "sha256": "0252b804f5da380c7709cbe1daff2b8d18daf6c49d7e6dd43e5af3c99c19f56c",
+      "cache": "63d47c6dd2b1358b6891eb97.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/runner/flutter_window.h:12 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/runner/main.cpp": {
+      "sha256": "db78a5c2afe02695b05b1acf7eb22e34d9a9dab82ce4131e34ded141d470062a",
+      "cache": "c152537af3afcfb912aa1c67.json"
+    },
+    "flutter_chat/flutter_chat/windows/runner/resource.h": {
+      "sha256": "d0e8bf7835468b4b6b1f8f0747f2e8f25c19841f2df2ac60aaa584ddae3aa7c6",
+      "cache": "fc129d77bf601b51bf5d0fd6.json"
+    },
+    "flutter_chat/flutter_chat/windows/runner/utils.cpp": {
+      "sha256": "fbb18524c22593d0ce7869b0733e237be38e668fe045e3023bcf2d0b31784fa3",
+      "cache": "e564560fd4e718b4683cc833.json"
+    },
+    "flutter_chat/flutter_chat/windows/runner/utils.h": {
+      "sha256": "832e246b6758253f89016fb0374b30791242e97ad950d27fc678b3d9feacfdc4",
+      "cache": "84d58de95bfcf414ef39ac38.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/runner/utils.h:13 near ERROR"
+    },
+    "flutter_chat/flutter_chat/windows/runner/win32_window.cpp": {
+      "sha256": "4e4f4dcf8e86ea6e097562cb3476039e693449bd8045367538afee579c017511",
+      "cache": "787a93aecc575930c05f35ce.json"
+    },
+    "flutter_chat/flutter_chat/windows/runner/win32_window.h": {
+      "sha256": "d154cf89ba85f820631a9b5bedacbe64fc5815e428fe6bc5da579ce649f69841",
+      "cache": "b7b380892a2b333fa5068a47.json",
+      "skip_reason": "c parse error in flutter_chat/flutter_chat/windows/runner/win32_window.h:1 near ERROR"
+    },
+    "next.config.js": {
+      "sha256": "a150af5cf42d3637389245751ce002aa9b21c0caed0ee556a701e20c1dd3cfc2",
+      "cache": "882b2c04b01b2e8b2cdcf181.json"
+    },
+    "postcss.config.js": {
+      "sha256": "7fc3f6a546b9ea376a318b3e92f494bc730750648a9126751d7d61b1733f2079",
+      "cache": "05ed1c7f99e45b4857081155.json"
+    },
+    "postcss.config.mjs": {
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde",
+      "cache": "ee58ff1e81b4d0efca6aa634.json"
+    },
+    "public/sw-chat.js": {
+      "sha256": "9a0333c170882be03cf57e50ae49bc2eadd9fa1846b793367e154e452d8f4fdb",
+      "cache": "c3e15e028eccca9427e6b385.json"
+    },
+    "public/workbox-4754cb34.js": {
+      "sha256": "631862d78caf0d162624ee38078980d8e9edf2aa5bf8e2cb51fc3ba4c4da0526",
+      "cache": "20412c99a36bab315c4b1240.json"
+    },
+    "src/app/[locale]/[...rest]/page.tsx": {
+      "sha256": "8243ac59ddc036b45891ef0b6959cda2c8f5f1dd7b584563d8754ef4e3883515",
+      "cache": "d18a9160af7d5c8ba904b787.json"
+    },
+    "src/app/[locale]/access/page.tsx": {
+      "sha256": "067ff16ef1caa93144b20fdcd18f4d37f2ab5f27de1d2f415bcac341c74360d2",
+      "cache": "e44b90fc30721e8c7af056a4.json"
+    },
+    "src/app/[locale]/auth/callback/route.ts": {
+      "sha256": "87e0b439ae65ed1b7ff501ba61aad69248e7167bff2db89d82e865f745d3949d",
+      "cache": "21d179307c5edb780c847add.json"
+    },
+    "src/app/[locale]/auth/verified/page.tsx": {
+      "sha256": "6bbe7f9654e2670acd351c73a0812229897844f264e89e6594d2f96e8080c2f1",
+      "cache": "65039d9e77bc09d0887d1324.json"
+    },
+    "src/app/[locale]/chat/history/page.tsx": {
+      "sha256": "26e0bfa5a90d58bd4103027a53ba6a70dbf952672b3984ab466ce78ffc2507a5",
+      "cache": "57204ea6d1fabbe1eb1e9bdf.json"
+    },
+    "src/app/[locale]/chat/layout.tsx": {
+      "sha256": "fd9ef9df06a97654c3b2c5764df6a4319fe7e37df650f705bc855fe1e52786e0",
+      "cache": "be7c518c2482ade30385949b.json"
+    },
+    "src/app/[locale]/chat/manifest.json/route.ts": {
+      "sha256": "96bd0b4f474414c5a99c41c2cb1b3c6e2d89fa817d423a362e40c9d87d060032",
+      "cache": "b892d886d4379d5676376f66.json"
+    },
+    "src/app/[locale]/chat/page.tsx": {
+      "sha256": "1cec7d47878679a81a113a676a7412d89d05341c41008a1ca774b4b7f658a986",
+      "cache": "5da5f7effa0dff42c7204709.json"
+    },
+    "src/app/[locale]/dashboard/page.tsx": {
+      "sha256": "00eaba8c0435597cc99be300472f1119af97f5130330d5cfe330848ee25751be",
+      "cache": "b270a70d9df7530a0184f2e5.json"
+    },
+    "src/app/[locale]/layout.tsx": {
+      "sha256": "e7ffeeb9a544eb8da7cc156368f3b3ac4f6a06ad2b81f5ab8fb7aed5f4a4c9c8",
+      "cache": "d387de9ed27220b8f151f3de.json"
+    },
+    "src/app/[locale]/login/page.tsx": {
+      "sha256": "b13aceeb0195e331376737c59b309e8bb46d9a1d05a6f3da5c27f76088595e77",
+      "cache": "869eb45de992a1ca03768388.json"
+    },
+    "src/app/[locale]/not-found.tsx": {
+      "sha256": "b492f1dacd8c0397c2d567526b943e363a6287eb40a1cb754ea24d86aaf7bdc5",
+      "cache": "f2f9f92035a4c77a8790ed6a.json"
+    },
+    "src/app/[locale]/page.tsx": {
+      "sha256": "34ec046e97df2ae7257704637ba06c02b668b6cf3dab175a97c9e385c26b70af",
+      "cache": "60f04e167ad0f41b936cc3ff.json"
+    },
+    "src/app/[locale]/register/page.tsx": {
+      "sha256": "f466fc0ac3c5a65d62ef34dc67312ac01a0aa14e424793ad7acbf5489f2b54da",
+      "cache": "73f32efe17023db4c0a6c044.json"
+    },
+    "src/app/api.ts": {
+      "sha256": "4c9e8616f62efc15a9ffbffc677616516111f34612f00ab375b822c83c5cf030",
+      "cache": "c9d8d33769b9bea64e203ab2.json"
+    },
+    "src/app/api/access/route.ts": {
+      "sha256": "58c06fda1e20f4a773de427e4e011239f4fa8dda1d2485c76d86a02e96553362",
+      "cache": "4082278bde90d045793a58ed.json"
+    },
+    "src/app/api/chat/route.ts": {
+      "sha256": "dc2ebe15ee8ea81a8a4513c11aae59ca3a94af564b5f22b8ea18968b377b8e8f",
+      "cache": "a7bb5d29209ed018911d1531.json"
+    },
+    "src/app/layout.tsx": {
+      "sha256": "833a8d983c65b2ea6021eaa604beceec6171298f78c280edcad8c9c7ddd62c7c",
+      "cache": "29d0a55f5ca1a9951042587f.json"
+    },
+    "src/app/not-found.tsx": {
+      "sha256": "7d70301749a89064b7832520b59d4f3ca21f75120e20a1f440759bf478f5d437",
+      "cache": "f656f59519a290bb5f099f48.json"
+    },
+    "src/app/page.tsx": {
+      "sha256": "006a0a447a95f3e9ee4dca60e77db8a09eb5eb98dc65ad46f4482a237f75b6e2",
+      "cache": "73d7a23e5015801b9bcc9db6.json"
+    },
+    "src/app/utils.ts": {
+      "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "cache": "0352243692c10429e98068f2.json"
+    },
+    "src/components/index.ts": {
+      "sha256": "4b2423e4cc1d8cac01f65410c6f52b2b00dbfecce6b0ae00aa061f892f13d95d",
+      "cache": "7fd43b0b162a214d655a8176.json"
+    },
+    "src/components/layout/Header.tsx": {
+      "sha256": "32e9a9fc05c09dc22202ea95d2e9508fb8df20e1a6d4db1cb99346a3a8dd7c1b",
+      "cache": "98816301f3cd7a2c4bf2a040.json"
+    },
+    "src/components/layout/Providers.tsx": {
+      "sha256": "4fc6bc693cb8aa66cf72abec2d2ee6ac3fa397df23d17b62b66d11c50c376ac3",
+      "cache": "9063c4062405e1e4d3f8adf5.json"
+    },
+    "src/features/auth/components/AccessLegalModal.tsx": {
+      "sha256": "c487b1f3a73c50e3e48ad8a942734f8cbedcbc6f589c264381b4be4bd79ae0a6",
+      "cache": "965669acdfb40e892d58df78.json"
+    },
+    "src/features/auth/components/LoginLegalModal.tsx": {
+      "sha256": "84721b2193e107637049c74669704e1ece1c3bd6daf48fd7f4184d3ca0fa6726",
+      "cache": "d4e9c3d77ea79138a8a8bf29.json"
+    },
+    "src/features/auth/index.ts": {
+      "sha256": "7a19b502dac92d38e83eb3d0211332b5e927509061f9b878b174cc0ad7219092",
+      "cache": "c3497a24973097800fd1307c.json"
+    },
+    "src/features/chat/ChatClient.tsx": {
+      "sha256": "df880c67262752412b4be04ec706641f6626ef045f9b4445baf35fb67c30dd42",
+      "cache": "cbf2d865c49f5cf391a218d3.json"
+    },
+    "src/features/chat/components/ChatEmojiPicker.tsx": {
+      "sha256": "9158995fe8feef9cc4a6328a491a191afc8d2a09db00f59bc2c0d42ae4d8f67c",
+      "cache": "a80e84e7a48d2846e45b33ee.json"
+    },
+    "src/features/chat/components/ChatFooter.tsx": {
+      "sha256": "512f3ce729d5548b96ab44ee42445d96e79abd8d46211d370b0208f6ab021f14",
+      "cache": "4f34df884d2df0ebc1676324.json"
+    },
+    "src/features/chat/components/ChildSelector.tsx": {
+      "sha256": "d41805d9dd8b2f63b742e68b9c7d361ee465dbba3e1495f2ae5f508714cecf2b",
+      "cache": "2492671375f4e7b3e50334c0.json"
+    },
+    "src/features/chat/components/MessageBubble.tsx": {
+      "sha256": "e5115f34a18d26af85b255bfd8ada12c7aa3c246a20b44fd2963044987caddab",
+      "cache": "1b51b68e8df75295e0889127.json"
+    },
+    "src/features/chat/components/screens/ChatScreen.tsx": {
+      "sha256": "b81543ea140ad96a26a327baba36fd29c3817dc1ce080f63455da63349e2567f",
+      "cache": "e0bfc36f55ca161339ffa806.json"
+    },
+    "src/features/chat/components/screens/ExitScreen.tsx": {
+      "sha256": "207276fb48c5177ab7c3fde43c98439048f6359f884c165c05db667019019844",
+      "cache": "5f96c509ce0313dd3731cf8c.json"
+    },
+    "src/features/chat/components/screens/HelpScreen.tsx": {
+      "sha256": "bf6e360499a7a9779663361d8a2c95a49beccea2f358b2c253517b1cf460fb26",
+      "cache": "f87726f66e7149a38cb9f330.json"
+    },
+    "src/features/chat/components/screens/ProfileSection.tsx": {
+      "sha256": "15df366bdedef6f083e69e1d383989ab044ce756649b7baafc853e0c5fa6e14b",
+      "cache": "33ff193fb63315c0204d060d.json"
+    },
+    "src/features/chat/components/screens/WelcomeSection.tsx": {
+      "sha256": "626ea474d9f5643738b0ecd5ace384d11001d592001c6eb77f88cc97bb7722c2",
+      "cache": "e6e16fe62f291a97f5e97610.json"
+    },
+    "src/features/chat/contexts/ChildContext.tsx": {
+      "sha256": "15eedb0daa1db8d3b55b8c8640f2647e452e665ff6036421d6a335e73734de65",
+      "cache": "3835976c392a21b455406d5c.json"
+    },
+    "src/features/chat/history/HistoryClient.tsx": {
+      "sha256": "cf07126846ce9620411471b77af953c5855d653593ac85042b98bf96a97b6717",
+      "cache": "e59be61970d5c00fdb56a458.json"
+    },
+    "src/features/chat/history/HistoryHeader.tsx": {
+      "sha256": "5ae56cf691c0ac63c3ed58d384ab14284e94244300514970e9c4c4a9c839877d",
+      "cache": "085d9927f2b28e7c4ace803c.json"
+    },
+    "src/features/chat/history/HistoryList.tsx": {
+      "sha256": "9be922b5ca70961fc8191d6d7dd9957090b190f4a4ee5c319ce73c66d88cc9c8",
+      "cache": "747a23dfcb61156aa0b1ab79.json"
+    },
+    "src/features/chat/hooks/useAuth.ts": {
+      "sha256": "e6ac193b7b20e729a1428259ade5fbd8e76afec06c02382a938e75882f2ae733",
+      "cache": "27024be3fbeec8d0baf37e56.json"
+    },
+    "src/features/chat/hooks/useChatStore.ts": {
+      "sha256": "0cf272620e3780a9b6bf8aef362b30c265c68caee77bda24f9572e4caa8b753d",
+      "cache": "a28972dcf855d5e0c78c9385.json"
+    },
+    "src/features/chat/hooks/usePWA.ts": {
+      "sha256": "27d79617e40603e9df162d51ff06cdfe24e2488a246d1034e3b70751fff4c704",
+      "cache": "3f1957796bbbcc445c895284.json"
+    },
+    "src/features/chat/index.ts": {
+      "sha256": "35e835bdce8a44983323247e356ae8e9b7139868a8d9c08aad53aa6122ad30b4",
+      "cache": "ee6178df9e5c2cb4c8970201.json"
+    },
+    "src/features/chat/services/mentor-client.ts": {
+      "sha256": "e7d8e5305a36ff8c507ca8f8ee682cc238c9880d1d150bf6e1de4addf7b0d6ac",
+      "cache": "a52e484045cf276a01918d00.json"
+    },
+    "src/features/chat/services/pouchdb.ts": {
+      "sha256": "7eba393c8b1cfa1ef3d7743250de2e293215d2754f981a729cfb8f4fb5511b80",
+      "cache": "c999aa26a1ead3cce00c5019.json"
+    },
+    "src/features/chat/services/syncManager.ts": {
+      "sha256": "a3e46748e69775271fb5eb327a8201434c0ad999160439307c3bf37e6e6e5191",
+      "cache": "2ff7c4af8f5a56052f22cd49.json"
+    },
+    "src/features/chat/types/chat.ts": {
+      "sha256": "885fe079d306a5d6c3a8cbfd5ffedaa972937ae9a3b6063da43f76126fae9fd8",
+      "cache": "118ec1b1e1f3ed4949200570.json"
+    },
+    "src/features/chat/types/mentor.ts": {
+      "sha256": "6be4c77356759ec8350ffcd46795909d69863561ba2255eeb2cd15a8768d6d49",
+      "cache": "bbc2d245941c4d19e1287d3a.json"
+    },
+    "src/features/dashboard/components/ChildrenData.tsx": {
+      "sha256": "5b50df542ae9aa70b099f94bc0a06c8fb09bc745746f0a1bbe2903273639e2a1",
+      "cache": "feb6259908e5a12dc3577b42.json"
+    },
+    "src/features/dashboard/components/DashboardClient.tsx": {
+      "sha256": "c1b755cfde8de3abc67140bf080760780a78225cd6dab9edf7189ea7a2117e5c",
+      "cache": "f3e92c32fd4fae0991d2e67e.json"
+    },
+    "src/features/dashboard/components/DashboardNav.tsx": {
+      "sha256": "0d0283044f69625e888b7c67ec21bb20b79a732109bbf4a3ac6d438df892cd8e",
+      "cache": "a77240045f3dec0acd282289.json"
+    },
+    "src/features/dashboard/components/DashboardSidebar.tsx": {
+      "sha256": "c087dec791bf7cba51d8916f10e795e5f1fdd883892f71a6e2a362f1c32a1ed6",
+      "cache": "1d7087274a320db17672ddb4.json"
+    },
+    "src/features/dashboard/components/HelpSupport.tsx": {
+      "sha256": "d03ccaa34c9fffdbc6c62a2e97b3996698caf24830f366b85d9c2b29bd63bc08",
+      "cache": "9993ef1c212007ea446702f2.json"
+    },
+    "src/features/dashboard/components/Notifications.tsx": {
+      "sha256": "767de0b7ecb2d173274b1df616d119d5773336e534d5fe6f9daa80712bfdfb2b",
+      "cache": "c49a246d63db079b8a212852.json"
+    },
+    "src/features/dashboard/components/Overview.tsx": {
+      "sha256": "05a8c6b95bbf74132541bdeae643fa45cf2d9cf27a425f9e7bf6df92ca8a8dac",
+      "cache": "18fed72a605976d77acc9f69.json"
+    },
+    "src/features/dashboard/components/PersonalData.tsx": {
+      "sha256": "6bb7b6a52a6e87b77493578e345000727fa9c8e95685ca2edd205cea03c8a95b",
+      "cache": "8a43beb591e28492140f1058.json"
+    },
+    "src/features/dashboard/components/Privacy.tsx": {
+      "sha256": "769b5a644885752fb263ca6f13040d4d92c32f149234bf51609d55bacf5c9325",
+      "cache": "f5a2e3b126d8be7eb1bb7915.json"
+    },
+    "src/features/dashboard/components/ui/CollapsibleCard.tsx": {
+      "sha256": "d81279b682e35782935098dd273a6aa3bd0b3cb9417e7847d1e33a080fcdbd6c",
+      "cache": "bb9abb78edc3aa4107d11bc0.json"
+    },
+    "src/features/dashboard/components/ui/LoadingState.tsx": {
+      "sha256": "106d3ef81259de603d1a913ac9cbeb60c72a5b2db2d3fd0212513ac22ac9c114",
+      "cache": "503d396004fa3cda825531bc.json"
+    },
+    "src/features/dashboard/components/ui/SaveButton.tsx": {
+      "sha256": "07c5dbf8f3847559e495d8ccfee3cd97fd8708008068463cd724887a6400735f",
+      "cache": "bf452d29709e0323df61bc29.json"
+    },
+    "src/features/dashboard/forms/AddressForm.tsx": {
+      "sha256": "91bfb1f3312a403e1e4f69ccf77ec719d676a9b0a339833d71623f5aadf3ddd4",
+      "cache": "9bb4641027160e4c0cd894fc.json"
+    },
+    "src/features/dashboard/forms/BillingForm.tsx": {
+      "sha256": "174035fdb6604118ee30ae179fec75c88f52ab94a8012128a93b5d3e3e07e3bb",
+      "cache": "bfad67bf29409003737fb35b.json"
+    },
+    "src/features/dashboard/forms/BillingInformationForm.tsx": {
+      "sha256": "2937b1d5a9c6d1ad78f5c0b7aeb12dfe338e3b475a03a80a8ff0d303bbc80f72",
+      "cache": "40fc3a432f012548ed8af88c.json"
+    },
+    "src/features/dashboard/forms/ChildForm.tsx": {
+      "sha256": "326759114e7ee8f98b9bbe5606657a0eebecc702bbff9b25caa3b5840754db81",
+      "cache": "584f3f6bfab053a24f7e3222.json"
+    },
+    "src/features/dashboard/forms/CommunicationForm.tsx": {
+      "sha256": "dcbad593a6b2cc3c52e17aa3aeae64e0cf2f1a676e004d8afaa57ecc415283a9",
+      "cache": "e7554c37bb04485c449e6022.json"
+    },
+    "src/features/dashboard/forms/ContactInfoForm.tsx": {
+      "sha256": "dc49851ffdd914cfdb10c01f04d14f10be7132f4f26a6f59147121aa395d636e",
+      "cache": "98a2dd4a0b6fc1aa105fcb77.json"
+    },
+    "src/features/dashboard/forms/PaymentDataForm.tsx": {
+      "sha256": "9eca170e7e40147b3c5e432be74cd9394c6e6f4bc14d65d98b14445ca06b77cc",
+      "cache": "14608b00cb936bec542d69e9.json"
+    },
+    "src/features/dashboard/forms/PersonalInfoForm.tsx": {
+      "sha256": "0e528c83e4297eb879da7d2d4411941836209543a37b828dcbadafb38024d2e0",
+      "cache": "0a979822789d52c4ebcc55aa.json"
+    },
+    "src/features/dashboard/forms/PreferencesForm.tsx": {
+      "sha256": "55aac0131d469ff891dfe3f6752d9edf142d075c8c0477f8933c38b3ad2b324c",
+      "cache": "19f39473763c7df48891b77e.json"
+    },
+    "src/features/dashboard/hooks/useChildren.ts": {
+      "sha256": "2cec42bfe5fdb91861133f02b1540d7ce0585efb6a73a1b5c7131c0e723f7b24",
+      "cache": "04edd60df9d202c0087b2e14.json"
+    },
+    "src/features/dashboard/hooks/useCollapsibleGroups.ts": {
+      "sha256": "388271533350d8d54dc0880ef3d92154ade8a93b4db417d31a56f07e990c8d28",
+      "cache": "f25e12a85c7554744bd7f403.json"
+    },
+    "src/features/dashboard/hooks/useDashboardSections.ts": {
+      "sha256": "4d43063f16ce178ed1e0f23c08e654ff90b20493135840b628dde7b9510126b8",
+      "cache": "dbdc4124388bf0d80bcf35e9.json"
+    },
+    "src/features/dashboard/hooks/useProfile.ts": {
+      "sha256": "19be97e2ecd83da3ae8905043ca40d0efc92bcfdee8a1c4cffe05218b19672cf",
+      "cache": "da79297ebadc2fedad42b42d.json"
+    },
+    "src/features/dashboard/index.ts": {
+      "sha256": "b269b7a68d525974a03a3df698236717cfaf3849470e24de4367355a858745f1",
+      "cache": "7da461a8a3b97ce4584d32b2.json"
+    },
+    "src/features/dashboard/sections/ChildrenSection.tsx": {
+      "sha256": "63aa420b450ae9e37c78b77a5fa99236c6f4390de3181fdbb6fad4486c8e4234",
+      "cache": "74bbdb934e0b706c2d537606.json"
+    },
+    "src/features/dashboard/sections/HelpSection.tsx": {
+      "sha256": "f96e280c4c039fcff764efebdabb1d21bbb0b8e2c17420ea35537bba1b96afa4",
+      "cache": "a6c46329b2b8e95cf8008ac5.json"
+    },
+    "src/features/dashboard/sections/OverviewSection.tsx": {
+      "sha256": "ce679324a6e4ab2bea9dffeeb2bff7b61f07421581e18c5fc342e74efed715b0",
+      "cache": "78984f0c95631c26ea9ecaaf.json"
+    },
+    "src/features/dashboard/sections/PrivacySection.tsx": {
+      "sha256": "bd15bd246b3e6c9bd33bb63386e42a8b2985524038a633f589fa8d6b6550700a",
+      "cache": "820464929fa608fa7a129dc4.json"
+    },
+    "src/features/index.ts": {
+      "sha256": "8ba2ed0f2f9cb7471b22c3f6ddbc710fac5f839ecd6aac6d47545b14b9cafada",
+      "cache": "4f21f38b557b97016671f189.json"
+    },
+    "src/features/landing/components/ApproachSection.tsx": {
+      "sha256": "210aad224b6d5e02bd1ddf1bc5b3ea3a60d7f0ebb9f2091d846971584d7c0a5c",
+      "cache": "fe62df6fc5081c6e4e9aaf12.json"
+    },
+    "src/features/landing/components/CTASection.tsx": {
+      "sha256": "ad9b21e7729d32463c78ae12a1ca0c115cf38eb0ef0735c2ccfcb2a12cd30271",
+      "cache": "0400d4d7e072cdfefcb60f82.json"
+    },
+    "src/features/landing/components/FamiliesSection.tsx": {
+      "sha256": "fe6f6dec604cd96f8248de76c140f32ccaf1e9d775cd830b584c98a3c6e7e80f",
+      "cache": "c7c1f04de4dba67e5876b98e.json"
+    },
+    "src/features/landing/components/Features.tsx": {
+      "sha256": "a44faa06eb1028a310527e8cdfc9f1d34a07cb1f75f5c7a75efdf50dc5578d89",
+      "cache": "7609bf4efe61a77acd81dc0a.json"
+    },
+    "src/features/landing/components/Icons.tsx": {
+      "sha256": "a99635c06fab7e7dc7c1d55b81c33d695dc888a677290172759f32099550d3fe",
+      "cache": "48bd5e3633558be4693b82d7.json"
+    },
+    "src/features/landing/components/Navigation.tsx": {
+      "sha256": "607996d96300fb7def9eb30845e41b39d1dd3ce0b0e84bd7404822d812701e22",
+      "cache": "5c6d56b8b4d82fa4919d2cec.json"
+    },
+    "src/features/landing/components/SafeMentorFooter.tsx": {
+      "sha256": "c57df1a0a1c4987f324f668a5df727b4fdaf1e142a5a28cef0839f2652ba19c3",
+      "cache": "39b02516b0a68e9fc9b61f5f.json"
+    },
+    "src/features/landing/components/SafeMentorHero.tsx": {
+      "sha256": "db498bcab6ec525a1905a4991213c9d312dd1af12e0d4d04cf432bb0541ebb68",
+      "cache": "9bfcc04faa629fad1813dbfc.json"
+    },
+    "src/features/landing/components/SafeMentorIcons.tsx": {
+      "sha256": "94de018369edad2b17e3a0bbc370b1e5729d775b8d7b51c7580111c58c68f2ae",
+      "cache": "70930c32038b51b1f257b688.json"
+    },
+    "src/features/landing/components/TestimonialSection.tsx": {
+      "sha256": "18cfacc59c0c4f19e36de851d5ac5a6a505375f3895eff9555447de10319d97b",
+      "cache": "59eced6daafad142fa841ba9.json"
+    },
+    "src/features/landing/components/TrustBadges.tsx": {
+      "sha256": "faef36cd19fb720d7e91fc1ef60b6ba26f7472bd5e694acd2d0ff9564f87914f",
+      "cache": "c99d6232e8c80271b2384740.json"
+    },
+    "src/features/landing/components/Trusted.tsx": {
+      "sha256": "22245e100b170363f24e47175e48c7242572b99eeac6564eb3c6014286661cee",
+      "cache": "4e97170b2f179f53ac415eed.json"
+    },
+    "src/features/landing/components/ValuesSection.tsx": {
+      "sha256": "b8f795266df85b127d1e26fd3dcd761efbd363739ce9020e171c8409e0ebf288",
+      "cache": "8d27bf2f478e94ad03ecaacd.json"
+    },
+    "src/features/landing/components/legal/ImprintPage.tsx": {
+      "sha256": "c8f9ac1043d8313e1db0b6923142195670798b14ace3d598c1048e1b9a130a33",
+      "cache": "0d9f56644e94a646f906637d.json"
+    },
+    "src/features/landing/components/legal/PrivacyPage.tsx": {
+      "sha256": "65c0e5e7b4cbf3546e26e82afdb6e0b3527f7895a13b7b8d2280c39dbbce9606",
+      "cache": "049c124d14cf49c993ebe874.json"
+    },
+    "src/features/landing/components/legal/SubprocessorsPage.tsx": {
+      "sha256": "dc3da72114eb2707f5a9b55e770352b3c5bc1a981e78c241cd77ca5d6d47a444",
+      "cache": "8b3571f4fc9cd0a844ec6fec.json"
+    },
+    "src/features/landing/components/legal/TermsPage.tsx": {
+      "sha256": "f92d833e00d237c860f9e519cc3ac6b99de44d7ec2a4e0e40ca06b4d9aca36d1",
+      "cache": "46541438a77b2d5e5d79c706.json"
+    },
+    "src/features/landing/components/plans.tsx": {
+      "sha256": "e6113b290c1c8fb6620f989e5d43a7744ceb0315738d21047eb1145da0eb0f1c",
+      "cache": "7646527afa7f214bd2d22312.json"
+    },
+    "src/features/landing/index.ts": {
+      "sha256": "2b7ac6c33671a57325e7faa67114de0678fb6b1e030454b5790637b3df3d7499",
+      "cache": "0896511b4b741ff50729cdfa.json"
+    },
+    "src/features/profile/components/ChildQRPairing.tsx": {
+      "sha256": "9258c67fd022e52a4aa9127b8368cc1744e8d69656401243baee08c35da495d5",
+      "cache": "c53fd2b3ebe1eca984c06815.json"
+    },
+    "src/features/profile/components/ChildSafetyNotice.tsx": {
+      "sha256": "0d66cbea51aabce4ecbbebb2387199b06e63ce242d04980677199f50699d7760",
+      "cache": "aa8d89568ffcacdddcec5492.json"
+    },
+    "src/features/profile/components/NavigationFlow.tsx": {
+      "sha256": "5a162cb2561586038a4926ab35634cbdd08391c0e8dbdb409e6f9e15e76dcae3",
+      "cache": "097530f4dd0cd4799c3bc19a.json"
+    },
+    "src/features/profile/components/ParentAccountOverview.tsx": {
+      "sha256": "f34273860de4d34caa3f48b1044948d9a90b214fc07c96df5add88d5e0e6eb7f",
+      "cache": "e1e352eecf54e136ae64b8bc.json"
+    },
+    "src/features/profile/components/ParentChildConnection.tsx": {
+      "sha256": "fd11a999badf455e88864cb85d157e3ffe69d94237e973a246aa097537785301",
+      "cache": "ff41ddcf4614f1be7776d7fd.json"
+    },
+    "src/features/profile/components/ParentDashboardUI.tsx": {
+      "sha256": "e068cccf9b75df961b276e12baae6e08aa286026a88dc7b819e5405907b149a8",
+      "cache": "60cd52de286be8792ff460c0.json"
+    },
+    "src/features/profile/components/ParentEmotionOverview.tsx": {
+      "sha256": "95a684b2d480e298993e404e759617263d5cff5e5b642222aa586b2c2c5a521d",
+      "cache": "6f01e380388f82c2d91f98c3.json"
+    },
+    "src/features/profile/components/ParentHelp.tsx": {
+      "sha256": "f7428022840ad908a49d8a5ec58ca5ec139dd4f5b05062b81d3a8dabede87e42",
+      "cache": "9fa1ac852567967e4e36676f.json"
+    },
+    "src/features/profile/components/ParentLogin.tsx": {
+      "sha256": "b6548c08b5d4554259b644426d8c2b279f5f4eebf82f5c540e2aa3b637b81df9",
+      "cache": "72e3413d0a2a02ab66e5819d.json"
+    },
+    "src/features/profile/components/ParentPrivacy.tsx": {
+      "sha256": "3dedfb07e3cfe1d510d9130babc99d27b1e1f70f80f180e595f95aad30e09b36",
+      "cache": "dfb1589d5853b82cc59fab6b.json"
+    },
+    "src/features/profile/components/ParentSafetyNotifications.tsx": {
+      "sha256": "95e0ea24cd959143640d0ec7fdeedf5ecca406e44e73c21bb1243c35a66b7bf9",
+      "cache": "117680d308b3fb75a303151e.json"
+    },
+    "src/features/profile/components/ParentSettings.tsx": {
+      "sha256": "223c94b25a98736a804b031fd0114c44ab8be8cbed6e07b2f1a7f391ae2202e4",
+      "cache": "2e92b83528f478802a4d3da3.json"
+    },
+    "src/features/profile/index.ts": {
+      "sha256": "b196d942cc58d2a1fa8255b54fc6f99c5433d33dbcdf689089a759bd2a8aef00",
+      "cache": "b0515b09ec74c652c10ae58f.json"
+    },
+    "src/features/register/RegisterPage.tsx": {
+      "sha256": "4f2cba15a3fc4f24886a19cd1481f8563b359a58496f1d0e028ca6fd6a443ba1",
+      "cache": "80f68ff1ca52023ca812b68c.json"
+    },
+    "src/features/register/components/ComplianceFrame.tsx": {
+      "sha256": "1f0ce5e771f40a2125cb8a71eaa9649a42afec686b1c6f1ddc076475f5fcf078",
+      "cache": "af167cff2e0ee9ed30e47872.json"
+    },
+    "src/features/register/components/ConsentToggles.tsx": {
+      "sha256": "5d84033393bdcf683c603a813e2078bb5cc464679b51e50d7b71b99ea6f40cdc",
+      "cache": "47b5050875a6332d073618e5.json"
+    },
+    "src/features/register/components/DataUsageSection.tsx": {
+      "sha256": "d3239aa81b6c129ecf4fdf8e6a656db93401bded01379bf29c39082dafa1b209",
+      "cache": "e10114b7490479a6d6ccd1c0.json"
+    },
+    "src/features/register/components/FooterActions.tsx": {
+      "sha256": "2eee0f2173d22a129998a40e81e9e1bad11da199323db7f3d0626ffe00b32a49",
+      "cache": "9b9989cf183c1c41f4aa6558.json"
+    },
+    "src/features/register/components/PrivacySidebar.tsx": {
+      "sha256": "bd9074ba034e6f10b8a758b34cf6305cfac9c15c352732911a6ee3579c7279ac",
+      "cache": "66758efd2963b5015cb4cc7c.json"
+    },
+    "src/features/register/components/TransparencyReport.tsx": {
+      "sha256": "1f723a0788a0625a5239475de3a8547da3ab13092bc27910381856ba4ddd842e",
+      "cache": "09a4be7a4f244e3d2fe4da4b.json"
+    },
+    "src/features/register/components/index.ts": {
+      "sha256": "d3f7877cf110426e99dfffeb64e14f255c6a79e095a22f4e106568f763740d2a",
+      "cache": "b50d8fc43b35bb27e06039f9.json"
+    },
+    "src/features/register/index.ts": {
+      "sha256": "c31ece062398752fd3e22d49c1b09f72bb939a28e40b723ef5b062830bad3095",
+      "cache": "4d866fe5414a52ebf5b119db.json"
+    },
+    "src/lib/i18n/config.ts": {
+      "sha256": "2c9410417076929c840d12a177fcdec4d1cf127493deb2b5be5ab9c5bcefdd80",
+      "cache": "a2baa452c1d87fe152b75ec4.json"
+    },
+    "src/lib/i18n/index.ts": {
+      "sha256": "3d7b285c74f57f8ff84785061da0da86a13bbee2703ce96ffdb4577da21282a8",
+      "cache": "107d0d8e95fd02a1d57febf8.json"
+    },
+    "src/lib/index.ts": {
+      "sha256": "c099899c06eaa1c5c7e9bdba1b9b27f91063d5d9f8559eef13e389ad61012c62",
+      "cache": "df0a988f9e523993e537dd35.json"
+    },
+    "src/lib/llm/index.ts": {
+      "sha256": "c99675332122d812e1adbde24d4872d01ff08c83866d657499286a9c68a4ded4",
+      "cache": "da40268f258a3096ad6b4720.json"
+    },
+    "src/lib/llm/llmService.ts": {
+      "sha256": "e44d174681b88ca73f1db2b6fcc5eeb062a9953bfd0624c7a81b456e83adb470",
+      "cache": "2e3f4b48ab045c7f6d28d0db.json"
+    },
+    "src/lib/supabase/client.ts": {
+      "sha256": "0b27a63f99784a2c5f540e9fdeffe7d59a1ad9fa509ae04115216bbd565e6b25",
+      "cache": "fab9ca68f99aebcbeff8bafe.json"
+    },
+    "src/lib/supabase/index.ts": {
+      "sha256": "0c35f1d2b50a99a458274b02e7148f8ef8838d4181e4e883bb46613b7d6ed2a9",
+      "cache": "7ec662985eeeed9718ac69d4.json"
+    },
+    "src/lib/supabase/server.ts": {
+      "sha256": "132f349d727df8fe51c0e42949e5f187e7054931b1cbd3c4276e45fe20972130",
+      "cache": "6aa6124662725a5f353b741f.json"
+    },
+    "src/middleware.ts": {
+      "sha256": "052ecf5bb776dc68cf09457551ad4dc310ea4825b56e6c6e510468da33802b3b",
+      "cache": "0626369278c89781505d2c04.json"
+    },
+    "src/types/dashboard.ts": {
+      "sha256": "06444410d9786db79e49fb35c01e0b7476843181f6aa656927d681c1b5a35c6b",
+      "cache": "29eaac15a3bcfee369f65749.json"
+    },
+    "src/types/database.ts": {
+      "sha256": "362c9ea04cb50df598501d0a8bf34cf7c5a67988221138470c15439b4a6f6121",
+      "cache": "06fd02654859c1286ac855eb.json"
+    },
+    "src/types/index.ts": {
+      "sha256": "48051967a2b25aa97150669bd24df6087eb0d82f9037df429d1e9357e560463c",
+      "cache": "a9ba9cbedd19c9f66d564d2e.json",
+      "skip_reason": "typescript parse error in src/types/index.ts:2 near ERROR"
+    },
+    "tailwind.config.ts": {
+      "sha256": "b0766a18044176d5152e3bb331a81a75ff84167f1917c1dc8287b1ac808ef992",
+      "cache": "655dc9e3d0aa561e3fa164bf.json"
+    }
+  }
+}

@@ -1,0 +1,2641 @@
+{
+  "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+  "language": "cpp",
+  "sha256": "3d6157197edfe8996358739a2adcfb25dc8fa5786571ce9e5d60d2a42943e1c8",
+  "flows": [
+    {
+      "id": "flow-3de8801eb4264737",
+      "name": "flutter.ForwardToHandler",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.ForwardToHandler",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 42,
+        "end_line": 78
+      },
+      "nodes": [
+        {
+          "id": "flow-3de8801eb4264737:n1",
+          "kind": "entry",
+          "label": "flutter.ForwardToHandler",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 42,
+            "end_line": 78
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.ForwardToHandler",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n2",
+          "kind": "action",
+          "label": "auto* response_handle = message->response_handle",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 45,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto* response_handle = message->response_handle;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n3",
+          "kind": "call",
+          "label": "Call std::shared_ptr<FlutterDesktopMessenger>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 46,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto messenger_ptr = std::shared_ptr<FlutterDesktopMessenger>( FlutterDesktopMessengerAddRef(messenger), &FlutterDesktopMessengerRelease);",
+          "metadata": {
+            "calls": [
+              "std::shared_ptr<FlutterDesktopMessenger>",
+              "FlutterDesktopMessengerAddRef"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::shared_ptr<FlutterDesktopMessenger>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerAddRef"
+            ]
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n4",
+          "kind": "call",
+          "label": "Call FlutterDesktopMessengerSendResponse()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 49,
+            "end_line": 71
+          },
+          "evidence": "VERIFIED",
+          "detail": "BinaryReply reply_handler = [messenger_ptr, response_handle]( const uint8_t* reply, size_t reply_size) mutable { // Note: This lambda can be called on any thread. auto lock = FlutterDesktopMessengerScopedLock( FlutterDesktopMessengerLock(messenger_ptr.get()), &FlutterDesktopMessengerUnlock); if (!FlutterDesktopMessengerIsAvailable(messenger_ptr.get())) { // Drop reply if it comes in after the engine is destroyed. return; } if (!response_handle) { std::cerr << \"Error: Response can be set only on...",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopMessengerScopedLock",
+              "FlutterDesktopMessengerLock",
+              "messenger_ptr.get",
+              "FlutterDesktopMessengerIsAvailable",
+              "messenger_ptr.get",
+              "FlutterDesktopMessengerSendResponse",
+              "messenger_ptr.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "network"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerScopedLock",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerLock",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:messenger_ptr.get",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerIsAvailable",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:messenger_ptr.get",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerSendResponse",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:messenger_ptr.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n5",
+          "kind": "call",
+          "label": "Call static_cast<BinaryMessageHandler*>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 73,
+            "end_line": 74
+          },
+          "evidence": "VERIFIED",
+          "detail": "const BinaryMessageHandler& message_handler = *static_cast<BinaryMessageHandler*>(user_data);",
+          "metadata": {
+            "calls": [
+              "static_cast<BinaryMessageHandler*>"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:static_cast<BinaryMessageHandler*>"
+            ]
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n6",
+          "kind": "call",
+          "label": "Call message_handler()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 76,
+            "end_line": 77
+          },
+          "evidence": "VERIFIED",
+          "detail": "message_handler(message->message, message->message_size, std::move(reply_handler));",
+          "metadata": {
+            "calls": [
+              "message_handler",
+              "std::move"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:message_handler",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::move"
+            ]
+          }
+        },
+        {
+          "id": "flow-3de8801eb4264737:n7",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 42,
+            "end_line": 78
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3de8801eb4264737:e1",
+          "source": "flow-3de8801eb4264737:n1",
+          "target": "flow-3de8801eb4264737:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3de8801eb4264737:e2",
+          "source": "flow-3de8801eb4264737:n2",
+          "target": "flow-3de8801eb4264737:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3de8801eb4264737:e3",
+          "source": "flow-3de8801eb4264737:n3",
+          "target": "flow-3de8801eb4264737:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3de8801eb4264737:e4",
+          "source": "flow-3de8801eb4264737:n4",
+          "target": "flow-3de8801eb4264737:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3de8801eb4264737:e5",
+          "source": "flow-3de8801eb4264737:n5",
+          "target": "flow-3de8801eb4264737:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3de8801eb4264737:e6",
+          "source": "flow-3de8801eb4264737:n6",
+          "target": "flow-3de8801eb4264737:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-4b24f4191031de33",
+      "name": "flutter.BinaryMessengerImpl",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.BinaryMessengerImpl",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 81,
+        "end_line": 83
+      },
+      "nodes": [
+        {
+          "id": "flow-4b24f4191031de33:n1",
+          "kind": "entry",
+          "label": "flutter.BinaryMessengerImpl",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 81,
+            "end_line": 83
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.BinaryMessengerImpl",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4b24f4191031de33:n2",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 81,
+            "end_line": 83
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4b24f4191031de33:e1",
+          "source": "flow-4b24f4191031de33:n1",
+          "target": "flow-4b24f4191031de33:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-24b9c0097bc84ffe",
+      "name": "flutter.Send",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.Send",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 87,
+        "end_line": 114
+      },
+      "nodes": [
+        {
+          "id": "flow-24b9c0097bc84ffe:n1",
+          "kind": "entry",
+          "label": "flutter.Send",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 87,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.Send",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n2",
+          "kind": "decision",
+          "label": "reply == nullptr",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 91,
+            "end_line": 91
+          },
+          "evidence": "VERIFIED",
+          "detail": "reply == nullptr",
+          "metadata": {
+            "condition": "reply == nullptr",
+            "domain": "",
+            "values": [
+              "nullptr"
+            ],
+            "subject": "reply",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n3",
+          "kind": "call",
+          "label": "Call FlutterDesktopMessengerSend()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 92,
+            "end_line": 93
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopMessengerSend(messenger_, channel.c_str(), message, message_size);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopMessengerSend",
+              "channel.c_str"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "network"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerSend",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:channel.c_str"
+            ]
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 94,
+            "end_line": 94
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n5",
+          "kind": "action",
+          "label": "struct Captures { BinaryReply reply; }",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 96,
+            "end_line": 98
+          },
+          "evidence": "VERIFIED",
+          "detail": "struct Captures { BinaryReply reply; }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n6",
+          "kind": "action",
+          "label": "auto captures = new Captures()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 99,
+            "end_line": 99
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto captures = new Captures();",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n7",
+          "kind": "action",
+          "label": "captures->reply = reply",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 100,
+            "end_line": 100
+          },
+          "evidence": "VERIFIED",
+          "detail": "captures->reply = reply;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n8",
+          "kind": "call",
+          "label": "Call reinterpret_cast<Captures*>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 102,
+            "end_line": 107
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto message_reply = [](const uint8_t* data, size_t data_size, void* user_data) { auto captures = reinterpret_cast<Captures*>(user_data); captures->reply(data, data_size); delete captures; };",
+          "metadata": {
+            "calls": [
+              "reinterpret_cast<Captures*>",
+              "captures->reply"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:reinterpret_cast<Captures*>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:captures->reply"
+            ]
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n9",
+          "kind": "call",
+          "label": "Call FlutterDesktopMessengerSendWithReply()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 108,
+            "end_line": 110
+          },
+          "evidence": "VERIFIED",
+          "detail": "bool result = FlutterDesktopMessengerSendWithReply( messenger_, channel.c_str(), message, message_size, message_reply, captures);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopMessengerSendWithReply",
+              "channel.c_str"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "network"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerSendWithReply",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:channel.c_str"
+            ]
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n10",
+          "kind": "decision",
+          "label": "!result",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 111,
+            "end_line": 111
+          },
+          "evidence": "VERIFIED",
+          "detail": "!result",
+          "metadata": {
+            "condition": "!result",
+            "domain": "",
+            "values": [],
+            "subject": "result",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n11",
+          "kind": "action",
+          "label": "delete captures",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 112,
+            "end_line": 112
+          },
+          "evidence": "VERIFIED",
+          "detail": "delete captures;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:n12",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 87,
+            "end_line": 114
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-24b9c0097bc84ffe:e1",
+          "source": "flow-24b9c0097bc84ffe:n1",
+          "target": "flow-24b9c0097bc84ffe:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e2",
+          "source": "flow-24b9c0097bc84ffe:n2",
+          "target": "flow-24b9c0097bc84ffe:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e3",
+          "source": "flow-24b9c0097bc84ffe:n3",
+          "target": "flow-24b9c0097bc84ffe:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e4",
+          "source": "flow-24b9c0097bc84ffe:n2",
+          "target": "flow-24b9c0097bc84ffe:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e5",
+          "source": "flow-24b9c0097bc84ffe:n5",
+          "target": "flow-24b9c0097bc84ffe:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e6",
+          "source": "flow-24b9c0097bc84ffe:n6",
+          "target": "flow-24b9c0097bc84ffe:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e7",
+          "source": "flow-24b9c0097bc84ffe:n7",
+          "target": "flow-24b9c0097bc84ffe:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e8",
+          "source": "flow-24b9c0097bc84ffe:n8",
+          "target": "flow-24b9c0097bc84ffe:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e9",
+          "source": "flow-24b9c0097bc84ffe:n9",
+          "target": "flow-24b9c0097bc84ffe:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e10",
+          "source": "flow-24b9c0097bc84ffe:n10",
+          "target": "flow-24b9c0097bc84ffe:n11",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e11",
+          "source": "flow-24b9c0097bc84ffe:n11",
+          "target": "flow-24b9c0097bc84ffe:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24b9c0097bc84ffe:e12",
+          "source": "flow-24b9c0097bc84ffe:n10",
+          "target": "flow-24b9c0097bc84ffe:n12",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-c915b683372c3f9b",
+      "name": "flutter.SetMessageHandler",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.SetMessageHandler",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 116,
+        "end_line": 130
+      },
+      "nodes": [
+        {
+          "id": "flow-c915b683372c3f9b:n1",
+          "kind": "entry",
+          "label": "flutter.SetMessageHandler",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 116,
+            "end_line": 130
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.SetMessageHandler",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n2",
+          "kind": "decision",
+          "label": "!handler",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "!handler",
+          "metadata": {
+            "condition": "!handler",
+            "domain": "",
+            "values": [],
+            "subject": "handler",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n3",
+          "kind": "call",
+          "label": "Call handlers_.erase()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 119,
+            "end_line": 119
+          },
+          "evidence": "VERIFIED",
+          "detail": "handlers_.erase(channel);",
+          "metadata": {
+            "calls": [
+              "handlers_.erase"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:handlers_.erase"
+            ]
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n4",
+          "kind": "call",
+          "label": "Call FlutterDesktopMessengerSetCallback()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 120,
+            "end_line": 121
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopMessengerSetCallback(messenger_, channel.c_str(), nullptr, nullptr);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopMessengerSetCallback",
+              "channel.c_str"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerSetCallback",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:channel.c_str"
+            ]
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n5",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 122,
+            "end_line": 122
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n6",
+          "kind": "action",
+          "label": "// Save the handler, to keep it alive.",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 124,
+            "end_line": 124
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Save the handler, to keep it alive.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n7",
+          "kind": "call",
+          "label": "Call std::move()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 125,
+            "end_line": 125
+          },
+          "evidence": "VERIFIED",
+          "detail": "handlers_[channel] = std::move(handler);",
+          "metadata": {
+            "calls": [
+              "std::move"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::move"
+            ]
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n8",
+          "kind": "action",
+          "label": "BinaryMessageHandler* message_handler = &handlers_[channel]",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 126,
+            "end_line": 126
+          },
+          "evidence": "VERIFIED",
+          "detail": "BinaryMessageHandler* message_handler = &handlers_[channel];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n9",
+          "kind": "action",
+          "label": "// Set an adaptor callback that will invoke the handler.",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 127,
+            "end_line": 127
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Set an adaptor callback that will invoke the handler.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n10",
+          "kind": "call",
+          "label": "Call FlutterDesktopMessengerSetCallback()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 128,
+            "end_line": 129
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopMessengerSetCallback(messenger_, channel.c_str(), ForwardToHandler, message_handler);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopMessengerSetCallback",
+              "channel.c_str"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopMessengerSetCallback",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:channel.c_str"
+            ]
+          }
+        },
+        {
+          "id": "flow-c915b683372c3f9b:n11",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 116,
+            "end_line": 130
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c915b683372c3f9b:e1",
+          "source": "flow-c915b683372c3f9b:n1",
+          "target": "flow-c915b683372c3f9b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e2",
+          "source": "flow-c915b683372c3f9b:n2",
+          "target": "flow-c915b683372c3f9b:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e3",
+          "source": "flow-c915b683372c3f9b:n3",
+          "target": "flow-c915b683372c3f9b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e4",
+          "source": "flow-c915b683372c3f9b:n4",
+          "target": "flow-c915b683372c3f9b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e5",
+          "source": "flow-c915b683372c3f9b:n2",
+          "target": "flow-c915b683372c3f9b:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e6",
+          "source": "flow-c915b683372c3f9b:n6",
+          "target": "flow-c915b683372c3f9b:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e7",
+          "source": "flow-c915b683372c3f9b:n7",
+          "target": "flow-c915b683372c3f9b:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e8",
+          "source": "flow-c915b683372c3f9b:n8",
+          "target": "flow-c915b683372c3f9b:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e9",
+          "source": "flow-c915b683372c3f9b:n9",
+          "target": "flow-c915b683372c3f9b:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c915b683372c3f9b:e10",
+          "source": "flow-c915b683372c3f9b:n10",
+          "target": "flow-c915b683372c3f9b:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-785a3f7f459fabcb",
+      "name": "flutter.internal.ReplyManager",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ReplyManager",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 136,
+        "end_line": 139
+      },
+      "nodes": [
+        {
+          "id": "flow-785a3f7f459fabcb:n1",
+          "kind": "entry",
+          "label": "flutter.internal.ReplyManager",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 136,
+            "end_line": 139
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ReplyManager",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n2",
+          "kind": "call",
+          "label": "Call assert()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 138,
+            "end_line": 138
+          },
+          "evidence": "VERIFIED",
+          "detail": "assert(reply_handler_);",
+          "metadata": {
+            "calls": [
+              "assert"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:assert"
+            ]
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n3",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 136,
+            "end_line": 139
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-785a3f7f459fabcb:e1",
+          "source": "flow-785a3f7f459fabcb:n1",
+          "target": "flow-785a3f7f459fabcb:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e2",
+          "source": "flow-785a3f7f459fabcb:n2",
+          "target": "flow-785a3f7f459fabcb:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-785a3f7f459fabcb",
+      "name": "flutter.internal.ReplyManager",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ReplyManager",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 141,
+        "end_line": 149
+      },
+      "nodes": [
+        {
+          "id": "flow-785a3f7f459fabcb:n1",
+          "kind": "entry",
+          "label": "flutter.internal.ReplyManager",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 141,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ReplyManager",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n2",
+          "kind": "decision",
+          "label": "reply_handler_",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 142,
+            "end_line": 142
+          },
+          "evidence": "VERIFIED",
+          "detail": "reply_handler_",
+          "metadata": {
+            "condition": "reply_handler_",
+            "domain": "",
+            "values": [],
+            "subject": "reply_handler_",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n3",
+          "kind": "action",
+          "label": "// Warn, rather than send a not-implemented response, since the engine may",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 143,
+            "end_line": 143
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Warn, rather than send a not-implemented response, since the engine may",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n4",
+          "kind": "action",
+          "label": "// no longer be valid at this point.",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 144,
+            "end_line": 144
+          },
+          "evidence": "VERIFIED",
+          "detail": "// no longer be valid at this point.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n5",
+          "kind": "action",
+          "label": "std::cerr << \"Warning: Failed to respond to a message. This is a memory leak.\" << std::en...",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 145,
+            "end_line": 147
+          },
+          "evidence": "VERIFIED",
+          "detail": "std::cerr << \"Warning: Failed to respond to a message. This is a memory leak.\" << std::endl;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:n6",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 141,
+            "end_line": 149
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-785a3f7f459fabcb:e1",
+          "source": "flow-785a3f7f459fabcb:n1",
+          "target": "flow-785a3f7f459fabcb:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e2",
+          "source": "flow-785a3f7f459fabcb:n2",
+          "target": "flow-785a3f7f459fabcb:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e3",
+          "source": "flow-785a3f7f459fabcb:n3",
+          "target": "flow-785a3f7f459fabcb:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e4",
+          "source": "flow-785a3f7f459fabcb:n4",
+          "target": "flow-785a3f7f459fabcb:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e5",
+          "source": "flow-785a3f7f459fabcb:n5",
+          "target": "flow-785a3f7f459fabcb:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-785a3f7f459fabcb:e6",
+          "source": "flow-785a3f7f459fabcb:n2",
+          "target": "flow-785a3f7f459fabcb:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-5a8bacaa188da230",
+      "name": "flutter.internal.SendResponseData",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.SendResponseData",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 151,
+        "end_line": 165
+      },
+      "nodes": [
+        {
+          "id": "flow-5a8bacaa188da230:n1",
+          "kind": "entry",
+          "label": "flutter.internal.SendResponseData",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 151,
+            "end_line": 165
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.SendResponseData",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n2",
+          "kind": "decision",
+          "label": "!reply_handler_",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 152,
+            "end_line": 152
+          },
+          "evidence": "VERIFIED",
+          "detail": "!reply_handler_",
+          "metadata": {
+            "condition": "!reply_handler_",
+            "domain": "",
+            "values": [],
+            "subject": "reply_handler_",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n3",
+          "kind": "action",
+          "label": "std::cerr << \"Error: Only one of Success, Error, or NotImplemented can be \" \"called,\" <<...",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 153,
+            "end_line": 157
+          },
+          "evidence": "VERIFIED",
+          "detail": "std::cerr << \"Error: Only one of Success, Error, or NotImplemented can be \" \"called,\" << \" and it can be called exactly once. Ignoring duplicate result.\" << std::endl;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 158,
+            "end_line": 158
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n5",
+          "kind": "call",
+          "label": "Call data->empty()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 161,
+            "end_line": 161
+          },
+          "evidence": "VERIFIED",
+          "detail": "const uint8_t* message = data && !data->empty() ? data->data() : nullptr;",
+          "metadata": {
+            "calls": [
+              "data->empty",
+              "data->data"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:data->empty",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:data->data"
+            ]
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n6",
+          "kind": "call",
+          "label": "Call data->size()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 162,
+            "end_line": 162
+          },
+          "evidence": "VERIFIED",
+          "detail": "size_t message_size = data ? data->size() : 0;",
+          "metadata": {
+            "calls": [
+              "data->size"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:data->size"
+            ]
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n7",
+          "kind": "call",
+          "label": "Call reply_handler_()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 163,
+            "end_line": 163
+          },
+          "evidence": "VERIFIED",
+          "detail": "reply_handler_(message, message_size);",
+          "metadata": {
+            "calls": [
+              "reply_handler_"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:reply_handler_"
+            ]
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n8",
+          "kind": "action",
+          "label": "reply_handler_ = nullptr",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 164,
+            "end_line": 164
+          },
+          "evidence": "VERIFIED",
+          "detail": "reply_handler_ = nullptr;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5a8bacaa188da230:n9",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 151,
+            "end_line": 165
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5a8bacaa188da230:e1",
+          "source": "flow-5a8bacaa188da230:n1",
+          "target": "flow-5a8bacaa188da230:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e2",
+          "source": "flow-5a8bacaa188da230:n2",
+          "target": "flow-5a8bacaa188da230:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e3",
+          "source": "flow-5a8bacaa188da230:n3",
+          "target": "flow-5a8bacaa188da230:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e4",
+          "source": "flow-5a8bacaa188da230:n2",
+          "target": "flow-5a8bacaa188da230:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e5",
+          "source": "flow-5a8bacaa188da230:n5",
+          "target": "flow-5a8bacaa188da230:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e6",
+          "source": "flow-5a8bacaa188da230:n6",
+          "target": "flow-5a8bacaa188da230:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e7",
+          "source": "flow-5a8bacaa188da230:n7",
+          "target": "flow-5a8bacaa188da230:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5a8bacaa188da230:e8",
+          "source": "flow-5a8bacaa188da230:n8",
+          "target": "flow-5a8bacaa188da230:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-350f61d88b15da90",
+      "name": "flutter.internal.ResizeChannel",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ResizeChannel",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 181,
+        "end_line": 192
+      },
+      "nodes": [
+        {
+          "id": "flow-350f61d88b15da90:n1",
+          "kind": "entry",
+          "label": "flutter.internal.ResizeChannel",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 181,
+            "end_line": 192
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.ResizeChannel",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-350f61d88b15da90:n2",
+          "kind": "call",
+          "label": "Call std::make_unique<MethodChannel<EncodableValue>>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 182,
+            "end_line": 183
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto control_channel = std::make_unique<MethodChannel<EncodableValue>>( messenger, kControlChannelName, &StandardMethodCodec::GetInstance());",
+          "metadata": {
+            "calls": [
+              "std::make_unique<MethodChannel<EncodableValue>>",
+              "StandardMethodCodec::GetInstance"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::make_unique<MethodChannel<EncodableValue>>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:StandardMethodCodec::GetInstance"
+            ]
+          }
+        },
+        {
+          "id": "flow-350f61d88b15da90:n3",
+          "kind": "action",
+          "label": "// The deserialization logic handles only 32 bits values, see",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 185,
+            "end_line": 185
+          },
+          "evidence": "VERIFIED",
+          "detail": "// The deserialization logic handles only 32 bits values, see",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-350f61d88b15da90:n4",
+          "kind": "action",
+          "label": "// https://github.com/flutter/engine/blob/93e8901490e78c7ba7e319cce4470d9c6478c6dc/lib/ui...",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 186,
+            "end_line": 186
+          },
+          "evidence": "VERIFIED",
+          "detail": "// https://github.com/flutter/engine/blob/93e8901490e78c7ba7e319cce4470d9c6478c6dc/lib/ui/channel_buffers.dart#L495.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-350f61d88b15da90:n5",
+          "kind": "call",
+          "label": "Call control_channel->InvokeMethod()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 187,
+            "end_line": 191
+          },
+          "evidence": "VERIFIED",
+          "detail": "control_channel->InvokeMethod( kResizeMethod, std::make_unique<EncodableValue>(EncodableList{ EncodableValue(name), EncodableValue(static_cast<int32_t>(new_size)), }));",
+          "metadata": {
+            "calls": [
+              "control_channel->InvokeMethod",
+              "std::make_unique<EncodableValue>",
+              "EncodableValue",
+              "EncodableValue",
+              "static_cast<int32_t>"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:control_channel->InvokeMethod",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::make_unique<EncodableValue>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:EncodableValue",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:EncodableValue",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:static_cast<int32_t>"
+            ]
+          }
+        },
+        {
+          "id": "flow-350f61d88b15da90:n6",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 181,
+            "end_line": 192
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-350f61d88b15da90:e1",
+          "source": "flow-350f61d88b15da90:n1",
+          "target": "flow-350f61d88b15da90:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-350f61d88b15da90:e2",
+          "source": "flow-350f61d88b15da90:n2",
+          "target": "flow-350f61d88b15da90:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-350f61d88b15da90:e3",
+          "source": "flow-350f61d88b15da90:n3",
+          "target": "flow-350f61d88b15da90:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-350f61d88b15da90:e4",
+          "source": "flow-350f61d88b15da90:n4",
+          "target": "flow-350f61d88b15da90:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-350f61d88b15da90:e5",
+          "source": "flow-350f61d88b15da90:n5",
+          "target": "flow-350f61d88b15da90:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-ff85386ed31fb3d0",
+      "name": "flutter.internal.SetChannelWarnsOnOverflow",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.SetChannelWarnsOnOverflow",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 194,
+        "end_line": 205
+      },
+      "nodes": [
+        {
+          "id": "flow-ff85386ed31fb3d0:n1",
+          "kind": "entry",
+          "label": "flutter.internal.SetChannelWarnsOnOverflow",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 194,
+            "end_line": 205
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.internal.SetChannelWarnsOnOverflow",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ff85386ed31fb3d0:n2",
+          "kind": "call",
+          "label": "Call std::make_unique<MethodChannel<EncodableValue>>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 197,
+            "end_line": 198
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto control_channel = std::make_unique<MethodChannel<EncodableValue>>( messenger, kControlChannelName, &StandardMethodCodec::GetInstance());",
+          "metadata": {
+            "calls": [
+              "std::make_unique<MethodChannel<EncodableValue>>",
+              "StandardMethodCodec::GetInstance"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::make_unique<MethodChannel<EncodableValue>>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:StandardMethodCodec::GetInstance"
+            ]
+          }
+        },
+        {
+          "id": "flow-ff85386ed31fb3d0:n3",
+          "kind": "call",
+          "label": "Call control_channel->InvokeMethod()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 200,
+            "end_line": 204
+          },
+          "evidence": "VERIFIED",
+          "detail": "control_channel->InvokeMethod(kOverflowMethod, std::make_unique<EncodableValue>(EncodableList{ EncodableValue(name), EncodableValue(!warns), }));",
+          "metadata": {
+            "calls": [
+              "control_channel->InvokeMethod",
+              "std::make_unique<EncodableValue>",
+              "EncodableValue",
+              "EncodableValue"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:control_channel->InvokeMethod",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::make_unique<EncodableValue>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:EncodableValue",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:EncodableValue"
+            ]
+          }
+        },
+        {
+          "id": "flow-ff85386ed31fb3d0:n4",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 194,
+            "end_line": 205
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ff85386ed31fb3d0:e1",
+          "source": "flow-ff85386ed31fb3d0:n1",
+          "target": "flow-ff85386ed31fb3d0:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff85386ed31fb3d0:e2",
+          "source": "flow-ff85386ed31fb3d0:n2",
+          "target": "flow-ff85386ed31fb3d0:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ff85386ed31fb3d0:e3",
+          "source": "flow-ff85386ed31fb3d0:n3",
+          "target": "flow-ff85386ed31fb3d0:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-d99b81de9d0700c9",
+      "name": "flutter.TextureRegistrarImpl",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.TextureRegistrarImpl",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 211,
+        "end_line": 213
+      },
+      "nodes": [
+        {
+          "id": "flow-d99b81de9d0700c9:n1",
+          "kind": "entry",
+          "label": "flutter.TextureRegistrarImpl",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 211,
+            "end_line": 213
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.TextureRegistrarImpl",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d99b81de9d0700c9:n2",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 211,
+            "end_line": 213
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d99b81de9d0700c9:e1",
+          "source": "flow-d99b81de9d0700c9:n1",
+          "target": "flow-d99b81de9d0700c9:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-eaca5488f10eced1",
+      "name": "flutter.RegisterTexture",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.RegisterTexture",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 217,
+        "end_line": 249
+      },
+      "nodes": [
+        {
+          "id": "flow-eaca5488f10eced1:n1",
+          "kind": "entry",
+          "label": "flutter.RegisterTexture",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 217,
+            "end_line": 249
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.RegisterTexture",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n2",
+          "kind": "action",
+          "label": "FlutterDesktopTextureInfo info = {}",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 218,
+            "end_line": 218
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopTextureInfo info = {};",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n3",
+          "kind": "decision",
+          "label": "auto pixel_buffer_texture = std::get_if<PixelBufferTexture>(texture)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 219,
+            "end_line": 219
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto pixel_buffer_texture = std::get_if<PixelBufferTexture>(texture)",
+          "metadata": {
+            "condition": "auto pixel_buffer_texture = std::get_if<PixelBufferTexture>(texture)",
+            "domain": "",
+            "values": [],
+            "subject": "auto pixel_buffer_texture = std::get_if<PixelBufferTexture>(texture)",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n4",
+          "kind": "action",
+          "label": "info.type = kFlutterDesktopPixelBufferTexture",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 220,
+            "end_line": 220
+          },
+          "evidence": "VERIFIED",
+          "detail": "info.type = kFlutterDesktopPixelBufferTexture;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n5",
+          "kind": "action",
+          "label": "info.pixel_buffer_config.user_data = pixel_buffer_texture",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 221,
+            "end_line": 221
+          },
+          "evidence": "VERIFIED",
+          "detail": "info.pixel_buffer_config.user_data = pixel_buffer_texture;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n6",
+          "kind": "call",
+          "label": "Call static_cast<PixelBufferTexture*>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 222,
+            "end_line": 227
+          },
+          "evidence": "VERIFIED",
+          "detail": "info.pixel_buffer_config.callback = [](size_t width, size_t height, void* user_data) -> const FlutterDesktopPixelBuffer* { auto texture = static_cast<PixelBufferTexture*>(user_data); return texture->CopyPixelBuffer(width, height); };",
+          "metadata": {
+            "calls": [
+              "static_cast<PixelBufferTexture*>",
+              "texture->CopyPixelBuffer"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:static_cast<PixelBufferTexture*>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:texture->CopyPixelBuffer"
+            ]
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n7",
+          "kind": "call",
+          "label": "Call std::get_if<GpuSurfaceTexture>()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 228,
+            "end_line": 244
+          },
+          "evidence": "VERIFIED",
+          "detail": "else if (auto gpu_surface_texture = std::get_if<GpuSurfaceTexture>(texture)) { info.type = kFlutterDesktopGpuSurfaceTexture; info.gpu_surface_config.struct_size = sizeof(FlutterDesktopGpuSurfaceTextureConfig); info.gpu_surface_config.type = gpu_surface_texture->surface_type(); info.gpu_surface_config.user_data = gpu_surface_texture; info.gpu_surface_config.callback = [](size_t width, size_t height, void* user_data) -> const FlutterDesktopGpuSurfaceDescriptor* { auto texture = static_cast<GpuSur...",
+          "metadata": {
+            "calls": [
+              "std::get_if<GpuSurfaceTexture>",
+              "gpu_surface_texture->surface_type",
+              "static_cast<GpuSurfaceTexture*>",
+              "texture->ObtainDescriptor"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::get_if<GpuSurfaceTexture>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:gpu_surface_texture->surface_type",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:static_cast<GpuSurfaceTexture*>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:texture->ObtainDescriptor"
+            ]
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n8",
+          "kind": "call",
+          "label": "Call FlutterDesktopTextureRegistrarRegisterExternalTexture()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 246,
+            "end_line": 247
+          },
+          "evidence": "VERIFIED",
+          "detail": "int64_t texture_id = FlutterDesktopTextureRegistrarRegisterExternalTexture( texture_registrar_ref_, &info);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopTextureRegistrarRegisterExternalTexture"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopTextureRegistrarRegisterExternalTexture"
+            ]
+          }
+        },
+        {
+          "id": "flow-eaca5488f10eced1:n9",
+          "kind": "terminal",
+          "label": "Return texture_id",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 248,
+            "end_line": 248
+          },
+          "evidence": "VERIFIED",
+          "detail": "return texture_id;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-eaca5488f10eced1:e1",
+          "source": "flow-eaca5488f10eced1:n1",
+          "target": "flow-eaca5488f10eced1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e2",
+          "source": "flow-eaca5488f10eced1:n2",
+          "target": "flow-eaca5488f10eced1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e3",
+          "source": "flow-eaca5488f10eced1:n3",
+          "target": "flow-eaca5488f10eced1:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e4",
+          "source": "flow-eaca5488f10eced1:n4",
+          "target": "flow-eaca5488f10eced1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e5",
+          "source": "flow-eaca5488f10eced1:n5",
+          "target": "flow-eaca5488f10eced1:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e6",
+          "source": "flow-eaca5488f10eced1:n3",
+          "target": "flow-eaca5488f10eced1:n7",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e7",
+          "source": "flow-eaca5488f10eced1:n6",
+          "target": "flow-eaca5488f10eced1:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e8",
+          "source": "flow-eaca5488f10eced1:n7",
+          "target": "flow-eaca5488f10eced1:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-eaca5488f10eced1:e9",
+          "source": "flow-eaca5488f10eced1:n8",
+          "target": "flow-eaca5488f10eced1:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-1e7947de4d80c9c1",
+      "name": "flutter.MarkTextureFrameAvailable",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.MarkTextureFrameAvailable",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 251,
+        "end_line": 254
+      },
+      "nodes": [
+        {
+          "id": "flow-1e7947de4d80c9c1:n1",
+          "kind": "entry",
+          "label": "flutter.MarkTextureFrameAvailable",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 251,
+            "end_line": 254
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.MarkTextureFrameAvailable",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-1e7947de4d80c9c1:n2",
+          "kind": "call",
+          "label": "Call FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 252,
+            "end_line": 253
+          },
+          "evidence": "VERIFIED",
+          "detail": "return FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable( texture_registrar_ref_, texture_id);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable"
+            ]
+          }
+        },
+        {
+          "id": "flow-1e7947de4d80c9c1:n3",
+          "kind": "terminal",
+          "label": "Return FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable( texture_registrar_ref_, texture_id)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 252,
+            "end_line": 253
+          },
+          "evidence": "VERIFIED",
+          "detail": "return FlutterDesktopTextureRegistrarMarkExternalTextureFrameAvailable( texture_registrar_ref_, texture_id);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-1e7947de4d80c9c1:e1",
+          "source": "flow-1e7947de4d80c9c1:n1",
+          "target": "flow-1e7947de4d80c9c1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-1e7947de4d80c9c1:e2",
+          "source": "flow-1e7947de4d80c9c1:n2",
+          "target": "flow-1e7947de4d80c9c1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-2c202fd603ac29e3",
+      "name": "flutter.UnregisterTexture",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.UnregisterTexture",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 256,
+        "end_line": 277
+      },
+      "nodes": [
+        {
+          "id": "flow-2c202fd603ac29e3:n1",
+          "kind": "entry",
+          "label": "flutter.UnregisterTexture",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 256,
+            "end_line": 277
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.UnregisterTexture",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n2",
+          "kind": "decision",
+          "label": "callback == nullptr",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 258,
+            "end_line": 258
+          },
+          "evidence": "VERIFIED",
+          "detail": "callback == nullptr",
+          "metadata": {
+            "condition": "callback == nullptr",
+            "domain": "",
+            "values": [
+              "nullptr"
+            ],
+            "subject": "callback",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n3",
+          "kind": "call",
+          "label": "Call FlutterDesktopTextureRegistrarUnregisterExternalTexture()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 259,
+            "end_line": 260
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopTextureRegistrarUnregisterExternalTexture( texture_registrar_ref_, texture_id, nullptr, nullptr);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopTextureRegistrarUnregisterExternalTexture"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopTextureRegistrarUnregisterExternalTexture"
+            ]
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 261,
+            "end_line": 261
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n5",
+          "kind": "action",
+          "label": "struct Captures { std::function<void()> callback; }",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 264,
+            "end_line": 266
+          },
+          "evidence": "VERIFIED",
+          "detail": "struct Captures { std::function<void()> callback; }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n6",
+          "kind": "action",
+          "label": "auto captures = new Captures()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 267,
+            "end_line": 267
+          },
+          "evidence": "VERIFIED",
+          "detail": "auto captures = new Captures();",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n7",
+          "kind": "call",
+          "label": "Call std::move()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 268,
+            "end_line": 268
+          },
+          "evidence": "VERIFIED",
+          "detail": "captures->callback = std::move(callback);",
+          "metadata": {
+            "calls": [
+              "std::move"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:std::move"
+            ]
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n8",
+          "kind": "call",
+          "label": "Call FlutterDesktopTextureRegistrarUnregisterExternalTexture()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 269,
+            "end_line": 276
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterDesktopTextureRegistrarUnregisterExternalTexture( texture_registrar_ref_, texture_id, [](void* opaque) { auto captures = reinterpret_cast<Captures*>(opaque); captures->callback(); delete captures; }, captures);",
+          "metadata": {
+            "calls": [
+              "FlutterDesktopTextureRegistrarUnregisterExternalTexture",
+              "reinterpret_cast<Captures*>",
+              "captures->callback"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:FlutterDesktopTextureRegistrarUnregisterExternalTexture",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:reinterpret_cast<Captures*>",
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:captures->callback"
+            ]
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n9",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 256,
+            "end_line": 277
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2c202fd603ac29e3:e1",
+          "source": "flow-2c202fd603ac29e3:n1",
+          "target": "flow-2c202fd603ac29e3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e2",
+          "source": "flow-2c202fd603ac29e3:n2",
+          "target": "flow-2c202fd603ac29e3:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e3",
+          "source": "flow-2c202fd603ac29e3:n3",
+          "target": "flow-2c202fd603ac29e3:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e4",
+          "source": "flow-2c202fd603ac29e3:n2",
+          "target": "flow-2c202fd603ac29e3:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e5",
+          "source": "flow-2c202fd603ac29e3:n5",
+          "target": "flow-2c202fd603ac29e3:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e6",
+          "source": "flow-2c202fd603ac29e3:n6",
+          "target": "flow-2c202fd603ac29e3:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e7",
+          "source": "flow-2c202fd603ac29e3:n7",
+          "target": "flow-2c202fd603ac29e3:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e8",
+          "source": "flow-2c202fd603ac29e3:n8",
+          "target": "flow-2c202fd603ac29e3:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-2c202fd603ac29e3",
+      "name": "flutter.UnregisterTexture",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.UnregisterTexture",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+        "start_line": 279,
+        "end_line": 282
+      },
+      "nodes": [
+        {
+          "id": "flow-2c202fd603ac29e3:n1",
+          "kind": "entry",
+          "label": "flutter.UnregisterTexture",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 279,
+            "end_line": 282
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:flutter.UnregisterTexture",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n2",
+          "kind": "call",
+          "label": "Call UnregisterTexture()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 280,
+            "end_line": 280
+          },
+          "evidence": "VERIFIED",
+          "detail": "UnregisterTexture(texture_id, nullptr);",
+          "metadata": {
+            "calls": [
+              "UnregisterTexture"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.flutter.ephemeral.cpp_client_wrapper:UnregisterTexture"
+            ]
+          }
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:n3",
+          "kind": "terminal",
+          "label": "Return true",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/ephemeral/cpp_client_wrapper/core_implementations.cc",
+            "start_line": 281,
+            "end_line": 281
+          },
+          "evidence": "VERIFIED",
+          "detail": "return true;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2c202fd603ac29e3:e1",
+          "source": "flow-2c202fd603ac29e3:n1",
+          "target": "flow-2c202fd603ac29e3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2c202fd603ac29e3:e2",
+          "source": "flow-2c202fd603ac29e3:n2",
+          "target": "flow-2c202fd603ac29e3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

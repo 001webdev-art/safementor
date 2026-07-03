@@ -1,0 +1,303 @@
+{
+  "path": "src/lib/llm/llmService.ts",
+  "language": "typescript",
+  "sha256": "e44d174681b88ca73f1db2b6fcc5eeb062a9953bfd0624c7a81b456e83adb470",
+  "flows": [
+    {
+      "id": "flow-789d6f4e9d076be7",
+      "name": "callLLM",
+      "symbol": "src.lib.llm.llmService:callLLM",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/lib/llm/llmService.ts",
+        "start_line": 1,
+        "end_line": 17
+      },
+      "nodes": [
+        {
+          "id": "flow-789d6f4e9d076be7:n1",
+          "kind": "entry",
+          "label": "callLLM",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 1,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.lib.llm.llmService:callLLM",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n2",
+          "kind": "action",
+          "label": "Set apiKey",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 2,
+            "end_line": 2
+          },
+          "evidence": "VERIFIED",
+          "detail": "const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY || '';",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n3",
+          "kind": "action",
+          "label": "// Example for client-side if needed, but better server-side",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 2,
+            "end_line": 2
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Example for client-side if needed, but better server-side",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n4",
+          "kind": "action",
+          "label": "// This should probably be an API route to keep secrets safe",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 4,
+            "end_line": 4
+          },
+          "evidence": "VERIFIED",
+          "detail": "// This should probably be an API route to keep secrets safe",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n5",
+          "kind": "call",
+          "label": "Call fetch()",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 5,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "const response = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provider, messages }), });",
+          "metadata": {
+            "calls": [
+              "fetch",
+              "JSON.stringify"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.lib.llm.llmService:fetch",
+              "src.lib.llm.llmService:JSON.stringify"
+            ]
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n6",
+          "kind": "decision",
+          "label": "!response.ok",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "!response.ok",
+          "metadata": {
+            "condition": "!response.ok",
+            "domain": "",
+            "values": [],
+            "subject": "response.ok",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "raises",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n7",
+          "kind": "call",
+          "label": "Call response.json()",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const error = await response.json();",
+          "metadata": {
+            "calls": [
+              "response.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.lib.llm.llmService:response.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n8",
+          "kind": "error",
+          "label": "Throw new Error(error.message || 'LLM Error')",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw new Error(error.message || 'LLM Error');",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n9",
+          "kind": "call",
+          "label": "Call response.json()",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "return response.json();",
+          "metadata": {
+            "calls": [
+              "response.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.lib.llm.llmService:response.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:n10",
+          "kind": "terminal",
+          "label": "Return response.json()",
+          "location": {
+            "path": "src/lib/llm/llmService.ts",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "return response.json();",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-789d6f4e9d076be7:e1",
+          "source": "flow-789d6f4e9d076be7:n1",
+          "target": "flow-789d6f4e9d076be7:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e2",
+          "source": "flow-789d6f4e9d076be7:n2",
+          "target": "flow-789d6f4e9d076be7:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e3",
+          "source": "flow-789d6f4e9d076be7:n3",
+          "target": "flow-789d6f4e9d076be7:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e4",
+          "source": "flow-789d6f4e9d076be7:n4",
+          "target": "flow-789d6f4e9d076be7:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e5",
+          "source": "flow-789d6f4e9d076be7:n5",
+          "target": "flow-789d6f4e9d076be7:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e6",
+          "source": "flow-789d6f4e9d076be7:n6",
+          "target": "flow-789d6f4e9d076be7:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e7",
+          "source": "flow-789d6f4e9d076be7:n7",
+          "target": "flow-789d6f4e9d076be7:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e8",
+          "source": "flow-789d6f4e9d076be7:n6",
+          "target": "flow-789d6f4e9d076be7:n9",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-789d6f4e9d076be7:e9",
+          "source": "flow-789d6f4e9d076be7:n9",
+          "target": "flow-789d6f4e9d076be7:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

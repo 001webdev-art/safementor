@@ -1,0 +1,84 @@
+{
+  "path": "src/features/profile/components/ParentLogin.tsx",
+  "language": "typescript",
+  "sha256": "b6548c08b5d4554259b644426d8c2b279f5f4eebf82f5c540e2aa3b637b81df9",
+  "flows": [
+    {
+      "id": "flow-3c9dd4777d33e215",
+      "name": "ParentLogin",
+      "symbol": "src.features.profile.components.ParentLogin:ParentLogin",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentLogin.tsx",
+        "start_line": 1,
+        "end_line": 79
+      },
+      "nodes": [
+        {
+          "id": "flow-3c9dd4777d33e215:n1",
+          "kind": "entry",
+          "label": "Component: ParentLogin",
+          "location": {
+            "path": "src/features/profile/components/ParentLogin.tsx",
+            "start_line": 1,
+            "end_line": 79
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentLogin:ParentLogin",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3c9dd4777d33e215:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex items-center justify-center\"> <div className=\"max-w-md w-full p-8\"> {/* H...",
+          "location": {
+            "path": "src/features/profile/components/ParentLogin.tsx",
+            "start_line": 2,
+            "end_line": 78
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex items-center justify-center\"> <div className=\"max-w-md w-full p-8\"> {/* Header */} <div className=\"border-b-2 border-black pb-6 mb-6 text-center\"> <p className=\"text-lg font-bold mb-2\">SafeMentor</p> <p className=\"text-sm\">Parent Dashboard Login</p> </div> {/* Login Form */} <div className=\"border-2 border-black p-6 mb-6\"> <p className=\"font-bold mb-6\">Sign In</p> <div className=\"space-y-4 mb-6\"> {/* Email Input */} <div> <p className=\"text-xs mb-2\"...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3c9dd4777d33e215:e1",
+          "source": "flow-3c9dd4777d33e215:n1",
+          "target": "flow-3c9dd4777d33e215:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentLogin.tsx",
+          "line": 63,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentLogin.tsx:63 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

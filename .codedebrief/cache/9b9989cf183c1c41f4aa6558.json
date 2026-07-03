@@ -1,0 +1,228 @@
+{
+  "path": "src/features/register/components/FooterActions.tsx",
+  "language": "typescript",
+  "sha256": "2eee0f2173d22a129998a40e81e9e1bad11da199323db7f3d0626ffe00b32a49",
+  "flows": [
+    {
+      "id": "flow-5f7308da24ec7ba5",
+      "name": "FooterActions",
+      "symbol": "src.features.register.components.FooterActions:FooterActions",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/FooterActions.tsx",
+        "start_line": 20,
+        "end_line": 150
+      },
+      "nodes": [
+        {
+          "id": "flow-5f7308da24ec7ba5:n1",
+          "kind": "entry",
+          "label": "Component: FooterActions",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 20,
+            "end_line": 150
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.FooterActions:FooterActions",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Compliance.footer')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.FooterActions:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n3",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "const locale = useLocale()",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.FooterActions:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n4",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 23,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter()",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.FooterActions:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n5",
+          "kind": "action",
+          "label": "Set isValid",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 25,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isValid = complianceData.agreedToTerms && complianceData.agreedToPrivacy && complianceData.isGuardian && complianceData.agreedToPayment",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n6",
+          "kind": "call",
+          "label": "Call t.rich()",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 31,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"space-y-6\"> <div className=\"space-y-4\"> {/* 1. Terms */} <div className=\"flex items-start gap-3\"> <Checkbox id=\"terms-agreement\" isSelected={complianceData.agreedToTerms} onValueChange={(val) => onDataChange('agreedToTerms', val)} color=\"default\" size=\"md\" classNames={{ wrapper: \"group-data-[selected=true]:after:bg-[#889A7F]\" }} /> <label htmlFor=\"terms-agreement\" className=\"text-sm text-gray-700 font-medium cursor-pointer select-none pt-0.5\"> {t.rich('agreement.ter...",
+          "metadata": {
+            "calls": [
+              "t.rich",
+              "t.rich",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.FooterActions:t.rich",
+              "src.features.register.components.FooterActions:t.rich",
+              "src.features.register.components.FooterActions:t",
+              "src.features.register.components.FooterActions:t",
+              "src.features.register.components.FooterActions:t",
+              "src.features.register.components.FooterActions:t",
+              "src.features.register.components.FooterActions:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:n7",
+          "kind": "terminal",
+          "label": "Return ( <section className=\"space-y-6\"> <div className=\"space-y-4\"> {/* 1. Terms */} <div className=\"flex items-start...",
+          "location": {
+            "path": "src/features/register/components/FooterActions.tsx",
+            "start_line": 31,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"space-y-6\"> <div className=\"space-y-4\"> {/* 1. Terms */} <div className=\"flex items-start gap-3\"> <Checkbox id=\"terms-agreement\" isSelected={complianceData.agreedToTerms} onValueChange={(val) => onDataChange('agreedToTerms', val)} color=\"default\" size=\"md\" classNames={{ wrapper: \"group-data-[selected=true]:after:bg-[#889A7F]\" }} /> <label htmlFor=\"terms-agreement\" className=\"text-sm text-gray-700 font-medium cursor-pointer select-none pt-0.5\"> {t.rich('agreement.ter...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5f7308da24ec7ba5:e1",
+          "source": "flow-5f7308da24ec7ba5:n1",
+          "target": "flow-5f7308da24ec7ba5:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:e2",
+          "source": "flow-5f7308da24ec7ba5:n2",
+          "target": "flow-5f7308da24ec7ba5:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:e3",
+          "source": "flow-5f7308da24ec7ba5:n3",
+          "target": "flow-5f7308da24ec7ba5:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:e4",
+          "source": "flow-5f7308da24ec7ba5:n4",
+          "target": "flow-5f7308da24ec7ba5:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:e5",
+          "source": "flow-5f7308da24ec7ba5:n5",
+          "target": "flow-5f7308da24ec7ba5:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f7308da24ec7ba5:e6",
+          "source": "flow-5f7308da24ec7ba5:n6",
+          "target": "flow-5f7308da24ec7ba5:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

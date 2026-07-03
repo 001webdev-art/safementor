@@ -1,0 +1,175 @@
+{
+  "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+  "language": "typescript",
+  "sha256": "2937b1d5a9c6d1ad78f5c0b7aeb12dfe338e3b475a03a80a8ff0d303bbc80f72",
+  "flows": [
+    {
+      "id": "flow-aa291b0b43a197b9",
+      "name": "BillingInformationForm",
+      "symbol": "src.features.dashboard.forms.BillingInformationForm:BillingInformationForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+        "start_line": 7,
+        "end_line": 28
+      },
+      "nodes": [
+        {
+          "id": "flow-aa291b0b43a197b9:n1",
+          "kind": "entry",
+          "label": "Component: BillingInformationForm",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+            "start_line": 7,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.BillingInformationForm:BillingInformationForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:n2",
+          "kind": "decision",
+          "label": "!t",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "!t",
+          "metadata": {
+            "condition": "!t",
+            "domain": "",
+            "values": [],
+            "subject": "t",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:n3",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:n4",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+            "start_line": 10,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden animate-in slide-in-from-top-2 duration-300\"> <div className=\"bg-[#889A7F]/5 px-6 py-3 border-b border-gray-100 flex items-center justify-between\"> <span className=\"font-bold text-sm text-gray-900\">{t('billing.title')}</span> <Chip size=\"sm\" className=\"bg-[#889A7F] text-white font-bold h-5 px-2\">Family</Chip> </div> <div className=\"px-6 py-5 flex justify-between items-center\"> <div className=\"flex fle...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.BillingInformationForm:t",
+              "src.features.dashboard.forms.BillingInformationForm:t",
+              "src.features.dashboard.forms.BillingInformationForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden animate-in slide-in-from...",
+          "location": {
+            "path": "src/features/dashboard/forms/BillingInformationForm.tsx",
+            "start_line": 10,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden animate-in slide-in-from-top-2 duration-300\"> <div className=\"bg-[#889A7F]/5 px-6 py-3 border-b border-gray-100 flex items-center justify-between\"> <span className=\"font-bold text-sm text-gray-900\">{t('billing.title')}</span> <Chip size=\"sm\" className=\"bg-[#889A7F] text-white font-bold h-5 px-2\">Family</Chip> </div> <div className=\"px-6 py-5 flex justify-between items-center\"> <div className=\"flex fle...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-aa291b0b43a197b9:e1",
+          "source": "flow-aa291b0b43a197b9:n1",
+          "target": "flow-aa291b0b43a197b9:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:e2",
+          "source": "flow-aa291b0b43a197b9:n2",
+          "target": "flow-aa291b0b43a197b9:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:e3",
+          "source": "flow-aa291b0b43a197b9:n2",
+          "target": "flow-aa291b0b43a197b9:n4",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-aa291b0b43a197b9:e4",
+          "source": "flow-aa291b0b43a197b9:n4",
+          "target": "flow-aa291b0b43a197b9:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

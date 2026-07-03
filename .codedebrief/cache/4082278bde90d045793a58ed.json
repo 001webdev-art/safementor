@@ -1,0 +1,423 @@
+{
+  "path": "src/app/api/access/route.ts",
+  "language": "typescript",
+  "sha256": "58c06fda1e20f4a773de427e4e011239f4fa8dda1d2485c76d86a02e96553362",
+  "flows": [
+    {
+      "id": "flow-d6e33b207bbec5b7",
+      "name": "POST",
+      "symbol": "src.app.api.access.route:POST",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "route",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/api/access/route.ts",
+        "start_line": 3,
+        "end_line": 29
+      },
+      "nodes": [
+        {
+          "id": "flow-d6e33b207bbec5b7:n1",
+          "kind": "entry",
+          "label": "Route: POST",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 3,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.api.access.route:POST",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n2",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 4,
+            "end_line": 28
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const { password } = await req.json(); // Hardcoded password for pilot phase const VALID_PASSWORD = process.env.SITE_PASSWORD || 'safe2025'; if (password === VALID_PASSWORD) { const response = NextResponse.json({ success: true }); // Set cookie that expires in 30 days response.cookies.set('site-access', 'true', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 30 // 30 days }); return response; } return NextResponse.json({....",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n3",
+          "kind": "call",
+          "label": "Call req.json()",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { password } = await req.json();",
+          "metadata": {
+            "calls": [
+              "req.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.access.route:req.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n4",
+          "kind": "action",
+          "label": "// Hardcoded password for pilot phase",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Hardcoded password for pilot phase",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n5",
+          "kind": "action",
+          "label": "Set VALID_PASSWORD",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const VALID_PASSWORD = process.env.SITE_PASSWORD || 'safe2025';",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n6",
+          "kind": "decision",
+          "label": "password === VALID_PASSWORD",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "password === VALID_PASSWORD",
+          "metadata": {
+            "condition": "password === VALID_PASSWORD",
+            "domain": "",
+            "values": [
+              "VALID_PASSWORD"
+            ],
+            "subject": "password",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n7",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const response = NextResponse.json({ success: true });",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.access.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n8",
+          "kind": "action",
+          "label": "// Set cookie that expires in 30 days",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Set cookie that expires in 30 days",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n9",
+          "kind": "call",
+          "label": "Call response.cookies.set()",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 14,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "response.cookies.set('site-access', 'true', { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', path: '/', maxAge: 60 * 60 * 24 * 30 // 30 days });",
+          "metadata": {
+            "calls": [
+              "response.cookies.set"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.access.route:response.cookies.set"
+            ]
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n10",
+          "kind": "terminal",
+          "label": "Return response",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "return response;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n11",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ success: false }, { status: 401 });",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.access.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n12",
+          "kind": "terminal",
+          "label": "Return NextResponse.json({ success: false }, { status: 401 })",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ success: false }, { status: 401 });",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n13",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ success: false }, { status: 500 });",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.access.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:n14",
+          "kind": "terminal",
+          "label": "Return NextResponse.json({ success: false }, { status: 500 })",
+          "location": {
+            "path": "src/app/api/access/route.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ success: false }, { status: 500 });",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d6e33b207bbec5b7:e1",
+          "source": "flow-d6e33b207bbec5b7:n1",
+          "target": "flow-d6e33b207bbec5b7:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e2",
+          "source": "flow-d6e33b207bbec5b7:n2",
+          "target": "flow-d6e33b207bbec5b7:n3",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e3",
+          "source": "flow-d6e33b207bbec5b7:n3",
+          "target": "flow-d6e33b207bbec5b7:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e4",
+          "source": "flow-d6e33b207bbec5b7:n4",
+          "target": "flow-d6e33b207bbec5b7:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e5",
+          "source": "flow-d6e33b207bbec5b7:n5",
+          "target": "flow-d6e33b207bbec5b7:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e6",
+          "source": "flow-d6e33b207bbec5b7:n6",
+          "target": "flow-d6e33b207bbec5b7:n7",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e7",
+          "source": "flow-d6e33b207bbec5b7:n7",
+          "target": "flow-d6e33b207bbec5b7:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e8",
+          "source": "flow-d6e33b207bbec5b7:n8",
+          "target": "flow-d6e33b207bbec5b7:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e9",
+          "source": "flow-d6e33b207bbec5b7:n9",
+          "target": "flow-d6e33b207bbec5b7:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e10",
+          "source": "flow-d6e33b207bbec5b7:n6",
+          "target": "flow-d6e33b207bbec5b7:n11",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e11",
+          "source": "flow-d6e33b207bbec5b7:n11",
+          "target": "flow-d6e33b207bbec5b7:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e12",
+          "source": "flow-d6e33b207bbec5b7:n2",
+          "target": "flow-d6e33b207bbec5b7:n13",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d6e33b207bbec5b7:e13",
+          "source": "flow-d6e33b207bbec5b7:n13",
+          "target": "flow-d6e33b207bbec5b7:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

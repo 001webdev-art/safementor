@@ -1,0 +1,77 @@
+{
+  "path": "src/app/layout.tsx",
+  "language": "typescript",
+  "sha256": "833a8d983c65b2ea6021eaa604beceec6171298f78c280edcad8c9c7ddd62c7c",
+  "flows": [
+    {
+      "id": "flow-dfeed5de7596c3b8",
+      "name": "RootLayout",
+      "symbol": "src.app.layout:RootLayout",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/layout.tsx",
+        "start_line": 1,
+        "end_line": 7
+      },
+      "nodes": [
+        {
+          "id": "flow-dfeed5de7596c3b8:n1",
+          "kind": "entry",
+          "label": "Component: RootLayout",
+          "location": {
+            "path": "src/app/layout.tsx",
+            "start_line": 1,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.layout:RootLayout",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-dfeed5de7596c3b8:n2",
+          "kind": "terminal",
+          "label": "Return children",
+          "location": {
+            "path": "src/app/layout.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "return children",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-dfeed5de7596c3b8:e1",
+          "source": "flow-dfeed5de7596c3b8:n1",
+          "target": "flow-dfeed5de7596c3b8:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

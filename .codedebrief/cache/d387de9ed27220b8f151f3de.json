@@ -1,0 +1,424 @@
+{
+  "path": "src/app/[locale]/layout.tsx",
+  "language": "typescript",
+  "sha256": "e7ffeeb9a544eb8da7cc156368f3b3ac4f6a06ad2b81f5ab8fb7aed5f4a4c9c8",
+  "flows": [
+    {
+      "id": "flow-fa524862dbbb0412",
+      "name": "generateStaticParams",
+      "symbol": "src.app.[locale].layout:generateStaticParams",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/layout.tsx",
+        "start_line": 41,
+        "end_line": 43
+      },
+      "nodes": [
+        {
+          "id": "flow-fa524862dbbb0412:n1",
+          "kind": "entry",
+          "label": "Component: generateStaticParams",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 41,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].layout:generateStaticParams",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fa524862dbbb0412:n2",
+          "kind": "call",
+          "label": "Call locales.map()",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "return locales.map((locale) => ({ locale }))",
+          "metadata": {
+            "calls": [
+              "locales.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].layout:locales.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-fa524862dbbb0412:n3",
+          "kind": "terminal",
+          "label": "Return locales.map((locale) => ({ locale }))",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "return locales.map((locale) => ({ locale }))",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-fa524862dbbb0412:e1",
+          "source": "flow-fa524862dbbb0412:n1",
+          "target": "flow-fa524862dbbb0412:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fa524862dbbb0412:e2",
+          "source": "flow-fa524862dbbb0412:n2",
+          "target": "flow-fa524862dbbb0412:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-665a85d795721d09",
+      "name": "LocaleLayout",
+      "symbol": "src.app.[locale].layout:LocaleLayout",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/[locale]/layout.tsx",
+        "start_line": 47,
+        "end_line": 95
+      },
+      "nodes": [
+        {
+          "id": "flow-665a85d795721d09:n1",
+          "kind": "entry",
+          "label": "Component: LocaleLayout",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 47,
+            "end_line": 95
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.[locale].layout:LocaleLayout",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n2",
+          "kind": "action",
+          "label": "Set { locale }",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 54,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { locale } = await params",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n3",
+          "kind": "action",
+          "label": "// Valida o locale",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 56,
+            "end_line": 56
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Valida o locale",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n4",
+          "kind": "action",
+          "label": "Handle internal condition: !locales.includes(locale as any)",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 57,
+            "end_line": 59
+          },
+          "evidence": "INFERRED",
+          "detail": "if (!locales.includes(locale as any)) { notFound() }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n5",
+          "kind": "action",
+          "label": "// Carrega as mensagens",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Carrega as mensagens",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n6",
+          "kind": "action",
+          "label": "Set messages",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 62,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "let messages",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n7",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 63,
+            "end_line": 68
+          },
+          "evidence": "INFERRED",
+          "detail": "try { messages = await getMessages({ locale }) } catch (error) { console.error(`Failed to load messages for locale: ${locale}`) notFound() }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n8",
+          "kind": "call",
+          "label": "Call getMessages()",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "messages = await getMessages({ locale })",
+          "metadata": {
+            "calls": [
+              "getMessages"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].layout:getMessages"
+            ]
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n9",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 66,
+            "end_line": 66
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error(`Failed to load messages for locale: ${locale}`)",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].layout:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n10",
+          "kind": "call",
+          "label": "Call notFound()",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 67,
+            "end_line": 67
+          },
+          "evidence": "VERIFIED",
+          "detail": "notFound()",
+          "metadata": {
+            "calls": [
+              "notFound"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.[locale].layout:notFound"
+            ]
+          }
+        },
+        {
+          "id": "flow-665a85d795721d09:n11",
+          "kind": "terminal",
+          "label": "Return ( <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${libreBaskerville.variable} ${sour...",
+          "location": {
+            "path": "src/app/[locale]/layout.tsx",
+            "start_line": 70,
+            "end_line": 94
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${libreBaskerville.variable} ${sourceSans3.variable}`}> <body className={sourceSans3.className}> <script dangerouslySetInnerHTML={{ __html: ` window.deferredPWAPrompt = null; window.addEventListener('beforeinstallprompt', (e) => { console.log('Global beforeinstallprompt captured'); e.preventDefault(); window.deferredPWAPrompt = e; // Dispatch a custom event to notify any mounted hooks window.dispatchEvent(new Cu...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-665a85d795721d09:e1",
+          "source": "flow-665a85d795721d09:n1",
+          "target": "flow-665a85d795721d09:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e2",
+          "source": "flow-665a85d795721d09:n2",
+          "target": "flow-665a85d795721d09:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e3",
+          "source": "flow-665a85d795721d09:n3",
+          "target": "flow-665a85d795721d09:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e4",
+          "source": "flow-665a85d795721d09:n4",
+          "target": "flow-665a85d795721d09:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e5",
+          "source": "flow-665a85d795721d09:n5",
+          "target": "flow-665a85d795721d09:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e6",
+          "source": "flow-665a85d795721d09:n6",
+          "target": "flow-665a85d795721d09:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e7",
+          "source": "flow-665a85d795721d09:n7",
+          "target": "flow-665a85d795721d09:n8",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e8",
+          "source": "flow-665a85d795721d09:n7",
+          "target": "flow-665a85d795721d09:n9",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e9",
+          "source": "flow-665a85d795721d09:n9",
+          "target": "flow-665a85d795721d09:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e10",
+          "source": "flow-665a85d795721d09:n8",
+          "target": "flow-665a85d795721d09:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-665a85d795721d09:e11",
+          "source": "flow-665a85d795721d09:n10",
+          "target": "flow-665a85d795721d09:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

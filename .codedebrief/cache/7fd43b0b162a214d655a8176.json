@@ -1,0 +1,9 @@
+{
+  "path": "src/components/index.ts",
+  "language": "typescript",
+  "sha256": "4b2423e4cc1d8cac01f65410c6f52b2b00dbfecce6b0ae00aa061f892f13d95d",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

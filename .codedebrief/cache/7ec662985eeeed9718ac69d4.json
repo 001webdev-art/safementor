@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/supabase/index.ts",
+  "language": "typescript",
+  "sha256": "0c35f1d2b50a99a458274b02e7148f8ef8838d4181e4e883bb46613b7d6ed2a9",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

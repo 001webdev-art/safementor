@@ -1,0 +1,77 @@
+{
+  "path": "src/features/dashboard/components/ui/CollapsibleCard.tsx",
+  "language": "typescript",
+  "sha256": "d81279b682e35782935098dd273a6aa3bd0b3cb9417e7847d1e33a080fcdbd6c",
+  "flows": [
+    {
+      "id": "flow-cd4dd39d1600465a",
+      "name": "CollapsibleCard",
+      "symbol": "src.features.dashboard.components.ui.CollapsibleCard:CollapsibleCard",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/ui/CollapsibleCard.tsx",
+        "start_line": 8,
+        "end_line": 39
+      },
+      "nodes": [
+        {
+          "id": "flow-cd4dd39d1600465a:n1",
+          "kind": "entry",
+          "label": "Component: CollapsibleCard",
+          "location": {
+            "path": "src/features/dashboard/components/ui/CollapsibleCard.tsx",
+            "start_line": 8,
+            "end_line": 39
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.ui.CollapsibleCard:CollapsibleCard",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-cd4dd39d1600465a:n2",
+          "kind": "terminal",
+          "label": "Return ( <Card shadow=\"sm\" className=\"p-4 border-none bg-white/70 backdrop-blur-md\"> <CardHeader className=\"flex gap-3...",
+          "location": {
+            "path": "src/features/dashboard/components/ui/CollapsibleCard.tsx",
+            "start_line": 16,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <Card shadow=\"sm\" className=\"p-4 border-none bg-white/70 backdrop-blur-md\"> <CardHeader className=\"flex gap-3 pb-2 cursor-pointer hover:bg-default-100/50 transition-colors rounded-xl\" onClick={onToggle} > {icon} <p className=\"text-lg font-bold flex-1\">{title}</p> <ChevronDown className={`transition-transform duration-300 ${isCollapsed ? '-rotate-90' : ''}`} size={20} /> </CardHeader> {!isCollapsed && ( <> <Divider /> <CardBody className=\"pt-4 overflow-visible\"> {children} </CardBody> <...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-cd4dd39d1600465a:e1",
+          "source": "flow-cd4dd39d1600465a:n1",
+          "target": "flow-cd4dd39d1600465a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

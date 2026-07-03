@@ -1,0 +1,110 @@
+{
+  "path": "src/features/dashboard/sections/HelpSection.tsx",
+  "language": "typescript",
+  "sha256": "f96e280c4c039fcff764efebdabb1d21bbb0b8e2c17420ea35537bba1b96afa4",
+  "flows": [
+    {
+      "id": "flow-02044fe807bbea1a",
+      "name": "HelpSection",
+      "symbol": "src.features.dashboard.sections.HelpSection:HelpSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/sections/HelpSection.tsx",
+        "start_line": 12,
+        "end_line": 27
+      },
+      "nodes": [
+        {
+          "id": "flow-02044fe807bbea1a:n1",
+          "kind": "entry",
+          "label": "Component: HelpSection",
+          "location": {
+            "path": "src/features/dashboard/sections/HelpSection.tsx",
+            "start_line": 12,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.sections.HelpSection:HelpSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-02044fe807bbea1a:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/sections/HelpSection.tsx",
+            "start_line": 13,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <h2 className=\"text-2xl font-bold\">{t('sections.help')}</h2> <Card className=\"p-6\"> <div className=\"flex items-center gap-4\"> <HelpCircle className=\"text-primary\" size={24} /> <p className=\"text-default-600\">{t('content.helpDescription')}</p> </div> <Button color=\"primary\" variant=\"flat\" className=\"mt-6 font-semibold\"> {t('content.supportTicket')} </Button> </Card> </div> );",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.sections.HelpSection:t",
+              "src.features.dashboard.sections.HelpSection:t",
+              "src.features.dashboard.sections.HelpSection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-02044fe807bbea1a:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <h2 className=\"text-2xl font-bold\">{t('sections.he...",
+          "location": {
+            "path": "src/features/dashboard/sections/HelpSection.tsx",
+            "start_line": 13,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"space-y-6 animate-in fade-in duration-500\"> <h2 className=\"text-2xl font-bold\">{t('sections.help')}</h2> <Card className=\"p-6\"> <div className=\"flex items-center gap-4\"> <HelpCircle className=\"text-primary\" size={24} /> <p className=\"text-default-600\">{t('content.helpDescription')}</p> </div> <Button color=\"primary\" variant=\"flat\" className=\"mt-6 font-semibold\"> {t('content.supportTicket')} </Button> </Card> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-02044fe807bbea1a:e1",
+          "source": "flow-02044fe807bbea1a:n1",
+          "target": "flow-02044fe807bbea1a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-02044fe807bbea1a:e2",
+          "source": "flow-02044fe807bbea1a:n2",
+          "target": "flow-02044fe807bbea1a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

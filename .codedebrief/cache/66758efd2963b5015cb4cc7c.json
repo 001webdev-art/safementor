@@ -1,0 +1,139 @@
+{
+  "path": "src/features/register/components/PrivacySidebar.tsx",
+  "language": "typescript",
+  "sha256": "bd9074ba034e6f10b8a758b34cf6305cfac9c15c352732911a6ee3579c7279ac",
+  "flows": [
+    {
+      "id": "flow-d1ef582760450280",
+      "name": "PrivacySidebar",
+      "symbol": "src.features.register.components.PrivacySidebar:PrivacySidebar",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/PrivacySidebar.tsx",
+        "start_line": 6,
+        "end_line": 31
+      },
+      "nodes": [
+        {
+          "id": "flow-d1ef582760450280:n1",
+          "kind": "entry",
+          "label": "Component: PrivacySidebar",
+          "location": {
+            "path": "src/features/register/components/PrivacySidebar.tsx",
+            "start_line": 6,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.PrivacySidebar:PrivacySidebar",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-d1ef582760450280:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/components/PrivacySidebar.tsx",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Compliance.sidebar')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.PrivacySidebar:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-d1ef582760450280:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/PrivacySidebar.tsx",
+            "start_line": 9,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <aside className=\"col-span-1 bg-[#889A7F] text-white p-10 flex flex-col justify-between rounded-l-2xl\"> <div> <div className=\"w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-6\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <h1 className=\"text-2xl font-bold mb-4\"> {t('title')} </h1> <p className=\"text-sm leading-relaxed text-white/90 font-medium\"> {t('description')} </p> </div> <div className=\"text-sm text-white/80 font-medium flex items-center gap-2\"> <Shield s...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.PrivacySidebar:t",
+              "src.features.register.components.PrivacySidebar:t",
+              "src.features.register.components.PrivacySidebar:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-d1ef582760450280:n4",
+          "kind": "terminal",
+          "label": "Return ( <aside className=\"col-span-1 bg-[#889A7F] text-white p-10 flex flex-col justify-between rounded-l-2xl\"> <div>...",
+          "location": {
+            "path": "src/features/register/components/PrivacySidebar.tsx",
+            "start_line": 9,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <aside className=\"col-span-1 bg-[#889A7F] text-white p-10 flex flex-col justify-between rounded-l-2xl\"> <div> <div className=\"w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-6\"> <Shield className=\"w-6 h-6 text-white\" /> </div> <h1 className=\"text-2xl font-bold mb-4\"> {t('title')} </h1> <p className=\"text-sm leading-relaxed text-white/90 font-medium\"> {t('description')} </p> </div> <div className=\"text-sm text-white/80 font-medium flex items-center gap-2\"> <Shield s...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-d1ef582760450280:e1",
+          "source": "flow-d1ef582760450280:n1",
+          "target": "flow-d1ef582760450280:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d1ef582760450280:e2",
+          "source": "flow-d1ef582760450280:n2",
+          "target": "flow-d1ef582760450280:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-d1ef582760450280:e3",
+          "source": "flow-d1ef582760450280:n3",
+          "target": "flow-d1ef582760450280:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

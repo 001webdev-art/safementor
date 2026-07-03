@@ -1,0 +1,196 @@
+{
+  "path": "src/features/chat/hooks/useAuth.ts",
+  "language": "typescript",
+  "sha256": "e6ac193b7b20e729a1428259ade5fbd8e76afec06c02382a938e75882f2ae733",
+  "flows": [
+    {
+      "id": "flow-75a9f0eddfbcd007",
+      "name": "useAuth",
+      "symbol": "src.features.chat.hooks.useAuth:useAuth",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/hooks/useAuth.ts",
+        "start_line": 7,
+        "end_line": 29
+      },
+      "nodes": [
+        {
+          "id": "flow-75a9f0eddfbcd007:n1",
+          "kind": "entry",
+          "label": "Hook: useAuth",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 7,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.hooks.useAuth:useAuth",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [user, setUser] = useState<User | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useAuth:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [loading, setLoading] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useAuth:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:n4",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.hooks.useAuth:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:n5",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 12,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const getSession = async () => { const { data: { session } } = await supabase.auth.getSession(); setUser(session?.user ?? null); setLoading(false); }; getSession(); const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => { setUser(session?.user ?? null); }); return () => subscription.unsubscribe(); }, [supabase]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useAuth:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:n6",
+          "kind": "terminal",
+          "label": "Return { user, loading }",
+          "location": {
+            "path": "src/features/chat/hooks/useAuth.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { user, loading };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-75a9f0eddfbcd007:e1",
+          "source": "flow-75a9f0eddfbcd007:n1",
+          "target": "flow-75a9f0eddfbcd007:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:e2",
+          "source": "flow-75a9f0eddfbcd007:n2",
+          "target": "flow-75a9f0eddfbcd007:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:e3",
+          "source": "flow-75a9f0eddfbcd007:n3",
+          "target": "flow-75a9f0eddfbcd007:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:e4",
+          "source": "flow-75a9f0eddfbcd007:n4",
+          "target": "flow-75a9f0eddfbcd007:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-75a9f0eddfbcd007:e5",
+          "source": "flow-75a9f0eddfbcd007:n5",
+          "target": "flow-75a9f0eddfbcd007:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

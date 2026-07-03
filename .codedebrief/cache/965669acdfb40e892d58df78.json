@@ -1,0 +1,158 @@
+{
+  "path": "src/features/auth/components/AccessLegalModal.tsx",
+  "language": "typescript",
+  "sha256": "c487b1f3a73c50e3e48ad8a942734f8cbedcbc6f589c264381b4be4bd79ae0a6",
+  "flows": [
+    {
+      "id": "flow-0dff82400ac1280b",
+      "name": "AccessLegalModal",
+      "symbol": "src.features.auth.components.AccessLegalModal:AccessLegalModal",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/auth/components/AccessLegalModal.tsx",
+        "start_line": 12,
+        "end_line": 55
+      },
+      "nodes": [
+        {
+          "id": "flow-0dff82400ac1280b:n1",
+          "kind": "entry",
+          "label": "Component: AccessLegalModal",
+          "location": {
+            "path": "src/features/auth/components/AccessLegalModal.tsx",
+            "start_line": 12,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.auth.components.AccessLegalModal:AccessLegalModal",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-0dff82400ac1280b:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/auth/components/AccessLegalModal.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('AccessLegal');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.auth.components.AccessLegalModal:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-0dff82400ac1280b:n3",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/auth/components/AccessLegalModal.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tImprint = useTranslations('Imprint');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.auth.components.AccessLegalModal:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-0dff82400ac1280b:n4",
+          "kind": "action",
+          "label": "// fallback to general imprint for details if needed",
+          "location": {
+            "path": "src/features/auth/components/AccessLegalModal.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "// fallback to general imprint for details if needed",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-0dff82400ac1280b:n5",
+          "kind": "terminal",
+          "label": "Return ( <Modal isOpen={isOpen} onOpenChange={onOpenChange} scrollBehavior=\"inside\" size=\"2xl\"> <ModalContent> {(onClos...",
+          "location": {
+            "path": "src/features/auth/components/AccessLegalModal.tsx",
+            "start_line": 16,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <Modal isOpen={isOpen} onOpenChange={onOpenChange} scrollBehavior=\"inside\" size=\"2xl\"> <ModalContent> {(onClose) => ( <> <ModalHeader className=\"flex flex-col gap-1 text-[#4A4540]\"> {t('modalTitle')} </ModalHeader> <ModalBody className=\"text-[#4A4540] opacity-80\"> <div className=\"space-y-6\"> <p>{t('intro')}</p> <div> <h3 className=\"font-bold text-lg mb-2\">{tImprint('title')}</h3> <p>{t('provider')}</p> <p>{t('address')}</p> <div className=\"mt-2\" dangerouslySetInnerHTML={{ __html: t('co...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-0dff82400ac1280b:e1",
+          "source": "flow-0dff82400ac1280b:n1",
+          "target": "flow-0dff82400ac1280b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0dff82400ac1280b:e2",
+          "source": "flow-0dff82400ac1280b:n2",
+          "target": "flow-0dff82400ac1280b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0dff82400ac1280b:e3",
+          "source": "flow-0dff82400ac1280b:n3",
+          "target": "flow-0dff82400ac1280b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-0dff82400ac1280b:e4",
+          "source": "flow-0dff82400ac1280b:n4",
+          "target": "flow-0dff82400ac1280b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

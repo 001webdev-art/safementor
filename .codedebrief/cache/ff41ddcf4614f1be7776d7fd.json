@@ -1,0 +1,77 @@
+{
+  "path": "src/features/profile/components/ParentChildConnection.tsx",
+  "language": "typescript",
+  "sha256": "fd11a999badf455e88864cb85d157e3ffe69d94237e973a246aa097537785301",
+  "flows": [
+    {
+      "id": "flow-cba57421d6473513",
+      "name": "ParentChildConnection",
+      "symbol": "src.features.profile.components.ParentChildConnection:ParentChildConnection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentChildConnection.tsx",
+        "start_line": 1,
+        "end_line": 103
+      },
+      "nodes": [
+        {
+          "id": "flow-cba57421d6473513:n1",
+          "kind": "entry",
+          "label": "Component: ParentChildConnection",
+          "location": {
+            "path": "src/features/profile/components/ParentChildConnection.tsx",
+            "start_line": 1,
+            "end_line": 103
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentChildConnection:ParentChildConnection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-cba57421d6473513:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex\"> {/* Sidebar Navigation */} <div className=\"w-48 border-r-2 border-black...",
+          "location": {
+            "path": "src/features/profile/components/ParentChildConnection.tsx",
+            "start_line": 2,
+            "end_line": 102
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex\"> {/* Sidebar Navigation */} <div className=\"w-48 border-r-2 border-black p-4\"> <div className=\"border-b-2 border-black pb-4 mb-4\"> <p className=\"text-sm font-bold\">SafeMentor</p> <p className=\"text-xs text-gray-600\">Parent Dashboard</p> </div> <div className=\"space-y-2\"> <div className=\"border border-black p-2\"> <p className=\"text-xs\">Overview</p> </div> <div className=\"bg-gray-200 border border-black p-2\"> <p className=\"text-xs font-bold\">Child Co...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-cba57421d6473513:e1",
+          "source": "flow-cba57421d6473513:n1",
+          "target": "flow-cba57421d6473513:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

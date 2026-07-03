@@ -1,0 +1,9 @@
+{
+  "path": "tailwind.config.ts",
+  "language": "typescript",
+  "sha256": "b0766a18044176d5152e3bb331a81a75ff84167f1917c1dc8287b1ac808ef992",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

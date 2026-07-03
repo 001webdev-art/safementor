@@ -1,0 +1,9 @@
+{
+  "path": "eslint.config.mjs",
+  "language": "javascript",
+  "sha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

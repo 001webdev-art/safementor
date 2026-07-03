@@ -1,0 +1,9 @@
+{
+  "path": "src/features/chat/index.ts",
+  "language": "typescript",
+  "sha256": "35e835bdce8a44983323247e356ae8e9b7139868a8d9c08aad53aa6122ad30b4",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

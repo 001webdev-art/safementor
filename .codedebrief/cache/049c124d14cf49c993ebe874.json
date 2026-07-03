@@ -1,0 +1,233 @@
+{
+  "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+  "language": "typescript",
+  "sha256": "65c0e5e7b4cbf3546e26e82afdb6e0b3527f7895a13b7b8d2280c39dbbce9606",
+  "flows": [
+    {
+      "id": "flow-ef7a8f36f09242ac",
+      "name": "PrivacyPage",
+      "symbol": "src.features.landing.components.legal.PrivacyPage:PrivacyPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+        "start_line": 5,
+        "end_line": 88
+      },
+      "nodes": [
+        {
+          "id": "flow-ef7a8f36f09242ac:n1",
+          "kind": "entry",
+          "label": "Component: PrivacyPage",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 5,
+            "end_line": 88
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.legal.PrivacyPage:PrivacyPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Privacy')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.legal.PrivacyPage:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n3",
+          "kind": "action",
+          "label": "// List all sections and sub-sections",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "// List all sections and sub-sections",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n4",
+          "kind": "action",
+          "label": "Set allSections",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 9,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const allSections = [ '1', '2', '3', '3a', '3b', '4', '4a', '4b', '4c', '4d', '4e', '5', '6', '7', '8', '9', '10', '11', '12', '13' ];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n5",
+          "kind": "action",
+          "label": "// Sections that have an \"items\" array",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Sections that have an \"items\" array",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n6",
+          "kind": "action",
+          "label": "Set structuredSections",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const structuredSections = ['2', '9', '13'];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n7",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 16,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen bg-[#FDFBF8] text-[#4A4540]\"> <Navigation /> <main className=\"max-w-4xl mx-auto px-6 md:px-12 lg:px-20 py-32 md:py-40\"> <h1 className=\"font-serif text-3xl md:text-5xl font-bold mb-4 text-[#4A4540]\">{t('title')}</h1> <p className=\"opacity-60 mb-12\">{t('lastUpdated')}</p> <div className=\"prose prose-stone max-w-none text-[#4A4540] opacity-90 leading-relaxed font-sans\"> <p className=\"text-lg mb-8 font-medium whitespace-pre-line\">{t('intro')}</p> <div className...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "allSections.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.legal.PrivacyPage:t",
+              "src.features.landing.components.legal.PrivacyPage:t",
+              "src.features.landing.components.legal.PrivacyPage:t",
+              "src.features.landing.components.legal.PrivacyPage:allSections.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:n8",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen bg-[#FDFBF8] text-[#4A4540]\"> <Navigation /> <main className=\"max-w-4xl mx-auto p...",
+          "location": {
+            "path": "src/features/landing/components/legal/PrivacyPage.tsx",
+            "start_line": 16,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen bg-[#FDFBF8] text-[#4A4540]\"> <Navigation /> <main className=\"max-w-4xl mx-auto px-6 md:px-12 lg:px-20 py-32 md:py-40\"> <h1 className=\"font-serif text-3xl md:text-5xl font-bold mb-4 text-[#4A4540]\">{t('title')}</h1> <p className=\"opacity-60 mb-12\">{t('lastUpdated')}</p> <div className=\"prose prose-stone max-w-none text-[#4A4540] opacity-90 leading-relaxed font-sans\"> <p className=\"text-lg mb-8 font-medium whitespace-pre-line\">{t('intro')}</p> <div className...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ef7a8f36f09242ac:e1",
+          "source": "flow-ef7a8f36f09242ac:n1",
+          "target": "flow-ef7a8f36f09242ac:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e2",
+          "source": "flow-ef7a8f36f09242ac:n2",
+          "target": "flow-ef7a8f36f09242ac:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e3",
+          "source": "flow-ef7a8f36f09242ac:n3",
+          "target": "flow-ef7a8f36f09242ac:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e4",
+          "source": "flow-ef7a8f36f09242ac:n4",
+          "target": "flow-ef7a8f36f09242ac:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e5",
+          "source": "flow-ef7a8f36f09242ac:n5",
+          "target": "flow-ef7a8f36f09242ac:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e6",
+          "source": "flow-ef7a8f36f09242ac:n6",
+          "target": "flow-ef7a8f36f09242ac:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ef7a8f36f09242ac:e7",
+          "source": "flow-ef7a8f36f09242ac:n7",
+          "target": "flow-ef7a8f36f09242ac:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

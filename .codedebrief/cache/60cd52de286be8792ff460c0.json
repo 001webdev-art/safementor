@@ -1,0 +1,2405 @@
+{
+  "path": "src/features/profile/components/ParentDashboardUI.tsx",
+  "language": "typescript",
+  "sha256": "e068cccf9b75df961b276e12baae6e08aa286026a88dc7b819e5405907b149a8",
+  "flows": [
+    {
+      "id": "flow-4eea3c0ad5d9634a",
+      "name": "PrivacyConsentPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:PrivacyConsentPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 18,
+        "end_line": 306
+      },
+      "nodes": [
+        {
+          "id": "flow-4eea3c0ad5d9634a:n1",
+          "kind": "entry",
+          "label": "Component: PrivacyConsentPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 18,
+            "end_line": 306
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:PrivacyConsentPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [step, setStep] = useState<'vpc' | 'agreements'>('vpc');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [verificationMethod, setVerificationMethod] = useState<string | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [phoneNumber, setPhoneNumber] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 22,
+            "end_line": 22
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [countryCode, setCountryCode] = useState('+1');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 23,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [agreements, setAgreements] = useState({ dataMinimization: false, safetyProtocols: false, nonFriend: false });",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n8",
+          "kind": "action",
+          "label": "Set handleCreateAccount",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 30,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleCreateAccount = async () => { const allAgreed = Object.values(agreements).every(v => v); if (!allAgreed) return; setIsLoading(true); try { // Use the service to verify and finalize account creation await AuthService.verifyIdentity(verificationMethod || 'unknown', { phoneNumber: verificationMethod === 'sms' ? phoneNumber : undefined, countryCode: verificationMethod === 'sms' ? countryCode : undefined }); onConfirm(); } catch (err) { console.error(err); // Handle error UI if needed }....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n9",
+          "kind": "action",
+          "label": "Set VerificationCard",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 50,
+            "end_line": 74
+          },
+          "evidence": "VERIFIED",
+          "detail": "const VerificationCard = ({ id, icon: Icon, title, desc }: any) => ( <button onClick={() => setVerificationMethod(id)} className={`relative w-full text-left p-4 rounded-xl border-2 transition-all duration-200 ${ verificationMethod === id ? 'border-[#889A7F] bg-[#F5F7F4]' : 'border-gray-200 bg-white hover:border-[#BFC9B9] hover:bg-gray-50' }`} > <div className=\"flex items-start gap-4\"> <div className={`p-3 rounded-lg ${verificationMethod === id ? 'bg-[#889A7F] text-white' : 'bg-gray-100 text-gra...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n10",
+          "kind": "decision",
+          "label": "step === 'vpc'",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 76,
+            "end_line": 76
+          },
+          "evidence": "VERIFIED",
+          "detail": "step === 'vpc'",
+          "metadata": {
+            "condition": "step === 'vpc'",
+            "domain": "",
+            "values": [
+              "vpc"
+            ],
+            "subject": "step",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n11",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 77,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max-w-2xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col\"> <div className=\"p-8 border-b border-gray-100\"> <div className=\"flex items-center gap-3 mb-2\"> <div className=\"w-10 h-10 bg-[#E8EDE6] rounded-full flex items-center justify-center\"> <Shield className=\"w-5 h-5 text-[#889A7F]\" /> </div> <h2 className=\"text-xl font-bold text-gray-900\">Verif...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n12",
+          "kind": "call",
+          "label": "Call Object.values(agreements).every()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 152,
+            "end_line": 305
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max-w-4xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row h-[85vh] md:h-[800px]\"> {/* Left Side: Summary */} <div className=\"bg-[#889A7F] p-8 md:w-1/3 flex flex-col justify-between text-white relative overflow-hidden shrink-0\"> <div className=\"relative z-10\"> <div className=\"w-12 h-12 bg-white/20 rounded-xl flex items-center justify-...",
+          "metadata": {
+            "calls": [
+              "Object.values(agreements).every",
+              "Object.values"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:Object.values(agreements).every",
+              "src.features.profile.components.ParentDashboardUI:Object.values"
+            ]
+          }
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:n13",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 152,
+            "end_line": 305
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max-w-4xl bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col md:flex-row h-[85vh] md:h-[800px]\"> {/* Left Side: Summary */} <div className=\"bg-[#889A7F] p-8 md:w-1/3 flex flex-col justify-between text-white relative overflow-hidden shrink-0\"> <div className=\"relative z-10\"> <div className=\"w-12 h-12 bg-white/20 rounded-xl flex items-center justify-...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4eea3c0ad5d9634a:e1",
+          "source": "flow-4eea3c0ad5d9634a:n1",
+          "target": "flow-4eea3c0ad5d9634a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e2",
+          "source": "flow-4eea3c0ad5d9634a:n2",
+          "target": "flow-4eea3c0ad5d9634a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e3",
+          "source": "flow-4eea3c0ad5d9634a:n3",
+          "target": "flow-4eea3c0ad5d9634a:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e4",
+          "source": "flow-4eea3c0ad5d9634a:n4",
+          "target": "flow-4eea3c0ad5d9634a:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e5",
+          "source": "flow-4eea3c0ad5d9634a:n5",
+          "target": "flow-4eea3c0ad5d9634a:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e6",
+          "source": "flow-4eea3c0ad5d9634a:n6",
+          "target": "flow-4eea3c0ad5d9634a:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e7",
+          "source": "flow-4eea3c0ad5d9634a:n7",
+          "target": "flow-4eea3c0ad5d9634a:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e8",
+          "source": "flow-4eea3c0ad5d9634a:n8",
+          "target": "flow-4eea3c0ad5d9634a:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e9",
+          "source": "flow-4eea3c0ad5d9634a:n9",
+          "target": "flow-4eea3c0ad5d9634a:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e10",
+          "source": "flow-4eea3c0ad5d9634a:n10",
+          "target": "flow-4eea3c0ad5d9634a:n11",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e11",
+          "source": "flow-4eea3c0ad5d9634a:n10",
+          "target": "flow-4eea3c0ad5d9634a:n12",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4eea3c0ad5d9634a:e12",
+          "source": "flow-4eea3c0ad5d9634a:n12",
+          "target": "flow-4eea3c0ad5d9634a:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-5f618c7dbdc374ef",
+      "name": "SignupPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:SignupPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 308,
+        "end_line": 459
+      },
+      "nodes": [
+        {
+          "id": "flow-5f618c7dbdc374ef:n1",
+          "kind": "entry",
+          "label": "Component: SignupPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 308,
+            "end_line": 459
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:SignupPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 309,
+            "end_line": 309
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [name, setName] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 310,
+            "end_line": 310
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [email, setEmail] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 311,
+            "end_line": 311
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [password, setPassword] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 312,
+            "end_line": 312
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [confirmPassword, setConfirmPassword] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 313,
+            "end_line": 313
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 314,
+            "end_line": 314
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [error, setError] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n8",
+          "kind": "action",
+          "label": "Set handleSubmit",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 316,
+            "end_line": 336
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setError(''); setIsLoading(true); try { if (!name || !email || !password || !confirmPassword) { throw new Error('All fields are required.'); } if (password !== confirmPassword) { throw new Error('Passwords do not match.'); } await AuthService.signup({ name, email, password }); onSignup(); } catch (err: any) { setError(err.message || 'Signup failed'); } finally { setIsLoading(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:n9",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 338,
+            "end_line": 458
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden\"> {/* Header */} <div className=\"px-8 pt-8 pb-6 text-center\"> <div className=\"w-12 h-12 bg-[#889A7F] rounded-xl shadow-lg shadow-[#D4DDD0] flex items-center justify-center mx-auto mb-4\"> <Shield className=\"w-7 h-7 text-white\" /> </div> <h1 className=\"text-2xl font-bold text-gray-900\">Create Account</h1>...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-5f618c7dbdc374ef:e1",
+          "source": "flow-5f618c7dbdc374ef:n1",
+          "target": "flow-5f618c7dbdc374ef:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e2",
+          "source": "flow-5f618c7dbdc374ef:n2",
+          "target": "flow-5f618c7dbdc374ef:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e3",
+          "source": "flow-5f618c7dbdc374ef:n3",
+          "target": "flow-5f618c7dbdc374ef:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e4",
+          "source": "flow-5f618c7dbdc374ef:n4",
+          "target": "flow-5f618c7dbdc374ef:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e5",
+          "source": "flow-5f618c7dbdc374ef:n5",
+          "target": "flow-5f618c7dbdc374ef:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e6",
+          "source": "flow-5f618c7dbdc374ef:n6",
+          "target": "flow-5f618c7dbdc374ef:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e7",
+          "source": "flow-5f618c7dbdc374ef:n7",
+          "target": "flow-5f618c7dbdc374ef:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-5f618c7dbdc374ef:e8",
+          "source": "flow-5f618c7dbdc374ef:n8",
+          "target": "flow-5f618c7dbdc374ef:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-3d6bfccd1b1c2f14",
+      "name": "LoginPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:LoginPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 461,
+        "end_line": 580
+      },
+      "nodes": [
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n1",
+          "kind": "entry",
+          "label": "Component: LoginPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 461,
+            "end_line": 580
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:LoginPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 462,
+            "end_line": 462
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [email, setEmail] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 463,
+            "end_line": 463
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [password, setPassword] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 464,
+            "end_line": 464
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 465,
+            "end_line": 465
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [error, setError] = useState('');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n6",
+          "kind": "action",
+          "label": "Set handleSubmit",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 467,
+            "end_line": 484
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSubmit = async (e: React.FormEvent) => { e.preventDefault(); setError(''); setIsLoading(true); try { if (!email || !password) { throw new Error('Please enter both email and password.'); } await AuthService.login(email, password); onLogin(); } catch (err: any) { setError(err.message || 'Login failed. Please check your credentials.'); } finally { setIsLoading(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:n7",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 486,
+            "end_line": 579
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-full w-full bg-gray-50 flex items-center justify-center p-4\"> <div className=\"w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden\"> {/* Header */} <div className=\"px-8 pt-8 pb-6 text-center\"> <div className=\"w-12 h-12 bg-[#889A7F] rounded-xl shadow-lg shadow-[#D4DDD0] flex items-center justify-center mx-auto mb-4\"> <Shield className=\"w-7 h-7 text-white\" /> </div> <h1 className=\"text-2xl font-bold text-gray-900\">Welcome Back</h1> <...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e1",
+          "source": "flow-3d6bfccd1b1c2f14:n1",
+          "target": "flow-3d6bfccd1b1c2f14:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e2",
+          "source": "flow-3d6bfccd1b1c2f14:n2",
+          "target": "flow-3d6bfccd1b1c2f14:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e3",
+          "source": "flow-3d6bfccd1b1c2f14:n3",
+          "target": "flow-3d6bfccd1b1c2f14:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e4",
+          "source": "flow-3d6bfccd1b1c2f14:n4",
+          "target": "flow-3d6bfccd1b1c2f14:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e5",
+          "source": "flow-3d6bfccd1b1c2f14:n5",
+          "target": "flow-3d6bfccd1b1c2f14:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3d6bfccd1b1c2f14:e6",
+          "source": "flow-3d6bfccd1b1c2f14:n6",
+          "target": "flow-3d6bfccd1b1c2f14:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-4902dd34dd0f4c6b",
+      "name": "ChildPreviewPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:ChildPreviewPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 589,
+        "end_line": 740
+      },
+      "nodes": [
+        {
+          "id": "flow-4902dd34dd0f4c6b:n1",
+          "kind": "entry",
+          "label": "Component: ChildPreviewPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 589,
+            "end_line": 740
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:ChildPreviewPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 590,
+            "end_line": 590
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [activeScreen, setActiveScreen] = useState<'welcome' | 'chat' | 'help' | 'exit' | 'safety'>('welcome');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 591,
+            "end_line": 591
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [messages, setMessages] = useState<ChatMessage[]>([INITIAL_MESSAGE]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:n4",
+          "kind": "action",
+          "label": "Set renderScreen",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 593,
+            "end_line": 601
+          },
+          "evidence": "VERIFIED",
+          "detail": "const renderScreen = () => { switch(activeScreen) { case 'welcome': return <ChildWelcome onNavigate={(screen) => setActiveScreen(screen.replace('child-', '') as any)} />; case 'chat': return <ChildChatScreen onNavigate={(screen) => setActiveScreen(screen.replace('child-', '') as any)} />; case 'help': return <ChildHelp onNavigate={(screen) => setActiveScreen(screen.replace('child-', '') as any)} />; case 'exit': return <ChildExit onNavigate={(screen) => setActiveScreen(screen.replace('child-',....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:n5",
+          "kind": "call",
+          "label": "Call renderScreen()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 603,
+            "end_line": 739
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col\"> <div className=\"mb-6 flex-shrink-0\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Child App Preview</h1> <p className=\"text-sm md:text-base text-gray-600\">Experience exactly what your child sees. Audit safety features and flow.</p> </div> <div className=\"flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-3 gap-8 pb-8\"> {/* Phone Simulator */} <div className=\"lg:col-span-1 flex f...",
+          "metadata": {
+            "calls": [
+              "renderScreen"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:renderScreen"
+            ]
+          }
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:n6",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col\"> <div className=\"...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 603,
+            "end_line": 739
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500 h-full flex flex-col\"> <div className=\"mb-6 flex-shrink-0\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Child App Preview</h1> <p className=\"text-sm md:text-base text-gray-600\">Experience exactly what your child sees. Audit safety features and flow.</p> </div> <div className=\"flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-3 gap-8 pb-8\"> {/* Phone Simulator */} <div className=\"lg:col-span-1 flex f...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4902dd34dd0f4c6b:e1",
+          "source": "flow-4902dd34dd0f4c6b:n1",
+          "target": "flow-4902dd34dd0f4c6b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:e2",
+          "source": "flow-4902dd34dd0f4c6b:n2",
+          "target": "flow-4902dd34dd0f4c6b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:e3",
+          "source": "flow-4902dd34dd0f4c6b:n3",
+          "target": "flow-4902dd34dd0f4c6b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:e4",
+          "source": "flow-4902dd34dd0f4c6b:n4",
+          "target": "flow-4902dd34dd0f4c6b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-4902dd34dd0f4c6b:e5",
+          "source": "flow-4902dd34dd0f4c6b:n5",
+          "target": "flow-4902dd34dd0f4c6b:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-96b4a781e7302be5",
+      "name": "OverviewPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:OverviewPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 742,
+        "end_line": 912
+      },
+      "nodes": [
+        {
+          "id": "flow-96b4a781e7302be5:n1",
+          "kind": "entry",
+          "label": "Component: OverviewPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 742,
+            "end_line": 912
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:OverviewPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-96b4a781e7302be5:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 743,
+            "end_line": 743
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [selectedChild, setSelectedChild] = useState<string>(children[0]?.id || 'all');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-96b4a781e7302be5:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 744,
+            "end_line": 744
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [timeRange, setTimeRange] = useState<'7d' | '30d'>('7d');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-96b4a781e7302be5:n4",
+          "kind": "call",
+          "label": "Call children.map()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 746,
+            "end_line": 911
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Overview</h1> <p className=\"text-sm md:text-base text-gray-600\">Welcome back! Here's your child safety summary.</p> </div> {/* Risk Level Card */} <div className=\"bg-white rounded-2xl shadow-sm border border-gray-200 p-4 md:p-6 mb-6\"> <div className=\"flex items-start justify-between mb-4\"> <div> <h2 className=\"text-lg....",
+          "metadata": {
+            "calls": [
+              "children.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:children.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-96b4a781e7302be5:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 cl...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 746,
+            "end_line": 911
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Overview</h1> <p className=\"text-sm md:text-base text-gray-600\">Welcome back! Here's your child safety summary.</p> </div> {/* Risk Level Card */} <div className=\"bg-white rounded-2xl shadow-sm border border-gray-200 p-4 md:p-6 mb-6\"> <div className=\"flex items-start justify-between mb-4\"> <div> <h2 className=\"text-lg....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-96b4a781e7302be5:e1",
+          "source": "flow-96b4a781e7302be5:n1",
+          "target": "flow-96b4a781e7302be5:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-96b4a781e7302be5:e2",
+          "source": "flow-96b4a781e7302be5:n2",
+          "target": "flow-96b4a781e7302be5:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-96b4a781e7302be5:e3",
+          "source": "flow-96b4a781e7302be5:n3",
+          "target": "flow-96b4a781e7302be5:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-96b4a781e7302be5:e4",
+          "source": "flow-96b4a781e7302be5:n4",
+          "target": "flow-96b4a781e7302be5:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-2dffe71e95fe3ddb",
+      "name": "EmotionsPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:EmotionsPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 914,
+        "end_line": 1066
+      },
+      "nodes": [
+        {
+          "id": "flow-2dffe71e95fe3ddb:n1",
+          "kind": "entry",
+          "label": "Component: EmotionsPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 914,
+            "end_line": 1066
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:EmotionsPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 915,
+            "end_line": 915
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [selectedChild, setSelectedChild] = useState<string>(children[0]?.id || '');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 916,
+            "end_line": 916
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [timeRange, setTimeRange] = useState<'7d' | '30d'>('7d');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 917,
+            "end_line": 917
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [trends, setTrends] = useState<EmotionTrend[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 918,
+            "end_line": 918
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n6",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 920,
+            "end_line": 929
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { if (selectedChild) { setIsLoading(true); ParentService.getEmotionTrends(selectedChild, timeRange === '7d' ? 7 : 30) .then(data => { setTrends(data); setIsLoading(false); }); } }, [selectedChild, timeRange]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n7",
+          "kind": "call",
+          "label": "Call children.map()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 931,
+            "end_line": 1065
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Emotional Trends</h1> <p className=\"text-gray-600\">Aggregated insights into your child's wellbeing.</p> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4 mb-6\"> {/* Controls */} <div className=\"md:col-span-2 flex flex-col sm:flex-row gap-4\"> <div className=\"relative flex-1\"> <label className=\"block text-xs f...",
+          "metadata": {
+            "calls": [
+              "children.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:children.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:n8",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 cl...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 931,
+            "end_line": 1065
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Emotional Trends</h1> <p className=\"text-gray-600\">Aggregated insights into your child's wellbeing.</p> </div> <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4 mb-6\"> {/* Controls */} <div className=\"md:col-span-2 flex flex-col sm:flex-row gap-4\"> <div className=\"relative flex-1\"> <label className=\"block text-xs f...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2dffe71e95fe3ddb:e1",
+          "source": "flow-2dffe71e95fe3ddb:n1",
+          "target": "flow-2dffe71e95fe3ddb:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e2",
+          "source": "flow-2dffe71e95fe3ddb:n2",
+          "target": "flow-2dffe71e95fe3ddb:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e3",
+          "source": "flow-2dffe71e95fe3ddb:n3",
+          "target": "flow-2dffe71e95fe3ddb:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e4",
+          "source": "flow-2dffe71e95fe3ddb:n4",
+          "target": "flow-2dffe71e95fe3ddb:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e5",
+          "source": "flow-2dffe71e95fe3ddb:n5",
+          "target": "flow-2dffe71e95fe3ddb:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e6",
+          "source": "flow-2dffe71e95fe3ddb:n6",
+          "target": "flow-2dffe71e95fe3ddb:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2dffe71e95fe3ddb:e7",
+          "source": "flow-2dffe71e95fe3ddb:n7",
+          "target": "flow-2dffe71e95fe3ddb:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-27fb783bbcf73b2c",
+      "name": "HelpPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:HelpPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 1068,
+        "end_line": 1301
+      },
+      "nodes": [
+        {
+          "id": "flow-27fb783bbcf73b2c:n1",
+          "kind": "entry",
+          "label": "Component: HelpPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1068,
+            "end_line": 1301
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:HelpPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-27fb783bbcf73b2c:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 cl...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1068,
+            "end_line": 1301
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Help & Support</h1> <p className=\"text-gray-600\">Everything you need to know about SafeMentor.</p> </div> {/* Quick Links */} <div className=\"bg-gradient-to-br from-[#F5F7F4] to-[#E8EDE6] rounded-2xl shadow-sm border border-[#D4DDD0] p-6 mb-6\"> <div className=\"flex items-center gap-3 mb-4\"> <div className=\"w-10 h-10 bg-[#889A...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-27fb783bbcf73b2c:e1",
+          "source": "flow-27fb783bbcf73b2c:n1",
+          "target": "flow-27fb783bbcf73b2c:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-704873f12db5fda8",
+      "name": "PrivacyPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:PrivacyPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 1303,
+        "end_line": 1445
+      },
+      "nodes": [
+        {
+          "id": "flow-704873f12db5fda8:n1",
+          "kind": "entry",
+          "label": "Component: PrivacyPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1303,
+            "end_line": 1445
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:PrivacyPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-704873f12db5fda8:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 cl...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1303,
+            "end_line": 1445
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Data & Privacy</h1> <p className=\"text-gray-600\">How we protect your family's information.</p> </div> <div className=\"space-y-6\"> {/* Legal Basis for Processing */} <div className=\"bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden\"> <div className=\"p-6 border-b border-gray-100\"> <div className=\"flex items-...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-704873f12db5fda8:e1",
+          "source": "flow-704873f12db5fda8:n1",
+          "target": "flow-704873f12db5fda8:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-dae4b8177e6fb6b5",
+      "name": "SettingsPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:SettingsPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 1447,
+        "end_line": 1811
+      },
+      "nodes": [
+        {
+          "id": "flow-dae4b8177e6fb6b5:n1",
+          "kind": "entry",
+          "label": "Component: SettingsPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1447,
+            "end_line": 1811
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:SettingsPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-dae4b8177e6fb6b5:n2",
+          "kind": "call",
+          "label": "Call children.map()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1447,
+            "end_line": 1811
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Settings</h1> <p className=\"text-gray-600\">Manage your account and safety preferences.</p> </div> <div className=\"space-y-6\"> {/* Child Management */} <div className=\"bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden\"> <div className=\"p-6 border-b border-gray-100 flex justify-between items-center\"> <div> <h3 class...",
+          "metadata": {
+            "calls": [
+              "children.map",
+              "children.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:children.map",
+              "src.features.profile.components.ParentDashboardUI:children.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-dae4b8177e6fb6b5:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-8\"> <h1 className=...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1447,
+            "end_line": 1811
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Settings</h1> <p className=\"text-gray-600\">Manage your account and safety preferences.</p> </div> <div className=\"space-y-6\"> {/* Child Management */} <div className=\"bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden\"> <div className=\"p-6 border-b border-gray-100 flex justify-between items-center\"> <div> <h3 class...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-dae4b8177e6fb6b5:e1",
+          "source": "flow-dae4b8177e6fb6b5:n1",
+          "target": "flow-dae4b8177e6fb6b5:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-dae4b8177e6fb6b5:e2",
+          "source": "flow-dae4b8177e6fb6b5:n2",
+          "target": "flow-dae4b8177e6fb6b5:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-24ef956bb2a4e82b",
+      "name": "NotificationsPage",
+      "symbol": "src.features.profile.components.ParentDashboardUI:NotificationsPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 1813,
+        "end_line": 1945
+      },
+      "nodes": [
+        {
+          "id": "flow-24ef956bb2a4e82b:n1",
+          "kind": "entry",
+          "label": "Component: NotificationsPage",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1813,
+            "end_line": 1945
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:NotificationsPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:n2",
+          "kind": "call",
+          "label": "Call alerts.find()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1814,
+            "end_line": 1814
+          },
+          "evidence": "VERIFIED",
+          "detail": "const redAlert = alerts.find(a => a.type === 'red');",
+          "metadata": {
+            "calls": [
+              "alerts.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:alerts.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:n3",
+          "kind": "call",
+          "label": "Call alerts.filter()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1815,
+            "end_line": 1815
+          },
+          "evidence": "VERIFIED",
+          "detail": "const otherAlerts = alerts.filter(a => a.type !== 'red');",
+          "metadata": {
+            "calls": [
+              "alerts.filter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:alerts.filter"
+            ]
+          }
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:n4",
+          "kind": "call",
+          "label": "Call otherAlerts.map()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1817,
+            "end_line": 1944
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Safety Notifications</h1> <p className=\"text-sm md:text-base text-gray-600\">Monitor and respond to safety alerts for your children.</p> </div> {/* Active Alerts - Red Flags */} {redAlert && ( <div className=\"mb-6\"> <h2 className=\"text-lg font-semibold text-gray-900 mb-4\">Active Alerts</h2> <div className=\"bg-white roun...",
+          "metadata": {
+            "calls": [
+              "otherAlerts.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:otherAlerts.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 cl...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1817,
+            "end_line": 1944
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500\"> <div className=\"mb-6 md:mb-8\"> <h1 className=\"text-2xl md:text-3xl font-bold text-gray-900 mb-2\">Safety Notifications</h1> <p className=\"text-sm md:text-base text-gray-600\">Monitor and respond to safety alerts for your children.</p> </div> {/* Active Alerts - Red Flags */} {redAlert && ( <div className=\"mb-6\"> <h2 className=\"text-lg font-semibold text-gray-900 mb-4\">Active Alerts</h2> <div className=\"bg-white roun...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-24ef956bb2a4e82b:e1",
+          "source": "flow-24ef956bb2a4e82b:n1",
+          "target": "flow-24ef956bb2a4e82b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:e2",
+          "source": "flow-24ef956bb2a4e82b:n2",
+          "target": "flow-24ef956bb2a4e82b:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:e3",
+          "source": "flow-24ef956bb2a4e82b:n3",
+          "target": "flow-24ef956bb2a4e82b:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-24ef956bb2a4e82b:e4",
+          "source": "flow-24ef956bb2a4e82b:n4",
+          "target": "flow-24ef956bb2a4e82b:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-2087488598c083dd",
+      "name": "MobileMenu",
+      "symbol": "src.features.profile.components.ParentDashboardUI:MobileMenu",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 1951,
+        "end_line": 2003
+      },
+      "nodes": [
+        {
+          "id": "flow-2087488598c083dd:n1",
+          "kind": "entry",
+          "label": "Component: MobileMenu",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1951,
+            "end_line": 2003
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:MobileMenu",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2087488598c083dd:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20\"> <div className=\"mb-6\"> <h1 clas...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 1951,
+            "end_line": 2003
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <div className=\"animate-in fade-in slide-in-from-bottom-4 duration-500 pb-20\"> <div className=\"mb-6\"> <h1 className=\"text-2xl font-bold text-gray-900 mb-2\">Menu</h1> <p className=\"text-sm text-gray-600\">Account settings and support.</p> </div> <div className=\"space-y-3\"> <button onClick={() => onNavigate('settings')} className=\"w-full flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 transition-colors\"> <div className=\"p-2 bg-[#F5F7F4] rounded-lg text-[#8...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2087488598c083dd:e1",
+          "source": "flow-2087488598c083dd:n1",
+          "target": "flow-2087488598c083dd:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    },
+    {
+      "id": "flow-f647440a8c5736b8",
+      "name": "ParentDashboardUI",
+      "symbol": "src.features.profile.components.ParentDashboardUI:ParentDashboardUI",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentDashboardUI.tsx",
+        "start_line": 2005,
+        "end_line": 2213
+      },
+      "nodes": [
+        {
+          "id": "flow-f647440a8c5736b8:n1",
+          "kind": "entry",
+          "label": "Component: ParentDashboardUI",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2005,
+            "end_line": 2213
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentDashboardUI:ParentDashboardUI",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2006,
+            "end_line": 2006
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [currentView, setCurrentView] = useState<ViewState>('login');",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2007,
+            "end_line": 2007
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2008,
+            "end_line": 2008
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [children, setChildren] = useState<Child[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2009,
+            "end_line": 2009
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [alerts, setAlerts] = useState<SafetyAlert[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2010,
+            "end_line": 2010
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [showToast, setShowToast] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2011,
+            "end_line": 2011
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [dataLoaded, setDataLoaded] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n8",
+          "kind": "action",
+          "label": "// Simulate Data Fetching",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2013,
+            "end_line": 2013
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Simulate Data Fetching",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n9",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2014,
+            "end_line": 2037
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const isDashboard = !['login', 'signup', 'signup-privacy'].includes(currentView); if (isDashboard && !dataLoaded) { const fetchData = async () => { setIsLoading(true); try { const [childData, alertData] = await Promise.all([ ParentService.getChildren(), ParentService.getAlerts() ]); setChildren(childData); setAlerts(alertData); setDataLoaded(true); } catch (error) { console.error(\"Failed to fetch dashboard data\", error); } finally { setIsLoading(false); } }; fetchData(); } },....",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n10",
+          "kind": "action",
+          "label": "Set handleSimulatedAlert",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2039,
+            "end_line": 2052
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleSimulatedAlert = () => { const newAlert: SafetyAlert = { id: Date.now().toString(), type: 'yellow', title: 'Help Requested', description: 'Child pressed \"Ask Parent for Help\" in the Safety Notice screen.', timestamp: 'Just now', childId: 'child-1', isAcknowledged: false }; setAlerts(prev => [newAlert, ...prev]); setShowToast(true); setTimeout(() => setShowToast(false), 3000); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n11",
+          "kind": "action",
+          "label": "Set handleLogout",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2054,
+            "end_line": 2058
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleLogout = () => { setCurrentView('login'); setDataLoaded(false); setAlerts([]); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n12",
+          "kind": "action",
+          "label": "Set NavItem",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2060,
+            "end_line": 2076
+          },
+          "evidence": "VERIFIED",
+          "detail": "const NavItem = ({ view, icon: Icon, label }: { view: ViewState, icon: any, label: string }) => ( <button onClick={() => setCurrentView(view)} className={` flex items-center transition-all duration-200 flex-col md:flex-row gap-1 md:gap-3 px-2 py-2 md:px-4 md:py-3 rounded-xl text-gray-400 md:text-gray-600 md:w-full md:hover:bg-gray-100 ${currentView === view ? 'text-[#889A7F] md:bg-[#889A7F] md:text-white md:shadow-md md:shadow-[#D4DDD0]' : ''} `} > <Icon className={` w-6 h-6 md:w-5 md:h-5 ${cur...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n13",
+          "kind": "action",
+          "label": "Set renderContent",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2078,
+            "end_line": 2203
+          },
+          "evidence": "VERIFIED",
+          "detail": "const renderContent = () => { if (currentView === 'login') { return <LoginPage onLogin={() => setCurrentView('overview')} onNavigateToSignup={() => setCurrentView('signup')} />; } if (currentView === 'signup') { return <SignupPage onSignup={() => setCurrentView('signup-privacy')} onNavigateToLogin={() => setCurrentView('login')} />; } if (currentView === 'signup-privacy') { return <PrivacyConsentPage onConfirm={() => setCurrentView('overview')} onBack={() => setCurrentView('signup')} />; } retu...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n14",
+          "kind": "call",
+          "label": "Call renderContent()",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2205,
+            "end_line": 2212
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full w-full bg-slate-100\"> {/* Simple full screen container, no simulator wrappers */} <div className=\"w-full h-full bg-white\"> {renderContent()} </div> </div> );",
+          "metadata": {
+            "calls": [
+              "renderContent"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.profile.components.ParentDashboardUI:renderContent"
+            ]
+          }
+        },
+        {
+          "id": "flow-f647440a8c5736b8:n15",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full w-full bg-slate-100\"> {/* Simple full screen container, no simulator wrappers */} <div...",
+          "location": {
+            "path": "src/features/profile/components/ParentDashboardUI.tsx",
+            "start_line": 2205,
+            "end_line": 2212
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full w-full bg-slate-100\"> {/* Simple full screen container, no simulator wrappers */} <div className=\"w-full h-full bg-white\"> {renderContent()} </div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f647440a8c5736b8:e1",
+          "source": "flow-f647440a8c5736b8:n1",
+          "target": "flow-f647440a8c5736b8:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e2",
+          "source": "flow-f647440a8c5736b8:n2",
+          "target": "flow-f647440a8c5736b8:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e3",
+          "source": "flow-f647440a8c5736b8:n3",
+          "target": "flow-f647440a8c5736b8:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e4",
+          "source": "flow-f647440a8c5736b8:n4",
+          "target": "flow-f647440a8c5736b8:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e5",
+          "source": "flow-f647440a8c5736b8:n5",
+          "target": "flow-f647440a8c5736b8:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e6",
+          "source": "flow-f647440a8c5736b8:n6",
+          "target": "flow-f647440a8c5736b8:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e7",
+          "source": "flow-f647440a8c5736b8:n7",
+          "target": "flow-f647440a8c5736b8:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e8",
+          "source": "flow-f647440a8c5736b8:n8",
+          "target": "flow-f647440a8c5736b8:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e9",
+          "source": "flow-f647440a8c5736b8:n9",
+          "target": "flow-f647440a8c5736b8:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e10",
+          "source": "flow-f647440a8c5736b8:n10",
+          "target": "flow-f647440a8c5736b8:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e11",
+          "source": "flow-f647440a8c5736b8:n11",
+          "target": "flow-f647440a8c5736b8:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e12",
+          "source": "flow-f647440a8c5736b8:n12",
+          "target": "flow-f647440a8c5736b8:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e13",
+          "source": "flow-f647440a8c5736b8:n13",
+          "target": "flow-f647440a8c5736b8:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f647440a8c5736b8:e14",
+          "source": "flow-f647440a8c5736b8:n14",
+          "target": "flow-f647440a8c5736b8:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentDashboardUI.tsx",
+          "line": 143,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentDashboardUI.tsx:143 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {
+    "ViewState": [
+      "login",
+      "signup",
+      "signup-privacy",
+      "overview",
+      "emotions",
+      "settings",
+      "privacy",
+      "help",
+      "notifications",
+      "preview",
+      "menu"
+    ]
+  },
+  "constants": {},
+  "dependencies": []
+}

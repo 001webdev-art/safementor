@@ -1,0 +1,232 @@
+{
+  "path": "src/features/chat/history/HistoryList.tsx",
+  "language": "typescript",
+  "sha256": "9be922b5ca70961fc8191d6d7dd9957090b190f4a4ee5c319ce73c66d88cc9c8",
+  "flows": [
+    {
+      "id": "flow-2f77c65b17d74b5d",
+      "name": "HistoryList",
+      "symbol": "src.features.chat.history.HistoryList:HistoryList",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/history/HistoryList.tsx",
+        "start_line": 15,
+        "end_line": 82
+      },
+      "nodes": [
+        {
+          "id": "flow-2f77c65b17d74b5d:n1",
+          "kind": "entry",
+          "label": "Component: HistoryList",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 15,
+            "end_line": 82
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.history.HistoryList:HistoryList",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n2",
+          "kind": "call",
+          "label": "Call useRef()",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const observerTarget = useRef<HTMLDivElement>(null);",
+          "metadata": {
+            "calls": [
+              "useRef"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryList:useRef"
+            ]
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n3",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 18,
+            "end_line": 39
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const observer = new IntersectionObserver( (entries) => { if (entries[0].isIntersecting && hasMore && !isLoadingMore) { onLoadMore(); } }, { threshold: 1.0 } ); const currentElement = observerTarget.current; if (currentElement) { observer.observe(currentElement); } return () => { if (currentElement) { observer.unobserve(currentElement); } }; }, [hasMore, isLoadingMore, onLoadMore]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryList:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n4",
+          "kind": "decision",
+          "label": "messages.length === 0",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 41,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "messages.length === 0",
+          "metadata": {
+            "condition": "messages.length === 0",
+            "domain": "",
+            "values": [],
+            "subject": "messages.length",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col items-center justify-center h-full opacity-50\"> <div className=\"bg-white dark:bg...",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 42,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center h-full opacity-50\"> <div className=\"bg-white dark:bg-[#111b21] rounded-lg p-4 text-center max-w-sm shadow-sm\"> <p className=\"text-sm font-medium\">No archived messages.</p> </div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n6",
+          "kind": "call",
+          "label": "Call messages.map()",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 51,
+            "end_line": 81
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#e5ddd5] dark:bg-[#0b141a] relative\"> {/* Background Pattern (WhatsApp style) */} <div className=\"absolute inset-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none\" style={{ //backgroundImage: `url(\"https://wweb.dev/assets/whatsapp-chat-background-light.png\")`, backgroundSize: '400px' }} /> <div className=\"flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth\"> <div className=\"max-w-3xl mx-auto space-y-4\"> {messages.map((message) => ( <Messag...",
+          "metadata": {
+            "calls": [
+              "messages.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryList:messages.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:n7",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-[#e5ddd5] dark:bg-[#0b141a] relative\"> {/* Background Pattern (WhatsAp...",
+          "location": {
+            "path": "src/features/chat/history/HistoryList.tsx",
+            "start_line": 51,
+            "end_line": 81
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-[#e5ddd5] dark:bg-[#0b141a] relative\"> {/* Background Pattern (WhatsApp style) */} <div className=\"absolute inset-0 opacity-[0.05] dark:opacity-[0.03] pointer-events-none\" style={{ //backgroundImage: `url(\"https://wweb.dev/assets/whatsapp-chat-background-light.png\")`, backgroundSize: '400px' }} /> <div className=\"flex-1 overflow-y-auto p-4 space-y-4 scroll-smooth\"> <div className=\"max-w-3xl mx-auto space-y-4\"> {messages.map((message) => ( <Messag...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2f77c65b17d74b5d:e1",
+          "source": "flow-2f77c65b17d74b5d:n1",
+          "target": "flow-2f77c65b17d74b5d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:e2",
+          "source": "flow-2f77c65b17d74b5d:n2",
+          "target": "flow-2f77c65b17d74b5d:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:e3",
+          "source": "flow-2f77c65b17d74b5d:n3",
+          "target": "flow-2f77c65b17d74b5d:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:e4",
+          "source": "flow-2f77c65b17d74b5d:n4",
+          "target": "flow-2f77c65b17d74b5d:n5",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:e5",
+          "source": "flow-2f77c65b17d74b5d:n4",
+          "target": "flow-2f77c65b17d74b5d:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2f77c65b17d74b5d:e6",
+          "source": "flow-2f77c65b17d74b5d:n6",
+          "target": "flow-2f77c65b17d74b5d:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/services/pouchdb.ts",
+    "src/features/chat/components/MessageBubble.tsx"
+  ]
+}

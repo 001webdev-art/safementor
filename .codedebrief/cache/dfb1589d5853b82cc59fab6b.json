@@ -1,0 +1,84 @@
+{
+  "path": "src/features/profile/components/ParentPrivacy.tsx",
+  "language": "typescript",
+  "sha256": "3dedfb07e3cfe1d510d9130babc99d27b1e1f70f80f180e595f95aad30e09b36",
+  "flows": [
+    {
+      "id": "flow-3f3835ab54bb57e3",
+      "name": "ParentPrivacy",
+      "symbol": "src.features.profile.components.ParentPrivacy:ParentPrivacy",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/profile/components/ParentPrivacy.tsx",
+        "start_line": 1,
+        "end_line": 175
+      },
+      "nodes": [
+        {
+          "id": "flow-3f3835ab54bb57e3:n1",
+          "kind": "entry",
+          "label": "Component: ParentPrivacy",
+          "location": {
+            "path": "src/features/profile/components/ParentPrivacy.tsx",
+            "start_line": 1,
+            "end_line": 175
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.profile.components.ParentPrivacy:ParentPrivacy",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f3835ab54bb57e3:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden bo...",
+          "location": {
+            "path": "src/features/profile/components/ParentPrivacy.tsx",
+            "start_line": 2,
+            "end_line": 174
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-full bg-white flex flex-col md:flex-row\"> {/* Mobile Header */} <div className=\"md:hidden border-b-2 border-black p-4 flex justify-between items-center shrink-0\"> <div> <p className=\"text-sm font-bold\">SafeMentor</p> <p className=\"text-xs text-gray-600\">Parent Dashboard</p> </div> </div> {/* Main Content */} <div className=\"flex-1 p-4 md:p-8 overflow-y-auto\"> <h1 className=\"text-lg font-bold mb-6\">Data & Privacy</h1> {/* Lawful Basis Transparency (GDPR Required) */} <...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3f3835ab54bb57e3:e1",
+          "source": "flow-3f3835ab54bb57e3:n1",
+          "target": "flow-3f3835ab54bb57e3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "typescript",
+          "path": "src/features/profile/components/ParentPrivacy.tsx",
+          "line": 14,
+          "kind": "ERROR",
+          "reason": "typescript parse error in src/features/profile/components/ParentPrivacy.tsx:14 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

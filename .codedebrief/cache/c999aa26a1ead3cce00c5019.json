@@ -1,0 +1,3807 @@
+{
+  "path": "src/features/chat/services/pouchdb.ts",
+  "language": "typescript",
+  "sha256": "7eba393c8b1cfa1ef3d7743250de2e293215d2754f981a729cfb8f4fb5511b80",
+  "flows": [
+    {
+      "id": "flow-a157fba95a5f8254",
+      "name": "ChatDatabase.init",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.init",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 30,
+        "end_line": 60
+      },
+      "nodes": [
+        {
+          "id": "flow-a157fba95a5f8254:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.init",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 30,
+            "end_line": 60
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.init",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n2",
+          "kind": "decision",
+          "label": "this.initialized || typeof window === 'undefined'",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.initialized || typeof window === 'undefined'",
+          "metadata": {
+            "condition": "this.initialized || typeof window === 'undefined'",
+            "domain": "",
+            "values": [
+              "undefined"
+            ],
+            "subject": "this.initialized || typeof window",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n3",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n4",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 33,
+            "end_line": 59
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const PouchDB = (await import('pouchdb-browser')).default; const PouchDBFind = (await import('pouchdb-find')).default; PouchDB.plugin(PouchDBFind); this.db = new PouchDB('chat_v1'); await this.db.createIndex({ index: { fields: ['child_id'] } }); await this.db.createIndex({ index: { fields: ['timestamp'] } }); await this.db.createIndex({ index: { fields: ['sync_status'] } }); this.initialized = true; } catch (err) { console.error('PouchDB initialization failed:', err); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n5",
+          "kind": "call",
+          "label": "Call import()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 34,
+            "end_line": 34
+          },
+          "evidence": "VERIFIED",
+          "detail": "const PouchDB = (await import('pouchdb-browser')).default;",
+          "metadata": {
+            "calls": [
+              "import"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:import"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n6",
+          "kind": "call",
+          "label": "Call import()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "const PouchDBFind = (await import('pouchdb-find')).default;",
+          "metadata": {
+            "calls": [
+              "import"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:import"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n7",
+          "kind": "call",
+          "label": "Call PouchDB.plugin()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "PouchDB.plugin(PouchDBFind);",
+          "metadata": {
+            "calls": [
+              "PouchDB.plugin"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:PouchDB.plugin"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n8",
+          "kind": "action",
+          "label": "this.db = new PouchDB('chat_v1')",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 38,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.db = new PouchDB('chat_v1');",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n9",
+          "kind": "call",
+          "label": "Call this.db.createIndex()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 40,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.db.createIndex({ index: { fields: ['child_id'] } });",
+          "metadata": {
+            "calls": [
+              "this.db.createIndex"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.createIndex"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n10",
+          "kind": "call",
+          "label": "Call this.db.createIndex()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 45,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.db.createIndex({ index: { fields: ['timestamp'] } });",
+          "metadata": {
+            "calls": [
+              "this.db.createIndex"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.createIndex"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n11",
+          "kind": "call",
+          "label": "Call this.db.createIndex()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 50,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.db.createIndex({ index: { fields: ['sync_status'] } });",
+          "metadata": {
+            "calls": [
+              "this.db.createIndex"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.createIndex"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n12",
+          "kind": "action",
+          "label": "this.initialized = true",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 56,
+            "end_line": 56
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.initialized = true;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n13",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 58,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('PouchDB initialization failed:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-a157fba95a5f8254:n14",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 30,
+            "end_line": 60
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-a157fba95a5f8254:e1",
+          "source": "flow-a157fba95a5f8254:n1",
+          "target": "flow-a157fba95a5f8254:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e2",
+          "source": "flow-a157fba95a5f8254:n2",
+          "target": "flow-a157fba95a5f8254:n3",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e3",
+          "source": "flow-a157fba95a5f8254:n2",
+          "target": "flow-a157fba95a5f8254:n4",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e4",
+          "source": "flow-a157fba95a5f8254:n4",
+          "target": "flow-a157fba95a5f8254:n5",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e5",
+          "source": "flow-a157fba95a5f8254:n5",
+          "target": "flow-a157fba95a5f8254:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e6",
+          "source": "flow-a157fba95a5f8254:n6",
+          "target": "flow-a157fba95a5f8254:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e7",
+          "source": "flow-a157fba95a5f8254:n7",
+          "target": "flow-a157fba95a5f8254:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e8",
+          "source": "flow-a157fba95a5f8254:n8",
+          "target": "flow-a157fba95a5f8254:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e9",
+          "source": "flow-a157fba95a5f8254:n9",
+          "target": "flow-a157fba95a5f8254:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e10",
+          "source": "flow-a157fba95a5f8254:n10",
+          "target": "flow-a157fba95a5f8254:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e11",
+          "source": "flow-a157fba95a5f8254:n11",
+          "target": "flow-a157fba95a5f8254:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e12",
+          "source": "flow-a157fba95a5f8254:n4",
+          "target": "flow-a157fba95a5f8254:n13",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e13",
+          "source": "flow-a157fba95a5f8254:n12",
+          "target": "flow-a157fba95a5f8254:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a157fba95a5f8254:e14",
+          "source": "flow-a157fba95a5f8254:n13",
+          "target": "flow-a157fba95a5f8254:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-2991f56f17928134",
+      "name": "ChatDatabase.saveMessage",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.saveMessage",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 62,
+        "end_line": 79
+      },
+      "nodes": [
+        {
+          "id": "flow-2991f56f17928134:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.saveMessage",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 62,
+            "end_line": 79
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.saveMessage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 63,
+            "end_line": 63
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 64,
+            "end_line": 64
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n5",
+          "kind": "action",
+          "label": "Set doc",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 66,
+            "end_line": 69
+          },
+          "evidence": "VERIFIED",
+          "detail": "const doc = { ...message, _id: message.local_id || message.id };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n6",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 70,
+            "end_line": 78
+          },
+          "evidence": "INFERRED",
+          "detail": "try { return await this.db.put(doc); } catch (err: any) { if (err.name === 'conflict') { const existing = await this.db.get(doc._id); return await this.db.put({ ...doc, _rev: existing._rev }); } throw err; }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "raises",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n7",
+          "kind": "call",
+          "label": "Call this.db.put()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 71,
+            "end_line": 71
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put(doc);",
+          "metadata": {
+            "calls": [
+              "this.db.put"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.put"
+            ]
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n8",
+          "kind": "terminal",
+          "label": "Return await this.db.put(doc)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 71,
+            "end_line": 71
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put(doc);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n9",
+          "kind": "decision",
+          "label": "err.name === 'conflict'",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 73,
+            "end_line": 73
+          },
+          "evidence": "VERIFIED",
+          "detail": "err.name === 'conflict'",
+          "metadata": {
+            "condition": "err.name === 'conflict'",
+            "domain": "",
+            "values": [
+              "conflict"
+            ],
+            "subject": "err.name",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n10",
+          "kind": "call",
+          "label": "Call this.db.get()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 74,
+            "end_line": 74
+          },
+          "evidence": "VERIFIED",
+          "detail": "const existing = await this.db.get(doc._id);",
+          "metadata": {
+            "calls": [
+              "this.db.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n11",
+          "kind": "call",
+          "label": "Call this.db.put()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 75,
+            "end_line": 75
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put({ ...doc, _rev: existing._rev });",
+          "metadata": {
+            "calls": [
+              "this.db.put"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.put"
+            ]
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n12",
+          "kind": "terminal",
+          "label": "Return await this.db.put({ ...doc, _rev: existing._rev })",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 75,
+            "end_line": 75
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put({ ...doc, _rev: existing._rev });",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2991f56f17928134:n13",
+          "kind": "error",
+          "label": "Throw err",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 77,
+            "end_line": 77
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw err;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2991f56f17928134:e1",
+          "source": "flow-2991f56f17928134:n1",
+          "target": "flow-2991f56f17928134:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e2",
+          "source": "flow-2991f56f17928134:n2",
+          "target": "flow-2991f56f17928134:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e3",
+          "source": "flow-2991f56f17928134:n3",
+          "target": "flow-2991f56f17928134:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e4",
+          "source": "flow-2991f56f17928134:n3",
+          "target": "flow-2991f56f17928134:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e5",
+          "source": "flow-2991f56f17928134:n5",
+          "target": "flow-2991f56f17928134:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e6",
+          "source": "flow-2991f56f17928134:n6",
+          "target": "flow-2991f56f17928134:n7",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e7",
+          "source": "flow-2991f56f17928134:n7",
+          "target": "flow-2991f56f17928134:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e8",
+          "source": "flow-2991f56f17928134:n6",
+          "target": "flow-2991f56f17928134:n9",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e9",
+          "source": "flow-2991f56f17928134:n9",
+          "target": "flow-2991f56f17928134:n10",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e10",
+          "source": "flow-2991f56f17928134:n10",
+          "target": "flow-2991f56f17928134:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e11",
+          "source": "flow-2991f56f17928134:n11",
+          "target": "flow-2991f56f17928134:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2991f56f17928134:e12",
+          "source": "flow-2991f56f17928134:n9",
+          "target": "flow-2991f56f17928134:n13",
+          "label": "No",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-bb322a73178922db",
+      "name": "ChatDatabase.getMessages",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getMessages",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 81,
+        "end_line": 114
+      },
+      "nodes": [
+        {
+          "id": "flow-bb322a73178922db:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.getMessages",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 81,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getMessages",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 82,
+            "end_line": 82
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 83,
+            "end_line": 83
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n4",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 83,
+            "end_line": 83
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 84,
+            "end_line": 113
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const selector: any = {}; if (child_id) { selector.child_id = child_id; } else { // To ensure we can sort by timestamp when no child_id is provided, // we might need a selector that covers all docs or a different index. // For now, simpler approach: if no child_id, we might rely on default index or just allDocs if performance allows, // but let's try to keep using 'find' with a general selector if possible. // However, for \"All Children\", we might just want to list everything sorted by ti...",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n6",
+          "kind": "action",
+          "label": "Set selector",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 85,
+            "end_line": 85
+          },
+          "evidence": "VERIFIED",
+          "detail": "const selector: any = {};",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n7",
+          "kind": "action",
+          "label": "Handle internal condition: child_id",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 86,
+            "end_line": 95
+          },
+          "evidence": "INFERRED",
+          "detail": "if (child_id) { selector.child_id = child_id; } else { // To ensure we can sort by timestamp when no child_id is provided, // we might need a selector that covers all docs or a different index. // For now, simpler approach: if no child_id, we might rely on default index or just allDocs if performance allows, // but let's try to keep using 'find' with a general selector if possible. // However, for \"All Children\", we might just want to list everything sorted by time. selector.timestamp = { $gt:....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n8",
+          "kind": "call",
+          "label": "Call this.db.find()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 97,
+            "end_line": 101
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.find({ selector: selector, // Remove sort from query to avoid index mismatch errors // limit/skip still work but sort is safer in memory for PouchDB });",
+          "metadata": {
+            "calls": [
+              "this.db.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n9",
+          "kind": "action",
+          "label": "Set docs",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 103,
+            "end_line": 103
+          },
+          "evidence": "VERIFIED",
+          "detail": "const docs = result.docs as LocalMessage[];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n10",
+          "kind": "action",
+          "label": "// Sort in memory: newest first (descending timestamp)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 105,
+            "end_line": 105
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Sort in memory: newest first (descending timestamp)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n11",
+          "kind": "call",
+          "label": "Call docs.sort()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 106,
+            "end_line": 106
+          },
+          "evidence": "VERIFIED",
+          "detail": "docs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());",
+          "metadata": {
+            "calls": [
+              "docs.sort"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:docs.sort"
+            ]
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n12",
+          "kind": "action",
+          "label": "// Apply manual pagination if needed (though find does it, but sorting changes the set)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 108,
+            "end_line": 108
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Apply manual pagination if needed (though find does it, but sorting changes the set)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n13",
+          "kind": "call",
+          "label": "Call docs.slice()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 109,
+            "end_line": 109
+          },
+          "evidence": "VERIFIED",
+          "detail": "return docs.slice(skip, skip + limit);",
+          "metadata": {
+            "calls": [
+              "docs.slice"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:docs.slice"
+            ]
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n14",
+          "kind": "terminal",
+          "label": "Return docs.slice(skip, skip + limit)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 109,
+            "end_line": 109
+          },
+          "evidence": "VERIFIED",
+          "detail": "return docs.slice(skip, skip + limit);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n15",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 111,
+            "end_line": 111
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error getting messages:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-bb322a73178922db:n16",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 112,
+            "end_line": 112
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-bb322a73178922db:e1",
+          "source": "flow-bb322a73178922db:n1",
+          "target": "flow-bb322a73178922db:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e2",
+          "source": "flow-bb322a73178922db:n2",
+          "target": "flow-bb322a73178922db:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e3",
+          "source": "flow-bb322a73178922db:n3",
+          "target": "flow-bb322a73178922db:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e4",
+          "source": "flow-bb322a73178922db:n3",
+          "target": "flow-bb322a73178922db:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e5",
+          "source": "flow-bb322a73178922db:n5",
+          "target": "flow-bb322a73178922db:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e6",
+          "source": "flow-bb322a73178922db:n6",
+          "target": "flow-bb322a73178922db:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e7",
+          "source": "flow-bb322a73178922db:n7",
+          "target": "flow-bb322a73178922db:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e8",
+          "source": "flow-bb322a73178922db:n8",
+          "target": "flow-bb322a73178922db:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e9",
+          "source": "flow-bb322a73178922db:n9",
+          "target": "flow-bb322a73178922db:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e10",
+          "source": "flow-bb322a73178922db:n10",
+          "target": "flow-bb322a73178922db:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e11",
+          "source": "flow-bb322a73178922db:n11",
+          "target": "flow-bb322a73178922db:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e12",
+          "source": "flow-bb322a73178922db:n12",
+          "target": "flow-bb322a73178922db:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e13",
+          "source": "flow-bb322a73178922db:n13",
+          "target": "flow-bb322a73178922db:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e14",
+          "source": "flow-bb322a73178922db:n5",
+          "target": "flow-bb322a73178922db:n15",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-bb322a73178922db:e15",
+          "source": "flow-bb322a73178922db:n15",
+          "target": "flow-bb322a73178922db:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-f8d74c0159987df3",
+      "name": "ChatDatabase.deleteAllMessages",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.deleteAllMessages",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 116,
+        "end_line": 143
+      },
+      "nodes": [
+        {
+          "id": "flow-f8d74c0159987df3:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.deleteAllMessages",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 116,
+            "end_line": 143
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.deleteAllMessages",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 117,
+            "end_line": 117
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 118,
+            "end_line": 118
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 119,
+            "end_line": 142
+          },
+          "evidence": "INFERRED",
+          "detail": "try { let docsToDelete; if (child_id) { const result = await this.db.find({ selector: { child_id: child_id }, fields: ['_id', '_rev'] }); docsToDelete = result.docs; } else { const result = await this.db.allDocs({ include_docs: false }); // Filter out design docs docsToDelete = result.rows .filter((row: { id: string }) => !row.id.startsWith('_design/')) .map((row: { id: string; value: { rev: string } }) => ({ _id: row.id, _rev: row.value.rev })); } const deletedDocs = docsToDelete.map((doc: { _...",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "raises",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n6",
+          "kind": "action",
+          "label": "Set docsToDelete",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 120,
+            "end_line": 120
+          },
+          "evidence": "VERIFIED",
+          "detail": "let docsToDelete;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n7",
+          "kind": "decision",
+          "label": "child_id",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 121,
+            "end_line": 121
+          },
+          "evidence": "VERIFIED",
+          "detail": "child_id",
+          "metadata": {
+            "condition": "child_id",
+            "domain": "",
+            "values": [],
+            "subject": "child_id",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n8",
+          "kind": "call",
+          "label": "Call this.db.find()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 122,
+            "end_line": 125
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.find({ selector: { child_id: child_id }, fields: ['_id', '_rev'] });",
+          "metadata": {
+            "calls": [
+              "this.db.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n9",
+          "kind": "action",
+          "label": "docsToDelete = result.docs",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 126,
+            "end_line": 126
+          },
+          "evidence": "VERIFIED",
+          "detail": "docsToDelete = result.docs;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n10",
+          "kind": "call",
+          "label": "Call this.db.allDocs()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 128,
+            "end_line": 130
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.allDocs({ include_docs: false });",
+          "metadata": {
+            "calls": [
+              "this.db.allDocs"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.allDocs"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n11",
+          "kind": "action",
+          "label": "// Filter out design docs",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 131,
+            "end_line": 131
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Filter out design docs",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n12",
+          "kind": "call",
+          "label": "Call result.rows .filter((row: { id: string }) => !row.id.startsWith('_design/')) .map()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 132,
+            "end_line": 134
+          },
+          "evidence": "VERIFIED",
+          "detail": "docsToDelete = result.rows .filter((row: { id: string }) => !row.id.startsWith('_design/')) .map((row: { id: string; value: { rev: string } }) => ({ _id: row.id, _rev: row.value.rev }));",
+          "metadata": {
+            "calls": [
+              "result.rows .filter((row: { id: string }) => !row.id.startsWith('_design/')) .map",
+              "result.rows .filter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:result.rows .filter((row: { id: string }) => !row.id.startsWith('_design/')) .map",
+              "src.features.chat.services.pouchdb:result.rows .filter"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n13",
+          "kind": "call",
+          "label": "Call docsToDelete.map()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 137,
+            "end_line": 137
+          },
+          "evidence": "VERIFIED",
+          "detail": "const deletedDocs = docsToDelete.map((doc: { _id: string; _rev: string }) => ({ ...doc, _deleted: true }));",
+          "metadata": {
+            "calls": [
+              "docsToDelete.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:docsToDelete.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n14",
+          "kind": "call",
+          "label": "Call this.db.bulkDocs()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 138,
+            "end_line": 138
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.bulkDocs(deletedDocs);",
+          "metadata": {
+            "calls": [
+              "this.db.bulkDocs"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.bulkDocs"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n15",
+          "kind": "terminal",
+          "label": "Return await this.db.bulkDocs(deletedDocs)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 138,
+            "end_line": 138
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.bulkDocs(deletedDocs);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n16",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 140,
+            "end_line": 140
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error deleting messages:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-f8d74c0159987df3:n17",
+          "kind": "error",
+          "label": "Throw err",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 141,
+            "end_line": 141
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw err;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f8d74c0159987df3:e1",
+          "source": "flow-f8d74c0159987df3:n1",
+          "target": "flow-f8d74c0159987df3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e2",
+          "source": "flow-f8d74c0159987df3:n2",
+          "target": "flow-f8d74c0159987df3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e3",
+          "source": "flow-f8d74c0159987df3:n3",
+          "target": "flow-f8d74c0159987df3:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e4",
+          "source": "flow-f8d74c0159987df3:n3",
+          "target": "flow-f8d74c0159987df3:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e5",
+          "source": "flow-f8d74c0159987df3:n5",
+          "target": "flow-f8d74c0159987df3:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e6",
+          "source": "flow-f8d74c0159987df3:n6",
+          "target": "flow-f8d74c0159987df3:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e7",
+          "source": "flow-f8d74c0159987df3:n7",
+          "target": "flow-f8d74c0159987df3:n8",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e8",
+          "source": "flow-f8d74c0159987df3:n8",
+          "target": "flow-f8d74c0159987df3:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e9",
+          "source": "flow-f8d74c0159987df3:n7",
+          "target": "flow-f8d74c0159987df3:n10",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e10",
+          "source": "flow-f8d74c0159987df3:n10",
+          "target": "flow-f8d74c0159987df3:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e11",
+          "source": "flow-f8d74c0159987df3:n11",
+          "target": "flow-f8d74c0159987df3:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e12",
+          "source": "flow-f8d74c0159987df3:n9",
+          "target": "flow-f8d74c0159987df3:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e13",
+          "source": "flow-f8d74c0159987df3:n12",
+          "target": "flow-f8d74c0159987df3:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e14",
+          "source": "flow-f8d74c0159987df3:n13",
+          "target": "flow-f8d74c0159987df3:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e15",
+          "source": "flow-f8d74c0159987df3:n14",
+          "target": "flow-f8d74c0159987df3:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e16",
+          "source": "flow-f8d74c0159987df3:n5",
+          "target": "flow-f8d74c0159987df3:n16",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f8d74c0159987df3:e17",
+          "source": "flow-f8d74c0159987df3:n16",
+          "target": "flow-f8d74c0159987df3:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-8e3e44169d6d80e6",
+      "name": "ChatDatabase.destroyDatabase",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.destroyDatabase",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 145,
+        "end_line": 159
+      },
+      "nodes": [
+        {
+          "id": "flow-8e3e44169d6d80e6:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.destroyDatabase",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 145,
+            "end_line": 159
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.destroyDatabase",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n2",
+          "kind": "action",
+          "label": "Handle internal condition: !this.db && !this.initialized",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 146,
+            "end_line": 148
+          },
+          "evidence": "INFERRED",
+          "detail": "if (!this.db && !this.initialized) { await this.init(); }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 149,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 149,
+            "end_line": 149
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 151,
+            "end_line": 158
+          },
+          "evidence": "INFERRED",
+          "detail": "try { await this.db.destroy(); this.db = null; this.initialized = false; } catch (err) { console.error('Error destroying database:', err); throw err; }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "raises",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n6",
+          "kind": "call",
+          "label": "Call this.db.destroy()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 152,
+            "end_line": 152
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.db.destroy();",
+          "metadata": {
+            "calls": [
+              "this.db.destroy"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.destroy"
+            ]
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n7",
+          "kind": "action",
+          "label": "this.db = null",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 153,
+            "end_line": 153
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.db = null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n8",
+          "kind": "action",
+          "label": "this.initialized = false",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 154,
+            "end_line": 154
+          },
+          "evidence": "VERIFIED",
+          "detail": "this.initialized = false;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n9",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 156,
+            "end_line": 156
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error destroying database:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n10",
+          "kind": "error",
+          "label": "Throw err",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 157,
+            "end_line": 157
+          },
+          "evidence": "VERIFIED",
+          "detail": "throw err;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:n11",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 145,
+            "end_line": 159
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-8e3e44169d6d80e6:e1",
+          "source": "flow-8e3e44169d6d80e6:n1",
+          "target": "flow-8e3e44169d6d80e6:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e2",
+          "source": "flow-8e3e44169d6d80e6:n2",
+          "target": "flow-8e3e44169d6d80e6:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e3",
+          "source": "flow-8e3e44169d6d80e6:n3",
+          "target": "flow-8e3e44169d6d80e6:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e4",
+          "source": "flow-8e3e44169d6d80e6:n3",
+          "target": "flow-8e3e44169d6d80e6:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e5",
+          "source": "flow-8e3e44169d6d80e6:n5",
+          "target": "flow-8e3e44169d6d80e6:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e6",
+          "source": "flow-8e3e44169d6d80e6:n6",
+          "target": "flow-8e3e44169d6d80e6:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e7",
+          "source": "flow-8e3e44169d6d80e6:n7",
+          "target": "flow-8e3e44169d6d80e6:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e8",
+          "source": "flow-8e3e44169d6d80e6:n5",
+          "target": "flow-8e3e44169d6d80e6:n9",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e9",
+          "source": "flow-8e3e44169d6d80e6:n9",
+          "target": "flow-8e3e44169d6d80e6:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-8e3e44169d6d80e6:e10",
+          "source": "flow-8e3e44169d6d80e6:n8",
+          "target": "flow-8e3e44169d6d80e6:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-a381ff218cb2a273",
+      "name": "ChatDatabase.getUnsyncedMessages",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getUnsyncedMessages",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 161,
+        "end_line": 173
+      },
+      "nodes": [
+        {
+          "id": "flow-a381ff218cb2a273:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.getUnsyncedMessages",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 161,
+            "end_line": 173
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getUnsyncedMessages",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 162,
+            "end_line": 162
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 163,
+            "end_line": 163
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n4",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 163,
+            "end_line": 163
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 164,
+            "end_line": 172
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const result = await this.db.find({ selector: { sync_status: 'pending' } }); return result.docs as LocalMessage[]; } catch (err) { console.error('Error getting unsynced messages:', err); return []; }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n6",
+          "kind": "call",
+          "label": "Call this.db.find()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 165,
+            "end_line": 167
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.find({ selector: { sync_status: 'pending' } });",
+          "metadata": {
+            "calls": [
+              "this.db.find"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_read"
+            ],
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.find"
+            ]
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n7",
+          "kind": "terminal",
+          "label": "Return result.docs as LocalMessage[]",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 168,
+            "end_line": 168
+          },
+          "evidence": "VERIFIED",
+          "detail": "return result.docs as LocalMessage[];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n8",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 170,
+            "end_line": 170
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error getting unsynced messages:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-a381ff218cb2a273:n9",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 171,
+            "end_line": 171
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-a381ff218cb2a273:e1",
+          "source": "flow-a381ff218cb2a273:n1",
+          "target": "flow-a381ff218cb2a273:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e2",
+          "source": "flow-a381ff218cb2a273:n2",
+          "target": "flow-a381ff218cb2a273:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e3",
+          "source": "flow-a381ff218cb2a273:n3",
+          "target": "flow-a381ff218cb2a273:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e4",
+          "source": "flow-a381ff218cb2a273:n3",
+          "target": "flow-a381ff218cb2a273:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e5",
+          "source": "flow-a381ff218cb2a273:n5",
+          "target": "flow-a381ff218cb2a273:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e6",
+          "source": "flow-a381ff218cb2a273:n6",
+          "target": "flow-a381ff218cb2a273:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e7",
+          "source": "flow-a381ff218cb2a273:n5",
+          "target": "flow-a381ff218cb2a273:n8",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-a381ff218cb2a273:e8",
+          "source": "flow-a381ff218cb2a273:n8",
+          "target": "flow-a381ff218cb2a273:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-c3fd21cd9dc10a04",
+      "name": "ChatDatabase.getMessageByLocalId",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getMessageByLocalId",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 175,
+        "end_line": 186
+      },
+      "nodes": [
+        {
+          "id": "flow-c3fd21cd9dc10a04:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.getMessageByLocalId",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 175,
+            "end_line": 186
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getMessageByLocalId",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 176,
+            "end_line": 176
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 177,
+            "end_line": 177
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n4",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 177,
+            "end_line": 177
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 178,
+            "end_line": 185
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const result = await this.db.get(localId); return result as LocalMessage; } catch (err: any) { if (err.status === 404) return null; console.error('Error getting message by local ID:', err); return null; }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n6",
+          "kind": "call",
+          "label": "Call this.db.get()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 179,
+            "end_line": 179
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.get(localId);",
+          "metadata": {
+            "calls": [
+              "this.db.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n7",
+          "kind": "terminal",
+          "label": "Return result as LocalMessage",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 180,
+            "end_line": 180
+          },
+          "evidence": "VERIFIED",
+          "detail": "return result as LocalMessage;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n8",
+          "kind": "decision",
+          "label": "err.status === 404",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 182,
+            "end_line": 182
+          },
+          "evidence": "VERIFIED",
+          "detail": "err.status === 404",
+          "metadata": {
+            "condition": "err.status === 404",
+            "domain": "status",
+            "values": [],
+            "subject": "err.status",
+            "operator": "==",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n9",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 182,
+            "end_line": 182
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n10",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 183,
+            "end_line": 183
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error getting message by local ID:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:n11",
+          "kind": "terminal",
+          "label": "Return null",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 184,
+            "end_line": 184
+          },
+          "evidence": "VERIFIED",
+          "detail": "return null;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c3fd21cd9dc10a04:e1",
+          "source": "flow-c3fd21cd9dc10a04:n1",
+          "target": "flow-c3fd21cd9dc10a04:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e2",
+          "source": "flow-c3fd21cd9dc10a04:n2",
+          "target": "flow-c3fd21cd9dc10a04:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e3",
+          "source": "flow-c3fd21cd9dc10a04:n3",
+          "target": "flow-c3fd21cd9dc10a04:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e4",
+          "source": "flow-c3fd21cd9dc10a04:n3",
+          "target": "flow-c3fd21cd9dc10a04:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e5",
+          "source": "flow-c3fd21cd9dc10a04:n5",
+          "target": "flow-c3fd21cd9dc10a04:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e6",
+          "source": "flow-c3fd21cd9dc10a04:n6",
+          "target": "flow-c3fd21cd9dc10a04:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e7",
+          "source": "flow-c3fd21cd9dc10a04:n5",
+          "target": "flow-c3fd21cd9dc10a04:n8",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e8",
+          "source": "flow-c3fd21cd9dc10a04:n8",
+          "target": "flow-c3fd21cd9dc10a04:n9",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e9",
+          "source": "flow-c3fd21cd9dc10a04:n8",
+          "target": "flow-c3fd21cd9dc10a04:n10",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c3fd21cd9dc10a04:e10",
+          "source": "flow-c3fd21cd9dc10a04:n10",
+          "target": "flow-c3fd21cd9dc10a04:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-187796a35506f08d",
+      "name": "ChatDatabase.updateMessageSyncStatus",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.updateMessageSyncStatus",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 188,
+        "end_line": 200
+      },
+      "nodes": [
+        {
+          "id": "flow-187796a35506f08d:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.updateMessageSyncStatus",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 188,
+            "end_line": 200
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.updateMessageSyncStatus",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 189,
+            "end_line": 189
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 190,
+            "end_line": 190
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 190,
+            "end_line": 190
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 191,
+            "end_line": 199
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const doc = await this.db.get(id); doc.sync_status = status; doc.is_synced = status === 'synced'; if (supabaseId) doc.id = supabaseId; return await this.db.put(doc); } catch (err) { console.error('Error updating sync status:', err); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n6",
+          "kind": "call",
+          "label": "Call this.db.get()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 192,
+            "end_line": 192
+          },
+          "evidence": "VERIFIED",
+          "detail": "const doc = await this.db.get(id);",
+          "metadata": {
+            "calls": [
+              "this.db.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n7",
+          "kind": "action",
+          "label": "doc.sync_status = status",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 193,
+            "end_line": 193
+          },
+          "evidence": "VERIFIED",
+          "detail": "doc.sync_status = status;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n8",
+          "kind": "action",
+          "label": "doc.is_synced = status === 'synced'",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 194,
+            "end_line": 194
+          },
+          "evidence": "VERIFIED",
+          "detail": "doc.is_synced = status === 'synced';",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n9",
+          "kind": "action",
+          "label": "Handle internal condition: supabaseId",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 195,
+            "end_line": 195
+          },
+          "evidence": "INFERRED",
+          "detail": "if (supabaseId) doc.id = supabaseId;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n10",
+          "kind": "call",
+          "label": "Call this.db.put()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 196,
+            "end_line": 196
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put(doc);",
+          "metadata": {
+            "calls": [
+              "this.db.put"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.put"
+            ]
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n11",
+          "kind": "terminal",
+          "label": "Return await this.db.put(doc)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 196,
+            "end_line": 196
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.put(doc);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n12",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 198,
+            "end_line": 198
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error updating sync status:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-187796a35506f08d:n13",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 188,
+            "end_line": 200
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-187796a35506f08d:e1",
+          "source": "flow-187796a35506f08d:n1",
+          "target": "flow-187796a35506f08d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e2",
+          "source": "flow-187796a35506f08d:n2",
+          "target": "flow-187796a35506f08d:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e3",
+          "source": "flow-187796a35506f08d:n3",
+          "target": "flow-187796a35506f08d:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e4",
+          "source": "flow-187796a35506f08d:n3",
+          "target": "flow-187796a35506f08d:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e5",
+          "source": "flow-187796a35506f08d:n5",
+          "target": "flow-187796a35506f08d:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e6",
+          "source": "flow-187796a35506f08d:n6",
+          "target": "flow-187796a35506f08d:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e7",
+          "source": "flow-187796a35506f08d:n7",
+          "target": "flow-187796a35506f08d:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e8",
+          "source": "flow-187796a35506f08d:n8",
+          "target": "flow-187796a35506f08d:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e9",
+          "source": "flow-187796a35506f08d:n9",
+          "target": "flow-187796a35506f08d:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e10",
+          "source": "flow-187796a35506f08d:n10",
+          "target": "flow-187796a35506f08d:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e11",
+          "source": "flow-187796a35506f08d:n5",
+          "target": "flow-187796a35506f08d:n12",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-187796a35506f08d:e12",
+          "source": "flow-187796a35506f08d:n12",
+          "target": "flow-187796a35506f08d:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-49d180f6f7057443",
+      "name": "ChatDatabase.deleteMessage",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.deleteMessage",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 202,
+        "end_line": 211
+      },
+      "nodes": [
+        {
+          "id": "flow-49d180f6f7057443:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.deleteMessage",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 202,
+            "end_line": 211
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.deleteMessage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 203,
+            "end_line": 203
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 204,
+            "end_line": 204
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n4",
+          "kind": "terminal",
+          "label": "Return",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 204,
+            "end_line": 204
+          },
+          "evidence": "VERIFIED",
+          "detail": "return;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 205,
+            "end_line": 210
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const doc = await this.db.get(id); return await this.db.remove(doc); } catch (err) { console.error('Error deleting message:', err); }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "falls_through",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n6",
+          "kind": "call",
+          "label": "Call this.db.get()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 206,
+            "end_line": 206
+          },
+          "evidence": "VERIFIED",
+          "detail": "const doc = await this.db.get(id);",
+          "metadata": {
+            "calls": [
+              "this.db.get"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.get"
+            ]
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n7",
+          "kind": "call",
+          "label": "Call this.db.remove()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 207,
+            "end_line": 207
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.remove(doc);",
+          "metadata": {
+            "calls": [
+              "this.db.remove"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.remove"
+            ]
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n8",
+          "kind": "terminal",
+          "label": "Return await this.db.remove(doc)",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 207,
+            "end_line": 207
+          },
+          "evidence": "VERIFIED",
+          "detail": "return await this.db.remove(doc);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n9",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 209,
+            "end_line": 209
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error deleting message:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-49d180f6f7057443:n10",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 202,
+            "end_line": 211
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-49d180f6f7057443:e1",
+          "source": "flow-49d180f6f7057443:n1",
+          "target": "flow-49d180f6f7057443:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e2",
+          "source": "flow-49d180f6f7057443:n2",
+          "target": "flow-49d180f6f7057443:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e3",
+          "source": "flow-49d180f6f7057443:n3",
+          "target": "flow-49d180f6f7057443:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e4",
+          "source": "flow-49d180f6f7057443:n3",
+          "target": "flow-49d180f6f7057443:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e5",
+          "source": "flow-49d180f6f7057443:n5",
+          "target": "flow-49d180f6f7057443:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e6",
+          "source": "flow-49d180f6f7057443:n6",
+          "target": "flow-49d180f6f7057443:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e7",
+          "source": "flow-49d180f6f7057443:n7",
+          "target": "flow-49d180f6f7057443:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e8",
+          "source": "flow-49d180f6f7057443:n5",
+          "target": "flow-49d180f6f7057443:n9",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-49d180f6f7057443:e9",
+          "source": "flow-49d180f6f7057443:n9",
+          "target": "flow-49d180f6f7057443:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-3f8df924922e0303",
+      "name": "ChatDatabase.getAllMessages",
+      "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getAllMessages",
+      "language": "typescript",
+      "framework": "generic",
+      "entry_kind": "method",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/services/pouchdb.ts",
+        "start_line": 213,
+        "end_line": 227
+      },
+      "nodes": [
+        {
+          "id": "flow-3f8df924922e0303:n1",
+          "kind": "entry",
+          "label": "ChatDatabase.getAllMessages",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 213,
+            "end_line": 227
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.services.pouchdb:ChatDatabase.getAllMessages",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n2",
+          "kind": "call",
+          "label": "Call this.init()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 214,
+            "end_line": 214
+          },
+          "evidence": "VERIFIED",
+          "detail": "await this.init();",
+          "metadata": {
+            "calls": [
+              "this.init"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.init"
+            ]
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n3",
+          "kind": "decision",
+          "label": "!this.db",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 215,
+            "end_line": 215
+          },
+          "evidence": "VERIFIED",
+          "detail": "!this.db",
+          "metadata": {
+            "condition": "!this.db",
+            "domain": "",
+            "values": [],
+            "subject": "this.db",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n4",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 215,
+            "end_line": 215
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n5",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 216,
+            "end_line": 226
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const result = await this.db.allDocs({ include_docs: true, descending: true }); return (result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()); } catch (err) { console.error('Error getting all messages:', err); return []; }",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n6",
+          "kind": "call",
+          "label": "Call this.db.allDocs()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 217,
+            "end_line": 220
+          },
+          "evidence": "VERIFIED",
+          "detail": "const result = await this.db.allDocs({ include_docs: true, descending: true });",
+          "metadata": {
+            "calls": [
+              "this.db.allDocs"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:this.db.allDocs"
+            ]
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n7",
+          "kind": "call",
+          "label": "Call (result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 221,
+            "end_line": 222
+          },
+          "evidence": "VERIFIED",
+          "detail": "return (result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());",
+          "metadata": {
+            "calls": [
+              "(result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort",
+              "result.rows.map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:(result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort",
+              "src.features.chat.services.pouchdb:result.rows.map"
+            ]
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n8",
+          "kind": "terminal",
+          "label": "Return (result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort((a, b) => new Date(b.timestamp).getTime() - new...",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 221,
+            "end_line": 222
+          },
+          "evidence": "VERIFIED",
+          "detail": "return (result.rows.map((row: any) => row.doc) as LocalMessage[]) .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n9",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 224,
+            "end_line": 224
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Error getting all messages:', err);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.services.pouchdb:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-3f8df924922e0303:n10",
+          "kind": "terminal",
+          "label": "Return []",
+          "location": {
+            "path": "src/features/chat/services/pouchdb.ts",
+            "start_line": 225,
+            "end_line": 225
+          },
+          "evidence": "VERIFIED",
+          "detail": "return [];",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-3f8df924922e0303:e1",
+          "source": "flow-3f8df924922e0303:n1",
+          "target": "flow-3f8df924922e0303:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e2",
+          "source": "flow-3f8df924922e0303:n2",
+          "target": "flow-3f8df924922e0303:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e3",
+          "source": "flow-3f8df924922e0303:n3",
+          "target": "flow-3f8df924922e0303:n4",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e4",
+          "source": "flow-3f8df924922e0303:n3",
+          "target": "flow-3f8df924922e0303:n5",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e5",
+          "source": "flow-3f8df924922e0303:n5",
+          "target": "flow-3f8df924922e0303:n6",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e6",
+          "source": "flow-3f8df924922e0303:n6",
+          "target": "flow-3f8df924922e0303:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e7",
+          "source": "flow-3f8df924922e0303:n7",
+          "target": "flow-3f8df924922e0303:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e8",
+          "source": "flow-3f8df924922e0303:n5",
+          "target": "flow-3f8df924922e0303:n9",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-3f8df924922e0303:e9",
+          "source": "flow-3f8df924922e0303:n9",
+          "target": "flow-3f8df924922e0303:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

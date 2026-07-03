@@ -1,0 +1,141 @@
+{
+  "path": "src/features/landing/components/Trusted.tsx",
+  "language": "typescript",
+  "sha256": "22245e100b170363f24e47175e48c7242572b99eeac6564eb3c6014286661cee",
+  "flows": [
+    {
+      "id": "flow-c0da0e173f455669",
+      "name": "Trusted",
+      "symbol": "src.features.landing.components.Trusted:Trusted",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Trusted.tsx",
+        "start_line": 5,
+        "end_line": 27
+      },
+      "nodes": [
+        {
+          "id": "flow-c0da0e173f455669:n1",
+          "kind": "entry",
+          "label": "Component: Trusted",
+          "location": {
+            "path": "src/features/landing/components/Trusted.tsx",
+            "start_line": 5,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Trusted:Trusted",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c0da0e173f455669:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/Trusted.tsx",
+            "start_line": 6,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Landing.Trusted');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Trusted:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-c0da0e173f455669:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/Trusted.tsx",
+            "start_line": 8,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center pt-20 px-6 gap-8\"> <div className=\"text-center space-y-4\"> <h2 className=\"text-2xl font-bold\">{t('title')}</h2> <p className=\"text-gray-500 text-lg max-w-2xl mx-auto\"> {t('description')} </p> </div> <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-x-16 md:gap-y-12 w-full max-w-5xl mt-8\"> {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => ( <div key={i} className=\"flex items-center justify-center gap-2 text-gray-500 hover:text-gray...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "[1, 2, 3, 4, 5, 6, 7, 8].map"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.Trusted:t",
+              "src.features.landing.components.Trusted:t",
+              "src.features.landing.components.Trusted:[1, 2, 3, 4, 5, 6, 7, 8].map"
+            ]
+          }
+        },
+        {
+          "id": "flow-c0da0e173f455669:n4",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col items-center justify-center pt-20 px-6 gap-8\"> <div className=\"text-center space...",
+          "location": {
+            "path": "src/features/landing/components/Trusted.tsx",
+            "start_line": 8,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center pt-20 px-6 gap-8\"> <div className=\"text-center space-y-4\"> <h2 className=\"text-2xl font-bold\">{t('title')}</h2> <p className=\"text-gray-500 text-lg max-w-2xl mx-auto\"> {t('description')} </p> </div> <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-x-16 md:gap-y-12 w-full max-w-5xl mt-8\"> {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => ( <div key={i} className=\"flex items-center justify-center gap-2 text-gray-500 hover:text-gray...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c0da0e173f455669:e1",
+          "source": "flow-c0da0e173f455669:n1",
+          "target": "flow-c0da0e173f455669:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c0da0e173f455669:e2",
+          "source": "flow-c0da0e173f455669:n2",
+          "target": "flow-c0da0e173f455669:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c0da0e173f455669:e3",
+          "source": "flow-c0da0e173f455669:n3",
+          "target": "flow-c0da0e173f455669:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/Icons.tsx"
+  ]
+}

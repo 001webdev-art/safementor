@@ -1,0 +1,771 @@
+{
+  "path": "src/features/register/RegisterPage.tsx",
+  "language": "typescript",
+  "sha256": "4f2cba15a3fc4f24886a19cd1481f8563b359a58496f1d0e028ca6fd6a443ba1",
+  "flows": [
+    {
+      "id": "flow-c9acf4904a209264",
+      "name": "RegisterPage",
+      "symbol": "src.features.register.RegisterPage:RegisterPage",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/RegisterPage.tsx",
+        "start_line": 12,
+        "end_line": 232
+      },
+      "nodes": [
+        {
+          "id": "flow-c9acf4904a209264:n1",
+          "kind": "entry",
+          "label": "Component: RegisterPage",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 12,
+            "end_line": 232
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.RegisterPage:RegisterPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [email, setEmail] = useState('')",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [password, setPassword] = useState('')",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [confirmPassword, setConfirmPassword] = useState('')",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [error, setError] = useState<string | null>(null)",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [loading, setLoading] = useState(false)",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n7",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isVisible, setIsVisible] = useState(false)",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n8",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [showCompliance, setShowCompliance] = useState(true)",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n9",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 20,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [complianceData, setComplianceData] = useState({ helpImprove: false, safetyAnalysis: false, agreedToTerms: false, agreedToPrivacy: false, isGuardian: false, marketingOptOut: false, agreedToPayment: false })",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n10",
+          "kind": "action",
+          "label": "// Load from localStorage on mount",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Load from localStorage on mount",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n11",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 31,
+            "end_line": 40
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { const savedData = localStorage.getItem('compliance_data') if (savedData) { try { setComplianceData(JSON.parse(savedData)) } catch (e) { console.error('Error parsing compliance data from localStorage', e) } } }, [])",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n12",
+          "kind": "action",
+          "label": "// Persistence to localStorage",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Persistence to localStorage",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n13",
+          "kind": "action",
+          "label": "Set saveComplianceToLocal",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 43,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "const saveComplianceToLocal = (data: typeof complianceData) => { localStorage.setItem('compliance_data', JSON.stringify(data)) }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n14",
+          "kind": "action",
+          "label": "Set handleComplianceChange",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 47,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleComplianceChange = (field: string, value: boolean) => { setComplianceData(prev => { const newData = { ...prev, [field]: value } saveComplianceToLocal(newData) return newData }) }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n15",
+          "kind": "action",
+          "label": "Set toggleVisibility",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 55,
+            "end_line": 55
+          },
+          "evidence": "VERIFIED",
+          "detail": "const toggleVisibility = () => setIsVisible(!isVisible)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n16",
+          "kind": "call",
+          "label": "Call useRouter()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 57,
+            "end_line": 57
+          },
+          "evidence": "VERIFIED",
+          "detail": "const router = useRouter()",
+          "metadata": {
+            "calls": [
+              "useRouter"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useRouter"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n17",
+          "kind": "call",
+          "label": "Call useLocale()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 58,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "const currentLocale = useLocale()",
+          "metadata": {
+            "calls": [
+              "useLocale"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useLocale"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n18",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 59,
+            "end_line": 59
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient()",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.register.RegisterPage:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n19",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 61,
+            "end_line": 61
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Auth')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n20",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 62,
+            "end_line": 62
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tRegister = useTranslations('RegisterPage')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n21",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 63,
+            "end_line": 63
+          },
+          "evidence": "VERIFIED",
+          "detail": "const tErrors = useTranslations('Errors')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n22",
+          "kind": "action",
+          "label": "Set handleRegister",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 65,
+            "end_line": 123
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleRegister = async (e: React.FormEvent) => { e.preventDefault() if (password !== confirmPassword) { setError(tErrors('passwordMismatch')) return } setLoading(true) setError(null) let signUpError: any = null try { const { error } = await supabase.auth.signUp({ email, password, options: { emailRedirectTo: `${window.location.origin}/auth/callback`, data: { terms_agreed_terms: complianceData.agreedToTerms, terms_agreed_privacy: complianceData.agreedToPrivacy, is_guardian: complianceData.i...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n23",
+          "kind": "decision",
+          "label": "showCompliance",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 125,
+            "end_line": 125
+          },
+          "evidence": "VERIFIED",
+          "detail": "showCompliance",
+          "metadata": {
+            "condition": "showCompliance",
+            "domain": "",
+            "values": [],
+            "subject": "showCompliance",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n24",
+          "kind": "terminal",
+          "label": "Return ( <ComplianceFrame complianceData={complianceData} onDataChange={handleComplianceChange} onAccept={() => setShow...",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 126,
+            "end_line": 132
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <ComplianceFrame complianceData={complianceData} onDataChange={handleComplianceChange} onAccept={() => setShowCompliance(false)} /> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n25",
+          "kind": "call",
+          "label": "Call tRegister()",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 135,
+            "end_line": 231
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[400px] w-full p-4 border border-gray-200 shadow-sm rounded-2xl\"> <CardHeader className=\"flex flex-col gap-1 items-center pb-6\"> <h2 className=\"text-2xl font-bold text-gray-900\"> {tRegister('title')} </h2> <p className=\"text-sm text-gray-500 font-medium\"> {t('createAccount')} </p> </CardHeader> <CardBody> <form className=\"flex flex-col gap-4\" onSubmit={handleRegister}> <Input label=...",
+          "metadata": {
+            "calls": [
+              "tRegister",
+              "t",
+              "t",
+              "tRegister",
+              "t",
+              "tRegister",
+              "t",
+              "tRegister",
+              "t",
+              "tRegister",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.RegisterPage:tRegister",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:tRegister",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:tRegister",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:tRegister",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:tRegister",
+              "src.features.register.RegisterPage:t",
+              "src.features.register.RegisterPage:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-c9acf4904a209264:n26",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[400p...",
+          "location": {
+            "path": "src/features/register/RegisterPage.tsx",
+            "start_line": 135,
+            "end_line": 231
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"min-h-screen flex items-center justify-center bg-gray-50/50 p-4\"> <Card className=\"max-w-[400px] w-full p-4 border border-gray-200 shadow-sm rounded-2xl\"> <CardHeader className=\"flex flex-col gap-1 items-center pb-6\"> <h2 className=\"text-2xl font-bold text-gray-900\"> {tRegister('title')} </h2> <p className=\"text-sm text-gray-500 font-medium\"> {t('createAccount')} </p> </CardHeader> <CardBody> <form className=\"flex flex-col gap-4\" onSubmit={handleRegister}> <Input label=...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-c9acf4904a209264:e1",
+          "source": "flow-c9acf4904a209264:n1",
+          "target": "flow-c9acf4904a209264:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e2",
+          "source": "flow-c9acf4904a209264:n2",
+          "target": "flow-c9acf4904a209264:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e3",
+          "source": "flow-c9acf4904a209264:n3",
+          "target": "flow-c9acf4904a209264:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e4",
+          "source": "flow-c9acf4904a209264:n4",
+          "target": "flow-c9acf4904a209264:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e5",
+          "source": "flow-c9acf4904a209264:n5",
+          "target": "flow-c9acf4904a209264:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e6",
+          "source": "flow-c9acf4904a209264:n6",
+          "target": "flow-c9acf4904a209264:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e7",
+          "source": "flow-c9acf4904a209264:n7",
+          "target": "flow-c9acf4904a209264:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e8",
+          "source": "flow-c9acf4904a209264:n8",
+          "target": "flow-c9acf4904a209264:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e9",
+          "source": "flow-c9acf4904a209264:n9",
+          "target": "flow-c9acf4904a209264:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e10",
+          "source": "flow-c9acf4904a209264:n10",
+          "target": "flow-c9acf4904a209264:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e11",
+          "source": "flow-c9acf4904a209264:n11",
+          "target": "flow-c9acf4904a209264:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e12",
+          "source": "flow-c9acf4904a209264:n12",
+          "target": "flow-c9acf4904a209264:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e13",
+          "source": "flow-c9acf4904a209264:n13",
+          "target": "flow-c9acf4904a209264:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e14",
+          "source": "flow-c9acf4904a209264:n14",
+          "target": "flow-c9acf4904a209264:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e15",
+          "source": "flow-c9acf4904a209264:n15",
+          "target": "flow-c9acf4904a209264:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e16",
+          "source": "flow-c9acf4904a209264:n16",
+          "target": "flow-c9acf4904a209264:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e17",
+          "source": "flow-c9acf4904a209264:n17",
+          "target": "flow-c9acf4904a209264:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e18",
+          "source": "flow-c9acf4904a209264:n18",
+          "target": "flow-c9acf4904a209264:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e19",
+          "source": "flow-c9acf4904a209264:n19",
+          "target": "flow-c9acf4904a209264:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e20",
+          "source": "flow-c9acf4904a209264:n20",
+          "target": "flow-c9acf4904a209264:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e21",
+          "source": "flow-c9acf4904a209264:n21",
+          "target": "flow-c9acf4904a209264:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e22",
+          "source": "flow-c9acf4904a209264:n22",
+          "target": "flow-c9acf4904a209264:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e23",
+          "source": "flow-c9acf4904a209264:n23",
+          "target": "flow-c9acf4904a209264:n24",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e24",
+          "source": "flow-c9acf4904a209264:n23",
+          "target": "flow-c9acf4904a209264:n25",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-c9acf4904a209264:e25",
+          "source": "flow-c9acf4904a209264:n25",
+          "target": "flow-c9acf4904a209264:n26",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/register/components/ComplianceFrame.tsx"
+  ]
+}

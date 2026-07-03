@@ -1,0 +1,211 @@
+{
+  "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+  "language": "typescript",
+  "sha256": "626ea474d9f5643738b0ecd5ace384d11001d592001c6eb77f88cc97bb7722c2",
+  "flows": [
+    {
+      "id": "flow-fe212eeb75359faa",
+      "name": "WelcomeScreen",
+      "symbol": "src.features.chat.components.screens.WelcomeSection:WelcomeScreen",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+        "start_line": 15,
+        "end_line": 107
+      },
+      "nodes": [
+        {
+          "id": "flow-fe212eeb75359faa:n1",
+          "kind": "entry",
+          "label": "Component: WelcomeScreen",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 15,
+            "end_line": 107
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.WelcomeSection:WelcomeScreen",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fe212eeb75359faa:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-full bg-white font-sans relative overflow-hidden w-full\"> {/* Background Gradi...",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 18,
+            "end_line": 106
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-full bg-white font-sans relative overflow-hidden w-full\"> {/* Background Gradients - Optimized for mobile frame */} <div className=\"absolute top-[-10%] right-[-10%] w-64 h-64 bg-[#F5F7F4] rounded-full blur-[60px] opacity-60 pointer-events-none\" /> <div className=\"absolute bottom-[-5%] left-[-10%] w-56 h-56 bg-[#E8EDE6] rounded-full blur-[60px] opacity-60 pointer-events-none\" /> {/* Main Content Area */} <div className=\"flex-1 px-5 pt-8 pb-6 flex flex-col...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-fe212eeb75359faa:e1",
+          "source": "flow-fe212eeb75359faa:n1",
+          "target": "flow-fe212eeb75359faa:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-7402a360b6f2b114",
+      "name": "FeatureItem",
+      "symbol": "src.features.chat.components.screens.WelcomeSection:FeatureItem",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+        "start_line": 109,
+        "end_line": 130
+      },
+      "nodes": [
+        {
+          "id": "flow-7402a360b6f2b114:n1",
+          "kind": "entry",
+          "label": "Component: FeatureItem",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 109,
+            "end_line": 130
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.WelcomeSection:FeatureItem",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7402a360b6f2b114:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F5F7F4] transition-colors cursor-default\">...",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 118,
+            "end_line": 129
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex items-center gap-3 p-2.5 rounded-lg hover:bg-[#F5F7F4] transition-colors cursor-default\"> <div className={`w-8 h-8 ${color} rounded-full flex items-center justify-center shrink-0`} > {icon} </div> <span className=\"font-semibold text-[#4A5445] text-sm\"> {text} </span> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7402a360b6f2b114:e1",
+          "source": "flow-7402a360b6f2b114:n1",
+          "target": "flow-7402a360b6f2b114:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-11efc097d08715b0",
+      "name": "TransparencyItem",
+      "symbol": "src.features.chat.components.screens.WelcomeSection:TransparencyItem",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+        "start_line": 132,
+        "end_line": 139
+      },
+      "nodes": [
+        {
+          "id": "flow-11efc097d08715b0:n1",
+          "kind": "entry",
+          "label": "Component: TransparencyItem",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 132,
+            "end_line": 139
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.WelcomeSection:TransparencyItem",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-11efc097d08715b0:n2",
+          "kind": "terminal",
+          "label": "Return ( <li className=\"flex items-start gap-2 text-xs text-[#4A5445]/80 leading-relaxed\"> <span className=\"mt-1 w-1 h-...",
+          "location": {
+            "path": "src/features/chat/components/screens/WelcomeSection.tsx",
+            "start_line": 133,
+            "end_line": 138
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <li className=\"flex items-start gap-2 text-xs text-[#4A5445]/80 leading-relaxed\"> <span className=\"mt-1 w-1 h-1 bg-[#889A7F] rounded-full shrink-0\" /> <span className=\"font-medium\">{text}</span> </li> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-11efc097d08715b0:e1",
+          "source": "flow-11efc097d08715b0:n1",
+          "target": "flow-11efc097d08715b0:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

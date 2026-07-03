@@ -1,0 +1,9 @@
+{
+  "path": "src/features/landing/index.ts",
+  "language": "typescript",
+  "sha256": "2b7ac6c33671a57325e7faa67114de0678fb6b1e030454b5790637b3df3d7499",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

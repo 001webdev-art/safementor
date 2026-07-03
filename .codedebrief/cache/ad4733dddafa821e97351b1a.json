@@ -1,0 +1,75 @@
+{
+  "path": "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.cc",
+  "language": "cpp",
+  "sha256": "82e02567f2faf5e732dc92a2fb0d01104f7ba8c48973f8cfd41a860b4fac3f3b",
+  "flows": [
+    {
+      "id": "flow-fedf30a5e4cf99f1",
+      "name": "RegisterPlugins",
+      "symbol": "flutter_chat.flutter_chat.windows.flutter:RegisterPlugins",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.cc",
+        "start_line": 10,
+        "end_line": 11
+      },
+      "nodes": [
+        {
+          "id": "flow-fedf30a5e4cf99f1:n1",
+          "kind": "entry",
+          "label": "RegisterPlugins",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.cc",
+            "start_line": 10,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.flutter:RegisterPlugins",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fedf30a5e4cf99f1:n2",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/flutter/generated_plugin_registrant.cc",
+            "start_line": 10,
+            "end_line": 11
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-fedf30a5e4cf99f1:e1",
+          "source": "flow-fedf30a5e4cf99f1:n1",
+          "target": "flow-fedf30a5e4cf99f1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

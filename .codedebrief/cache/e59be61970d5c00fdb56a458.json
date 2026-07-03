@@ -1,0 +1,423 @@
+{
+  "path": "src/features/chat/history/HistoryClient.tsx",
+  "language": "typescript",
+  "sha256": "cf07126846ce9620411471b77af953c5855d653593ac85042b98bf96a97b6717",
+  "flows": [
+    {
+      "id": "flow-ba6ea50b70ed91e1",
+      "name": "HistoryClient",
+      "symbol": "src.features.chat.history.HistoryClient:HistoryClient",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/history/HistoryClient.tsx",
+        "start_line": 10,
+        "end_line": 127
+      },
+      "nodes": [
+        {
+          "id": "flow-ba6ea50b70ed91e1:n1",
+          "kind": "entry",
+          "label": "Component: HistoryClient",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 10,
+            "end_line": 127
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.history.HistoryClient:HistoryClient",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [messages, setMessages] = useState<LocalMessage[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoadingMore, setIsLoadingMore] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [hasMore, setHasMore] = useState(true);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n6",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [page, setPage] = useState(0);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n7",
+          "kind": "call",
+          "label": "Call useChatStore()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { activeChildId, setActiveChildId } = useChatStore();",
+          "metadata": {
+            "calls": [
+              "useChatStore"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.hooks.useChatStore:useChatStore"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n8",
+          "kind": "action",
+          "label": "Set LIMIT",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "const LIMIT = 30;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n9",
+          "kind": "action",
+          "label": "Set loadMoreMessages",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 19,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "const loadMoreMessages = async () => { if (isLoadingMore || !hasMore) return; try { setIsLoadingMore(true); const skip = page * LIMIT; const newMessages = await chatDb.getMessages(activeChildId || undefined, LIMIT, skip); setMessages(prev => [...prev, ...newMessages]); setHasMore(newMessages.length === LIMIT); setPage(prev => prev + 1); } catch (error) { console.error('Error loading history:', error); } finally { setIsLoadingMore(false); } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n10",
+          "kind": "action",
+          "label": "// Reset and reload when child selection changes",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Reset and reload when child selection changes",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n11",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 38,
+            "end_line": 66
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { let isMounted = true; const loadInitial = async () => { setIsLoading(true); try { // Reset states setPage(0); // We fetch page 0 immediately const newMessages = await chatDb.getMessages(activeChildId || undefined, LIMIT, 0); if (isMounted) { setMessages(newMessages); setHasMore(newMessages.length === LIMIT); setPage(1); // Prepare for next page } } catch (error) { console.error('Error loading initial history:', error); } finally { if (isMounted) setIsLoading(false); } }; loadI...",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.history.HistoryClient:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n12",
+          "kind": "action",
+          "label": "Set handleLoadMore",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 68,
+            "end_line": 70
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleLoadMore = () => { loadMoreMessages(); };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n13",
+          "kind": "action",
+          "label": "Set handleDeleteAll",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 72,
+            "end_line": 87
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleDeleteAll = async () => { if (confirm('Are you sure you want to erase all conversations? This cannot be undone.')) { try { setIsLoading(true); await chatDb.deleteAllMessages(activeChildId || undefined); setMessages([]); setPage(0); setHasMore(false); } catch (error) { console.error('Error deleting messages:', error); alert('Failed to delete messages'); } finally { setIsLoading(false); } } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n14",
+          "kind": "action",
+          "label": "Set handleResetDatabase",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 89,
+            "end_line": 102
+          },
+          "evidence": "VERIFIED",
+          "detail": "const handleResetDatabase = async () => { if (confirm('DANGER: This will delete the entire local database for ALL children. This action cannot be undone. Are you sure you want to reset the database?')) { try { setIsLoading(true); await chatDb.destroyDatabase(); // Reload the page to ensure PouchDB is re-initialized correctly window.location.reload(); } catch (error) { console.error('Error resetting database:', error); alert('Failed to reset database'); setIsLoading(false); } } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:n15",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#0b141a]\"> {/* Pass onDeleteAll and onResetDatabase...",
+          "location": {
+            "path": "src/features/chat/history/HistoryClient.tsx",
+            "start_line": 104,
+            "end_line": 126
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col h-dvh bg-[#f0f2f5] dark:bg-[#0b141a]\"> {/* Pass onDeleteAll and onResetDatabase to Header */} <HistoryHeader onDeleteAll={handleDeleteAll} onResetDatabase={handleResetDatabase} /> <main className=\"flex-1 overflow-hidden\"> {isLoading ? ( <div className=\"flex items-center justify-center h-full\"> <Spinner label=\"Loading history...\" /> </div> ) : ( <HistoryList messages={messages} hasMore={hasMore} isLoadingMore={isLoadingMore} onLoadMore={handleLoadMore} /> )...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-ba6ea50b70ed91e1:e1",
+          "source": "flow-ba6ea50b70ed91e1:n1",
+          "target": "flow-ba6ea50b70ed91e1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e2",
+          "source": "flow-ba6ea50b70ed91e1:n2",
+          "target": "flow-ba6ea50b70ed91e1:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e3",
+          "source": "flow-ba6ea50b70ed91e1:n3",
+          "target": "flow-ba6ea50b70ed91e1:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e4",
+          "source": "flow-ba6ea50b70ed91e1:n4",
+          "target": "flow-ba6ea50b70ed91e1:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e5",
+          "source": "flow-ba6ea50b70ed91e1:n5",
+          "target": "flow-ba6ea50b70ed91e1:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e6",
+          "source": "flow-ba6ea50b70ed91e1:n6",
+          "target": "flow-ba6ea50b70ed91e1:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e7",
+          "source": "flow-ba6ea50b70ed91e1:n7",
+          "target": "flow-ba6ea50b70ed91e1:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e8",
+          "source": "flow-ba6ea50b70ed91e1:n8",
+          "target": "flow-ba6ea50b70ed91e1:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e9",
+          "source": "flow-ba6ea50b70ed91e1:n9",
+          "target": "flow-ba6ea50b70ed91e1:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e10",
+          "source": "flow-ba6ea50b70ed91e1:n10",
+          "target": "flow-ba6ea50b70ed91e1:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e11",
+          "source": "flow-ba6ea50b70ed91e1:n11",
+          "target": "flow-ba6ea50b70ed91e1:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e12",
+          "source": "flow-ba6ea50b70ed91e1:n12",
+          "target": "flow-ba6ea50b70ed91e1:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e13",
+          "source": "flow-ba6ea50b70ed91e1:n13",
+          "target": "flow-ba6ea50b70ed91e1:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-ba6ea50b70ed91e1:e14",
+          "source": "flow-ba6ea50b70ed91e1:n14",
+          "target": "flow-ba6ea50b70ed91e1:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/services/pouchdb.ts",
+    "src/features/chat/history/HistoryList.tsx",
+    "src/features/chat/history/HistoryHeader.tsx",
+    "src/features/chat/hooks/useChatStore.ts"
+  ]
+}

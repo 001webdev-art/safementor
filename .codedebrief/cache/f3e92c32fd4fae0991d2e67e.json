@@ -1,0 +1,394 @@
+{
+  "path": "src/features/dashboard/components/DashboardClient.tsx",
+  "language": "typescript",
+  "sha256": "c1b755cfde8de3abc67140bf080760780a78225cd6dab9edf7189ea7a2117e5c",
+  "flows": [
+    {
+      "id": "flow-9d66026740a1d1e3",
+      "name": "DashboardClient",
+      "symbol": "src.features.dashboard.components.DashboardClient:DashboardClient",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/components/DashboardClient.tsx",
+        "start_line": 26,
+        "end_line": 114
+      },
+      "nodes": [
+        {
+          "id": "flow-9d66026740a1d1e3:n1",
+          "kind": "entry",
+          "label": "Component: DashboardClient",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 26,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.components.DashboardClient:DashboardClient",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Dashboard');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n3",
+          "kind": "action",
+          "label": "// Real Data Hooks",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Real Data Hooks",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n4",
+          "kind": "call",
+          "label": "Call useProfile()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { profile, setProfile, isLoading, isSaving, handleUpdate } = useProfile(user);",
+          "metadata": {
+            "calls": [
+              "useProfile"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:useProfile"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n5",
+          "kind": "call",
+          "label": "Call useCollapsibleGroups()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { collapsedGroups, toggleGroup } = useCollapsibleGroups();",
+          "metadata": {
+            "calls": [
+              "useCollapsibleGroups"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:useCollapsibleGroups"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n6",
+          "kind": "call",
+          "label": "Call useDashboardSections()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 32,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { activeSection, setActiveSection, isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useDashboardSections();",
+          "metadata": {
+            "calls": [
+              "useDashboardSections"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:useDashboardSections"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n7",
+          "kind": "call",
+          "label": "Call useChildren()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 40,
+            "end_line": 45
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { children, upsertChild, deleteChild, isLoading: isLoadingChildren } = useChildren(user.id);",
+          "metadata": {
+            "calls": [
+              "useChildren"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:useChildren"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n8",
+          "kind": "action",
+          "label": "// Initial load check",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 47,
+            "end_line": 47
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Initial load check",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n9",
+          "kind": "decision",
+          "label": "isLoading",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 48,
+            "end_line": 48
+          },
+          "evidence": "VERIFIED",
+          "detail": "isLoading",
+          "metadata": {
+            "condition": "isLoading",
+            "domain": "",
+            "values": [],
+            "subject": "isLoading",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n10",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 49,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <LoadingState message={t('actions.loading')} />;",
+          "metadata": {
+            "calls": [
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n11",
+          "kind": "terminal",
+          "label": "Return <LoadingState message={t('actions.loading')} />",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 49,
+            "end_line": 49
+          },
+          "evidence": "VERIFIED",
+          "detail": "return <LoadingState message={t('actions.loading')} />;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n12",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 52,
+            "end_line": 113
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-screen flex bg-gray-50 overflow-hidden\"> <DashboardSidebar profile={profile} userEmail={user.email} activeSection={activeSection} onSectionChange={(section) => setActiveSection(section as any)} isMobileMenuOpen={isMobileMenuOpen} onMobileMenuClose={closeMobileMenu} t={t} /> <main className=\"flex-1 overflow-y-auto relative\"> {/* Mobile Header with Menu Toggle */} <div className=\"md:hidden sticky top-0 z-30 flex items-center justify-between p-4 bg-white border-b border-...",
+          "metadata": {
+            "calls": [
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.components.DashboardClient:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:n13",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"h-screen flex bg-gray-50 overflow-hidden\"> <DashboardSidebar profile={profile} userEmail={user...",
+          "location": {
+            "path": "src/features/dashboard/components/DashboardClient.tsx",
+            "start_line": 52,
+            "end_line": 113
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"h-screen flex bg-gray-50 overflow-hidden\"> <DashboardSidebar profile={profile} userEmail={user.email} activeSection={activeSection} onSectionChange={(section) => setActiveSection(section as any)} isMobileMenuOpen={isMobileMenuOpen} onMobileMenuClose={closeMobileMenu} t={t} /> <main className=\"flex-1 overflow-y-auto relative\"> {/* Mobile Header with Menu Toggle */} <div className=\"md:hidden sticky top-0 z-30 flex items-center justify-between p-4 bg-white border-b border-...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-9d66026740a1d1e3:e1",
+          "source": "flow-9d66026740a1d1e3:n1",
+          "target": "flow-9d66026740a1d1e3:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e2",
+          "source": "flow-9d66026740a1d1e3:n2",
+          "target": "flow-9d66026740a1d1e3:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e3",
+          "source": "flow-9d66026740a1d1e3:n3",
+          "target": "flow-9d66026740a1d1e3:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e4",
+          "source": "flow-9d66026740a1d1e3:n4",
+          "target": "flow-9d66026740a1d1e3:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e5",
+          "source": "flow-9d66026740a1d1e3:n5",
+          "target": "flow-9d66026740a1d1e3:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e6",
+          "source": "flow-9d66026740a1d1e3:n6",
+          "target": "flow-9d66026740a1d1e3:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e7",
+          "source": "flow-9d66026740a1d1e3:n7",
+          "target": "flow-9d66026740a1d1e3:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e8",
+          "source": "flow-9d66026740a1d1e3:n8",
+          "target": "flow-9d66026740a1d1e3:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e9",
+          "source": "flow-9d66026740a1d1e3:n9",
+          "target": "flow-9d66026740a1d1e3:n10",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e10",
+          "source": "flow-9d66026740a1d1e3:n10",
+          "target": "flow-9d66026740a1d1e3:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e11",
+          "source": "flow-9d66026740a1d1e3:n9",
+          "target": "flow-9d66026740a1d1e3:n12",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9d66026740a1d1e3:e12",
+          "source": "flow-9d66026740a1d1e3:n12",
+          "target": "flow-9d66026740a1d1e3:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/dashboard/components/DashboardSidebar.tsx",
+    "src/features/dashboard/components/ui/LoadingState.tsx"
+  ]
+}

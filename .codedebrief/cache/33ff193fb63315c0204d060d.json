@@ -1,0 +1,77 @@
+{
+  "path": "src/features/chat/components/screens/ProfileSection.tsx",
+  "language": "typescript",
+  "sha256": "15df366bdedef6f083e69e1d383989ab044ce756649b7baafc853e0c5fa6e14b",
+  "flows": [
+    {
+      "id": "flow-6d60415276ba542b",
+      "name": "ProfileSection",
+      "symbol": "src.features.chat.components.screens.ProfileSection:ProfileSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/screens/ProfileSection.tsx",
+        "start_line": 5,
+        "end_line": 14
+      },
+      "nodes": [
+        {
+          "id": "flow-6d60415276ba542b:n1",
+          "kind": "entry",
+          "label": "Component: ProfileSection",
+          "location": {
+            "path": "src/features/chat/components/screens/ProfileSection.tsx",
+            "start_line": 5,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.screens.ProfileSection:ProfileSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-6d60415276ba542b:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex items-center justify-center h-full text-default-500\"> <div className=\"text-center\"> <h2 c...",
+          "location": {
+            "path": "src/features/chat/components/screens/ProfileSection.tsx",
+            "start_line": 6,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex items-center justify-center h-full text-default-500\"> <div className=\"text-center\"> <h2 className=\"text-2xl font-bold mb-2\">Profile</h2> <p>User profile coming soon...</p> </div> </div> );",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-6d60415276ba542b:e1",
+          "source": "flow-6d60415276ba542b:n1",
+          "target": "flow-6d60415276ba542b:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

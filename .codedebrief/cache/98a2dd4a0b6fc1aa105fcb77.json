@@ -1,0 +1,112 @@
+{
+  "path": "src/features/dashboard/forms/ContactInfoForm.tsx",
+  "language": "typescript",
+  "sha256": "dc49851ffdd914cfdb10c01f04d14f10be7132f4f26a6f59147121aa395d636e",
+  "flows": [
+    {
+      "id": "flow-9f4064d41d17b4cc",
+      "name": "ContactInfoForm",
+      "symbol": "src.features.dashboard.forms.ContactInfoForm:ContactInfoForm",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": false,
+      "location": {
+        "path": "src/features/dashboard/forms/ContactInfoForm.tsx",
+        "start_line": 12,
+        "end_line": 54
+      },
+      "nodes": [
+        {
+          "id": "flow-9f4064d41d17b4cc:n1",
+          "kind": "entry",
+          "label": "Component: ContactInfoForm",
+          "location": {
+            "path": "src/features/dashboard/forms/ContactInfoForm.tsx",
+            "start_line": 12,
+            "end_line": 54
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.forms.ContactInfoForm:ContactInfoForm",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9f4064d41d17b4cc:n2",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/dashboard/forms/ContactInfoForm.tsx",
+            "start_line": 13,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <Mail className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.contactInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-5\"> <Input label={t('fields.email')} value={profile.email || ''} variant=\"bordered\" isDisabled labelPlacement=\"outside\" id=\"email\" classNames={{ input...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.forms.ContactInfoForm:t",
+              "src.features.dashboard.forms.ContactInfoForm:t",
+              "src.features.dashboard.forms.ContactInfoForm:t",
+              "src.features.dashboard.forms.ContactInfoForm:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-9f4064d41d17b4cc:n3",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\">...",
+          "location": {
+            "path": "src/features/dashboard/forms/ContactInfoForm.tsx",
+            "start_line": 13,
+            "end_line": 53
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"p-5 bg-gray-50 rounded-xl border border-gray-100 animate-in slide-in-from-top-2 duration-300\"> <div className=\"flex items-center gap-2 mb-4\"> <Mail className=\"text-[#889A7F]\" size={20} /> <span className=\"font-bold text-gray-900\">{t('sections.contactInfo')}</span> </div> <div className=\"grid grid-cols-1 md:grid-cols-2 gap-5\"> <Input label={t('fields.email')} value={profile.email || ''} variant=\"bordered\" isDisabled labelPlacement=\"outside\" id=\"email\" classNames={{ input...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-9f4064d41d17b4cc:e1",
+          "source": "flow-9f4064d41d17b4cc:n1",
+          "target": "flow-9f4064d41d17b4cc:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9f4064d41d17b4cc:e2",
+          "source": "flow-9f4064d41d17b4cc:n2",
+          "target": "flow-9f4064d41d17b4cc:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": false,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

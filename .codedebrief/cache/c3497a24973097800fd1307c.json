@@ -1,0 +1,9 @@
+{
+  "path": "src/features/auth/index.ts",
+  "language": "typescript",
+  "sha256": "7a19b502dac92d38e83eb3d0211332b5e927509061f9b878b174cc0ad7219092",
+  "flows": [],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

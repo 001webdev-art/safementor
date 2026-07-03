@@ -1,0 +1,676 @@
+{
+  "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+  "language": "cpp",
+  "sha256": "db78a5c2afe02695b05b1acf7eb22e34d9a9dab82ce4131e34ded141d470062a",
+  "flows": [
+    {
+      "id": "flow-fb0b89f9a9a7d9d7",
+      "name": "wWinMain",
+      "symbol": "flutter_chat.flutter_chat.windows.runner:wWinMain",
+      "language": "cpp",
+      "framework": "generic",
+      "entry_kind": "function",
+      "is_entrypoint": true,
+      "location": {
+        "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+        "start_line": 8,
+        "end_line": 43
+      },
+      "nodes": [
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n1",
+          "kind": "entry",
+          "label": "wWinMain",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 8,
+            "end_line": 43
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "flutter_chat.flutter_chat.windows.runner:wWinMain",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n2",
+          "kind": "action",
+          "label": "// Attach to console when present (e.g., 'flutter run') or create a",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Attach to console when present (e.g., 'flutter run') or create a",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n3",
+          "kind": "action",
+          "label": "// new console when running with a debugger.",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "// new console when running with a debugger.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n4",
+          "kind": "decision",
+          "label": "!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()",
+          "metadata": {
+            "condition": "!::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()",
+            "domain": "",
+            "values": [],
+            "subject": "::AttachConsole(ATTACH_PARENT_PROCESS) && ::IsDebuggerPresent()",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "falls_through",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n5",
+          "kind": "call",
+          "label": "Call CreateAndAttachConsole()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "CreateAndAttachConsole();",
+          "metadata": {
+            "calls": [
+              "CreateAndAttachConsole"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:CreateAndAttachConsole"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n6",
+          "kind": "action",
+          "label": "// Initialize COM, so that it is available for use in the library and/or",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 16,
+            "end_line": 16
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Initialize COM, so that it is available for use in the library and/or",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n7",
+          "kind": "action",
+          "label": "// plugins.",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "// plugins.",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n8",
+          "kind": "call",
+          "label": "Call ::CoInitializeEx()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "::CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);",
+          "metadata": {
+            "calls": [
+              "::CoInitializeEx"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:::CoInitializeEx"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n9",
+          "kind": "action",
+          "label": "flutter::DartProject project(L\"data\")",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "flutter::DartProject project(L\"data\");",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n10",
+          "kind": "call",
+          "label": "Call GetCommandLineArguments()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 22,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "std::vector<std::string> command_line_arguments = GetCommandLineArguments();",
+          "metadata": {
+            "calls": [
+              "GetCommandLineArguments"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:GetCommandLineArguments"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n11",
+          "kind": "call",
+          "label": "Call project.set_dart_entrypoint_arguments()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "project.set_dart_entrypoint_arguments(std::move(command_line_arguments));",
+          "metadata": {
+            "calls": [
+              "project.set_dart_entrypoint_arguments",
+              "std::move"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:project.set_dart_entrypoint_arguments",
+              "flutter_chat.flutter_chat.windows.runner:std::move"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n12",
+          "kind": "action",
+          "label": "FlutterWindow window(project)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "FlutterWindow window(project);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n13",
+          "kind": "action",
+          "label": "Win32Window::Point origin(10, 10)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "Win32Window::Point origin(10, 10);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n14",
+          "kind": "action",
+          "label": "Win32Window::Size size(1280, 720)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 29,
+            "end_line": 29
+          },
+          "evidence": "VERIFIED",
+          "detail": "Win32Window::Size size(1280, 720);",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n15",
+          "kind": "decision",
+          "label": "!window.Create(L\"flutter_chat\", origin, size)",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 30,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "!window.Create(L\"flutter_chat\", origin, size)",
+          "metadata": {
+            "condition": "!window.Create(L\"flutter_chat\", origin, size)",
+            "domain": "",
+            "values": [],
+            "subject": "window.Create(L\"flutter_chat\", origin, size)",
+            "operator": "",
+            "negation": true,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Yes",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "No",
+                "outcome": "falls_through",
+                "implicit": true
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n16",
+          "kind": "terminal",
+          "label": "Return EXIT_FAILURE",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 31,
+            "end_line": 31
+          },
+          "evidence": "VERIFIED",
+          "detail": "return EXIT_FAILURE;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n17",
+          "kind": "call",
+          "label": "Call window.SetQuitOnClose()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 33,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "window.SetQuitOnClose(true);",
+          "metadata": {
+            "calls": [
+              "window.SetQuitOnClose"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:window.SetQuitOnClose"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n18",
+          "kind": "action",
+          "label": "::MSG msg",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 35,
+            "end_line": 35
+          },
+          "evidence": "VERIFIED",
+          "detail": "::MSG msg;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n19",
+          "kind": "action",
+          "label": "Repeat: while (::GetMessage(&msg, nullptr, 0, 0))",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 36,
+            "end_line": 39
+          },
+          "evidence": "INFERRED",
+          "detail": "while (::GetMessage(&msg, nullptr, 0, 0)) { ::TranslateMessage(&msg); ::DispatchMessage(&msg); }",
+          "metadata": {
+            "loop": true,
+            "body_outcome": "falls_through",
+            "has_else": false,
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n20",
+          "kind": "call",
+          "label": "Call ::TranslateMessage()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 37,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "::TranslateMessage(&msg);",
+          "metadata": {
+            "calls": [
+              "::TranslateMessage"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:::TranslateMessage"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n21",
+          "kind": "call",
+          "label": "Call ::DispatchMessage()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 38,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "::DispatchMessage(&msg);",
+          "metadata": {
+            "calls": [
+              "::DispatchMessage"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "network"
+            ],
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:::DispatchMessage"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n22",
+          "kind": "call",
+          "label": "Call ::CoUninitialize()",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 41,
+            "end_line": 41
+          },
+          "evidence": "VERIFIED",
+          "detail": "::CoUninitialize();",
+          "metadata": {
+            "calls": [
+              "::CoUninitialize"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "flutter_chat.flutter_chat.windows.runner:::CoUninitialize"
+            ]
+          }
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:n23",
+          "kind": "terminal",
+          "label": "Return EXIT_SUCCESS",
+          "location": {
+            "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+            "start_line": 42,
+            "end_line": 42
+          },
+          "evidence": "VERIFIED",
+          "detail": "return EXIT_SUCCESS;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e1",
+          "source": "flow-fb0b89f9a9a7d9d7:n1",
+          "target": "flow-fb0b89f9a9a7d9d7:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e2",
+          "source": "flow-fb0b89f9a9a7d9d7:n2",
+          "target": "flow-fb0b89f9a9a7d9d7:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e3",
+          "source": "flow-fb0b89f9a9a7d9d7:n3",
+          "target": "flow-fb0b89f9a9a7d9d7:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e4",
+          "source": "flow-fb0b89f9a9a7d9d7:n4",
+          "target": "flow-fb0b89f9a9a7d9d7:n5",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e5",
+          "source": "flow-fb0b89f9a9a7d9d7:n5",
+          "target": "flow-fb0b89f9a9a7d9d7:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e6",
+          "source": "flow-fb0b89f9a9a7d9d7:n4",
+          "target": "flow-fb0b89f9a9a7d9d7:n6",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e7",
+          "source": "flow-fb0b89f9a9a7d9d7:n6",
+          "target": "flow-fb0b89f9a9a7d9d7:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e8",
+          "source": "flow-fb0b89f9a9a7d9d7:n7",
+          "target": "flow-fb0b89f9a9a7d9d7:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e9",
+          "source": "flow-fb0b89f9a9a7d9d7:n8",
+          "target": "flow-fb0b89f9a9a7d9d7:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e10",
+          "source": "flow-fb0b89f9a9a7d9d7:n9",
+          "target": "flow-fb0b89f9a9a7d9d7:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e11",
+          "source": "flow-fb0b89f9a9a7d9d7:n10",
+          "target": "flow-fb0b89f9a9a7d9d7:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e12",
+          "source": "flow-fb0b89f9a9a7d9d7:n11",
+          "target": "flow-fb0b89f9a9a7d9d7:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e13",
+          "source": "flow-fb0b89f9a9a7d9d7:n12",
+          "target": "flow-fb0b89f9a9a7d9d7:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e14",
+          "source": "flow-fb0b89f9a9a7d9d7:n13",
+          "target": "flow-fb0b89f9a9a7d9d7:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e15",
+          "source": "flow-fb0b89f9a9a7d9d7:n14",
+          "target": "flow-fb0b89f9a9a7d9d7:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e16",
+          "source": "flow-fb0b89f9a9a7d9d7:n15",
+          "target": "flow-fb0b89f9a9a7d9d7:n16",
+          "label": "Yes",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e17",
+          "source": "flow-fb0b89f9a9a7d9d7:n15",
+          "target": "flow-fb0b89f9a9a7d9d7:n17",
+          "label": "No",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e18",
+          "source": "flow-fb0b89f9a9a7d9d7:n17",
+          "target": "flow-fb0b89f9a9a7d9d7:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e19",
+          "source": "flow-fb0b89f9a9a7d9d7:n18",
+          "target": "flow-fb0b89f9a9a7d9d7:n19",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e20",
+          "source": "flow-fb0b89f9a9a7d9d7:n19",
+          "target": "flow-fb0b89f9a9a7d9d7:n20",
+          "label": "Iteration",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e21",
+          "source": "flow-fb0b89f9a9a7d9d7:n20",
+          "target": "flow-fb0b89f9a9a7d9d7:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e22",
+          "source": "flow-fb0b89f9a9a7d9d7:n19",
+          "target": "flow-fb0b89f9a9a7d9d7:n22",
+          "label": "Done",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e23",
+          "source": "flow-fb0b89f9a9a7d9d7:n21",
+          "target": "flow-fb0b89f9a9a7d9d7:n22",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-fb0b89f9a9a7d9d7:e24",
+          "source": "flow-fb0b89f9a9a7d9d7:n22",
+          "target": "flow-fb0b89f9a9a7d9d7:n23",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "test": false,
+        "performs_auth_check": false,
+        "parse_error": {
+          "language": "cpp",
+          "path": "flutter_chat/flutter_chat/windows/runner/main.cpp",
+          "line": 8,
+          "kind": "ERROR",
+          "reason": "cpp parse error in flutter_chat/flutter_chat/windows/runner/main.cpp:8 near ERROR"
+        }
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

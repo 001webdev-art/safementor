@@ -1,0 +1,106 @@
+{
+  "path": "src/app/page.tsx",
+  "language": "typescript",
+  "sha256": "006a0a447a95f3e9ee4dca60e77db8a09eb5eb98dc65ad46f4482a237f75b6e2",
+  "flows": [
+    {
+      "id": "flow-109e1fd42e56e10a",
+      "name": "RootPage",
+      "symbol": "src.app.page:RootPage",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/page.tsx",
+        "start_line": 4,
+        "end_line": 6
+      },
+      "nodes": [
+        {
+          "id": "flow-109e1fd42e56e10a:n1",
+          "kind": "entry",
+          "label": "Component: RootPage",
+          "location": {
+            "path": "src/app/page.tsx",
+            "start_line": 4,
+            "end_line": 6
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.page:RootPage",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-109e1fd42e56e10a:n2",
+          "kind": "call",
+          "label": "Call redirect()",
+          "location": {
+            "path": "src/app/page.tsx",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "redirect(`/${defaultLocale}`)",
+          "metadata": {
+            "calls": [
+              "redirect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.page:redirect"
+            ]
+          }
+        },
+        {
+          "id": "flow-109e1fd42e56e10a:n3",
+          "kind": "terminal",
+          "label": "Complete",
+          "location": {
+            "path": "src/app/page.tsx",
+            "start_line": 4,
+            "end_line": 6
+          },
+          "evidence": "INFERRED",
+          "detail": "",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-109e1fd42e56e10a:e1",
+          "source": "flow-109e1fd42e56e10a:n1",
+          "target": "flow-109e1fd42e56e10a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-109e1fd42e56e10a:e2",
+          "source": "flow-109e1fd42e56e10a:n2",
+          "target": "flow-109e1fd42e56e10a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

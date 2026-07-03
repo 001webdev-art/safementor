@@ -1,0 +1,151 @@
+{
+  "path": "src/features/landing/components/ApproachSection.tsx",
+  "language": "typescript",
+  "sha256": "210aad224b6d5e02bd1ddf1bc5b3ea3a60d7f0ebb9f2091d846971584d7c0a5c",
+  "flows": [
+    {
+      "id": "flow-9f78d1c2f3ee60cd",
+      "name": "ApproachSection",
+      "symbol": "src.features.landing.components.ApproachSection:ApproachSection",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/ApproachSection.tsx",
+        "start_line": 7,
+        "end_line": 68
+      },
+      "nodes": [
+        {
+          "id": "flow-9f78d1c2f3ee60cd:n1",
+          "kind": "entry",
+          "label": "Component: ApproachSection",
+          "location": {
+            "path": "src/features/landing/components/ApproachSection.tsx",
+            "start_line": 7,
+            "end_line": 68
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.ApproachSection:ApproachSection",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-9f78d1c2f3ee60cd:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/landing/components/ApproachSection.tsx",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('SafeMentor.Approach');",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.ApproachSection:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-9f78d1c2f3ee60cd:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/landing/components/ApproachSection.tsx",
+            "start_line": 10,
+            "end_line": 67
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section id=\"approach\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#F8F6F3]\"> <div className=\"max-w-6xl mx-auto\"> <div className=\"grid md:grid-cols-2 gap-16 items-center\"> <div className=\"order-2 md:order-1 animate-fade-in\"> <div className=\"relative\"> <div className=\"w-full aspect-square rounded-3xl p-8 bg-[#FDFBF8]/50 shadow-inner\" id=\"approach-illustration-bg\"> <Image src=\"/svg/approach-illustration.svg\" alt=\"Child exploring nature with a magnifying glass\" width={300}...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t",
+              "src.features.landing.components.ApproachSection:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-9f78d1c2f3ee60cd:n4",
+          "kind": "terminal",
+          "label": "Return ( <section id=\"approach\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#F8F6F3]\"> <div className=\"...",
+          "location": {
+            "path": "src/features/landing/components/ApproachSection.tsx",
+            "start_line": 10,
+            "end_line": 67
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section id=\"approach\" className=\"w-full px-6 md:px-12 lg:px-20 py-20 md:py-28 bg-[#F8F6F3]\"> <div className=\"max-w-6xl mx-auto\"> <div className=\"grid md:grid-cols-2 gap-16 items-center\"> <div className=\"order-2 md:order-1 animate-fade-in\"> <div className=\"relative\"> <div className=\"w-full aspect-square rounded-3xl p-8 bg-[#FDFBF8]/50 shadow-inner\" id=\"approach-illustration-bg\"> <Image src=\"/svg/approach-illustration.svg\" alt=\"Child exploring nature with a magnifying glass\" width={300}...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-9f78d1c2f3ee60cd:e1",
+          "source": "flow-9f78d1c2f3ee60cd:n1",
+          "target": "flow-9f78d1c2f3ee60cd:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9f78d1c2f3ee60cd:e2",
+          "source": "flow-9f78d1c2f3ee60cd:n2",
+          "target": "flow-9f78d1c2f3ee60cd:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-9f78d1c2f3ee60cd:e3",
+          "source": "flow-9f78d1c2f3ee60cd:n3",
+          "target": "flow-9f78d1c2f3ee60cd:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

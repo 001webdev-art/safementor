@@ -1,0 +1,278 @@
+{
+  "path": "src/features/landing/components/Icons.tsx",
+  "language": "typescript",
+  "sha256": "a99635c06fab7e7dc7c1d55b81c33d695dc888a677290172759f32099550d3fe",
+  "flows": [
+    {
+      "id": "flow-64de603532b845c4",
+      "name": "AcmeLogo",
+      "symbol": "src.features.landing.components.Icons:AcmeLogo",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Icons.tsx",
+        "start_line": 3,
+        "end_line": 19
+      },
+      "nodes": [
+        {
+          "id": "flow-64de603532b845c4:n1",
+          "kind": "entry",
+          "label": "Component: AcmeLogo",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 3,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Icons:AcmeLogo",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-64de603532b845c4:n2",
+          "kind": "terminal",
+          "label": "Return ( <svg fill=\"none\" height=\"36\" viewBox=\"0 0 32 32\" width=\"36\" xmlns=\"http://www.w3.org/2000/svg\" > <rect fill=\"c...",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 3,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <svg fill=\"none\" height=\"36\" viewBox=\"0 0 32 32\" width=\"36\" xmlns=\"http://www.w3.org/2000/svg\" > <rect fill=\"currentColor\" fillOpacity=\"0.2\" height=\"100%\" rx=\"16\" width=\"100%\" /> <path clipRule=\"evenodd\" d=\"M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z\" fill=\"currentColor\" fillRule=\"evenodd\" /> </svg> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-64de603532b845c4:e1",
+          "source": "flow-64de603532b845c4:n1",
+          "target": "flow-64de603532b845c4:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-f7c19d79786bcba1",
+      "name": "CheckIcon",
+      "symbol": "src.features.landing.components.Icons:CheckIcon",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Icons.tsx",
+        "start_line": 21,
+        "end_line": 36
+      },
+      "nodes": [
+        {
+          "id": "flow-f7c19d79786bcba1:n1",
+          "kind": "entry",
+          "label": "Component: CheckIcon",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 21,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Icons:CheckIcon",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f7c19d79786bcba1:n2",
+          "kind": "terminal",
+          "label": "Return ( <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"current...",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 21,
+            "end_line": 36
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" className=\"text-green-500\" > <polyline points=\"20 6 9 17 4 12\" /> </svg> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f7c19d79786bcba1:e1",
+          "source": "flow-f7c19d79786bcba1:n1",
+          "target": "flow-f7c19d79786bcba1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-7c91455197cf3ac1",
+      "name": "BoxIcon",
+      "symbol": "src.features.landing.components.Icons:BoxIcon",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Icons.tsx",
+        "start_line": 38,
+        "end_line": 44
+      },
+      "nodes": [
+        {
+          "id": "flow-7c91455197cf3ac1:n1",
+          "kind": "entry",
+          "label": "Component: BoxIcon",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 38,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Icons:BoxIcon",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7c91455197cf3ac1:n2",
+          "kind": "terminal",
+          "label": "Return ( <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"current...",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 38,
+            "end_line": 44
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\"> <path d=\"M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z\"></path> <polyline points=\"3.27 6.96 12 12.01 20.73 6.96\"></polyline> <line x1=\"12\" y1=\"22.08\" x2=\"12\" y2=\"12\"></line> </svg> )",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7c91455197cf3ac1:e1",
+          "source": "flow-7c91455197cf3ac1:n1",
+          "target": "flow-7c91455197cf3ac1:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    },
+    {
+      "id": "flow-584c6aba52666319",
+      "name": "FeatureIcon",
+      "symbol": "src.features.landing.components.Icons:FeatureIcon",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/Icons.tsx",
+        "start_line": 46,
+        "end_line": 68
+      },
+      "nodes": [
+        {
+          "id": "flow-584c6aba52666319:n1",
+          "kind": "entry",
+          "label": "Component: FeatureIcon",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 46,
+            "end_line": 68
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.Icons:FeatureIcon",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-584c6aba52666319:n2",
+          "kind": "terminal",
+          "label": "Return ( <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 667.89824 531.39369\" className=\"w-full h-full max-w-[300p...",
+          "location": {
+            "path": "src/features/landing/components/Icons.tsx",
+            "start_line": 46,
+            "end_line": 68
+          },
+          "evidence": "VERIFIED",
+          "detail": "( <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 667.89824 531.39369\" className=\"w-full h-full max-w-[300px]\" fill=\"currentColor\" > <g className=\"text-gray-700 dark:text-gray-600\"> <polygon points=\"177.27478 122.14261 97.82164 111.55026 113.90043 30.12255 199.25237 46.97622 177.27478 122.14261\" fill=\"currentColor\" /> <path d=\"M100.89824,474.41435V138.49443c0-6.0874,4.95215-11.04004,11.04004-11.04004H656.8582c6.0874,0,11.04004,4.95264,11.04004,11.04004V474.41435c0,6.0874-4.95264,11.04004-1...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-584c6aba52666319:e1",
+          "source": "flow-584c6aba52666319:n1",
+          "target": "flow-584c6aba52666319:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

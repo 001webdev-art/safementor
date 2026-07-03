@@ -1,0 +1,156 @@
+{
+  "path": "src/features/chat/components/MessageBubble.tsx",
+  "language": "typescript",
+  "sha256": "e5115f34a18d26af85b255bfd8ada12c7aa3c246a20b44fd2963044987caddab",
+  "flows": [
+    {
+      "id": "flow-7e676371b8870ac7",
+      "name": "MessageBubble",
+      "symbol": "src.features.chat.components.MessageBubble:MessageBubble",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/chat/components/MessageBubble.tsx",
+        "start_line": 11,
+        "end_line": 59
+      },
+      "nodes": [
+        {
+          "id": "flow-7e676371b8870ac7:n1",
+          "kind": "entry",
+          "label": "Component: MessageBubble",
+          "location": {
+            "path": "src/features/chat/components/MessageBubble.tsx",
+            "start_line": 11,
+            "end_line": 59
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.chat.components.MessageBubble:MessageBubble",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7e676371b8870ac7:n2",
+          "kind": "action",
+          "label": "Set isUser",
+          "location": {
+            "path": "src/features/chat/components/MessageBubble.tsx",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const isUser = message.role === 'user';",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7e676371b8870ac7:n3",
+          "kind": "action",
+          "label": "Set getStatusIcon",
+          "location": {
+            "path": "src/features/chat/components/MessageBubble.tsx",
+            "start_line": 14,
+            "end_line": 26
+          },
+          "evidence": "VERIFIED",
+          "detail": "const getStatusIcon = () => { if (!isUser) return null; switch (message.sync_status) { case 'pending': return <Clock size={12} className=\"opacity-50\" />; case 'synced': return <CheckCheck size={12} className=\"text-primary\" />; case 'failed': return <AlertCircle size={12} className=\"text-danger\" />; default: return <Check size={12} className=\"opacity-50\" />; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7e676371b8870ac7:n4",
+          "kind": "call",
+          "label": "Call new Date(message.timestamp).toLocaleTimeString()",
+          "location": {
+            "path": "src/features/chat/components/MessageBubble.tsx",
+            "start_line": 28,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-2`}> <div className={`max-w-[80%] px-3 py-2 rounded-lg shadow-sm relative ${isUser ? 'bg-[#dcf8c6] dark:bg-[#005c4b] text-[#111b21] dark:text-[#e9edef] rounded-tr-none' : 'bg-white dark:bg-[#202c33] text-[#111b21] dark:text-[#e9edef] rounded-tl-none' }`} > {!isUser && message.provider && ( <p className=\"text-[10px] font-bold uppercase tracking-wider text-primary mb-1\"> {message.provider} </p> )} <p className=\"text-sm....",
+          "metadata": {
+            "calls": [
+              "new Date(message.timestamp).toLocaleTimeString",
+              "getStatusIcon"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.chat.components.MessageBubble:new Date(message.timestamp).toLocaleTimeString",
+              "src.features.chat.components.MessageBubble:getStatusIcon"
+            ]
+          }
+        },
+        {
+          "id": "flow-7e676371b8870ac7:n5",
+          "kind": "terminal",
+          "label": "Return ( <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-2`}> <div className={`max-w-[80%] px-3 py...",
+          "location": {
+            "path": "src/features/chat/components/MessageBubble.tsx",
+            "start_line": 28,
+            "end_line": 58
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-2`}> <div className={`max-w-[80%] px-3 py-2 rounded-lg shadow-sm relative ${isUser ? 'bg-[#dcf8c6] dark:bg-[#005c4b] text-[#111b21] dark:text-[#e9edef] rounded-tr-none' : 'bg-white dark:bg-[#202c33] text-[#111b21] dark:text-[#e9edef] rounded-tl-none' }`} > {!isUser && message.provider && ( <p className=\"text-[10px] font-bold uppercase tracking-wider text-primary mb-1\"> {message.provider} </p> )} <p className=\"text-sm....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7e676371b8870ac7:e1",
+          "source": "flow-7e676371b8870ac7:n1",
+          "target": "flow-7e676371b8870ac7:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7e676371b8870ac7:e2",
+          "source": "flow-7e676371b8870ac7:n2",
+          "target": "flow-7e676371b8870ac7:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7e676371b8870ac7:e3",
+          "source": "flow-7e676371b8870ac7:n3",
+          "target": "flow-7e676371b8870ac7:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7e676371b8870ac7:e4",
+          "source": "flow-7e676371b8870ac7:n4",
+          "target": "flow-7e676371b8870ac7:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": true,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/chat/types/chat.ts"
+  ]
+}

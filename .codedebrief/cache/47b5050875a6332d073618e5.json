@@ -1,0 +1,139 @@
+{
+  "path": "src/features/register/components/ConsentToggles.tsx",
+  "language": "typescript",
+  "sha256": "5d84033393bdcf683c603a813e2078bb5cc464679b51e50d7b71b99ea6f40cdc",
+  "flows": [
+    {
+      "id": "flow-f66f9de4552abf2d",
+      "name": "ConsentToggles",
+      "symbol": "src.features.register.components.ConsentToggles:ConsentToggles",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/register/components/ConsentToggles.tsx",
+        "start_line": 12,
+        "end_line": 38
+      },
+      "nodes": [
+        {
+          "id": "flow-f66f9de4552abf2d:n1",
+          "kind": "entry",
+          "label": "Component: ConsentToggles",
+          "location": {
+            "path": "src/features/register/components/ConsentToggles.tsx",
+            "start_line": 12,
+            "end_line": 38
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.register.components.ConsentToggles:ConsentToggles",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-f66f9de4552abf2d:n2",
+          "kind": "call",
+          "label": "Call useTranslations()",
+          "location": {
+            "path": "src/features/register/components/ConsentToggles.tsx",
+            "start_line": 13,
+            "end_line": 13
+          },
+          "evidence": "VERIFIED",
+          "detail": "const t = useTranslations('Compliance.consent')",
+          "metadata": {
+            "calls": [
+              "useTranslations"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.ConsentToggles:useTranslations"
+            ]
+          }
+        },
+        {
+          "id": "flow-f66f9de4552abf2d:n3",
+          "kind": "call",
+          "label": "Call t()",
+          "location": {
+            "path": "src/features/register/components/ConsentToggles.tsx",
+            "start_line": 15,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"space-y-4\"> <div className=\"flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100\"> <Checkbox className=\"mt-1\" isSelected={helpImprove} onValueChange={(isSelected) => onChange('helpImprove', isSelected)} classNames={{ wrapper: \"group-data-[selected=true]:after:bg-[#889A7F]\" }} > <div> <h4 className=\"font-semibold text-gray-900\"> {t('improve.title')} <span className=\"text-gray-500 text-sm font-normal\">({t('improve.optional')})</span> </h4> <p classN...",
+          "metadata": {
+            "calls": [
+              "t",
+              "t",
+              "t"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.register.components.ConsentToggles:t",
+              "src.features.register.components.ConsentToggles:t",
+              "src.features.register.components.ConsentToggles:t"
+            ]
+          }
+        },
+        {
+          "id": "flow-f66f9de4552abf2d:n4",
+          "kind": "terminal",
+          "label": "Return ( <section className=\"space-y-4\"> <div className=\"flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border...",
+          "location": {
+            "path": "src/features/register/components/ConsentToggles.tsx",
+            "start_line": 15,
+            "end_line": 37
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <section className=\"space-y-4\"> <div className=\"flex items-start gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100\"> <Checkbox className=\"mt-1\" isSelected={helpImprove} onValueChange={(isSelected) => onChange('helpImprove', isSelected)} classNames={{ wrapper: \"group-data-[selected=true]:after:bg-[#889A7F]\" }} > <div> <h4 className=\"font-semibold text-gray-900\"> {t('improve.title')} <span className=\"text-gray-500 text-sm font-normal\">({t('improve.optional')})</span> </h4> <p classN...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-f66f9de4552abf2d:e1",
+          "source": "flow-f66f9de4552abf2d:n1",
+          "target": "flow-f66f9de4552abf2d:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f66f9de4552abf2d:e2",
+          "source": "flow-f66f9de4552abf2d:n2",
+          "target": "flow-f66f9de4552abf2d:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-f66f9de4552abf2d:e3",
+          "source": "flow-f66f9de4552abf2d:n3",
+          "target": "flow-f66f9de4552abf2d:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

@@ -1,0 +1,566 @@
+{
+  "path": "src/app/api/chat/route.ts",
+  "language": "typescript",
+  "sha256": "dc2ebe15ee8ea81a8a4513c11aae59ca3a94af564b5f22b8ea18968b377b8e8f",
+  "flows": [
+    {
+      "id": "flow-2a96f0d2f18dfe52",
+      "name": "POST",
+      "symbol": "src.app.api.chat.route:POST",
+      "language": "typescript",
+      "framework": "nextjs",
+      "entry_kind": "route",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/app/api/chat/route.ts",
+        "start_line": 3,
+        "end_line": 30
+      },
+      "nodes": [
+        {
+          "id": "flow-2a96f0d2f18dfe52:n1",
+          "kind": "entry",
+          "label": "Route: POST",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 3,
+            "end_line": 30
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.app.api.chat.route:POST",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n2",
+          "kind": "decision",
+          "label": "Operation succeeds?",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 4,
+            "end_line": 29
+          },
+          "evidence": "INFERRED",
+          "detail": "try { const { provider, messages } = await req.json(); // In a real implementation, you would use the provider and original messages // to call the respective APIs (OpenAI, Gemini, Groq) using the keys from .env.local const apiKeyGemini = process.env.GEMINI_API_KEY; const apiKeyOpenAI = process.env.OPENAI_API_KEY; const apiKeyGroq = process.env.GROQ_API_KEY; // Log for debugging (remove in production) console.log(`Calling ${provider} with ${messages.length} messages`); // Mocking a successful r...",
+          "metadata": {
+            "condition": "exception boundary",
+            "domain": "error",
+            "values": [],
+            "subject": "exception",
+            "operator": "",
+            "negation": false,
+            "value_namespace": "",
+            "branches": [
+              {
+                "label": "Success",
+                "outcome": "returns",
+                "implicit": false
+              },
+              {
+                "label": "Error",
+                "outcome": "returns",
+                "implicit": false
+              }
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n3",
+          "kind": "call",
+          "label": "Call req.json()",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 5,
+            "end_line": 5
+          },
+          "evidence": "VERIFIED",
+          "detail": "const { provider, messages } = await req.json();",
+          "metadata": {
+            "calls": [
+              "req.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.chat.route:req.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n4",
+          "kind": "action",
+          "label": "// In a real implementation, you would use the provider and original messages",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 7,
+            "end_line": 7
+          },
+          "evidence": "VERIFIED",
+          "detail": "// In a real implementation, you would use the provider and original messages",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n5",
+          "kind": "action",
+          "label": "// to call the respective APIs (OpenAI, Gemini, Groq) using the keys from .env.local",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "// to call the respective APIs (OpenAI, Gemini, Groq) using the keys from .env.local",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n6",
+          "kind": "action",
+          "label": "Set apiKeyGemini",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const apiKeyGemini = process.env.GEMINI_API_KEY;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n7",
+          "kind": "action",
+          "label": "Set apiKeyOpenAI",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const apiKeyOpenAI = process.env.OPENAI_API_KEY;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n8",
+          "kind": "action",
+          "label": "Set apiKeyGroq",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const apiKeyGroq = process.env.GROQ_API_KEY;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n9",
+          "kind": "action",
+          "label": "// Log for debugging (remove in production)",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 14,
+            "end_line": 14
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Log for debugging (remove in production)",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n10",
+          "kind": "call",
+          "label": "Call console.log()",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 15,
+            "end_line": 15
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.log(`Calling ${provider} with ${messages.length} messages`);",
+          "metadata": {
+            "calls": [
+              "console.log"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "log"
+            ],
+            "qualified_calls": [
+              "src.app.api.chat.route:console.log"
+            ]
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n11",
+          "kind": "action",
+          "label": "// Mocking a successful response for now",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 17,
+            "end_line": 17
+          },
+          "evidence": "VERIFIED",
+          "detail": "// Mocking a successful response for now",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n12",
+          "kind": "action",
+          "label": "// In a real scenario, you'd call:",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 18,
+            "end_line": 18
+          },
+          "evidence": "VERIFIED",
+          "detail": "// In a real scenario, you'd call:",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n13",
+          "kind": "action",
+          "label": "// if (provider === 'gemini') { ... }",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 19,
+            "end_line": 19
+          },
+          "evidence": "VERIFIED",
+          "detail": "// if (provider === 'gemini') { ... }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n14",
+          "kind": "action",
+          "label": "// else if (provider === 'gpt') { ... }",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 20,
+            "end_line": 20
+          },
+          "evidence": "VERIFIED",
+          "detail": "// else if (provider === 'gpt') { ... }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n15",
+          "kind": "action",
+          "label": "// else if (provider === 'groq') { ... }",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 21,
+            "end_line": 21
+          },
+          "evidence": "VERIFIED",
+          "detail": "// else if (provider === 'groq') { ... }",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n16",
+          "kind": "action",
+          "label": "Set mockResponse",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 23,
+            "end_line": 23
+          },
+          "evidence": "VERIFIED",
+          "detail": "const mockResponse = `This is a response message from the ${provider} service. In a real environment, I would be processing your request using the ${provider} API.`;",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n17",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ content: mockResponse });",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.chat.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n18",
+          "kind": "terminal",
+          "label": "Return NextResponse.json({ content: mockResponse })",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 25,
+            "end_line": 25
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ content: mockResponse });",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n19",
+          "kind": "call",
+          "label": "Call console.error()",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 27,
+            "end_line": 27
+          },
+          "evidence": "VERIFIED",
+          "detail": "console.error('Chat API Error:', error);",
+          "metadata": {
+            "calls": [
+              "console.error"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.chat.route:console.error"
+            ]
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n20",
+          "kind": "call",
+          "label": "Call NextResponse.json()",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ message: error.message || 'Internal Server Error' }, { status: 500 });",
+          "metadata": {
+            "calls": [
+              "NextResponse.json"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.app.api.chat.route:NextResponse.json"
+            ]
+          }
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:n21",
+          "kind": "terminal",
+          "label": "Return NextResponse.json({ message: error.message || 'Internal Server Error' }, { status: 500 })",
+          "location": {
+            "path": "src/app/api/chat/route.ts",
+            "start_line": 28,
+            "end_line": 28
+          },
+          "evidence": "VERIFIED",
+          "detail": "return NextResponse.json({ message: error.message || 'Internal Server Error' }, { status: 500 });",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-2a96f0d2f18dfe52:e1",
+          "source": "flow-2a96f0d2f18dfe52:n1",
+          "target": "flow-2a96f0d2f18dfe52:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e2",
+          "source": "flow-2a96f0d2f18dfe52:n2",
+          "target": "flow-2a96f0d2f18dfe52:n3",
+          "label": "Success",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e3",
+          "source": "flow-2a96f0d2f18dfe52:n3",
+          "target": "flow-2a96f0d2f18dfe52:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e4",
+          "source": "flow-2a96f0d2f18dfe52:n4",
+          "target": "flow-2a96f0d2f18dfe52:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e5",
+          "source": "flow-2a96f0d2f18dfe52:n5",
+          "target": "flow-2a96f0d2f18dfe52:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e6",
+          "source": "flow-2a96f0d2f18dfe52:n6",
+          "target": "flow-2a96f0d2f18dfe52:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e7",
+          "source": "flow-2a96f0d2f18dfe52:n7",
+          "target": "flow-2a96f0d2f18dfe52:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e8",
+          "source": "flow-2a96f0d2f18dfe52:n8",
+          "target": "flow-2a96f0d2f18dfe52:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e9",
+          "source": "flow-2a96f0d2f18dfe52:n9",
+          "target": "flow-2a96f0d2f18dfe52:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e10",
+          "source": "flow-2a96f0d2f18dfe52:n10",
+          "target": "flow-2a96f0d2f18dfe52:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e11",
+          "source": "flow-2a96f0d2f18dfe52:n11",
+          "target": "flow-2a96f0d2f18dfe52:n12",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e12",
+          "source": "flow-2a96f0d2f18dfe52:n12",
+          "target": "flow-2a96f0d2f18dfe52:n13",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e13",
+          "source": "flow-2a96f0d2f18dfe52:n13",
+          "target": "flow-2a96f0d2f18dfe52:n14",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e14",
+          "source": "flow-2a96f0d2f18dfe52:n14",
+          "target": "flow-2a96f0d2f18dfe52:n15",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e15",
+          "source": "flow-2a96f0d2f18dfe52:n15",
+          "target": "flow-2a96f0d2f18dfe52:n16",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e16",
+          "source": "flow-2a96f0d2f18dfe52:n16",
+          "target": "flow-2a96f0d2f18dfe52:n17",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e17",
+          "source": "flow-2a96f0d2f18dfe52:n17",
+          "target": "flow-2a96f0d2f18dfe52:n18",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e18",
+          "source": "flow-2a96f0d2f18dfe52:n2",
+          "target": "flow-2a96f0d2f18dfe52:n19",
+          "label": "Error",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e19",
+          "source": "flow-2a96f0d2f18dfe52:n19",
+          "target": "flow-2a96f0d2f18dfe52:n20",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-2a96f0d2f18dfe52:e20",
+          "source": "flow-2a96f0d2f18dfe52:n20",
+          "target": "flow-2a96f0d2f18dfe52:n21",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

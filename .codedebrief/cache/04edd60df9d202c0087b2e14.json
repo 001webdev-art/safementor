@@ -1,0 +1,329 @@
+{
+  "path": "src/features/dashboard/hooks/useChildren.ts",
+  "language": "typescript",
+  "sha256": "2cec42bfe5fdb91861133f02b1540d7ce0585efb6a73a1b5c7131c0e723f7b24",
+  "flows": [
+    {
+      "id": "flow-7f8237bd5639761a",
+      "name": "useChildren",
+      "symbol": "src.features.dashboard.hooks.useChildren:useChildren",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "hook",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/dashboard/hooks/useChildren.ts",
+        "start_line": 7,
+        "end_line": 127
+      },
+      "nodes": [
+        {
+          "id": "flow-7f8237bd5639761a:n1",
+          "kind": "entry",
+          "label": "Hook: useChildren",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 7,
+            "end_line": 127
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.dashboard.hooks.useChildren:useChildren",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n2",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 8,
+            "end_line": 8
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [children, setChildren] = useState<Child[]>([]);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n3",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 9,
+            "end_line": 9
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isLoading, setIsLoading] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n4",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 10,
+            "end_line": 10
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [selectedChildId, setSelectedChildId] = useState<string | null>(null);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n5",
+          "kind": "call",
+          "label": "Call useState()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 11,
+            "end_line": 11
+          },
+          "evidence": "VERIFIED",
+          "detail": "const [isAddingChild, setIsAddingChild] = useState(false);",
+          "metadata": {
+            "calls": [
+              "useState"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useState"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n6",
+          "kind": "call",
+          "label": "Call createClient()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 12,
+            "end_line": 12
+          },
+          "evidence": "VERIFIED",
+          "detail": "const supabase = createClient();",
+          "metadata": {
+            "calls": [
+              "createClient"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "effects": [
+              "db_write"
+            ],
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:createClient"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n7",
+          "kind": "call",
+          "label": "Call useCallback()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 14,
+            "end_line": 33
+          },
+          "evidence": "VERIFIED",
+          "detail": "const loadChildren = useCallback(async () => { if (!parentId) return; setIsLoading(true); try { const { data, error } = await supabase .from('children') .select('*') .eq('parent_id', parentId) .order('nickname', { ascending: true }); if (data) { setChildren(data); } if (error) throw error; } catch (err) { console.error('Error loading children:', err); } finally { setIsLoading(false); } }, [parentId, supabase]);",
+          "metadata": {
+            "calls": [
+              "useCallback"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useCallback"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n8",
+          "kind": "action",
+          "label": "Set upsertChild",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 35,
+            "end_line": 86
+          },
+          "evidence": "VERIFIED",
+          "detail": "const upsertChild = async (childData: Partial<Child>) => { if (!parentId) return; setIsLoading(true); try { // Define allowed database columns const allowedColumns = [ 'id', 'parent_id', 'childrenname', 'nickname', 'age', 'gender', 'email', 'phone', 'medical_has_allergies', 'medical_has_mental_disorders', 'medical_has_physical_disorders', 'birth_month', 'birth_year', 'language', 'updated_at', 'updated_by' ]; // Build safe payload const payload: any = {}; allowedColumns.forEach(key => { if (key....",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n9",
+          "kind": "action",
+          "label": "Set deleteChild",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 88,
+            "end_line": 110
+          },
+          "evidence": "VERIFIED",
+          "detail": "const deleteChild = async (id: string) => { if (!parentId) return; try { const { error } = await supabase .from('children') .delete() .eq('id', id); if (error) throw error; // Refresh list await loadChildren(); // Reset selection if deleted child was selected if (selectedChildId === id) { setSelectedChildId(null); } } catch (err) { console.error('Error deleting child:', err); throw err; } };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n10",
+          "kind": "call",
+          "label": "Call useEffect()",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 112,
+            "end_line": 114
+          },
+          "evidence": "VERIFIED",
+          "detail": "useEffect(() => { loadChildren(); }, [loadChildren]);",
+          "metadata": {
+            "calls": [
+              "useEffect"
+            ],
+            "reachable_from_entry": true,
+            "reaches_terminal": true,
+            "qualified_calls": [
+              "src.features.dashboard.hooks.useChildren:useEffect"
+            ]
+          }
+        },
+        {
+          "id": "flow-7f8237bd5639761a:n11",
+          "kind": "terminal",
+          "label": "Return { children, isLoading, selectedChildId, setSelectedChildId, isAddingChild, setIsAddingChild, upsertChild, delete...",
+          "location": {
+            "path": "src/features/dashboard/hooks/useChildren.ts",
+            "start_line": 116,
+            "end_line": 126
+          },
+          "evidence": "VERIFIED",
+          "detail": "return { children, isLoading, selectedChildId, setSelectedChildId, isAddingChild, setIsAddingChild, upsertChild, deleteChild, refreshChildren: loadChildren };",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-7f8237bd5639761a:e1",
+          "source": "flow-7f8237bd5639761a:n1",
+          "target": "flow-7f8237bd5639761a:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e2",
+          "source": "flow-7f8237bd5639761a:n2",
+          "target": "flow-7f8237bd5639761a:n3",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e3",
+          "source": "flow-7f8237bd5639761a:n3",
+          "target": "flow-7f8237bd5639761a:n4",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e4",
+          "source": "flow-7f8237bd5639761a:n4",
+          "target": "flow-7f8237bd5639761a:n5",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e5",
+          "source": "flow-7f8237bd5639761a:n5",
+          "target": "flow-7f8237bd5639761a:n6",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e6",
+          "source": "flow-7f8237bd5639761a:n6",
+          "target": "flow-7f8237bd5639761a:n7",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e7",
+          "source": "flow-7f8237bd5639761a:n7",
+          "target": "flow-7f8237bd5639761a:n8",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e8",
+          "source": "flow-7f8237bd5639761a:n8",
+          "target": "flow-7f8237bd5639761a:n9",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e9",
+          "source": "flow-7f8237bd5639761a:n9",
+          "target": "flow-7f8237bd5639761a:n10",
+          "label": "",
+          "evidence": "VERIFIED"
+        },
+        {
+          "id": "flow-7f8237bd5639761a:e10",
+          "source": "flow-7f8237bd5639761a:n10",
+          "target": "flow-7f8237bd5639761a:n11",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": []
+}

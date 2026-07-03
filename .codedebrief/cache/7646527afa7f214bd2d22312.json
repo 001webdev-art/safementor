@@ -1,0 +1,79 @@
+{
+  "path": "src/features/landing/components/plans.tsx",
+  "language": "typescript",
+  "sha256": "e6113b290c1c8fb6620f989e5d43a7744ceb0315738d21047eb1145da0eb0f1c",
+  "flows": [
+    {
+      "id": "flow-4a108f209c36a63e",
+      "name": "Plans",
+      "symbol": "src.features.landing.components.plans:Plans",
+      "language": "typescript",
+      "framework": "react",
+      "entry_kind": "component",
+      "is_entrypoint": true,
+      "location": {
+        "path": "src/features/landing/components/plans.tsx",
+        "start_line": 4,
+        "end_line": 213
+      },
+      "nodes": [
+        {
+          "id": "flow-4a108f209c36a63e:n1",
+          "kind": "entry",
+          "label": "Component: Plans",
+          "location": {
+            "path": "src/features/landing/components/plans.tsx",
+            "start_line": 4,
+            "end_line": 213
+          },
+          "evidence": "VERIFIED",
+          "detail": "",
+          "metadata": {
+            "symbol": "src.features.landing.components.plans:Plans",
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        },
+        {
+          "id": "flow-4a108f209c36a63e:n2",
+          "kind": "terminal",
+          "label": "Return ( <div className=\"flex flex-col items-center justify-center py-20 gap-4 px-6\"> <div className=\"flex flex-col ite...",
+          "location": {
+            "path": "src/features/landing/components/plans.tsx",
+            "start_line": 5,
+            "end_line": 212
+          },
+          "evidence": "VERIFIED",
+          "detail": "return ( <div className=\"flex flex-col items-center justify-center py-20 gap-4 px-6\"> <div className=\"flex flex-col items-center text-center\"> <span className=\"text-blue-600 font-medium\"> Awesome Feature </span> <h2 className=\"text-4xl font-bold\">Flexible Plans</h2> </div> <div className=\"flex flex-wrap justify-center w-full gap-8\"> {/* Free Plan */} <div className=\"flex flex-col p-6 w-full max-w-[400px] border border-gray-200 rounded-xl shadow-sm bg-white\"> <div className=\"pl-6 mb-4\"> <h4 clas...",
+          "metadata": {
+            "reachable_from_entry": true,
+            "reaches_terminal": true
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "flow-4a108f209c36a63e:e1",
+          "source": "flow-4a108f209c36a63e:n1",
+          "target": "flow-4a108f209c36a63e:n2",
+          "label": "",
+          "evidence": "VERIFIED"
+        }
+      ],
+      "calls": [],
+      "called_by": [],
+      "tests": [],
+      "metadata": {
+        "exported": true,
+        "default_export": false,
+        "test": false,
+        "performs_auth_check": false
+      }
+    }
+  ],
+  "enums": {},
+  "constants": {},
+  "dependencies": [
+    "src/features/landing/components/SafeMentorIcons.tsx"
+  ]
+}
