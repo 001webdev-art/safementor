@@ -231,7 +231,7 @@ export default function DashboardSidebar({
                     variant="light"
                     className="w-full justify-start text-left text-gray-700"
                     startContent={<MessageSquare className="w-5 h-5" />}
-                    onPress={() => router.push(`/${currentLocale}/chat`)}
+                    onPress={() => window.location.assign('https://samy.safementor.app')}
                 >
                     {t('sidebar.chat')}
                 </Button>

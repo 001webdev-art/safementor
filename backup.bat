@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 :: To Use this simple and nice backup solution, install 7zip.org
 
 :: ===================== CONFIGURAÇÕES - EDITE AQUI =====================
-set "PROJECT_PATH=C:\xampp\htdocs\temp\next1_intl"
+set "PROJECT_PATH=%CD%"
 set "BACKUP_PATH=D:\dev\nextjs\ver1\backup"
 set "BACKUP_NAME=sf"
 
@@ -14,14 +14,29 @@ set "BACKUP_NAME=sf"
 :: set "SEVENZIP_PATH=C:\Program Files (x86)\7-Zip\7z.exe"
 set "SEVENZIP_PATH=C:\Program Files\7-Zip\7z.exe"
 
+:: ============================================
+:: REMOVE A PASTA BUILD ANTES DO BACKUP
+:: ============================================
+::if exist "%PROJECT_PATH%\flutter_chat\flutter_chat\build" (
+::    echo Removendo pasta build para reduzir tamanho do backup...
+::    rmdir /s /q "%PROJECT_PATH%\flutter_chat\flutter_chat\build"
+::    echo Pasta build removida.
+::)
+
+::set "EXCLUDE_FILE=%TEMP%\exclude_list.txt" (
+
 :: Pastas/arquivos a excluir
 set "EXCLUDE_FILE=%TEMP%\exclude_list.txt"
+
 (
     echo node_modules\
     echo .next\
-    echo .git\
-    echo *.log
+    echo .git\        
+    echo *.log\
+    echo flutter_chat\flutter_chat\build
 ) > "%EXCLUDE_FILE%"
+
+:: echo *.log
 
 :: ===================== LÓGICA DO BACKUP (NÃO EDITE) =====================
 
