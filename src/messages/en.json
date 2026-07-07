@@ -750,7 +750,8 @@
       "approach": "Our Philosophy",
       "learnMore": "Get Started",
       "about": "About Us",
-      "howItWorks": "How it works"
+      "howItWorks": "How it works",
+      "pilot": "Pilot Program"
     },
     "Hero": {
       "eyebrow": "Nurturing Growth, Together",
@@ -925,6 +926,12 @@
       "text": "\"SafeMentor helped our family have conversations we didn't know how to start. It's not about the technology — it's about bringing us closer together.\"",
       "author": "Maria K.",
       "role": "Mother of two"
+    },
+    "PilotTeaser": {
+      "eyebrow": "Pilot Program",
+      "title": "Become part of the SafeMentor pilot family",
+      "description": "SafeMentor is entering its pilot phase — and we're looking for families to join us on this journey. As a pilot family, you get three months of free access, a direct line to our development team, and a real say in how SafeMentor takes shape. Together, let's build a safe space that unleashes our children's creativity and prepares the next generation of makers, explorers, and creators for the future.",
+      "cta": "More about the pilot program"
     },
     "CTA": {
       "title": "Join us on this path.",
@@ -1252,6 +1259,65 @@
       "title": "Join us on this journey.",
       "subtitle": "Become part of our pilot phase and experience SafeMentor as one of the first – completely free.",
       "button": "Get started for free"
+    }
+  },
+  "PilotProgram":   {
+    "meta": {
+      "title": "Pilot Program - SafeMentor",
+      "description": "Join the SafeMentor pilot program — a small, personally invited circle of families."
+    },
+    "hero": {
+      "eyebrow": "Pilot Program",
+      "title": "A small circle. A lot of trust.",
+      "subtitle": "SafeMentor is still young. Before we show it to the world, we want to test it where we learn the most — with families we know, whose opinion truly matters to us."
+    },
+    "mission": {
+      "quote": "We're deliberately not opening SafeMentor to everyone. A small, trusted circle gives us more honest feedback than a thousand anonymous users.",
+      "intro": "That's why, in this first phase, we're welcoming a maximum of 20 families — personally invited, from our own circle or recommended by people we know. This isn't a marketing trick, it's a deliberate choice: SafeMentor accompanies children in sensitive moments. Before we scale, we want to know for certain that it works — with people we trust, and who trust us."
+    },
+    "benefits": {
+      "eyebrow": "What you get",
+      "title": "What this means for you",
+      "item1": {
+        "title": "Free & no strings attached",
+        "desc": "Three months of full access, at no cost. Afterwards, it's your choice — there's no automatic conversion into a subscription."
+      },
+      "item2": {
+        "title": "A direct line to us",
+        "desc": "No support ticket system. Your feedback reaches us personally — usually the same day."
+      },
+      "item3": {
+        "title": "Help shape it, not just use it",
+        "desc": "Your feedback flows directly into development. You'll see changes that came from what you told us."
+      }
+    },
+    "process": {
+      "eyebrow": "Process",
+      "title": "How it works",
+      "steps": [
+        {
+          "title": "Getting to know each other",
+          "desc": "A short conversation upfront, so we get to know each other and you know what to expect."
+        },
+        {
+          "title": "Getting started",
+          "desc": "You use SafeMentor for three months, as part of everyday life."
+        },
+        {
+          "title": "Quick feedback",
+          "desc": "A few minutes of feedback every two weeks — what's working, what isn't."
+        },
+        {
+          "title": "Closing conversation",
+          "desc": "At the end of the three months, we talk together about how it went and what comes next."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Know someone who'd like to join?",
+      "subtitle": "Because we're staying deliberately small, we only grow through personal recommendations. Just send us a short note — who you are and what interests you about SafeMentor.",
+      "button": "Get in touch personally",
+      "mailSubject": "Interest in the Pilot Program"
     }
   },
   "HowItWorks": {

@@ -749,7 +749,8 @@
       "approach": "Nuestra Filosofía",
       "learnMore": "Empezar",
       "about": "Sobre nosotros",
-      "howItWorks": "Cómo funciona"
+      "howItWorks": "Cómo funciona",
+      "pilot": "Programa piloto"
     },
     "Hero": {
       "eyebrow": "Creciendo Juntos",
@@ -923,6 +924,12 @@
       "text": "\"SafeMentor ayudó a nuestra familia a tener conversaciones que no sabíamos cómo comenzar. No se trata de la tecnología — se trata de acercarnos más.\"",
       "author": "Maria K.",
       "role": "Madre de dos"
+    },
+    "PilotTeaser": {
+      "eyebrow": "Programa piloto",
+      "title": "Forma parte de la familia piloto de SafeMentor",
+      "description": "SafeMentor entra en su fase piloto, y buscamos familias que nos acompañen en este camino. Como familia piloto, disfrutaréis de tres meses de uso gratuito, tendréis contacto directo con nuestro equipo de desarrollo y participaréis activamente en su evolución. Construyamos juntos un espacio seguro que libere la creatividad de nuestros hijos y prepare a la próxima generación de creadores, exploradores y creativos para el futuro.",
+      "cta": "Más sobre el programa piloto"
     },
     "CTA": {
       "title": "Únase a nosotros en este camino.",
@@ -1250,6 +1257,65 @@
       "title": "Únase a nosotros en este camino.",
       "subtitle": "Forme parte de nuestra fase piloto y experimente SafeMentor como uno de los primeros – completamente gratis.",
       "button": "Empezar gratis"
+    }
+  },
+  "PilotProgram":   {
+    "meta": {
+      "title": "Programa piloto - SafeMentor",
+      "description": "Únete al programa piloto de SafeMentor: un círculo pequeño y de confianza de familias invitadas personalmente."
+    },
+    "hero": {
+      "eyebrow": "Programa piloto",
+      "title": "Un círculo pequeño. Una gran confianza.",
+      "subtitle": "SafeMentor todavía es joven. Antes de mostrarlo al mundo, queremos probarlo donde más aprendemos: con familias que conocemos y cuya opinión realmente nos importa."
+    },
+    "mission": {
+      "quote": "Decidimos no abrir SafeMentor a todo el mundo. Un círculo pequeño y de confianza nos da un feedback más honesto que mil usuarios anónimos.",
+      "intro": "Por eso, en esta primera fase, acogemos como máximo a 20 familias, invitadas personalmente, de nuestro entorno o recomendadas por personas que conocemos. No es una estrategia de marketing, sino una decisión consciente: SafeMentor acompaña a los niños en momentos sensibles. Antes de crecer, queremos estar seguros de que funciona, con personas en las que confiamos y que confían en nosotros."
+    },
+    "benefits": {
+      "eyebrow": "Qué obtenéis",
+      "title": "Qué significa esto para vosotros",
+      "item1": {
+        "title": "Gratis y sin compromiso",
+        "desc": "Tres meses de acceso completo, sin coste. Después, decidís vosotros: no hay conversión automática a una suscripción."
+      },
+      "item2": {
+        "title": "Contacto directo con nosotros",
+        "desc": "Sin sistema de tickets de soporte. Vuestro feedback nos llega en persona, normalmente el mismo día."
+      },
+      "item3": {
+        "title": "Participar, no solo usar",
+        "desc": "Vuestras opiniones influyen directamente en el desarrollo. Veréis cambios que surgen de lo que nos contáis."
+      }
+    },
+    "process": {
+      "eyebrow": "Proceso",
+      "title": "Cómo funciona",
+      "steps": [
+        {
+          "title": "Nos conocemos",
+          "desc": "Una breve conversación previa para conocernos y que sepáis qué esperar."
+        },
+        {
+          "title": "Empezamos",
+          "desc": "Usáis SafeMentor durante tres meses, con normalidad en el día a día."
+        },
+        {
+          "title": "Feedback breve",
+          "desc": "Cada dos semanas, unos minutos de feedback: qué funciona y qué no."
+        },
+        {
+          "title": "Conversación final",
+          "desc": "Al final de los tres meses, hablamos juntos sobre cómo ha ido y qué sigue."
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Conocéis a alguien a quien le gustaría participar?",
+      "subtitle": "Como queremos seguir siendo pequeños a propósito, solo crecemos mediante recomendaciones personales. Escribidnos brevemente quiénes sois y qué os interesa de SafeMentor.",
+      "button": "Escribirnos",
+      "mailSubject": "Interés en el programa piloto"
     }
   },
   "HowItWorks": {
