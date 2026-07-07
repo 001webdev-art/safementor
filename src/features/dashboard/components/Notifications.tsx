@@ -15,10 +15,9 @@ interface NotificationsProps {
 
 export function Notifications({ alerts, profile }: NotificationsProps) {
     const t = useTranslations('Dashboard.notifications_new');
-    const [riskAlerts, setRiskAlerts] = useState<any[]>([]);
+    const [allRisks, setAllRisks] = useState<any[]>([]);
     const [isLoadingRisks, setIsLoadingRisks] = useState(true);
     const [helplineInfo, setHelplineInfo] = useState<any>(null);
-    const otherAlerts = alerts.filter(a => a.type !== 'red');
     const supabase = createClient();
 
     const fetchRisks = async () => {
@@ -29,6 +28,7 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                     id,
                     user_intent_summary,
                     user_intent_flag,
+                    user_intent_level,
                     child_id,
                     created_at,
                     children:children(nickname)
@@ -38,13 +38,31 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                 .eq('parent_reviewed', false);
 
             if (error) throw error;
-            setRiskAlerts(data || []);
+            setAllRisks(data || []);
         } catch (err) {
             console.error('Error fetching risks:', err);
         } finally {
             setIsLoadingRisks(false);
         }
     };
+
+    const riskAlerts = allRisks.filter(
+        a => a.user_intent_level !== 'yellow' && a.user_intent_level !== 'gelb'
+    );
+
+    const otherAlerts = [
+        ...alerts.filter(a => a.type !== 'red'),
+        ...allRisks
+            .filter(a => a.user_intent_level === 'yellow' || a.user_intent_level === 'gelb')
+            .map(a => ({
+                id: a.id,
+                type: 'yellow' as const,
+                title: `${a.children?.nickname || 'Child'} - Warning Detected`,
+                description: a.user_intent_summary || "Potentially unsafe content detected.",
+                timestamp: a.created_at ? new Date(a.created_at).toLocaleDateString() : 'Today',
+                childId: a.child_id
+            }))
+    ];
 
     useEffect(() => {
         fetchRisks();
@@ -82,7 +100,7 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
             if (error) throw error;
 
             // Remove from local state
-            setRiskAlerts(prev => prev.filter(alert => alert.id !== messageId));
+            setAllRisks(prev => prev.filter(alert => alert.id !== messageId));
         } catch (err) {
             console.error('Error acknowledging risk:', err);
         }

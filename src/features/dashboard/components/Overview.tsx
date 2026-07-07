@@ -58,10 +58,10 @@ export function Overview({ children }: OverviewProps) {
 
             const { data, error } = await supabase
                 .from('chat_messages')
-                .select('id, created_at, user_intent_summary, user_intent_flag, content')
+                .select('id, created_at, user_intent_summary, user_intent_flag, user_intent_level, content')
                 .eq('child_id', selectedChild)
                 .gt('created_at', since.toISOString())
-                .in('user_intent_flag', ['yellow', 'red'])
+                .in('user_intent_level', ['yellow', 'red'])
                 .order('created_at', { ascending: false });
 
             if (error) throw error;
@@ -244,18 +244,18 @@ export function Overview({ children }: OverviewProps) {
                         <div className="space-y-3">
                             {warnings.map((warning) => (
                                 <div key={warning.id} className={`border rounded-lg p-4 ${
-                                    warning.user_intent_flag === 'red'
+                                    warning.user_intent_level === 'red'
                                         ? 'bg-red-50 border-red-200'
                                         : 'bg-yellow-50 border-yellow-200'
                                 }`}>
                                     <div className="flex gap-3">
                                         <div className={`flex-shrink-0 mt-1 ${
-                                            warning.user_intent_flag === 'red'
+                                            warning.user_intent_level === 'red'
                                                 ? 'bg-red-100 p-2 rounded-full'
                                                 : 'bg-yellow-100 p-2 rounded-full'
                                         }`}>
                                             <AlertTriangle className={`w-4 h-4 ${
-                                                warning.user_intent_flag === 'red'
+                                                warning.user_intent_level === 'red'
                                                     ? 'text-red-600'
                                                     : 'text-yellow-600'
                                             }`} />
@@ -264,21 +264,21 @@ export function Overview({ children }: OverviewProps) {
                                             <div className="flex justify-between items-start gap-2">
                                                 <div>
                                                     <p className={`font-semibold mb-1 ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-900'
                                                             : 'text-yellow-900'
                                                     }`}>
                                                         {warning.user_intent_summary || t('warningText')}
                                                     </p>
                                                     <p className={`text-sm mb-2 ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-800'
                                                             : 'text-yellow-800'
                                                     }`}>
                                                         {warning.content}
                                                     </p>
                                                     <p className={`text-xs ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-700'
                                                             : 'text-yellow-700'
                                                     }`}>
