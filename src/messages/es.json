@@ -145,7 +145,7 @@
         "privacy": "He tomado nota de la <privacy>Política de Privacidad</privacy> y doy mi consentimiento para el procesamiento de datos.",
         "guardian": "Confirmo que mi hijo es menor de 16 años y soy el tutor legal.",
         "marketing": "No deseo recibir publicidad de SafeMentor por correo electrónico.",
-        "payment": "Quiero comenzar a usar el chat de IA inmediatamente después del pago. Entiendo que mi derecho de desistimiento de 14 días finaliza una vez que se utiliza el chat – mi suscripción sigue siendo cancelable mensualmente."
+        "payment": "Quiero comenzar a usar el chat de IA inmediatamente después del pago. Entiendo que mi derecho de desistimiento de 14 días finaliza una vez que se utiliza el chat. Mi suscripción sigue siendo cancelable mensualmente."
       },
       "back": "Atrás",
       "createAccount": "Crear Cuenta"
@@ -768,20 +768,20 @@
     "Values": {
       "eyebrow": "Qué es SafeMentor",
       "title": "SafeMentor no es otro producto de tiempo frente a la pantalla",
-      "description": "Es un compañero de aprendizaje, pensamiento y mentoría diseñado para ayudar a los niños a desarrollar curiosidad, responsabilidad, fortaleza emocional y conexión con el mundo real — con un fuerte apoyo para los padres.",
+      "description": "Es un compañero de aprendizaje, pensamiento y mentoría diseñado para ayudar a los niños a desarrollar curiosidad, responsabilidad, fortaleza emocional y conexión con el mundo real. Con un fuerte apoyo para los padres.",
       "emphasis": "Los niños no necesitan más aplicaciones. Necesitan orientación, confianza y espacio para crecer.",
       "citation": "SafeMentor se basa en principios de desarrollo infantil reconocidos internacionalmente de Gerald Hüther, Jesper Juul, Dan Siegel y pensamiento basado en principios. No moldeamos a los niños mediante el control. Invitamos al desarrollo a través de la relación.",
       "card1": {
         "title": "Etapa 1 – Tutoría normal",
-        "desc": "SafeMentor responde de forma cálida, adecuada a la edad y pedagógicamente cuidada. Sin intervención, sin notificación. Su hijo es acompañado – usted no tiene que hacer nada."
+        "desc": "SafeMentor responde de forma cálida, adecuada a la edad y pedagógicamente cuidada. Sin intervención, sin notificación. Su hijo es acompañado. Usted no tiene que hacer nada."
       },
       "card2": {
         "title": "Etapa 2 – Señal silenciosa",
-        "desc": "Ante temas como el acoso, la presión emocional o solicitudes preocupantes, SafeMentor reconoce la señal. La IA responde con empatía y anima a su hijo a hablar con usted. Usted recibe una nota discreta en su panel de padres – no una alarma, sino una señal: aquí merece la pena una conversación."
+        "desc": "Ante temas como el acoso, la presión emocional o solicitudes preocupantes, SafeMentor reconoce la señal. La IA responde con empatía y anima a su hijo a hablar con usted. Usted recibe una nota discreta en su panel de padres. No una alarma, sino una señal: aquí merece la pena una conversación."
       },
       "card3": {
         "title": "Etapa 3 – Notificación inmediata",
-        "desc": "Ante señales de alerta graves – autolesiones, agresión sexual, peligro agudo – SafeMentor actúa de inmediato: El niño recibe una respuesta tranquila y estructurada con recursos de crisis concretos. Usted es notificado sin demora con un resumen claro – para que esté ahí cuando su hijo le necesite."
+        "desc": "Ante señales de alerta graves: autolesiones, agresión sexual, peligro agudo. SafeMentor actúa de inmediato. El niño recibe una respuesta tranquila y estructurada con recursos de crisis concretos. Usted es notificado sin demora con un resumen claro. Para que esté ahí cuando su hijo le necesite."
       },
       "learning": {
         "eyebrow": "En Qué Ayuda SafeMentor",
@@ -796,8 +796,8 @@
         "emphasis": "Porque el aprendizaje debe activar el cerebro, no reemplazarlo."
       },
       "offline": {
-        "title": "Seguridad que piensa con anticipación – sin monitoreo.",
-        "description": "SafeMentor no responde sin más. Cada mensaje de su hijo se comprueba en tiempo real para detectar su relevancia en materia de seguridad – antes de que aparezca una respuesta. A esto lo llamamos nuestra seguridad de 3 etapas.",
+        "title": "Seguridad que piensa con anticipación sin monitoreo.",
+        "description": "SafeMentor no responde sin más. Cada mensaje de su hijo se comprueba en tiempo real para detectar su relevancia en materia de seguridad, antes de que aparezca una respuesta. A esto lo llamamos nuestra seguridad de 3 etapas.",
         "emphasis": "La seguridad es nuestra máxima prioridad."
       },
       "standards": {
@@ -818,12 +818,12 @@
           }
         ],
         "beliefTitle": "Porque creemos: La tecnología debe servir al desarrollo, no a la adicción.",
-        "beliefText": "Mientras que la mayoría de las aplicaciones luchan por cada minuto de la atención de su hijo con trucos psicológicos, SafeMentor hace lo contrario. Evitamos conscientemente los sistemas de recompensas, \"rachas\" (presión a través de cadenas de uso diario) o incentivos artificiales que pegan a los niños a la pantalla. Nuestro objetivo es que su hijo use SafeMentor para comprender mejor el mundo real – y luego deje el dispositivo con una buena sensación para aplicar lo que ha aprendido en la vida real."
+        "beliefText": "Mientras que la mayoría de las aplicaciones luchan por cada minuto de la atención de su hijo con trucos psicológicos, SafeMentor hace lo contrario. Evitamos conscientemente los sistemas de recompensas, \"rachas\" (presión a través de cadenas de uso diario) o incentivos artificiales que pegan a los niños a la pantalla. Nuestro objetivo es que su hijo use SafeMentor para comprender mejor el mundo real. Y luego deje el dispositivo con una buena sensación para aplicar lo que ha aprendido en la vida real."
       },
       "safety": {
         "eyebrow": "Para Padres",
         "title": "La Confianza Necesita Privacidad",
-        "description": "La confianza es la base de todo desarrollo infantil. Por eso, la privacidad no es solo una función, sino el fundamento de Safementor. Aquí no se crean huellas digitales. En cuanto finaliza una sesión, todos los datos en bruto de los chats se eliminan de forma irrevocable. Solo conservamos resúmenes durante un periodo de 7 a un máximo de 30 días. Lo que queda es lo que realmente importa para usted como padre o madre: Le notificamos en el momento en que su atención es necesaria. Ya sea acoso, autolesiones u otros temas críticos – le mantenemos informado para que pueda estar ahí para su hijo exactamente cuando más importa.",
+        "description": "La confianza es la base de todo desarrollo infantil. Por eso, la privacidad no es solo una función, sino el fundamento de Safementor. Aquí no se crean huellas digitales. En cuanto finaliza una sesión, todos los datos en bruto de los chats se eliminan de forma irrevocable. Solo conservamos resúmenes durante un periodo de 7 a un máximo de 30 días. Lo que queda es lo que realmente importa para usted como padre o madre: Le notificamos en el momento en que su atención es necesaria. Ya sea acoso, autolesiones u otros temas críticos: le mantenemos informado para que pueda estar ahí para su hijo exactamente cuando más importa.",
         "summary": "Aquí está el resumen nuevamente:",
         "detect": {
           "title": "Lo Que Detectamos",
@@ -849,11 +849,9 @@
           ]
         },
         "privacy": {
-          "title": "Sus datos están seguros con nosotros — y permanecen en Europa",
-          "description": "Nos tomamos la privacidad en serio. Por eso, todos sus datos se almacenan y procesan exclusivamente dentro de la UE, protegidos por estrictos estándares RGPD."
-        },
-        "protects": {
-          "desc": "Esto protege la confianza entre el niño y los padres. Los niños necesitan saber que pueden expresarse de manera segura, mientras los padres se mantienen informados sobre su bienestar.",
+          "title": "Sus datos están seguros con nosotros, y permanecen en Europa",
+          "description": "SafeMentor fue desarrollado para apoyar la curiosidad natural y el crecimiento emocional de los niños. Luego los guía suavemente de regreso a experiencias en el mundo real, conversaciones y juegos.",
+          "desc": "Esto protege la confianza entre el niño y los padres. Los niños necesitan saber que pueden expresarse de manera segura. Mientras los padres se mantienen informados sobre su bienestar.",
           "title": "Esto protege la confianza"
         }
       },
@@ -875,13 +873,13 @@
             "desc": "SafeMentor está pensado para padres como nosotros: una herramienta que hace que el espacio digital sea tan seguro que enriquece la infancia en lugar de reemplazarla."
           }
         ],
-        "final": "Porque creemos que las verdaderas aventuras no ocurren en pantallas. SafeMentor ayuda a los niños a aprender cosas nuevas sobre el mundo — y luego los envía de vuelta a jugar afuera."
+        "final": "Porque creemos que las verdaderas aventuras no ocurren en pantallas. SafeMentor ayuda a los niños a aprender cosas nuevas sobre el mundo y luego los envía de vuelta a jugar afuera."
       }
     },
     "Approach": {
       "eyebrow": "Nuestra Filosofía",
       "title": "Tecnología que sabe cuándo retirarse",
-      "description": "SafeMentor está diseñado para apoyar la curiosidad natural y el crecimiento emocional de los niños — luego guiarlos suavemente de regreso a experiencias, conversaciones y juegos del mundo real.",
+      "description": "SafeMentor está diseñado para apoyar la curiosidad natural y el crecimiento emocional de los niños y luego guiarlos suavemente de regreso a experiencias, conversaciones y juegos del mundo real.",
       "bullet1": {
         "title": "Fomenta la exploración fuera de línea",
         "desc": "Sugiere actividades, conversaciones y experiencias que ocurren lejos de las pantallas."
@@ -896,13 +894,13 @@
       }
     },
     "Families": {
-      "title": "Apoyando a los Padres — No Juzgándolos",
+      "title": "Apoyando a los Padres y No Juzgándolos",
       "description": "SafeMentor existe para apoyar a los padres, no para reemplazarlos.",
       "receives": {
         "title": "Los padres reciben:",
         "list": [
           "Tutoría de IA segura: Para que su hijo esté en buenas manos en internet.",
-          "Contexto sobre el significado de las señales – y lo que no significan",
+          "Contexto sobre el significado de las señales y lo que no significan",
           "Sugerencias para conversaciones con su hijo",
           "Estímulo para construir confianza y conexión"
         ],
@@ -917,18 +915,18 @@
           "La confianza es más poderosa que el control"
         ],
         "final": "SafeMentor está diseñado para desaparecer cuando ya no se necesita.",
-        "emphasis": "Porque el éxito significa: Un niño que piensa, siente, se conecta — y vive plenamente fuera de línea."
+        "emphasis": "Porque el éxito significa: Un niño que piensa, siente, se conecta y principalmente vive fuera de línea."
       }
     },
     "Quote": {
-      "text": "\"SafeMentor ayudó a nuestra familia a tener conversaciones que no sabíamos cómo comenzar. No se trata de la tecnología — se trata de acercarnos más.\"",
+      "text": "\"SafeMentor ayudó a nuestra familia a tener conversaciones que no sabíamos cómo comenzar. No se trata de la tecnología. Se trata de acercarnos más.\"",
       "author": "Maria K.",
       "role": "Madre de dos"
     },
     "PilotTeaser": {
       "eyebrow": "Programa piloto",
       "title": "Forma parte de la familia piloto de SafeMentor",
-      "description": "SafeMentor entra en su fase piloto, y buscamos familias que nos acompañen en este camino. Como familia piloto, disfrutaréis de tres meses de uso gratuito, tendréis contacto directo con nuestro equipo de desarrollo y participaréis activamente en su evolución. Construyamos juntos un espacio seguro que libere la creatividad de nuestros hijos y prepare a la próxima generación de creadores, exploradores y creativos para el futuro.",
+      "description": "SafeMentor entra en su fase piloto. Buscamos familias que nos acompañen en este camino. Como familia piloto, disfrutaréis de tres meses de uso gratuito, tendréis contacto directo con nuestro equipo de desarrollo y participaréis activamente en su evolución. Construyamos juntos un espacio seguro que libere la creatividad de nuestros hijos y prepare a la próxima generación de creadores, exploradores y creativos para el futuro.",
       "cta": "Más sobre el programa piloto"
     },
     "CTA": {
@@ -936,7 +934,7 @@
       "subtitle": "Descubra un enfoque más tranquilo y reflexivo de la tecnología para su familia.",
       "buttonPrimary": "Conviértase en usuario piloto gratis ahora",
       "buttonSecondary": "Lea Nuestros Principios",
-      "disclaimer": "Únase a nuestra fase piloto y sea uno de los primeros en experimentar SafeMentor – completamente gratis."
+      "disclaimer": "Únase a nuestra fase piloto y sea uno de los primeros en experimentar SafeMentor. Y completamente gratis!"
     },
     "Footer": {
       "text": "Tecnología que respeta la infancia. Construida con cuidado, guiada por la ética, enfocada en lo que más importa.",
@@ -1072,7 +1070,7 @@
       },
       "4e": {
         "title": "4e. Sin Venta de Datos",
-        "content": "NUNCA vendemos datos a terceros – ni para publicidad, marketing, ni para ningún otro propósito. Sus datos y los datos de sus hijos se procesan exclusivamente para la prestación de nuestros servicios."
+        "content": "NUNCA vendemos datos a terceros. Ni para publicidad, marketing, ni para ningún otro propósito. Sus datos y los datos de sus hijos se procesan exclusivamente para la prestación de nuestros servicios."
       },
       "5": {
         "title": "5. Política de Cookies",
@@ -1181,7 +1179,7 @@
   },
   "About": {
     "meta": {
-      "title": "Sobre nosotros – SafeMentor",
+      "title": "Sobre nosotros: SafeMentor",
       "description": "Conoce al equipo detrás de SafeMentor: dos padres, un ingeniero y un desarrollador, decididos a hacer la IA segura para los niños."
     },
     "hero": {
@@ -1213,7 +1211,7 @@
         "Para Andreas, SafeMentor es la herramienta para convertir esa visión en realidad: diseñar tecnología no para limitar la creatividad, sino para hacerla posible."
       ],
       "quote": "Todos los niños nacen artistas. La IA es nuestra oportunidad de volver a ser creadores en lugar de solo consumidores.",
-      "quoteSource": "Brian Chesky, Airbnb – adoptado por Andreas como principio rector",
+      "quoteSource": "Brian Chesky, CEO Airbnb.",
       "closing": "En SafeMentor no construimos sistemas que simplemente funcionan. Construimos sistemas que ayudan a los niños a desarrollar todo su potencial como constructores del futuro."
     },
     "heinrich": {
@@ -1227,12 +1225,12 @@
       "timeline": [
         "Fundó su propia empresa de software en Brasil",
         "Gestionó numerosos clientes empresariales y proyectos complejos",
-        "De Brasil a Alemania – perspectiva internacional",
+        "De Brasil a Alemania con perspectiva internacional",
         "Cofundador de SafeMentor"
       ],
       "paragraphs": [
-        "El camino de Heinrich en el mundo del software comenzó con una auténtica pasión por resolver problemas complejos. Ya fuera implementando sistemas, formando usuarios o desarrollando soluciones a medida, las personas siempre han estado en el centro de su trabajo.",
-        "Con la experiencia de haber fundado su propia empresa de software en Brasil, sabe exactamente cómo construir sistemas estables, seguros y eficientes. Su traslado de Brasil a Alemania requirió valentía y adaptabilidad, rasgos que siguen marcando su perspectiva internacional.",
+        "El camino de Heinrich en el mundo del software comenzó con una auténtica pasión por resolver problemas complejos. Ya fuera implementando sistemas, formando usuarios o desarrollando soluciones a medida. Las personas siempre han estado en el centro de su trabajo.",
+        "Con la experiencia de haber fundado su propia empresa de software en Brasil, sabe exactamente cómo construir sistemas estables, seguros y eficientes. Su traslado de Brasil a Alemania requirió valentía y adaptabilidad. Un paso que sigue marcando su perspectiva internacional.",
         "Su lema: \"Yes, we can.\" Está convencido de que cada problema tiene solución, si se busca con la actitud correcta y una buena dosis de pasión."
       ],
       "closing": "Heinrich aporta su espíritu emprendedor y actitud positiva al desarrollo de un entorno de IA seguro para los niños. Para él, SafeMentor es la continuación lógica de su carrera: hacer que la tecnología compleja sea segura, educativa y un verdadero enriquecimiento para la próxima generación."
@@ -1246,22 +1244,22 @@
       },
       "value2": {
         "title": "Lo offline es el objetivo",
-        "desc": "Construimos tecnología digital, pero nuestro éxito se mide por lo poco que los niños nos necesitan – y por lo mucho que viven offline."
+        "desc": "Construimos tecnología digital, pero nuestro éxito se mide por lo poco que los niños nos necesitan y lo mucho que viven offline."
       },
       "value3": {
         "title": "Confianza a través de la transparencia",
-        "desc": "Sin algoritmos ocultos, sin patrones oscuros. Los padres y los niños merecen una comunicación honesta y clara – siempre."
+        "desc": "Sin algoritmos ocultos, sin patrones oscuros. Los padres y los niños merecen una comunicación honesta y clara. Y siempre."
       }
     },
     "cta": {
       "title": "Únase a nosotros en este camino.",
-      "subtitle": "Forme parte de nuestra fase piloto y experimente SafeMentor como uno de los primeros – completamente gratis.",
+      "subtitle": "Forme parte de nuestra fase piloto y experimente SafeMentor como uno de los primeros completamente gratis.",
       "button": "Empezar gratis"
     }
   },
   "PilotProgram":   {
     "meta": {
-      "title": "Programa piloto - SafeMentor",
+      "title": "Programa piloto SafeMentor",
       "description": "Únete al programa piloto de SafeMentor: un círculo pequeño y de confianza de familias invitadas personalmente."
     },
     "hero": {
@@ -1271,7 +1269,7 @@
     },
     "mission": {
       "quote": "Decidimos no abrir SafeMentor a todo el mundo. Un círculo pequeño y de confianza nos da un feedback más honesto que mil usuarios anónimos.",
-      "intro": "Por eso, en esta primera fase, acogemos como máximo a 20 familias, invitadas personalmente, de nuestro entorno o recomendadas por personas que conocemos. No es una estrategia de marketing, sino una decisión consciente: SafeMentor acompaña a los niños en momentos sensibles. Antes de crecer, queremos estar seguros de que funciona, con personas en las que confiamos y que confían en nosotros."
+      "intro": "Por eso, en esta primera fase, acogemos como máximo a 20 familias, invitadas personalmente, de nuestro entorno o recomendadas por personas que conocemos. No es una estrategia de marketing, sino una decisión consciente: SafeMentor acompaña a los niños en momentos sensibles. Antes de crecer, queremos estar seguros de que funciona. Con personas en las que confiamos y que confían en nosotros."
     },
     "benefits": {
       "eyebrow": "Qué obtenéis",
@@ -1282,7 +1280,7 @@
       },
       "item2": {
         "title": "Contacto directo con nosotros",
-        "desc": "Sin sistema de tickets de soporte. Vuestro feedback nos llega en persona, normalmente el mismo día."
+        "desc": "Sin sistema de tickets de soporte. Vuestro feedback nos llega en persona."
       },
       "item3": {
         "title": "Participar, no solo usar",
