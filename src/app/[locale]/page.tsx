@@ -10,6 +10,8 @@ import { ApproachSection } from '@/features/landing/components/ApproachSection'
 
 import { TestimonialSection } from '@/features/landing/components/TestimonialSection'
 
+import { PilotTeaserSection } from '@/features/landing/components/PilotTeaserSection'
+
 import { CTASection } from '@/features/landing/components/CTASection'
 
 import { SafeMentorFooter } from '@/features/landing/components/SafeMentorFooter'
@@ -71,6 +73,8 @@ export default function HomePage() {
         <ApproachSection />
 
         <TestimonialSection />
+
+        <PilotTeaserSection />
 
         <CTASection />
 
