@@ -233,6 +233,13 @@
       "profileDetails": "Profildetails",
       "settingsSubtitle": "Verwalten Sie Ihr Konto und Ihre Sicherheitseinstellungen."
     },
+    "communication": {
+      "newsletter": "Newsletter",
+      "security_alerts_via_sms": "Sicherheitswarnungen per SMS",
+      "security_alerts_via_email": "Sicherheitswarnungen per E-Mail",
+      "security_alerts_via_whatsapp": "Sicherheitswarnungen per WhatsApp",
+      "not_available": "Ist derzeit noch nicht verfügbar."
+    },
     "payment": {
       "title": "Zahlungsdaten",
       "subtitle": "Verwalten Sie Ihr Abonnement und die Abrechnung",
@@ -250,9 +257,9 @@
     "consent": {
       "title": "Zustimmung, Widerruf und Kündigung",
       "privacyTitle": "Datenschutzerklärung",
-      "privacySubtitle": "Version 2.3 – akzeptiert am 12.03.2026",
+      "privacySubtitle": "Version 2.3 – akzeptiert am {date}",
       "termsTitle": "Allgemeine Geschäftsbedingungen",
-      "termsSubtitle": "Version 1.5 – akzeptiert am 12.03.2026",
+      "termsSubtitle": "Version 1.5 – akzeptiert am {date}",
       "active": "Aktiv",
       "view": "ansehen",
       "withdraw": "Widerruf",
@@ -570,7 +577,13 @@
       "warningsTitle7d": "Warnungen (letzte 7 Tage)",
       "warningsTitle30d": "Warnungen (letzte 30 Tage)",
       "noWarnings": "Keine Warnungen in diesem Zeitraum",
-      "warningText": "Warnung"
+      "warningText": "Warnung",
+      "roles": {
+        "label": "Rolle des Kindes",
+        "victim": "Opfer",
+        "perpetrator": "Täter",
+        "bystander": "Beobachter"
+      }
     },
     "children_new": {
       "title": "Kinderdaten",
@@ -623,7 +636,69 @@
         "title": "Möchten Sie sprechen? Finden Sie jetzt Unterstützung",
         "desc": "Wenn Sie unmittelbare Sicherheitsbedenken haben, gibt es professionelle Hilfe:",
         "crisis": "Krisen-Helpline: 988",
-        "emergency": "Lokale Notdienste: 112"
+        "emergency": "Lokale Notdienste: 112",
+        "crisis_country": "Krisen-Hotline für das Land {country}",
+        "info_label": "Info: {info}"
+      },
+      "countries": {
+        "austria": "Österreich",
+        "belgium": "Belgien",
+        "bulgaria": "Bulgarien",
+        "croatia": "Kroatien",
+        "cyprus": "Zypern",
+        "czech_republic": "Tschechien",
+        "denmark": "Dänemark",
+        "estonia": "Estland",
+        "finland": "Finnland",
+        "france": "Frankreich",
+        "germany": "Deutschland",
+        "greece": "Griechenland",
+        "hungary": "Ungarn",
+        "ireland": "Irland",
+        "italy": "Italien",
+        "latvia": "Lettland",
+        "lithuania": "Litauen",
+        "luxembourg": "Luxemburg",
+        "malta": "Malta",
+        "netherlands": "Niederlande",
+        "poland": "Polen",
+        "portugal": "Portugal",
+        "romania": "Rumänien",
+        "slovakia": "Slowakei",
+        "slovenia": "Slowenien",
+        "spain": "Spanien",
+        "sweden": "Schweden",
+        "switzerland": "Schweiz"
+      },
+      "helplines": {
+        "support_24_7_caregivers": "Rund um die Uhr Unterstützung für Kinder und deren Betreuer.",
+        "general_support_family": "Allgemeine Hilfenummern zur Unterstützung von Eltern bei Familienproblemen.",
+        "operated_state_agency": "Betrieben von der staatlichen Agentur für Kinderschutz.",
+        "specific_parents_caregivers": "Spezielle Hotline für Eltern und Betreuer.",
+        "european_harmonized_families": "Europaweit harmonisierte Rufnummer zur Unterstützung von Familien.",
+        "dedicated_parental_crisis": "Spezielle Eltern-Hotline für Erziehungs- und Familienkrisen.",
+        "specialized_parents_educators": "Spezialisierte Hotline für Eltern und Pädagogen.",
+        "service_24_7_child_parents": "24/7-Service für kindbezogene Anliegen, auch für Eltern.",
+        "professional_guidance_upbringing": "Professionelle Beratung für Eltern zu Erziehung und Familienleben.",
+        "national_service_risk_parents": "Nationaler Dienst für gefährdete Kinder, auch für Eltern offen.",
+        "anonymous_free_parents": "Anonyme und kostenlose Beratung für Eltern.",
+        "counseling_psychological_families": "Beratung und psychologische Unterstützung für Familien.",
+        "provides_dedicated_adults": "Bietet eine eigene Hotline für Erwachsene, die sich um Kinder sorgen.",
+        "volunteer_led_parents": "Ehrenamtlich geführte Helpline zur Unterstützung und Beratung von Eltern.",
+        "dedicated_counseling_child_welfare": "Spezielle Beratung für Kinder und Erwachsene zum Kindeswohl.",
+        "state_run_children_parents": "Staatliche Hotline für Kinder, Jugendliche und Eltern.",
+        "professional_psychological_parents": "Professionelle psychologische Hilfe für Eltern.",
+        "direct_parents_caregivers": "Direkte Hotline für Eltern und Betreuer.",
+        "national_24_7_welfare": "Nationale 24/7-Helpline für alle sozialhilferechtlichen Anliegen.",
+        "anonymized_support_parents": "Anonymisierte Unterstützung speziell für Eltern.",
+        "focused_safety_mental_health": "Fokus auf Sicherheit und psychische Gesundheit von Kindern.",
+        "specialized_family_adoption": "Die 800-Nummer ist spezialisiert auf Familien- und Adoptionsunterstützung.",
+        "counseling_children_representatives": "Beratung für Kinder und deren gesetzliche Vertreter.",
+        "provides_support_crisis": "Bietet Unterstützung für Familien in Krisen.",
+        "general_helpline_advice": "Allgemeine Hotline, die oft von Eltern zur Beratung genutzt wird.",
+        "dedicated_adults_family": "Eigene Hotline für Erwachsene und Familienmitglieder.",
+        "specialized_support_children_rights": "Spezialisierte Unterstützung für Erwachsene zu Kinderrechten.",
+        "specialist_advice_24_7": "Rund um die Uhr Fachberatung für Eltern und Betreuer."
       },
       "recent": "Aktuelle Sicherheitsbenachrichtigungen",
       "levels": {
@@ -640,6 +715,12 @@
         "title": "Was als nächstes zu tun ist",
         "desc": "Unmittelbare Sicherheitsbedenken sollten direkt angesprochen werden. Nutzen Sie unseren Leitfaden für Gesprächseinstiege.",
         "button": "Krisenleitfaden lesen"
+      },
+      "roles": {
+        "label": "Rolle des Kindes",
+        "victim": "Opfer",
+        "perpetrator": "Täter",
+        "bystander": "Beobachter"
       }
     },
     "user": {
