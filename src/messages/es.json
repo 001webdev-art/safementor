@@ -233,6 +233,13 @@
       "profileDetails": "Detalles del Perfil",
       "settingsSubtitle": "Gestiona tu cuenta y preferencias de seguridad."
     },
+    "communication": {
+      "newsletter": "Boletín informativo",
+      "security_alerts_via_sms": "Alertas de seguridad por SMS",
+      "security_alerts_via_email": "Alertas de seguridad por correo electrónico",
+      "security_alerts_via_whatsapp": "Alertas de seguridad por WhatsApp",
+      "not_available": "Actualmente no disponible."
+    },
     "payment": {
       "title": "Datos de Pago",
       "subtitle": "Gestiona tu suscripción y facturación",
@@ -250,9 +257,9 @@
     "consent": {
       "title": "Consentimiento, Revocación y Cancelación",
       "privacyTitle": "Política de Privacidad",
-      "privacySubtitle": "Versión 2.3 – aceptada el 12.03.2026",
+      "privacySubtitle": "Versión 2.3 – aceptada el {date}",
       "termsTitle": "Términos y Condiciones Generales",
-      "termsSubtitle": "Versión 1.5 – aceptada el 12.03.2026",
+      "termsSubtitle": "Versión 1.5 – aceptada el {date}",
       "active": "Activo",
       "view": "ver",
       "withdraw": "Revocar",
@@ -570,7 +577,13 @@
       "warningsTitle7d": "Advertencias (últimos 7 días)",
       "warningsTitle30d": "Advertencias (últimos 30 días)",
       "noWarnings": "No hay advertencias en este período",
-      "warningText": "Advertencia"
+      "warningText": "Advertencia",
+      "roles": {
+        "label": "Rol del niño",
+        "victim": "Víctima",
+        "perpetrator": "Perpetrador",
+        "bystander": "Bystander"
+      }
     },
     "children_new": {
       "title": "Datos de Niños",
@@ -623,7 +636,69 @@
         "title": "¿Necesitas Hablar? Encuentra Apoyo Ahora",
         "desc": "Si tienes preocupaciones inmediatas de seguridad, hay ayuda profesional:",
         "crisis": "Línea de Ayuda de Crisis: 988",
-        "emergency": "Servicios de Emergencia Locales: 112"
+        "emergency": "Servicios de Emergencia Locales: 112",
+        "crisis_country": "Línea de crisis para el país {country}",
+        "info_label": "Información: {info}"
+      },
+      "countries": {
+        "austria": "Austria",
+        "belgium": "Bélgica",
+        "bulgaria": "Bulgaria",
+        "croatia": "Croacia",
+        "cyprus": "Chipre",
+        "czech_republic": "República Checa",
+        "denmark": "Dinamarca",
+        "estonia": "Estonia",
+        "finland": "Finlandia",
+        "france": "Francia",
+        "germany": "Alemania",
+        "greece": "Grecia",
+        "hungary": "Hungría",
+        "ireland": "Irlanda",
+        "italy": "Italia",
+        "latvia": "Letonia",
+        "lithuania": "Lituania",
+        "luxembourg": "Luxemburgo",
+        "malta": "Malta",
+        "netherlands": "Países Bajos",
+        "poland": "Polonia",
+        "portugal": "Portugal",
+        "romania": "Rumanía",
+        "slovakia": "Eslovaquia",
+        "slovenia": "Eslovenia",
+        "spain": "España",
+        "sweden": "Suecia",
+        "switzerland": "Suiza"
+      },
+      "helplines": {
+        "support_24_7_caregivers": "Soporte 24/7 para niños y sus cuidadores.",
+        "general_support_family": "Líneas de apoyo general que ayudan a los padres con problemas familiares.",
+        "operated_state_agency": "Operado por la Agencia Estatal para la Protección de la Infancia.",
+        "specific_parents_caregivers": "Línea específica dedicada a padres y cuidadores.",
+        "european_harmonized_families": "Número europeo armonizado que brinda apoyo a las familias.",
+        "dedicated_parental_crisis": "Línea de ayuda para padres dedicada a crisis educativas y familiares.",
+        "specialized_parents_educators": "Línea de ayuda especializada para padres y educadores.",
+        "service_24_7_child_parents": "Servicio 24/7 para inquietudes relacionadas con niños, incluidos los padres.",
+        "professional_guidance_upbringing": "Orientación profesional para padres sobre la crianza y la vida familiar.",
+        "national_service_risk_parents": "Servicio nacional para niños en situación de riesgo, también para padres.",
+        "anonymous_free_parents": "Asesoramiento anónimo y gratuito para padres.",
+        "counseling_psychological_families": "Asesoramiento y apoyo psicológico para familias.",
+        "provides_dedicated_adults": "Proporciona una línea dedicada para adultos preocupados por los niños.",
+        "volunteer_led_parents": "Línea de ayuda dirigida por voluntarios que brinda apoyo y orientación a los padres.",
+        "dedicated_counseling_child_welfare": "Asesoramiento dedicado para niños y adultos sobre el bienestar infantil.",
+        "state_run_children_parents": "Línea de ayuda estatal para niños, adolescentes y padres.",
+        "professional_psychological_parents": "Ayuda psicológica profesional para padres.",
+        "direct_parents_caregivers": "Línea directa para padres y cuidadores.",
+        "national_24_7_welfare": "Línea de ayuda nacional 24/7 para todas las inquietudes de bienestar social.",
+        "anonymized_support_parents": "Apoyo anónimo específicamente para padres.",
+        "focused_safety_mental_health": "Centrado en la seguridad y la salud mental de los niños.",
+        "specialized_family_adoption": "El número 800 está especializado para el apoyo familiar y de adopción.",
+        "counseling_children_representatives": "Asesoramiento para niños y sus representantes legales.",
+        "provides_support_crisis": "Proporciona apoyo a familias en crisis.",
+        "general_helpline_advice": "Línea de ayuda general que los padres suelen utilizar para obtener consejos.",
+        "dedicated_adults_family": "Línea dedicada para adultos y miembros de la familia.",
+        "specialized_support_children_rights": "Apoyo especializado para adultos sobre los derechos del niño.",
+        "specialist_advice_24_7": "Asesoramiento especializado 24/7 para padres y cuidadores."
       },
       "recent": "Notificaciones de Seguridad Recientes",
       "levels": {
@@ -640,6 +715,12 @@
         "title": "Qué Hacer A Continuación",
         "desc": "Las preocupaciones inmediatas de seguridad deben abordarse directamente. Usa nuestra guía para iniciar conversaciones.",
         "button": "Leer Guía de Crisis"
+      },
+      "roles": {
+        "label": "Rol del niño",
+        "victim": "Víctima",
+        "perpetrator": "Perpetrador",
+        "bystander": "Bystander"
       }
     },
     "user": {

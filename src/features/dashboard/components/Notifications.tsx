@@ -13,6 +13,68 @@ interface NotificationsProps {
     profile?: Partial<Profile>;
 }
 
+const countryKeys: Record<string, string> = {
+    "Austria": "austria",
+    "Belgium": "belgium",
+    "Bulgaria": "bulgaria",
+    "Croatia": "croatia",
+    "Cyprus": "cyprus",
+    "Czech Republic": "czech_republic",
+    "Denmark": "denmark",
+    "Estonia": "estonia",
+    "Finland": "finland",
+    "France": "france",
+    "Germany": "germany",
+    "Greece": "greece",
+    "Hungary": "hungary",
+    "Ireland": "ireland",
+    "Italy": "italy",
+    "Latvia": "latvia",
+    "Lithuania": "lithuania",
+    "Luxembourg": "luxembourg",
+    "Malta": "malta",
+    "Netherlands": "netherlands",
+    "Poland": "poland",
+    "Portugal": "portugal",
+    "Romania": "romania",
+    "Slovakia": "slovakia",
+    "Slovenia": "slovenia",
+    "Spain": "spain",
+    "Sweden": "sweden",
+    "Switzerland": "switzerland"
+};
+
+const infoKeys: Record<string, string> = {
+    "24/7 support for children and their caregivers.": "support_24_7_caregivers",
+    "General support lines that assist parents with family issues.": "general_support_family",
+    "Operated by the State Agency for Child Protection.": "operated_state_agency",
+    "Specific line dedicated to parents and caregivers.": "specific_parents_caregivers",
+    "European harmonized number providing support for families.": "european_harmonized_families",
+    "Dedicated parental helpline for educational and family crisis.": "dedicated_parental_crisis",
+    "Specialized helpline for parents and educators.": "specialized_parents_educators",
+    "24/7 service for child-related concerns, including parents.": "service_24_7_child_parents",
+    "Professional guidance for parents on upbringing and family life.": "professional_guidance_upbringing",
+    "National service for children at risk, also serving parents.": "national_service_risk_parents",
+    "Anonymous and free counseling for parents.": "anonymous_free_parents",
+    "Counseling and psychological support for families.": "counseling_psychological_families",
+    "Provides a dedicated line for adults worried about children.": "provides_dedicated_adults",
+    "Volunteer-led helpline providing support and guidance to parents.": "volunteer_led_parents",
+    "Dedicated counseling for children and adults regarding child welfare.": "dedicated_counseling_child_welfare",
+    "State-run helpline for children, adolescents, and parents.": "state_run_children_parents",
+    "Professional psychological help for parents.": "professional_psychological_parents",
+    "Direct line for parents and caregivers.": "direct_parents_caregivers",
+    "24/7 national helpline for all social welfare concerns.": "national_24_7_welfare",
+    "Anonymized support specifically for parents.": "anonymized_support_parents",
+    "Focused on safety and mental health of children.": "focused_safety_mental_health",
+    "800 number is specialized for family and adoption support.": "specialized_family_adoption",
+    "Counseling for children and their legal representatives.": "counseling_children_representatives",
+    "Provides support for families in crisis.": "provides_support_crisis",
+    "General helpline often used by parents for advice.": "general_helpline_advice",
+    "Dedicated line for adults and family members.": "dedicated_adults_family",
+    "Specialized support for adults regarding children's rights.": "specialized_support_children_rights",
+    "24/7 specialist advice for parents and caregivers.": "specialist_advice_24_7"
+};
+
 export function Notifications({ alerts, profile }: NotificationsProps) {
     const t = useTranslations('Dashboard.notifications_new');
     const [allRisks, setAllRisks] = useState<any[]>([]);
@@ -138,9 +200,41 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                                     </div>
 
                                     {/* Alert Title */}
-                                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                                    <h3 className="text-lg font-bold text-gray-900 mb-1">
                                         {alert.children?.nickname || 'Child'} - {alert.user_intent_flag}
                                     </h3>
+                                    
+                                    {(() => {
+                                        const getRoleKey = (flag: string, summary: string) => {
+                                            const lowerFlag = (flag || '').toLowerCase();
+                                            const lowerSummary = (summary || '').toLowerCase();
+                                            
+                                            if (lowerFlag.includes('self_harm') || lowerFlag.includes('suicide')) {
+                                                return 'victim';
+                                            }
+                                            if (lowerSummary.includes('victim') || lowerSummary.includes('bullied') || lowerSummary.includes('threatened') || lowerSummary.includes('harassed') || lowerSummary.includes('victim') || lowerSummary.includes('abused') || lowerSummary.includes('angegriffen') || lowerSummary.includes('gemobbt') || lowerSummary.includes('bedroht')) {
+                                                return 'victim';
+                                            }
+                                            if (lowerSummary.includes('perpetrator') || lowerSummary.includes('bullying') || lowerSummary.includes('threatening') || lowerSummary.includes('attacking') || lowerSummary.includes('threaten') || lowerSummary.includes('mobbt') || lowerSummary.includes('bedroht jemanden') || lowerSummary.includes('schlagen') || lowerSummary.includes('angreifen')) {
+                                                return 'perpetrator';
+                                            }
+                                            if (lowerSummary.includes('witness') || lowerSummary.includes('bystander') || lowerSummary.includes('saw') || lowerSummary.includes('heard') || lowerSummary.includes('beobachtet')) {
+                                                return 'bystander';
+                                            }
+                                            if (lowerFlag.includes('violence') || lowerFlag.includes('harassment')) {
+                                                return 'perpetrator';
+                                            }
+                                            return 'victim';
+                                        };
+                                        const roleKey = getRoleKey(alert.user_intent_flag, alert.user_intent_summary || '');
+                                        return (
+                                            <div className="flex gap-4 text-xs font-semibold text-red-700 mb-3">
+                                                <span>
+                                                    {t('roles.label')}: <span className="underline">{t(`roles.${roleKey}`)}</span>
+                                                </span>
+                                            </div>
+                                        );
+                                    })()}
 
                                     {/* Guidance Box */}
                                     <div className="bg-white border border-red-200 rounded-lg p-4 mb-4">
@@ -206,7 +300,7 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                             <>
                                 <div className="bg-white border-2 border-red-100 rounded-lg p-4 text-center shadow-sm">
                                     <p className="text-sm font-bold text-red-600 mb-1">
-                                        Crisis hotline for the country {helplineInfo.country}
+                                        {t('support.crisis_country', { country: t(`countries.${countryKeys[helplineInfo.country] || helplineInfo.country}`) })}
                                     </p>
                                     <h4 className="text-lg font-bold text-gray-900 mb-2">{helplineInfo.name}</h4>
                                     <div className="flex items-center justify-center gap-2 mb-2">
@@ -214,7 +308,7 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                                         <p className="font-mono font-bold text-xl text-gray-900">{helplineInfo.number}</p>
                                     </div>
                                     <p className="text-sm text-gray-600 italic border-t border-gray-100 pt-2 mt-2">
-                                        Info: {helplineInfo.info}
+                                        {t('support.info_label', { info: t(`helplines.${infoKeys[helplineInfo.info] || helplineInfo.info}`) })}
                                     </p>
                                 </div>
                             </>

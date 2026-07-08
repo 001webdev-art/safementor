@@ -233,6 +233,13 @@
       "profileDetails": "Detalhes do perfil",
       "settingsSubtitle": "Gerencie a sua conta e preferências de segurança."
     },
+    "communication": {
+      "newsletter": "Newsletter",
+      "security_alerts_via_sms": "Alertas de segurança via SMS",
+      "security_alerts_via_email": "Alertas de segurança via e-mail",
+      "security_alerts_via_whatsapp": "Alertas de segurança via WhatsApp",
+      "not_available": "Atualmente não disponível."
+    },
     "payment": {
       "title": "Dados de pagamento",
       "subtitle": "Gerencie a sua subscrição e faturação",
@@ -246,6 +253,26 @@
       "title": "Informações de faturação",
       "plan": "Plano atual",
       "familyPlan": "Plano familiar"
+    },
+    "consent": {
+      "title": "Consentimento, Revogação e Cancelamento",
+      "privacyTitle": "Política de Privacidade",
+      "privacySubtitle": "Versão 2.3 – aceite em {date}",
+      "termsTitle": "Termos e Condições Gerais",
+      "termsSubtitle": "Versão 1.5 – aceite em {date}",
+      "active": "Ativo",
+      "view": "visualizar",
+      "withdraw": "Revogação",
+      "modalTitle": "Revogar Contrato",
+      "modalWarning": "Tem a certeza que deseja revogar? Isso revogará automaticamente o contrato e não poderá continuar a utilizar o Safementor após o fim do período de utilização acordado.",
+      "cancel": "Cancelar contrato",
+      "back": "Voltar",
+      "thankYou": "Agradecemos por ter sido cliente do Safementor. Lamentamos a sua partida. Gostaríamos de receber feedback sobre o motivo pelo qual não deseja continuar a ser cliente.",
+      "feedbackBtn": "Feedback",
+      "feedbackPlaceholder": "Partilhe connosco os seus motivos...",
+      "submitFeedback": "Enviar",
+      "close": "Fechar",
+      "feedbackSuccess": "Muito obrigado pelo seu feedback!"
     },
     "sidebar": {
       "subtitle": "Painel dos pais",
@@ -550,7 +577,13 @@
       "warningsTitle7d": "Avisos (últimos 7 dias)",
       "warningsTitle30d": "Avisos (últimos 30 dias)",
       "noWarnings": "Sem avisos neste período",
-      "warningText": "Aviso"
+      "warningText": "Aviso",
+      "roles": {
+        "label": "Papel da criança",
+        "victim": "Vítima",
+        "perpetrator": "Perpetrador",
+        "bystander": "Bystander"
+      }
     },
     "children_new": {
       "title": "Dados das crianças",
@@ -603,7 +636,69 @@
         "title": "Precisa de falar? Encontre apoio agora",
         "desc": "Se tiver preocupações imediatas de segurança, existe ajuda profissional:",
         "crisis": "Linha de crise: 988",
-        "emergency": "Serviços de emergência locais: 112"
+        "emergency": "Serviços de emergência locais: 112",
+        "crisis_country": "Linha de crise para o país {country}",
+        "info_label": "Informações: {info}"
+      },
+      "countries": {
+        "austria": "Áustria",
+        "belgium": "Bélgica",
+        "bulgaria": "Búlgária",
+        "croatia": "Croácia",
+        "cyprus": "Chipre",
+        "czech_republic": "República Checa",
+        "denmark": "Dinamarca",
+        "estonia": "Estónia",
+        "finland": "Finlândia",
+        "france": "França",
+        "germany": "Alemanha",
+        "greece": "Grécia",
+        "hungary": "Hungria",
+        "ireland": "Irlanda",
+        "italy": "Itália",
+        "latvia": "Letónia",
+        "lithuania": "Lituânia",
+        "luxembourg": "Luxemburgo",
+        "malta": "Malta",
+        "netherlands": "Países Baixos",
+        "poland": "Polónia",
+        "portugal": "Portugal",
+        "romania": "Roménia",
+        "slovakia": "Eslováquia",
+        "slovenia": "Eslovénia",
+        "spain": "Espanha",
+        "sweden": "Suécia",
+        "switzerland": "Suíça"
+      },
+      "helplines": {
+        "support_24_7_caregivers": "Suporte 24/7 para crianças e seus cuidadores.",
+        "general_support_family": "Linhas de apoio geral que ajudam os pais com problemas familiares.",
+        "operated_state_agency": "Operado pela Agência Estatal de Proteção da Criança.",
+        "specific_parents_caregivers": "Linha específica dedicada a pais e cuidadores.",
+        "european_harmonized_families": "Número europeu harmonizado que fornece suporte para famílias.",
+        "dedicated_parental_crisis": "Linha de apoio dedicada a pais para crises educacionais e familiares.",
+        "specialized_parents_educators": "Linha de apoio especializada para pais e educadores.",
+        "service_24_7_child_parents": "Serviço 24/7 para preocupações relacionadas com crianças, incluindo pais.",
+        "professional_guidance_upbringing": "Orientação profissional para pais sobre educação e vida familiar.",
+        "national_service_risk_parents": "Serviço nacional para crianças em risco, também servindo pais.",
+        "anonymous_free_parents": "Aconselhamento anônimo e gratuito para pais.",
+        "counseling_psychological_families": "Aconselhamento e apoio psicológico para famílias.",
+        "provides_dedicated_adults": "Fornece uma linha dedicada para adultos preocupados com crianças.",
+        "volunteer_led_parents": "Linha de apoio liderada por voluntários que fornece suporte e orientação aos pais.",
+        "dedicated_counseling_child_welfare": "Aconselhamento dedicado para crianças e adultos sobre bem-estar infantil.",
+        "state_run_children_parents": "Linha de apoio estatal para crianças, adolescentes e pais.",
+        "professional_psychological_parents": "Ajuda psicológica profissional para pais.",
+        "direct_parents_caregivers": "Linha direta para pais e cuidadores.",
+        "national_24_7_welfare": "Linha de apoio nacional 24/7 para todas as preocupações de assistência social.",
+        "anonymized_support_parents": "Apoio anônimo especificamente para pais.",
+        "focused_safety_mental_health": "Focado na segurança e saúde mental das crianças.",
+        "specialized_family_adoption": "O número 800 é especializado para apoio familiar e de adoção.",
+        "counseling_children_representatives": "Aconselhamento para crianças e seus representantes legais.",
+        "provides_support_crisis": "Fornece apoio para famílias em crise.",
+        "general_helpline_advice": "Linha de apoio geral frequentemente usada por pais para conselhos.",
+        "dedicated_adults_family": "Linha dedicada para adultos e familiares.",
+        "specialized_support_children_rights": "Suporte especializado para adultos em relação aos direitos das crianças.",
+        "specialist_advice_24_7": "Aconselhamento especializado 24/7 para pais e cuidadores."
       },
       "recent": "Notificações de segurança recentes",
       "levels": {
@@ -620,6 +715,12 @@
         "title": "O que fazer a seguir",
         "desc": "As preocupações imediatas de segurança devem ser tratadas diretamente. Utilize o nosso guia para iniciar conversas.",
         "button": "Ler guia de crise"
+      },
+      "roles": {
+        "label": "Papel da criança",
+        "victim": "Vítima",
+        "perpetrator": "Perpetrador",
+        "bystander": "Bystander"
       }
     },
     "user": {
