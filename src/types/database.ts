@@ -70,5 +70,8 @@ export interface Profile {
     terms_agreed1: boolean;
     terms_help_improve: boolean;
     terms_allow_anonymous_safety_analysis: boolean;
+
+    // Admin Settings
+    admin: boolean;
 }
 

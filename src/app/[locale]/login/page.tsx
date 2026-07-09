@@ -44,7 +44,24 @@ export default function LoginPage() {
 
       if (error) throw error
 
-      router.push(`/${currentLocale}/dashboard`)
+      // Check if user is admin
+      const { data: { session } } = await supabase.auth.getSession()
+      if (session?.user?.id) {
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('admin')
+          .eq('id', session.user.id)
+          .single()
+
+        // Redirect to admin dashboard if user is admin
+        if (profile?.admin) {
+          router.push(`/${currentLocale}/admin`)
+        } else {
+          router.push(`/${currentLocale}/dashboard`)
+        }
+      } else {
+        router.push(`/${currentLocale}/dashboard`)
+      }
       router.refresh()
     } catch (err: any) {
       setError(err.message || tErrors('generic'))

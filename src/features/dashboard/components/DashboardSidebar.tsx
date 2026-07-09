@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Button, Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@nextui-org/react';
 import {
     Shield, Bell, Settings, Lock, LogOut, HelpCircle,
-    Menu, X, ChevronDown, ChevronRight, User as UserIcon, Baby, Globe, MessageSquare
+    Menu, X, ChevronDown, ChevronRight, User as UserIcon, Baby, Globe, MessageSquare, Zap
 } from 'lucide-react';
 import { Profile } from '@/types/database';
 import { usePathname, useRouter } from 'next/navigation';
@@ -235,6 +235,17 @@ export default function DashboardSidebar({
                 >
                     {t('sidebar.chat')}
                 </Button>
+
+                {profile?.admin && (
+                    <Button
+                        variant="light"
+                        className="w-full justify-start text-left text-amber-700 font-medium hover:bg-amber-50"
+                        startContent={<Zap className="w-5 h-5 text-amber-600" />}
+                        onPress={() => router.push(`/${currentLocale}/admin`)}
+                    >
+                        Go Admin
+                    </Button>
+                )}
 
                 <Button
                     variant="light"
