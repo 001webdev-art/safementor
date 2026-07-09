@@ -414,7 +414,7 @@ export function ChatScreen({
                   onClick={stopStreaming}
                   className="mt-2 text-[10px] font-bold text-red-500 hover:text-red-700 uppercase tracking-tighter"
                 >
-                  Stop Generation
+                  Sammy is Answering
                 </button>
               )}
             </div>

@@ -1,0 +1,799 @@
+Dashboard Admin para SafeMentor - Análise e Proposta
+Visão Geral do Dashboard
+Baseado na estrutura de dados fornecida, proponho um dashboard administrativo focado em custos, performance e métricas de segurança com 6 módulos principais:
+
+📊 Estrutura do Dashboard
+1. Header/Overview (Cards de Resumo)
+typescript
+// Métricas em tempo real
+{
+  totalMessages: number,        // Todas as mensagens
+  totalUsers: number,           // Pais cadastrados
+  totalChildren: number,        // Crianças cadastradas
+  totalCost: number,            // Custo total em USD
+  avgCostPerMessage: number,    // Custo médio
+  flaggedMessages: number,      // Mensagens com alerta
+  activeUsers: number,          // Últimos 7 dias
+}
+2. Gráficos de Custo e Uso
+a) Custo por Período (Bar/Line Chart)
+sql
+-- Query para custo diário
+SELECT 
+  DATE(timestamp) as date,
+  SUM(total_cost) as daily_cost,
+  COUNT(*) as message_count,
+  AVG(total_cost) as avg_cost,
+  SUM(prompt_tokens) as total_prompt_tokens,
+  SUM(completion_tokens) as total_completion_tokens,
+  SUM(total_tokens) as total_tokens
+FROM chat_messages
+WHERE message_type = 'assistant'
+  AND timestamp >= NOW() - INTERVAL '30 days'
+GROUP BY DATE(timestamp)
+ORDER BY date DESC;
+b) Distribuição por Modelo (Pie/Doughnut Chart)
+sql
+SELECT 
+  model_used,
+  COUNT(*) as usage_count,
+  SUM(total_cost) as total_cost,
+  SUM(total_tokens) as tokens_used,
+  AVG(total_cost) as avg_cost_per_request
+FROM chat_messages
+WHERE message_type = 'assistant'
+GROUP BY model_used;
+c) Custo Acumulado (Area Chart)
+sql
+SELECT 
+  DATE(timestamp) as date,
+  SUM(SUM(total_cost)) OVER (ORDER BY DATE(timestamp)) as cumulative_cost
+FROM chat_messages
+WHERE message_type = 'assistant'
+GROUP BY DATE(timestamp);
+3. Métricas de Segurança e Alertas
+a) Alertas por Nível (Bar Chart)
+sql
+SELECT 
+  alert_level,
+  COUNT(*) as alert_count,
+  AVG(user_intent_intensity) as avg_intensity,
+  AVG(user_intent_prob) as avg_probability
+FROM chat_messages
+WHERE alert_level IS NOT NULL 
+  AND alert_level != 'none'
+GROUP BY alert_level;
+b) Mensagens com Flag (Table + Chart)
+sql
+SELECT 
+  alert_level,
+  COUNT(*) as count,
+  SUM(CASE WHEN user_intent_means THEN 1 ELSE 0 END) as has_means,
+  SUM(CASE WHEN user_intent_actionable THEN 1 ELSE 0 END) as is_actionable,
+  AVG(user_intent_prob) as avg_prob
+FROM chat_messages
+WHERE alert_level != 'none'
+GROUP BY alert_level;
+4. Métricas de Usuários e Engajamento
+a) Novos Usuários por Período (Line Chart)
+sql
+SELECT 
+  DATE(created_at) as signup_date,
+  COUNT(*) as new_users,
+  COUNT(*) FILTER (WHERE is_subscribed = true) as paid_users
+FROM profiles
+WHERE created_at >= NOW() - INTERVAL '90 days'
+GROUP BY DATE(created_at)
+ORDER BY signup_date;
+b) Distribuição Geográfica (Map/Table)
+sql
+SELECT 
+  address_country as country,
+  COUNT(*) as user_count,
+  COUNT(DISTINCT c.id) as children_count,
+  SUM(cm.total_cost) as total_cost
+FROM profiles p
+LEFT JOIN children c ON c.parent_id = p.id
+LEFT JOIN chat_messages cm ON cm.child_id = c.id
+GROUP BY address_country
+ORDER BY user_count DESC;
+c) Tiers de Assinatura (Pie Chart)
+sql
+SELECT 
+  subscription_tier,
+  COUNT(*) as users,
+  COUNT(DISTINCT c.id) as children,
+  AVG(EXTRACT(DAY FROM NOW() - created_at)) as avg_days_active
+FROM profiles p
+LEFT JOIN children c ON c.parent_id = p.id
+GROUP BY subscription_tier;
+5. Tabela Detalhada de Custos
+sql
+-- Query para tabela principal
+SELECT 
+  DATE(cm.timestamp) as date,
+  p.email as parent_email,
+  c.childrenname as child_name,
+  COUNT(cm.id) as messages,
+  SUM(cm.total_cost) as daily_cost,
+  SUM(cm.total_tokens) as tokens,
+  cm.model_used,
+  COUNT(cm.id) FILTER (WHERE cm.alert_level != 'none') as alerts
+FROM chat_messages cm
+JOIN children c ON c.id = cm.child_id
+JOIN profiles p ON p.id = c.parent_id
+WHERE cm.message_type = 'assistant'
+GROUP BY date, p.email, c.childrenname, cm.model_used
+ORDER BY date DESC, daily_cost DESC;
+6. Análise de Tokens e Eficiência
+sql
+-- Eficiência por modelo
+SELECT 
+  model_used,
+  AVG(total_tokens) as avg_tokens,
+  AVG(prompt_tokens) as avg_prompt,
+  AVG(completion_tokens) as avg_completion,
+  AVG(total_cost) as avg_cost,
+  COUNT(*) as total_requests,
+  SUM(total_tokens) as total_tokens_used,
+  SUM(total_cost) as total_cost
+FROM chat_messages
+WHERE message_type = 'assistant'
+GROUP BY model_used
+ORDER BY total_cost DESC;
+🏗️ Arquitetura Técnica (Next.js + Supabase)
+Estrutura de Pastas
+text
+/src/
+  /app/
+    /admin/
+      /dashboard/
+        page.tsx          # Dashboard principal
+        /api/
+          /metrics/
+            route.ts      # Endpoints para dados
+      /layout.tsx
+  /components/
+    /admin/
+      /charts/
+        CostChart.tsx
+        UserGrowthChart.tsx
+        AlertDistributionChart.tsx
+        ModelUsageChart.tsx
+      /cards/
+        MetricCard.tsx
+      /tables/
+        CostBreakdownTable.tsx
+        AlertLogTable.tsx
+      /filters/
+        DateRangeFilter.tsx
+        ModelFilter.tsx
+        AlertLevelFilter.tsx
+  /lib/
+    /supabase/
+      adminClient.ts     # Client com service_role key
+    /queries/
+      dashboardQueries.ts
+    /utils/
+      formatHelpers.ts
+Componentes Principais
+1. Dashboard Layout
+tsx
+// app/admin/dashboard/page.tsx
+export default function AdminDashboard() {
+  const { data, isLoading } = useDashboardData();
+  
+  return (
+    <div className="p-6 space-y-6">
+      {/* Header com filtros */}
+      <DashboardHeader />
+      
+      {/* Grid de Cards */}
+      <MetricCards data={data.metrics} />
+      
+      {/* Grid de Charts 2x2 */}
+      <div className="grid grid-cols-2 gap-6">
+        <CostChart data={data.costData} />
+        <UserGrowthChart data={data.userData} />
+        <AlertDistributionChart data={data.alertData} />
+        <ModelUsageChart data={data.modelData} />
+      </div>
+      
+      {/* Tabela Detalhada */}
+      <CostBreakdownTable data={data.detailedData} />
+    </div>
+  );
+}
+2. Custom Hooks para Dados
+tsx
+// hooks/useDashboardData.ts
+export function useDashboardData(filters: DashboardFilters) {
+  const [data, setData] = useState<DashboardData>();
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const supabase = createAdminClient();
+      
+      // Queries paralelas
+      const [metrics, costData, userData, alertData, modelData, detailed] = 
+        await Promise.all([
+          fetchMetrics(supabase, filters),
+          fetchCostData(supabase, filters),
+          fetchUserData(supabase, filters),
+          fetchAlertData(supabase, filters),
+          fetchModelData(supabase, filters),
+          fetchDetailedData(supabase, filters)
+        ]);
+      
+      setData({ metrics, costData, userData, alertData, modelData, detailed });
+    };
+    
+    fetchData();
+  }, [filters]);
+  
+  return { data, isLoading };
+}
+3. Filtros Avançados
+tsx
+// components/admin/filters/DashboardFilters.tsx
+interface DashboardFilters {
+  dateRange: {
+    start: Date;
+    end: Date;
+    preset: 'today' | 'week' | 'month' | 'quarter' | 'year' | 'custom';
+  };
+  models: string[];
+  alertLevels: string[];
+  subscriptionTiers: string[];
+}
+
+// Shadcn DateRangePicker + MultiSelect
+📈 Gráficos Recomendados (Shadcn + Recharts)
+Area Chart - Custo acumulado
+
+Bar Chart - Custo por dia/semana/mês
+
+Line Chart - Crescimento de usuários
+
+Pie Chart - Distribuição por modelo
+
+Scatter Plot - Relação tokens/custo
+
+Heatmap - Uso por hora do dia
+
+Radar Chart - Comparação de modelos
+
+🔐 Segurança e Performance
+Políticas RLS
+sql
+-- Apenas usuários com role 'admin' podem acessar
+CREATE POLICY "Only admins can view dashboard data" 
+  ON chat_messages 
+  FOR SELECT 
+  USING (auth.role() = 'admin');
+Cache Strategy
+typescript
+// Cache de 5 minutos para dados de dashboard
+const CACHE_TTL = 5 * 60 * 1000;
+
+// Invalidação manual via webhook
+export async function invalidateDashboardCache() {
+  await redis.del('dashboard:metrics');
+  await redis.del('dashboard:costData');
+}
+Otimização de Queries
+sql
+-- Materialized Views para dados agregados
+CREATE MATERIALIZED VIEW dashboard_metrics AS
+SELECT 
+  DATE_TRUNC('day', timestamp) as day,
+  COUNT(*) as total_messages,
+  SUM(total_cost) as total_cost,
+  COUNT(DISTINCT child_id) as active_children,
+  COUNT(*) FILTER (WHERE alert_level != 'none') as flagged_messages
+FROM chat_messages
+WHERE message_type = 'assistant'
+GROUP BY DATE_TRUNC('day', timestamp);
+
+-- Refresh a cada hora
+REFRESH MATERIALIZED VIEW CONCURRENTLY dashboard_metrics;
+🎯 KPIs Prioritários
+KPI	Fórmula	Frequência
+Custo Médio por Mensagem	SUM(total_cost) / COUNT(*)	Diário
+Custo por Usuário Ativo	SUM(total_cost) / COUNT(DISTINCT child_id)	Semanal
+Taxa de Alerta	(flagged_messages / total_messages) * 100	Diário
+ROI de Segurança	(alert_detected / total_cost) * 1000	Mensal
+Eficiência de Tokens	completion_tokens / prompt_tokens	Por Modelo
+Custo por Token	total_cost / total_tokens	Por Modelo
+🚀 Próximos Passos
+Setup inicial:
+
+bash
+npx create-next-app@latest admin-dashboard --typescript --tailwind --app
+npx shadcn-ui@latest init
+npm install recharts date-fns @radix-ui/react-popover
+Criar Service Role Client:
+
+typescript
+// lib/supabase/adminClient.ts
+export const createAdminClient = () => {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    { auth: { autoRefreshToken: false, persistSession: false } }
+  );
+};
+Implementar queries uma a uma começando pelos cards de resumo
+
+Adicionar WebSocket para atualizações em tempo real de custos
+
+Configurar alertas para picos de custo (> budget definido)
+
+💰 Exemplo de ROI do Dashboard
+Com esse dashboard, você pode:
+
+Identificar usuários com custos anormais (ex: criança usando 10x mais tokens)
+
+Otimizar modelo por caso de uso (GPT-3.5 vs GPT-4)
+
+Prever custos mensais com base em tendências
+
+Detectar padrões de segurança sazonais
+
+Justificar investimento em segurança com dados concretos
+
+Quer que eu detalhe algum módulo específico ou implemente algum componente em particular?
+
+seria fantastico se voce organizasse de forma pratica para um agente de ia iniciar a criacao disso, mas de forma economica de tokens mas que mesmo assim fosse facilmente compreensivel e escalavel
+🚀 Dashboard Admin - Esqueleto Prático para IA Agent
+📁 Estrutura Mínima para Início
+text
+/src/
+  /app/
+    /admin/
+      /dashboard/
+        page.tsx
+        /components/
+          MetricsCards.tsx
+          CostChart.tsx
+          UsersChart.tsx
+          AlertsTable.tsx
+        /hooks/
+          useDashboard.ts
+        /types/
+          index.ts
+      /api/
+        /dashboard/
+          route.ts
+  /lib/
+    /supabase/
+      admin.ts
+    /queries/
+      dashboard.ts
+1. 📄 Types (menos de 30 linhas)
+typescript
+// /src/app/admin/dashboard/types/index.ts
+export type DashboardMetrics = {
+  totalMessages: number
+  totalUsers: number
+  totalChildren: number
+  totalCost: number
+  flaggedMessages: number
+  avgCostPerMessage: number
+}
+
+export type TimeRange = '24h' | '7d' | '30d' | '90d'
+
+export type ChartData = {
+  date: string
+  value: number
+  cost?: number
+  messages?: number
+}[]
+
+export type AlertData = {
+  id: string
+  child_name: string
+  alert_level: string
+  content: string
+  timestamp: string
+  probability: number
+}[]
+2. 🔧 Queries SQL (todas em um arquivo)
+typescript
+// /src/lib/queries/dashboard.ts
+
+// 1. MÉTRICAS PRINCIPAIS
+export const GET_METRICS = `
+  WITH costs AS (
+    SELECT 
+      COUNT(*) as total_messages,
+      SUM(total_cost) as total_cost,
+      COUNT(*) FILTER (WHERE alert_level != 'none') as flagged
+    FROM chat_messages
+    WHERE message_type = 'assistant'
+  )
+  SELECT 
+    (SELECT COUNT(*) FROM profiles) as total_users,
+    (SELECT COUNT(*) FROM children) as total_children,
+    costs.*,
+    (costs.total_cost / NULLIF(costs.total_messages, 0)) as avg_cost
+  FROM costs
+`
+
+// 2. CUSTO POR PERÍODO (mais usado)
+export const GET_COST_BY_PERIOD = `
+  SELECT 
+    DATE_TRUNC('day', timestamp) as date,
+    COUNT(*) as messages,
+    SUM(total_cost) as cost,
+    SUM(total_tokens) as tokens
+  FROM chat_messages
+  WHERE message_type = 'assistant'
+    AND timestamp >= NOW() - INTERVAL '30 days'
+  GROUP BY DATE_TRUNC('day', timestamp)
+  ORDER BY date DESC
+`
+
+// 3. CRESCIMENTO DE USUÁRIOS
+export const GET_USER_GROWTH = `
+  SELECT 
+    DATE(created_at) as date,
+    COUNT(*) as new_users
+  FROM profiles
+  WHERE created_at >= NOW() - INTERVAL '30 days'
+  GROUP BY DATE(created_at)
+  ORDER BY date
+`
+
+// 4. ALERTAS RECENTES
+export const GET_RECENT_ALERTS = `
+  SELECT 
+    cm.id,
+    c.childrenname as child_name,
+    cm.alert_level,
+    cm.content,
+    cm.timestamp,
+    cm.user_intent_prob as probability
+  FROM chat_messages cm
+  JOIN children c ON c.id = cm.child_id
+  WHERE cm.alert_level != 'none'
+  ORDER BY cm.timestamp DESC
+  LIMIT 20
+`
+
+// 5. CUSTO POR MODELO
+export const GET_COST_BY_MODEL = `
+  SELECT 
+    model_used,
+    COUNT(*) as requests,
+    SUM(total_cost) as total_cost,
+    AVG(total_cost) as avg_cost,
+    SUM(total_tokens) as tokens
+  FROM chat_messages
+  WHERE message_type = 'assistant'
+  GROUP BY model_used
+  ORDER BY total_cost DESC
+`
+3. 🏗️ API Route (único endpoint)
+typescript
+// /src/app/api/dashboard/route.ts
+import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs'
+import { cookies } from 'next/headers'
+import { NextResponse } from 'next/server'
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url)
+  const period = searchParams.get('period') || '30d'
+  
+  const supabase = createRouteHandlerClient({ cookies })
+  
+  try {
+    // Executa todas as queries em paralelo
+    const [
+      metrics,
+      costData,
+      userGrowth,
+      alerts,
+      modelCost
+    ] = await Promise.all([
+      supabase.rpc('get_dashboard_metrics'), // ou raw SQL
+      supabase.rpc('get_cost_by_period', { days: parseInt(period) }),
+      supabase.rpc('get_user_growth'),
+      supabase.rpc('get_recent_alerts'),
+      supabase.rpc('get_cost_by_model')
+    ])
+
+    return NextResponse.json({
+      metrics: metrics.data?.[0] || {},
+      costData: costData.data || [],
+      userGrowth: userGrowth.data || [],
+      alerts: alerts.data || [],
+      modelCost: modelCost.data || []
+    })
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to fetch dashboard data' }, { status: 500 })
+  }
+}
+4. 🎯 Componentes UI (Shadcn + Recharts)
+MetricsCards.tsx (20 linhas)
+tsx
+// /src/app/admin/dashboard/components/MetricsCards.tsx
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { DollarSign, Users, MessageSquare, AlertTriangle } from "lucide-react"
+
+export function MetricsCards({ data }: { data: DashboardMetrics }) {
+  const cards = [
+    { title: "Custo Total", value: `$${data.totalCost.toFixed(2)}`, icon: DollarSign },
+    { title: "Mensagens", value: data.totalMessages, icon: MessageSquare },
+    { title: "Usuários", value: data.totalUsers, icon: Users },
+    { title: "Alertas", value: data.flaggedMessages, icon: AlertTriangle },
+  ]
+
+  return (
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      {cards.map(({ title, value, icon: Icon }) => (
+        <Card key={title}>
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">{title}</CardTitle>
+            <Icon className="h-4 w-4 text-muted-foreground" />
+          </CardHeader>
+          <CardContent>
+            <div className="text-2xl font-bold">{value}</div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  )
+}
+CostChart.tsx (30 linhas)
+tsx
+// /src/app/admin/dashboard/components/CostChart.tsx
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+
+export function CostChart({ data }: { data: ChartData }) {
+  return (
+    <Card className="col-span-2">
+      <CardHeader>
+        <CardTitle>Custo por Dia</CardTitle>
+      </CardHeader>
+      <CardContent className="h-[300px]">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="date" />
+            <YAxis />
+            <Tooltip 
+              formatter={(value: number) => `$${value.toFixed(2)}`}
+            />
+            <Bar dataKey="cost" fill="#8884d8" />
+          </BarChart>
+        </ResponsiveContainer>
+      </CardContent>
+    </Card>
+  )
+}
+AlertsTable.tsx (40 linhas)
+tsx
+// /src/app/admin/dashboard/components/AlertsTable.tsx
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import { Badge } from "@/components/ui/badge"
+
+export function AlertsTable({ data }: { data: AlertData[] }) {
+  const getAlertColor = (level: string) => {
+    switch(level) {
+      case 'high': return 'destructive'
+      case 'medium': return 'warning'
+      default: return 'secondary'
+    }
+  }
+
+  return (
+    <Card className="col-span-2">
+      <CardHeader>
+        <CardTitle>Alertas Recentes</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Criança</TableHead>
+              <TableHead>Nível</TableHead>
+              <TableHead>Mensagem</TableHead>
+              <TableHead>Probabilidade</TableHead>
+              <TableHead>Data</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {data.map((alert) => (
+              <TableRow key={alert.id}>
+                <TableCell>{alert.child_name}</TableCell>
+                <TableCell>
+                  <Badge variant={getAlertColor(alert.alert_level)}>
+                    {alert.alert_level}
+                  </Badge>
+                </TableCell>
+                <TableCell className="max-w-xs truncate">{alert.content}</TableCell>
+                <TableCell>{(alert.probability * 100).toFixed(0)}%</TableCell>
+                <TableCell>{new Date(alert.timestamp).toLocaleDateString()}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </CardContent>
+    </Card>
+  )
+}
+5. 🎣 Hook Principal
+typescript
+// /src/app/admin/dashboard/hooks/useDashboard.ts
+import { useEffect, useState } from 'react'
+
+export function useDashboard(period: string = '30d') {
+  const [data, setData] = useState({
+    metrics: {},
+    costData: [],
+    userGrowth: [],
+    alerts: [],
+    modelCost: []
+  })
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch(`/api/dashboard?period=${period}`)
+        const result = await response.json()
+        setData(result)
+      } catch (err: any) {
+        setError(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [period])
+
+  return { data, loading, error }
+}
+6. 📄 Página Principal
+tsx
+// /src/app/admin/dashboard/page.tsx
+'use client'
+
+import { useState } from 'react'
+import { useDashboard } from './hooks/useDashboard'
+import { MetricsCards } from './components/MetricsCards'
+import { CostChart } from './components/CostChart'
+import { AlertsTable } from './components/AlertsTable'
+import { UserGrowthChart } from './components/UserGrowthChart'
+import { ModelCostChart } from './components/ModelCostChart'
+import { PeriodSelector } from './components/PeriodSelector'
+
+export default function DashboardPage() {
+  const [period, setPeriod] = useState('30d')
+  const { data, loading } = useDashboard(period)
+
+  if (loading) {
+    return <div className="flex items-center justify-center h-96">Carregando...</div>
+  }
+
+  return (
+    <div className="flex-1 space-y-4 p-8 pt-6">
+      <div className="flex items-center justify-between space-y-2">
+        <h2 className="text-3xl font-bold tracking-tight">Dashboard Admin</h2>
+        <PeriodSelector value={period} onChange={setPeriod} />
+      </div>
+
+      <MetricsCards data={data.metrics} />
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+        <CostChart data={data.costData} className="col-span-4" />
+        <ModelCostChart data={data.modelCost} className="col-span-3" />
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
+        <UserGrowthChart data={data.userGrowth} className="col-span-3" />
+        <AlertsTable data={data.alerts} className="col-span-4" />
+      </div>
+    </div>
+  )
+}
+7. 🔄 PeriodSelector
+tsx
+// /src/app/admin/dashboard/components/PeriodSelector.tsx
+import { Button } from "@/components/ui/button"
+
+const periods = [
+  { label: '24h', value: '1d' },
+  { label: '7 dias', value: '7d' },
+  { label: '30 dias', value: '30d' },
+  { label: '90 dias', value: '90d' },
+]
+
+export function PeriodSelector({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return (
+    <div className="flex gap-2">
+      {periods.map(({ label, value: periodValue }) => (
+        <Button
+          key={periodValue}
+          variant={value === periodValue ? 'default' : 'outline'}
+          size="sm"
+          onClick={() => onChange(periodValue)}
+        >
+          {label}
+        </Button>
+      ))}
+    </div>
+  )
+}
+8. 📦 Instalação Rápida
+bash
+# 1. Criar projeto
+npx create-next-app@latest admin-dashboard --typescript --tailwind --app
+cd admin-dashboard
+
+# 2. Shadcn UI
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add button card badge table
+
+# 3. Gráficos
+npm install recharts
+
+# 4. Utilitários
+npm install date-fns @radix-ui/react-popover
+
+# 5. Supabase
+npm install @supabase/supabase-js @supabase/auth-helpers-nextjs
+
+# 6. Icons
+npm install lucide-react
+9. 🔐 Configuração Supabase
+typescript
+// /src/lib/supabase/admin.ts
+import { createClient } from '@supabase/supabase-js'
+
+export const supabaseAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false
+    }
+  }
+)
+10. 📋 Checklist para IA Agent
+Criar estrutura de pastas
+
+Instalar dependências
+
+Configurar variáveis de ambiente (.env.local)
+
+Criar types
+
+Implementar queries SQL (via RPC ou raw)
+
+Criar API route
+
+Implementar componentes UI um por um
+
+Adicionar loading states
+
+Testar com dados reais
+
+Adicionar refresh automático (opcional)
+
+💡 Dicas de Otimização
+Cache: Use React Query ou SWR para cache automático
+
+Lazy Loading: Carregue gráficos apenas quando visíveis
+
+Debounce: Para filtros rápidos
+
+Pagination: Para tabela de alertas
+
