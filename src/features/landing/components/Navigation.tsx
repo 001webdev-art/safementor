@@ -13,6 +13,7 @@ export const Navigation = () => {
     const navLinks = [
         { href: `/${locale}/about`, label: t('about'), isAnchor: false },
         { href: `/${locale}/how_it_works`, label: t('howItWorks'), isAnchor: false },
+        { href: `/${locale}/pilotprogramm`, label: t('pilot'), isAnchor: false },
     ];
 
     return (

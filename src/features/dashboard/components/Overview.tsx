@@ -30,6 +30,7 @@ export function Overview({ children }: OverviewProps) {
                     id,
                     user_intent_summary,
                     user_intent_flag,
+                    user_intent_level,
                     child_id,
                     children:children(nickname)
                 `)
@@ -58,10 +59,10 @@ export function Overview({ children }: OverviewProps) {
 
             const { data, error } = await supabase
                 .from('chat_messages')
-                .select('id, created_at, user_intent_summary, user_intent_flag, content')
+                .select('id, created_at, user_intent_summary, user_intent_flag, user_intent_level, content')
                 .eq('child_id', selectedChild)
                 .gt('created_at', since.toISOString())
-                .in('user_intent_flag', ['yellow', 'red'])
+                .in('user_intent_level', ['yellow', 'red'])
                 .order('created_at', { ascending: false });
 
             if (error) throw error;
@@ -122,42 +123,85 @@ export function Overview({ children }: OverviewProps) {
                 <CardBody>
                     {riskAlerts.length > 0 ? (
                         <div className="space-y-4 mb-4">
-                            {riskAlerts.map((alert) => (
-                                <div key={alert.id} className="bg-red-50 border border-red-200 rounded-xl p-4 animate-in fade-in slide-in-from-top-2">
-                                    <div className="flex gap-3">
-                                        <div className="bg-red-100 p-2 rounded-full h-fit">
-                                            <ShieldAlert className="w-5 h-5 text-red-600" />
-                                        </div>
-                                        <div className="flex-1">
-                                            <h4 className="font-bold text-red-900 text-base mb-1">
-                                                {alert.children?.nickname || 'Child'} - Risk Detected
-                                            </h4>
-                                            <p className="text-sm text-red-800 mb-1 leading-relaxed">
-                                                {alert.user_intent_summary || "Potentially unsafe content detected."}
-                                            </p>
-                                            <p className="text-xs font-semibold text-red-700 mb-3">
-                                                Pattern detected: {alert.user_intent_flag}
-                                            </p>
-                                            <div className="flex gap-2">
-                                                <Button
-                                                    size="sm"
-                                                    variant="ghost"
-                                                    className="border border-red-200 text-red-700 hover:bg-red-100 font-medium"
-                                                >
-                                                    Get advice
-                                                </Button>
-                                                <Button
-                                                    size="sm"
-                                                    className="bg-red-600 text-white hover:bg-red-700 font-medium shadow-sm shadow-red-200"
-                                                    onPress={() => handleAcknowledge(alert.id)}
-                                                >
-                                                    Mark acknowledged
-                                                </Button>
+                            {riskAlerts.map((alert) => {
+                                const isYellow = alert.user_intent_level === 'yellow' || alert.user_intent_level === 'gelb';
+                                
+                                // Determine child's role
+                                const getRoleKey = (flag: string, summary: string) => {
+                                    const lowerFlag = (flag || '').toLowerCase();
+                                    const lowerSummary = (summary || '').toLowerCase();
+                                    
+                                    if (lowerFlag.includes('self_harm') || lowerFlag.includes('suicide')) {
+                                        return 'victim';
+                                    }
+                                    if (lowerSummary.includes('victim') || lowerSummary.includes('bullied') || lowerSummary.includes('threatened') || lowerSummary.includes('harassed') || lowerSummary.includes('victim') || lowerSummary.includes('abused') || lowerSummary.includes('angegriffen') || lowerSummary.includes('gemobbt') || lowerSummary.includes('bedroht')) {
+                                        return 'victim';
+                                    }
+                                    if (lowerSummary.includes('perpetrator') || lowerSummary.includes('bullying') || lowerSummary.includes('threatening') || lowerSummary.includes('attacking') || lowerSummary.includes('threaten') || lowerSummary.includes('mobbt') || lowerSummary.includes('bedroht jemanden') || lowerSummary.includes('schlagen') || lowerSummary.includes('angreifen')) {
+                                        return 'perpetrator';
+                                    }
+                                    if (lowerSummary.includes('witness') || lowerSummary.includes('bystander') || lowerSummary.includes('saw') || lowerSummary.includes('heard') || lowerSummary.includes('beobachtet')) {
+                                        return 'bystander';
+                                    }
+                                    if (lowerFlag.includes('violence') || lowerFlag.includes('harassment')) {
+                                        return 'perpetrator';
+                                    }
+                                    return 'victim';
+                                };
+                                const roleKey = getRoleKey(alert.user_intent_flag, alert.user_intent_summary || '');
+                                
+                                return (
+                                    <div key={alert.id} className={`border rounded-xl p-4 animate-in fade-in slide-in-from-top-2 ${
+                                        isYellow ? 'bg-yellow-50 border-yellow-200' : 'bg-red-50 border-red-200'
+                                    }`}>
+                                        <div className="flex gap-3">
+                                            <div className={`p-2 rounded-full h-fit ${isYellow ? 'bg-yellow-100' : 'bg-red-100'}`}>
+                                                <ShieldAlert className={`w-5 h-5 ${isYellow ? 'text-yellow-600' : 'text-red-600'}`} />
+                                            </div>
+                                            <div className="flex-1">
+                                                <h4 className={`font-bold text-base mb-1 ${isYellow ? 'text-yellow-900' : 'text-red-900'}`}>
+                                                    {alert.children?.nickname || 'Child'} - {isYellow ? 'Warning Detected' : 'Risk Detected'}
+                                                </h4>
+                                                <p className={`text-sm mb-1 leading-relaxed ${isYellow ? 'text-yellow-800' : 'text-red-800'}`}>
+                                                    {alert.user_intent_summary || "Potentially unsafe content detected."}
+                                                </p>
+                                                <div className="flex flex-wrap gap-x-4 gap-y-1 mb-3 text-xs">
+                                                    <span className={`font-semibold ${isYellow ? 'text-yellow-700' : 'text-red-700'}`}>
+                                                        Pattern detected: {alert.user_intent_flag}
+                                                    </span>
+                                                    <span className={`font-semibold ${isYellow ? 'text-yellow-700' : 'text-red-700'}`}>
+                                                        {t('roles.label')}: <span className="underline">{t(`roles.${roleKey}`)}</span>
+                                                    </span>
+                                                </div>
+                                                <div className="flex gap-2">
+                                                    <Button
+                                                        size="sm"
+                                                        variant="ghost"
+                                                        className={`border font-medium ${
+                                                            isYellow 
+                                                                ? 'border-yellow-200 text-yellow-700 hover:bg-yellow-100' 
+                                                                : 'border-red-200 text-red-700 hover:bg-red-100'
+                                                        }`}
+                                                    >
+                                                        Get advice
+                                                    </Button>
+                                                    <Button
+                                                        size="sm"
+                                                        className={`font-medium shadow-sm ${
+                                                            isYellow 
+                                                                ? 'bg-yellow-600 hover:bg-yellow-700 text-white shadow-yellow-200' 
+                                                                : 'bg-red-600 hover:bg-red-700 text-white shadow-red-200'
+                                                        }`}
+                                                        onPress={() => handleAcknowledge(alert.id)}
+                                                    >
+                                                        Mark acknowledged
+                                                    </Button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     ) : (
                         <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-4 animate-in fade-in">
@@ -244,18 +288,18 @@ export function Overview({ children }: OverviewProps) {
                         <div className="space-y-3">
                             {warnings.map((warning) => (
                                 <div key={warning.id} className={`border rounded-lg p-4 ${
-                                    warning.user_intent_flag === 'red'
+                                    warning.user_intent_level === 'red'
                                         ? 'bg-red-50 border-red-200'
                                         : 'bg-yellow-50 border-yellow-200'
                                 }`}>
                                     <div className="flex gap-3">
                                         <div className={`flex-shrink-0 mt-1 ${
-                                            warning.user_intent_flag === 'red'
+                                            warning.user_intent_level === 'red'
                                                 ? 'bg-red-100 p-2 rounded-full'
                                                 : 'bg-yellow-100 p-2 rounded-full'
                                         }`}>
                                             <AlertTriangle className={`w-4 h-4 ${
-                                                warning.user_intent_flag === 'red'
+                                                warning.user_intent_level === 'red'
                                                     ? 'text-red-600'
                                                     : 'text-yellow-600'
                                             }`} />
@@ -264,21 +308,21 @@ export function Overview({ children }: OverviewProps) {
                                             <div className="flex justify-between items-start gap-2">
                                                 <div>
                                                     <p className={`font-semibold mb-1 ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-900'
                                                             : 'text-yellow-900'
                                                     }`}>
                                                         {warning.user_intent_summary || t('warningText')}
                                                     </p>
                                                     <p className={`text-sm mb-2 ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-800'
                                                             : 'text-yellow-800'
                                                     }`}>
                                                         {warning.content}
                                                     </p>
                                                     <p className={`text-xs ${
-                                                        warning.user_intent_flag === 'red'
+                                                        warning.user_intent_level === 'red'
                                                             ? 'text-red-700'
                                                             : 'text-yellow-700'
                                                     }`}>

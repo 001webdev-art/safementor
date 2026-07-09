@@ -134,7 +134,7 @@ export function PersonalData({
                         <div className="space-y-6">
                             <PaymentDataForm t={t} />
                             <BillingInformationForm t={t} />
-                            <ConsentForm t={t} />
+                            <ConsentForm t={t} profile={currentProfile} />
                         </div>
                     </div>
                 </CardBody>

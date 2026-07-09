@@ -7,9 +7,10 @@ import { useLocale } from 'next-intl';
 
 interface ConsentFormProps {
     t: any;
+    profile?: any;
 }
 
-const ConsentForm = ({ t }: ConsentFormProps) => {
+const ConsentForm = ({ t, profile }: ConsentFormProps) => {
     const locale = useLocale();
     const [isOpen, setIsOpen] = useState(false);
     const [modalStep, setModalStep] = useState<1 | 2 | 3>(1);
@@ -17,6 +18,10 @@ const ConsentForm = ({ t }: ConsentFormProps) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     if (!t) return null;
+
+    const formattedDate = profile?.created_at
+        ? new Date(profile.created_at).toLocaleDateString(locale, { day: '2-digit', month: '2-digit', year: 'numeric' })
+        : '12.03.2026';
 
     const handleWithdrawClick = () => {
         setModalStep(1);
@@ -52,14 +57,14 @@ const ConsentForm = ({ t }: ConsentFormProps) => {
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-gray-100 last:border-b-0 last:pb-0">
                         <div className="space-y-1">
                             <p className="font-bold text-gray-950">{t('consent.privacyTitle')}</p>
-                            <p className="text-sm text-gray-500">{t('consent.privacySubtitle')}</p>
+                            <p className="text-sm text-gray-500">{t('consent.privacySubtitle', { date: formattedDate })}</p>
                         </div>
                         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
                             <Chip 
                                 startContent={<Check size={14} className="text-[#889A7F]" />} 
                                 className="bg-[#889A7F]/10 text-[#889A7F] border-none font-semibold"
                                 size="sm"
-                            >
+                             >
                                 {t('consent.active')}
                             </Chip>
                             <div className="flex items-center gap-3">
@@ -83,7 +88,7 @@ const ConsentForm = ({ t }: ConsentFormProps) => {
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-2">
                         <div className="space-y-1">
                             <p className="font-bold text-gray-950">{t('consent.termsTitle')}</p>
-                            <p className="text-sm text-gray-500">{t('consent.termsSubtitle')}</p>
+                            <p className="text-sm text-gray-500">{t('consent.termsSubtitle', { date: formattedDate })}</p>
                         </div>
                         <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-end">
                             <Chip 
