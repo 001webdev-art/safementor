@@ -1,3 +1,5 @@
+import { createClient } from '../lib/supabase/client';
+
 // --- TYPES ---
 
 export interface User {
@@ -199,13 +201,25 @@ export const ChildService = {
 
     // Call Python Backend
     try {
+      const supabase = createClient();
+      const { data: { session } } = await supabase.auth.getSession();
+      const token = session?.access_token;
+      
+      const requestHeaders: Record<string, string> = {
+        ...headers,
+      };
+      if (token) {
+        requestHeaders['Authorization'] = `Bearer ${token}`;
+      }
+
       const res = await fetch(`${API_BASE_URL}/mentor`, {
         method: 'POST',
-        headers,
+        headers: requestHeaders,
         body: JSON.stringify({
           message: text,
           child_age: "10",
-          safety_prompt: "Be supportive."
+          safety_prompt: "Be supportive.",
+          session_id: "demo-parent-dashboard-session"
         })
       });
 
