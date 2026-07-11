@@ -26,6 +26,7 @@ export interface SafetyAlert {
   timestamp: string;
   details?: string;
   quote?: string;
+  parent_hint?: string;
   isAcknowledged: boolean;
 }
 
@@ -132,6 +133,7 @@ export const ParentService = {
           title: 'School anxiety mentioned',
           description: 'Pattern detected in recent conversations regarding math class.',
           timestamp: 'Yesterday, 4:15 PM',
+          parent_hint: 'Dein Kind äußert Sorgen bezüglich der Schule. Versuche eine wertfreie Beobachtung zu teilen: "Mir ist aufgefallen, dass du beim Thema Mathe bedrückt wirkst. Wie fühlt sich das für dich an?" Schenke ihm Vertrauen in seine eigenen Fähigkeiten.',
           isAcknowledged: false
         },
         {

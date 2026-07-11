@@ -44,3 +44,5 @@ test-output.css
 build_log.txt
 ACCESS_CREDENTIALS.md
 bkp.bat
+
+__pycache__/*

@@ -628,6 +628,10 @@
         "step3": "Tenha uma conversa atenciosa"
       },
       "noActiveAlerts": "Sem alertas ativos neste momento",
+      "parentHint": {
+        "title": "Recomendação Educacional (Jesper Juul & Daniel Siegel)",
+        "disclaimer": "Esta dica baseia-se nos princípios terapêuticos familiares de Jesper Juul e Daniel J. Siegel. É gerada por uma IA e pode conter erros. Não substitui aconselhamento psicológico ou terapêutico profissional."
+      },
       "disclaimer": {
         "title": "⚠️ Importante:",
         "text": "O SafeMentor NÃO é um especialista humano e pode cometer erros. Para obter ajuda, contacte SEMPRE em primeiro lugar um especialista humano."

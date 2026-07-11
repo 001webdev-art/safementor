@@ -31,6 +31,7 @@ export interface SafetyAlert {
     timestamp: string;
     childId?: string;
     quote?: string;
+    parent_hint?: string;
 }
 
 export interface EmotionTrend {

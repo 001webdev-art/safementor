@@ -628,6 +628,10 @@
         "step3": "Führen Sie ein fürsorgliches Gespräch"
       },
       "noActiveAlerts": "Derzeit keine aktiven Warnungen",
+      "parentHint": {
+        "title": "Pädagogische Empfehlung (Jesper Juul & Daniel Siegel)",
+        "disclaimer": "Dieser Hinweis basiert auf den familientherapeutischen Prinzipien von Jesper Juul und Daniel J. Siegel. Er wird von einer KI generiert und kann Fehler enthalten. Er ersetzt keine professionelle psychologische oder therapeutische Beratung."
+      },
       "disclaimer": {
         "title": "⚠️ Wichtig:",
         "text": "SafeMentor ist KEIN menschlicher Experte und kann Fehler machen. Bitte kontaktieren Sie bei Hilfe IMMER zuerst einen menschlichen Experten."

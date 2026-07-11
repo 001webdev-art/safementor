@@ -31,6 +31,7 @@ export function Overview({ children }: OverviewProps) {
                     user_intent_summary,
                     user_intent_flag,
                     user_intent_level,
+                    parent_hint,
                     child_id,
                     children:children(nickname)
                 `)
@@ -59,7 +60,7 @@ export function Overview({ children }: OverviewProps) {
 
             const { data, error } = await supabase
                 .from('chat_messages')
-                .select('id, created_at, user_intent_summary, user_intent_flag, user_intent_level, content')
+                .select('id, created_at, user_intent_summary, user_intent_flag, user_intent_level, parent_hint, content')
                 .eq('child_id', selectedChild)
                 .gt('created_at', since.toISOString())
                 .in('user_intent_level', ['yellow', 'red'])
@@ -173,6 +174,23 @@ export function Overview({ children }: OverviewProps) {
                                                         {t('roles.label')}: <span className="underline">{t(`roles.${roleKey}`)}</span>
                                                     </span>
                                                 </div>
+
+                                                {alert.parent_hint && (
+                                                    <div className={`border rounded-lg p-3 mb-3 shadow-sm ${
+                                                        isYellow ? 'bg-white border-yellow-100' : 'bg-white border-red-100'
+                                                    }`}>
+                                                        <p className={`text-xs font-bold mb-1 ${isYellow ? 'text-yellow-900' : 'text-blue-900'}`}>
+                                                            {t('parentHint.title')}
+                                                        </p>
+                                                        <p className="text-sm text-gray-700 leading-relaxed italic mb-2">
+                                                            {alert.parent_hint}
+                                                        </p>
+                                                        <p className="text-[10px] text-gray-400 border-t border-gray-100 pt-1 mt-1">
+                                                            {t('parentHint.disclaimer')}
+                                                        </p>
+                                                    </div>
+                                                )}
+
                                                 <div className="flex gap-2">
                                                     <Button
                                                         size="sm"
@@ -328,6 +346,18 @@ export function Overview({ children }: OverviewProps) {
                                                     }`}>
                                                         {new Date(warning.created_at).toLocaleString('de-DE')}
                                                     </p>
+
+                                                    {warning.parent_hint && (
+                                                        <div className="bg-white border border-gray-200 rounded-lg p-3 mt-3 shadow-sm">
+                                                            <p className="text-xs font-bold text-gray-900 mb-1">{t('parentHint.title')}</p>
+                                                            <p className="text-sm text-gray-700 leading-relaxed italic mb-2">
+                                                                {warning.parent_hint}
+                                                            </p>
+                                                            <p className="text-[10px] text-gray-400 border-t border-gray-100 pt-1 mt-1">
+                                                                {t('parentHint.disclaimer')}
+                                                            </p>
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

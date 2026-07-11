@@ -91,6 +91,7 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                     user_intent_summary,
                     user_intent_flag,
                     user_intent_level,
+                    parent_hint,
                     child_id,
                     created_at,
                     children:children(nickname)
@@ -122,7 +123,8 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                 title: `${a.children?.nickname || 'Child'} - Warning Detected`,
                 description: a.user_intent_summary || "Potentially unsafe content detected.",
                 timestamp: a.created_at ? new Date(a.created_at).toLocaleDateString() : 'Today',
-                childId: a.child_id
+                childId: a.child_id,
+                parent_hint: a.parent_hint
             }))
     ];
 
@@ -247,6 +249,18 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                                         </p>
                                     </div>
 
+                                    {alert.parent_hint && (
+                                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 shadow-sm">
+                                            <p className="text-xs font-bold text-blue-900 mb-1">{t('parentHint.title')}</p>
+                                            <p className="text-sm text-gray-700 leading-relaxed italic mb-2">
+                                                {alert.parent_hint}
+                                            </p>
+                                            <p className="text-[10px] text-gray-400 border-t border-blue-100 pt-1.5 mt-2">
+                                                {t('parentHint.disclaimer')}
+                                            </p>
+                                        </div>
+                                    )}
+
                                     <div className="flex gap-3 mt-4">
                                         <Button
                                             className="bg-red-600 text-white font-bold"
@@ -359,6 +373,18 @@ export function Notifications({ alerts, profile }: NotificationsProps) {
                                     </div>
 
                                     <p className="text-sm text-gray-600 mb-3">{alert.description}</p>
+
+                                    {alert.parent_hint && (
+                                        <div className="bg-white border border-yellow-200 rounded-lg p-3 mb-3 shadow-sm">
+                                            <p className="text-xs font-bold text-yellow-900 mb-1">{t('parentHint.title')}</p>
+                                            <p className="text-sm text-gray-700 leading-relaxed italic mb-2">
+                                                {alert.parent_hint}
+                                            </p>
+                                            <p className="text-[10px] text-gray-400 border-t border-gray-100 pt-1 mt-1">
+                                                {t('parentHint.disclaimer')}
+                                            </p>
+                                        </div>
+                                    )}
 
                                     <div className="flex gap-2">
                                         <Button size="sm" variant="bordered" className="border-gray-300">
